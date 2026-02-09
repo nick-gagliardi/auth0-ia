@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
-import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes } from '@/hooks/use-index-data';
+import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity } from '@/hooks/use-index-data';
 
 function EdgeList({
   title,
@@ -130,8 +130,9 @@ export default function ExplainPage() {
   const { data: metrics, isLoading: l2 } = useMetrics();
   const { data: inbound, isLoading: l3 } = useEdgesInbound();
   const { data: outbound, isLoading: l4 } = useEdgesOutbound();
+  const { data: similarity, isLoading: l5 } = useSimilarity();
 
-  const loading = l1 || l2 || l3 || l4;
+  const loading = l1 || l2 || l3 || l4 || l5;
 
   const nodeMap = useMemo(() => {
     const m = new Map<string, { title?: string; filePath: string }>();
@@ -173,6 +174,7 @@ export default function ExplainPage() {
   const m = metrics?.[node.id];
   const inE = inbound?.[node.id] || { link: [], import: [], redirect: [] };
   const outE = outbound?.[node.id] || { link: [], import: [], redirect: [] };
+  const twins = (similarity?.[node.id] || []).slice(0, 5);
 
   const docsV2BlobBase = process.env.NEXT_PUBLIC_DOCS_V2_BLOB_BASE || 'https://github.com/auth0/docs-v2/blob/main';
   const docsV2Url = `${docsV2BlobBase}/${node.filePath}`;
@@ -273,6 +275,50 @@ export default function ExplainPage() {
             </div>
           )}
         </div>
+
+        {twins.length > 0 && (
+          <div className="rounded-xl border bg-card p-5 mb-6">
+            <div className="flex items-center justify-between mb-3">
+              <div>
+                <div className="font-bold">Related Content (Graph Convergence)</div>
+                <div className="text-sm text-muted-foreground">
+                  Pages with similar outbound/inbound link neighborhoods (hubs filtered). Useful for spotting cross-nav duplicates.
+                </div>
+              </div>
+              <Badge variant="secondary">top {twins.length}</Badge>
+            </div>
+
+            <div className="space-y-2">
+              {twins.map((t) => {
+                const n = nodeMap.get(t.id);
+                const gh = n?.filePath ? `${docsV2BlobBase}/${n.filePath}` : null;
+                return (
+                  <div key={t.id} className="flex items-center justify-between gap-3 rounded-lg border p-3">
+                    <div className="min-w-0">
+                      <Link href={`/explain?id=${encodeURIComponent(t.id)}`} className="font-medium hover:underline truncate block">
+                        {n?.title || n?.filePath || t.id}
+                      </Link>
+                      <div className="text-xs text-muted-foreground font-mono truncate">{t.id}</div>
+                      <div className="text-xs text-muted-foreground mt-1">
+                        score <b>{t.score}</b> · shared out <b>{t.sharedOut}</b> · shared in <b>{t.sharedIn}</b>
+                        {t.isCrossNav === true ? ' · cross-nav' : ''}
+                        {t.diffFolder === true ? ' · diff-folder' : ''}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      {t.highValueConvergence && <Badge variant="destructive">alert</Badge>}
+                      {gh ? (
+                        <a href={gh} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground hover:text-foreground">
+                          GitHub
+                        </a>
+                      ) : null}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <EdgeList title="Inbound" icon={ArrowDownLeft} edges={inE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />

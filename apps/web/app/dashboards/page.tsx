@@ -5,13 +5,14 @@ import { TrendingUp, Code2, AlertTriangle, Unlink } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useMetrics, useNodes } from '@/hooks/use-index-data';
+import { useCrossNavPairs, useMetrics, useNodes } from '@/hooks/use-index-data';
 
 export default function DashboardsPage() {
   const { data: nodes, isLoading: l1 } = useNodes();
   const { data: metrics, isLoading: l2 } = useMetrics();
+  const { data: crossNav, isLoading: l3 } = useCrossNavPairs();
 
-  const loading = l1 || l2;
+  const loading = l1 || l2 || l3;
 
   const pages = useMemo(() => nodes?.filter((n) => n.type === 'page') ?? [], [nodes]);
   const snippets = useMemo(() => nodes?.filter((n) => n.type === 'snippet') ?? [], [nodes]);
@@ -51,6 +52,12 @@ export default function DashboardsPage() {
       .sort((a, b) => (metrics[b.id]?.inboundLinks ?? 0) - (metrics[a.id]?.inboundLinks ?? 0));
   }, [pages, metrics]);
 
+  const nodeById = useMemo(() => {
+    const m = new Map<string, any>();
+    nodes?.forEach((n) => m.set(n.id, n));
+    return m;
+  }, [nodes]);
+
   if (loading) {
     return (
       <AppLayout>
@@ -73,6 +80,14 @@ export default function DashboardsPage() {
       icon: Code2,
       description: 'Snippets/components by blast radius. Changes here affect many pages.',
       data: topSnippets
+    },
+    {
+      value: 'cross-nav',
+      label: 'Cross-Nav Duplicates',
+      icon: AlertTriangle,
+      description: 'High-value convergence: pages in different nav roots with similar link neighborhoods (score > 0.4, min intersection 3, hubs filtered).',
+      data: (crossNav?.pairs || []).slice(0, 200) as any,
+      total: crossNav?.pairs?.length
     },
     {
       value: 'deep',
@@ -135,16 +150,39 @@ export default function DashboardsPage() {
           {tabs.map(({ value, description, data, total }) => (
             <TabsContent key={value} value={value}>
               <p className="text-sm text-muted-foreground mb-4">{description}</p>
-              <div className="flex flex-col gap-2">
-                {data.map((n, i) => (
-                  <NodeCard
-                    key={n.id}
-                    node={n}
-                    metrics={metrics?.[n.id]}
-                    rank={value === 'hubs' ? i + 1 : undefined}
-                  />
-                ))}
-              </div>
+
+              {value === 'cross-nav' ? (
+                <div className="flex flex-col gap-2">
+                  {(data as any[]).map((p) => {
+                    const a = nodeById.get(p.a);
+                    const b = nodeById.get(p.b);
+                    return (
+                      <div key={`${p.a}||${p.b}`} className="rounded-xl border bg-card p-4">
+                        <div className="text-xs text-muted-foreground mb-2">
+                          score <b>{p.score}</b> · shared out <b>{p.sharedOut}</b> · shared in <b>{p.sharedIn}</b>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <a className="text-primary hover:underline" href={`/explain?id=${encodeURIComponent(p.a)}`}>
+                            {a?.title || a?.filePath || p.a}
+                          </a>
+                          <div className="text-xs text-muted-foreground">{p.aNav || 'Unknown'} · {p.aFolder || 'Unknown'}</div>
+                          <a className="text-primary hover:underline" href={`/explain?id=${encodeURIComponent(p.b)}`}>
+                            {b?.title || b?.filePath || p.b}
+                          </a>
+                          <div className="text-xs text-muted-foreground">{p.bNav || 'Unknown'} · {p.bFolder || 'Unknown'}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="flex flex-col gap-2">
+                  {(data as any[]).map((n: any, i: number) => (
+                    <NodeCard key={n.id} node={n} metrics={metrics?.[n.id]} rank={value === 'hubs' ? i + 1 : undefined} />
+                  ))}
+                </div>
+              )}
+
               {total && total > 200 && <p className="text-xs text-muted-foreground mt-4">Showing 200 of {total}</p>}
             </TabsContent>
           ))}

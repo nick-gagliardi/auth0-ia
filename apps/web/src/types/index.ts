@@ -27,6 +27,39 @@ export type Metrics = Record<string, NodeMetrics>;
 
 export type EdgeMap = Record<string, { link: string[]; import: string[]; redirect: string[] }>;
 
+export type SimilarityItem = {
+  id: string;
+  score: number;
+  simOut: number;
+  simIn: number;
+  sharedOut: number;
+  sharedIn: number;
+  reasons: string[];
+  isCrossNav: boolean | null;
+  diffFolder: boolean | null;
+  highValueConvergence: boolean;
+};
+
+export type SimilarityIndex = Record<string, SimilarityItem[]>;
+
+export type CrossNavPairs = {
+  generatedAtUtc: string;
+  hubCutoff: number;
+  minIntersection: number;
+  scoreThreshold: number;
+  pairs: Array<{
+    a: string;
+    b: string;
+    score: number;
+    sharedOut: number;
+    sharedIn: number;
+    aNav: string | null;
+    bNav: string | null;
+    aFolder: string | null;
+    bFolder: string | null;
+  }>;
+};
+
 export type Summary = {
   generatedAtUtc: string;
   source?: {

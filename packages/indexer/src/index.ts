@@ -377,6 +377,226 @@ export async function buildIndex(opts: BuildIndexOptions) {
   await fs.writeFile(path.join(opts.outDir, 'edges_inbound.json'), JSON.stringify(inbound, null, 2));
   await fs.writeFile(path.join(opts.outDir, 'metrics.json'), JSON.stringify(metrics, null, 2));
 
+  // --- Path Convergence (links-only) similarity index (pages ↔ pages) ---
+  // Goals:
+  // - use outbound/inbound *link* neighbors (no snippet imports)
+  // - exclude global hubs (nodes with inboundLinks > 50)
+  // - only consider pairs with intersection >= 3
+
+  const pages = nodes.filter((n) => n.type === 'page');
+  const pageIds = pages.map((p) => p.id);
+  const pageSet = new Set(pageIds);
+
+  const hubCutoff = 50;
+  const hubBlacklist = new Set<string>(pageIds.filter((id) => (metrics[id]?.inboundLinks ?? 0) > hubCutoff));
+
+  function filteredOut(id: string): Set<string> {
+    const s = new Set<string>();
+    for (const to of outbound[id]?.link ?? []) {
+      if (!pageSet.has(to)) continue;
+      if (hubBlacklist.has(to)) continue;
+      s.add(to);
+    }
+    return s;
+  }
+
+  function filteredIn(id: string): Set<string> {
+    const s = new Set<string>();
+    for (const from of inbound[id]?.link ?? []) {
+      if (!pageSet.has(from)) continue;
+      if (hubBlacklist.has(from)) continue;
+      s.add(from);
+    }
+    return s;
+  }
+
+  const outSets = new Map<string, Set<string>>();
+  const inSets = new Map<string, Set<string>>();
+  for (const id of pageIds) {
+    outSets.set(id, filteredOut(id));
+    inSets.set(id, filteredIn(id));
+  }
+
+  const invOut = new Map<string, string[]>();
+  const invIn = new Map<string, string[]>();
+
+  for (const id of pageIds) {
+    for (const nb of outSets.get(id)!) {
+      const arr = invOut.get(nb) ?? [];
+      arr.push(id);
+      invOut.set(nb, arr);
+    }
+    for (const nb of inSets.get(id)!) {
+      const arr = invIn.get(nb) ?? [];
+      arr.push(id);
+      invIn.set(nb, arr);
+    }
+  }
+
+  type PairKey = string;
+  const sharedOut = new Map<PairKey, number>();
+  const sharedIn = new Map<PairKey, number>();
+
+  function pairKey(a: string, b: string): PairKey {
+    return a < b ? `${a}||${b}` : `${b}||${a}`;
+  }
+
+  function bump(map: Map<PairKey, number>, a: string, b: string) {
+    if (a === b) return;
+    const k = pairKey(a, b);
+    map.set(k, (map.get(k) ?? 0) + 1);
+  }
+
+  function accumulate(inv: Map<string, string[]>, map: Map<PairKey, number>) {
+    for (const [, pagesList] of inv) {
+      if (pagesList.length < 2) continue;
+      // avoid O(n^2) blowups on rare large lists (hubs are filtered, but be safe)
+      if (pagesList.length > 400) continue;
+      for (let i = 0; i < pagesList.length; i++) {
+        for (let j = i + 1; j < pagesList.length; j++) bump(map, pagesList[i], pagesList[j]);
+      }
+    }
+  }
+
+  accumulate(invOut, sharedOut);
+  accumulate(invIn, sharedIn);
+
+  function jaccard(a: Set<string>, b: Set<string>): number {
+    if (a.size === 0 && b.size === 0) return 0;
+    let inter = 0;
+    const [small, big] = a.size < b.size ? [a, b] : [b, a];
+    for (const x of small) if (big.has(x)) inter++;
+    const union = a.size + b.size - inter;
+    return union === 0 ? 0 : inter / union;
+  }
+
+  function navRoot(navPaths: string[]): string | null {
+    const p = navPaths?.[0];
+    if (!p) return null;
+    const parts = p.split(' > ').map((x) => x.trim()).filter(Boolean);
+    if (parts[0] === 'Documentation' && parts.length >= 2) return parts[1];
+    return parts.length ? parts[0] : null;
+  }
+
+  function topFolder(filePath: string): string | null {
+    const parts = filePath.split('/');
+    const idx = parts.indexOf('docs');
+    if (idx >= 0 && parts.length > idx + 1) return parts[idx + 1];
+    return null;
+  }
+
+  type SimilarityItem = {
+    id: string;
+    score: number;
+    simOut: number;
+    simIn: number;
+    sharedOut: number;
+    sharedIn: number;
+    reasons: string[];
+    isCrossNav: boolean | null;
+    diffFolder: boolean | null;
+    highValueConvergence: boolean;
+  };
+
+  const similarity: Record<string, SimilarityItem[]> = {};
+  const crossNavPairs: Array<{
+    a: string;
+    b: string;
+    score: number;
+    sharedOut: number;
+    sharedIn: number;
+    aNav: string | null;
+    bNav: string | null;
+    aFolder: string | null;
+    bFolder: string | null;
+  }> = [];
+
+  const allPairKeys = new Set<string>([...sharedOut.keys(), ...sharedIn.keys()]);
+
+  for (const k of allPairKeys) {
+    const [a, b] = k.split('||');
+    const so = sharedOut.get(k) ?? 0;
+    const si = sharedIn.get(k) ?? 0;
+    if (so < 3 && si < 3) continue;
+
+    const simOut = jaccard(outSets.get(a)!, outSets.get(b)!);
+    const simIn = jaccard(inSets.get(a)!, inSets.get(b)!);
+    const score = 0.6 * simOut + 0.4 * simIn;
+
+    const aNode = pages.find((p) => p.id === a)!;
+    const bNode = pages.find((p) => p.id === b)!;
+
+    const aRoot = navRoot(aNode.navPaths);
+    const bRoot = navRoot(bNode.navPaths);
+    const isCrossNav = aRoot && bRoot ? aRoot !== bRoot : null;
+
+    const aFolder = topFolder(aNode.filePath);
+    const bFolder = topFolder(bNode.filePath);
+    const diffFolder = aFolder && bFolder ? aFolder !== bFolder : null;
+
+    const highValueConvergence = score > 0.4 && isCrossNav === true;
+
+    const reasons = [] as string[];
+    if (so >= 3) reasons.push('shared_outbound');
+    if (si >= 3) reasons.push('shared_inbound');
+
+    const itemForA: SimilarityItem = {
+      id: b,
+      score: Number(score.toFixed(4)),
+      simOut: Number(simOut.toFixed(4)),
+      simIn: Number(simIn.toFixed(4)),
+      sharedOut: so,
+      sharedIn: si,
+      reasons,
+      isCrossNav,
+      diffFolder,
+      highValueConvergence
+    };
+
+    const itemForB: SimilarityItem = { ...itemForA, id: a };
+
+    similarity[a] ??= [];
+    similarity[b] ??= [];
+    similarity[a].push(itemForA);
+    similarity[b].push(itemForB);
+
+    if (highValueConvergence) {
+      crossNavPairs.push({
+        a,
+        b,
+        score: Number(score.toFixed(4)),
+        sharedOut: so,
+        sharedIn: si,
+        aNav: aRoot,
+        bNav: bRoot,
+        aFolder,
+        bFolder
+      });
+    }
+  }
+
+  for (const id of Object.keys(similarity)) {
+    similarity[id] = similarity[id].sort((x, y) => y.score - x.score || y.sharedOut - x.sharedOut).slice(0, 10);
+  }
+
+  crossNavPairs.sort((x, y) => y.score - x.score || y.sharedOut - x.sharedOut);
+
+  await fs.writeFile(path.join(opts.outDir, 'similarity.json'), JSON.stringify(similarity, null, 2));
+  await fs.writeFile(
+    path.join(opts.outDir, 'cross_nav_pairs.json'),
+    JSON.stringify(
+      {
+        generatedAtUtc: new Date().toISOString(),
+        hubCutoff,
+        minIntersection: 3,
+        scoreThreshold: 0.4,
+        pairs: crossNavPairs.slice(0, 500)
+      },
+      null,
+      2
+    )
+  );
+
   // circular dependency detection for snippets/components (import graph among snippets)
   const snippetIds = nodes.filter((n) => n.type === 'snippet').map((n) => n.id);
   const snippetSet = new Set(snippetIds);

@@ -1,0 +1,129 @@
+{
+  "generatedAtUtc": "2026-02-09T23:01:25.357Z",
+  "hubCutoff": 50,
+  "minIntersection": 3,
+  "scoreThreshold": 0.4,
+  "pairs": [
+    {
+      "a": "main/docs/customize/extensions/authorization-extension.mdx",
+      "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
+      "score": 0.7132,
+      "sharedOut": 7,
+      "sharedIn": 8,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/extensions/user-import-export-extension.mdx",
+      "b": "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
+      "score": 0.6,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "aNav": "Customize",
+      "bNav": "Manage Users",
+      "aFolder": "customize",
+      "bFolder": "manage-users"
+    },
+    {
+      "a": "main/docs/get-started/applications/configure-application-metadata.mdx",
+      "b": "main/docs/manage-users/user-accounts/metadata/configure-application-metadata.mdx",
+      "score": 0.6,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "aNav": "Get Started",
+      "bNav": "Manage Users",
+      "aFolder": "get-started",
+      "bFolder": "manage-users"
+    },
+    {
+      "a": "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
+      "b": "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+      "score": 0.5,
+      "sharedOut": 5,
+      "sharedIn": 0,
+      "aNav": "Get Started",
+      "bNav": "Manage Users",
+      "aFolder": "get-started",
+      "bFolder": "manage-users"
+    },
+    {
+      "a": "main/docs/customize/extensions/authorization-extension/set-up-authorization-extension-users.mdx",
+      "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
+      "score": 0.495,
+      "sharedOut": 5,
+      "sharedIn": 3,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/extensions/authorization-extension/configure-authorization-extension.mdx",
+      "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
+      "score": 0.4533,
+      "sharedOut": 5,
+      "sharedIn": 3,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/extensions/authorization-extension/import-and-export-authorization-extension-data.mdx",
+      "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
+      "score": 0.4432,
+      "sharedOut": 3,
+      "sharedIn": 6,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
+      "b": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
+      "score": 0.44,
+      "sharedOut": 3,
+      "sharedIn": 3,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/extensions/authorization-extension/enable-api-access-to-authorization-extension.mdx",
+      "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
+      "score": 0.44,
+      "sharedOut": 3,
+      "sharedIn": 6,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/extensions/account-link-extension.mdx",
+      "b": "main/docs/manage-users/user-accounts/user-account-linking/unlink-user-accounts.mdx",
+      "score": 0.4333,
+      "sharedOut": 3,
+      "sharedIn": 1,
+      "aNav": "Customize",
+      "bNav": "Manage Users",
+      "aFolder": "customize",
+      "bFolder": "manage-users"
+    },
+    {
+      "a": "main/docs/customize/extensions/authorization-extension/install-authorization-extension.mdx",
+      "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
+      "score": 0.415,
+      "sharedOut": 5,
+      "sharedIn": 1,
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    }
+  ]
+}
