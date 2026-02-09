@@ -604,6 +604,81 @@ export async function buildIndex(opts: BuildIndexOptions) {
     )
   );
 
+  // --- Shadow Hub detection ---
+  // A "shadow hub" is a low-discoverability page that closely mimics a high-authority hub.
+  // Criteria:
+  // - low discoverability: orphanTrue OR orphanReference OR deepNav
+  // - high mimicry: similarity score > 0.70 to a hub (hub = inboundLinks > hubCutoff)
+  // - low authority: shadow inbound links significantly lower than hub inbound links
+  const shadowThreshold = 0.70;
+  const minAuthorityDelta = 15; // hub has at least this many more inbound links
+
+  const shadowHubs: Array<{
+    shadowId: string;
+    hubId: string;
+    score: number;
+    simOut: number;
+    simIn: number;
+    sharedOut: number;
+    sharedIn: number;
+    shadowInbound: number;
+    hubInbound: number;
+    shadowNavDepth?: number;
+    shadowOrphanTrue?: boolean;
+    shadowOrphanReference?: boolean;
+    shadowDeepNav?: boolean;
+  }> = [];
+
+  for (const p of pageIds) {
+    const m = metrics[p];
+    const lowDisc = !!(m?.orphanTrue || m?.orphanReference || m?.deepNav);
+    if (!lowDisc) continue;
+
+    for (const rel of similarity[p] ?? []) {
+      const hubId = rel.id;
+      if (!hubBlacklist.has(hubId)) continue;
+      if (rel.score < shadowThreshold) continue;
+
+      const hubInbound = metrics[hubId]?.inboundLinks ?? 0;
+      const shadowInbound = m?.inboundLinks ?? 0;
+      if (hubInbound - shadowInbound < minAuthorityDelta) continue;
+
+      shadowHubs.push({
+        shadowId: p,
+        hubId,
+        score: rel.score,
+        simOut: rel.simOut,
+        simIn: rel.simIn,
+        sharedOut: rel.sharedOut,
+        sharedIn: rel.sharedIn,
+        shadowInbound,
+        hubInbound,
+        shadowNavDepth: m?.navDepth,
+        shadowOrphanTrue: m?.orphanTrue,
+        shadowOrphanReference: m?.orphanReference,
+        shadowDeepNav: m?.deepNav
+      });
+    }
+  }
+
+  shadowHubs.sort((a, b) => b.score - a.score || (b.hubInbound - b.shadowInbound) - (a.hubInbound - a.shadowInbound));
+
+  await fs.writeFile(
+    path.join(opts.outDir, 'shadow_hubs.json'),
+    JSON.stringify(
+      {
+        generatedAtUtc: new Date().toISOString(),
+        hubCutoff,
+        shadowThreshold,
+        minAuthorityDelta,
+        count: shadowHubs.length,
+        items: shadowHubs.slice(0, 500)
+      },
+      null,
+      2
+    )
+  );
+
   // circular dependency detection for snippets/components (import graph among snippets)
   const snippetIds = nodes.filter((n) => n.type === 'snippet').map((n) => n.id);
   const snippetSet = new Set(snippetIds);

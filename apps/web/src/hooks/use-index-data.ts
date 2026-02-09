@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import type { DocNode, Metrics, EdgeMap, Summary, SimilarityIndex, CrossNavPairs } from '@/types';
+import type { DocNode, Metrics, EdgeMap, Summary, SimilarityIndex, CrossNavPairs, ShadowHubs } from '@/types';
 
 const INDEX_BASE = process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index';
 
@@ -35,4 +35,8 @@ export function useSimilarity() {
 
 export function useCrossNavPairs() {
   return useQuery({ queryKey: ['cross_nav_pairs'], queryFn: () => fetchJson<CrossNavPairs>('cross_nav_pairs.json'), staleTime: Infinity });
+}
+
+export function useShadowHubs() {
+  return useQuery({ queryKey: ['shadow_hubs'], queryFn: () => fetchJson<ShadowHubs>('shadow_hubs.json'), staleTime: Infinity });
 }

@@ -33,11 +33,19 @@ export default function SharedLinksExpander({
   }, [aId, bId, outbound, metrics]);
 
   const md = useMemo(() => {
+    const toDocsUrl = (id: string) => {
+      // best-effort: convert file path to auth0.com/docs URL
+      const fp = nodeMap.get(id)?.filePath || id;
+      const rel = fp.replace(/^main\/docs\//, '').replace(/\.mdx$/, '');
+      return `https://auth0.com/docs/${rel}`;
+    };
+
     return shared
       .map((id) => {
         const n = nodeMap.get(id);
-        const label = n?.title || n?.filePath || id;
-        return `- ${label} (/${id.replace(/^main\/docs\//, 'docs/').replace(/\.mdx$/, '')})`;
+        const label = (n?.title || n?.filePath || id).replace(/\]/g, '\\]');
+        const url = toDocsUrl(id);
+        return `- [${label}](${url})`;
       })
       .join('\n');
   }, [shared, nodeMap]);

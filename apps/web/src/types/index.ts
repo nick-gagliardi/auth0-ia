@@ -63,6 +63,29 @@ export type CrossNavPairs = {
   }>;
 };
 
+export type ShadowHubs = {
+  generatedAtUtc: string;
+  hubCutoff: number;
+  shadowThreshold: number;
+  minAuthorityDelta: number;
+  count: number;
+  items: Array<{
+    shadowId: string;
+    hubId: string;
+    score: number;
+    simOut: number;
+    simIn: number;
+    sharedOut: number;
+    sharedIn: number;
+    shadowInbound: number;
+    hubInbound: number;
+    shadowNavDepth?: number;
+    shadowOrphanTrue?: boolean;
+    shadowOrphanReference?: boolean;
+    shadowDeepNav?: boolean;
+  }>;
+};
+
 export type Summary = {
   generatedAtUtc: string;
   source?: {
