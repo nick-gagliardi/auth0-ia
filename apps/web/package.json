@@ -3,9 +3,23 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node -e \"console.log('TODO: init Next.js/Vite UI')\"",
-    "build": "node -e \"console.log('TODO')\"",
-    "lint": "node -e \"console.log('TODO')\"",
-    "typecheck": "node -e \"console.log('TODO')\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "14.2.25",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.25",
+    "typescript": "^5.6.3"
   }
 }

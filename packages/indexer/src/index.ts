@@ -121,7 +121,10 @@ async function listFiles(root: string, exts: Set<string>): Promise<string[]> {
   return out;
 }
 
-function navPathsFromDocsJson(docsJson: any): Map<string /*filePath*/, { navPaths: string[]; navDepth: number }> {
+async function navPathsFromDocsJson(
+  docsJson: any,
+  repoRoot: string
+): Promise<Map<string /*filePath*/, { navPaths: string[]; navDepth: number }>> {
   // docs.json contains navigation.languages[].tabs[].dropdowns[].pages (strings like "docs/get-started")
   const map = new Map<string, { navPaths: string[]; navDepth: number }>();
 
@@ -129,10 +132,37 @@ function navPathsFromDocsJson(docsJson: any): Map<string /*filePath*/, { navPath
   const en = langs.find((l: any) => l?.language === 'en') ?? langs[0];
   const tabs = en?.tabs ?? [];
 
-  function visitPages(pages: any[], prefix: string[], depth: number) {
-    for (const p of pages ?? []) {
-      if (typeof p === 'string') {
-        const filePath = `main/${p}.mdx`.replace(/^main\/docs\//, 'main/docs/');
+  async function resolveNavPageToFilePath(p: string): Promise<string | null> {
+    // Normalize to "docs/..." (relative to /main)
+    let rel = p;
+    if (rel.startsWith('/')) rel = rel.slice(1);
+    if (!rel.startsWith('docs/')) rel = `docs/${rel}`;
+
+    const candidates = [
+      `main/${rel}.mdx`,
+      `main/${rel}/index.mdx`,
+      `main/${rel}.md`,
+      `main/${rel}/index.md`
+    ];
+
+    for (const c of candidates) {
+      try {
+        const st = await fs.stat(path.join(repoRoot, c));
+        if (st.isFile()) return c;
+      } catch {
+        // ignore
+      }
+    }
+
+    return null;
+  }
+
+  async function visitNavItems(items: any[], prefix: string[], depth: number) {
+    for (const item of items ?? []) {
+      if (typeof item === 'string') {
+        const filePath = await resolveNavPageToFilePath(item);
+        if (!filePath) continue;
+
         const navPathStr = prefix.join(' > ');
         const prev = map.get(filePath);
         if (!prev) map.set(filePath, { navPaths: [navPathStr], navDepth: depth });
@@ -140,17 +170,34 @@ function navPathsFromDocsJson(docsJson: any): Map<string /*filePath*/, { navPath
           prev.navPaths.push(navPathStr);
           prev.navDepth = Math.min(prev.navDepth, depth);
         }
+        continue;
+      }
+
+      if (item && typeof item === 'object') {
+        // Mintlify nav sometimes nests groups:
+        // { group: "Name", pages: [ ... ] }
+        // or { pages: [ ... ] }
+        const groupName = typeof item.group === 'string' ? item.group : undefined;
+        const nestedPages = Array.isArray(item.pages) ? item.pages : undefined;
+        if (nestedPages) {
+          const nextPrefix = groupName ? [...prefix, groupName] : prefix;
+          await visitNavItems(nestedPages, nextPrefix, depth + (groupName ? 1 : 0));
+        }
       }
     }
   }
 
   for (const t of tabs) {
     const tabName = t?.tab;
+
+    if (Array.isArray(t?.pages)) {
+      await visitNavItems(t.pages, [tabName].filter(Boolean) as string[], 1);
+    }
+
     for (const dd of t?.dropdowns ?? []) {
       const ddName = dd?.dropdown;
-      const pages = dd?.pages;
-      const prefix = [tabName, ddName].filter(Boolean);
-      visitPages(pages, prefix as string[], prefix.length);
+      const prefix = [tabName, ddName].filter(Boolean) as string[];
+      await visitNavItems(dd?.pages, prefix, prefix.length);
     }
   }
 
@@ -168,7 +215,7 @@ export async function buildIndex(opts: BuildIndexOptions) {
   const docsJsonPath = path.join(siteRoot, 'docs.json');
   const docsJson = JSON.parse(await fs.readFile(docsJsonPath, 'utf8'));
 
-  const navMap = navPathsFromDocsJson(docsJson);
+  const navMap = await navPathsFromDocsJson(docsJson, repoRoot);
 
   const docsRoot = path.join(siteRoot, 'docs');
   const snippetsRoot = path.join(siteRoot, 'snippets');

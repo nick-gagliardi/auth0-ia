@@ -89,16 +89,43 @@ async function listFiles(root, exts) {
     }
     return out;
 }
-function navPathsFromDocsJson(docsJson) {
+async function navPathsFromDocsJson(docsJson, repoRoot) {
     // docs.json contains navigation.languages[].tabs[].dropdowns[].pages (strings like "docs/get-started")
     const map = new Map();
     const langs = docsJson?.navigation?.languages ?? [];
     const en = langs.find((l) => l?.language === 'en') ?? langs[0];
     const tabs = en?.tabs ?? [];
-    function visitPages(pages, prefix, depth) {
-        for (const p of pages ?? []) {
-            if (typeof p === 'string') {
-                const filePath = `main/${p}.mdx`.replace(/^main\/docs\//, 'main/docs/');
+    async function resolveNavPageToFilePath(p) {
+        // Normalize to "docs/..." (relative to /main)
+        let rel = p;
+        if (rel.startsWith('/'))
+            rel = rel.slice(1);
+        if (!rel.startsWith('docs/'))
+            rel = `docs/${rel}`;
+        const candidates = [
+            `main/${rel}.mdx`,
+            `main/${rel}/index.mdx`,
+            `main/${rel}.md`,
+            `main/${rel}/index.md`
+        ];
+        for (const c of candidates) {
+            try {
+                const st = await fs.stat(path.join(repoRoot, c));
+                if (st.isFile())
+                    return c;
+            }
+            catch {
+                // ignore
+            }
+        }
+        return null;
+    }
+    async function visitNavItems(items, prefix, depth) {
+        for (const item of items ?? []) {
+            if (typeof item === 'string') {
+                const filePath = await resolveNavPageToFilePath(item);
+                if (!filePath)
+                    continue;
                 const navPathStr = prefix.join(' > ');
                 const prev = map.get(filePath);
                 if (!prev)
@@ -107,16 +134,30 @@ function navPathsFromDocsJson(docsJson) {
                     prev.navPaths.push(navPathStr);
                     prev.navDepth = Math.min(prev.navDepth, depth);
                 }
+                continue;
+            }
+            if (item && typeof item === 'object') {
+                // Mintlify nav sometimes nests groups:
+                // { group: "Name", pages: [ ... ] }
+                // or { pages: [ ... ] }
+                const groupName = typeof item.group === 'string' ? item.group : undefined;
+                const nestedPages = Array.isArray(item.pages) ? item.pages : undefined;
+                if (nestedPages) {
+                    const nextPrefix = groupName ? [...prefix, groupName] : prefix;
+                    await visitNavItems(nestedPages, nextPrefix, depth + (groupName ? 1 : 0));
+                }
             }
         }
     }
     for (const t of tabs) {
         const tabName = t?.tab;
+        if (Array.isArray(t?.pages)) {
+            await visitNavItems(t.pages, [tabName].filter(Boolean), 1);
+        }
         for (const dd of t?.dropdowns ?? []) {
             const ddName = dd?.dropdown;
-            const pages = dd?.pages;
             const prefix = [tabName, ddName].filter(Boolean);
-            visitPages(pages, prefix, prefix.length);
+            await visitNavItems(dd?.pages, prefix, prefix.length);
         }
     }
     // uniq navPaths
@@ -130,7 +171,7 @@ export async function buildIndex(opts) {
     const siteRoot = path.join(repoRoot, 'main'); // docs-v2 has /main (site)
     const docsJsonPath = path.join(siteRoot, 'docs.json');
     const docsJson = JSON.parse(await fs.readFile(docsJsonPath, 'utf8'));
-    const navMap = navPathsFromDocsJson(docsJson);
+    const navMap = await navPathsFromDocsJson(docsJson, repoRoot);
     const docsRoot = path.join(siteRoot, 'docs');
     const snippetsRoot = path.join(siteRoot, 'snippets');
     const mdxFiles = (await listFiles(docsRoot, new Set(['.mdx']))).filter((p) => !p.includes(`${path.sep}fr-ca${path.sep}`) && !p.includes(`${path.sep}ja-jp${path.sep}`));

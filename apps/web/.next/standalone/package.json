@@ -1,0 +1,13 @@
+{
+  "name": "auth0-ia",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm -C apps/web dev",
+    "build": "pnpm -C apps/web build",
+    "lint": "pnpm -C apps/web lint",
+    "typecheck": "pnpm -C apps/web typecheck",
+    "build:index": "pnpm -C packages/indexer build && node scripts/build-index.mjs",
+    "index": "pnpm build:index"
+  }
+}
