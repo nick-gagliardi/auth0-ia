@@ -14,18 +14,26 @@ function EdgeList({
   title,
   icon: Icon,
   edges,
-  nodeMap
+  nodeMap,
+  docsV2BlobBase
 }: {
   title: string;
   icon: React.ElementType;
   edges: { link: string[]; import: string[]; redirect: string[] };
   nodeMap: Map<string, { title?: string; filePath: string }>;
+  docsV2BlobBase: string;
 }) {
   const total = edges.link.length + edges.import.length + edges.redirect.length;
 
   function label(id: string) {
     const n = nodeMap.get(id);
     return n?.title || n?.filePath || id;
+  }
+
+  function githubUrl(id: string) {
+    const n = nodeMap.get(id);
+    if (!n?.filePath) return null;
+    return `${docsV2BlobBase}/${n.filePath}`;
   }
 
   return (
@@ -44,16 +52,24 @@ function EdgeList({
             Links ({edges.link.length})
           </div>
           <ul className="space-y-1">
-            {edges.link.slice(0, 50).map((x) => (
-              <li key={x}>
-                <Link
-                  href={`/explain?id=${encodeURIComponent(x)}`}
-                  className="text-sm text-primary hover:underline truncate block"
-                >
-                  {label(x)}
-                </Link>
-              </li>
-            ))}
+            {edges.link.slice(0, 50).map((x) => {
+              const gh = githubUrl(x);
+              return (
+                <li key={x} className="flex items-center justify-between gap-2">
+                  <Link
+                    href={`/explain?id=${encodeURIComponent(x)}`}
+                    className="text-sm text-primary hover:underline truncate block"
+                  >
+                    {label(x)}
+                  </Link>
+                  {gh ? (
+                    <a href={gh} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground hover:text-foreground">
+                      GitHub
+                    </a>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
@@ -64,16 +80,24 @@ function EdgeList({
             Imports ({edges.import.length})
           </div>
           <ul className="space-y-1">
-            {edges.import.slice(0, 50).map((x) => (
-              <li key={x}>
-                <Link
-                  href={`/explain?id=${encodeURIComponent(x)}`}
-                  className="text-sm text-accent hover:underline truncate block"
-                >
-                  {label(x)}
-                </Link>
-              </li>
-            ))}
+            {edges.import.slice(0, 50).map((x) => {
+              const gh = githubUrl(x);
+              return (
+                <li key={x} className="flex items-center justify-between gap-2">
+                  <Link
+                    href={`/explain?id=${encodeURIComponent(x)}`}
+                    className="text-sm text-accent hover:underline truncate block"
+                  >
+                    {label(x)}
+                  </Link>
+                  {gh ? (
+                    <a href={gh} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground hover:text-foreground">
+                      GitHub
+                    </a>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
@@ -251,8 +275,8 @@ export default function ExplainPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <EdgeList title="Inbound" icon={ArrowDownLeft} edges={inE} nodeMap={nodeMap} />
-          <EdgeList title="Outbound" icon={ArrowUpRight} edges={outE} nodeMap={nodeMap} />
+          <EdgeList title="Inbound" icon={ArrowDownLeft} edges={inE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />
+          <EdgeList title="Outbound" icon={ArrowUpRight} edges={outE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />
         </div>
       </div>
     </AppLayout>

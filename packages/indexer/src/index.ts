@@ -377,6 +377,51 @@ export async function buildIndex(opts: BuildIndexOptions) {
   await fs.writeFile(path.join(opts.outDir, 'edges_inbound.json'), JSON.stringify(inbound, null, 2));
   await fs.writeFile(path.join(opts.outDir, 'metrics.json'), JSON.stringify(metrics, null, 2));
 
+  // circular dependency detection for snippets/components (import graph among snippets)
+  const snippetIds = nodes.filter((n) => n.type === 'snippet').map((n) => n.id);
+  const snippetSet = new Set(snippetIds);
+  const cycles: string[][] = [];
+  const visiting = new Set<string>();
+  const visited = new Set<string>();
+
+  function dfs(u: string, stack: string[]) {
+    if (visiting.has(u)) {
+      const idx = stack.indexOf(u);
+      if (idx >= 0) cycles.push(stack.slice(idx));
+      return;
+    }
+    if (visited.has(u)) return;
+
+    visiting.add(u);
+    stack.push(u);
+
+    for (const v of outbound[u]?.import ?? []) {
+      if (!snippetSet.has(v)) continue;
+      dfs(v, stack);
+    }
+
+    stack.pop();
+    visiting.delete(u);
+    visited.add(u);
+  }
+
+  for (const s of snippetIds) dfs(s, []);
+
+  // de-dupe cycles by canonical string
+  const canon = new Set<string>();
+  const uniqCycles: string[][] = [];
+  for (const c of cycles) {
+    const key = [...c].sort().join('|');
+    if (canon.has(key)) continue;
+    canon.add(key);
+    uniqCycles.push(c);
+  }
+
+  await fs.writeFile(
+    path.join(opts.outDir, 'circular_snippet_imports.json'),
+    JSON.stringify({ count: uniqCycles.length, cycles: uniqCycles }, null, 2)
+  );
+
   // small summary
   const gitSha = (await exec(`git -C ${repoRoot} rev-parse HEAD`)).stdout.trim();
 

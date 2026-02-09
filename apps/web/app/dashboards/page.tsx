@@ -44,6 +44,13 @@ export default function DashboardsPage() {
       .sort((a, b) => (metrics[a.id]?.outboundLinks ?? 0) - (metrics[b.id]?.outboundLinks ?? 0));
   }, [pages, metrics]);
 
+  const deepContent = useMemo(() => {
+    if (!metrics) return [];
+    return pages
+      .filter((n) => metrics[n.id]?.deepNav)
+      .sort((a, b) => (metrics[b.id]?.inboundLinks ?? 0) - (metrics[a.id]?.inboundLinks ?? 0));
+  }, [pages, metrics]);
+
   if (loading) {
     return (
       <AppLayout>
@@ -66,6 +73,14 @@ export default function DashboardsPage() {
       icon: Code2,
       description: 'Snippets/components by blast radius. Changes here affect many pages.',
       data: topSnippets
+    },
+    {
+      value: 'deep',
+      label: 'Deep Content',
+      icon: TrendingUp,
+      description: 'Pages with nav depth ≥ 5. Often where old/low-discoverability content hides ("SEO graveyard").',
+      data: deepContent.slice(0, 200),
+      total: deepContent.length
     },
     {
       value: 'nav-orphans',
