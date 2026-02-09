@@ -1,82 +1,39 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
+import { Search } from 'lucide-react';
+import AppLayout from '@/components/AppLayout';
+import NodeCard from '@/components/NodeCard';
+import { Input } from '@/components/ui/input';
+import { useMetrics, useNodes, useSummary } from '@/hooks/use-index-data';
 
-type NodeType = 'page' | 'snippet';
-
-type Node = {
-  id: string;
-  type: NodeType;
-  filePath: string;
-  title?: string;
-  permalink?: string;
-  navPaths: string[];
-};
-
-type Metrics = Record<
-  string,
-  {
-    inboundLinks: number;
-    outboundLinks: number;
-    importedBy: number;
-    navDepth?: number;
-    orphanNav?: boolean;
-    orphanLinks?: boolean;
-    hubScore?: number;
-  }
->;
-
-const INDEX_BASE = process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index';
-
-async function fetchJson<T>(p: string): Promise<T> {
-  const res = await fetch(`${INDEX_BASE}/${p}`, { cache: 'no-store' });
-  if (!res.ok) throw new Error(`Failed to fetch ${p}: ${res.status}`);
-  return res.json();
-}
-
-export default function HomePage() {
+export default function SearchPage() {
   const [query, setQuery] = useState('');
-  const [nodes, setNodes] = useState<Node[] | null>(null);
-  const [metrics, setMetrics] = useState<Metrics | null>(null);
-  const [err, setErr] = useState<string | null>(null);
+  const { data: nodes, isLoading: loadingNodes } = useNodes();
+  const { data: metrics, isLoading: loadingMetrics } = useMetrics();
+  const { data: summary } = useSummary();
 
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const [n, m] = await Promise.all([fetchJson<Node[]>('nodes.json'), fetchJson<Metrics>('metrics.json')]);
-        if (cancelled) return;
-        setNodes(n);
-        setMetrics(m);
-      } catch (e: any) {
-        setErr(e?.message || String(e));
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const loading = loadingNodes || loadingMetrics;
 
   const results = useMemo(() => {
-    if (!nodes || !metrics) return [] as (Node & { score: number })[];
+    if (!nodes || !metrics) return [];
     const q = query.trim().toLowerCase();
-    const hay = nodes.filter((n) => n.type === 'page');
+    const pages = nodes.filter((n) => n.type === 'page');
+
     if (!q) {
-      // default: top hubs
-      return [...hay]
+      return [...pages]
         .map((n) => ({ ...n, score: metrics[n.id]?.inboundLinks ?? 0 }))
         .sort((a, b) => b.score - a.score)
         .slice(0, 30);
     }
 
-    const out: (Node & { score: number })[] = [];
-    for (const n of hay) {
+    const out: (typeof pages[number] & { score: number })[] = [];
+    for (const n of pages) {
       const title = (n.title || '').toLowerCase();
       const path = n.filePath.toLowerCase();
       const permalink = (n.permalink || '').toLowerCase();
       const nav = (n.navPaths || []).join(' | ').toLowerCase();
       if (title.includes(q) || path.includes(q) || permalink.includes(q) || nav.includes(q)) {
-        // crude scoring: prefer title match + higher inbound
         const score = (title.includes(q) ? 1000 : 0) + (metrics[n.id]?.inboundLinks ?? 0);
         out.push({ ...n, score });
       }
@@ -85,74 +42,46 @@ export default function HomePage() {
   }, [nodes, metrics, query]);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <div style={{ maxWidth: 900 }}>
-        <div style={{ fontWeight: 600, marginBottom: 8 }}>Search pages</div>
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Try: pkce, universal login, actions, refresh token"
-          style={{ width: '100%', padding: 12, fontSize: 14, border: '1px solid #ddd', borderRadius: 8 }}
-        />
-        <div style={{ fontSize: 12, color: '#666', marginTop: 8 }}>
-          Index source: <code>{INDEX_BASE}</code> (set via <code>NEXT_PUBLIC_INDEX_BASE_URL</code>)
+    <AppLayout>
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">Docs Intelligence</h1>
+          <p className="text-muted-foreground text-lg">Search, explore, and understand the Auth0 docs graph</p>
+          {summary && (
+            <p className="text-xs text-muted-foreground mt-2">
+              {summary.pages} pages · {summary.snippets} snippets
+            </p>
+          )}
         </div>
+
+        <div className="relative mb-8">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+          <Input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search pages… e.g. pkce, universal login, actions, refresh token"
+            className="pl-12 h-14 text-base rounded-2xl bg-card shadow-sm border"
+          />
+        </div>
+
+        {loading && <div className="text-center text-muted-foreground py-12">Loading index…</div>}
+
+        {!loading && (
+          <>
+            <div className="flex items-baseline justify-between mb-4">
+              <h2 className="font-semibold text-sm text-muted-foreground uppercase tracking-wider">
+                {query.trim() ? 'Matches' : 'Top Hubs'}
+              </h2>
+              <span className="text-xs text-muted-foreground">{results.length} results</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              {results.map((n, i) => (
+                <NodeCard key={n.id} node={n} metrics={metrics?.[n.id]} rank={!query.trim() ? i + 1 : undefined} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
-
-      {err ? (
-        <div style={{ color: '#b00020' }}>
-          Failed to load index. You probably need to host <code>nodes.json</code> + <code>metrics.json</code> at{' '}
-          <code>{INDEX_BASE}</code>.
-          <div style={{ marginTop: 8, whiteSpace: 'pre-wrap' }}>{err}</div>
-        </div>
-      ) : null}
-
-      {!nodes || !metrics ? <div>Loading index…</div> : null}
-
-      {nodes && metrics ? (
-        <div>
-          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-            <div style={{ fontWeight: 600 }}>{query.trim() ? 'Matches' : 'Top hubs (by inbound links)'}</div>
-            <div style={{ fontSize: 12, color: '#666' }}>{results.length} results</div>
-          </div>
-
-          <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {results.map((n) => {
-              const m = metrics[n.id];
-              const href = `/explain?id=${encodeURIComponent(n.id)}`;
-              return (
-                <a
-                  key={n.id}
-                  href={href}
-                  style={{
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    border: '1px solid #eee',
-                    borderRadius: 10,
-                    padding: 12
-                  }}
-                >
-                  <div style={{ fontWeight: 600 }}>{n.title || n.filePath}</div>
-                  <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>
-                    <code>{n.filePath}</code>
-                  </div>
-                  <div style={{ fontSize: 12, color: '#444', marginTop: 6 }}>
-                    inbound links: <b>{m?.inboundLinks ?? 0}</b> · outbound links: <b>{m?.outboundLinks ?? 0}</b> · in nav:{' '}
-                    <b>{n.navPaths?.length ? 'yes' : 'no'}</b>
-                  </div>
-                  {n.navPaths?.length ? (
-                    <div style={{ fontSize: 12, color: '#666', marginTop: 4 }}>{n.navPaths[0]}</div>
-                  ) : null}
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      ) : null}
-
-      <div style={{ marginTop: 20, fontSize: 12, color: '#666' }}>
-        <a href="/dashboards">Dashboards</a> · Orphans + top hubs + top snippets
-      </div>
-    </div>
+    </AppLayout>
   );
 }
