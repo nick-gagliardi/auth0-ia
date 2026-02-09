@@ -151,7 +151,7 @@ export default function HomePage() {
       ) : null}
 
       <div style={{ marginTop: 20, fontSize: 12, color: '#666' }}>
-        Next: add dashboards (orphans/top snippets) + weekly index publish.
+        <a href="/dashboards">Dashboards</a> · Orphans + top hubs + top snippets
       </div>
     </div>
   );
