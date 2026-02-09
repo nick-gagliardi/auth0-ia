@@ -221,6 +221,11 @@ export default function ExplainPage() {
               <div>
                 imported by: <b>{m.importedBy}</b>
               </div>
+              {m.impactPages != null && (
+                <div>
+                  impact pages: <b>{m.impactPages}</b>
+                </div>
+              )}
               {m.hubScore != null && (
                 <div>
                   hub score: <b>{m.hubScore}</b>

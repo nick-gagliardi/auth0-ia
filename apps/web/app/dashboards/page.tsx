@@ -76,10 +76,26 @@ export default function DashboardsPage() {
       total: navOrphans.length
     },
     {
+      value: 'true-orphans',
+      label: 'True Orphans',
+      icon: AlertTriangle,
+      description: 'Pages with 0 inbound links AND not in navigation (highest-priority cleanup candidates).',
+      data: navOrphans.filter((n) => metrics?.[n.id]?.orphanTrue).slice(0, 200),
+      total: navOrphans.filter((n) => metrics?.[n.id]?.orphanTrue).length
+    },
+    {
+      value: 'ref-orphans',
+      label: 'Reference Orphans',
+      icon: Unlink,
+      description: 'Pages in nav but with 0 inbound links (often needs cross-linking from hub pages).',
+      data: pages.filter((n) => metrics?.[n.id]?.orphanReference).slice(0, 200),
+      total: pages.filter((n) => metrics?.[n.id]?.orphanReference).length
+    },
+    {
       value: 'link-orphans',
       label: 'Link Orphans',
       icon: Unlink,
-      description: 'Pages with 0 inbound links. Often undiscoverable.',
+      description: 'Pages with 0 inbound links (often undiscoverable).',
       data: linkOrphans.slice(0, 200),
       total: linkOrphans.length
     }

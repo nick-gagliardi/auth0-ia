@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, LayoutDashboard, Network } from 'lucide-react';
+import { Search, LayoutDashboard, Network, Activity, Github, Database } from 'lucide-react';
 import { useSummary } from '@/hooks/use-index-data';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Button } from '@/components/ui/button';
 
 const navItems = [
   { to: '/', label: 'Search', icon: Search },
@@ -47,6 +49,72 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                   </Link>
                 );
               })}
+
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="ghost" size="sm" className="gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                    </span>
+                    <span className="hidden sm:inline text-xs text-muted-foreground">
+                      Data: {summary ? new Date(summary.generatedAtUtc).toLocaleDateString() : '…'}
+                    </span>
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent align="end" className="w-96">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Activity className="w-4 h-4 text-primary" />
+                    <div className="font-semibold">Data Inspector</div>
+                  </div>
+
+                  {!summary ? (
+                    <div className="text-sm text-muted-foreground">Loading summary…</div>
+                  ) : (
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-start gap-2">
+                        <Database className="w-4 h-4 mt-0.5 text-muted-foreground" />
+                        <div>
+                          <div className="text-muted-foreground">Indexed snapshot</div>
+                          <div className="font-mono text-xs">{summary.generatedAtUtc}</div>
+                        </div>
+                      </div>
+
+                      {summary.source ? (
+                        <div className="flex items-start gap-2">
+                          <Github className="w-4 h-4 mt-0.5 text-muted-foreground" />
+                          <div>
+                            <div className="text-muted-foreground">docs-v2 ref</div>
+                            <div className="font-mono text-xs">{summary.source.ref}</div>
+                            <div className="text-muted-foreground mt-1">git sha</div>
+                            <div className="font-mono text-xs">{summary.source.gitSha}</div>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="text-xs text-muted-foreground">
+                          Source metadata not present yet. Rebuild the index after pulling latest.
+                        </div>
+                      )}
+
+                      <div>
+                        <div className="text-muted-foreground">Index base URL</div>
+                        <div className="font-mono text-xs">{process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index'}</div>
+                      </div>
+
+                      <div className="pt-2 border-t">
+                        <a
+                          className="text-primary hover:underline"
+                          href="https://github.com/nickgag626/auth0-ia#readme"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          How to refresh
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </PopoverContent>
+              </Popover>
             </nav>
           </div>
         </div>

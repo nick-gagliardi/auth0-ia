@@ -54,6 +54,11 @@ export default function NodeCard({ node, metrics, rank }: NodeCardProps) {
                   imported by {metrics.importedBy}
                 </Badge>
               )}
+              {metrics.impactPages != null && metrics.impactPages > 0 && (
+                <Badge variant="outline" className="text-xs py-0">
+                  impacts {metrics.impactPages} pages
+                </Badge>
+              )}
               {node.navPaths?.length > 0 && (
                 <span className="flex items-center gap-1 text-accent">
                   <Navigation className="w-3 h-3" />

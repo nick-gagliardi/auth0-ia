@@ -225,6 +225,17 @@ export async function buildIndex(opts) {
         const id = rel;
         nodes.push({ id, type: 'snippet', filePath: rel, navPaths: [] });
         ensureEdge(id);
+        // Also parse snippet imports so we can compute transitive impact/blast radius.
+        try {
+            const src = await fs.readFile(full, 'utf8');
+            for (const imp of extractImports(src)) {
+                const toFile = `main${imp}`.replace(/^main\/snippets\//, 'main/snippets/');
+                addEdge('import', id, toFile);
+            }
+        }
+        catch {
+            // ignore
+        }
     }
     // de-dupe edges
     for (const id of Object.keys(outbound)) {
@@ -240,21 +251,51 @@ export async function buildIndex(opts) {
     // metrics
     const metrics = {};
     const nodeSet = new Set(nodes.map((n) => n.id));
+    const nodeTypeById = new Map(nodes.map((n) => [n.id, n.type]));
+    // For snippets: compute transitive impact (unique pages reached via reverse import graph)
+    function computeSnippetImpactPages(snippetId) {
+        const seen = new Set();
+        const queue = [snippetId];
+        const impactedPages = new Set();
+        while (queue.length) {
+            const cur = queue.shift();
+            if (seen.has(cur))
+                continue;
+            seen.add(cur);
+            const importers = inbound[cur]?.import ?? [];
+            for (const from of importers) {
+                const t = nodeTypeById.get(from);
+                if (t === 'page')
+                    impactedPages.add(from);
+                if (t === 'snippet')
+                    queue.push(from);
+            }
+        }
+        return impactedPages.size;
+    }
     for (const n of nodes) {
         const id = n.id;
         const inboundLinks = (inbound[id]?.link?.length ?? 0);
         const outboundLinks = (outbound[id]?.link?.length ?? 0);
         const importedBy = (inbound[id]?.import?.length ?? 0);
         const nav = navMap.get(id);
-        const orphanNav = n.type === 'page' ? (n.navPaths.length === 0) : false;
+        const orphanNav = n.type === 'page' ? n.navPaths.length === 0 : false;
         const orphanLinks = n.type === 'page' ? inboundLinks === 0 : false;
+        const orphanTrue = n.type === 'page' ? orphanNav && orphanLinks : false;
+        const orphanReference = n.type === 'page' ? !orphanNav && orphanLinks : false;
+        const navDepth = nav?.navDepth;
+        const deepNav = n.type === 'page' && typeof navDepth === 'number' ? navDepth >= 5 : false;
         metrics[id] = {
             inboundLinks,
             outboundLinks,
             importedBy,
-            navDepth: nav?.navDepth,
+            impactPages: n.type === 'snippet' ? computeSnippetImpactPages(id) : undefined,
+            navDepth,
             orphanNav,
             orphanLinks,
+            orphanTrue,
+            orphanReference,
+            deepNav,
             hubScore: inboundLinks
         };
     }
@@ -265,8 +306,14 @@ export async function buildIndex(opts) {
     await fs.writeFile(path.join(opts.outDir, 'edges_inbound.json'), JSON.stringify(inbound, null, 2));
     await fs.writeFile(path.join(opts.outDir, 'metrics.json'), JSON.stringify(metrics, null, 2));
     // small summary
+    const gitSha = (await exec(`git -C ${repoRoot} rev-parse HEAD`)).stdout.trim();
     await fs.writeFile(path.join(opts.outDir, 'summary.json'), JSON.stringify({
         generatedAtUtc: new Date().toISOString(),
+        source: {
+            repoUrl: opts.repoUrl,
+            ref: opts.ref,
+            gitSha
+        },
         nodes: nodes.length,
         pages: nodes.filter((n) => n.type === 'page').length,
         snippets: nodes.filter((n) => n.type === 'snippet').length

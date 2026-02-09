@@ -13,9 +13,13 @@ export type NodeMetrics = {
   inboundLinks: number;
   outboundLinks: number;
   importedBy: number;
+  impactPages?: number;
   navDepth?: number;
   orphanNav?: boolean;
   orphanLinks?: boolean;
+  orphanTrue?: boolean;
+  orphanReference?: boolean;
+  deepNav?: boolean;
   hubScore?: number;
 };
 
@@ -25,6 +29,11 @@ export type EdgeMap = Record<string, { link: string[]; import: string[]; redirec
 
 export type Summary = {
   generatedAtUtc: string;
+  source?: {
+    repoUrl: string;
+    ref: string;
+    gitSha: string;
+  };
   nodes: number;
   pages: number;
   snippets: number;
