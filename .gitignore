@@ -3,6 +3,10 @@ node_modules
 .work/
 index/
 
+# Allow publishing index for the web app (temporary until we host it elsewhere)
+!apps/web/public/index/
+!apps/web/public/index/**
+
 # Next.js
 apps/web/.next/
 apps/web/out/
