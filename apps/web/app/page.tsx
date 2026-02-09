@@ -49,7 +49,7 @@ export default function SearchPage() {
           <p className="text-muted-foreground text-lg">Search, explore, and understand the Auth0 docs graph</p>
           {summary && (
             <p className="text-xs text-muted-foreground mt-2">
-              {summary.pages} pages · {summary.snippets} snippets
+              {summary.pages} pages · {summary.snippets} snippets · source <code>{process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index'}</code>
             </p>
           )}
         </div>

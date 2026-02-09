@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import type { DocNode, Metrics, EdgeMap, Summary } from '@/types';
 
-const INDEX_BASE = '/index';
+const INDEX_BASE = process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index';
 
 async function fetchJson<T>(path: string): Promise<T> {
   const res = await fetch(`${INDEX_BASE}/${path}`);

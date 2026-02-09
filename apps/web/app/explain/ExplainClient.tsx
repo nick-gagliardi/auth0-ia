@@ -3,8 +3,10 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2 } from 'lucide-react';
+import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
 import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes } from '@/hooks/use-index-data';
 
@@ -97,6 +99,7 @@ function EdgeList({
 }
 
 export default function ExplainPage() {
+  const { toast } = useToast();
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
   const { data: nodes, isLoading: l1 } = useNodes();
@@ -147,6 +150,20 @@ export default function ExplainPage() {
   const inE = inbound?.[node.id] || { link: [], import: [], redirect: [] };
   const outE = outbound?.[node.id] || { link: [], import: [], redirect: [] };
 
+  const docsV2BlobBase = process.env.NEXT_PUBLIC_DOCS_V2_BLOB_BASE || 'https://github.com/auth0/docs-v2/blob/main';
+  const docsV2Url = `${docsV2BlobBase}/${node.filePath}`;
+
+  async function copy(text: string, label: string) {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast({ title: 'Copied', description: `${label} copied to clipboard` });
+    } catch {
+      toast({ title: 'Copy failed', description: 'Could not access clipboard', variant: 'destructive' });
+    }
+  }
+
+  const deepLink = typeof window !== 'undefined' ? window.location.href : '';
+
   return (
     <AppLayout>
       <div className="max-w-4xl mx-auto">
@@ -158,14 +175,38 @@ export default function ExplainPage() {
         </Link>
 
         <div className="rounded-xl border bg-card p-6 mb-6">
-          <div className="flex items-center gap-2 mb-2">
-            {node.type === 'snippet' ? (
-              <Code2 className="w-5 h-5 text-accent" />
-            ) : (
-              <FileText className="w-5 h-5 text-primary" />
-            )}
-            <Badge variant="secondary">{node.type}</Badge>
+          <div className="flex items-center justify-between gap-3 mb-2">
+            <div className="flex items-center gap-2">
+              {node.type === 'snippet' ? (
+                <Code2 className="w-5 h-5 text-accent" />
+              ) : (
+                <FileText className="w-5 h-5 text-primary" />
+              )}
+              <Badge variant="secondary">{node.type}</Badge>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm" onClick={() => copy(node.id, 'Node id')}>
+                <Copy className="w-4 h-4 mr-2" />
+                Copy id
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => copy(node.filePath, 'File path')}>
+                <Copy className="w-4 h-4 mr-2" />
+                Copy path
+              </Button>
+              <Button variant="outline" size="sm" onClick={() => copy(deepLink, 'Link')} disabled={!deepLink}>
+                <Copy className="w-4 h-4 mr-2" />
+                Copy link
+              </Button>
+              <a href={docsV2Url} target="_blank" rel="noreferrer">
+                <Button variant="default" size="sm">
+                  <Github className="w-4 h-4 mr-2" />
+                  View in GitHub
+                </Button>
+              </a>
+            </div>
           </div>
+
           <h1 className="text-2xl font-bold mb-2">{node.title || node.filePath}</h1>
           <code className="text-sm text-muted-foreground block mb-4">{node.id}</code>
 
