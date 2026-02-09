@@ -2,3 +2,9 @@ node_modules
 .DS_Store
 .work/
 index/
+
+# Next.js
+apps/web/.next/
+apps/web/out/
+apps/web/.vercel/
+apps/web/tsconfig.tsbuildinfo
