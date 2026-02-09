@@ -159,7 +159,10 @@ export default function DashboardsPage() {
                     return (
                       <div key={`${p.a}||${p.b}`} className="rounded-xl border bg-card p-4">
                         <div className="text-xs text-muted-foreground mb-2">
-                          score <b>{p.score}</b> · shared out <b>{p.sharedOut}</b> · shared in <b>{p.sharedIn}</b>
+                          score <b>{p.score}</b> · simOut <b>{p.simOut}</b> · simIn <b>{p.simIn}</b> · shared out <b>{p.sharedOut}</b> · shared in <b>{p.sharedIn}</b>
+                          <span className="ml-2 rounded-md border px-2 py-0.5 text-[10px] uppercase tracking-wide">
+                            {p.convergenceType === 'journey' ? 'Journey Twin' : p.convergenceType === 'context' ? 'Context Twin' : 'Mixed'}
+                          </span>
                         </div>
                         <div className="flex flex-col gap-1">
                           <a className="text-primary hover:underline" href={`/explain?id=${encodeURIComponent(p.a)}`}>

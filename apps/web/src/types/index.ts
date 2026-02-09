@@ -51,8 +51,11 @@ export type CrossNavPairs = {
     a: string;
     b: string;
     score: number;
+    simOut: number;
+    simIn: number;
     sharedOut: number;
     sharedIn: number;
+    convergenceType: 'journey' | 'context' | 'mixed';
     aNav: string | null;
     bNav: string | null;
     aFolder: string | null;

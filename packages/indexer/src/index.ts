@@ -503,8 +503,11 @@ export async function buildIndex(opts: BuildIndexOptions) {
     a: string;
     b: string;
     score: number;
+    simOut: number;
+    simIn: number;
     sharedOut: number;
     sharedIn: number;
+    convergenceType: 'journey' | 'context' | 'mixed';
     aNav: string | null;
     bNav: string | null;
     aFolder: string | null;
@@ -561,12 +564,16 @@ export async function buildIndex(opts: BuildIndexOptions) {
     similarity[b].push(itemForB);
 
     if (highValueConvergence) {
+      const convergenceType = simOut > simIn + 0.1 ? 'journey' : simIn > simOut + 0.1 ? 'context' : 'mixed';
       crossNavPairs.push({
         a,
         b,
         score: Number(score.toFixed(4)),
+        simOut: Number(simOut.toFixed(4)),
+        simIn: Number(simIn.toFixed(4)),
         sharedOut: so,
         sharedIn: si,
+        convergenceType,
         aNav: aRoot,
         bNav: bRoot,
         aFolder,

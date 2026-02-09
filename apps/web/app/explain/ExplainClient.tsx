@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
+import SharedLinksExpander from '@/components/SharedLinksExpander';
 import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity } from '@/hooks/use-index-data';
 
 function EdgeList({
@@ -293,26 +294,32 @@ export default function ExplainPage() {
                 const n = nodeMap.get(t.id);
                 const gh = n?.filePath ? `${docsV2BlobBase}/${n.filePath}` : null;
                 return (
-                  <div key={t.id} className="flex items-center justify-between gap-3 rounded-lg border p-3">
-                    <div className="min-w-0">
-                      <Link href={`/explain?id=${encodeURIComponent(t.id)}`} className="font-medium hover:underline truncate block">
-                        {n?.title || n?.filePath || t.id}
-                      </Link>
-                      <div className="text-xs text-muted-foreground font-mono truncate">{t.id}</div>
-                      <div className="text-xs text-muted-foreground mt-1">
-                        score <b>{t.score}</b> · shared out <b>{t.sharedOut}</b> · shared in <b>{t.sharedIn}</b>
-                        {t.isCrossNav === true ? ' · cross-nav' : ''}
-                        {t.diffFolder === true ? ' · diff-folder' : ''}
+                  <div key={t.id} className="rounded-lg border p-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="min-w-0">
+                        <Link href={`/explain?id=${encodeURIComponent(t.id)}`} className="font-medium hover:underline truncate block">
+                          {n?.title || n?.filePath || t.id}
+                        </Link>
+                        <div className="text-xs text-muted-foreground font-mono truncate">{t.id}</div>
+                        <div className="text-xs text-muted-foreground mt-1">
+                          score <b>{t.score}</b> · shared out <b>{t.sharedOut}</b> · shared in <b>{t.sharedIn}</b>
+                          {t.isCrossNav === true ? ' · cross-nav' : ''}
+                          {t.diffFolder === true ? ' · diff-folder' : ''}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        {t.highValueConvergence && <Badge variant="destructive">alert</Badge>}
+                        {gh ? (
+                          <a href={gh} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground hover:text-foreground">
+                            GitHub
+                          </a>
+                        ) : null}
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      {t.highValueConvergence && <Badge variant="destructive">alert</Badge>}
-                      {gh ? (
-                        <a href={gh} target="_blank" rel="noreferrer" className="text-xs text-muted-foreground hover:text-foreground">
-                          GitHub
-                        </a>
-                      ) : null}
-                    </div>
+
+                    {outbound && metrics ? (
+                      <SharedLinksExpander aId={node.id} bId={t.id} outbound={outbound} metrics={metrics as any} nodeMap={nodeMap} />
+                    ) : null}
                   </div>
                 );
               })}
