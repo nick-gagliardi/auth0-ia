@@ -9,7 +9,8 @@ import { Button } from '@/components/ui/button';
 
 const navItems = [
   { to: '/', label: 'Search', icon: Search },
-  { to: '/dashboards', label: 'Dashboards', icon: LayoutDashboard }
+  { to: '/dashboards', label: 'Dashboards', icon: LayoutDashboard },
+  { to: '/docs', label: 'Docs', icon: Network }
 ];
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
