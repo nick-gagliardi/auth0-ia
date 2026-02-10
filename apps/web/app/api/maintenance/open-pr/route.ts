@@ -192,7 +192,7 @@ export async function POST(req: Request) {
       const here = dirname(fileURLToPath(import.meta.url));
       // route.ts -> app/api/maintenance/open-pr/route.ts
       // repo script lives at <repo>/scripts/maintenance-open-pr.mjs
-      const scriptPath = resolve(here, '../../../../../scripts/maintenance-open-pr.mjs');
+      const scriptPath = resolve(here, '../../../../../../scripts/maintenance-open-pr.mjs');
 
       const payload = await new Promise<any>((resolve, reject) => {
         execFile(
