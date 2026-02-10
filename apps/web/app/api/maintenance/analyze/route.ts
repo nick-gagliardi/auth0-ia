@@ -126,6 +126,26 @@ function analyzeMdx(mdx: string) {
     if (curlBlocks.length >= 50) break;
   }
 
+  // Fallback: detect unfenced curl snippets (common in bad/legacy formatting).
+  if (curlBlocks.length === 0) {
+    const lines = mdx.split(/\r?\n/);
+    for (let i = 0; i < lines.length; i++) {
+      if (!lines[i].match(/^\s*curl\s+/)) continue;
+      const buf: string[] = [lines[i]];
+      i += 1;
+      while (i < lines.length) {
+        const ln = lines[i];
+        if (ln.trim() === '') break;
+        // stop if we hit a heading/list that clearly isn't part of the command
+        if (ln.match(/^\s*#{1,6}\s+/)) break;
+        buf.push(ln);
+        i += 1;
+      }
+      curlBlocks.push({ lang: 'unfenced', content: buf.join('\n') });
+      if (curlBlocks.length >= 20) break;
+    }
+  }
+
   return {
     rulesOccurrences,
     linkCount: mdLinks.length + jsxHrefs.length,
