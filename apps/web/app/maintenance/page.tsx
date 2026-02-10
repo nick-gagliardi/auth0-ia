@@ -418,6 +418,13 @@ export default function MaintenancePage() {
                     </div>
                   )}
 
+                  {analysisResult?.checklistAuto && (
+                    <div className="mb-3">
+                      <div className="text-xs font-semibold mb-2">Checklist (auto)</div>
+                      <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-56 whitespace-pre-wrap">{JSON.stringify(analysisResult.checklistAuto, null, 2)}</pre>
+                    </div>
+                  )}
+
                   <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-72 whitespace-pre-wrap">{JSON.stringify(analysisResult, null, 2)}</pre>
                 </AlertDescription>
               </Alert>

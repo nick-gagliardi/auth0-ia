@@ -65,6 +65,20 @@ function extractFencedBlocks(mdx: string) {
   return blocks;
 }
 
+async function fetchPermalinkSet(req: Request) {
+  try {
+    const origin = new URL(req.url).origin;
+    const base = process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index';
+    const nodesUrl = new URL(`${base.replace(/\/$/, '')}/nodes.json`, origin);
+    const nodesRes = await fetch(nodesUrl.toString(), { cache: 'no-store' });
+    if (!nodesRes.ok) return null;
+    const nodes = (await nodesRes.json()) as Array<{ permalink?: string }>;
+    return new Set(nodes.map((n) => n.permalink).filter(Boolean) as string[]);
+  } catch {
+    return null;
+  }
+}
+
 function analyzeMdx(mdx: string) {
   const parts = splitByFences(mdx);
   const textOnly = parts.filter((p) => p.kind === 'text').map((p) => p.content).join('');
@@ -113,6 +127,19 @@ function analyzeMdx(mdx: string) {
   const fenced = extractFencedBlocks(mdx);
   const fenceLangs = fenced.map((b) => b.lang || '(none)').slice(0, 200);
 
+  const nonShellLangs = new Set(
+    fenced
+      .map((b) => (b.lang || '').toLowerCase())
+      .filter(Boolean)
+      .filter((l) => !['curl', 'bash', 'sh', 'shell', 'zsh'].includes(l))
+  );
+
+  const hasHarSample = fenced.some((b) => {
+    const lang = (b.lang || '').toLowerCase();
+    if (lang.includes('har')) return true;
+    return /\"log\"\s*:\s*\{/.test(b.content);
+  });
+
   // Extract curl blocks from fenced blocks.
   // Criteria: fence lang is curl/bash/sh/shell OR content contains a curl invocation.
   const curlBlocks: { lang: string; content: string }[] = [];
@@ -146,13 +173,21 @@ function analyzeMdx(mdx: string) {
     }
   }
 
+  const internalDocsLinks = [...mdLinks, ...jsxHrefs].filter((u) => u.startsWith('/docs/'));
+
   return {
     rulesOccurrences,
     linkCount: mdLinks.length + jsxHrefs.length,
-    internalDocsLinks: [...mdLinks, ...jsxHrefs].filter((u) => u.startsWith('/docs/')),
+    internalDocsLinks,
     images: [...mdImgs, ...imgSrcs],
     fenceLangs,
     curlBlocks,
+    detected: {
+      hasScreenshots: [...mdImgs, ...imgSrcs].length > 0,
+      hasAnyCodeFences: fenced.length > 0,
+      sdkLangs: Array.from(nonShellLangs).slice(0, 30),
+      hasHarSample,
+    },
   };
 }
 
@@ -398,6 +433,11 @@ export async function POST(req: Request) {
 
     const analysis = analyzeMdx(mdx);
 
+    const permalinkSet = await fetchPermalinkSet(req);
+    const brokenInternalDocsLinks = permalinkSet
+      ? analysis.internalDocsLinks.filter((u: string) => !permalinkSet.has(u))
+      : null;
+
     let curlSmoke: any = { ok: false, error: 'Not run' };
     let curlExec: any = [];
 
@@ -409,7 +449,41 @@ export async function POST(req: Request) {
       curlSmoke = { ok: false, error: e?.message || String(e) };
     }
 
-    return NextResponse.json({ ok: true, analysis, curlSmoke, curlExec });
+    // Technical correctness checklist auto-evaluation
+    const hasCurl = analysis.curlBlocks.length > 0;
+    const curlAllOk = hasCurl && Array.isArray(curlExec) && curlExec.length > 0 && curlExec.every((x: any) => x.ok);
+
+    const hasSdk = (analysis.detected?.sdkLangs || []).length > 0;
+    const hasHar = Boolean(analysis.detected?.hasHarSample);
+    const hasScreens = Boolean(analysis.detected?.hasScreenshots);
+
+    const checklistAuto = {
+      codeSamples: {
+        curl: hasCurl ? (curlAllOk ? 'PASS' : 'FAIL') : 'NA',
+        sdk: hasSdk ? 'MANUAL' : 'NA',
+        har: hasHar ? 'MANUAL' : 'NA',
+        missingSamples: analysis.detected?.hasAnyCodeFences || hasCurl ? 'MANUAL' : 'NA',
+        removeObjcSwift: (analysis.detected?.sdkLangs || []).some((l: string) => ['swift', 'objc', 'objective-c', 'objectivec'].includes(l))
+          ? 'MANUAL'
+          : 'NA',
+      },
+      dashboard: {
+        screenshots: hasScreens ? 'MANUAL' : 'NA',
+        screenshotsHiRes: hasScreens ? 'MANUAL' : 'NA',
+        stepsWork: hasScreens ? 'MANUAL' : 'NA',
+      },
+      housekeeping: {
+        rulesToActions: analysis.rulesOccurrences.length === 0 ? 'PASS' : 'FAIL',
+        brokenLinks: brokenInternalDocsLinks === null ? (analysis.internalDocsLinks.length ? 'MANUAL' : 'NA') : brokenInternalDocsLinks.length === 0 ? 'PASS' : 'FAIL',
+      },
+      evidence: {
+        rulesMentions: analysis.rulesOccurrences.slice(0, 5),
+        brokenInternalDocsLinks: brokenInternalDocsLinks ? brokenInternalDocsLinks.slice(0, 25) : null,
+        screenshotsFound: hasScreens ? analysis.images.slice(0, 10) : [],
+      },
+    };
+
+    return NextResponse.json({ ok: true, analysis: { ...analysis, brokenInternalDocsLinks }, curlSmoke, curlExec, checklistAuto });
   } catch (err: any) {
     return NextResponse.json({ ok: false, error: err?.message || String(err) }, { status: 400 });
   }
