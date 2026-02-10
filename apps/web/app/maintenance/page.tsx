@@ -93,28 +93,46 @@ export default function MaintenancePage() {
     lines.push('');
     lines.push('Checklist:');
 
-    function item(label: string, ok: boolean) {
-      lines.push(`- [${ok ? 'x' : ' '}] ${label}`);
+    type Status = 'PASS' | 'FAIL' | 'MANUAL' | 'NA' | undefined;
+
+    function mergeStatus(manualOk: boolean, auto: Status) {
+      // Manual always wins (human checked it).
+      if (manualOk) return { checked: true, note: null as string | null };
+      if (auto === 'PASS') return { checked: true, note: 'auto' };
+      if (auto === 'NA') return { checked: false, note: 'N/A' };
+      if (auto === 'MANUAL') return { checked: false, note: 'manual' };
+      return { checked: false, note: null as string | null };
     }
+
+    function item(label: string, manualOk: boolean, auto?: Status) {
+      const m = mergeStatus(manualOk, auto);
+      const suffix = m.note ? ` (${m.note})` : '';
+      lines.push(`- [${m.checked ? 'x' : ' '}] ${label}${suffix}`);
+    }
+
+    const auto = analysisResult?.checklistAuto;
+    const cs = auto?.codeSamples || {};
+    const hk = auto?.housekeeping || {};
 
     lines.push('');
     lines.push('Code samples');
-    item('cURL code samples work and are properly formatted', checklist.curlWorks);
-    item('SDK code samples work and are properly formatted', checklist.sdkWorks);
-    item('HAR code samples render correctly on Mintlify', checklist.harRenders);
-    item('Code samples are present where needed (no missing samples)', checklist.missingSamples);
-    item('Removed Obj-C/Swift from Management API calls where inappropriate', checklist.removeObjcSwift);
+    item('cURL code samples work and are properly formatted', checklist.curlWorks, cs.curl);
+    item('Code tab rendering works (Mintlify)', false, cs.tabRendering);
+    item('SDK code samples work and are properly formatted', checklist.sdkWorks, cs.sdk);
+    item('HAR code samples render correctly on Mintlify', checklist.harRenders, cs.har);
+    item('Code samples are present where needed (no missing samples)', checklist.missingSamples, cs.missingSamples);
+    item('Removed Obj-C/Swift from Management API calls where inappropriate', checklist.removeObjcSwift, cs.removeObjcSwift);
 
     lines.push('');
     lines.push('Auth0 Dashboard');
-    item('Screenshots are accurate and match written instructions', checklist.screenshotsAccurate);
-    item('Screenshots are high resolution and match style guide', checklist.screenshotsHiRes);
-    item('Procedural instructions using the Auth0 Dashboard work', checklist.dashboardStepsWork);
+    item('Screenshots are accurate and match written instructions', checklist.screenshotsAccurate, auto?.dashboard?.screenshots);
+    item('Screenshots are high resolution and match style guide', checklist.screenshotsHiRes, auto?.dashboard?.screenshotsHiRes);
+    item('Procedural instructions using the Auth0 Dashboard work', checklist.dashboardStepsWork, auto?.dashboard?.stepsWork);
 
     lines.push('');
     lines.push('General housekeeping');
-    item('Replaced Rules with Actions', checklist.replaceRulesWithActions);
-    item('Fixed broken links', checklist.brokenLinksFixed);
+    item('Replaced Rules with Actions', checklist.replaceRulesWithActions, hk.rulesToActions);
+    item('Fixed broken links', checklist.brokenLinksFixed, hk.brokenLinks);
 
     if (notes.trim()) {
       lines.push('');
@@ -123,7 +141,7 @@ export default function MaintenancePage() {
     }
 
     return lines.join('\n');
-  }, [checklist, notes, validatedOn]);
+  }, [analysisResult, checklist, notes, validatedOn]);
 
   async function runAnalysis() {
     setRunning(true);
