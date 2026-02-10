@@ -95,6 +95,43 @@ function analyzeMdx(mdx: string) {
     if (rulesOccurrences.length >= 25) break;
   }
 
+  // Lightweight typo checks (heuristic): repeated words + a small set of common misspellings.
+  const typosFound: Array<{ kind: 'repeated-word' | 'common-typo'; match: string; snippet: string }> = [];
+
+  const repeatedRe = /\b([A-Za-z]{2,})\s+\1\b/gi;
+  while ((rm = repeatedRe.exec(textOnly))) {
+    const idx = rm.index;
+    typosFound.push({
+      kind: 'repeated-word',
+      match: rm[0],
+      snippet: textOnly.slice(Math.max(0, idx - 40), idx + 40).replace(/\s+/g, ' '),
+    });
+    if (typosFound.length >= 25) break;
+  }
+
+  const commonTypoRes: RegExp[] = [
+    /\bteh\b/gi,
+    /\brecieve\b/gi,
+    /\boccured\b/gi,
+    /\bseperat(e|ed|es|ing)?\b/gi,
+    /\bdefinately\b/gi,
+    /\balot\b/gi,
+    /\bwich\b/gi,
+  ];
+
+  for (const re of commonTypoRes) {
+    while ((rm = re.exec(textOnly))) {
+      const idx = rm.index;
+      typosFound.push({
+        kind: 'common-typo',
+        match: rm[0],
+        snippet: textOnly.slice(Math.max(0, idx - 40), idx + 40).replace(/\s+/g, ' '),
+      });
+      if (typosFound.length >= 25) break;
+    }
+    if (typosFound.length >= 25) break;
+  }
+
   // Links
   const mdLinks: string[] = [];
   const mdLinkRe = /\[[^\]]*\]\(([^)]+)\)/g;
@@ -184,6 +221,7 @@ function analyzeMdx(mdx: string) {
 
   return {
     rulesOccurrences,
+    typosFound,
     linkCount: mdLinks.length + jsxHrefs.length,
     internalDocsLinks,
     internalDocsLinksAll,
@@ -616,10 +654,12 @@ export async function POST(req: Request) {
       housekeeping: {
         rulesToActions: analysis.rulesOccurrences.length === 0 ? 'PASS' : 'FAIL',
         brokenLinks: brokenInternalDocsLinks === null ? (analysis.internalDocsLinks.length ? 'MANUAL' : 'NA') : brokenInternalDocsLinks.length === 0 ? 'PASS' : 'FAIL',
+        typos: (analysis as any).typosFound?.length ? 'FAIL' : 'PASS',
       },
       evidence: {
         rulesMentions: analysis.rulesOccurrences.slice(0, 5),
         brokenInternalDocsLinks: brokenInternalDocsLinks ? brokenInternalDocsLinks.slice(0, 25) : null,
+        typosFound: (analysis as any).typosFound?.slice(0, 10) || [],
         screenshotsFound: hasScreens ? analysis.images.slice(0, 10) : [],
       },
     };

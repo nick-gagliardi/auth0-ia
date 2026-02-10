@@ -133,6 +133,7 @@ export default function MaintenancePage() {
     lines.push('General housekeeping');
     item('Replaced Rules with Actions', checklist.replaceRulesWithActions, hk.rulesToActions);
     item('Fixed broken links', checklist.brokenLinksFixed, hk.brokenLinks);
+    item('No obvious typos (heuristic)', false, hk.typos);
 
     if (notes.trim()) {
       lines.push('');

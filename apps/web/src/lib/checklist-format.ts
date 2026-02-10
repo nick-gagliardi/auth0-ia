@@ -35,6 +35,7 @@ export function formatChecklistHuman(checklistAuto: any) {
   lines.push('General housekeeping');
   lines.push(`${fmt(hk.rulesToActions)} Replace Rules with Actions`);
   lines.push(`${fmt(hk.brokenLinks)} Broken internal docs links`);
+  lines.push(`${fmt(hk.typos)} Possible typos (heuristic)`);
 
   return lines.join('\n');
 }
