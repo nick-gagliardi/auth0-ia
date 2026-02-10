@@ -120,13 +120,18 @@ const branchName = `maintenance/${branchSlug}-${validatedOn}`;
 
 // If the working tree is dirty, allow it ONLY when the only change is the target file.
 // We'll carry that change forward by generating a patch, switching branches, then applying it.
-const status = run('git', ['status', '--porcelain'], { cwd: docsRepoPath }).trim();
+const statusRaw = run('git', ['status', '--porcelain'], { cwd: docsRepoPath });
+const status = statusRaw.trimEnd();
 let carryPatch = null;
 if (status) {
-  const changed = status
+  const changed = statusRaw
     .split('\n')
     .filter(Boolean)
-    .map((l) => l.slice(3));
+    .map((l) => {
+      // Porcelain format: XY<space>path
+      const m = l.match(/^..\s+(.*)$/);
+      return m ? m[1] : l.slice(3);
+    });
 
   const unique = Array.from(new Set(changed));
   if (unique.length !== 1 || unique[0] !== filePath) {
