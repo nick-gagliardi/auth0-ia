@@ -1,8 +1,8 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ExternalLink, Loader2, Rocket, ShieldCheck } from 'lucide-react';
+import { ExternalLink, Loader2, Rocket, ShieldCheck, Terminal } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
+import { useToast } from '@/hooks/use-toast';
 
 type Checklist = {
   curlWorks: boolean;
@@ -50,7 +51,13 @@ function todayUtc() {
 }
 
 export default function MaintenancePage() {
-  const [targetRepo, setTargetRepo] = useState('auth0/docs-v2');
+  const { toast } = useToast();
+  const [prTarget, setPrTarget] = useState<'fork' | 'upstream'>('fork');
+
+  const defaultForkRepo = process.env.NEXT_PUBLIC_MAINTENANCE_FORK_REPO || 'nick-gagliardi/docs-v2';
+  const defaultUpstreamRepo = process.env.NEXT_PUBLIC_MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2';
+
+  const [targetRepo, setTargetRepo] = useState(defaultForkRepo);
   const [filePath, setFilePath] = useState('');
   const [validatedOn, setValidatedOn] = useState(todayUtc());
   const [notes, setNotes] = useState('');
@@ -63,6 +70,16 @@ export default function MaintenancePage() {
   const [cleaning, setCleaning] = useState(false);
   const [cleanupResult, setCleanupResult] = useState<any | null>(null);
 
+  const [consoleLines, setConsoleLines] = useState<string[]>([]);
+
+  function log(line: string) {
+    setConsoleLines((xs) => [...xs, `${new Date().toLocaleTimeString()} ${line}`]);
+  }
+
+  useEffect(() => {
+    setTargetRepo(prTarget === 'fork' ? defaultForkRepo : defaultUpstreamRepo);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [prTarget]);
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<{ prUrl: string; branchName: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -110,7 +127,10 @@ export default function MaintenancePage() {
   async function runAnalysis() {
     setRunning(true);
     setAnalysisResult(null);
+    setFixResult(null);
+    setCleanupResult(null);
     setError(null);
+    log(`Run analysis: ${filePath || '(no file path yet)'}`);
 
     try {
       const res = await fetch('/api/maintenance/analyze', {
@@ -121,6 +141,7 @@ export default function MaintenancePage() {
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || 'Unknown error');
       setAnalysisResult(json);
+      log('Analysis complete');
     } catch (e: any) {
       setError(e?.message || String(e));
     } finally {
@@ -133,6 +154,7 @@ export default function MaintenancePage() {
     setFixResult(null);
     setCleanupResult(null);
     setError(null);
+    log('Auto-fix: apply recipe + re-test');
 
     try {
       const res = await fetch('/api/maintenance/fix', {
@@ -143,6 +165,8 @@ export default function MaintenancePage() {
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || 'Unknown error');
       setFixResult(json);
+      log(`Auto-fix complete: ${json?.patch?.summary || 'done'}`);
+      toast({ title: 'Auto-fix complete', description: json?.patch?.summary || 'Recipe applied and re-tested.' });
     } catch (e: any) {
       setError(e?.message || String(e));
     } finally {
@@ -157,6 +181,7 @@ export default function MaintenancePage() {
     setCleaning(true);
     setCleanupResult(null);
     setError(null);
+    log(`Cleanup Action ${id}`);
 
     try {
       const res = await fetch('/api/maintenance/cleanup', {
@@ -167,6 +192,8 @@ export default function MaintenancePage() {
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || 'Cleanup failed');
       setCleanupResult(json);
+      log(`Cleanup complete (status ${json.status})`);
+      toast({ title: 'Cleanup complete', description: `DELETE returned ${json.status}` });
     } catch (e: any) {
       setError(e?.message || String(e));
     } finally {
@@ -178,6 +205,7 @@ export default function MaintenancePage() {
     setSubmitting(true);
     setResult(null);
     setError(null);
+    log(`Create PR → ${targetRepo}`);
 
     try {
       const res = await fetch('/api/maintenance/open-pr', {
@@ -196,6 +224,11 @@ export default function MaintenancePage() {
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || 'Unknown error');
       setResult({ prUrl: json.prUrl, branchName: json.branchName });
+      if (Array.isArray(json.steps)) {
+        for (const s of json.steps) log(String(s));
+      }
+      toast({ title: 'PR created', description: json.prUrl });
+      log(`PR created: ${json.prUrl}`);
     } catch (e: any) {
       setError(e?.message || String(e));
     } finally {
@@ -232,13 +265,30 @@ export default function MaintenancePage() {
         <Card>
           <CardHeader>
             <CardTitle className="text-lg">Target</CardTitle>
-            <CardDescription>Manual entry is fine for now (spreadsheet mapping later).</CardDescription>
+            <CardDescription>Pick where the PR should merge (fork for testing vs upstream for real).</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
+            <div className="flex flex-col sm:flex-row gap-2">
+              <Button
+                type="button"
+                variant={prTarget === 'fork' ? 'default' : 'secondary'}
+                onClick={() => setPrTarget('fork')}
+              >
+                PR → My fork
+              </Button>
+              <Button
+                type="button"
+                variant={prTarget === 'upstream' ? 'default' : 'secondary'}
+                onClick={() => setPrTarget('upstream')}
+              >
+                PR → Upstream
+              </Button>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="repo">GitHub repo</Label>
-                <Input id="repo" value={targetRepo} onChange={(e) => setTargetRepo(e.target.value)} placeholder="auth0/docs-v2" />
+                <Label htmlFor="repo">GitHub repo (PR target)</Label>
+                <Input id="repo" value={targetRepo} onChange={(e) => setTargetRepo(e.target.value)} placeholder="nick-gagliardi/docs-v2" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="validatedOn">validatedOn</Label>
@@ -385,6 +435,20 @@ export default function MaintenancePage() {
                   </div>
                 </AlertDescription>
               </Alert>
+            )}
+
+            {consoleLines.length > 0 && (
+              <Card>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg flex items-center gap-2">
+                    <Terminal className="w-4 h-4" /> Console
+                  </CardTitle>
+                  <CardDescription>What the tool is doing (client + server steps).</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-80 whitespace-pre-wrap">{consoleLines.join('\n')}</pre>
+                </CardContent>
+              </Card>
             )}
           </CardContent>
         </Card>

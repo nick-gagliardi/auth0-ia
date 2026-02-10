@@ -96,8 +96,8 @@ function parseArgs(argv) {
 
 const args = parseArgs(process.argv);
 const docsRepoPath = requireEnv('MAINTENANCE_DOCS_REPO_PATH');
-const upstreamRepo = requireEnv('MAINTENANCE_UPSTREAM_REPO'); // e.g. auth0/docs-v2
-const baseBranch = process.env.MAINTENANCE_BASE_BRANCH || 'main';
+const defaultUpstreamRepo = requireEnv('MAINTENANCE_UPSTREAM_REPO'); // e.g. auth0/docs-v2 or nick-gagliardi/docs-v2
+const defaultBaseBranch = process.env.MAINTENANCE_BASE_BRANCH || 'main';
 const forkOwner = requireEnv('MAINTENANCE_FORK_OWNER'); // your GH username/org
 
 const filePath = args.filePath || args.file || '';
@@ -105,8 +105,16 @@ const validatedOn = args.validatedOn || '';
 const prTitle = args.prTitle || `Content maintenance: validate ${filePath}`;
 const prBody = args.prBody || '';
 
+const targetRepo = args.targetRepo || defaultUpstreamRepo;
+const baseBranch = args.baseBranch || defaultBaseBranch;
+
+const steps = [];
+const step = (s) => steps.push(`${new Date().toISOString()} ${s}`);
+
 if (!filePath) die('Missing --filePath');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(validatedOn)) die('Missing/invalid --validatedOn (YYYY-MM-DD)');
+step(`Starting maintenance PR for ${filePath}`);
+step(`Target repo: ${targetRepo} (base ${baseBranch})`);
 
 const abs = path.resolve(docsRepoPath, filePath);
 if (!fs.existsSync(abs)) die(`File not found: ${abs}`);
@@ -148,11 +156,14 @@ if (status) {
   run('git', ['restore', '--', filePath], { cwd: docsRepoPath });
 }
 
+step(`Checkout ${baseBranch}`);
 run('git', ['checkout', baseBranch], { cwd: docsRepoPath });
+step(`Pull latest ${baseBranch}`);
 run('git', ['pull', '--ff-only'], { cwd: docsRepoPath });
 
 // Create/overwrite branch locally
 try {
+  step(`Create branch ${branchName}`);
   run('git', ['checkout', '-B', branchName], { cwd: docsRepoPath });
 } catch (e) {
   die(`Failed to create branch ${branchName}: ${e?.stderr || e}`);
@@ -161,6 +172,7 @@ try {
 // If we had a carried patch (from a dirty working tree), apply it now.
 if (carryPatch && carryPatch.trim()) {
   try {
+    step('Apply carried patch from dirty working tree');
     execFileSync('git', ['apply', '-'], { cwd: docsRepoPath, input: carryPatch });
   } catch (e) {
     die(`Failed to apply carried patch for ${filePath}. Resolve conflicts manually.`);
@@ -174,12 +186,14 @@ mdx = fixed.mdx;
 
 fs.writeFileSync(abs, mdx, 'utf8');
 
+step('Stage changes');
 run('git', ['add', filePath], { cwd: docsRepoPath });
 
-// Signed commit is controlled by user's git config (commit.gpgsign)
-run('git', ['commit', '-m', `chore(docs): content maintenance (${validatedOn})`], { cwd: docsRepoPath });
+step('Commit changes');
+// Avoid GPG prompts in automation.
+run('git', ['commit', '--no-gpg-sign', '-m', `chore(docs): content maintenance (${validatedOn})`], { cwd: docsRepoPath });
 
-// Push to fork remote. We assume remote name is "origin" pointing to the fork.
+step('Push branch to fork (origin)');
 run('git', ['push', '-u', 'origin', branchName], { cwd: docsRepoPath });
 
 // Create PR against upstream using gh.
@@ -190,13 +204,14 @@ const bodyCombined =
   (prBody ? `${prBody.trim()}\n\n` : '') +
   `## Automated fixes\n\n- validatedOn set to: ${validatedOn}\n- Rules→Actions replacements applied: ${fixed.replaced}\n`;
 
+step('Open PR via gh');
 const prUrl = run(
   'gh',
   [
     'pr',
     'create',
     '--repo',
-    upstreamRepo,
+    targetRepo,
     '--base',
     baseBranch,
     '--head',
@@ -208,6 +223,7 @@ const prUrl = run(
   ],
   { cwd: docsRepoPath }
 ).trim();
+step(`PR created: ${prUrl}`);
 
 process.stdout.write(
   JSON.stringify(
@@ -215,7 +231,10 @@ process.stdout.write(
       ok: true,
       prUrl,
       branchName,
+      targetRepo,
+      baseBranch,
       rulesReplaceCount: fixed.replaced,
+      steps,
     },
     null,
     2

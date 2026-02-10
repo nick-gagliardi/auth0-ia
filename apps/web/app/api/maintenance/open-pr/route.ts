@@ -207,6 +207,10 @@ export async function POST(req: Request) {
             body.prTitle || `Content maintenance: validate ${body.filePath}`,
             '--prBody',
             body.prBody || '',
+            '--targetRepo',
+            body.targetRepo || '',
+            '--baseBranch',
+            process.env.MAINTENANCE_BASE_BRANCH || 'main',
           ],
           { env: process.env, maxBuffer: 10 * 1024 * 1024 },
           (err, stdout, stderr) => {
