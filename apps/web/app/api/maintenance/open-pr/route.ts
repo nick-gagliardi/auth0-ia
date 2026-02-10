@@ -186,9 +186,13 @@ export async function POST(req: Request) {
     if (mode === 'local') {
       // Local mode: shell out to git + gh using the developer's machine credentials.
       const { execFile } = await import('node:child_process');
-      const { resolve } = await import('node:path');
-      // In local dev, Next's cwd is apps/web. The script lives at repo root /scripts.
-      const scriptPath = resolve(process.cwd(), '../../../scripts/maintenance-open-pr.mjs');
+      const { resolve, dirname } = await import('node:path');
+      const { fileURLToPath } = await import('node:url');
+      // Compute script path relative to THIS file, not process.cwd(), so it works in local dev.
+      const here = dirname(fileURLToPath(import.meta.url));
+      // route.ts -> app/api/maintenance/open-pr/route.ts
+      // repo script lives at <repo>/scripts/maintenance-open-pr.mjs
+      const scriptPath = resolve(here, '../../../../../scripts/maintenance-open-pr.mjs');
 
       const payload = await new Promise<any>((resolve, reject) => {
         execFile(
