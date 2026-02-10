@@ -58,6 +58,10 @@ export default function MaintenancePage() {
 
   const [running, setRunning] = useState(false);
   const [analysisResult, setAnalysisResult] = useState<any | null>(null);
+  const [fixing, setFixing] = useState(false);
+  const [fixResult, setFixResult] = useState<any | null>(null);
+  const [cleaning, setCleaning] = useState(false);
+  const [cleanupResult, setCleanupResult] = useState<any | null>(null);
 
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<{ prUrl: string; branchName: string } | null>(null);
@@ -121,6 +125,52 @@ export default function MaintenancePage() {
       setError(e?.message || String(e));
     } finally {
       setRunning(false);
+    }
+  }
+
+  async function applyAutoFix() {
+    setFixing(true);
+    setFixResult(null);
+    setCleanupResult(null);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/maintenance/fix', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ filePath, curlIndex: 0, recipe: 'actions-runtime-node14-to-node18' }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'Unknown error');
+      setFixResult(json);
+    } catch (e: any) {
+      setError(e?.message || String(e));
+    } finally {
+      setFixing(false);
+    }
+  }
+
+  async function cleanupCreatedAction() {
+    const id = fixResult?.created?.actionId;
+    if (!id) return;
+
+    setCleaning(true);
+    setCleanupResult(null);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/maintenance/cleanup', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ kind: 'action', id }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'Cleanup failed');
+      setCleanupResult(json);
+    } catch (e: any) {
+      setError(e?.message || String(e));
+    } finally {
+      setCleaning(false);
     }
   }
 
@@ -284,6 +334,40 @@ export default function MaintenancePage() {
                 <AlertTitle>Analysis results</AlertTitle>
                 <AlertDescription>
                   <div className="text-xs text-muted-foreground mb-2">This is a dry-run: no branch, no PR.</div>
+
+                  {analysisResult?.curlExec?.[0] && !analysisResult.curlExec[0].ok && (
+                    <div className="mt-3 mb-3 flex flex-col sm:flex-row gap-2">
+                      <Button variant="default" onClick={applyAutoFix} disabled={fixing} className="gap-2">
+                        {fixing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Rocket className="w-4 h-4" />}
+                        Auto-fix & re-test (recipe)
+                      </Button>
+                      <div className="text-xs text-muted-foreground sm:self-center">
+                        Currently supports: Actions runtime node14 → node18
+                      </div>
+                    </div>
+                  )}
+
+                  {fixResult && (
+                    <div className="mt-3">
+                      <div className="text-xs font-semibold mb-2">Fix report</div>
+                      <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-60 whitespace-pre-wrap">{JSON.stringify(fixResult, null, 2)}</pre>
+
+                      {fixResult?.created?.actionId && (
+                        <div className="mt-3 flex flex-col sm:flex-row gap-2">
+                          <Button variant="secondary" onClick={cleanupCreatedAction} disabled={cleaning} className="gap-2">
+                            {cleaning ? <Loader2 className="w-4 h-4 animate-spin" /> : <Rocket className="w-4 h-4" />}
+                            Cleanup created Action
+                          </Button>
+                          {cleanupResult && (
+                            <span className="text-xs text-muted-foreground sm:self-center">
+                              Cleanup status {cleanupResult.status}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
                   <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-72 whitespace-pre-wrap">{JSON.stringify(analysisResult, null, 2)}</pre>
                 </AlertDescription>
               </Alert>
