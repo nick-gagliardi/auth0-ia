@@ -27,6 +27,44 @@ function splitByFences(mdx: string) {
   return parts;
 }
 
+function extractFencedBlocks(mdx: string) {
+  // More forgiving fence parser than regex.
+  // Supports ``` and ~~~ fences, and tolerates indentation.
+  const lines = mdx.split(/\r?\n/);
+  const blocks: { fence: string; lang: string; content: string }[] = [];
+
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    const m = line.match(/^\s*(```|~~~)\s*([^\s`]*)\s*$/);
+    if (!m) {
+      i += 1;
+      continue;
+    }
+
+    const fence = m[1];
+    const lang = (m[2] || '').trim();
+    const start = i + 1;
+    i = start;
+    const contentLines: string[] = [];
+
+    while (i < lines.length) {
+      const end = lines[i];
+      if (end.match(new RegExp(`^\\s*${fence}\\s*$`))) break;
+      contentLines.push(end);
+      i += 1;
+    }
+
+    // If we didn't find a closing fence, treat as unterminated and stop.
+    if (i >= lines.length) break;
+
+    blocks.push({ fence, lang, content: contentLines.join('\n') });
+    i += 1; // skip closing fence
+  }
+
+  return blocks;
+}
+
 function analyzeMdx(mdx: string) {
   const parts = splitByFences(mdx);
   const textOnly = parts.filter((p) => p.kind === 'text').map((p) => p.content).join('');
@@ -36,9 +74,9 @@ function analyzeMdx(mdx: string) {
   const rulesRe = /\bRules\b/g;
   let rm: RegExpExecArray | null;
   while ((rm = rulesRe.exec(textOnly))) {
-    const i = rm.index;
+    const idx = rm.index;
     rulesOccurrences.push({
-      snippet: textOnly.slice(Math.max(0, i - 40), i + 40).replace(/\s+/g, ' '),
+      snippet: textOnly.slice(Math.max(0, idx - 40), idx + 40).replace(/\s+/g, ' '),
     });
     if (rulesOccurrences.length >= 25) break;
   }
@@ -72,26 +110,20 @@ function analyzeMdx(mdx: string) {
     if (imgSrcs.length >= 200) break;
   }
 
-  // Code fence languages
-  const fenceLangs: string[] = [];
-  const fenceLangRe = /^```\s*([^\s\n]*)/gm;
-  while ((lm = fenceLangRe.exec(mdx))) {
-    fenceLangs.push(lm[1] || '(none)');
-    if (fenceLangs.length >= 500) break;
-  }
+  const fenced = extractFencedBlocks(mdx);
+  const fenceLangs = fenced.map((b) => b.lang || '(none)').slice(0, 200);
 
-  // Extract curl blocks (very heuristic)
+  // Extract curl blocks from fenced blocks.
+  // Criteria: fence lang is curl/bash/sh/shell OR content contains a curl invocation.
   const curlBlocks: { lang: string; content: string }[] = [];
-  const fenceRe = /^```\s*([^\s\n]*)\n([\s\S]*?)\n```\s*$/gm;
-  let fm: RegExpExecArray | null;
-  while ((fm = fenceRe.exec(mdx))) {
-    const lang = (fm[1] || '').toLowerCase();
-    const content = fm[2] || '';
-    const firstLine = content.trimStart().split('\n')[0] || '';
-    if (lang === 'curl' || firstLine.trim().startsWith('curl ')) {
-      curlBlocks.push({ lang: lang || 'unknown', content });
-      if (curlBlocks.length >= 50) break;
+  for (const b of fenced) {
+    const lang = (b.lang || '').toLowerCase();
+    const looksLikeShell = ['curl', 'bash', 'sh', 'shell', 'zsh'].includes(lang);
+    const hasCurl = /(^|\n)\s*curl\s+/m.test(b.content);
+    if (looksLikeShell && hasCurl) {
+      curlBlocks.push({ lang: lang || 'unknown', content: b.content });
     }
+    if (curlBlocks.length >= 50) break;
   }
 
   return {
@@ -140,8 +172,8 @@ async function getMgmtApiToken() {
 }
 
 function normalizeCurlBlock(raw: string, domain: string, accessToken: string) {
-  // remove line continuations
-  let s = raw.replace(/\\\n/g, ' ');
+  // remove line continuations (backslash + optional spaces + newline)
+  let s = raw.replace(/\\\s*\n/g, ' ');
   // common placeholder replacements
   s = s.replaceAll('{managementApiToken}', accessToken);
   // tenant placeholders
