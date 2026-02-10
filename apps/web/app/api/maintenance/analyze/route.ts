@@ -244,6 +244,33 @@ async function runCurlSmoke(domain: string, accessToken: string) {
   };
 }
 
+function tryParseJson(s: string) {
+  try {
+    return JSON.parse(s);
+  } catch {
+    return null;
+  }
+}
+
+function maybeOverrideActionName(parsed: { method: string; url: string | null; data?: string }, attempt: number) {
+  // Execution-only override to avoid polluting the tenant with repeated name collisions.
+  // Only applies to POST /api/v2/actions/actions.
+  if (!parsed.url) return { data: parsed.data, override: null as null | { from: string; to: string } };
+  if (parsed.method !== 'POST') return { data: parsed.data, override: null };
+  if (!parsed.url.includes('/api/v2/actions/actions')) return { data: parsed.data, override: null };
+  if (!parsed.data) return { data: parsed.data, override: null };
+
+  const json = tryParseJson(parsed.data);
+  if (!json || typeof json !== 'object') return { data: parsed.data, override: null };
+  const name = (json as any).name;
+  if (typeof name !== 'string' || !name) return { data: parsed.data, override: null };
+
+  const suffix = `${Date.now()}-${attempt}`;
+  const nextName = `${name}-${suffix}`;
+  (json as any).name = nextName;
+  return { data: JSON.stringify(json), override: { from: name, to: nextName } };
+}
+
 async function executeCurlBlocks(blocks: { lang: string; content: string }[], domain: string, accessToken: string) {
   const max = Number(process.env.MAINTENANCE_CURL_MAX || 5);
   const out: Array<{
@@ -254,6 +281,7 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
     ok: boolean;
     requestPreview?: string;
     responsePreview?: string;
+    overrides?: { actionName?: { from: string; to: string } };
     note?: string;
   }> = [];
 
@@ -286,6 +314,10 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
     let body: string | undefined;
     if (parsed.data !== undefined) body = parsed.data;
 
+    // execution-only overrides
+    const override = maybeOverrideActionName({ method: parsed.method, url: parsed.url, data: body }, 0);
+    body = override.data;
+
     const requestPreview = redact(
       `curl (simulated)\nMETHOD: ${parsed.method}\nURL: ${parsed.url}\nHEADERS: ${JSON.stringify(
         Object.fromEntries(Object.entries(headers).map(([k, v]) => [k, k.toLowerCase() === 'authorization' ? 'Bearer [REDACTED]' : v]))
@@ -293,14 +325,30 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
     ).slice(0, previewLimit);
 
     try {
-      const res = await fetch(parsed.url, {
+      // If we still hit name collision, retry once with a new override.
+      let res = await fetch(parsed.url, {
         method: parsed.method,
         headers,
         body: body !== undefined ? body : undefined,
         cache: 'no-store',
       });
 
-      const text = await res.text().catch(() => '');
+      let text = await res.text().catch(() => '');
+      if (!res.ok && parsed.method === 'POST' && parsed.url.includes('/api/v2/actions/actions')) {
+        try {
+          const j = JSON.parse(text);
+          const msg = String(j?.message || '');
+          if (msg.toLowerCase().includes('action name has already been taken')) {
+            const override2 = maybeOverrideActionName({ method: parsed.method, url: parsed.url, data: body }, 1);
+            body = override2.data;
+            res = await fetch(parsed.url, { method: parsed.method, headers, body, cache: 'no-store' });
+            text = await res.text().catch(() => '');
+          }
+        } catch {
+          // ignore
+        }
+      }
+
       const responsePreview = redact(text).slice(0, previewLimit);
 
       out.push({
@@ -311,6 +359,7 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
         ok: res.ok,
         requestPreview,
         responsePreview,
+        overrides: override.override ? { actionName: override.override } : undefined,
       });
     } catch (e: any) {
       out.push({

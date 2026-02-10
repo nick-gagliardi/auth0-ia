@@ -172,7 +172,10 @@ async function executeOneCurl(block: { lang: string; content: string }, domain: 
     headers['Authorization'] = `Bearer ${accessToken}`;
   }
 
-  const body = parsed.data;
+  let body = parsed.data;
+
+  const override = maybeOverrideActionName({ method: parsed.method, url: parsed.url, data: body }, 0);
+  body = override.data;
 
   const requestPreview = redact(
     `curl (simulated)\nMETHOD: ${parsed.method}\nURL: ${parsed.url}\nHEADERS: ${JSON.stringify(
@@ -180,14 +183,25 @@ async function executeOneCurl(block: { lang: string; content: string }, domain: 
     )}\nBODY: ${body ?? ''}`
   ).slice(0, previewLimit);
 
-  const res = await fetch(parsed.url, {
+  let res = await fetch(parsed.url, {
     method: parsed.method,
     headers,
     body: body !== undefined ? body : undefined,
     cache: 'no-store',
   });
 
-  const text = await res.text().catch(() => '');
+  let text = await res.text().catch(() => '');
+
+  if (!res.ok && parsed.method === 'POST' && parsed.url.includes('/api/v2/actions/actions')) {
+    const j = tryParseJson(text);
+    const msg = String((j as any)?.message || '');
+    if (msg.toLowerCase().includes('action name has already been taken')) {
+      const override2 = maybeOverrideActionName({ method: parsed.method, url: parsed.url, data: body }, 1);
+      body = override2.data;
+      res = await fetch(parsed.url, { method: parsed.method, headers, body, cache: 'no-store' });
+      text = await res.text().catch(() => '');
+    }
+  }
 
   return {
     ok: res.ok,
@@ -196,6 +210,7 @@ async function executeOneCurl(block: { lang: string; content: string }, domain: 
     method: parsed.method,
     requestPreview,
     responsePreview: redact(text).slice(0, previewLimit),
+    overrides: override.override ? { actionName: override.override } : undefined,
   };
 }
 
@@ -205,6 +220,23 @@ function tryParseJson(s: string) {
   } catch {
     return null;
   }
+}
+
+function maybeOverrideActionName(parsed: { method: string; url: string | null; data?: string }, attempt: number) {
+  if (!parsed.url) return { data: parsed.data, override: null as null | { from: string; to: string } };
+  if (parsed.method !== 'POST') return { data: parsed.data, override: null };
+  if (!parsed.url.includes('/api/v2/actions/actions')) return { data: parsed.data, override: null };
+  if (!parsed.data) return { data: parsed.data, override: null };
+
+  const json = tryParseJson(parsed.data);
+  if (!json || typeof json !== 'object') return { data: parsed.data, override: null };
+  const name = (json as any).name;
+  if (typeof name !== 'string' || !name) return { data: parsed.data, override: null };
+
+  const suffix = `${Date.now()}-${attempt}`;
+  const nextName = `${name}-${suffix}`;
+  (json as any).name = nextName;
+  return { data: JSON.stringify(json), override: { from: name, to: nextName } };
 }
 
 function patchActionsRuntimeNode14ToNode18(mdx: string, curlBlock: string) {
