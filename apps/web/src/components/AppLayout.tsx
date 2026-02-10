@@ -8,7 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Button } from '@/components/ui/button';
 
 const navItems = [
-  { to: '/', label: 'Search', icon: Search },
+  { to: '/', label: 'Home', icon: Search },
   { to: '/work-queue', label: 'Work Queue', icon: LayoutDashboard },
   { to: '/dashboards', label: 'Dashboards', icon: Network },
   { to: '/docs', label: 'Docs', icon: Network }
