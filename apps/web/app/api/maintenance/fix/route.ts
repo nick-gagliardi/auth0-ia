@@ -207,20 +207,30 @@ function tryParseJson(s: string) {
   }
 }
 
-function patchActionsRuntimeNode14ToNode18(mdx: string) {
-  // Conservative: only patch inside curl -d '...'
-  // and only when the command contains /api/v2/actions/actions.
-  // We do a scoped replace to avoid touching unrelated content.
-  const hasActionsEndpoint = /\/api\/v2\/actions\/actions/.test(mdx);
-  if (!hasActionsEndpoint) return { mdx, changed: false, replaced: 0, note: 'No actions/actions endpoint found in file.' };
+function patchActionsRuntimeNode14ToNode18(mdx: string, curlBlock: string) {
+  // Patch ONLY inside the selected curl block (string match replace), to avoid touching unrelated content.
+  if (!curlBlock.includes('/api/v2/actions/actions')) {
+    return { mdx, changed: false, replaced: 0, note: 'Selected curl block is not an actions/actions request.' };
+  }
 
+  // Replace runtime in JSON body (works regardless of whether endpoint appears before/after JSON).
   let replaced = 0;
-  const next = mdx.replace(/(\/api\/v2\/actions\/actions[\s\S]{0,2000}?)("runtime"\s*:\s*")node14(")/g, (all, p1, p2, _old, p4) => {
+  const patchedBlock = curlBlock.replace(/("runtime"\s*:\s*")node14(")/g, (_m, p1, p2) => {
     replaced += 1;
-    return `${p1}${p2}node18${p4}`;
+    return `${p1}node18${p2}`;
   });
 
-  return { mdx: next, changed: replaced > 0, replaced, note: replaced > 0 ? undefined : 'No runtime node14 found near actions endpoint.' };
+  if (replaced === 0) {
+    return { mdx, changed: false, replaced: 0, note: 'No runtime node14 found inside selected curl block.' };
+  }
+
+  const idx = mdx.indexOf(curlBlock);
+  if (idx < 0) {
+    return { mdx, changed: false, replaced: 0, note: 'Could not locate the curl block text in the file for patching.' };
+  }
+
+  const next = mdx.slice(0, idx) + patchedBlock + mdx.slice(idx + curlBlock.length);
+  return { mdx: next, changed: true, replaced, note: undefined };
 }
 
 export async function POST(req: Request) {
@@ -261,7 +271,7 @@ export async function POST(req: Request) {
         });
       }
 
-      const patched = patchActionsRuntimeNode14ToNode18(mdx0);
+      const patched = patchActionsRuntimeNode14ToNode18(mdx0, target.content);
       if (!patched.changed) {
         return NextResponse.json({ ok: false, error: patched.note || 'No changes made', before });
       }
