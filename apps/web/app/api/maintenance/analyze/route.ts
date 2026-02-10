@@ -163,8 +163,9 @@ function analyzeMdx(mdx: string) {
       while (i < lines.length) {
         const ln = lines[i];
         if (ln.trim() === '') break;
-        // stop if we hit a heading/list that clearly isn't part of the command
         if (ln.match(/^\s*#{1,6}\s+/)) break;
+        // stop at fence start to avoid swallowing multi-language blocks
+        if (ln.match(/^\s*(```|~~~)\s*/)) break;
         buf.push(ln);
         i += 1;
       }
@@ -173,12 +174,19 @@ function analyzeMdx(mdx: string) {
     }
   }
 
-  const internalDocsLinks = [...mdLinks, ...jsxHrefs].filter((u) => u.startsWith('/docs/'));
+  const internalDocsLinksAll = [...mdLinks, ...jsxHrefs].filter((u) => u.startsWith('/docs/'));
+  const internalDocsLinks = internalDocsLinksAll.filter((u) => {
+    // Exclude non-page routes from broken-link validation.
+    if (u.includes('?')) return false;
+    if (u.startsWith('/docs/images/')) return false;
+    return true;
+  });
 
   return {
     rulesOccurrences,
     linkCount: mdLinks.length + jsxHrefs.length,
     internalDocsLinks,
+    internalDocsLinksAll,
     images: [...mdImgs, ...imgSrcs],
     fenceLangs,
     curlBlocks,
@@ -336,6 +344,20 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
         ok: false,
         requestPreview: redact(normalized).slice(0, previewLimit),
         note: 'Could not parse URL from curl block.',
+      });
+      continue;
+    }
+
+    // Skip execution if the URL includes unresolved placeholders.
+    if (/[{}]/.test(parsed.url) || /%7B|%7D/i.test(parsed.url)) {
+      out.push({
+        index: i,
+        method: parsed.method,
+        url: parsed.url,
+        status: 0,
+        ok: false,
+        requestPreview: redact(normalized).slice(0, previewLimit),
+        note: 'SKIPPED: unresolved placeholders in URL',
       });
       continue;
     }
@@ -533,6 +555,7 @@ export async function POST(req: Request) {
 
     // Technical correctness checklist auto-evaluation
     const hasCurl = analysis.curlBlocks.length > 0;
+    const curlAnySkipped = Array.isArray(curlExec) && curlExec.some((x: any) => typeof x?.note === 'string' && x.note.startsWith('SKIPPED:'));
     const curlAllOk = hasCurl && Array.isArray(curlExec) && curlExec.length > 0 && curlExec.every((x: any) => x.ok);
 
     const hasSdk = (analysis.detected?.sdkLangs || []).length > 0;
@@ -541,7 +564,7 @@ export async function POST(req: Request) {
 
     const checklistAuto = {
       codeSamples: {
-        curl: hasCurl ? (curlAllOk ? 'PASS' : 'FAIL') : 'NA',
+        curl: hasCurl ? (curlAllOk ? 'PASS' : curlAnySkipped ? 'MANUAL' : 'FAIL') : 'NA',
         tabRendering: renderCheck && (renderCheck as any).ok ? 'PASS' : (renderCheck as any)?.skipped ? 'MANUAL' : 'FAIL',
         tabRenderingWarning: (renderCheck as any)?.warning || null,
         sdk: hasSdk ? 'MANUAL' : 'NA',

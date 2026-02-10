@@ -13,6 +13,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
+import { formatChecklistHuman } from '@/lib/checklist-format';
 
 type Checklist = {
   curlWorks: boolean;
@@ -418,14 +419,14 @@ export default function MaintenancePage() {
                     </div>
                   )}
 
+                  <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-72 whitespace-pre-wrap">{JSON.stringify(analysisResult, null, 2)}</pre>
+
                   {analysisResult?.checklistAuto && (
-                    <div className="mb-3">
-                      <div className="text-xs font-semibold mb-2">Checklist (auto)</div>
-                      <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-56 whitespace-pre-wrap">{JSON.stringify(analysisResult.checklistAuto, null, 2)}</pre>
+                    <div className="mt-4">
+                      <div className="text-xs font-semibold mb-2">Technical correctness checklist</div>
+                      <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-64 whitespace-pre-wrap">{formatChecklistHuman(analysisResult.checklistAuto)}</pre>
                     </div>
                   )}
-
-                  <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-72 whitespace-pre-wrap">{JSON.stringify(analysisResult, null, 2)}</pre>
                 </AlertDescription>
               </Alert>
             )}
