@@ -32,7 +32,7 @@ export default function WorkQueuePage() {
   const deepImportant = useMemo(() => {
     if (!metrics) return [];
     return pages
-      .filter((p) => (metrics[p.id]?.navDepth ?? 0) >= 5 && (metrics[p.id]?.inboundLinks ?? 0) >= 10)
+      .filter((p) => (metrics[p.id]?.navDepth ?? 0) >= 6 && (metrics[p.id]?.inboundLinks ?? 0) >= 10)
       .sort((a, b) => scoreDeepImportant(metrics[b.id]) - scoreDeepImportant(metrics[a.id]));
   }, [pages, metrics]);
 
@@ -64,7 +64,7 @@ export default function WorkQueuePage() {
       value: 'deep-important',
       label: 'Deep-but-Important',
       help:
-        'Nav depth ≥ 5 and inbound links ≥ 10. Likely buried content that matters: consider moving up nav or creating a hub/landing page.',
+        'Nav depth ≥ 6 and inbound links ≥ 10. Likely buried content that matters: consider moving up nav or creating a hub/landing page.',
       data: deepImportant.slice(0, 200),
       total: deepImportant.length
     },
