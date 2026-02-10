@@ -178,11 +178,53 @@ async function gh<T>(token: string, path: string, init?: RequestInit): Promise<T
 
 export async function POST(req: Request) {
   try {
-    const token = requireEnv('MAINTENANCE_GH_TOKEN');
-    const defaultTarget = process.env.MAINTENANCE_TARGET_REPO || 'auth0/docs-v2';
+    const mode = (process.env.MAINTENANCE_MODE || 'vercel').toLowerCase();
 
     const bodyRaw = await req.json();
     const body = BodySchema.parse(bodyRaw);
+
+    if (mode === 'local') {
+      // Local mode: shell out to git + gh using the developer's machine credentials.
+      const { execFile } = await import('node:child_process');
+      const { resolve } = await import('node:path');
+      // In local dev, Next's cwd is apps/web. The script lives at repo root /scripts.
+      const scriptPath = resolve(process.cwd(), '../../../scripts/maintenance-open-pr.mjs');
+
+      const payload = await new Promise<any>((resolve, reject) => {
+        execFile(
+          process.execPath,
+          [
+            scriptPath,
+            '--filePath',
+            body.filePath,
+            '--validatedOn',
+            body.validatedOn,
+            '--prTitle',
+            body.prTitle || `Content maintenance: validate ${body.filePath}`,
+            '--prBody',
+            body.prBody || '',
+          ],
+          { env: process.env, maxBuffer: 10 * 1024 * 1024 },
+          (err, stdout, stderr) => {
+            if (err) {
+              reject(new Error(stderr || err.message));
+              return;
+            }
+            try {
+              resolve(JSON.parse(String(stdout || '').trim()));
+            } catch {
+              reject(new Error(`Unexpected output from local script:\n${stdout}\n${stderr}`));
+            }
+          }
+        );
+      });
+
+      return NextResponse.json(payload);
+    }
+
+    // Vercel mode: call GitHub API directly using MAINTENANCE_GH_TOKEN.
+    const token = requireEnv('MAINTENANCE_GH_TOKEN');
+    const defaultTarget = process.env.MAINTENANCE_TARGET_REPO || 'auth0/docs-v2';
 
     const targetRepo = (body.targetRepo || defaultTarget).trim();
     const [owner, repo] = targetRepo.split('/');
