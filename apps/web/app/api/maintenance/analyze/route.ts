@@ -104,8 +104,7 @@ function analyzeMdx(mdx: string) {
   };
 }
 
-async function runCurlSmoke() {
-  // Minimal proof of life: fetch mgmt api token.
+async function getMgmtApiToken() {
   const domain = requireEnv('AUTH0_DOMAIN');
   const clientId = requireEnv('AUTH0_CLIENT_ID');
   const clientSecret = requireEnv('AUTH0_CLIENT_SECRET');
@@ -124,20 +123,64 @@ async function runCurlSmoke() {
 
   const tokenText = await tokenRes.text();
   if (!tokenRes.ok) {
-    return { ok: false, error: `Token fetch failed: ${tokenRes.status} ${tokenRes.statusText}: ${tokenText.slice(0, 500)}` };
+    throw new Error(`Token fetch failed: ${tokenRes.status} ${tokenRes.statusText}: ${tokenText.slice(0, 500)}`);
   }
 
   let tokenJson: any;
   try {
     tokenJson = JSON.parse(tokenText);
   } catch {
-    return { ok: false, error: `Token fetch returned non-JSON: ${tokenText.slice(0, 500)}` };
+    throw new Error(`Token fetch returned non-JSON: ${tokenText.slice(0, 500)}`);
   }
 
   const accessToken = tokenJson.access_token as string | undefined;
-  if (!accessToken) return { ok: false, error: 'Token fetch succeeded but no access_token present.' };
+  if (!accessToken) throw new Error('Token fetch succeeded but no access_token present.');
 
-  // Read-only sanity call
+  return { domain, accessToken };
+}
+
+function normalizeCurlBlock(raw: string, domain: string, accessToken: string) {
+  // remove line continuations
+  let s = raw.replace(/\\\n/g, ' ');
+  // common placeholder replacements
+  s = s.replaceAll('{managementApiToken}', accessToken);
+  // tenant placeholders
+  s = s.replaceAll('{yourTenant}.com', domain);
+  s = s.replaceAll('{yourTenant}', domain);
+  return s;
+}
+
+function parseCurl(normalized: string) {
+  // ultra-light parser: find method, headers, data, url
+  const methodMatch = normalized.match(/\s-X\s+([A-Z]+)/i);
+  const method = (methodMatch?.[1] || 'GET').toUpperCase();
+
+  const headers: Record<string, string> = {};
+  const headerRe = /\s-H\s+"([^"]+)"/g;
+  let m: RegExpExecArray | null;
+  while ((m = headerRe.exec(normalized))) {
+    const [k, ...rest] = m[1].split(':');
+    if (!k || rest.length === 0) continue;
+    headers[k.trim()] = rest.join(':').trim();
+  }
+
+  // -d '...'
+  const dataMatch = normalized.match(/\s-d\s+'([\s\S]*?)'/);
+  const data = dataMatch?.[1];
+
+  // url: last https?:// token
+  const urlMatch = normalized.match(/(https?:\/\/[^\s]+)/g);
+  const url = urlMatch ? urlMatch[urlMatch.length - 1] : null;
+
+  return { method, headers, data, url };
+}
+
+function redact(s: string) {
+  // conservative redaction for bearer tokens
+  return s.replace(/Bearer\s+[A-Za-z0-9._-]+/g, 'Bearer [REDACTED]');
+}
+
+async function runCurlSmoke(domain: string, accessToken: string) {
   const sanity = await fetch(`https://${domain}/api/v2/clients?per_page=1`, {
     headers: { Authorization: `Bearer ${accessToken}` },
     cache: 'no-store',
@@ -145,9 +188,47 @@ async function runCurlSmoke() {
 
   return {
     ok: true,
-    tokenOk: true,
     sanityStatus: sanity.status,
   };
+}
+
+async function executeCurlBlocks(blocks: { lang: string; content: string }[], domain: string, accessToken: string) {
+  const max = Number(process.env.MAINTENANCE_CURL_MAX || 5);
+  const out: Array<{ index: number; method: string; url: string; status: number; ok: boolean; note?: string }> = [];
+
+  for (let i = 0; i < Math.min(blocks.length, max); i++) {
+    const b = blocks[i];
+    const normalized = normalizeCurlBlock(b.content, domain, accessToken);
+    const parsed = parseCurl(normalized);
+
+    if (!parsed.url) {
+      out.push({ index: i, method: parsed.method, url: '(missing)', status: 0, ok: false, note: 'Could not parse URL from curl block.' });
+      continue;
+    }
+
+    // default auth header if placeholder replacement didn't inject it
+    const headers = { ...parsed.headers };
+    if (!Object.keys(headers).some((h) => h.toLowerCase() === 'authorization')) {
+      headers['Authorization'] = `Bearer ${accessToken}`;
+    }
+
+    let body: string | undefined;
+    if (parsed.data !== undefined) body = parsed.data;
+
+    try {
+      const res = await fetch(parsed.url, {
+        method: parsed.method,
+        headers,
+        body: body !== undefined ? body : undefined,
+        cache: 'no-store',
+      });
+      out.push({ index: i, method: parsed.method, url: parsed.url, status: res.status, ok: res.ok });
+    } catch (e: any) {
+      out.push({ index: i, method: parsed.method, url: parsed.url, status: 0, ok: false, note: redact(e?.message || String(e)) });
+    }
+  }
+
+  return out;
 }
 
 export async function POST(req: Request) {
@@ -170,9 +251,19 @@ export async function POST(req: Request) {
     const mdx = await fs.readFile(abs, 'utf8');
 
     const analysis = analyzeMdx(mdx);
-    const curlSmoke = await runCurlSmoke().catch((e: any) => ({ ok: false, error: e?.message || String(e) }));
 
-    return NextResponse.json({ ok: true, analysis, curlSmoke });
+    let curlSmoke: any = { ok: false, error: 'Not run' };
+    let curlExec: any = [];
+
+    try {
+      const { domain, accessToken } = await getMgmtApiToken();
+      curlSmoke = await runCurlSmoke(domain, accessToken);
+      curlExec = await executeCurlBlocks(analysis.curlBlocks, domain, accessToken);
+    } catch (e: any) {
+      curlSmoke = { ok: false, error: e?.message || String(e) };
+    }
+
+    return NextResponse.json({ ok: true, analysis, curlSmoke, curlExec });
   } catch (err: any) {
     return NextResponse.json({ ok: false, error: err?.message || String(err) }, { status: 400 });
   }
