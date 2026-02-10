@@ -7,6 +7,7 @@ const BodySchema = z.object({
   validatedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   prTitle: z.string().optional(),
   prBody: z.string().optional(),
+  applyAutoFixes: z.boolean().optional().default(true),
 });
 
 function requireEnv(name: string) {
@@ -45,6 +46,114 @@ function upsertValidatedOn(mdx: string, validatedOn: string) {
   }
 
   return `---\n${lines.join('\n')}\n---\n\n${rest.replace(/^\n+/, '')}`;
+}
+
+function splitByFences(mdx: string) {
+  // Keep delimiter parts so we can preserve exactly.
+  // This is a lightweight heuristic, not a full MDX parser.
+  const parts: { kind: 'code' | 'text'; content: string }[] = [];
+  const re = /(^```[^\n]*\n[\s\S]*?\n```\s*$)/gm;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(mdx))) {
+    const start = m.index;
+    const end = start + m[0].length;
+    if (start > last) parts.push({ kind: 'text', content: mdx.slice(last, start) });
+    parts.push({ kind: 'code', content: m[0] });
+    last = end;
+  }
+  if (last < mdx.length) parts.push({ kind: 'text', content: mdx.slice(last) });
+  return parts;
+}
+
+function analyzeMdx(mdx: string, permalinkSet?: Set<string>) {
+  const parts = splitByFences(mdx);
+  const textOnly = parts.filter((p) => p.kind === 'text').map((p) => p.content).join('');
+
+  // Find Rules occurrences in non-code regions (still includes inline code; we avoid replacing inline code later).
+  const rulesOccurrences: { index: number; snippet: string }[] = [];
+  const rulesRe = /\bRules\b/g;
+  let rm: RegExpExecArray | null;
+  while ((rm = rulesRe.exec(textOnly))) {
+    const i = rm.index;
+    rulesOccurrences.push({
+      index: i,
+      snippet: textOnly.slice(Math.max(0, i - 30), i + 30).replace(/\s+/g, ' '),
+    });
+    if (rulesOccurrences.length >= 50) break;
+  }
+
+  // Markdown links: [text](url)
+  const mdLinks: string[] = [];
+  const mdLinkRe = /\[[^\]]*\]\(([^)]+)\)/g;
+  let lm: RegExpExecArray | null;
+  while ((lm = mdLinkRe.exec(mdx))) {
+    mdLinks.push(lm[1]);
+    if (mdLinks.length >= 200) break;
+  }
+
+  // JSX href="..."
+  const jsxHrefs: string[] = [];
+  const hrefRe = /\bhref\s*=\s*"([^"]+)"/g;
+  while ((lm = hrefRe.exec(mdx))) {
+    jsxHrefs.push(lm[1]);
+    if (jsxHrefs.length >= 200) break;
+  }
+
+  const internalDocsLinks = [...mdLinks, ...jsxHrefs].filter((u) => u.startsWith('/docs/'));
+  const brokenInternalDocsLinks = permalinkSet
+    ? internalDocsLinks.filter((u) => !permalinkSet.has(u))
+    : [];
+
+  // Code fence languages
+  const fenceLangs: string[] = [];
+  const fenceLangRe = /^```\s*([^\s\n]*)/gm;
+  while ((lm = fenceLangRe.exec(mdx))) {
+    fenceLangs.push(lm[1] || '(none)');
+    if (fenceLangs.length >= 200) break;
+  }
+
+  const objcSwiftFences = fenceLangs.filter((l) => {
+    const x = l.toLowerCase();
+    return x === 'swift' || x === 'objc' || x === 'objective-c' || x === 'objectivec';
+  });
+
+  return {
+    rulesOccurrences,
+    internalDocsLinksCount: internalDocsLinks.length,
+    brokenInternalDocsLinks,
+    fenceLangs,
+    objcSwiftFenceCount: objcSwiftFences.length,
+  };
+}
+
+function autoFixRulesToActions(mdx: string) {
+  // Replace standalone word Rules -> Actions in non-fenced text, while skipping inline code `...`.
+  const parts = splitByFences(mdx);
+  let replaced = 0;
+
+  const fixed = parts
+    .map((p) => {
+      if (p.kind === 'code') return p.content;
+      // Split by inline code spans (single backticks). Keep backticks segments as-is.
+      const segs = p.content.split(/(`[^`]*`)/g);
+      const next = segs
+        .map((s) => {
+          if (s.startsWith('`') && s.endsWith('`')) return s;
+          const before = s;
+          const after = s.replace(/\bRules\b/g, () => {
+            replaced += 1;
+            return 'Actions';
+          });
+          // Keep as-is if no change
+          return after;
+        })
+        .join('');
+      return next;
+    })
+    .join('');
+
+  return { mdx: fixed, replaced };
 }
 
 async function gh<T>(token: string, path: string, init?: RequestInit): Promise<T> {
@@ -111,13 +220,37 @@ export async function POST(req: Request) {
     if (file.encoding !== 'base64') throw new Error(`Unexpected encoding for ${body.filePath}: ${file.encoding}`);
 
     const original = b64decodeUtf8(file.content.replace(/\n/g, ''));
-    const updated = upsertValidatedOn(original, body.validatedOn);
+
+    // Fetch index nodes to validate internal /docs/ links (best-effort).
+    let permalinkSet: Set<string> | undefined;
+    try {
+      const origin = new URL(req.url).origin;
+      const base = process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index';
+      const nodesUrl = new URL(`${base.replace(/\/$/, '')}/nodes.json`, origin);
+      const nodesRes = await fetch(nodesUrl.toString(), { cache: 'no-store' });
+      if (nodesRes.ok) {
+        const nodes = (await nodesRes.json()) as Array<{ permalink?: string }>;
+        permalinkSet = new Set(nodes.map((n) => n.permalink).filter(Boolean) as string[]);
+      }
+    } catch {
+      // ignore
+    }
+
+    const analysis = analyzeMdx(original, permalinkSet);
+
+    let updated = upsertValidatedOn(original, body.validatedOn);
+    let rulesReplaceCount = 0;
+    if (body.applyAutoFixes) {
+      const fixed = autoFixRulesToActions(updated);
+      updated = fixed.mdx;
+      rulesReplaceCount = fixed.replaced;
+    }
 
     // 4) Commit change
     await gh(token, `/repos/${owner}/${repo}/contents/${encodeURIComponent(body.filePath)}`, {
       method: 'PUT',
       body: JSON.stringify({
-        message: `chore(docs): set validatedOn ${body.validatedOn}`,
+        message: `chore(docs): content maintenance (${body.validatedOn})`,
         content: b64encodeUtf8(updated),
         sha: file.sha,
         branch: branchName,
@@ -126,9 +259,33 @@ export async function POST(req: Request) {
 
     // 5) Open PR
     const prTitle = body.prTitle || `Content maintenance: validate ${body.filePath}`;
+
+    const autoSectionLines: string[] = [];
+    autoSectionLines.push('## Automated checks (by tool)');
+    autoSectionLines.push('');
+    autoSectionLines.push(`- validatedOn set to: ${body.validatedOn}`);
+    autoSectionLines.push(`- Rules→Actions replacements applied: ${rulesReplaceCount}`);
+    autoSectionLines.push(`- Internal /docs/ links found: ${analysis.internalDocsLinksCount}`);
+    if (analysis.brokenInternalDocsLinks.length > 0) {
+      autoSectionLines.push(`- Broken internal /docs/ links: ${analysis.brokenInternalDocsLinks.length}`);
+      for (const x of analysis.brokenInternalDocsLinks.slice(0, 25)) autoSectionLines.push(`  - ${x}`);
+    } else if (permalinkSet) {
+      autoSectionLines.push('- Broken internal /docs/ links: 0 (best-effort, index-based)');
+    } else {
+      autoSectionLines.push('- Broken internal /docs/ links: not checked (index unavailable)');
+    }
+    autoSectionLines.push(`- Code fences detected: ${analysis.fenceLangs.length}`);
+    autoSectionLines.push(`- Obj-C/Swift fences detected: ${analysis.objcSwiftFenceCount}`);
+    if (analysis.rulesOccurrences.length > 0) {
+      autoSectionLines.push('');
+      autoSectionLines.push('### Rules mentions (evidence)');
+      for (const o of analysis.rulesOccurrences.slice(0, 10)) autoSectionLines.push(`- …${o.snippet}…`);
+    }
+
     const prBody =
-      body.prBody ||
-      `Automated content maintenance update.\n\n- Set front matter: validatedOn: ${body.validatedOn}\n\nFollow-ups (manual):\n- Verify screenshots and code samples per checklist\n- Fix broken links / Rules→Actions as needed\n`;
+      (body.prBody ? `${body.prBody.trim()}\n\n` : '') +
+      autoSectionLines.join('\n') +
+      '\n\n## Manual checks remaining\n\n- Verify screenshots match Dashboard steps and are high-res/style-compliant\n- Verify cURL / SDK samples actually work (execution)\n- Verify HAR blocks render correctly in Mintlify\n';
 
     const pr = await gh<{ html_url: string; number: number }>(token, `/repos/${owner}/${repo}/pulls`, {
       method: 'POST',

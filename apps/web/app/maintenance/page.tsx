@@ -115,6 +115,7 @@ export default function MaintenancePage() {
           validatedOn,
           prBody,
           prTitle: `Content maintenance: validate ${filePath}`,
+          applyAutoFixes: true,
         }),
       });
 
@@ -143,10 +144,14 @@ export default function MaintenancePage() {
 
         <Alert>
           <ShieldCheck className="h-4 w-4" />
-          <AlertTitle>Current automation</AlertTitle>
+          <AlertTitle>Automation mode</AlertTitle>
           <AlertDescription>
-            This creates a docs-v2 PR that updates front matter (<code>validatedOn: YYYY-MM-DD</code>) and includes your checklist notes in the PR body.
-            Next automation step: detect broken links + propose Rules→Actions patches.
+            When you click <b>Open PR</b>, the tool will automatically:
+            <ul className="list-disc ml-5 mt-2 space-y-1">
+              <li>Upsert front matter <code>validatedOn: YYYY-MM-DD</code></li>
+              <li>Apply conservative <code>Rules</code> → <code>Actions</code> replacements (skips code fences + inline code)</li>
+              <li>Scan internal <code>/docs/</code> links (best-effort via index) and report likely broken ones in the PR</li>
+            </ul>
           </AlertDescription>
         </Alert>
 
