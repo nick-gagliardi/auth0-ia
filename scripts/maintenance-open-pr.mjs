@@ -124,7 +124,9 @@ const branchSlug = filePath
   .replace(/[^a-zA-Z0-9/_-]+/g, '-')
   .slice(0, 80)
   .replace(/\//g, '-');
-const branchName = `maintenance/${branchSlug}-${validatedOn}`;
+// Add a short unique suffix so repeated runs don't collide with an existing remote branch.
+const uniq = String(Date.now()).slice(-6);
+const branchName = `maintenance/${branchSlug}-${validatedOn}-${uniq}`;
 
 // If the working tree is dirty, allow it ONLY when the only change is the target file.
 // We'll carry that change forward by generating a patch, switching branches, then applying it.
