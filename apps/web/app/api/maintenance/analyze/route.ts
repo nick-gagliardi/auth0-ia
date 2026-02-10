@@ -412,6 +412,81 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
   return out;
 }
 
+function computeProdUrl(filePath: string) {
+  const base = process.env.MAINTENANCE_PROD_BASE_URL || 'https://auth0.com/docs';
+  let p = filePath.replace(/\\/g, '/');
+  p = p.replace(/^main\/docs\//, '');
+  p = p.replace(/\.mdx$/i, '');
+  p = p.replace(/\/index$/i, '');
+  return `${base}/${p}`;
+}
+
+async function runRenderCheck(url: string) {
+  if ((process.env.MAINTENANCE_PLAYWRIGHT || '').toLowerCase() === 'off') {
+    return { ok: false, skipped: true, reason: 'MAINTENANCE_PLAYWRIGHT=off' };
+  }
+
+  const { chromium } = await import('playwright');
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
+
+  const expected = ['cURL', 'C#', 'Go', 'Java', 'Node.JS', 'Obj-C', 'PHP', 'Python', 'Ruby', 'Swift'];
+
+  try {
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+
+    // Heuristic: Mintlify-like tablist
+    const tablist = page.locator('[role="tablist"]').first();
+    const hasTablist = (await tablist.count()) > 0;
+
+    if (!hasTablist) {
+      return { ok: false, url, error: 'No tablist found on page.' };
+    }
+
+    const tabs = tablist.locator('[role="tab"]');
+    const tabCount = await tabs.count();
+    if (tabCount < 2) {
+      return { ok: false, url, error: `Tablist found but only ${tabCount} tab(s).` };
+    }
+
+    const foundLabels: string[] = [];
+    const clickResults: Array<{ label: string; ok: boolean; note?: string }> = [];
+
+    // Click through first N tabs to avoid super long runs
+    const maxTabs = Math.min(tabCount, 12);
+    for (let i = 0; i < maxTabs; i++) {
+      const t = tabs.nth(i);
+      const label = (await t.innerText()).trim();
+      foundLabels.push(label);
+
+      await t.click({ timeout: 10000 });
+
+      // Expect at least one visible code block in vicinity.
+      // We use a broad selector to accommodate layout variations.
+      const code = page.locator('pre code').filter({ hasText: /\S/ }).first();
+      const visible = await code.isVisible().catch(() => false);
+      clickResults.push({ label, ok: visible, note: visible ? undefined : 'No visible non-empty code block found' });
+    }
+
+    const missingExpected = expected.filter((e) => !foundLabels.includes(e));
+
+    const pass = clickResults.every((r) => r.ok);
+
+    return {
+      ok: pass,
+      url,
+      tabCount,
+      foundLabels,
+      missingExpected,
+      warning: missingExpected.length ? `Missing expected tabs: ${missingExpected.join(', ')}` : null,
+      clickResults,
+    };
+  } finally {
+    await page.close().catch(() => {});
+    await browser.close().catch(() => {});
+  }
+}
+
 export async function POST(req: Request) {
   try {
     const mode = (process.env.MAINTENANCE_MODE || 'vercel').toLowerCase();
@@ -432,6 +507,9 @@ export async function POST(req: Request) {
     const mdx = await fs.readFile(abs, 'utf8');
 
     const analysis = analyzeMdx(mdx);
+
+    const productionUrl = computeProdUrl(body.filePath);
+    const renderCheck = await runRenderCheck(productionUrl).catch((e: any) => ({ ok: false, url: productionUrl, error: e?.message || String(e) }));
 
     const permalinkSet = await fetchPermalinkSet(req);
     const brokenInternalDocsLinks = permalinkSet
@@ -460,6 +538,8 @@ export async function POST(req: Request) {
     const checklistAuto = {
       codeSamples: {
         curl: hasCurl ? (curlAllOk ? 'PASS' : 'FAIL') : 'NA',
+        tabRendering: renderCheck && (renderCheck as any).ok ? 'PASS' : (renderCheck as any)?.skipped ? 'MANUAL' : 'FAIL',
+        tabRenderingWarning: (renderCheck as any)?.warning || null,
         sdk: hasSdk ? 'MANUAL' : 'NA',
         har: hasHar ? 'MANUAL' : 'NA',
         missingSamples: analysis.detected?.hasAnyCodeFences || hasCurl ? 'MANUAL' : 'NA',
@@ -483,7 +563,7 @@ export async function POST(req: Request) {
       },
     };
 
-    return NextResponse.json({ ok: true, analysis: { ...analysis, brokenInternalDocsLinks }, curlSmoke, curlExec, checklistAuto });
+    return NextResponse.json({ ok: true, analysis: { ...analysis, brokenInternalDocsLinks, productionUrl }, renderCheck, curlSmoke, curlExec, checklistAuto });
   } catch (err: any) {
     return NextResponse.json({ ok: false, error: err?.message || String(err) }, { status: 400 });
   }
