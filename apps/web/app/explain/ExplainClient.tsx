@@ -1,13 +1,15 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github } from 'lucide-react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github, Search } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
+import NodeCard from '@/components/NodeCard';
 import SharedLinksExpander from '@/components/SharedLinksExpander';
 import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity } from '@/hooks/use-index-data';
 
@@ -125,6 +127,7 @@ function EdgeList({
 
 export default function ExplainPage() {
   const { toast } = useToast();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
   const { data: nodes, isLoading: l1 } = useNodes();
@@ -132,6 +135,8 @@ export default function ExplainPage() {
   const { data: inbound, isLoading: l3 } = useEdgesInbound();
   const { data: outbound, isLoading: l4 } = useEdgesOutbound();
   const { data: similarity, isLoading: l5 } = useSimilarity();
+
+  const [query, setQuery] = useState('');
 
   const loading = l1 || l2 || l3 || l4 || l5;
 
@@ -152,10 +157,71 @@ export default function ExplainPage() {
   }
 
   if (!id) {
+    const pages = (nodes || []).filter((n) => n.type === 'page');
+    const q = query.trim().toLowerCase();
+
+    const results = (() => {
+      if (!metrics) return [];
+      if (!q) {
+        return [...pages]
+          .map((n) => ({ ...n, score: metrics[n.id]?.inboundLinks ?? 0 }))
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 20);
+      }
+
+      const out: (typeof pages[number] & { score: number })[] = [];
+      for (const n of pages) {
+        const title = (n.title || '').toLowerCase();
+        const path = n.filePath.toLowerCase();
+        const permalink = (n.permalink || '').toLowerCase();
+        const nav = (n.navPaths || []).join(' | ').toLowerCase();
+        if (title.includes(q) || path.includes(q) || permalink.includes(q) || nav.includes(q)) {
+          const score = (title.includes(q) ? 1000 : 0) + (metrics[n.id]?.inboundLinks ?? 0);
+          out.push({ ...n, score });
+        }
+      }
+      return out.sort((a, b) => b.score - a.score).slice(0, 30);
+    })();
+
     return (
       <AppLayout>
-        <div className="text-center py-20 text-muted-foreground">
-          Missing <code>?id=</code> parameter
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-6">
+            <h1 className="text-2xl font-bold tracking-tight">Explain</h1>
+            <p className="text-muted-foreground mt-1">
+              Choose a page to get a context + risk summary (inbound links, nav paths, shared links, and similar pages).
+            </p>
+          </div>
+
+          <div className="relative mb-5">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <Input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search a page to explain…"
+              className="pl-12 h-12 text-base rounded-2xl"
+            />
+          </div>
+
+          <div className="flex items-baseline justify-between mb-3">
+            <h2 className="font-semibold text-xs text-muted-foreground uppercase tracking-wider">
+              {q ? 'Matches' : 'Top hubs (good starting points)'}
+            </h2>
+            <span className="text-xs text-muted-foreground">{results.length} results</span>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            {results.map((n, i) => (
+              <button
+                key={n.id}
+                type="button"
+                onClick={() => router.push(`/explain?id=${encodeURIComponent(n.id)}`)}
+                className="text-left rounded-xl border hover:bg-secondary/40 transition-colors"
+              >
+                <NodeCard node={n} metrics={metrics?.[n.id]} rank={!q ? i + 1 : undefined} />
+              </button>
+            ))}
+          </div>
         </div>
       </AppLayout>
     );
