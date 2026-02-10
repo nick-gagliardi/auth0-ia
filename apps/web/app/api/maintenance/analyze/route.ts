@@ -427,7 +427,11 @@ async function runRenderCheck(url: string) {
   }
 
   const { chromium } = await import('playwright');
-  const browser = await chromium.launch({ headless: true });
+  const chromePath = process.env.MAINTENANCE_CHROME_PATH;
+  const browser = await chromium.launch({
+    headless: true,
+    executablePath: chromePath || undefined,
+  });
   const page = await browser.newPage();
 
   const expected = ['cURL', 'C#', 'Go', 'Java', 'Node.JS', 'Obj-C', 'PHP', 'Python', 'Ruby', 'Swift'];
