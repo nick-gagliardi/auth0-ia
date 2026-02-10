@@ -246,7 +246,18 @@ async function runCurlSmoke(domain: string, accessToken: string) {
 
 async function executeCurlBlocks(blocks: { lang: string; content: string }[], domain: string, accessToken: string) {
   const max = Number(process.env.MAINTENANCE_CURL_MAX || 5);
-  const out: Array<{ index: number; method: string; url: string; status: number; ok: boolean; note?: string }> = [];
+  const out: Array<{
+    index: number;
+    method: string;
+    url: string;
+    status: number;
+    ok: boolean;
+    requestPreview?: string;
+    responsePreview?: string;
+    note?: string;
+  }> = [];
+
+  const previewLimit = Number(process.env.MAINTENANCE_CURL_PREVIEW_CHARS || 1200);
 
   for (let i = 0; i < Math.min(blocks.length, max); i++) {
     const b = blocks[i];
@@ -254,7 +265,15 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
     const parsed = parseCurl(normalized);
 
     if (!parsed.url) {
-      out.push({ index: i, method: parsed.method, url: '(missing)', status: 0, ok: false, note: 'Could not parse URL from curl block.' });
+      out.push({
+        index: i,
+        method: parsed.method,
+        url: '(missing)',
+        status: 0,
+        ok: false,
+        requestPreview: redact(normalized).slice(0, previewLimit),
+        note: 'Could not parse URL from curl block.',
+      });
       continue;
     }
 
@@ -267,6 +286,12 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
     let body: string | undefined;
     if (parsed.data !== undefined) body = parsed.data;
 
+    const requestPreview = redact(
+      `curl (simulated)\nMETHOD: ${parsed.method}\nURL: ${parsed.url}\nHEADERS: ${JSON.stringify(
+        Object.fromEntries(Object.entries(headers).map(([k, v]) => [k, k.toLowerCase() === 'authorization' ? 'Bearer [REDACTED]' : v]))
+      )}\nBODY: ${body ?? ''}`
+    ).slice(0, previewLimit);
+
     try {
       const res = await fetch(parsed.url, {
         method: parsed.method,
@@ -274,9 +299,29 @@ async function executeCurlBlocks(blocks: { lang: string; content: string }[], do
         body: body !== undefined ? body : undefined,
         cache: 'no-store',
       });
-      out.push({ index: i, method: parsed.method, url: parsed.url, status: res.status, ok: res.ok });
+
+      const text = await res.text().catch(() => '');
+      const responsePreview = redact(text).slice(0, previewLimit);
+
+      out.push({
+        index: i,
+        method: parsed.method,
+        url: parsed.url,
+        status: res.status,
+        ok: res.ok,
+        requestPreview,
+        responsePreview,
+      });
     } catch (e: any) {
-      out.push({ index: i, method: parsed.method, url: parsed.url, status: 0, ok: false, note: redact(e?.message || String(e)) });
+      out.push({
+        index: i,
+        method: parsed.method,
+        url: parsed.url,
+        status: 0,
+        ok: false,
+        requestPreview,
+        note: redact(e?.message || String(e)).slice(0, previewLimit),
+      });
     }
   }
 
