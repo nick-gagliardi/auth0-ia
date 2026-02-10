@@ -56,6 +56,9 @@ export default function MaintenancePage() {
   const [notes, setNotes] = useState('');
   const [checklist, setChecklist] = useState<Checklist>(defaultChecklist);
 
+  const [running, setRunning] = useState(false);
+  const [analysisResult, setAnalysisResult] = useState<any | null>(null);
+
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<{ prUrl: string; branchName: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -99,6 +102,27 @@ export default function MaintenancePage() {
 
     return lines.join('\n');
   }, [checklist, notes, validatedOn]);
+
+  async function runAnalysis() {
+    setRunning(true);
+    setAnalysisResult(null);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/maintenance/analyze', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ filePath }),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'Unknown error');
+      setAnalysisResult(json);
+    } catch (e: any) {
+      setError(e?.message || String(e));
+    } finally {
+      setRunning(false);
+    }
+  }
 
   async function openPr() {
     setSubmitting(true);
@@ -222,12 +246,26 @@ export default function MaintenancePage() {
 
             <div className="flex flex-col sm:flex-row gap-2">
               <Button
+                variant="secondary"
+                onClick={runAnalysis}
+                disabled={running || !filePath.trim()}
+                className="gap-2"
+              >
+                {running ? <Loader2 className="w-4 h-4 animate-spin" /> : <Rocket className="w-4 h-4" />}
+                Run analysis
+              </Button>
+              <Button
                 onClick={openPr}
-                disabled={submitting || !filePath.trim() || !/^\d{4}-\d{2}-\d{2}$/.test(validatedOn)}
+                disabled={
+                  submitting ||
+                  !filePath.trim() ||
+                  !/^\d{4}-\d{2}-\d{2}$/.test(validatedOn) ||
+                  !analysisResult
+                }
                 className="gap-2"
               >
                 {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Rocket className="w-4 h-4" />}
-                Open PR
+                Create PR
               </Button>
               <Button asChild variant="secondary">
                 <Link href="/explain">Find file path in Explain</Link>
@@ -238,6 +276,16 @@ export default function MaintenancePage() {
               <Alert variant="destructive">
                 <AlertTitle>PR failed</AlertTitle>
                 <AlertDescription className="font-mono text-xs whitespace-pre-wrap">{error}</AlertDescription>
+              </Alert>
+            )}
+
+            {analysisResult && (
+              <Alert>
+                <AlertTitle>Analysis results</AlertTitle>
+                <AlertDescription>
+                  <div className="text-xs text-muted-foreground mb-2">This is a dry-run: no branch, no PR.</div>
+                  <pre className="text-xs bg-secondary/30 rounded-xl p-3 overflow-auto max-h-72 whitespace-pre-wrap">{JSON.stringify(analysisResult, null, 2)}</pre>
+                </AlertDescription>
               </Alert>
             )}
 
