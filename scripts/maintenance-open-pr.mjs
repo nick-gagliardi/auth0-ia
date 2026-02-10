@@ -118,9 +118,27 @@ const branchSlug = filePath
   .replace(/\//g, '-');
 const branchName = `maintenance/${branchSlug}-${validatedOn}`;
 
-// Ensure clean working tree
+// If the working tree is dirty, allow it ONLY when the only change is the target file.
+// We'll carry that change forward by generating a patch, switching branches, then applying it.
 const status = run('git', ['status', '--porcelain'], { cwd: docsRepoPath }).trim();
-if (status) die(`Docs repo has uncommitted changes. Please commit/stash first.\n${status}`);
+let carryPatch = null;
+if (status) {
+  const changed = status
+    .split('\n')
+    .filter(Boolean)
+    .map((l) => l.slice(3));
+
+  const unique = Array.from(new Set(changed));
+  if (unique.length !== 1 || unique[0] !== filePath) {
+    die(
+      `Docs repo has uncommitted changes outside the target file.\n` +
+        `Please commit/stash first.\n\n${status}`
+    );
+  }
+
+  // Capture a patch of just the target file.
+  carryPatch = run('git', ['diff', '--', filePath], { cwd: docsRepoPath });
+}
 
 run('git', ['checkout', baseBranch], { cwd: docsRepoPath });
 run('git', ['pull', '--ff-only'], { cwd: docsRepoPath });
@@ -130,6 +148,15 @@ try {
   run('git', ['checkout', '-B', branchName], { cwd: docsRepoPath });
 } catch (e) {
   die(`Failed to create branch ${branchName}: ${e?.stderr || e}`);
+}
+
+// If we had a carried patch (from a dirty working tree), apply it now.
+if (carryPatch && carryPatch.trim()) {
+  try {
+    execFileSync('git', ['apply', '-'], { cwd: docsRepoPath, input: carryPatch });
+  } catch (e) {
+    die(`Failed to apply carried patch for ${filePath}. Resolve conflicts manually.`);
+  }
 }
 
 let mdx = fs.readFileSync(abs, 'utf8');
