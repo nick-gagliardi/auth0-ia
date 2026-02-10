@@ -461,47 +461,81 @@ async function runRenderCheck(url: string) {
   try {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
 
-    // Heuristic: Mintlify-like tablist
+    // Strategy A: ARIA tablist
     const tablist = page.locator('[role="tablist"]').first();
     const hasTablist = (await tablist.count()) > 0;
 
-    if (!hasTablist) {
-      return { ok: false, url, error: 'No tablist found on page.' };
+    let foundLabels: string[] = [];
+    let clickResults: Array<{ label: string; ok: boolean; note?: string }> = [];
+
+    if (hasTablist) {
+      const tabs = tablist.locator('[role="tab"]');
+      const tabCount = await tabs.count();
+      if (tabCount < 2) {
+        return { ok: false, url, error: `Tablist found but only ${tabCount} tab(s).` };
+      }
+
+      const maxTabs = Math.min(tabCount, 12);
+      for (let i = 0; i < maxTabs; i++) {
+        const t = tabs.nth(i);
+        const label = (await t.innerText()).trim();
+        foundLabels.push(label);
+        await t.click({ timeout: 10000 });
+        const code = page.locator('pre code').filter({ hasText: /\S/ }).first();
+        const visible = await code.isVisible().catch(() => false);
+        clickResults.push({ label, ok: visible, note: visible ? undefined : 'No visible non-empty code block found' });
+      }
+
+      const missingExpected = expected.filter((e) => !foundLabels.includes(e));
+      const pass = clickResults.every((r) => r.ok);
+      return {
+        ok: pass,
+        url,
+        strategy: 'aria-tablist',
+        tabCount,
+        foundLabels,
+        missingExpected,
+        warning: missingExpected.length ? `Missing expected tabs: ${missingExpected.join(', ')}` : null,
+        clickResults,
+      };
     }
 
-    const tabs = tablist.locator('[role="tab"]');
-    const tabCount = await tabs.count();
-    if (tabCount < 2) {
-      return { ok: false, url, error: `Tablist found but only ${tabCount} tab(s).` };
+    // Strategy B: text-based language switcher (auth0.com sometimes doesn't use role=tablist)
+    // Find visible language labels on the page.
+    const found: string[] = [];
+    for (const label of expected) {
+      const loc = page.getByText(label, { exact: true }).first();
+      const n = await loc.count();
+      if (n > 0) {
+        const vis = await loc.isVisible().catch(() => false);
+        if (vis) found.push(label);
+      }
     }
 
-    const foundLabels: string[] = [];
-    const clickResults: Array<{ label: string; ok: boolean; note?: string }> = [];
+    if (found.length < 2) {
+      return { ok: false, url, error: 'No tablist found on page (and fewer than 2 expected language labels visible).' };
+    }
 
-    // Click through first N tabs to avoid super long runs
-    const maxTabs = Math.min(tabCount, 12);
-    for (let i = 0; i < maxTabs; i++) {
-      const t = tabs.nth(i);
-      const label = (await t.innerText()).trim();
-      foundLabels.push(label);
-
-      await t.click({ timeout: 10000 });
-
-      // Expect at least one visible code block in vicinity.
-      // We use a broad selector to accommodate layout variations.
+    // Click through a few labels and ensure code exists.
+    const max = Math.min(found.length, 8);
+    for (let i = 0; i < max; i++) {
+      const label = found[i];
+      const loc = page.getByText(label, { exact: true }).first();
+      await loc.click({ timeout: 10000 }).catch(() => {});
       const code = page.locator('pre code').filter({ hasText: /\S/ }).first();
       const visible = await code.isVisible().catch(() => false);
-      clickResults.push({ label, ok: visible, note: visible ? undefined : 'No visible non-empty code block found' });
+      clickResults.push({ label, ok: visible, note: visible ? undefined : 'No visible non-empty code block found after click' });
+      foundLabels.push(label);
     }
 
     const missingExpected = expected.filter((e) => !foundLabels.includes(e));
-
     const pass = clickResults.every((r) => r.ok);
 
     return {
       ok: pass,
       url,
-      tabCount,
+      strategy: 'text-labels',
+      tabCount: found.length,
       foundLabels,
       missingExpected,
       warning: missingExpected.length ? `Missing expected tabs: ${missingExpected.join(', ')}` : null,
