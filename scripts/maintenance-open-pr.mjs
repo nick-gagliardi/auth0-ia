@@ -143,6 +143,9 @@ if (status) {
 
   // Capture a patch of just the target file.
   carryPatch = run('git', ['diff', '--', filePath], { cwd: docsRepoPath });
+
+  // Now that the patch is saved, restore the file so we can safely switch branches.
+  run('git', ['restore', '--', filePath], { cwd: docsRepoPath });
 }
 
 run('git', ['checkout', baseBranch], { cwd: docsRepoPath });
