@@ -271,7 +271,7 @@
   },
   "main/docs/troubleshoot/general-usage-and-operations-best-practices.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 3,
     "orphanNav": false,
@@ -319,7 +319,7 @@
   },
   "main/docs/troubleshoot/troubleshooting-tools.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -355,7 +355,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 19,
+    "outboundLinks": 18,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -439,7 +439,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/past-migrations/facebook-social-context-field-deprecation.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -547,7 +547,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-tenant-member-roles.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -559,7 +559,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-to-1-hour-expiration.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 14,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -583,7 +583,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-to-nodejs-12.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -714,7 +714,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-connection-options-scope.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 6,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -726,7 +726,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -750,7 +750,7 @@
   },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 5,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -762,7 +762,7 @@
   },
   "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 16,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -846,7 +846,7 @@
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -858,7 +858,7 @@
   },
   "main/docs/troubleshoot/customer-support/open-and-manage-support-tickets.mdx": {
     "inboundLinks": 18,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -1050,7 +1050,7 @@
   },
   "main/docs/troubleshoot/customer-support/operational-policies/load-testing-policy.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1143,7 +1143,7 @@
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-use-cases.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -1287,7 +1287,7 @@
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions/downgrade-or-cancel-subscriptions.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1311,7 +1311,7 @@
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions/monitor-subscription-usage.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1359,7 +1359,7 @@
   },
   "main/docs/troubleshoot/basic-issues/password-change-redirects.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -1550,7 +1550,7 @@
   },
   "main/docs/troubleshoot/authentication-issues/troubleshoot-saml-configurations.mdx": {
     "inboundLinks": 14,
-    "outboundLinks": 6,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -1574,7 +1574,7 @@
   },
   "main/docs/secure/attack-protection.mdx": {
     "inboundLinks": 22,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -1610,7 +1610,7 @@
   },
   "main/docs/secure/highly-regulated-identity.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 15,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -1622,7 +1622,7 @@
   },
   "main/docs/secure/mdl-verification.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -1646,7 +1646,7 @@
   },
   "main/docs/secure/security-center.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 9,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -1742,7 +1742,7 @@
   },
   "main/docs/secure/tokens/json-web-tokens.mdx": {
     "inboundLinks": 44,
-    "outboundLinks": 10,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1766,7 +1766,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens.mdx": {
     "inboundLinks": 40,
-    "outboundLinks": 11,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1802,7 +1802,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 10,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1814,7 +1814,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1838,7 +1838,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1862,7 +1862,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 10,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -1886,7 +1886,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx": {
     "inboundLinks": 17,
-    "outboundLinks": 16,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1922,7 +1922,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 10,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -1934,7 +1934,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -1970,7 +1970,7 @@
   },
   "main/docs/secure/tokens/json-web-tokens/json-web-key-set-properties.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2006,7 +2006,7 @@
   },
   "main/docs/secure/tokens/json-web-tokens/json-web-token-structure.mdx": {
     "inboundLinks": 13,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2018,7 +2018,7 @@
   },
   "main/docs/secure/tokens/json-web-tokens/locate-json-web-key-sets.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2030,7 +2030,7 @@
   },
   "main/docs/secure/tokens/json-web-tokens/validate-json-web-tokens.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2150,7 +2150,7 @@
   },
   "main/docs/secure/tokens/access-tokens/update-access-token-lifetime.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2208,7 +2208,7 @@
   },
   "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-testing.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -2230,7 +2230,7 @@
   },
   "main/docs/secure/tenant-access-control-list/configure-rules.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 7,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2242,7 +2242,7 @@
   },
   "main/docs/secure/tenant-access-control-list/manage-rules-in-dashboard.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2266,7 +2266,7 @@
   },
   "main/docs/secure/tenant-access-control-list/use-cases.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2278,7 +2278,7 @@
   },
   "main/docs/secure/sender-constraining/configure-sender-constraining.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2290,7 +2290,7 @@
   },
   "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2302,7 +2302,7 @@
   },
   "main/docs/secure/sender-constraining/mtls-sender-constraining.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2326,7 +2326,7 @@
   },
   "main/docs/secure/security-guidance/incident-response-using-logs.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2338,7 +2338,7 @@
   },
   "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 7,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2746,7 +2746,7 @@
   },
   "main/docs/secure/security-guidance/data-security/token-storage.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 12,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2758,7 +2758,7 @@
   },
   "main/docs/secure/security-guidance/data-security/user-data-storage.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 10,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2794,7 +2794,7 @@
   },
   "main/docs/secure/security-center/security-alerts.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2806,7 +2806,7 @@
   },
   "main/docs/secure/multi-factor-authentication/adaptive-mfa.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2818,7 +2818,7 @@
   },
   "main/docs/secure/multi-factor-authentication/auth0-guardian.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 17,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2830,7 +2830,7 @@
   },
   "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 11,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2854,7 +2854,7 @@
   },
   "main/docs/secure/multi-factor-authentication/configure-recovery-codes-for-mfa.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2866,7 +2866,7 @@
   },
   "main/docs/secure/multi-factor-authentication/customize-mfa.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 12,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2878,7 +2878,7 @@
   },
   "main/docs/secure/multi-factor-authentication/enable-mfa.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 14,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -2890,7 +2890,7 @@
   },
   "main/docs/secure/multi-factor-authentication/fido-authentication-with-webauthn.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 9,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2950,7 +2950,7 @@
   },
   "main/docs/secure/multi-factor-authentication/step-up-authentication.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -2998,7 +2998,7 @@
   },
   "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-email-notifications-for-mfa.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3010,7 +3010,7 @@
   },
   "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-otp-notifications-for-mfa.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 6,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3022,7 +3022,7 @@
   },
   "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3034,7 +3034,7 @@
   },
   "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3178,7 +3178,7 @@
   },
   "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 10,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3190,7 +3190,7 @@
   },
   "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 16,
+    "outboundLinks": 15,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3238,7 +3238,7 @@
   },
   "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-and-challenge-email-authenticators.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 14,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3250,7 +3250,7 @@
   },
   "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-and-challenge-otp-authenticators.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3262,7 +3262,7 @@
   },
   "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-and-challenge-push-authenticators.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3274,7 +3274,7 @@
   },
   "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/enroll-challenge-sms-voice-authenticators.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3298,7 +3298,7 @@
   },
   "main/docs/secure/multi-factor-authentication/auth0-guardian/guardian-for-android-sdk.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3310,7 +3310,7 @@
   },
   "main/docs/secure/multi-factor-authentication/auth0-guardian/guardian-for-ios-sdk.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3346,7 +3346,7 @@
   },
   "main/docs/secure/multi-factor-authentication/adaptive-mfa/enable-adaptive-mfa.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3370,7 +3370,7 @@
   },
   "main/docs/secure/mdl-verification/create-mdl-api.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3418,7 +3418,7 @@
   },
   "main/docs/secure/highly-regulated-identity/transactional-authorization-with-authorization-code-flow.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 17,
+    "outboundLinks": 14,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3430,7 +3430,7 @@
   },
   "main/docs/secure/highly-regulated-identity/customer-managed-keys/customer-managed-keys-dashboard.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3538,7 +3538,7 @@
   },
   "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-custom-ui.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 13,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3562,7 +3562,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3574,7 +3574,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/xaa.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3586,7 +3586,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/xaa/manage-xaa-in-okta.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3598,7 +3598,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 25,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3622,7 +3622,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault/access-token-exchange-with-token-vault.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3634,7 +3634,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault/configure-token-vault.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 10,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3646,7 +3646,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 10,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3658,7 +3658,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault/privileged-worker-token-exchange-with-token-vault.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3670,7 +3670,7 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault/refresh-token-exchange-with-token-vault.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3682,7 +3682,7 @@
   },
   "main/docs/secure/attack-protection/bot-detection.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 15,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -3694,7 +3694,7 @@
   },
   "main/docs/secure/attack-protection/breached-password-detection.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 10,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3706,7 +3706,7 @@
   },
   "main/docs/secure/attack-protection/brute-force-protection.mdx": {
     "inboundLinks": 17,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3718,7 +3718,7 @@
   },
   "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3754,7 +3754,7 @@
   },
   "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx": {
     "inboundLinks": 21,
-    "outboundLinks": 10,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3778,7 +3778,7 @@
   },
   "main/docs/secure/attack-protection/view-attack-protection-events.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 9,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -3838,7 +3838,7 @@
   },
   "main/docs/secure/attack-protection/bot-detection/bot-detection-custom-login-pages.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -4040,15 +4040,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/webapp/nextjs/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/quickstart/webapp/laravel/_index.mdx": {
     "inboundLinks": 0,
@@ -4206,7 +4206,7 @@
   },
   "main/docs/quickstart/webapp/golang/index.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -4403,15 +4403,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/spa/vanillajs/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 3,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 3
   },
   "main/docs/quickstart/spa/svelte/index.mdx": {
     "inboundLinks": 0,
@@ -4425,15 +4425,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/spa/react/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/quickstart/spa/flutter/index.mdx": {
     "inboundLinks": 0,
@@ -4470,7 +4470,7 @@
   },
   "main/docs/quickstart/native/xamarin.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 8,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -4569,7 +4569,7 @@
   },
   "main/docs/quickstart/native/windows-uwp-csharp/interactive.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -4667,15 +4667,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/native/ios-swift/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 8,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 8
   },
   "main/docs/quickstart/native/ionic-vue/_index.mdx": {
     "inboundLinks": 0,
@@ -4832,15 +4832,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/native/android-facebook-login/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 2,
     "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 2
   },
   "main/docs/quickstart/native/android-facebook-login/interactive.mdx": {
     "inboundLinks": 0,
@@ -4854,19 +4854,19 @@
     "hubScore": 0
   },
   "main/docs/quickstart/native/android/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/quickstart/backend/webapi-owin/02-using.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -4921,7 +4921,7 @@
   },
   "main/docs/quickstart/backend/rails/02-using.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -4976,7 +4976,7 @@
   },
   "main/docs/quickstart/backend/python/02-using.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -5042,7 +5042,7 @@
   },
   "main/docs/quickstart/backend/nodejs/02-using.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -5074,15 +5074,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/backend/nodejs/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 5,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/quickstart/backend/nodejs/interactive.mdx": {
     "inboundLinks": 0,
@@ -5130,7 +5130,7 @@
   },
   "main/docs/quickstart/backend/java-spring-security5/02-using.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -5240,7 +5240,7 @@
   },
   "main/docs/quickstart/backend/django/02-using.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -5294,15 +5294,15 @@
     "hubScore": 0
   },
   "main/docs/quickstart/backend/aspnet-core-webapi/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx": {
     "inboundLinks": 0,
@@ -5341,7 +5341,7 @@
   },
   "main/docs/manage-users/my-account-api.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 12,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 3,
     "orphanNav": false,
@@ -5365,7 +5365,7 @@
   },
   "main/docs/manage-users/sessions.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 10,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5389,7 +5389,7 @@
   },
   "main/docs/manage-users/user-migration.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5509,7 +5509,7 @@
   },
   "main/docs/manage-users/user-migration/bulk-user-import-export.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5532,7 +5532,7 @@
   },
   "main/docs/manage-users/user-migration/bulk-user-imports.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5544,7 +5544,7 @@
   },
   "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx": {
     "inboundLinks": 15,
-    "outboundLinks": 10,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5578,7 +5578,7 @@
   },
   "main/docs/manage-users/user-migration/user-import-export-extension.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 9,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5590,7 +5590,7 @@
   },
   "main/docs/manage-users/user-migration/user-migration-scenarios.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5746,7 +5746,7 @@
   },
   "main/docs/manage-users/user-accounts/unlink-devices-from-users.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5758,7 +5758,7 @@
   },
   "main/docs/manage-users/user-accounts/user-account-linking.mdx": {
     "inboundLinks": 14,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -5782,7 +5782,7 @@
   },
   "main/docs/manage-users/user-accounts/verify-emails.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -5890,7 +5890,7 @@
   },
   "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx": {
     "inboundLinks": 17,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -5962,7 +5962,7 @@
   },
   "main/docs/manage-users/user-accounts/user-account-linking/suggested-account-linking-server-side-implementation.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -5986,7 +5986,7 @@
   },
   "main/docs/manage-users/user-accounts/user-account-linking/user-initiated-account-linking-client-side-implementation.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -5998,7 +5998,7 @@
   },
   "main/docs/manage-users/user-accounts/metadata/configure-application-metadata.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6070,7 +6070,7 @@
   },
   "main/docs/manage-users/sessions/configure-keep-me-signed-in-sessions.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 7,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6082,7 +6082,7 @@
   },
   "main/docs/manage-users/sessions/configure-session-lifetime-settings.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -6093,7 +6093,7 @@
   },
   "main/docs/manage-users/sessions/configure-session-lifetime.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6105,7 +6105,7 @@
   },
   "main/docs/manage-users/sessions/manage-multi-site-sessions.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 11,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6164,7 +6164,7 @@
   },
   "main/docs/manage-users/sessions/session-lifecycle.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6211,7 +6211,7 @@
   },
   "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6259,7 +6259,7 @@
   },
   "main/docs/manage-users/organizations/login-flows-for-organizations.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 13,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6271,7 +6271,7 @@
   },
   "main/docs/manage-users/organizations/organizations-for-m2m-applications.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6283,7 +6283,7 @@
   },
   "main/docs/manage-users/organizations/organizations-overview.mdx": {
     "inboundLinks": 37,
-    "outboundLinks": 14,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6307,7 +6307,7 @@
   },
   "main/docs/manage-users/organizations/organizations-for-m2m-applications/audit-m2m-access.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6319,7 +6319,7 @@
   },
   "main/docs/manage-users/organizations/organizations-for-m2m-applications/authorize-m2m-access.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6331,7 +6331,7 @@
   },
   "main/docs/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6343,7 +6343,7 @@
   },
   "main/docs/manage-users/organizations/organizations-for-m2m-applications/revoke-m2m-access.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6379,7 +6379,7 @@
   },
   "main/docs/manage-users/organizations/configure-organizations/create-org-domains.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6415,7 +6415,7 @@
   },
   "main/docs/manage-users/organizations/configure-organizations/delete-org-domains.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6571,7 +6571,7 @@
   },
   "main/docs/manage-users/organizations/configure-organizations/search-for-organizations.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6631,7 +6631,7 @@
   },
   "main/docs/manage-users/cookies/samesite-cookie-attribute-changes.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6643,7 +6643,7 @@
   },
   "main/docs/manage-users/cookies/spa-authenticate-with-cookies.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 7,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6751,7 +6751,7 @@
   },
   "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 10,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -6907,7 +6907,7 @@
   },
   "main/docs/manage-users/access-control/configure-core-rbac/rbac-users/remove-permissions-from-users.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -6931,7 +6931,7 @@
   },
   "main/docs/manage-users/access-control/configure-core-rbac/rbac-users/view-user-permissions.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -7021,7 +7021,7 @@
   },
   "main/docs/libraries/auth0-swift.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -7065,7 +7065,7 @@
   },
   "main/docs/libraries/lock-android.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -7219,7 +7219,7 @@
   },
   "main/docs/libraries/lock-android/lock-android-native-social-authentication.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -7296,7 +7296,7 @@
   },
   "main/docs/libraries/lock/lock-configuration.mdx": {
     "inboundLinks": 17,
-    "outboundLinks": 29,
+    "outboundLinks": 14,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -7307,7 +7307,7 @@
   },
   "main/docs/libraries/lock/lock-ui-customization.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 5,
+    "outboundLinks": 2,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -7318,7 +7318,7 @@
   },
   "main/docs/libraries/lock/selecting-from-multiple-connection-options.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 10,
+    "outboundLinks": 7,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -7549,7 +7549,7 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/index.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -7559,15 +7559,15 @@
     "hubScore": 0
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 290,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/AuthenticatorTransport.mdx": {
     "inboundLinks": 1,
@@ -10782,851 +10782,851 @@
     "hubScore": 0
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup-password/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup-id/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-success/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-request/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-webauthn-roaming-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-webauthn-platform-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-voice-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-sms-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-recovery-code-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-push-challenge-push/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-phone-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-otp-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-email-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-error/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-email/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/redeem-ticket/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/phone-identifier-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/phone-identifier-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/passkey-enrollment-local/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/passkey-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/organization-selection/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/organization-picker/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-roaming-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-roaming-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-platform-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-platform-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-not-available-error/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-error/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-enrollment-success/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-change-key-nickname/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-voice-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-voice-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-list/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-challenge-new-code/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-welcome/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-list/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-enrollment-qr/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-challenge-push/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-phone-enrollment/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-phone-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-enrollment-qr/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-enrollment-code/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-login-options/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-enroll-result/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-email-list/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-email-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-detect-browser-capabilities/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-country-codes/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-begin-enroll-options/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-aborted/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-sms-otp/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-email-code/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-password/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-id/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 2,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 2
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/interstitial-captcha/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/email-verification-result/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/email-otp-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/email-identifier-challenge/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-confirmation/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation-denied/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation-allowed/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/customized-consent/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/consent/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/accept-invitation/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 9,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": {
     "inboundLinks": 1,
@@ -11750,26 +11750,26 @@
     "hubScore": 0
   },
   "main/docs/libraries/acul/js-sdk/Types/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 279,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/js-sdk/Screens/index.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 363,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0
+    "hubScore": 1
   },
   "main/docs/libraries/acul/js-sdk/Screens/type-aliases/AuthenticatorTransport.mdx": {
     "inboundLinks": 2,
@@ -15835,7 +15835,7 @@
   },
   "main/docs/get-started/auth0-for-ai-agents.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 3,
     "orphanNav": false,
@@ -15847,7 +15847,7 @@
   },
   "main/docs/get-started/auth0-guide.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 3,
     "orphanNav": false,
@@ -15859,7 +15859,7 @@
   },
   "main/docs/get-started/auth0-mcp-server.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -15883,7 +15883,7 @@
   },
   "main/docs/get-started/auth0-teams.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -15895,7 +15895,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow.mdx": {
     "inboundLinks": 29,
-    "outboundLinks": 34,
+    "outboundLinks": 33,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -15955,7 +15955,7 @@
   },
   "main/docs/get-started/tenant-settings.mdx": {
     "inboundLinks": 22,
-    "outboundLinks": 40,
+    "outboundLinks": 25,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -15979,7 +15979,7 @@
   },
   "main/docs/get-started/tenant-settings/enable-sso-for-legacy-tenants.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -15991,7 +15991,7 @@
   },
   "main/docs/get-started/tenant-settings/find-your-tenant-name-or-tenant-id.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16015,7 +16015,7 @@
   },
   "main/docs/get-started/tenant-settings/signing-keys/customer-signing-keys.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16039,7 +16039,7 @@
   },
   "main/docs/get-started/tenant-settings/signing-keys/rotate-signing-keys.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16051,7 +16051,7 @@
   },
   "main/docs/get-started/tenant-settings/signing-keys/view-signing-certificates.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16063,7 +16063,7 @@
   },
   "main/docs/get-started/onboarding/self-service-m2m.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 46,
+    "outboundLinks": 44,
     "importedBy": 0,
     "navDepth": 3,
     "orphanNav": false,
@@ -16170,7 +16170,7 @@
   },
   "main/docs/get-started/manage-dashboard-access/add-change-remove-mfa/add-mfa.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16182,7 +16182,7 @@
   },
   "main/docs/get-started/manage-dashboard-access/add-change-remove-mfa/remove-or-change-dashboard-multi-factor-authentication.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16206,7 +16206,7 @@
   },
   "main/docs/get-started/identity-fundamentals/identity-and-access-management.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 16,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16230,7 +16230,7 @@
   },
   "main/docs/get-started/dashboard-profile/auth0-dashboard-login-session-management.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16242,7 +16242,7 @@
   },
   "main/docs/get-started/dashboard-profile/light-and-dark-themes.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16254,7 +16254,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-mtls.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 7,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16266,7 +16266,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16278,7 +16278,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx": {
     "inboundLinks": 46,
-    "outboundLinks": 17,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16290,7 +16290,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx": {
     "inboundLinks": 33,
-    "outboundLinks": 10,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16314,7 +16314,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx": {
     "inboundLinks": 30,
-    "outboundLinks": 10,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16326,7 +16326,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16338,7 +16338,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx": {
     "inboundLinks": 15,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16362,7 +16362,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post.mdx": {
     "inboundLinks": 22,
-    "outboundLinks": 12,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16374,7 +16374,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx": {
     "inboundLinks": 22,
-    "outboundLinks": 11,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16386,7 +16386,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/token-exchange-flow.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16482,7 +16482,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 29,
+    "outboundLinks": 24,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16494,7 +16494,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/email-notifications-with-ciba.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16506,7 +16506,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/mobile-push-notifications-with-ciba.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16518,7 +16518,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/user-authorization-with-ciba.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16554,7 +16554,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 18,
+    "outboundLinks": 16,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16566,7 +16566,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 21,
+    "outboundLinks": 19,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16578,7 +16578,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/add-login-auth-code-flow.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 13,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16614,7 +16614,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16638,7 +16638,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 16,
+    "outboundLinks": 15,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16686,7 +16686,7 @@
   },
   "main/docs/get-started/auth0-teams/team-member-management.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16698,7 +16698,7 @@
   },
   "main/docs/get-started/auth0-teams/tenant-management.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16710,7 +16710,7 @@
   },
   "main/docs/get-started/auth0-teams/tenant-member-management.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16722,7 +16722,7 @@
   },
   "main/docs/get-started/auth0-teams/troubleshoot-teams.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16757,7 +16757,7 @@
   },
   "main/docs/get-started/auth0-overview/dashboard.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 11,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16769,7 +16769,7 @@
   },
   "main/docs/get-started/auth0-overview/set-up-apis.mdx": {
     "inboundLinks": 26,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -16781,7 +16781,7 @@
   },
   "main/docs/get-started/auth0-overview/dashboard/activity.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 7,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16793,7 +16793,7 @@
   },
   "main/docs/get-started/auth0-overview/create-tenants/child-tenants.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16805,7 +16805,7 @@
   },
   "main/docs/get-started/auth0-overview/create-tenants/create-multiple-tenants.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16817,7 +16817,7 @@
   },
   "main/docs/get-started/auth0-overview/create-tenants/multi-tenant-apps-best-practices.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16829,7 +16829,7 @@
   },
   "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx": {
     "inboundLinks": 20,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16841,7 +16841,7 @@
   },
   "main/docs/get-started/auth0-overview/create-applications/configure-an-identity-provider-in-access-gateway.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16985,7 +16985,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-business.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -16997,7 +16997,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17021,7 +17021,7 @@
   },
   "main/docs/get-started/architecture-scenarios/implementation-resources.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 16,
+    "outboundLinks": 15,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -17045,7 +17045,7 @@
   },
   "main/docs/get-started/architecture-scenarios/multiple-organization-architecture.mdx": {
     "inboundLinks": 13,
-    "outboundLinks": 10,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17081,7 +17081,7 @@
   },
   "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17105,7 +17105,7 @@
   },
   "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps/part-1.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17129,7 +17129,7 @@
   },
   "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps/part-3.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 11,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17165,7 +17165,7 @@
   },
   "main/docs/get-started/architecture-scenarios/spa-api/part-1.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17177,7 +17177,7 @@
   },
   "main/docs/get-started/architecture-scenarios/spa-api/part-2.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17249,7 +17249,7 @@
   },
   "main/docs/get-started/architecture-scenarios/server-application-api/part-1.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17261,7 +17261,7 @@
   },
   "main/docs/get-started/architecture-scenarios/server-application-api/part-2.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17309,7 +17309,7 @@
   },
   "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 13,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -17321,7 +17321,7 @@
   },
   "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authentication.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 21,
+    "outboundLinks": 19,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -17357,7 +17357,7 @@
   },
   "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/logout.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -17381,7 +17381,7 @@
   },
   "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 28,
+    "outboundLinks": 26,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -17405,7 +17405,7 @@
   },
   "main/docs/get-started/architecture-scenarios/mobile-api/mobile-implementation-android.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17417,7 +17417,7 @@
   },
   "main/docs/get-started/architecture-scenarios/mobile-api/part-1.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 13,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17429,7 +17429,7 @@
   },
   "main/docs/get-started/architecture-scenarios/mobile-api/part-2.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17477,7 +17477,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 33,
+    "outboundLinks": 30,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17501,7 +17501,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer/branding.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 14,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17573,7 +17573,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 14,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17645,7 +17645,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer/launch/tenant-check.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 25,
+    "outboundLinks": 24,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -17681,7 +17681,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 40,
+    "outboundLinks": 37,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17705,7 +17705,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-business/branding.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 20,
+    "outboundLinks": 19,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17777,7 +17777,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 20,
+    "outboundLinks": 19,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -17849,7 +17849,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-business/launch/tenant-check.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 28,
+    "outboundLinks": 27,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -17897,7 +17897,7 @@
   },
   "main/docs/get-started/applications/application-settings.mdx": {
     "inboundLinks": 20,
-    "outboundLinks": 34,
+    "outboundLinks": 21,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -17909,7 +17909,7 @@
   },
   "main/docs/get-started/applications/change-application-signing-algorithms.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -17933,7 +17933,7 @@
   },
   "main/docs/get-started/applications/configure-application-metadata.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -17957,7 +17957,7 @@
   },
   "main/docs/get-started/applications/configure-client-initiated-backchannel-authentication.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 14,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -17981,7 +17981,7 @@
   },
   "main/docs/get-started/applications/configure-jar.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18005,7 +18005,7 @@
   },
   "main/docs/get-started/applications/configure-par.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18017,7 +18017,7 @@
   },
   "main/docs/get-started/applications/configure-private-key-jwt.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18052,7 +18052,7 @@
   },
   "main/docs/get-started/applications/credentials.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 10,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18076,7 +18076,7 @@
   },
   "main/docs/get-started/applications/enable-android-app-links-support.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18100,7 +18100,7 @@
   },
   "main/docs/get-started/applications/enable-universal-links-support-in-apple-xcode.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18112,7 +18112,7 @@
   },
   "main/docs/get-started/applications/remove-applications.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18136,7 +18136,7 @@
   },
   "main/docs/get-started/applications/rotate-client-secret.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18172,7 +18172,7 @@
   },
   "main/docs/get-started/applications/set-up-database-connections.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18196,7 +18196,7 @@
   },
   "main/docs/get-started/applications/test-database-connections.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18208,7 +18208,7 @@
   },
   "main/docs/get-started/applications/update-application-connections.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18220,7 +18220,7 @@
   },
   "main/docs/get-started/applications/update-grant-types.mdx": {
     "inboundLinks": 23,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18244,7 +18244,7 @@
   },
   "main/docs/get-started/applications/work-with-auth0-locally.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 12,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18256,7 +18256,7 @@
   },
   "main/docs/get-started/applications/configure-sender-constraining/configure-client-for-sender-constraining.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -18267,7 +18267,7 @@
   },
   "main/docs/get-started/applications/configure-sender-constraining/configure-resource-server-for-sender-constraining.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -18362,7 +18362,7 @@
   },
   "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx": {
     "inboundLinks": 14,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -18386,7 +18386,7 @@
   },
   "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -18398,7 +18398,7 @@
   },
   "main/docs/get-started/apis/add-api-permissions.mdx": {
     "inboundLinks": 19,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18410,7 +18410,7 @@
   },
   "main/docs/get-started/apis/api-access-policies-for-applications.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18422,7 +18422,7 @@
   },
   "main/docs/get-started/apis/api-settings.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 25,
+    "outboundLinks": 16,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18446,7 +18446,7 @@
   },
   "main/docs/get-started/apis/configure-json-web-encryption.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18458,7 +18458,7 @@
   },
   "main/docs/get-started/apis/configure-rich-authorization-requests.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 9,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18470,7 +18470,7 @@
   },
   "main/docs/get-started/apis/create-m2m-app-test.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18482,7 +18482,7 @@
   },
   "main/docs/get-started/apis/delete-api-permissions.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18494,7 +18494,7 @@
   },
   "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18518,7 +18518,7 @@
   },
   "main/docs/get-started/apis/set-logical-api.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 18,
+    "outboundLinks": 14,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18686,7 +18686,7 @@
   },
   "main/docs/deploy-monitor/pre-deployment-checks/how-to-run-production-checks.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18710,7 +18710,7 @@
   },
   "main/docs/deploy-monitor/pre-deployment-checks/predeployment-tests.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18758,7 +18758,7 @@
   },
   "main/docs/deploy-monitor/monitor/check-auth0-status.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -18890,7 +18890,7 @@
   },
   "main/docs/deploy-monitor/logs/view-log-events.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19130,7 +19130,7 @@
   },
   "main/docs/customize/forms.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19177,7 +19177,7 @@
   },
   "main/docs/customize/log-streams.mdx": {
     "inboundLinks": 17,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19237,7 +19237,7 @@
   },
   "main/docs/customize/rules/configuration.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19249,7 +19249,7 @@
   },
   "main/docs/customize/rules/configure-global-variables-for-rules.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19273,7 +19273,7 @@
   },
   "main/docs/customize/rules/create-rules.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 10,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19285,7 +19285,7 @@
   },
   "main/docs/customize/rules/debug-rules.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19297,7 +19297,7 @@
   },
   "main/docs/customize/rules/raise-errors-from-rules.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19368,7 +19368,7 @@
   },
   "main/docs/customize/phone-messages/customize-phone-templates.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19392,7 +19392,7 @@
   },
   "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 11,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19404,7 +19404,7 @@
   },
   "main/docs/customize/phone-messages/unified-phone/unified-phone-experience-passwordless.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 9,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19416,7 +19416,7 @@
   },
   "main/docs/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 13,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19560,7 +19560,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -19572,7 +19572,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-templates.mdx": {
     "inboundLinks": 19,
-    "outboundLinks": 26,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19584,7 +19584,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-text-elements.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 22,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19596,7 +19596,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-themes.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 10,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19620,7 +19620,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/language-selection.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -19632,7 +19632,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-actions-to-validate-and-store-end-user-data-gathered-by-signup-prompt.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 9,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -19644,7 +19644,7 @@
   },
   "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-dynamic-variables-to-internationalize-custom-form-elements.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 8,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -19692,7 +19692,7 @@
   },
   "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19728,7 +19728,7 @@
   },
   "main/docs/customize/login-pages/advanced-customizations/configure.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 5,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19776,7 +19776,7 @@
   },
   "main/docs/customize/login-pages/advanced-customizations/reference.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 7,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19812,7 +19812,7 @@
   },
   "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/migrate-classic-universal-login.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -19836,7 +19836,7 @@
   },
   "main/docs/customize/log-streams/custom-log-streams.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 6,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19896,7 +19896,7 @@
   },
   "main/docs/customize/log-streams/sumo-logic-dashboard.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19932,7 +19932,7 @@
   },
   "main/docs/customize/internationalization-and-localization/lock-swift-internationalization.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 4,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19980,7 +19980,7 @@
   },
   "main/docs/customize/integrations/authenticate-devices-using-mqtt.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -19992,7 +19992,7 @@
   },
   "main/docs/customize/integrations/authenticating-and-authorizing-a-tessel-device-with-auth0.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20004,7 +20004,7 @@
   },
   "main/docs/customize/integrations/aws.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20040,7 +20040,7 @@
   },
   "main/docs/customize/integrations/connecting-provider-hosted-apps-to-sharepoint-online.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20052,7 +20052,7 @@
   },
   "main/docs/customize/integrations/google-cloud-endpoints.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20064,7 +20064,7 @@
   },
   "main/docs/customize/integrations/integrate-with-netlify.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20076,7 +20076,7 @@
   },
   "main/docs/customize/integrations/integrate-with-vercel.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20148,7 +20148,7 @@
   },
   "main/docs/customize/integrations/sharepoint-2010-2013.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 8,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20208,7 +20208,7 @@
   },
   "main/docs/customize/integrations/marketplace-partners/redirect-actions-for-partners.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20220,7 +20220,7 @@
   },
   "main/docs/customize/integrations/marketplace-partners/social-connections-for-partners.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20460,7 +20460,7 @@
   },
   "main/docs/customize/integrations/cms/wordpress-plugin/user-migration-in-login-by-auth0.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 8,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20496,7 +20496,7 @@
   },
   "main/docs/customize/integrations/aws/aws-api-gateway-custom-authorizers.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 16,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20556,7 +20556,7 @@
   },
   "main/docs/customize/integrations/aws/aws-api-gateway-delegation/aws-api-gateway-delegation-1.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 5,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20580,7 +20580,7 @@
   },
   "main/docs/customize/integrations/aws/aws-api-gateway-delegation/aws-api-gateway-delegation-3.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20640,7 +20640,7 @@
   },
   "main/docs/customize/hooks/enable-disable-hooks.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20664,7 +20664,7 @@
   },
   "main/docs/customize/hooks/update-hooks.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20688,7 +20688,7 @@
   },
   "main/docs/customize/hooks/view-logs-for-hooks.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20748,7 +20748,7 @@
   },
   "main/docs/customize/forms/configure-additional-signup-steps.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 10,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20760,7 +20760,7 @@
   },
   "main/docs/customize/forms/configure-progressive-profile-form.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 11,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20772,7 +20772,7 @@
   },
   "main/docs/customize/forms/configure-update-policy-form.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 12,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20784,7 +20784,7 @@
   },
   "main/docs/customize/forms/custom-field-components.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 13,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20796,7 +20796,7 @@
   },
   "main/docs/customize/forms/custom-messages-and-translation.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20808,7 +20808,7 @@
   },
   "main/docs/customize/forms/flows.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20820,7 +20820,7 @@
   },
   "main/docs/customize/forms/nodes-and-components.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 14,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20856,7 +20856,7 @@
   },
   "main/docs/customize/forms/routers.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20868,7 +20868,7 @@
   },
   "main/docs/customize/forms/variables.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 8,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20880,7 +20880,7 @@
   },
   "main/docs/customize/forms/vault.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -20892,7 +20892,7 @@
   },
   "main/docs/customize/forms/flows/flow-execution-and-debugger.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 9,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20904,7 +20904,7 @@
   },
   "main/docs/customize/forms/flows/integrations.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20916,7 +20916,7 @@
   },
   "main/docs/customize/forms/flows/integrations/auth0.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 12,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20928,7 +20928,7 @@
   },
   "main/docs/customize/forms/flows/integrations/data-verification.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20940,7 +20940,7 @@
   },
   "main/docs/customize/forms/flows/integrations/http-request.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20952,7 +20952,7 @@
   },
   "main/docs/customize/forms/flows/integrations/json-web-token.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20964,7 +20964,7 @@
   },
   "main/docs/customize/forms/flows/integrations/json.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20976,7 +20976,7 @@
   },
   "main/docs/customize/forms/flows/integrations/logic.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -20988,7 +20988,7 @@
   },
   "main/docs/customize/forms/flows/integrations/mailjet.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21000,7 +21000,7 @@
   },
   "main/docs/customize/forms/flows/integrations/sendgrid.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21012,7 +21012,7 @@
   },
   "main/docs/customize/forms/flows/integrations/telegram.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21024,7 +21024,7 @@
   },
   "main/docs/customize/forms/flows/integrations/twilio.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21036,7 +21036,7 @@
   },
   "main/docs/customize/forms/flows/integrations/whatsapp.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21048,7 +21048,7 @@
   },
   "main/docs/customize/forms/flows/integrations/xml.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21060,7 +21060,7 @@
   },
   "main/docs/customize/extensions/account-link-extension.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 10,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21084,7 +21084,7 @@
   },
   "main/docs/customize/extensions/authentication-api-debugger-extension.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21143,7 +21143,7 @@
   },
   "main/docs/customize/extensions/user-import-export-extension.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 9,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21179,7 +21179,7 @@
   },
   "main/docs/customize/extensions/single-sign-on-dashboard-extension/install-sso-dashboard-extension.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21227,7 +21227,7 @@
   },
   "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-manage-users.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21239,7 +21239,7 @@
   },
   "main/docs/customize/extensions/delegated-administration-extension/install-delegated-admin-extension.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21311,7 +21311,7 @@
   },
   "main/docs/customize/extensions/authorization-extension/configure-authorization-extension.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 12,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21323,7 +21323,7 @@
   },
   "main/docs/customize/extensions/authorization-extension/enable-api-access-to-authorization-extension.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 13,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21335,7 +21335,7 @@
   },
   "main/docs/customize/extensions/authorization-extension/import-and-export-authorization-extension-data.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21347,7 +21347,7 @@
   },
   "main/docs/customize/extensions/authorization-extension/install-authorization-extension.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21371,7 +21371,7 @@
   },
   "main/docs/customize/extensions/authorization-extension/set-up-authorization-extension-users.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 18,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21419,7 +21419,7 @@
   },
   "main/docs/customize/events/event-types.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21443,7 +21443,7 @@
   },
   "main/docs/customize/email/email-templates.mdx": {
     "inboundLinks": 21,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21479,7 +21479,7 @@
   },
   "main/docs/customize/email/smtp-email-providers.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21515,7 +21515,7 @@
   },
   "main/docs/customize/email/smtp-email-providers/custom.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21575,7 +21575,7 @@
   },
   "main/docs/customize/email/smtp-email-providers/smtp-server.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 7,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21635,7 +21635,7 @@
   },
   "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -21671,7 +21671,7 @@
   },
   "main/docs/customize/custom-domains/auth0-managed-certificates.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21707,7 +21707,7 @@
   },
   "main/docs/customize/custom-domains/self-managed-certificates.mdx": {
     "inboundLinks": 16,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21767,7 +21767,7 @@
   },
   "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -21851,7 +21851,7 @@
   },
   "main/docs/customize/actions/actions-overview.mdx": {
     "inboundLinks": 41,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21863,7 +21863,7 @@
   },
   "main/docs/customize/actions/actions-real-time-logs.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21971,7 +21971,7 @@
   },
   "main/docs/customize/actions/test-actions.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -22007,7 +22007,7 @@
   },
   "main/docs/customize/actions/write-your-first-action.mdx": {
     "inboundLinks": 31,
-    "outboundLinks": 10,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -22031,7 +22031,7 @@
   },
   "main/docs/customize/actions/migrate/migrate-a-rule-to-an-action.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 13,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -22067,7 +22067,7 @@
   },
   "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22079,7 +22079,7 @@
   },
   "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22091,7 +22091,7 @@
   },
   "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22103,7 +22103,7 @@
   },
   "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22127,7 +22127,7 @@
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -22139,7 +22139,7 @@
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx": {
     "inboundLinks": 31,
-    "outboundLinks": 12,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -22151,7 +22151,7 @@
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -22163,7 +22163,7 @@
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -22282,7 +22282,7 @@
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 14,
+    "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -22318,7 +22318,7 @@
   },
   "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -22496,7 +22496,7 @@
   },
   "main/docs/authenticate/database-connections.mdx": {
     "inboundLinks": 30,
-    "outboundLinks": 9,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -22508,7 +22508,7 @@
   },
   "main/docs/authenticate/enterprise-connections.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -22568,7 +22568,7 @@
   },
   "main/docs/authenticate/single-sign-on.mdx": {
     "inboundLinks": 31,
-    "outboundLinks": 16,
+    "outboundLinks": 15,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -22604,7 +22604,7 @@
   },
   "main/docs/authenticate/single-sign-on/native-to-web.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -22640,7 +22640,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 26,
+    "outboundLinks": 23,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22652,7 +22652,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-atlassian.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22664,7 +22664,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-cisco-webex.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22676,7 +22676,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-datadog.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22688,7 +22688,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-egencia.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22700,7 +22700,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-freshdesk.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22712,7 +22712,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-hosted-graphite.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22724,7 +22724,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-litmos.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22736,7 +22736,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-pluralsight.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22748,7 +22748,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-sprout-video.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22760,7 +22760,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-tableau-online.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22772,7 +22772,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-tableau-server.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22784,7 +22784,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-workday.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22796,7 +22796,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-workpath.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22808,7 +22808,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-idp-for-google-g-suite.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22820,7 +22820,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-addon-eloqua.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22832,7 +22832,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-aws.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22844,7 +22844,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-github-enterprise-cloud.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22856,7 +22856,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-github-enterprise-server.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22868,7 +22868,7 @@
   },
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-saml2-web-app-addon-for-heroku.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -22892,7 +22892,7 @@
   },
   "main/docs/authenticate/single-sign-on/native-to-web/configure-mobile-to-web-payment-flows.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -22988,7 +22988,7 @@
   },
   "main/docs/authenticate/protocols/ws-fed-protocol.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -23012,7 +23012,7 @@
   },
   "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 25,
+    "outboundLinks": 22,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23024,7 +23024,7 @@
   },
   "main/docs/authenticate/protocols/scim/inbound-scim-for-azure-ad-saml-connections.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23036,7 +23036,7 @@
   },
   "main/docs/authenticate/protocols/scim/inbound-scim-for-new-azure-ad-connections.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23048,7 +23048,7 @@
   },
   "main/docs/authenticate/protocols/scim/inbound-scim-for-okta-workforce-connections.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23060,7 +23060,7 @@
   },
   "main/docs/authenticate/protocols/scim/inbound-scim-for-okta-workforce-saml-connections.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23072,7 +23072,7 @@
   },
   "main/docs/authenticate/protocols/scim/inbound-scim-for-older-azure-ad-connections.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 6,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23096,7 +23096,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-configuration.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 17,
+    "outboundLinks": 14,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23144,7 +23144,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-idp-initiated-saml-sign-on-to-oidc-apps.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 8,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23156,7 +23156,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23168,7 +23168,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23216,7 +23216,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-okta-as-saml-identity-provider.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -23288,7 +23288,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-configuration/configure-auth0-as-service-and-identity-provider.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23300,7 +23300,7 @@
   },
   "main/docs/authenticate/protocols/saml/saml-configuration/customize-saml-assertions.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23384,7 +23384,7 @@
   },
   "main/docs/authenticate/passwordless/passwordless-with-universal-login.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -23420,7 +23420,7 @@
   },
   "main/docs/authenticate/passwordless/implement-login/universal-login.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 5,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23432,7 +23432,7 @@
   },
   "main/docs/authenticate/passwordless/implement-login/embedded-login/native.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 6,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23480,7 +23480,7 @@
   },
   "main/docs/authenticate/passwordless/authentication-methods/email-magic-link.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 11,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23492,7 +23492,7 @@
   },
   "main/docs/authenticate/passwordless/authentication-methods/email-otp.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 13,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23504,7 +23504,7 @@
   },
   "main/docs/authenticate/passwordless/authentication-methods/sms-otp.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 13,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23588,7 +23588,7 @@
   },
   "main/docs/authenticate/login/max-age-reauthentication.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 11,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -23756,7 +23756,7 @@
   },
   "main/docs/authenticate/login/logout/back-channel-logout.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 13,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23780,7 +23780,7 @@
   },
   "main/docs/authenticate/login/logout/log-users-out-of-auth0.mdx": {
     "inboundLinks": 10,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23816,7 +23816,7 @@
   },
   "main/docs/authenticate/login/logout/redirect-users-after-logout.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23828,7 +23828,7 @@
   },
   "main/docs/authenticate/login/logout/universal-logout.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 18,
+    "outboundLinks": 14,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23840,7 +23840,7 @@
   },
   "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 11,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23852,7 +23852,7 @@
   },
   "main/docs/authenticate/login/logout/back-channel-logout/oidc-back-channel-logout-initiators.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23888,7 +23888,7 @@
   },
   "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx": {
     "inboundLinks": 17,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -23900,7 +23900,7 @@
   },
   "main/docs/authenticate/login/auth0-universal-login/passwordless-login.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23960,7 +23960,7 @@
   },
   "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 10,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -23972,7 +23972,7 @@
   },
   "main/docs/authenticate/identity-providers/adding-scopes-for-an-external-idp.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -23984,7 +23984,7 @@
   },
   "main/docs/authenticate/identity-providers/calling-an-external-idp-api.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 12,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -23996,7 +23996,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 11,
+    "outboundLinks": 9,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -24031,7 +24031,7 @@
   },
   "main/docs/authenticate/identity-providers/okta.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 9,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -24055,7 +24055,7 @@
   },
   "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24079,7 +24079,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24115,7 +24115,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/apple-native.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 5,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24127,7 +24127,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 12,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24139,7 +24139,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/facebook-native.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24151,7 +24151,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24163,7 +24163,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 12,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24187,7 +24187,7 @@
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/tiktok.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24199,7 +24199,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 14,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -24223,7 +24223,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory-native.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 14,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24235,7 +24235,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/azuread-adfs-email-verification.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24259,7 +24259,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24271,7 +24271,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/enable-enterprise-connections.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24283,7 +24283,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 14,
+    "outboundLinks": 12,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -24307,7 +24307,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 12,
+    "outboundLinks": 9,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24319,7 +24319,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24331,7 +24331,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 9,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24343,7 +24343,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24355,7 +24355,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 51,
+    "outboundLinks": 33,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -24367,7 +24367,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx": {
     "inboundLinks": 9,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24379,7 +24379,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -24415,7 +24415,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-scom.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -24463,7 +24463,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/configure-ad-ldap-connector-client-certificates.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 3,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -24475,7 +24475,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/configure-ad-ldap-connector-with-kerberos.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -24511,7 +24511,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/install-configure-ad-ldap-connector.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 10,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -24535,7 +24535,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/update-ad-ldap-connectors.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 1,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 7,
     "orphanNav": false,
@@ -24559,7 +24559,7 @@
   },
   "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 4,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24571,7 +24571,7 @@
   },
   "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 17,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24595,7 +24595,7 @@
   },
   "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 7,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24667,7 +24667,7 @@
   },
   "main/docs/authenticate/database-connections/non-unique-emails.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 3,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24679,7 +24679,7 @@
   },
   "main/docs/authenticate/database-connections/passkeys.mdx": {
     "inboundLinks": 6,
-    "outboundLinks": 13,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24691,7 +24691,7 @@
   },
   "main/docs/authenticate/database-connections/password-change.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 13,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24703,7 +24703,7 @@
   },
   "main/docs/authenticate/database-connections/password-options.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24715,7 +24715,7 @@
   },
   "main/docs/authenticate/database-connections/password-strength.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 7,
+    "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24727,7 +24727,7 @@
   },
   "main/docs/authenticate/database-connections/require-username.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -24739,7 +24739,7 @@
   },
   "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 8,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24785,7 +24785,7 @@
   },
   "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx": {
     "inboundLinks": 18,
-    "outboundLinks": 12,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24821,7 +24821,7 @@
   },
   "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 9,
+    "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24845,7 +24845,7 @@
   },
   "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 20,
+    "outboundLinks": 18,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -24941,7 +24941,7 @@
   },
   "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts/anatomy.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 7,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -24989,7 +24989,7 @@
   },
   "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 8,
+    "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -25001,7 +25001,7 @@
   },
   "main/docs/authenticate/custom-token-exchange/cte-attack-protection.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 4,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -25013,7 +25013,7 @@
   },
   "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx": {
     "inboundLinks": 7,
-    "outboundLinks": 9,
+    "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,

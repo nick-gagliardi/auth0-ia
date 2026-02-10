@@ -63,12 +63,29 @@ function extractLinks(mdx) {
     }
     return out;
 }
-function normalizeDocsPathFromHref(href) {
-    // /docs/foo/bar -> main/docs/foo/bar.mdx (best-effort)
+function normalizeDocsPathCandidatesFromHref(href) {
+    // /docs/foo/bar -> try:
+    // - main/docs/foo/bar.mdx
+    // - main/docs/foo/bar/index.mdx
+    // (plus md variants)
     const p = href.replace(/^\/docs\//, '');
     if (!p)
-        return null;
-    return `main/docs/${p}.mdx`;
+        return [];
+    const base = `main/docs/${p}`;
+    return [`${base}.mdx`, `${base}/index.mdx`, `${base}.md`, `${base}/index.md`];
+}
+async function resolveDocsHrefToFile(href, repoRoot) {
+    for (const c of normalizeDocsPathCandidatesFromHref(href)) {
+        try {
+            const st = await fs.stat(path.join(repoRoot, c));
+            if (st.isFile())
+                return c;
+        }
+        catch {
+            // ignore
+        }
+    }
+    return null;
 }
 async function listFiles(root, exts) {
     const out = [];
@@ -207,7 +224,7 @@ export async function buildIndex(opts) {
         ensureEdge(id);
         // links
         for (const href of extractLinks(mdx)) {
-            const toFile = normalizeDocsPathFromHref(href);
+            const toFile = await resolveDocsHrefToFile(href, repoRoot);
             if (!toFile)
                 continue;
             addEdge('link', id, toFile);
