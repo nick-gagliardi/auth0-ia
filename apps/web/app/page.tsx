@@ -132,6 +132,13 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             <ActionCard
+              title="Maintenance"
+              description="Run a page through the technical correctness checklist and open a PR (sets validatedOn)."
+              href="/maintenance"
+              icon={Sparkles}
+              badge="New"
+            />
+            <ActionCard
               title="Explain"
               description="Pick a page/snippet and get a risk + context summary (inbound links, nav paths, shared links)."
               href="/explain"
@@ -148,13 +155,6 @@ export default function HomePage() {
               description="See top hubs, risky pages, and navigation patterns at a glance."
               href="/dashboards"
               icon={Network}
-            />
-            <ActionCard
-              title="Refactor Assistant"
-              description="Plan a move/rename with redirects + link rewrites (dry-run → export plan → PR later)."
-              href="/refactor"
-              icon={GitPullRequest}
-              badge="New"
             />
           </div>
         </section>
