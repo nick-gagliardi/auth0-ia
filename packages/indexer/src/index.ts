@@ -665,9 +665,13 @@ export async function buildIndex(opts: BuildIndexOptions) {
     const dst = resolveRouteLike(r.destination);
 
     const srcFile = await routeToFilePath(src, repoRoot);
-    const dstFile = await routeToFilePath(dst, repoRoot);
 
     if (!srcFile) missingSource.push({ source: src, destination: dst });
+
+    // External destinations (marketplaces, external docs, etc.) are valid and should not be treated as "missing".
+    if (dst.startsWith('http://') || dst.startsWith('https://')) continue;
+
+    const dstFile = await routeToFilePath(dst, repoRoot);
 
     if (!dstFile) {
       missingDestination.push({ source: src, destination: dst });
@@ -675,7 +679,10 @@ export async function buildIndex(opts: BuildIndexOptions) {
       // If destination isn't a page, see if it resolves through redirects to a real page.
       const res = resolveRedirectFinal(next, dst);
       const finalRoute = res.final;
-      const finalFile = finalRoute && !res.loop ? await routeToFilePath(finalRoute, repoRoot) : null;
+
+      // If the chain ends at an external URL, treat as resolvable.
+      const finalIsExternal = !!finalRoute && (finalRoute.startsWith('http://') || finalRoute.startsWith('https://'));
+      const finalFile = finalRoute && !res.loop && !finalIsExternal ? await routeToFilePath(finalRoute, repoRoot) : null;
 
       const entry: RedirectResolution = {
         source: src,
@@ -685,7 +692,7 @@ export async function buildIndex(opts: BuildIndexOptions) {
         loop: res.loop,
       };
 
-      if (finalFile) missingDestinationResolvable.push(entry);
+      if (finalFile || finalIsExternal) missingDestinationResolvable.push(entry);
       else missingDestinationUnresolvable.push(entry);
     }
   }
