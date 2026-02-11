@@ -11,7 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import SharedLinksExpander from '@/components/SharedLinksExpander';
-import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity } from '@/hooks/use-index-data';
+import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity, useNavPages } from '@/hooks/use-index-data';
 
 function EdgeList({
   title,
@@ -135,10 +135,11 @@ export default function ExplainPage() {
   const { data: inbound, isLoading: l3 } = useEdgesInbound();
   const { data: outbound, isLoading: l4 } = useEdgesOutbound();
   const { data: similarity, isLoading: l5 } = useSimilarity();
+  const { data: navPages, isLoading: l6 } = useNavPages();
 
   const [query, setQuery] = useState('');
 
-  const loading = l1 || l2 || l3 || l4 || l5;
+  const loading = l1 || l2 || l3 || l4 || l5 || l6;
 
   const nodeMap = useMemo(() => {
     const m = new Map<string, { title?: string; filePath: string }>();
@@ -327,18 +328,38 @@ export default function ExplainPage() {
             </div>
           )}
 
-          {node.navPaths?.length > 0 && (
+          {(node.navPaths?.length > 0 || navPages?.[node.id]?.navNodePaths?.length) && (
             <div className="mt-4 pt-4 border-t">
-              <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
-                Navigation paths
+              <div className="flex items-center justify-between mb-2">
+                <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Navigation</div>
+                {navPages?.[node.id]?.navLabelSource ? (
+                  <div className="text-[10px] text-muted-foreground">
+                    label source: <b>{navPages[node.id]?.navLabelSource}</b>
+                  </div>
+                ) : null}
               </div>
-              <ul className="space-y-1">
-                {node.navPaths.map((p) => (
-                  <li key={p} className="text-sm">
-                    {p}
-                  </li>
-                ))}
-              </ul>
+
+              {navPages?.[node.id]?.navNodePaths?.length ? (
+                <ul className="space-y-1">
+                  {navPages[node.id].navNodePaths.map((p) => (
+                    <li key={p.pathString} className="text-sm">
+                      {p.pathString}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="space-y-1">
+                  {node.navPaths.map((p) => (
+                    <li key={p} className="text-sm">
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {navPages?.[node.id]?.navDepth != null ? (
+                <div className="text-xs text-muted-foreground mt-2">nav depth: {navPages[node.id].navDepth}</div>
+              ) : null}
             </div>
           )}
         </div>
