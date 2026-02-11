@@ -1,19 +1,20 @@
 'use client';
 
 import { useMemo } from 'react';
-import { TrendingUp, Code2, AlertTriangle, Unlink } from 'lucide-react';
+import { TrendingUp, Code2, AlertTriangle, Unlink, Map as MapIcon } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useCrossNavPairs, useMetrics, useNodes, useShadowHubs } from '@/hooks/use-index-data';
+import { useCrossNavPairs, useJourneyMaps, useMetrics, useNodes, useShadowHubs } from '@/hooks/use-index-data';
 
 export default function DashboardsPage() {
   const { data: nodes, isLoading: l1 } = useNodes();
   const { data: metrics, isLoading: l2 } = useMetrics();
   const { data: crossNav, isLoading: l3 } = useCrossNavPairs();
   const { data: shadowHubs, isLoading: l4 } = useShadowHubs();
+  const { data: journeyMaps, isLoading: l5 } = useJourneyMaps();
 
-  const loading = l1 || l2 || l3 || l4;
+  const loading = l1 || l2 || l3 || l4 || l5;
 
   const pages = useMemo(() => nodes?.filter((n) => n.type === 'page') ?? [], [nodes]);
   const snippets = useMemo(() => nodes?.filter((n) => n.type === 'snippet') ?? [], [nodes]);
@@ -81,6 +82,15 @@ export default function DashboardsPage() {
       icon: Code2,
       description: 'Snippets/components by blast radius. Changes here affect many pages.',
       data: topSnippets
+    },
+    {
+      value: 'journeys',
+      label: 'Journey Maps',
+      icon: MapIcon,
+      description:
+        'Heuristic common reading paths inferred from the link graph (not clickstream). Useful for validating onboarding/next-steps and detecting missing bridges.',
+      data: (journeyMaps?.globalTop || []).slice(0, 200) as any,
+      total: journeyMaps?.globalTop?.length
     },
     {
       value: 'cross-nav',
@@ -160,7 +170,40 @@ export default function DashboardsPage() {
             <TabsContent key={value} value={value}>
               <p className="text-sm text-muted-foreground mb-4">{description}</p>
 
-              {value === 'cross-nav' ? (
+              {value === 'journeys' ? (
+                <div className="flex flex-col gap-2">
+                  {(data as any[]).map((j) => {
+                    const path = (j.path || []) as string[];
+                    return (
+                      <div key={path.join('||')} className="rounded-xl border bg-card p-4">
+                        <div className="text-xs text-muted-foreground mb-2">
+                          support <b>{j.support}</b> · score <b>{j.score}</b>
+                          {j.navRoot ? (
+                            <span className="ml-2 rounded-md border px-2 py-0.5 text-[10px] uppercase tracking-wide">{j.navRoot}</span>
+                          ) : null}
+                        </div>
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                          {path.map((id: string, i: number) => {
+                            const n = nodeById.get(id);
+                            const label = n?.title || n?.filePath || id;
+                            return (
+                              <span key={id} className="inline-flex items-center gap-2">
+                                <a className="text-primary hover:underline" href={`/explain?id=${encodeURIComponent(id)}`}>
+                                  {label}
+                                </a>
+                                {i < path.length - 1 ? <span className="text-muted-foreground">→</span> : null}
+                              </span>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                  <a className="text-sm text-primary hover:underline mt-2" href="/journeys">
+                    Explore by nav root →
+                  </a>
+                </div>
+              ) : value === 'cross-nav' ? (
                 <div className="flex flex-col gap-2">
                   {(data as any[]).map((p) => {
                     const a = nodeById.get(p.a);

@@ -3,6 +3,8 @@ import path from 'node:path';
 import { exec as _exec } from 'node:child_process';
 import { promisify } from 'node:util';
 import yaml from 'js-yaml';
+import { lintAuth0MdxPages } from './auth0-lint.js';
+import { parseDocsJsonNav, type NavNodeKind, type RawNavEntry, type NavTree } from './nav.js';
 
 const exec = promisify(_exec);
 
@@ -24,7 +26,49 @@ type Node = {
   navPaths: string[];
 };
 
+type NavLeafLabelSource = 'nav' | 'frontmatter' | 'fallback';
+
+type PageNavPathMeta = {
+  route: string;
+  nodeIds: string[];
+  labels: string[];
+  kinds: NavNodeKind[];
+  leafLabel: string;
+  leafLabelSource: NavLeafLabelSource;
+  pathString: string;
+  containerString: string;
+};
+
+type PageNavMeta = {
+  filePath: string;
+  navDepth?: number;
+  navNodePaths: PageNavPathMeta[];
+  navLabel?: string;
+  navLabelSource?: NavLeafLabelSource;
+};
+
+type NavLabelCollisionsIndex = {
+  generatedAtUtc: string;
+  collisions: Array<{
+    label: string;
+    count: number;
+    pages: Array<{ id: string; filePath: string; title?: string; navPath?: string }>;
+  }>;
+};
+
 type EdgeMap = Record<string, { link: string[]; import: string[]; redirect: string[] }>;
+
+type Redirect = { source: string; destination: string };
+
+type RedirectIndex = {
+  redirects: Redirect[];
+  warnings: {
+    missingDestination: Redirect[];
+    missingSource: Redirect[];
+    loops: { source: string; chain: string[] }[];
+    chains: { source: string; chain: string[] }[];
+  };
+};
 
 type Metrics = Record<
   string,
@@ -41,8 +85,14 @@ type Metrics = Record<
     orphanReference?: boolean;
     deepNav?: boolean;
     hubScore?: number;
+    deadEnd?: boolean;
+    deadEndScore?: number;
   }
 >;
+
+type LinkHref = { href: string; toId: string };
+
+type LinkHrefIndex = Record<string /*fromId*/, LinkHref[]>;
 
 function uniq<T>(arr: T[]): T[] {
   return [...new Set(arr)];
@@ -99,6 +149,11 @@ function extractLinks(mdx: string): string[] {
     if (href.startsWith('/docs/')) out.push(href);
   }
   return out;
+}
+
+function normalizeHref(href: string): string {
+  // store as a stable, comparable string
+  return href.split('#')[0].trim();
 }
 
 function normalizeDocsPathCandidatesFromHref(href: string): string[] {
@@ -227,6 +282,78 @@ async function navPathsFromDocsJson(
   return map;
 }
 
+function extractRedirectsFromDocsJson(docsJson: any): Redirect[] {
+  const raw = docsJson?.redirects ?? docsJson?.navigation?.redirects ?? [];
+  const out: Redirect[] = [];
+  if (!Array.isArray(raw)) return out;
+
+  for (const r of raw) {
+    if (!r) continue;
+    const source = (r.source ?? r.from ?? r.src) as any;
+    const destination = (r.destination ?? r.to ?? r.dest) as any;
+    if (typeof source !== 'string' || typeof destination !== 'string') continue;
+    out.push({ source, destination });
+  }
+
+  return out;
+}
+
+function resolveRouteLike(x: string): string {
+  // Normalize to /docs/... routes where possible.
+  if (!x) return x;
+  if (x.startsWith('http://') || x.startsWith('https://')) return x;
+  if (!x.startsWith('/')) x = `/${x}`;
+  // docs.json sometimes uses /docs/foo, docs/foo, or /foo (rare). Keep as-is.
+  return x;
+}
+
+async function routeToFilePath(route: string, repoRoot: string): Promise<string | null> {
+  const r = resolveRouteLike(route);
+  if (r.startsWith('/docs/')) return resolveDocsHrefToFile(r, repoRoot);
+  if (r.startsWith('/docs')) return resolveDocsHrefToFile(r.replace(/^\/docs$/, '/docs/'), repoRoot);
+  if (r.startsWith('/')) {
+    // best-effort: if someone stored "docs/foo" without leading /docs
+    if (r.startsWith('/docs/')) return resolveDocsHrefToFile(r, repoRoot);
+  }
+  return null;
+}
+
+function buildRedirectWarnings(redirects: Redirect[]): RedirectIndex['warnings'] {
+  // Chains/loops are computed purely over route strings.
+  const next = new Map<string, string>();
+  for (const r of redirects) next.set(resolveRouteLike(r.source), resolveRouteLike(r.destination));
+
+  const chains: { source: string; chain: string[] }[] = [];
+  const loops: { source: string; chain: string[] }[] = [];
+
+  for (const r of redirects) {
+    const start = resolveRouteLike(r.source);
+    const seen = new Set<string>();
+    const chain: string[] = [start];
+    let cur = start;
+    while (true) {
+      const n = next.get(cur);
+      if (!n) break;
+      const nn = resolveRouteLike(n);
+      chain.push(nn);
+      if (seen.has(nn)) {
+        loops.push({ source: start, chain });
+        break;
+      }
+      seen.add(nn);
+      cur = nn;
+      if (chain.length > 25) break;
+    }
+
+    if (chain.length >= 3 && !loops.find((x) => x.source === start)) {
+      chains.push({ source: start, chain });
+    }
+  }
+
+  // Placeholders; these require file existence checks later.
+  return { missingDestination: [], missingSource: [], loops, chains };
+}
+
 export async function buildIndex(opts: BuildIndexOptions) {
   await ensureClone(opts.repoUrl, opts.ref, opts.workdir);
 
@@ -236,7 +363,10 @@ export async function buildIndex(opts: BuildIndexOptions) {
   const docsJsonPath = path.join(siteRoot, 'docs.json');
   const docsJson = JSON.parse(await fs.readFile(docsJsonPath, 'utf8'));
 
-  const navMap = await navPathsFromDocsJson(docsJson, repoRoot);
+  const { navTree, rawByFilePath: rawNavByFilePath } = await parseDocsJsonNav(docsJson, repoRoot);
+  const redirects = extractRedirectsFromDocsJson(docsJson);
+
+  const pageNavMeta: Record<string /*filePath*/, PageNavMeta> = {};
 
   const docsRoot = path.join(siteRoot, 'docs');
   const snippetsRoot = path.join(siteRoot, 'snippets');
@@ -249,10 +379,13 @@ export async function buildIndex(opts: BuildIndexOptions) {
   const nodes: Node[] = [];
   const outbound: EdgeMap = {};
   const inbound: EdgeMap = {};
+  const linkHrefsOut: LinkHrefIndex = {};
+  const pagesForLint: Array<{ id: string; filePath: string; mdx: string }> = [];
 
   function ensureEdge(id: string) {
     outbound[id] ??= { link: [], import: [], redirect: [] };
     inbound[id] ??= { link: [], import: [], redirect: [] };
+    linkHrefsOut[id] ??= [];
   }
 
   function addEdge(kind: 'link' | 'import' | 'redirect', from: string, to: string) {
@@ -262,30 +395,74 @@ export async function buildIndex(opts: BuildIndexOptions) {
     inbound[to][kind].push(from);
   }
 
+  function fallbackLeafLabelFromFilePath(filePath: string): string {
+    const base = path.basename(filePath).replace(/\.(mdx|md)$/i, '');
+    return base.replace(/[-_]/g, ' ').trim() || base;
+  }
+
+  function containerDepthFromEntry(e: RawNavEntry): number {
+    // kinds includes tab/dropdown/group/page; depth excludes the leaf page.
+    return Math.max(0, e.kinds.length - 1);
+  }
+
   // pages
   for (const full of mdxFiles) {
     const rel = path.relative(repoRoot, full).replaceAll('\\', '/');
     const mdx = await fs.readFile(full, 'utf8');
     const fm = parseFrontmatter(mdx);
-    const nav = navMap.get(rel);
+
+    const rawEntries = rawNavByFilePath.get(rel) ?? [];
+    const navNodePaths: PageNavPathMeta[] = rawEntries.map((e) => {
+      const leafLabel = e.leafLabelFromNav || fm.title || fallbackLeafLabelFromFilePath(rel);
+      const leafLabelSource: NavLeafLabelSource = e.leafLabelFromNav ? 'nav' : fm.title ? 'frontmatter' : 'fallback';
+      const containerLabels = e.labels.slice(0, -1);
+      const containerString = containerLabels.join(' > ');
+      const labels = [...containerLabels, leafLabel];
+      return {
+        route: e.route,
+        nodeIds: e.nodeIds,
+        labels,
+        kinds: e.kinds,
+        leafLabel,
+        leafLabelSource,
+        containerString,
+        pathString: labels.join(' > ')
+      };
+    });
+
+    const navPaths = uniq(navNodePaths.map((p) => p.pathString));
+    const navDepth = rawEntries.length ? Math.min(...rawEntries.map(containerDepthFromEntry)) : undefined;
+    const primaryLabel = navNodePaths[0]?.leafLabel;
+    const primaryLabelSource = navNodePaths[0]?.leafLabelSource;
+
+    pageNavMeta[rel] = {
+      filePath: rel,
+      navDepth,
+      navNodePaths,
+      navLabel: primaryLabel,
+      navLabelSource: primaryLabelSource
+    };
 
     const id = rel;
+    pagesForLint.push({ id, filePath: rel, mdx });
     nodes.push({
       id,
       type: 'page',
       filePath: rel,
       title: fm.title,
       permalink: fm.permalink,
-      navPaths: nav?.navPaths ?? []
+      navPaths
     });
 
     ensureEdge(id);
 
     // links
-    for (const href of extractLinks(mdx)) {
+    for (const hrefRaw of extractLinks(mdx)) {
+      const href = normalizeHref(hrefRaw);
       const toFile = await resolveDocsHrefToFile(href, repoRoot);
       if (!toFile) continue;
       addEdge('link', id, toFile);
+      linkHrefsOut[id].push({ href, toId: toFile });
     }
 
     // imports
@@ -315,11 +492,27 @@ export async function buildIndex(opts: BuildIndexOptions) {
     }
   }
 
+  // redirects (docs.json)
+  for (const r of redirects) {
+    const srcFile = await routeToFilePath(r.source, repoRoot);
+    const dstFile = await routeToFilePath(r.destination, repoRoot);
+    if (!srcFile || !dstFile) continue;
+    addEdge('redirect', srcFile, dstFile);
+  }
+
   // de-dupe edges
   for (const id of Object.keys(outbound)) {
     outbound[id].link = uniq(outbound[id].link);
     outbound[id].import = uniq(outbound[id].import);
     outbound[id].redirect = uniq(outbound[id].redirect);
+    // de-dupe href list
+    const seen = new Set<string>();
+    linkHrefsOut[id] = (linkHrefsOut[id] || []).filter((x) => {
+      const k = `${x.href}||${x.toId}`;
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
   }
   for (const id of Object.keys(inbound)) {
     inbound[id].link = uniq(inbound[id].link);
@@ -361,15 +554,17 @@ export async function buildIndex(opts: BuildIndexOptions) {
     const outboundLinks = (outbound[id]?.link?.length ?? 0);
     const importedBy = (inbound[id]?.import?.length ?? 0);
 
-    const nav = navMap.get(id);
     const orphanNav = n.type === 'page' ? n.navPaths.length === 0 : false;
     const orphanLinks = n.type === 'page' ? inboundLinks === 0 : false;
 
     const orphanTrue = n.type === 'page' ? orphanNav && orphanLinks : false;
     const orphanReference = n.type === 'page' ? !orphanNav && orphanLinks : false;
 
-    const navDepth = nav?.navDepth;
+    const navDepth = n.type === 'page' ? pageNavMeta[id]?.navDepth : undefined;
     const deepNav = n.type === 'page' && typeof navDepth === 'number' ? navDepth >= 5 : false;
+
+    const deadEndScore = n.type === 'page' ? inboundLinks / Math.max(1, outboundLinks) : 0;
+    const deadEnd = n.type === 'page' ? inboundLinks >= 20 && outboundLinks <= 1 : false;
 
     metrics[id] = {
       inboundLinks,
@@ -382,16 +577,68 @@ export async function buildIndex(opts: BuildIndexOptions) {
       orphanTrue,
       orphanReference,
       deepNav,
-      hubScore: inboundLinks
+      hubScore: inboundLinks,
+      deadEnd,
+      deadEndScore: n.type === 'page' ? Number(deadEndScore.toFixed(4)) : undefined
     };
   }
+
+  // redirect hygiene (routes)
+  const redirectWarnings = buildRedirectWarnings(redirects);
+  const missingDestination: Redirect[] = [];
+  const missingSource: Redirect[] = [];
+
+  for (const r of redirects) {
+    const srcFile = await routeToFilePath(r.source, repoRoot);
+    const dstFile = await routeToFilePath(r.destination, repoRoot);
+    if (!srcFile) missingSource.push({ source: resolveRouteLike(r.source), destination: resolveRouteLike(r.destination) });
+    if (!dstFile) missingDestination.push({ source: resolveRouteLike(r.source), destination: resolveRouteLike(r.destination) });
+  }
+
+  const redirectIndex: RedirectIndex = {
+    redirects: redirects.map((r) => ({ source: resolveRouteLike(r.source), destination: resolveRouteLike(r.destination) })),
+    warnings: {
+      ...redirectWarnings,
+      missingDestination,
+      missingSource
+    }
+  };
 
   // ensure outDir
   await fs.mkdir(opts.outDir, { recursive: true });
   await fs.writeFile(path.join(opts.outDir, 'nodes.json'), JSON.stringify(nodes, null, 2));
   await fs.writeFile(path.join(opts.outDir, 'edges_outbound.json'), JSON.stringify(outbound, null, 2));
   await fs.writeFile(path.join(opts.outDir, 'edges_inbound.json'), JSON.stringify(inbound, null, 2));
+  await fs.writeFile(path.join(opts.outDir, 'link_hrefs_outbound.json'), JSON.stringify(linkHrefsOut, null, 2));
   await fs.writeFile(path.join(opts.outDir, 'metrics.json'), JSON.stringify(metrics, null, 2));
+  await fs.writeFile(path.join(opts.outDir, 'redirects.json'), JSON.stringify(redirectIndex, null, 2));
+
+  // --- Nav Label Intelligence ---
+  const labelToPages = new Map<string, Array<{ id: string; filePath: string; title?: string; navPath?: string }>>();
+  for (const n of nodes) {
+    if (n.type !== 'page') continue;
+    const meta = pageNavMeta[n.id];
+    const label = meta?.navLabel;
+    if (!label) continue;
+    const arr = labelToPages.get(label) ?? [];
+    arr.push({ id: n.id, filePath: n.filePath, title: n.title, navPath: meta?.navNodePaths?.[0]?.pathString });
+    labelToPages.set(label, arr);
+  }
+
+  const collisions: NavLabelCollisionsIndex = {
+    generatedAtUtc: new Date().toISOString(),
+    collisions: [...labelToPages.entries()]
+      .filter(([, pages]) => pages.length > 1)
+      .map(([label, pages]) => ({ label, count: pages.length, pages }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label))
+  };
+
+  await fs.writeFile(path.join(opts.outDir, 'nav_tree.json'), JSON.stringify(navTree, null, 2));
+  await fs.writeFile(path.join(opts.outDir, 'nav_pages.json'), JSON.stringify(pageNavMeta, null, 2));
+  await fs.writeFile(path.join(opts.outDir, 'nav_label_collisions.json'), JSON.stringify(collisions, null, 2));
+
+  const auth0Lint = lintAuth0MdxPages(pagesForLint);
+  await fs.writeFile(path.join(opts.outDir, 'auth0_lint.json'), JSON.stringify(auth0Lint, null, 2));
 
   // --- Path Convergence (links-only) similarity index (pages ↔ pages) ---
   // Goals:
@@ -604,21 +851,16 @@ export async function buildIndex(opts: BuildIndexOptions) {
 
   crossNavPairs.sort((x, y) => y.score - x.score || y.sharedOut - x.sharedOut);
 
+  const crossNavPairsIndex = {
+    generatedAtUtc: new Date().toISOString(),
+    hubCutoff,
+    minIntersection: 3,
+    scoreThreshold: 0.4,
+    pairs: crossNavPairs.slice(0, 500)
+  };
+
   await fs.writeFile(path.join(opts.outDir, 'similarity.json'), JSON.stringify(similarity, null, 2));
-  await fs.writeFile(
-    path.join(opts.outDir, 'cross_nav_pairs.json'),
-    JSON.stringify(
-      {
-        generatedAtUtc: new Date().toISOString(),
-        hubCutoff,
-        minIntersection: 3,
-        scoreThreshold: 0.4,
-        pairs: crossNavPairs.slice(0, 500)
-      },
-      null,
-      2
-    )
-  );
+  await fs.writeFile(path.join(opts.outDir, 'cross_nav_pairs.json'), JSON.stringify(crossNavPairsIndex, null, 2));
 
   // --- Shadow Hub detection ---
   // A "shadow hub" is a low-discoverability page that closely mimics a high-authority hub.
@@ -679,21 +921,175 @@ export async function buildIndex(opts: BuildIndexOptions) {
 
   shadowHubs.sort((a, b) => b.score - a.score || (b.hubInbound - b.shadowInbound) - (a.hubInbound - a.shadowInbound));
 
-  await fs.writeFile(
-    path.join(opts.outDir, 'shadow_hubs.json'),
-    JSON.stringify(
-      {
-        generatedAtUtc: new Date().toISOString(),
-        hubCutoff,
-        shadowThreshold,
-        minAuthorityDelta,
-        count: shadowHubs.length,
-        items: shadowHubs.slice(0, 500)
-      },
-      null,
-      2
-    )
-  );
+  const shadowHubsIndex = {
+    generatedAtUtc: new Date().toISOString(),
+    hubCutoff,
+    shadowThreshold,
+    minAuthorityDelta,
+    count: shadowHubs.length,
+    items: shadowHubs.slice(0, 500)
+  };
+
+  await fs.writeFile(path.join(opts.outDir, 'shadow_hubs.json'), JSON.stringify(shadowHubsIndex, null, 2));
+
+  // --- Dead-end detection ---
+  // A "dead end" is a page with high inbound links but very low outbound links.
+  // These pages often attract traffic but fail to route users onward.
+  const deadEndMinInbound = 20;
+  const deadEndMaxOutbound = 1;
+
+  const nodeById = new Map(nodes.map((n) => [n.id, n] as const));
+
+  const deadEnds = pageIds
+    .map((id) => {
+      const m = metrics[id];
+      const inboundLinks = m?.inboundLinks ?? 0;
+      const outboundLinks = m?.outboundLinks ?? 0;
+      const deadEndScore = inboundLinks / Math.max(1, outboundLinks);
+      const n = nodeById.get(id);
+      return {
+        id,
+        inboundLinks,
+        outboundLinks,
+        deadEndScore: Number(deadEndScore.toFixed(4)),
+        navRoot: n ? navRoot(n.navPaths) : null,
+        navDepth: m?.navDepth,
+      };
+    })
+    .filter((x) => x.inboundLinks >= deadEndMinInbound && x.outboundLinks <= deadEndMaxOutbound)
+    .sort((a, b) => b.deadEndScore - a.deadEndScore || b.inboundLinks - a.inboundLinks);
+
+  const deadEndsIndex = {
+    generatedAtUtc: new Date().toISOString(),
+    minInbound: deadEndMinInbound,
+    maxOutbound: deadEndMaxOutbound,
+    count: deadEnds.length,
+    items: deadEnds.slice(0, 500),
+  };
+
+  await fs.writeFile(path.join(opts.outDir, 'dead_ends.json'), JSON.stringify(deadEndsIndex, null, 2));
+
+  // --- Journey Maps ---
+  // Heuristic: infer likely "reader journeys" by walking the link graph from strong starting pages.
+  // This is *not* clickstream data; it is a structure-derived approximation.
+  const journeyMaxLen = 5;
+  const journeyMinLen = 3;
+  const startsPerRoot = 25;
+  const branching = 4;
+  const topPerRoot = 40;
+
+  const pageOutbound = new Map<string, string[]>();
+  for (const id of pageIds) {
+    const outs = (outbound[id]?.link ?? []).filter((to) => pageSet.has(to));
+    pageOutbound.set(id, outs);
+  }
+
+  function nodeRoot(id: string): string | null {
+    const n = nodeById.get(id);
+    return n ? navRoot(n.navPaths) : null;
+  }
+
+  function candidateWeight(root: string | null, to: string): number {
+    const m = metrics[to];
+    const inbound = m?.inboundLinks ?? 0;
+    const out = m?.outboundLinks ?? 0;
+    const base = Math.log1p(inbound) * 5 + Math.log1p(out) * 1;
+    const sameRootBoost = root && nodeRoot(to) === root ? 5 : 0;
+    return base + sameRootBoost;
+  }
+
+  type JourneyAgg = { path: string[]; scoreSum: number; support: number; navRoot: string | null };
+  const globalAgg = new Map<string, JourneyAgg>();
+  const byRootAgg = new Map<string, Map<string, JourneyAgg>>();
+
+  function recordPath(root: string | null, path: string[], score: number) {
+    const key = path.join('||');
+    const g = globalAgg.get(key) ?? { path, scoreSum: 0, support: 0, navRoot: root };
+    g.scoreSum += score;
+    g.support += 1;
+    globalAgg.set(key, g);
+
+    const rKey = root || 'Unknown';
+    const rm = byRootAgg.get(rKey) ?? new Map<string, JourneyAgg>();
+    const ri = rm.get(key) ?? { path, scoreSum: 0, support: 0, navRoot: root };
+    ri.scoreSum += score;
+    ri.support += 1;
+    rm.set(key, ri);
+    byRootAgg.set(rKey, rm);
+  }
+
+  function walkFromStart(startId: string, root: string | null) {
+    const startWeight = Math.log1p(metrics[startId]?.inboundLinks ?? 0) * 2;
+
+    function dfs(path: string[], score: number) {
+      if (path.length >= journeyMinLen) recordPath(root, path, score);
+      if (path.length >= journeyMaxLen) return;
+
+      const cur = path[path.length - 1];
+      const outs = pageOutbound.get(cur) ?? [];
+      if (!outs.length) return;
+
+      const ranked = [...outs]
+        .filter((to) => !path.includes(to))
+        .map((to) => ({ to, w: candidateWeight(root, to) }))
+        .sort((a, b) => b.w - a.w)
+        .slice(0, branching);
+
+      for (const c of ranked) dfs([...path, c.to], score + c.w);
+    }
+
+    dfs([startId], startWeight);
+  }
+
+  // starts per nav root: top inbound pages, plus a small pool of global hubs.
+  const roots = new Map<string, string[]>();
+  for (const id of pageIds) {
+    const r = nodeRoot(id) || 'Unknown';
+    const arr = roots.get(r) ?? [];
+    arr.push(id);
+    roots.set(r, arr);
+  }
+
+  const globalHubStarts = [...pageIds]
+    .sort((a, b) => (metrics[b]?.inboundLinks ?? 0) - (metrics[a]?.inboundLinks ?? 0))
+    .slice(0, 50);
+
+  for (const [rKey, ids] of roots) {
+    const rootStarts = [...ids]
+      .sort((a, b) => (metrics[b]?.inboundLinks ?? 0) - (metrics[a]?.inboundLinks ?? 0))
+      .slice(0, startsPerRoot);
+
+    const merged = [...new Set([...rootStarts, ...globalHubStarts.slice(0, 10)])];
+    const root = rKey === 'Unknown' ? null : rKey;
+    for (const sId of merged) walkFromStart(sId, root);
+  }
+
+  function finalizeAgg(map: Map<string, JourneyAgg>) {
+    const arr = [...map.values()].map((x) => ({
+      path: x.path,
+      score: Number((x.scoreSum / Math.max(1, x.support)).toFixed(4)),
+      support: x.support,
+      navRoot: x.navRoot,
+    }));
+
+    arr.sort((a, b) => b.support - a.support || b.score - a.score);
+    return arr;
+  }
+
+  const journeyMapsIndex = {
+    generatedAtUtc: new Date().toISOString(),
+    maxLen: journeyMaxLen,
+    minLen: journeyMinLen,
+    startsPerRoot,
+    branching,
+    topPerRoot,
+    globalTop: finalizeAgg(globalAgg).slice(0, 200),
+    byNavRoot: Object.fromEntries(
+      [...byRootAgg.entries()].map(([r, m]) => [r, { paths: finalizeAgg(m).slice(0, topPerRoot) }])
+    ),
+  };
+
+  await fs.writeFile(path.join(opts.outDir, 'journey_maps.json'), JSON.stringify(journeyMapsIndex, null, 2));
 
   // circular dependency detection for snippets/components (import graph among snippets)
   const snippetIds = nodes.filter((n) => n.type === 'snippet').map((n) => n.id);
@@ -743,24 +1139,19 @@ export async function buildIndex(opts: BuildIndexOptions) {
   // small summary
   const gitSha = (await exec(`git -C ${repoRoot} rev-parse HEAD`)).stdout.trim();
 
-  await fs.writeFile(
-    path.join(opts.outDir, 'summary.json'),
-    JSON.stringify(
-      {
-        generatedAtUtc: new Date().toISOString(),
-        source: {
-          repoUrl: opts.repoUrl,
-          ref: opts.ref,
-          gitSha
-        },
-        nodes: nodes.length,
-        pages: nodes.filter((n) => n.type === 'page').length,
-        snippets: nodes.filter((n) => n.type === 'snippet').length
-      },
-      null,
-      2
-    )
-  );
+  const summary = {
+    generatedAtUtc: new Date().toISOString(),
+    source: {
+      repoUrl: opts.repoUrl,
+      ref: opts.ref,
+      gitSha
+    },
+    nodes: nodes.length,
+    pages: nodes.filter((n) => n.type === 'page').length,
+    snippets: nodes.filter((n) => n.type === 'snippet').length
+  };
+
+  await fs.writeFile(path.join(opts.outDir, 'summary.json'), JSON.stringify(summary, null, 2));
 
   // quick sanity: warn about link targets that don't exist
   const missingTargets = new Set<string>();
@@ -768,4 +1159,32 @@ export async function buildIndex(opts: BuildIndexOptions) {
     for (const to of e.link) if (!nodeSet.has(to)) missingTargets.add(to);
   }
   await fs.writeFile(path.join(opts.outDir, 'missing_link_targets.json'), JSON.stringify([...missingTargets].sort(), null, 2));
+
+  // --- Single-file bundle (writer-first: fewer fetches) ---
+  // Keep the other JSON files too for backward compatibility.
+  const bundle = {
+    summary,
+    nodes,
+    metrics,
+    edges: {
+      inbound,
+      outbound
+    },
+    linkHrefsOut,
+    redirects: redirectIndex,
+    nav: {
+      tree: navTree,
+      pages: pageNavMeta,
+      labelCollisions: collisions
+    },
+    auth0Lint,
+    similarity,
+    crossNavPairs: crossNavPairsIndex,
+    shadowHubs: shadowHubsIndex,
+    deadEnds: deadEndsIndex,
+    journeyMaps: journeyMapsIndex
+  };
+
+  await fs.writeFile(path.join(opts.outDir, 'index.json'), JSON.stringify(bundle, null, 2));
 }
+

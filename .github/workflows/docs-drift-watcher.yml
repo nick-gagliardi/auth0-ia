@@ -1,0 +1,77 @@
+name: Docs Drift Watcher
+
+on:
+  schedule:
+    # Weekly on Mondays at 09:00 UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docs-drift-watcher
+  cancel-in-progress: false
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout auth0-ia (this repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Build docs index
+        run: pnpm build:index
+
+      - name: Generate drift report + snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATE="$(date -u +%F)"
+          node scripts/drift-report.mjs --date "$DATE" | tee .tmp-drift-result.json
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-drift-report
+          path: |
+            drift/reports/latest.md
+            drift/reports/*.md
+
+      - name: Commit report to branch (drift-reports)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BRANCH="drift-reports"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Keep this branch purely for drift artifacts.
+          git checkout -B "$BRANCH"
+
+          git add drift/reports drift/snapshots
+          if git diff --cached --quiet; then
+            echo "No drift changes to commit."
+            exit 0
+          fi
+
+          DATE="$(date -u +%F)"
+          git commit -m "chore(drift): weekly IA report ($DATE)"
+          git push origin "$BRANCH" --force
