@@ -99,6 +99,57 @@ export async function POST(req: Request) {
     const bodyRaw = await req.json();
     const body = BodySchema.parse(bodyRaw);
 
+    const mode = (process.env.MAINTENANCE_MODE || 'vercel').toLowerCase();
+
+    if (mode === 'local') {
+      const { execFile } = await import('node:child_process');
+      const { resolve, dirname } = await import('node:path');
+      const { fileURLToPath } = await import('node:url');
+      const here = dirname(fileURLToPath(import.meta.url));
+      const scriptPath = resolve(here, '../../../../../scripts/snippet-migrate-open-pr.mjs');
+
+      const payload = await new Promise<any>((resolveP, rejectP) => {
+        execFile(
+          process.execPath,
+          [
+            scriptPath,
+            '--targetRepo',
+            body.targetRepo,
+            '--baseBranch',
+            'main',
+            '--filePath',
+            body.filePath,
+            '--startLine',
+            String(body.startLine),
+            '--endLine',
+            String(body.endLine),
+            '--lang',
+            String(body.lang || ''),
+            '--snippetId',
+            body.snippetId,
+            '--hash',
+            body.hash,
+            '--migrateAllOccurrences',
+            String(Boolean(body.migrateAllOccurrences)),
+          ],
+          { env: process.env, maxBuffer: 50 * 1024 * 1024 },
+          (err, stdout, stderr) => {
+            if (err) {
+              rejectP(new Error(stderr || err.message));
+              return;
+            }
+            try {
+              resolveP(JSON.parse(String(stdout || '').trim()));
+            } catch {
+              rejectP(new Error(`Unexpected output from local script:\n${stdout}\n${stderr}`));
+            }
+          }
+        );
+      });
+
+      return NextResponse.json(payload);
+    }
+
     const token = requireEnv('MAINTENANCE_GH_TOKEN');
 
     const [owner, repo] = body.targetRepo.split('/');
