@@ -15,6 +15,7 @@ import type {
   NavTree,
   NavPagesIndex,
   NavLabelCollisionsIndex,
+  SnippetMigrationIndex,
 } from '@/types';
 import { useIndexBundle } from '@/hooks/use-index-bundle';
 
@@ -132,6 +133,16 @@ export function useLinkHrefsOut() {
   return useQuery({
     queryKey: ['link_hrefs_outbound'],
     queryFn: async () => (b.data?.linkHrefsOut ?? fetchJson<LinkHrefIndex>('link_hrefs_outbound.json')),
+    enabled: b.isSuccess || !b.isLoading,
+    staleTime: Infinity,
+  });
+}
+
+export function useSnippetMigration() {
+  const b = useIndexBundle();
+  return useQuery({
+    queryKey: ['snippet_migration'],
+    queryFn: async () => (b.data?.snippetMigration ?? fetchJson<SnippetMigrationIndex>('snippet_migration.json')),
     enabled: b.isSuccess || !b.isLoading,
     staleTime: Infinity,
   });

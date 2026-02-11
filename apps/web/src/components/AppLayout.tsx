@@ -12,6 +12,7 @@ const navItems = [
   { to: '/maintenance', label: 'Maintenance', icon: LayoutDashboard },
   { to: '/work-queue', label: 'Work Queue', icon: LayoutDashboard },
   { to: '/dashboards', label: 'Dashboards', icon: Network },
+  { to: '/snippet-migration', label: 'Snippet Migration', icon: Tag },
   { to: '/redirects', label: 'Redirects', icon: Network },
   { to: '/nav-labels', label: 'Nav Labels', icon: Tag },
   { to: '/journeys', label: 'Journeys', icon: MapIcon },

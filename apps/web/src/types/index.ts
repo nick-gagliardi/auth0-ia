@@ -225,6 +225,27 @@ export type Auth0LintIndex = {
   byPageId: Record<string, Auth0LintWarning[]>;
 };
 
+export type SnippetMigrationItem = {
+  filePath: string;
+  startLine: number;
+  endLine: number;
+  lang: string | null;
+  code: string;
+  hash: string;
+  snippetId: string;
+  occurrences: number;
+  preview: string;
+};
+
+export type SnippetMigrationIndex = {
+  generatedAtUtc: string;
+  pagesScanned: number;
+  blocksFound: number;
+  uniqueBlocks: number;
+  byLang: Record<string, number>;
+  items: SnippetMigrationItem[];
+};
+
 export type IndexBundle = {
   summary: Summary;
   nodes: DocNode[];
@@ -241,6 +262,7 @@ export type IndexBundle = {
     labelCollisions: NavLabelCollisionsIndex;
   };
   auth0Lint?: Auth0LintIndex;
+  snippetMigration?: SnippetMigrationIndex;
   similarity: SimilarityIndex;
   crossNavPairs: CrossNavPairs;
   shadowHubs: ShadowHubs;
