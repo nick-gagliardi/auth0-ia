@@ -151,7 +151,8 @@ async function main() {
 
   // commit
   await run('git', ['-C', repoDir, 'add', filePath, snippetPath, registryPath]);
-  await run('git', ['-C', repoDir, 'commit', '-m', `Snippet migration: ${snippetId}`]);
+  // Avoid GPG signing issues in non-interactive environments.
+  await run('git', ['-C', repoDir, '-c', 'commit.gpgsign=false', 'commit', '-m', `Snippet migration: ${snippetId}`]);
   await run('git', ['-C', repoDir, 'push', '-u', 'origin', branchName]);
 
   // PR
