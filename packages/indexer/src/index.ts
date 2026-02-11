@@ -94,6 +94,30 @@ type LinkHref = { href: string; toId: string };
 
 type LinkHrefIndex = Record<string /*fromId*/, LinkHref[]>;
 
+type DeadEndsIndex = {
+  generatedAtUtc: string;
+  criteria: { minInboundLinks: number; maxOutboundLinks: number };
+  items: Array<{
+    id: string;
+    filePath: string;
+    title?: string;
+    inboundLinks: number;
+    outboundLinks: number;
+    score: number;
+    navPaths: string[];
+  }>;
+};
+
+type JourneyMapsIndex = {
+  generatedAtUtc: string;
+  minLen: number;
+  maxLen: number;
+  branching: number;
+  startsPerRoot: number;
+  globalTop: Array<{ path: string[]; support: number; score: number }>;
+  byNavRoot: Record<string, { paths: Array<{ path: string[]; support: number; score: number }> }>;
+};
+
 function uniq<T>(arr: T[]): T[] {
   return [...new Set(arr)];
 }
