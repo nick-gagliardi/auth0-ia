@@ -50,7 +50,7 @@ export default function DashboardsPage() {
   const deepContent = useMemo(() => {
     if (!metrics) return [];
     return pages
-      .filter((n) => (metrics[n.id]?.navDepth ?? 0) > 8)
+      .filter((n) => (metrics[n.id]?.navDepth ?? 0) >= 6)
       .sort((a, b) => (metrics[b.id]?.inboundLinks ?? 0) - (metrics[a.id]?.inboundLinks ?? 0));
   }, [pages, metrics]);
 
@@ -112,7 +112,7 @@ export default function DashboardsPage() {
       value: 'deep',
       label: 'Deep Content',
       icon: TrendingUp,
-      description: 'Pages with nav depth > 8. Often where old/low-discoverability content hides ("SEO graveyard").',
+      description: 'Pages with nav depth ≥ 6. Often where old/low-discoverability content hides ("SEO graveyard").',
       data: deepContent.slice(0, 200),
       total: deepContent.length
     },
