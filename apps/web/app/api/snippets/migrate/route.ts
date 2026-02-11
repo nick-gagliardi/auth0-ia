@@ -103,10 +103,10 @@ export async function POST(req: Request) {
 
     if (mode === 'local') {
       const { execFile } = await import('node:child_process');
-      const { resolve, dirname } = await import('node:path');
-      const { fileURLToPath } = await import('node:url');
-      const here = dirname(fileURLToPath(import.meta.url));
-      const scriptPath = resolve(here, '../../../../../scripts/snippet-migrate-open-pr.mjs');
+      const { resolve } = await import('node:path');
+      // In local dev, Next runs with process.cwd() at the repo root.
+      // Using cwd avoids brittle relative path math inside the app/ directory tree.
+      const scriptPath = resolve(process.cwd(), 'scripts/snippet-migrate-open-pr.mjs');
 
       const payload = await new Promise<any>((resolveP, rejectP) => {
         execFile(
