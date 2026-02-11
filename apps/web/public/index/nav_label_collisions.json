@@ -1,0 +1,77 @@
+{
+  "generatedAtUtc": "2026-02-11T13:52:24.838Z",
+  "collisions": [
+    {
+      "label": "Configure Application Metadata",
+      "count": 2,
+      "pages": [
+        {
+          "id": "main/docs/manage-users/user-accounts/metadata/configure-application-metadata.mdx",
+          "filePath": "main/docs/manage-users/user-accounts/metadata/configure-application-metadata.mdx",
+          "title": "Configure Application Metadata",
+          "navPath": "Documentation > Manage Users > Manage Users > User Accounts > Metadata > Configure Application Metadata"
+        },
+        {
+          "id": "main/docs/get-started/applications/configure-application-metadata.mdx",
+          "filePath": "main/docs/get-started/applications/configure-application-metadata.mdx",
+          "title": "Configure Application Metadata",
+          "navPath": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Configure Application Metadata"
+        }
+      ]
+    },
+    {
+      "label": "Enable Role-Based Access Control for APIs",
+      "count": 2,
+      "pages": [
+        {
+          "id": "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+          "filePath": "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+          "title": "Enable Role-Based Access Control for APIs",
+          "navPath": "Documentation > Manage Users > Manage Access > Access Control > Configure Core RBAC > Enable Role-Based Access Control for APIs"
+        },
+        {
+          "id": "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
+          "filePath": "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
+          "title": "Enable Role-Based Access Control for APIs",
+          "navPath": "Documentation > Get Started > Configure Auth0 > APIs > Enable Role-Based Access Control for APIs"
+        }
+      ]
+    },
+    {
+      "label": "Releases",
+      "count": 2,
+      "pages": [
+        {
+          "id": "main/docs/customize/actions/releases.mdx",
+          "filePath": "main/docs/customize/actions/releases.mdx",
+          "title": "Releases",
+          "navPath": "Documentation > Customize > Code Customization > Actions > Releases"
+        },
+        {
+          "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
+          "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
+          "title": "Releases",
+          "navPath": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Login Trigger > Releases"
+        }
+      ]
+    },
+    {
+      "label": "User Import / Export Extension",
+      "count": 2,
+      "pages": [
+        {
+          "id": "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
+          "filePath": "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
+          "title": "User Import / Export Extension",
+          "navPath": "Documentation > Manage Users > Manage Users > User Migration > User Import / Export Extension"
+        },
+        {
+          "id": "main/docs/customize/extensions/user-import-export-extension.mdx",
+          "filePath": "main/docs/customize/extensions/user-import-export-extension.mdx",
+          "title": "User Import / Export Extension",
+          "navPath": "Documentation > Customize > Third-Party Customization > Extensions > User Import / Export Extension"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "generatedAtUtc": "2026-02-11T13:52:25.472Z",
+  "minInbound": 20,
+  "maxOutbound": 1,
+  "count": 4,
+  "items": [
+    {
+      "id": "main/docs/customize/actions.mdx",
+      "inboundLinks": 55,
+      "outboundLinks": 0,
+      "deadEndScore": 55,
+      "navRoot": "Customize",
+      "navDepth": 4
+    },
+    {
+      "id": "main/docs/authenticate/identity-providers.mdx",
+      "inboundLinks": 33,
+      "outboundLinks": 0,
+      "deadEndScore": 33,
+      "navRoot": "Authenticate",
+      "navDepth": 4
+    },
+    {
+      "id": "main/docs/libraries.mdx",
+      "inboundLinks": 27,
+      "outboundLinks": 0,
+      "deadEndScore": 27,
+      "navRoot": null
+    },
+    {
+      "id": "main/docs/get-started/applications/update-grant-types.mdx",
+      "inboundLinks": 23,
+      "outboundLinks": 1,
+      "deadEndScore": 23,
+      "navRoot": "Get Started",
+      "navDepth": 4
+    }
+  ]
+}

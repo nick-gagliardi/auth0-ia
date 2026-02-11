@@ -797,7 +797,9 @@
       "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+    ]
   },
   "main/docs/customize/rules/context-object.mdx": {
     "link": [
@@ -2462,7 +2464,9 @@
       "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+    ]
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx": {
     "link": [
@@ -2478,7 +2482,9 @@
       "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+    ]
   },
   "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx": {
     "link": [
@@ -4662,7 +4668,9 @@
       "main/docs/secure/sender-constraining.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/secure/sender-constraining/configure-sender-constraining.mdx"
+    ]
   },
   "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx": {
     "link": [
@@ -5703,7 +5711,9 @@
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/customize/actions/use-cases.mdx"
+    ]
   },
   "main/docs/customize/email/manage-email-flow.mdx": {
     "link": [],
@@ -7054,75 +7064,9 @@
     ],
     "redirect": []
   },
-  "main/docs/quickstart/webapp/java/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/java/web.xml.mdx",
-      "main/snippets/quickstart/webapp/java/AuthenticationControllerProvider.java.mdx",
-      "main/snippets/quickstart/webapp/java/LoginServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java/CallbackServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java/HomeServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java/LogoutServlet.java.mdx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java/web.xml.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java/AuthenticationControllerProvider.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java/LoginServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java/CallbackServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java/HomeServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java/LogoutServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/webapp/java/index.mdx": {
-    "link": [
-      "main/docs/get-started/auth0-overview.mdx",
-      "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "main/docs/secure/tokens.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/quickstart/webapp/java/interactive.mdx": {
     "link": [],
     "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/java/web.xml.mdx",
-      "main/snippets/quickstart/webapp/java/AuthenticationControllerProvider.java.mdx",
-      "main/snippets/quickstart/webapp/java/LoginServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java/CallbackServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java/HomeServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java/LogoutServlet.java.mdx",
-      "main/snippets/QuickstartButtons.jsx",
       "main/snippets/AuthCodeGroup.jsx"
     ],
     "redirect": []
@@ -7522,7 +7466,9 @@
     "import": [
       "main/snippets/AuthCodeBlock.jsx"
     ],
-    "redirect": []
+    "redirect": [
+      "main/docs/quickstart/native/net-android-ios/index.mdx"
+    ]
   },
   "main/docs/authenticate/identity-providers.mdx": {
     "link": [],
@@ -7548,7 +7494,9 @@
   "main/docs/quickstart/native/xamarin/interactive.mdx": {
     "link": [],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/quickstart/native/net-android-ios/interactive.mdx"
+    ]
   },
   "main/docs/quickstart/native/wpf-winforms/_index.mdx": {
     "link": [],
@@ -8767,7 +8715,9 @@
       "main/docs/manage-users/user-accounts/metadata/manage-metadata-lock.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/manage-users/user-accounts/metadata.mdx"
+    ]
   },
   "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx": {
     "link": [
@@ -8947,7 +8897,9 @@
       "main/docs/troubleshoot/basic-issues/invalid-token-errors.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/manage-users/sessions/session-lifecycle.mdx"
+    ]
   },
   "main/docs/manage-users/sessions/configure-session-lifetime-settings.mdx": {
     "link": [
@@ -8959,7 +8911,9 @@
       "main/snippets/AuthCodeBlock.jsx",
       "main/snippets/AuthCodeGroup.jsx"
     ],
-    "redirect": []
+    "redirect": [
+      "main/docs/manage-users/sessions/configure-session-lifetime.mdx"
+    ]
   },
   "main/docs/manage-users/cookies/spa-authenticate-with-cookies.mdx": {
     "link": [
@@ -9725,7 +9679,9 @@
       "main/docs/manage-users/cookies/authentication-api-cookies.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/manage-users/sessions/session-lifecycle.mdx"
+    ]
   },
   "main/docs/manage-users/sessions/configure-session-lifetime.mdx": {
     "link": [
@@ -9828,13 +9784,15 @@
       "main/docs/manage-users/sessions/session-lifecycle.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout.mdx",
-      "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx"
+      "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
+      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx"
     ],
     "import": [],
     "redirect": []
   },
   "main/docs/manage-users/sessions/session-metadata/add-organization-information.mdx": {
     "link": [
+      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx",
       "main/docs/customize/actions.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout.mdx",
@@ -9848,6 +9806,7 @@
     "link": [
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout.mdx",
+      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx",
       "main/docs/secure/tokens/access-tokens.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx",
@@ -16382,7 +16341,9 @@
       "main/docs/troubleshoot/basic-issues/check-error-messages.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/get-started/manage-dashboard-access/feature-access-by-role.mdx"
+    ]
   },
   "main/docs/authenticate/passwordless/passwordless-with-universal-login.mdx": {
     "link": [
@@ -18137,7 +18098,9 @@
       "main/docs/secure/sender-constraining/configure-sender-constraining.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/secure/sender-constraining.mdx"
+    ]
   },
   "main/docs/get-started/applications/configure-ws-fed-applications.mdx": {
     "link": [
@@ -18228,7 +18191,9 @@
       "main/docs/secure/sender-constraining.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/secure/sender-constraining/configure-sender-constraining.mdx"
+    ]
   },
   "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-client.mdx": {
     "link": [
@@ -20154,7 +20119,9 @@
       "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+    ]
   },
   "main/docs/customize/actions/migrate/actions-migration-limitations.mdx": {
     "link": [
@@ -20291,7 +20258,9 @@
       "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+    ]
   },
   "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx": {
     "link": [
@@ -21516,6 +21485,36 @@
     "import": [],
     "redirect": []
   },
+  "main/snippets/quickstart/webapp/java/AuthenticationControllerProvider.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java/CallbackServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java/HomeServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java/LoginServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java/LogoutServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java/web.xml.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/snippets/quickstart/webapp/aspnet-core-blazor-server/Login.cshtml.cs.mdx": {
     "link": [],
     "import": [],
@@ -21787,6 +21786,30 @@
     "redirect": []
   },
   "main/snippets/quickstart/backend/aspnet-core-webapi/appsettings.json.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/fr-ca/quickstart/native/xamarin/interactive.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": [
+      "main/docs/fr-ca/quickstart/native/net-android-ios/interactive.mdx"
+    ]
+  },
+  "main/docs/fr-ca/quickstart/native/net-android-ios/interactive.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/ja-jp/quickstart/native/xamarin/interactive.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": [
+      "main/docs/ja-jp/quickstart/native/net-android-ios/interactive.mdx"
+    ]
+  },
+  "main/docs/ja-jp/quickstart/native/net-android-ios/interactive.mdx": {
     "link": [],
     "import": [],
     "redirect": []
