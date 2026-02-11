@@ -3107,24 +3107,9 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/webapp/express/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/webapp/express/_index.mdx",
-    "title": "Add Login to your Express Application",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/webapp/express/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/webapp/express/index.mdx",
-    "title": "Express",
-    "navPaths": []
-  },
-  {
-    "id": "main/docs/quickstart/webapp/express/interactive.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/webapp/express/interactive.mdx",
-    "title": "Add Login to your Express Application",
     "navPaths": []
   },
   {

@@ -1,11 +1,11 @@
 {
-  "pagesScanned": 2165,
-  "pagesWithWarnings": 553,
-  "warningCount": 787,
+  "pagesScanned": 2163,
+  "pagesWithWarnings": 551,
+  "warningCount": 785,
   "byCode": {
     "missing_pkce_mention": 128,
     "missing_state_mention": 129,
-    "missing_nonce_mention": 276,
+    "missing_nonce_mention": 274,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
@@ -13852,19 +13852,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/quickstart/webapp/express/_index.mdx",
-      "filePath": "main/docs/quickstart/webapp/express/_index.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "{ id: \"install-the-express-openid-connect-sdk\", title: \"Install the Express OpenID Connect SDK\" },",
-          "line": 14
-        }
-      ]
-    },
-    {
       "id": "main/docs/quickstart/webapp/express/index.mdx",
       "filePath": "main/docs/quickstart/webapp/express/index.mdx",
       "warnings": [
@@ -13872,20 +13859,7 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "Your application will need the [`express-openid-connect`](https://github.com/auth0/express-openid-connect) package which is an Auth0-maintained OIDC-compliant library for Express.",
-          "line": 41
-        }
-      ]
-    },
-    {
-      "id": "main/docs/quickstart/webapp/express/interactive.mdx",
-      "filePath": "main/docs/quickstart/webapp/express/interactive.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "description: This guide demonstrates how to integrate Auth0, add user login, logout, and profile to a Node.js Express application using the Express OpenID Connect SDK.",
+          "evidence": "This guide demonstrates how to integrate Auth0, add authentication, and display user profile information in an Express.js web application using the `express-openid-connect` SDK.",
           "line": 3
         }
       ]
@@ -18581,30 +18555,12 @@
         "line": 585
       }
     ],
-    "main/docs/quickstart/webapp/express/_index.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "{ id: \"install-the-express-openid-connect-sdk\", title: \"Install the Express OpenID Connect SDK\" },",
-        "line": 14
-      }
-    ],
     "main/docs/quickstart/webapp/express/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "Your application will need the [`express-openid-connect`](https://github.com/auth0/express-openid-connect) package which is an Auth0-maintained OIDC-compliant library for Express.",
-        "line": 41
-      }
-    ],
-    "main/docs/quickstart/webapp/express/interactive.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "description: This guide demonstrates how to integrate Auth0, add user login, logout, and profile to a Node.js Express application using the Express OpenID Connect SDK.",
+        "evidence": "This guide demonstrates how to integrate Auth0, add authentication, and display user profile information in an Express.js web application using the `express-openid-connect` SDK.",
         "line": 3
       }
     ],

@@ -29,6 +29,8 @@ export default function RedirectsPage() {
   const loops = useMemo(() => data?.warnings?.loops ?? [], [data]);
   const missingDst = useMemo(() => data?.warnings?.missingDestination ?? [], [data]);
   const missingSrc = useMemo(() => data?.warnings?.missingSource ?? [], [data]);
+  const missingDstResolvable = useMemo(() => data?.warnings?.missingDestinationResolvable ?? [], [data]);
+  const missingDstUnresolvable = useMemo(() => data?.warnings?.missingDestinationUnresolvable ?? [], [data]);
 
   if (isLoading) {
     return (
@@ -63,17 +65,21 @@ export default function RedirectsPage() {
           </CardHeader>
           <CardContent className="flex flex-wrap gap-3 text-sm">
             <Badge variant="secondary">redirects: {data?.redirects?.length ?? 0}</Badge>
-            <Badge variant={missingDst.length ? 'destructive' : 'secondary'}>missing destination: {missingDst.length}</Badge>
-            <Badge variant={missingSrc.length ? 'destructive' : 'secondary'}>missing source: {missingSrc.length}</Badge>
+            <Badge variant={missingDstUnresolvable.length ? 'destructive' : 'secondary'}>missing dest (unresolvable): {missingDstUnresolvable.length}</Badge>
+            <Badge variant={missingDstResolvable.length ? 'default' : 'secondary'}>missing dest (resolves via redirects): {missingDstResolvable.length}</Badge>
+            <Badge variant={missingSrc.length ? 'secondary' : 'secondary'}>missing source: {missingSrc.length}</Badge>
             <Badge variant={chains.length ? 'default' : 'secondary'}>chains: {chains.length}</Badge>
             <Badge variant={loops.length ? 'destructive' : 'secondary'}>loops: {loops.length}</Badge>
           </CardContent>
         </Card>
 
-        <Tabs defaultValue="missing-dst">
+        <Tabs defaultValue="missing-dst-unresolvable">
           <TabsList className="flex-wrap h-auto">
-            <TabsTrigger value="missing-dst" className="gap-1.5">
-              <ShieldAlert className="w-4 h-4" /> Missing destination
+            <TabsTrigger value="missing-dst-unresolvable" className="gap-1.5">
+              <ShieldAlert className="w-4 h-4" /> Missing destination (unresolvable)
+            </TabsTrigger>
+            <TabsTrigger value="missing-dst-resolvable" className="gap-1.5">
+              <Repeat2 className="w-4 h-4" /> Missing destination (resolves)
             </TabsTrigger>
             <TabsTrigger value="missing-src" className="gap-1.5">
               <ShieldAlert className="w-4 h-4" /> Missing source
@@ -86,8 +92,23 @@ export default function RedirectsPage() {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="missing-dst" className="mt-4">
-            <RouteList items={missingDst} />
+          <TabsContent value="missing-dst-unresolvable" className="mt-4">
+            <RouteList items={missingDstUnresolvable} />
+          </TabsContent>
+
+          <TabsContent value="missing-dst-resolvable" className="mt-4">
+            <div className="space-y-2">
+              {missingDstResolvable.map((r, idx) => (
+                <div key={`${r.source}||${r.destination}||${idx}`} className="rounded-xl border bg-card p-4">
+                  <div className="text-sm font-mono break-all">{r.source}</div>
+                  <div className="text-sm text-muted-foreground font-mono break-all">→ {r.destination}</div>
+                  <div className="text-xs text-muted-foreground mt-2 font-mono break-all">
+                    resolves to: {r.finalDestination || '(unknown)'} · hops: {r.hops}{r.loop ? ' · LOOP' : ''}
+                  </div>
+                </div>
+              ))}
+              {missingDstResolvable.length === 0 && <div className="text-sm text-muted-foreground">None</div>}
+            </div>
           </TabsContent>
 
           <TabsContent value="missing-src" className="mt-4">

@@ -286,7 +286,6 @@
       "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/java-ee/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
-      "main/docs/quickstart/webapp/express/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/apache/index.mdx",
       "main/docs/quickstart/spa/vuejs/index.mdx",
@@ -8318,8 +8317,6 @@
       "main/docs/quickstart/webapp/java-ee/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
-      "main/docs/quickstart/webapp/express/_index.mdx",
-      "main/docs/quickstart/webapp/express/interactive.mdx",
       "main/docs/quickstart/webapp/django/_index.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/_index.mdx",
@@ -8384,8 +8381,6 @@
       "main/docs/quickstart/webapp/java-ee/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
-      "main/docs/quickstart/webapp/express/_index.mdx",
-      "main/docs/quickstart/webapp/express/interactive.mdx",
       "main/docs/quickstart/webapp/django/_index.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
       "main/docs/quickstart/native/wpf-winforms/_index.mdx",
@@ -8545,7 +8540,6 @@
       "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
       "main/docs/quickstart/webapp/java-ee/interactive.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
-      "main/docs/quickstart/webapp/express/interactive.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/interactive.mdx",
       "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
@@ -8974,36 +8968,8 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/quickstart/webapp/express/_index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/express/server.js.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/express/_index.mdx",
-      "main/docs/quickstart/webapp/express/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/express/server.js2.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/express/_index.mdx",
-      "main/docs/quickstart/webapp/express/interactive.mdx"
-    ],
-    "redirect": []
-  },
   "main/docs/quickstart/webapp/express/index.mdx": {
     "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/quickstart/webapp/express/interactive.mdx": {
-    "link": [
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
-    ],
     "import": [],
     "redirect": []
   },
@@ -21965,6 +21931,16 @@
     "redirect": []
   },
   "main/snippets/quickstart/webapp/java/web.xml.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/express/server.js.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/express/server.js2.mdx": {
     "link": [],
     "import": [],
     "redirect": []

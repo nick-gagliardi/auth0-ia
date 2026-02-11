@@ -61,11 +61,25 @@ type EdgeMap = Record<string, { link: string[]; import: string[]; redirect: stri
 
 type Redirect = { source: string; destination: string };
 
+type RedirectResolution = Redirect & {
+  finalDestination: string | null;
+  hops: number;
+  loop: boolean;
+};
+
 type RedirectIndex = {
   redirects: Redirect[];
   warnings: {
+    // "missing" here means: cannot resolve to a current MDX file.
     missingDestination: Redirect[];
     missingSource: Redirect[];
+
+    // Split missing destinations into two cases:
+    // - resolvable: destination is missing as a page, but resolves via redirect chain to a real page
+    // - unresolvable: destination cannot be resolved even through redirects
+    missingDestinationResolvable?: RedirectResolution[];
+    missingDestinationUnresolvable?: RedirectResolution[];
+
     loops: { source: string; chain: string[] }[];
     chains: { source: string; chain: string[] }[];
   };
@@ -376,8 +390,36 @@ function buildRedirectWarnings(redirects: Redirect[]): RedirectIndex['warnings']
   }
 
   // Placeholders; these require file existence checks later.
-  return { missingDestination: [], missingSource: [], loops, chains };
+  return {
+    missingDestination: [],
+    missingSource: [],
+    missingDestinationResolvable: [],
+    missingDestinationUnresolvable: [],
+    loops,
+    chains
+  };
 }
+
+function resolveRedirectFinal(next: Map<string, string>, start: string, maxHops = 25): { final: string | null; hops: number; loop: boolean; chain: string[] } {
+  const chain: string[] = [start];
+  const seen = new Set<string>([start]);
+  let cur = start;
+  let hops = 0;
+
+  while (hops < maxHops) {
+    const n = next.get(cur);
+    if (!n) return { final: cur, hops, loop: false, chain };
+    const nn = resolveRouteLike(n);
+    chain.push(nn);
+    hops += 1;
+    if (seen.has(nn)) return { final: nn, hops, loop: true, chain };
+    seen.add(nn);
+    cur = nn;
+  }
+
+  return { final: cur, hops, loop: false, chain };
+}
+
 
 export async function buildIndex(opts: BuildIndexOptions) {
   await ensureClone(opts.repoUrl, opts.ref, opts.workdir);
@@ -612,12 +654,40 @@ export async function buildIndex(opts: BuildIndexOptions) {
   const redirectWarnings = buildRedirectWarnings(redirects);
   const missingDestination: Redirect[] = [];
   const missingSource: Redirect[] = [];
+  const missingDestinationResolvable: RedirectResolution[] = [];
+  const missingDestinationUnresolvable: RedirectResolution[] = [];
+
+  const next = new Map<string, string>();
+  for (const r of redirects) next.set(resolveRouteLike(r.source), resolveRouteLike(r.destination));
 
   for (const r of redirects) {
-    const srcFile = await routeToFilePath(r.source, repoRoot);
-    const dstFile = await routeToFilePath(r.destination, repoRoot);
-    if (!srcFile) missingSource.push({ source: resolveRouteLike(r.source), destination: resolveRouteLike(r.destination) });
-    if (!dstFile) missingDestination.push({ source: resolveRouteLike(r.source), destination: resolveRouteLike(r.destination) });
+    const src = resolveRouteLike(r.source);
+    const dst = resolveRouteLike(r.destination);
+
+    const srcFile = await routeToFilePath(src, repoRoot);
+    const dstFile = await routeToFilePath(dst, repoRoot);
+
+    if (!srcFile) missingSource.push({ source: src, destination: dst });
+
+    if (!dstFile) {
+      missingDestination.push({ source: src, destination: dst });
+
+      // If destination isn't a page, see if it resolves through redirects to a real page.
+      const res = resolveRedirectFinal(next, dst);
+      const finalRoute = res.final;
+      const finalFile = finalRoute && !res.loop ? await routeToFilePath(finalRoute, repoRoot) : null;
+
+      const entry: RedirectResolution = {
+        source: src,
+        destination: dst,
+        finalDestination: finalRoute,
+        hops: res.hops,
+        loop: res.loop,
+      };
+
+      if (finalFile) missingDestinationResolvable.push(entry);
+      else missingDestinationUnresolvable.push(entry);
+    }
   }
 
   const redirectIndex: RedirectIndex = {
@@ -625,7 +695,9 @@ export async function buildIndex(opts: BuildIndexOptions) {
     warnings: {
       ...redirectWarnings,
       missingDestination,
-      missingSource
+      missingSource,
+      missingDestinationResolvable,
+      missingDestinationUnresolvable
     }
   };
 

@@ -4925,19 +4925,6 @@
     "deadEnd": false,
     "deadEndScore": 0
   },
-  "main/docs/quickstart/webapp/express/_index.mdx": {
-    "inboundLinks": 0,
-    "outboundLinks": 0,
-    "importedBy": 0,
-    "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
-    "orphanReference": false,
-    "deepNav": false,
-    "hubScore": 0,
-    "deadEnd": false,
-    "deadEndScore": 0
-  },
   "main/docs/quickstart/webapp/express/index.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
@@ -4950,19 +4937,6 @@
     "hubScore": 0,
     "deadEnd": false,
     "deadEndScore": 0
-  },
-  "main/docs/quickstart/webapp/express/interactive.mdx": {
-    "inboundLinks": 1,
-    "outboundLinks": 0,
-    "importedBy": 0,
-    "orphanNav": true,
-    "orphanLinks": false,
-    "orphanTrue": false,
-    "orphanReference": false,
-    "deepNav": false,
-    "hubScore": 1,
-    "deadEnd": false,
-    "deadEndScore": 1
   },
   "main/docs/quickstart/webapp/django/_index.mdx": {
     "inboundLinks": 0,
@@ -28549,7 +28523,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 33,
+    "outboundLinks": 32,
     "importedBy": 0,
     "navDepth": 6,
     "orphanNav": false,
@@ -28559,7 +28533,7 @@
     "deepNav": true,
     "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 0.0606
+    "deadEndScore": 0.0625
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx": {
     "inboundLinks": 9,
@@ -29359,8 +29333,8 @@
   "main/snippets/AuthCodeBlock.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 240,
-    "impactPages": 240,
+    "importedBy": 239,
+    "impactPages": 239,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -29463,8 +29437,8 @@
   "main/snippets/Login.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 50,
-    "impactPages": 50,
+    "importedBy": 48,
+    "impactPages": 48,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -29476,8 +29450,8 @@
   "main/snippets/QuickstartButtons.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 24,
-    "impactPages": 24,
+    "importedBy": 23,
+    "impactPages": 23,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -29580,8 +29554,8 @@
   "main/snippets/recipe.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 61,
-    "impactPages": 61,
+    "importedBy": 59,
+    "impactPages": 59,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -30269,8 +30243,8 @@
   "main/snippets/quickstart/webapp/express/server.js.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 2,
-    "impactPages": 2,
+    "importedBy": 0,
+    "impactPages": 0,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -30282,8 +30256,8 @@
   "main/snippets/quickstart/webapp/express/server.js2.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 2,
-    "impactPages": 2,
+    "importedBy": 0,
+    "impactPages": 0,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,

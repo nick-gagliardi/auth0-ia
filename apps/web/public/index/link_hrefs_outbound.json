@@ -13246,11 +13246,7 @@
   ],
   "main/docs/quickstart/webapp/golang/interactive.mdx": [],
   "main/docs/quickstart/webapp/fastapi/index.mdx": [],
-  "main/docs/quickstart/webapp/express/_index.mdx": [],
-  "main/snippets/quickstart/webapp/express/server.js.mdx": [],
-  "main/snippets/quickstart/webapp/express/server.js2.mdx": [],
   "main/docs/quickstart/webapp/express/index.mdx": [],
-  "main/docs/quickstart/webapp/express/interactive.mdx": [],
   "main/docs/quickstart/webapp/django/_index.mdx": [],
   "main/snippets/quickstart/webapp/django/templates-index.html.mdx": [],
   "main/snippets/quickstart/webapp/django/settings.py.mdx": [],
@@ -33407,10 +33403,6 @@
       "toId": "main/docs/get-started/manage-dashboard-access/feature-access-by-role.mdx"
     },
     {
-      "href": "/docs/quickstart/webapp/express/interactive",
-      "toId": "main/docs/quickstart/webapp/express/interactive.mdx"
-    },
-    {
       "href": "/docs/authenticate/enterprise-connections/connection-profile",
       "toId": "main/docs/authenticate/enterprise-connections/connection-profile.mdx"
     },
@@ -33950,6 +33942,8 @@
   "main/snippets/quickstart/webapp/java/LoginServlet.java.mdx": [],
   "main/snippets/quickstart/webapp/java/LogoutServlet.java.mdx": [],
   "main/snippets/quickstart/webapp/java/web.xml.mdx": [],
+  "main/snippets/quickstart/webapp/express/server.js.mdx": [],
+  "main/snippets/quickstart/webapp/express/server.js2.mdx": [],
   "main/snippets/quickstart/webapp/aspnet-core-blazor-server/Login.cshtml.cs.mdx": [],
   "main/snippets/quickstart/webapp/aspnet-core-blazor-server/Logout.cshtml.cs.mdx": [],
   "main/snippets/quickstart/webapp/aspnet-core/AccountController.cs.mdx": [],

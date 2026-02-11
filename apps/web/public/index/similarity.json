@@ -6801,8 +6801,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.0732,
-      "simOut": 0.122,
+      "score": 0.075,
+      "simOut": 0.125,
       "simIn": 0,
       "sharedOut": 5,
       "sharedIn": 0,
@@ -16051,8 +16051,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.0486,
-      "simOut": 0.0811,
+      "score": 0.05,
+      "simOut": 0.0833,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16151,8 +16151,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.045,
-      "simOut": 0.075,
+      "score": 0.0462,
+      "simOut": 0.0769,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16395,8 +16395,8 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx": [
     {
       "id": "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
-      "score": 0.1333,
-      "simOut": 0.1111,
+      "score": 0.1352,
+      "simOut": 0.1143,
       "simIn": 0.1667,
       "sharedOut": 4,
       "sharedIn": 1,
@@ -16409,8 +16409,8 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
-      "score": 0.0732,
-      "simOut": 0.122,
+      "score": 0.075,
+      "simOut": 0.125,
       "simIn": 0,
       "sharedOut": 5,
       "sharedIn": 0,
@@ -16423,8 +16423,8 @@
     },
     {
       "id": "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx",
-      "score": 0.0632,
-      "simOut": 0.1053,
+      "score": 0.0649,
+      "simOut": 0.1081,
       "simIn": 0,
       "sharedOut": 4,
       "sharedIn": 0,
@@ -16437,6 +16437,20 @@
     },
     {
       "id": "main/docs/manage-users/access-control/configure-core-rbac/rbac-users/assign-roles-to-users.mdx",
+      "score": 0.0514,
+      "simOut": 0.0857,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login.mdx",
       "score": 0.05,
       "simOut": 0.0833,
       "simIn": 0,
@@ -16450,23 +16464,9 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login.mdx",
-      "score": 0.0486,
-      "simOut": 0.0811,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/manage-users/organizations/configure-organizations.mdx",
-      "score": 0.0471,
-      "simOut": 0.0784,
+      "score": 0.048,
+      "simOut": 0.08,
       "simIn": 0,
       "sharedOut": 4,
       "sharedIn": 0,
@@ -16479,8 +16479,8 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.045,
-      "simOut": 0.075,
+      "score": 0.0462,
+      "simOut": 0.0769,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16493,8 +16493,8 @@
     },
     {
       "id": "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
-      "score": 0.045,
-      "simOut": 0.075,
+      "score": 0.0462,
+      "simOut": 0.0769,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16507,8 +16507,8 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors.mdx",
-      "score": 0.0429,
-      "simOut": 0.0714,
+      "score": 0.0439,
+      "simOut": 0.0732,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16521,8 +16521,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/organizations-overview.mdx",
-      "score": 0.0429,
-      "simOut": 0.0714,
+      "score": 0.0439,
+      "simOut": 0.0732,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -45783,8 +45783,8 @@
   "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx": [
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.0632,
-      "simOut": 0.1053,
+      "score": 0.0649,
+      "simOut": 0.1081,
       "simIn": 0,
       "sharedOut": 4,
       "sharedIn": 0,
@@ -47605,8 +47605,8 @@
   "main/docs/manage-users/organizations/login-flows-for-organizations.mdx": [
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.1333,
-      "simOut": 0.1111,
+      "score": 0.1352,
+      "simOut": 0.1143,
       "simIn": 0.1667,
       "sharedOut": 4,
       "sharedIn": 1,
@@ -47691,8 +47691,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.045,
-      "simOut": 0.075,
+      "score": 0.0462,
+      "simOut": 0.0769,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -50543,8 +50543,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.0429,
-      "simOut": 0.0714,
+      "score": 0.0439,
+      "simOut": 0.0732,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,

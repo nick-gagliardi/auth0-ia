@@ -180,11 +180,19 @@ export type JourneyMapsIndex = {
 
 export type Redirect = { source: string; destination: string };
 
+export type RedirectResolution = Redirect & {
+  finalDestination: string | null;
+  hops: number;
+  loop: boolean;
+};
+
 export type RedirectIndex = {
   redirects: Redirect[];
   warnings: {
     missingDestination: Redirect[];
     missingSource: Redirect[];
+    missingDestinationResolvable?: RedirectResolution[];
+    missingDestinationUnresolvable?: RedirectResolution[];
     loops: { source: string; chain: string[] }[];
     chains: { source: string; chain: string[] }[];
   };

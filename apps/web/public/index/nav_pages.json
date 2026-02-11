@@ -11944,16 +11944,8 @@
     "filePath": "main/docs/quickstart/webapp/fastapi/index.mdx",
     "navNodePaths": []
   },
-  "main/docs/quickstart/webapp/express/_index.mdx": {
-    "filePath": "main/docs/quickstart/webapp/express/_index.mdx",
-    "navNodePaths": []
-  },
   "main/docs/quickstart/webapp/express/index.mdx": {
     "filePath": "main/docs/quickstart/webapp/express/index.mdx",
-    "navNodePaths": []
-  },
-  "main/docs/quickstart/webapp/express/interactive.mdx": {
-    "filePath": "main/docs/quickstart/webapp/express/interactive.mdx",
     "navNodePaths": []
   },
   "main/docs/quickstart/webapp/django/_index.mdx": {
