@@ -103,10 +103,30 @@ export async function POST(req: Request) {
 
     if (mode === 'local') {
       const { execFile } = await import('node:child_process');
-      const { resolve } = await import('node:path');
-      // In local dev, Next runs with process.cwd() at the repo root.
-      // Using cwd avoids brittle relative path math inside the app/ directory tree.
-      const scriptPath = resolve(process.cwd(), 'scripts/snippet-migrate-open-pr.mjs');
+      const { resolve, dirname, join } = await import('node:path');
+      const { fileURLToPath } = await import('node:url');
+      const { readFile } = await import('node:fs/promises');
+
+      async function findRepoRoot(startDir: string): Promise<string> {
+        let cur = startDir;
+        for (let i = 0; i < 12; i++) {
+          try {
+            const pkgPath = join(cur, 'package.json');
+            const pkg = JSON.parse(await readFile(pkgPath, 'utf8'));
+            if (pkg?.name === 'auth0-ia') return cur;
+          } catch {
+            // ignore
+          }
+          const parent = dirname(cur);
+          if (parent === cur) break;
+          cur = parent;
+        }
+        throw new Error('Could not locate auth0-ia repo root (package.json)');
+      }
+
+      const here = dirname(fileURLToPath(import.meta.url));
+      const repoRoot = await findRepoRoot(here);
+      const scriptPath = resolve(repoRoot, 'scripts/snippet-migrate-open-pr.mjs');
 
       const payload = await new Promise<any>((resolveP, rejectP) => {
         execFile(
