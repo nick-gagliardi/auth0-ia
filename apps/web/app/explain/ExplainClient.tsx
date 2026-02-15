@@ -3,15 +3,105 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github, Search } from 'lucide-react';
+import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github, Search, AlertCircle, Sparkles, Compass } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import SharedLinksExpander from '@/components/SharedLinksExpander';
 import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity, useNavPages } from '@/hooks/use-index-data';
+import type { DocNode, NodeMetrics } from '@/types';
+
+// Loading skeleton components
+function NodeHeaderSkeleton() {
+  return (
+    <div className="rounded-xl border bg-card p-6 mb-6">
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <div className="flex items-center gap-2">
+          <Skeleton className="w-5 h-5 rounded" />
+          <Skeleton className="w-16 h-5 rounded" />
+        </div>
+        <div className="flex items-center gap-2">
+          <Skeleton className="w-24 h-8 rounded" />
+          <Skeleton className="w-24 h-8 rounded" />
+          <Skeleton className="w-24 h-8 rounded" />
+          <Skeleton className="w-28 h-8 rounded" />
+        </div>
+      </div>
+      <Skeleton className="w-3/4 h-8 rounded mb-2" />
+      <Skeleton className="w-1/2 h-4 rounded mb-4" />
+      <div className="flex flex-wrap gap-4">
+        <Skeleton className="w-24 h-5 rounded" />
+        <Skeleton className="w-24 h-5 rounded" />
+        <Skeleton className="w-28 h-5 rounded" />
+      </div>
+    </div>
+  );
+}
+
+function EdgeListSkeleton({ title }: { title: string }) {
+  return (
+    <div className="rounded-xl border bg-card p-5">
+      <div className="flex items-center gap-2 mb-4">
+        <Skeleton className="w-4 h-4 rounded" />
+        <Skeleton className="w-20 h-5 rounded" />
+        <Skeleton className="w-8 h-5 rounded ml-auto" />
+      </div>
+      <div className="space-y-3">
+        <Skeleton className="w-full h-4 rounded" />
+        <Skeleton className="w-11/12 h-4 rounded" />
+        <Skeleton className="w-10/12 h-4 rounded" />
+        <Skeleton className="w-full h-4 rounded" />
+        <Skeleton className="w-9/12 h-4 rounded" />
+      </div>
+    </div>
+  );
+}
+
+function RelatedContentSkeleton() {
+  return (
+    <div className="rounded-xl border bg-card p-5 mb-6">
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <Skeleton className="w-40 h-5 rounded mb-2" />
+          <Skeleton className="w-64 h-4 rounded" />
+        </div>
+        <Skeleton className="w-16 h-5 rounded" />
+      </div>
+      <div className="space-y-3">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="rounded-lg border p-3">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex-1">
+                <Skeleton className="w-3/4 h-4 rounded mb-1" />
+                <Skeleton className="w-1/2 h-3 rounded" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PageSkeleton() {
+  return (
+    <AppLayout>
+      <div className="max-w-4xl mx-auto">
+        <Skeleton className="w-32 h-5 rounded mb-6" />
+        <NodeHeaderSkeleton />
+        <RelatedContentSkeleton />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <EdgeListSkeleton title="Inbound" />
+          <EdgeListSkeleton title="Outbound" />
+        </div>
+      </div>
+    </AppLayout>
+  );
+}
 
 function EdgeList({
   title,
@@ -125,21 +215,155 @@ function EdgeList({
   );
 }
 
+// Empty state component
+function EmptyState({
+  nodes,
+  metrics,
+  onSelectPage
+}: {
+  nodes: DocNode[] | undefined;
+  metrics: Record<string, NodeMetrics> | undefined;
+  onSelectPage: (id: string) => void;
+}) {
+  const [query, setQuery] = useState('');
+
+  const pages = (nodes || []).filter((n) => n.type === 'page');
+  const q = query.trim().toLowerCase();
+
+  const results = (() => {
+    if (!metrics) return [];
+    if (!q) {
+      return [...pages]
+        .map((n) => ({ ...n, score: metrics[n.id]?.inboundLinks ?? 0 }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 20);
+    }
+
+    const out: (typeof pages[number] & { score: number })[] = [];
+    for (const n of pages) {
+      const title = (n.title || '').toLowerCase();
+      const path = n.filePath.toLowerCase();
+      const permalink = (n.permalink || '').toLowerCase();
+      const nav = (n.navPaths || []).join(' | ').toLowerCase();
+      if (title.includes(q) || path.includes(q) || permalink.includes(q) || nav.includes(q)) {
+        const score = (title.includes(q) ? 1000 : 0) + (metrics[n.id]?.inboundLinks ?? 0);
+        out.push({ ...n, score });
+      }
+    }
+    return out.sort((a, b) => b.score - a.score).slice(0, 30);
+  })();
+
+  return (
+    <div className="max-w-3xl mx-auto">
+      <div className="text-center mb-10">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+          <Compass className="w-8 h-8 text-primary" />
+        </div>
+        <h1 className="text-3xl font-bold tracking-tight mb-2">Explain</h1>
+        <p className="text-muted-foreground text-lg max-w-md mx-auto">
+          Select a page to analyze its context, inbound/outbound links, navigation paths, and related content.
+        </p>
+      </div>
+
+      <div className="relative mb-6">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+        <Input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for a page to analyze..."
+          className="pl-12 h-14 text-base rounded-2xl shadow-sm"
+          autoFocus
+        />
+      </div>
+
+      <div className="flex items-baseline justify-between mb-4">
+        <h2 className="font-semibold text-sm text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+          {q ? (
+            <>
+              <Search className="w-4 h-4" />
+              Search Results
+            </>
+          ) : (
+            <>
+              <Sparkles className="w-4 h-4" />
+              Top Hubs (Good Starting Points)
+            </>
+          )}
+        </h2>
+        <span className="text-xs text-muted-foreground">{results.length} results</span>
+      </div>
+
+      {results.length > 0 ? (
+        <div className="flex flex-col gap-3">
+          {results.map((n, i) => (
+            <button
+              key={n.id}
+              type="button"
+              onClick={() => onSelectPage(n.id)}
+              className="text-left rounded-xl border hover:bg-secondary/40 transition-colors"
+            >
+              <NodeCard node={n} metrics={metrics?.[n.id]} rank={!q ? i + 1 : undefined} />
+            </button>
+          ))}
+        </div>
+      ) : q ? (
+        <div className="text-center py-12 rounded-xl border bg-card">
+          <Search className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
+          <p className="text-muted-foreground">No pages found matching &quot;{query}&quot;</p>
+          <p className="text-sm text-muted-foreground mt-1">Try a different search term</p>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+// Error state component
+function ErrorState({ id, onBack }: { id: string; onBack: () => void }) {
+  return (
+    <div className="max-w-2xl mx-auto text-center py-16">
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-4">
+        <AlertCircle className="w-8 h-8 text-destructive" />
+      </div>
+      <h2 className="text-2xl font-bold mb-2">Page Not Found</h2>
+      <p className="text-muted-foreground mb-4">
+        We couldn&apos;t find a page with the ID <code className="text-sm bg-muted px-1.5 py-0.5 rounded">{id}</code>
+      </p>
+      <p className="text-sm text-muted-foreground mb-6">
+        The page may have been removed, renamed, or the ID might be incorrect.
+      </p>
+      <div className="flex items-center justify-center gap-3">
+        <Button variant="outline" onClick={onBack}>
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Search
+        </Button>
+        <Link href="/">
+          <Button>Go Home</Button>
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export default function ExplainPage() {
   const { toast } = useToast();
   const router = useRouter();
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
-  const { data: nodes, isLoading: l1 } = useNodes();
-  const { data: metrics, isLoading: l2 } = useMetrics();
-  const { data: inbound, isLoading: l3 } = useEdgesInbound();
-  const { data: outbound, isLoading: l4 } = useEdgesOutbound();
-  const { data: similarity, isLoading: l5 } = useSimilarity();
-  const { data: navPages, isLoading: l6 } = useNavPages();
 
-  const [query, setQuery] = useState('');
+  const { data: nodes, isLoading: nodesLoading } = useNodes();
+  const { data: metrics, isLoading: metricsLoading } = useMetrics();
+  const { data: inbound, isLoading: inboundLoading } = useEdgesInbound();
+  const { data: outbound, isLoading: outboundLoading } = useEdgesOutbound();
+  const { data: similarity, isLoading: similarityLoading } = useSimilarity();
+  const { data: navPages, isLoading: navPagesLoading } = useNavPages();
 
-  const loading = l1 || l2 || l3 || l4 || l5 || l6;
+  // Only show full-page skeleton when initially loading data
+  const isInitialLoading = nodesLoading || metricsLoading;
+
+  // Show skeleton for individual sections when their data is loading
+  const isEdgeDataLoading = inboundLoading || outboundLoading;
+  const isRelatedContentLoading = similarityLoading;
+  const isNavLoading = navPagesLoading;
 
   const nodeMap = useMemo(() => {
     const m = new Map<string, { title?: string; filePath: string }>();
@@ -149,92 +373,37 @@ export default function ExplainPage() {
 
   const node = useMemo(() => nodes?.find((n) => n.id === id) ?? null, [nodes, id]);
 
-  if (loading) {
-    return (
-      <AppLayout>
-        <div className="text-center py-20 text-muted-foreground">Loading…</div>
-      </AppLayout>
-    );
+  const handleSelectPage = (pageId: string) => {
+    router.push(`/explain?id=${encodeURIComponent(pageId)}`);
+  };
+
+  const handleBack = () => {
+    router.push('/explain');
+  };
+
+  // Full page loading state
+  if (isInitialLoading) {
+    return <PageSkeleton />;
   }
 
+  // Empty state - no page selected
   if (!id) {
-    const pages = (nodes || []).filter((n) => n.type === 'page');
-    const q = query.trim().toLowerCase();
-
-    const results = (() => {
-      if (!metrics) return [];
-      if (!q) {
-        return [...pages]
-          .map((n) => ({ ...n, score: metrics[n.id]?.inboundLinks ?? 0 }))
-          .sort((a, b) => b.score - a.score)
-          .slice(0, 20);
-      }
-
-      const out: (typeof pages[number] & { score: number })[] = [];
-      for (const n of pages) {
-        const title = (n.title || '').toLowerCase();
-        const path = n.filePath.toLowerCase();
-        const permalink = (n.permalink || '').toLowerCase();
-        const nav = (n.navPaths || []).join(' | ').toLowerCase();
-        if (title.includes(q) || path.includes(q) || permalink.includes(q) || nav.includes(q)) {
-          const score = (title.includes(q) ? 1000 : 0) + (metrics[n.id]?.inboundLinks ?? 0);
-          out.push({ ...n, score });
-        }
-      }
-      return out.sort((a, b) => b.score - a.score).slice(0, 30);
-    })();
-
     return (
       <AppLayout>
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-6">
-            <h1 className="text-2xl font-bold tracking-tight">Explain</h1>
-            <p className="text-muted-foreground mt-1">
-              Choose a page to get a context + risk summary (inbound links, nav paths, shared links, and similar pages).
-            </p>
-          </div>
-
-          <div className="relative mb-5">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-            <Input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search a page to explain…"
-              className="pl-12 h-12 text-base rounded-2xl"
-            />
-          </div>
-
-          <div className="flex items-baseline justify-between mb-3">
-            <h2 className="font-semibold text-xs text-muted-foreground uppercase tracking-wider">
-              {q ? 'Matches' : 'Top hubs (good starting points)'}
-            </h2>
-            <span className="text-xs text-muted-foreground">{results.length} results</span>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            {results.map((n, i) => (
-              <button
-                key={n.id}
-                type="button"
-                onClick={() => router.push(`/explain?id=${encodeURIComponent(n.id)}`)}
-                className="text-left rounded-xl border hover:bg-secondary/40 transition-colors"
-              >
-                <NodeCard node={n} metrics={metrics?.[n.id]} rank={!q ? i + 1 : undefined} />
-              </button>
-            ))}
-          </div>
-        </div>
+        <EmptyState
+          nodes={nodes}
+          metrics={metrics}
+          onSelectPage={handleSelectPage}
+        />
       </AppLayout>
     );
   }
 
+  // Error state - invalid ID
   if (!node) {
     return (
       <AppLayout>
-        <div className="text-center py-20">
-          <p className="text-muted-foreground mb-2">Node not found</p>
-          <code className="text-sm">{id}</code>
-        </div>
+        <ErrorState id={id} onBack={handleBack} />
       </AppLayout>
     );
   }
@@ -262,7 +431,7 @@ export default function ExplainPage() {
     <AppLayout>
       <div className="max-w-4xl mx-auto">
         <Link
-          href="/"
+          href="/explain"
           className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6"
         >
           <ArrowLeft className="w-4 h-4" /> Back to search
@@ -279,7 +448,7 @@ export default function ExplainPage() {
               <Badge variant="secondary">{node.type}</Badge>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap justify-end">
               <Button variant="outline" size="sm" onClick={() => copy(node.id, 'Node id')}>
                 <Copy className="w-4 h-4 mr-2" />
                 Copy id
@@ -330,41 +499,53 @@ export default function ExplainPage() {
 
           {(node.navPaths?.length > 0 || navPages?.[node.id]?.navNodePaths?.length) && (
             <div className="mt-4 pt-4 border-t">
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Navigation</div>
-                {navPages?.[node.id]?.navLabelSource ? (
-                  <div className="text-[10px] text-muted-foreground">
-                    label source: <b>{navPages[node.id]?.navLabelSource}</b>
-                  </div>
-                ) : null}
-              </div>
-
-              {navPages?.[node.id]?.navNodePaths?.length ? (
-                <ul className="space-y-1">
-                  {navPages[node.id].navNodePaths.map((p) => (
-                    <li key={p.pathString} className="text-sm">
-                      {p.pathString}
-                    </li>
-                  ))}
-                </ul>
+              {isNavLoading ? (
+                <div className="space-y-2">
+                  <Skeleton className="w-24 h-4 rounded" />
+                  <Skeleton className="w-full h-4 rounded" />
+                  <Skeleton className="w-3/4 h-4 rounded" />
+                </div>
               ) : (
-                <ul className="space-y-1">
-                  {node.navPaths.map((p) => (
-                    <li key={p} className="text-sm">
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              )}
+                <>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Navigation</div>
+                    {navPages?.[node.id]?.navLabelSource ? (
+                      <div className="text-[10px] text-muted-foreground">
+                        label source: <b>{navPages[node.id]?.navLabelSource}</b>
+                      </div>
+                    ) : null}
+                  </div>
 
-              {navPages?.[node.id]?.navDepth != null ? (
-                <div className="text-xs text-muted-foreground mt-2">nav depth: {navPages[node.id].navDepth}</div>
-              ) : null}
+                  {navPages?.[node.id]?.navNodePaths?.length ? (
+                    <ul className="space-y-1">
+                      {navPages[node.id].navNodePaths.map((p) => (
+                        <li key={p.pathString} className="text-sm">
+                          {p.pathString}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <ul className="space-y-1">
+                      {node.navPaths.map((p) => (
+                        <li key={p} className="text-sm">
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {navPages?.[node.id]?.navDepth != null ? (
+                    <div className="text-xs text-muted-foreground mt-2">nav depth: {navPages[node.id].navDepth}</div>
+                  ) : null}
+                </>
+              )}
             </div>
           )}
         </div>
 
-        {twins.length > 0 && (
+        {isRelatedContentLoading ? (
+          <RelatedContentSkeleton />
+        ) : twins.length > 0 ? (
           <div className="rounded-xl border bg-card p-5 mb-6">
             <div className="flex items-center justify-between mb-3">
               <div>
@@ -412,12 +593,19 @@ export default function ExplainPage() {
               })}
             </div>
           </div>
-        )}
+        ) : null}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <EdgeList title="Inbound" icon={ArrowDownLeft} edges={inE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />
-          <EdgeList title="Outbound" icon={ArrowUpRight} edges={outE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />
-        </div>
+        {isEdgeDataLoading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <EdgeListSkeleton title="Inbound" />
+            <EdgeListSkeleton title="Outbound" />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <EdgeList title="Inbound" icon={ArrowDownLeft} edges={inE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />
+            <EdgeList title="Outbound" icon={ArrowUpRight} edges={outE} nodeMap={nodeMap} docsV2BlobBase={docsV2BlobBase} />
+          </div>
+        )}
       </div>
     </AppLayout>
   );
