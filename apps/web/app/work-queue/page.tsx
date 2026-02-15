@@ -261,8 +261,8 @@ function ExportActions({
   onClearSelection,
 }: {
   selectedCount: number;
-  onExportGitHub: () => void;
-  onExportJira: () => void;
+  onExportGitHub: () => string;
+  onExportJira: () => string;
   onClearSelection: () => void;
 }) {
   const [copied, setCopied] = useState(false);
