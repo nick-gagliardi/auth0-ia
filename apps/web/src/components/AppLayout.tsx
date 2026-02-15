@@ -2,21 +2,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, LayoutDashboard, Network, Activity, Github, Database, Map as MapIcon, Tag } from 'lucide-react';
+import { Search, LayoutDashboard, Network, Activity, Github, Database } from 'lucide-react';
 import { useSummary } from '@/hooks/use-index-data';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 
+// MVP Navigation - scoped to 3 core routes
 const navItems = [
   { to: '/', label: 'Home', icon: Search },
-  { to: '/maintenance', label: 'Maintenance', icon: LayoutDashboard },
+  { to: '/explain', label: 'Explain', icon: Search },
   { to: '/work-queue', label: 'Work Queue', icon: LayoutDashboard },
-  { to: '/dashboards', label: 'Dashboards', icon: Network },
-  { to: '/snippet-migration', label: 'Snippet Migration', icon: Tag },
-  { to: '/redirects', label: 'Redirects', icon: Network },
-  { to: '/nav-labels', label: 'Nav Labels', icon: Tag },
-  { to: '/journeys', label: 'Journeys', icon: MapIcon },
-  { to: '/docs', label: 'Docs', icon: Network }
+  { to: '/redirects', label: 'Redirects', icon: Network }
 ];
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useMemo, useState, type ComponentType } from 'react';
-import { ArrowRight, GitPullRequest, ListTodo, Network, Search, Sparkles } from 'lucide-react';
+import { ArrowRight, ListTodo, Network, Search } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -110,11 +110,11 @@ export default function HomePage() {
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-2">
-              <Button asChild variant="secondary">
-                <Link href="/work-queue">Open work queue</Link>
-              </Button>
               <Button asChild>
                 <Link href="/explain">Explain a page</Link>
+              </Button>
+              <Button asChild variant="secondary">
+                <Link href="/work-queue">Open work queue</Link>
               </Button>
             </div>
           </div>
@@ -127,17 +127,9 @@ export default function HomePage() {
 
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <Sparkles className="w-4 h-4 text-primary" />
             <h2 className="font-semibold text-sm text-muted-foreground uppercase tracking-wider">Start here</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            <ActionCard
-              title="Maintenance"
-              description="Run a page through the technical correctness checklist and open a PR (sets validatedOn)."
-              href="/maintenance"
-              icon={Sparkles}
-              badge="New"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <ActionCard
               title="Explain"
               description="Pick a page/snippet and get a risk + context summary (inbound links, nav paths, shared links)."
@@ -151,9 +143,9 @@ export default function HomePage() {
               icon={ListTodo}
             />
             <ActionCard
-              title="Dashboards"
-              description="See top hubs, risky pages, and navigation patterns at a glance."
-              href="/dashboards"
+              title="Redirects"
+              description="Check redirect hygiene: chains, loops, and missing destinations."
+              href="/redirects"
               icon={Network}
             />
           </div>
