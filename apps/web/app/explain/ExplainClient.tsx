@@ -367,12 +367,12 @@ function EmptyState({
         </div>
         
         {/* Nav Section dropdown */}
-        <Select value={navSection} onValueChange={setNavSection}>
+        <Select value={navSection || "__all__"} onValueChange={(v) => setNavSection(v === "__all__" ? "" : v)}>
           <SelectTrigger className="w-auto min-w-[140px] h-9 text-sm rounded-full border-dashed">
             <SelectValue placeholder="Nav section" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All sections</SelectItem>
+            <SelectItem value="__all__">All sections</SelectItem>
             {navSections.map((section) => (
               <SelectItem key={section} value={section}>
                 {section}
