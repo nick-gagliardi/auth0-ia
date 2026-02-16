@@ -255,6 +255,77 @@ export type SnippetMigrationIndex = {
   items: SnippetMigrationItem[];
 };
 
+// Curl validation types
+export type CurlValidationResult = {
+  id: string;
+  filePath: string;
+  line: number;
+  startLine: number;
+  snippet: string;
+  originalCommand: string;
+  modifiedCommand: string;
+  url: string;
+  method: string;
+  headers: Record<string, string>;
+  body?: string;
+  executed: boolean;
+  statusCode?: number;
+  statusText?: string;
+  responseTimeMs?: number;
+  error?: string;
+  category: 'working' | 'auth_required' | 'not_found' | 'failing' | 'not_executed' | 'skipped';
+  skipReason?: string;
+};
+
+export type CurlValidationStats = {
+  total: number;
+  executed: number;
+  working: number;
+  authRequired: number;
+  notFound: number;
+  failing: number;
+  notExecuted: number;
+  skipped: number;
+  byDomain: Record<string, number>;
+  byMethod: Record<string, number>;
+};
+
+export type EndpointHealthReport = {
+  generatedAtUtc: string;
+  summary: {
+    totalEndpoints: number;
+    healthy: number;
+    authRequired: number;
+    broken: number;
+    notTested: number;
+  };
+  endpoints: Array<{
+    url: string;
+    method: string;
+    status: 'healthy' | 'auth_required' | 'broken' | 'not_tested';
+    occurrences: number;
+    files: string[];
+    lastStatusCode?: number;
+    avgResponseTimeMs?: number;
+    errors: string[];
+  }>;
+};
+
+export type CurlValidationIndex = {
+  generatedAtUtc: string;
+  config: {
+    testDomain: string;
+    timeoutMs: number;
+    rateLimitDelayMs: number;
+    maxRetries: number;
+    maxRequestsPerMinute: number;
+    getOnly: boolean;
+  };
+  stats: CurlValidationStats;
+  results: CurlValidationResult[];
+  healthReport?: EndpointHealthReport;
+};
+
 export type IndexBundle = {
   summary: Summary;
   nodes: DocNode[];
@@ -272,6 +343,7 @@ export type IndexBundle = {
   };
   auth0Lint?: Auth0LintIndex;
   snippetMigration?: SnippetMigrationIndex;
+  curlValidator?: CurlValidationIndex;
   similarity: SimilarityIndex;
   crossNavPairs: CrossNavPairs;
   shadowHubs: ShadowHubs;

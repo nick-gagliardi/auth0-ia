@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Search, LayoutDashboard, Network, Activity, Github, Database, AlertTriangle } from 'lucide-react';
-import { useSummary, useIndexBundle } from '@/hooks/use-index-data';
+import { useSummary } from '@/hooks/use-index-data';
+import { useIndexBundle } from '@/hooks/use-index-bundle';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

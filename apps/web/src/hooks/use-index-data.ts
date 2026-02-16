@@ -16,6 +16,7 @@ import type {
   NavPagesIndex,
   NavLabelCollisionsIndex,
   SnippetMigrationIndex,
+  CurlValidationIndex,
 } from '@/types';
 import { useIndexBundle } from '@/hooks/use-index-bundle';
 
@@ -204,6 +205,16 @@ export function useJourneyMaps() {
   return useQuery({
     queryKey: ['journey_maps'],
     queryFn: async () => (b.data?.journeyMaps ?? fetchWithDemoFallback<JourneyMapsIndex>('journey_maps.json')),
+    enabled: b.isSuccess || !b.isLoading,
+    staleTime: Infinity,
+  });
+}
+
+export function useCurlValidator() {
+  const b = useIndexBundle();
+  return useQuery({
+    queryKey: ['curl_validator'],
+    queryFn: async () => (b.data?.curlValidator ?? fetchWithDemoFallback<CurlValidationIndex>('curl_validator.json')),
     enabled: b.isSuccess || !b.isLoading,
     staleTime: Infinity,
   });
