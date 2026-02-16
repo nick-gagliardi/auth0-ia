@@ -1,0 +1,87 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "maxLen": 4,
+  "minLen": 2,
+  "startsPerRoot": 5,
+  "branching": 3,
+  "topPerRoot": 10,
+  "globalTop": [
+    {
+      "path": [
+        "demo/docs/get-started.mdx",
+        "demo/docs/authenticate.mdx",
+        "demo/docs/authenticate/oauth2.mdx",
+        "demo/docs/secure/tokens/access-tokens.mdx"
+      ],
+      "score": 85.5,
+      "support": 8,
+      "navRoot": "Documentation"
+    },
+    {
+      "path": [
+        "demo/docs/get-started.mdx",
+        "demo/docs/get-started/apis.mdx",
+        "demo/docs/api/management-api.mdx"
+      ],
+      "score": 72.3,
+      "support": 6,
+      "navRoot": "Documentation"
+    },
+    {
+      "path": [
+        "demo/docs/customize.mdx",
+        "demo/docs/customize/actions.mdx",
+        "demo/docs/customize/rules.mdx"
+      ],
+      "score": 68.7,
+      "support": 5,
+      "navRoot": "Documentation"
+    }
+  ],
+  "byNavRoot": {
+    "Documentation": {
+      "paths": [
+        {
+          "path": [
+            "demo/docs/get-started.mdx",
+            "demo/docs/authenticate.mdx",
+            "demo/docs/authenticate/oauth2.mdx",
+            "demo/docs/secure/tokens/access-tokens.mdx"
+          ],
+          "score": 85.5,
+          "support": 8
+        },
+        {
+          "path": [
+            "demo/docs/get-started.mdx",
+            "demo/docs/get-started/apis.mdx",
+            "demo/docs/api/management-api.mdx"
+          ],
+          "score": 72.3,
+          "support": 6
+        },
+        {
+          "path": [
+            "demo/docs/customize.mdx",
+            "demo/docs/customize/actions.mdx",
+            "demo/docs/customize/rules.mdx"
+          ],
+          "score": 68.7,
+          "support": 5
+        }
+      ]
+    },
+    "API Reference": {
+      "paths": [
+        {
+          "path": [
+            "demo/docs/api/management-api.mdx",
+            "demo/docs/api/authentication-api.mdx"
+          ],
+          "score": 45.2,
+          "support": 4
+        }
+      ]
+    }
+  }
+}

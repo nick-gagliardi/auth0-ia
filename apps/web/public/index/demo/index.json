@@ -1,0 +1,694 @@
+{
+  "summary": {
+    "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+    "source": {
+      "repoUrl": "https://github.com/auth0/docs-v2.git",
+      "ref": "demo",
+      "gitSha": "demo-mode-0000000000000000000000000000000000000000"
+    },
+    "nodes": 28,
+    "pages": 25,
+    "snippets": 3
+  },
+  "nodes": [
+    {
+      "id": "demo/docs/get-started.mdx",
+      "type": "page",
+      "filePath": "demo/docs/get-started.mdx",
+      "title": "Get Started with Auth0",
+      "permalink": "/docs/get-started",
+      "navPaths": ["Documentation > Get Started > Get Started with Auth0"]
+    },
+    {
+      "id": "demo/docs/authenticate.mdx",
+      "type": "page",
+      "filePath": "demo/docs/authenticate.mdx",
+      "title": "Authenticate",
+      "permalink": "/docs/authenticate",
+      "navPaths": ["Documentation > Authenticate > Authenticate"]
+    },
+    {
+      "id": "demo/docs/secure.mdx",
+      "type": "page",
+      "filePath": "demo/docs/secure.mdx",
+      "title": "Secure Applications",
+      "permalink": "/docs/secure",
+      "navPaths": ["Documentation > Secure > Secure Applications"]
+    },
+    {
+      "id": "demo/docs/manage-users.mdx",
+      "type": "page",
+      "filePath": "demo/docs/manage-users.mdx",
+      "title": "Manage Users",
+      "permalink": "/docs/manage-users",
+      "navPaths": ["Documentation > Manage Users > Manage Users"]
+    },
+    {
+      "id": "demo/docs/customize.mdx",
+      "type": "page",
+      "filePath": "demo/docs/customize.mdx",
+      "title": "Customize",
+      "permalink": "/docs/customize",
+      "navPaths": ["Documentation > Customize > Customize"]
+    },
+    {
+      "id": "demo/docs/get-started/applications.mdx",
+      "type": "page",
+      "filePath": "demo/docs/get-started/applications.mdx",
+      "title": "Applications in Auth0",
+      "permalink": "/docs/get-started/applications",
+      "navPaths": ["Documentation > Get Started > Applications in Auth0"]
+    },
+    {
+      "id": "demo/docs/get-started/apis.mdx",
+      "type": "page",
+      "filePath": "demo/docs/get-started/apis.mdx",
+      "title": "APIs",
+      "permalink": "/docs/get-started/apis",
+      "navPaths": ["Documentation > Get Started > APIs"]
+    },
+    {
+      "id": "demo/docs/authenticate/oidc.mdx",
+      "type": "page",
+      "filePath": "demo/docs/authenticate/oidc.mdx",
+      "title": "OpenID Connect",
+      "permalink": "/docs/authenticate/oidc",
+      "navPaths": ["Documentation > Authenticate > OpenID Connect"]
+    },
+    {
+      "id": "demo/docs/authenticate/oauth2.mdx",
+      "type": "page",
+      "filePath": "demo/docs/authenticate/oauth2.mdx",
+      "title": "OAuth 2.0",
+      "permalink": "/docs/authenticate/oauth2",
+      "navPaths": ["Documentation > Authenticate > OAuth 2.0"]
+    },
+    {
+      "id": "demo/docs/secure/tokens.mdx",
+      "type": "page",
+      "filePath": "demo/docs/secure/tokens.mdx",
+      "title": "Tokens",
+      "permalink": "/docs/secure/tokens",
+      "navPaths": ["Documentation > Secure > Tokens"]
+    },
+    {
+      "id": "demo/docs/secure/tokens/access-tokens.mdx",
+      "type": "page",
+      "filePath": "demo/docs/secure/tokens/access-tokens.mdx",
+      "title": "Access Tokens",
+      "permalink": "/docs/secure/tokens/access-tokens",
+      "navPaths": ["Documentation > Secure > Access Tokens"]
+    },
+    {
+      "id": "demo/docs/manage-users/user-profiles.mdx",
+      "type": "page",
+      "filePath": "demo/docs/manage-users/user-profiles.mdx",
+      "title": "User Profiles",
+      "permalink": "/docs/manage-users/user-profiles",
+      "navPaths": ["Documentation > Manage Users > User Profiles"]
+    },
+    {
+      "id": "demo/docs/customize/actions.mdx",
+      "type": "page",
+      "filePath": "demo/docs/customize/actions.mdx",
+      "title": "Actions",
+      "permalink": "/docs/customize/actions",
+      "navPaths": ["Documentation > Customize > Actions"]
+    },
+    {
+      "id": "demo/docs/customize/rules.mdx",
+      "type": "page",
+      "filePath": "demo/docs/customize/rules.mdx",
+      "title": "Rules (Deprecated)",
+      "permalink": "/docs/customize/rules",
+      "navPaths": ["Documentation > Customize > Rules"]
+    },
+    {
+      "id": "demo/docs/api/management-api.mdx",
+      "type": "page",
+      "filePath": "demo/docs/api/management-api.mdx",
+      "title": "Management API",
+      "permalink": "/docs/api/management-api",
+      "navPaths": ["API Reference > Management API"]
+    },
+    {
+      "id": "demo/docs/api/authentication-api.mdx",
+      "type": "page",
+      "filePath": "demo/docs/api/authentication-api.mdx",
+      "title": "Authentication API",
+      "permalink": "/docs/api/authentication-api",
+      "navPaths": ["API Reference > Authentication API"]
+    },
+    {
+      "id": "demo/docs/troubleshoot.mdx",
+      "type": "page",
+      "filePath": "demo/docs/troubleshoot.mdx",
+      "title": "Troubleshoot",
+      "permalink": "/docs/troubleshoot",
+      "navPaths": ["Documentation > Troubleshoot > Troubleshoot"]
+    },
+    {
+      "id": "demo/docs/troubleshoot/errors.mdx",
+      "type": "page",
+      "filePath": "demo/docs/troubleshoot/errors.mdx",
+      "title": "Common Errors",
+      "permalink": "/docs/troubleshoot/errors",
+      "navPaths": ["Documentation > Troubleshoot > Common Errors"]
+    },
+    {
+      "id": "demo/docs/best-practices.mdx",
+      "type": "page",
+      "filePath": "demo/docs/best-practices.mdx",
+      "title": "Best Practices",
+      "permalink": "/docs/best-practices",
+      "navPaths": ["Documentation > Best Practices"]
+    },
+    {
+      "id": "demo/docs/legacy-migration.mdx",
+      "type": "page",
+      "filePath": "demo/docs/legacy-migration.mdx",
+      "title": "Legacy Migration Guide",
+      "permalink": "/docs/legacy-migration",
+      "navPaths": []
+    },
+    {
+      "id": "demo/docs/hidden-feature.mdx",
+      "type": "page",
+      "filePath": "demo/docs/hidden-feature.mdx",
+      "title": "Hidden Feature",
+      "permalink": "/docs/hidden-feature",
+      "navPaths": []
+    },
+    {
+      "id": "demo/docs/deep-nav/page1.mdx",
+      "type": "page",
+      "filePath": "demo/docs/deep-nav/page1.mdx",
+      "title": "Deep Navigation Page",
+      "permalink": "/docs/deep-nav/page1",
+      "navPaths": ["Documentation > Section A > Subsection B > Category C > Deep Navigation Page"]
+    },
+    {
+      "id": "demo/snippets/auth.jsx",
+      "type": "snippet",
+      "filePath": "demo/snippets/auth.jsx",
+      "title": "Auth snippet"
+    },
+    {
+      "id": "demo/snippets/login.js",
+      "type": "snippet",
+      "filePath": "demo/snippets/login.js",
+      "title": "Login snippet"
+    },
+    {
+      "id": "demo/snippets/api-call.ts",
+      "type": "snippet",
+      "filePath": "demo/snippets/api-call.ts",
+      "title": "API call snippet"
+    },
+    {
+      "id": "demo/docs/dead-end-page.mdx",
+      "type": "page",
+      "filePath": "demo/docs/dead-end-page.mdx",
+      "title": "Dead End Page",
+      "permalink": "/docs/dead-end-page",
+      "navPaths": ["Documentation > Dead End Page"]
+    },
+    {
+      "id": "demo/docs/hub-page.mdx",
+      "type": "page",
+      "filePath": "demo/docs/hub-page.mdx",
+      "title": "Hub Page (High Traffic)",
+      "permalink": "/docs/hub-page",
+      "navPaths": ["Documentation > Hub Page"]
+    },
+    {
+      "id": "demo/docs/orphan-page.mdx",
+      "type": "page",
+      "filePath": "demo/docs/orphan-page.mdx",
+      "title": "Orphan Page",
+      "permalink": "/docs/orphan-page",
+      "navPaths": []
+    }
+  ],
+  "metrics": {
+    "demo/docs/get-started.mdx": {
+      "inboundLinks": 8,
+      "outboundLinks": 5,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 8,
+      "deadEnd": false,
+      "deadEndScore": 8
+    },
+    "demo/docs/authenticate.mdx": {
+      "inboundLinks": 6,
+      "outboundLinks": 4,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 6,
+      "deadEnd": false,
+      "deadEndScore": 6
+    },
+    "demo/docs/secure.mdx": {
+      "inboundLinks": 5,
+      "outboundLinks": 3,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 5,
+      "deadEnd": false,
+      "deadEndScore": 5
+    },
+    "demo/docs/manage-users.mdx": {
+      "inboundLinks": 4,
+      "outboundLinks": 3,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 4,
+      "deadEnd": false,
+      "deadEndScore": 4
+    },
+    "demo/docs/customize.mdx": {
+      "inboundLinks": 7,
+      "outboundLinks": 4,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 7,
+      "deadEnd": false,
+      "deadEndScore": 7
+    },
+    "demo/docs/get-started/applications.mdx": {
+      "inboundLinks": 3,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 3,
+      "deadEnd": false,
+      "deadEndScore": 3
+    },
+    "demo/docs/get-started/apis.mdx": {
+      "inboundLinks": 4,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 4,
+      "deadEnd": false,
+      "deadEndScore": 4
+    },
+    "demo/docs/authenticate/oidc.mdx": {
+      "inboundLinks": 5,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 5,
+      "deadEnd": false,
+      "deadEndScore": 5
+    },
+    "demo/docs/authenticate/oauth2.mdx": {
+      "inboundLinks": 6,
+      "outboundLinks": 3,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 6,
+      "deadEnd": false,
+      "deadEndScore": 6
+    },
+    "demo/docs/secure/tokens.mdx": {
+      "inboundLinks": 4,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 4,
+      "deadEnd": false,
+      "deadEndScore": 4
+    },
+    "demo/docs/secure/tokens/access-tokens.mdx": {
+      "inboundLinks": 3,
+      "outboundLinks": 1,
+      "importedBy": 0,
+      "navDepth": 4,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 3,
+      "deadEnd": false,
+      "deadEndScore": 3
+    },
+    "demo/docs/manage-users/user-profiles.mdx": {
+      "inboundLinks": 2,
+      "outboundLinks": 1,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 2,
+      "deadEnd": false,
+      "deadEndScore": 2
+    },
+    "demo/docs/customize/actions.mdx": {
+      "inboundLinks": 5,
+      "outboundLinks": 3,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 5,
+      "deadEnd": false,
+      "deadEndScore": 5
+    },
+    "demo/docs/customize/rules.mdx": {
+      "inboundLinks": 3,
+      "outboundLinks": 1,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 3,
+      "deadEnd": false,
+      "deadEndScore": 3
+    },
+    "demo/docs/api/management-api.mdx": {
+      "inboundLinks": 4,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 4,
+      "deadEnd": false,
+      "deadEndScore": 4
+    },
+    "demo/docs/api/authentication-api.mdx": {
+      "inboundLinks": 3,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 3,
+      "deadEnd": false,
+      "deadEndScore": 3
+    },
+    "demo/docs/troubleshoot.mdx": {
+      "inboundLinks": 2,
+      "outboundLinks": 2,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 2,
+      "deadEnd": false,
+      "deadEndScore": 2
+    },
+    "demo/docs/troubleshoot/errors.mdx": {
+      "inboundLinks": 1,
+      "outboundLinks": 0,
+      "importedBy": 0,
+      "navDepth": 3,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 1,
+      "deadEnd": false,
+      "deadEndScore": 1
+    },
+    "demo/docs/best-practices.mdx": {
+      "inboundLinks": 2,
+      "outboundLinks": 1,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 2,
+      "deadEnd": false,
+      "deadEndScore": 2
+    },
+    "demo/docs/legacy-migration.mdx": {
+      "inboundLinks": 0,
+      "outboundLinks": 0,
+      "importedBy": 0,
+      "navDepth": null,
+      "orphanNav": true,
+      "orphanLinks": true,
+      "orphanTrue": true,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 0,
+      "deadEnd": false,
+      "deadEndScore": 0
+    },
+    "demo/docs/hidden-feature.mdx": {
+      "inboundLinks": 0,
+      "outboundLinks": 1,
+      "importedBy": 0,
+      "navDepth": null,
+      "orphanNav": true,
+      "orphanLinks": false,
+      "orphanTrue": true,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 0,
+      "deadEnd": false,
+      "deadEndScore": 0
+    },
+    "demo/docs/deep-nav/page1.mdx": {
+      "inboundLinks": 1,
+      "outboundLinks": 0,
+      "importedBy": 0,
+      "navDepth": 5,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": true,
+      "hubScore": 1,
+      "deadEnd": false,
+      "deadEndScore": 1
+    },
+    "demo/snippets/auth.jsx": {
+      "inboundLinks": 0,
+      "outboundLinks": 0,
+      "importedBy": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 0,
+      "deadEnd": false,
+      "deadEndScore": 0
+    },
+    "demo/snippets/login.js": {
+      "inboundLinks": 0,
+      "outboundLinks": 0,
+      "importedBy": 1,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 0,
+      "deadEnd": false,
+      "deadEndScore": 0
+    },
+    "demo/snippets/api-call.ts": {
+      "inboundLinks": 0,
+      "outboundLinks": 0,
+      "importedBy": 1,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 0,
+      "deadEnd": false,
+      "deadEndScore": 0
+    },
+    "demo/docs/dead-end-page.mdx": {
+      "inboundLinks": 8,
+      "outboundLinks": 0,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 8,
+      "deadEnd": true,
+      "deadEndScore": 8
+    },
+    "demo/docs/hub-page.mdx": {
+      "inboundLinks": 12,
+      "outboundLinks": 8,
+      "importedBy": 0,
+      "navDepth": 2,
+      "orphanNav": false,
+      "orphanLinks": false,
+      "orphanTrue": false,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 12,
+      "deadEnd": false,
+      "deadEndScore": 12
+    },
+    "demo/docs/orphan-page.mdx": {
+      "inboundLinks": 0,
+      "outboundLinks": 0,
+      "importedBy": 0,
+      "navDepth": null,
+      "orphanNav": true,
+      "orphanLinks": true,
+      "orphanTrue": true,
+      "orphanReference": false,
+      "deepNav": false,
+      "hubScore": 0,
+      "deadEnd": false,
+      "deadEndScore": 0
+    }
+  },
+  "edges": {
+    "inbound": {
+      "demo/docs/get-started.mdx": {
+        "link": ["demo/docs/customize.mdx", "demo/docs/manage-users.mdx", "demo/docs/secure.mdx", "demo/docs/authenticate.mdx", "demo/docs/get-started/apis.mdx", "demo/docs/get-started/applications.mdx", "demo/docs/hub-page.mdx"],
+        "import": [],
+        "redirect": []
+      },
+      "demo/docs/authenticate.mdx": {
+        "link": ["demo/docs/customize.mdx", "demo/docs/get-started.mdx", "demo/docs/manage-users.mdx", "demo/docs/secure.mdx", "demo/docs/hub-page.mdx", "demo/docs/get-started/applications.mdx", "demo/docs/authenticate/oauth2.mdx", "demo/docs/authenticate/oidc.mdx"],
+        "import": [],
+        "redirect": []
+      },
+      "demo/docs/secure.mdx": {
+        "link": ["demo/docs/customize.mdx", "demo/docs/get-started.mdx", "demo/docs/authenticate.mdx", "demo/docs/best-practices.mdx", "demo/docs/hub-page.mdx"],
+        "import": [],
+        "redirect": []
+      },
+      "demo/docs/manage-users.mdx": {
+        "link": ["demo/docs/get-started.mdx", "demo/docs/hub-page.mdx"],
+        "import": [],
+        "redirect": []
+      },
+      "demo/docs/customize.mdx": {
+        "link": ["demo/docs/get-started.mdx", "demo/docs/troubleshoot.mdx", "demo/docs/hub-page.mdx"],
+        "import": [],
+        "redirect": []
+      },
+      "demo/docs/hub-page.mdx": {
+        "link": ["demo/docs/get-started.mdx", "demo/docs/authenticate.mdx", "demo/docs/secure.mdx", "demo/docs/manage-users.mdx", "demo/docs/customize.mdx", "demo/docs/troubleshoot.mdx", "demo/docs/api/management-api.mdx", "demo/docs/api/authentication-api.mdx", "demo/docs/troubleshoot/errors.mdx", "demo/docs/dead-end-page.mdx", "demo/docs/secure/tokens.mdx", "demo/docs/secure/tokens/access-tokens.mdx"],
+        "import": [],
+        "redirect": []
+      },
+      "demo/docs/dead-end-page.mdx": {
+        "link": ["demo/docs/get-started.mdx", "demo/docs/authenticate.mdx", "demo/docs/secure.mdx", "demo/docs/manage-users.mdx", "demo/docs/customize.mdx", "demo/docs/api/management-api.mdx", "demo/docs/api/authentication-api.mdx", "demo/docs/hub-page.mdx"],
+        "import": [],
+        "redirect": []
+      }
+    },
+    "outbound": {}
+  },
+  "linkHrefsOut": {},
+  "redirects": {
+    "redirects": [
+      {"source": "/docs/old-get-started", "destination": "/docs/get-started"},
+      {"source": "/docs/old-authenticate", "destination": "/docs/authenticate"},
+      {"source": "/docs/oidc-old", "destination": "/docs/authenticate/oidc"},
+      {"source": "/docs/deprecated-flow", "destination": "/docs/authenticate/oauth2"},
+      {"source": "/docs/legacy-tokens", "destination": "/docs/secure/tokens"}
+    ],
+    "warnings": {"missingDestination": [], "missingSource": [], "loops": [], "chains": []}
+  },
+  "nav": {
+    "tree": {
+      "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+      "language": "en",
+      "root": {
+        "id": "root",
+        "kind": "root",
+        "label": "root",
+        "children": []
+      }
+    },
+    "pages": {},
+    "labelCollisions": {"generatedAtUtc": "2026-02-15T20:50:00.000Z", "collisions": []}
+  },
+  "similarity": {},
+  "crossNavPairs": {"generatedAtUtc": "2026-02-15T20:50:00.000Z", "hubCutoff": 5, "minIntersection": 2, "scoreThreshold": 0.4, "pairs": []},
+  "shadowHubs": {"generatedAtUtc": "2026-02-15T20:50:00.000Z", "hubCutoff": 5, "shadowThreshold": 0.7, "minAuthorityDelta": 3, "count": 0, "items": []},
+  "deadEnds": {"generatedAtUtc": "2026-02-15T20:50:00.000Z", "minInbound": 5, "maxOutbound": 0, "count": 1, "items": [{"id": "demo/docs/dead-end-page.mdx", "inboundLinks": 8, "outboundLinks": 0, "deadEndScore": 8, "navRoot": "Documentation", "navDepth": 2}]},
+  "journeyMaps": {"generatedAtUtc": "2026-02-15T20:50:00.000Z", "maxLen": 4, "minLen": 2, "startsPerRoot": 5, "branching": 3, "topPerRoot": 10, "globalTop": [], "byNavRoot": {}}
+}

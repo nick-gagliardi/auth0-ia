@@ -1,0 +1,16 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "minInbound": 5,
+  "maxOutbound": 0,
+  "count": 1,
+  "items": [
+    {
+      "id": "demo/docs/dead-end-page.mdx",
+      "inboundLinks": 8,
+      "outboundLinks": 0,
+      "deadEndScore": 8,
+      "navRoot": "Documentation",
+      "navDepth": 2
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "pagesScanned": 25,
+  "pagesWithWarnings": 5,
+  "warningCount": 8,
+  "byCode": {
+    "missing_pkce_mention": 2,
+    "missing_state_mention": 1,
+    "missing_nonce_mention": 3,
+    "token_storage_localstorage": 1,
+    "token_storage_sessionstorage": 0,
+    "token_storage_cookie": 0,
+    "rules_vs_actions_language": 1
+  },
+  "items": [
+    {
+      "id": "demo/docs/get-started.mdx",
+      "filePath": "demo/docs/get-started.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/authenticate.mdx",
+      "filePath": "demo/docs/authenticate.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/secure.mdx",
+      "filePath": "demo/docs/secure.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/manage-users.mdx",
+      "filePath": "demo/docs/manage-users.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/customize.mdx",
+      "filePath": "demo/docs/customize.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/get-started/applications.mdx",
+      "filePath": "demo/docs/get-started/applications.mdx",
+      "warnings": [
+        {
+          "code": "missing_pkce_mention",
+          "severity": "warn",
+          "message": "Mobile app authentication mentioned without PKCE reference",
+          "evidence": "mobile authentication flow",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/get-started/apis.mdx",
+      "filePath": "demo/docs/get-started/apis.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/authenticate/oidc.mdx",
+      "filePath": "demo/docs/authenticate/oidc.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears but nonce is not mentioned",
+          "evidence": "id_token validation",
+          "line": 42
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/authenticate/oauth2.mdx",
+      "filePath": "demo/docs/authenticate/oauth2.mdx",
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow documented without state parameter mention",
+          "evidence": "authorization code flow",
+          "line": 18
+        },
+        {
+          "code": "missing_pkce_mention",
+          "severity": "warn",
+          "message": "Authorization code flow without PKCE mention",
+          "evidence": "public clients",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/secure/tokens.mdx",
+      "filePath": "demo/docs/secure/tokens.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/secure/tokens/access-tokens.mdx",
+      "filePath": "demo/docs/secure/tokens/access-tokens.mdx",
+      "warnings": [
+        {
+          "code": "token_storage_localstorage",
+          "severity": "error",
+          "message": "LocalStorage mentioned for token storage",
+          "evidence": "localStorage.setItem('token'",
+          "line": 56
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/manage-users/user-profiles.mdx",
+      "filePath": "demo/docs/manage-users/user-profiles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/customize/actions.mdx",
+      "filePath": "demo/docs/customize/actions.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/customize/rules.mdx",
+      "filePath": "demo/docs/customize/rules.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "info",
+          "message": "Rules documentation still references legacy examples",
+          "evidence": "Webtask",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/api/management-api.mdx",
+      "filePath": "demo/docs/api/management-api.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/api/authentication-api.mdx",
+      "filePath": "demo/docs/api/authentication-api.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "Implicit flow documentation without nonce mention",
+          "evidence": "implicit grant",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/troubleshoot.mdx",
+      "filePath": "demo/docs/troubleshoot.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/troubleshoot/errors.mdx",
+      "filePath": "demo/docs/troubleshoot/errors.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/best-practices.mdx",
+      "filePath": "demo/docs/best-practices.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "Security best practices without nonce guidance",
+          "evidence": "token security",
+          "line": 67
+        }
+      ]
+    },
+    {
+      "id": "demo/docs/legacy-migration.mdx",
+      "filePath": "demo/docs/legacy-migration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/hidden-feature.mdx",
+      "filePath": "demo/docs/hidden-feature.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/deep-nav/page1.mdx",
+      "filePath": "demo/docs/deep-nav/page1.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/dead-end-page.mdx",
+      "filePath": "demo/docs/dead-end-page.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/hub-page.mdx",
+      "filePath": "demo/docs/hub-page.mdx",
+      "warnings": []
+    },
+    {
+      "id": "demo/docs/orphan-page.mdx",
+      "filePath": "demo/docs/orphan-page.mdx",
+      "warnings": []
+    }
+  ],
+  "byPageId": {
+    "demo/docs/get-started/applications.mdx": [
+      {
+        "code": "missing_pkce_mention",
+        "severity": "warn",
+        "message": "Mobile app authentication mentioned without PKCE reference",
+        "evidence": "mobile authentication flow",
+        "line": 24
+      }
+    ],
+    "demo/docs/authenticate/oidc.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears but nonce is not mentioned",
+        "evidence": "id_token validation",
+        "line": 42
+      }
+    ],
+    "demo/docs/authenticate/oauth2.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow documented without state parameter mention",
+        "evidence": "authorization code flow",
+        "line": 18
+      },
+      {
+        "code": "missing_pkce_mention",
+        "severity": "warn",
+        "message": "Authorization code flow without PKCE mention",
+        "evidence": "public clients",
+        "line": 35
+      }
+    ],
+    "demo/docs/secure/tokens/access-tokens.mdx": [
+      {
+        "code": "token_storage_localstorage",
+        "severity": "error",
+        "message": "LocalStorage mentioned for token storage",
+        "evidence": "localStorage.setItem('token'",
+        "line": 56
+      }
+    ],
+    "demo/docs/customize/rules.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "info",
+        "message": "Rules documentation still references legacy examples",
+        "evidence": "Webtask",
+        "line": 12
+      }
+    ],
+    "demo/docs/api/authentication-api.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "Implicit flow documentation without nonce mention",
+        "evidence": "implicit grant",
+        "line": 28
+      }
+    ],
+    "demo/docs/best-practices.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "Security best practices without nonce guidance",
+        "evidence": "token security",
+        "line": 67
+      }
+    ]
+  }
+}

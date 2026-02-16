@@ -1,0 +1,32 @@
+{
+  "redirects": [
+    {
+      "source": "/docs/old-get-started",
+      "destination": "/docs/get-started"
+    },
+    {
+      "source": "/docs/old-authenticate",
+      "destination": "/docs/authenticate"
+    },
+    {
+      "source": "/docs/oidc-old",
+      "destination": "/docs/authenticate/oidc"
+    },
+    {
+      "source": "/docs/deprecated-flow",
+      "destination": "/docs/authenticate/oauth2"
+    },
+    {
+      "source": "/docs/legacy-tokens",
+      "destination": "/docs/secure/tokens"
+    }
+  ],
+  "warnings": {
+    "missingDestination": [],
+    "missingSource": [],
+    "missingDestinationResolvable": [],
+    "missingDestinationUnresolvable": [],
+    "loops": [],
+    "chains": []
+  }
+}

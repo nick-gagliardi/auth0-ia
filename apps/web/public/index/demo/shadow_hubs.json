@@ -1,0 +1,39 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "hubCutoff": 5,
+  "shadowThreshold": 0.7,
+  "minAuthorityDelta": 3,
+  "count": 2,
+  "items": [
+    {
+      "shadowId": "demo/docs/customize/rules.mdx",
+      "hubId": "demo/docs/customize/actions.mdx",
+      "score": 0.75,
+      "simOut": 0.8,
+      "simIn": 0.6,
+      "sharedOut": 2,
+      "sharedIn": 2,
+      "shadowInbound": 3,
+      "hubInbound": 5,
+      "shadowNavDepth": 3,
+      "shadowOrphanTrue": false,
+      "shadowOrphanReference": false,
+      "shadowDeepNav": false
+    },
+    {
+      "shadowId": "demo/docs/legacy-migration.mdx",
+      "hubId": "demo/docs/customize/actions.mdx",
+      "score": 0.5,
+      "simOut": 0.6,
+      "simIn": 0.4,
+      "sharedOut": 1,
+      "sharedIn": 1,
+      "shadowInbound": 0,
+      "hubInbound": 5,
+      "shadowNavDepth": null,
+      "shadowOrphanTrue": true,
+      "shadowOrphanReference": false,
+      "shadowDeepNav": false
+    }
+  ]
+}

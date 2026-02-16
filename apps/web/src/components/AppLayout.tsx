@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, LayoutDashboard, Network, Activity, Github, Database } from 'lucide-react';
-import { useSummary } from '@/hooks/use-index-data';
+import { Search, LayoutDashboard, Network, Activity, Github, Database, AlertTriangle } from 'lucide-react';
+import { useSummary, useIndexBundle } from '@/hooks/use-index-data';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 // MVP Navigation - scoped to 3 core routes
 const navItems = [
@@ -15,12 +16,44 @@ const navItems = [
   { to: '/redirects', label: 'Redirects', icon: Network }
 ];
 
+// Helper to check if data is from demo mode
+function useIsDemoMode(): boolean {
+  const { data } = useIndexBundle();
+  return data?.summary?.source?.ref === 'demo' || 
+         data?.summary?.source?.gitSha?.startsWith('demo-mode') ||
+         false;
+}
+
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const { data: summary } = useSummary();
+  const isDemoMode = useIsDemoMode();
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Demo Mode Banner */}
+      {isDemoMode && (
+        <div className="bg-amber-500/10 border-b border-amber-500/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div className="flex items-center justify-center gap-2 text-sm text-amber-700 dark:text-amber-400">
+              <AlertTriangle className="w-4 h-4" />
+              <span className="font-medium">Demo Mode</span>
+              <span className="text-amber-600/70 dark:text-amber-400/70">
+                Using sample data. 
+                <a 
+                  href="https://github.com/nickgag626/auth0-ia#readme" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="underline hover:text-amber-800 dark:hover:text-amber-300 ml-1"
+                >
+                  Learn how to use real data
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
       <header className="border-b bg-card sticky top-0 z-50 backdrop-blur">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -28,9 +61,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <Network className="w-4 h-4 text-primary-foreground" />
               </div>
-              <div>
+              <div className="flex items-center gap-2">
                 <span className="font-bold text-lg tracking-tight">Auth0 IA</span>
-                <span className="text-muted-foreground text-sm ml-2 hidden sm:inline">Docs Graph</span>
+                {isDemoMode && (
+                  <Badge variant="outline" className="text-xs border-amber-500/50 text-amber-600 dark:text-amber-400">
+                    Demo
+                  </Badge>
+                )}
+                <span className="text-muted-foreground text-sm hidden sm:inline">Docs Graph</span>
               </div>
             </Link>
 
@@ -57,8 +95,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                 <PopoverTrigger asChild>
                   <Button variant="ghost" size="sm" className="gap-2">
                     <span className="relative flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                      <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 ${isDemoMode ? 'bg-amber-500' : 'bg-emerald-500'}`} />
+                      <span className={`relative inline-flex rounded-full h-2 w-2 ${isDemoMode ? 'bg-amber-500' : 'bg-emerald-500'}`} />
                     </span>
                     <span className="hidden sm:inline text-xs text-muted-foreground">
                       Data: {summary ? new Date(summary.generatedAtUtc).toLocaleDateString() : '…'}
@@ -69,6 +107,11 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                   <div className="flex items-center gap-2 mb-3">
                     <Activity className="w-4 h-4 text-primary" />
                     <div className="font-semibold">Data Inspector</div>
+                    {isDemoMode && (
+                      <Badge variant="outline" className="ml-auto border-amber-500/50 text-amber-600 dark:text-amber-400 text-xs">
+                        Demo
+                      </Badge>
+                    )}
                   </div>
 
                   {!summary ? (
@@ -104,6 +147,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                         <div className="font-mono text-xs">{process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index'}</div>
                       </div>
 
+                      {isDemoMode && (
+                        <div className="p-2 bg-amber-50 dark:bg-amber-950/30 rounded border border-amber-200 dark:border-amber-900">
+                          <div className="text-amber-800 dark:text-amber-400 text-xs">
+                            Running with demo data. Set up GitHub tokens and run the indexer to use real data.
+                          </div>
+                        </div>
+                      )}
+
                       <div className="pt-2 border-t">
                         <a
                           className="text-primary hover:underline"
@@ -130,6 +181,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <span>
             {summary.pages} pages · {summary.snippets} snippets · indexed{' '}
             {new Date(summary.generatedAtUtc).toLocaleDateString()}
+            {isDemoMode && (
+              <span className="ml-2 text-amber-600 dark:text-amber-400">(Demo Mode)</span>
+            )}
           </span>
         )}
       </footer>

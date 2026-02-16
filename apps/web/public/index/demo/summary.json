@@ -1,0 +1,11 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "source": {
+    "repoUrl": "https://github.com/auth0/docs-v2.git",
+    "ref": "demo",
+    "gitSha": "demo-mode-0000000000000000000000000000000000000000"
+  },
+  "nodes": 28,
+  "pages": 25,
+  "snippets": 3
+}

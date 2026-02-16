@@ -1,0 +1,264 @@
+[
+  {
+    "id": "demo/docs/get-started.mdx",
+    "type": "page",
+    "filePath": "demo/docs/get-started.mdx",
+    "title": "Get Started with Auth0",
+    "permalink": "/docs/get-started",
+    "navPaths": [
+      "Documentation > Get Started > Get Started with Auth0"
+    ]
+  },
+  {
+    "id": "demo/docs/authenticate.mdx",
+    "type": "page",
+    "filePath": "demo/docs/authenticate.mdx",
+    "title": "Authenticate",
+    "permalink": "/docs/authenticate",
+    "navPaths": [
+      "Documentation > Authenticate > Authenticate"
+    ]
+  },
+  {
+    "id": "demo/docs/secure.mdx",
+    "type": "page",
+    "filePath": "demo/docs/secure.mdx",
+    "title": "Secure Applications",
+    "permalink": "/docs/secure",
+    "navPaths": [
+      "Documentation > Secure > Secure Applications"
+    ]
+  },
+  {
+    "id": "demo/docs/manage-users.mdx",
+    "type": "page",
+    "filePath": "demo/docs/manage-users.mdx",
+    "title": "Manage Users",
+    "permalink": "/docs/manage-users",
+    "navPaths": [
+      "Documentation > Manage Users > Manage Users"
+    ]
+  },
+  {
+    "id": "demo/docs/customize.mdx",
+    "type": "page",
+    "filePath": "demo/docs/customize.mdx",
+    "title": "Customize",
+    "permalink": "/docs/customize",
+    "navPaths": [
+      "Documentation > Customize > Customize"
+    ]
+  },
+  {
+    "id": "demo/docs/get-started/applications.mdx",
+    "type": "page",
+    "filePath": "demo/docs/get-started/applications.mdx",
+    "title": "Applications in Auth0",
+    "permalink": "/docs/get-started/applications",
+    "navPaths": [
+      "Documentation > Get Started > Applications in Auth0"
+    ]
+  },
+  {
+    "id": "demo/docs/get-started/apis.mdx",
+    "type": "page",
+    "filePath": "demo/docs/get-started/apis.mdx",
+    "title": "APIs",
+    "permalink": "/docs/get-started/apis",
+    "navPaths": [
+      "Documentation > Get Started > APIs"
+    ]
+  },
+  {
+    "id": "demo/docs/authenticate/oidc.mdx",
+    "type": "page",
+    "filePath": "demo/docs/authenticate/oidc.mdx",
+    "title": "OpenID Connect",
+    "permalink": "/docs/authenticate/oidc",
+    "navPaths": [
+      "Documentation > Authenticate > OpenID Connect"
+    ]
+  },
+  {
+    "id": "demo/docs/authenticate/oauth2.mdx",
+    "type": "page",
+    "filePath": "demo/docs/authenticate/oauth2.mdx",
+    "title": "OAuth 2.0",
+    "permalink": "/docs/authenticate/oauth2",
+    "navPaths": [
+      "Documentation > Authenticate > OAuth 2.0"
+    ]
+  },
+  {
+    "id": "demo/docs/secure/tokens.mdx",
+    "type": "page",
+    "filePath": "demo/docs/secure/tokens.mdx",
+    "title": "Tokens",
+    "permalink": "/docs/secure/tokens",
+    "navPaths": [
+      "Documentation > Secure > Tokens"
+    ]
+  },
+  {
+    "id": "demo/docs/secure/tokens/access-tokens.mdx",
+    "type": "page",
+    "filePath": "demo/docs/secure/tokens/access-tokens.mdx",
+    "title": "Access Tokens",
+    "permalink": "/docs/secure/tokens/access-tokens",
+    "navPaths": [
+      "Documentation > Secure > Access Tokens"
+    ]
+  },
+  {
+    "id": "demo/docs/manage-users/user-profiles.mdx",
+    "type": "page",
+    "filePath": "demo/docs/manage-users/user-profiles.mdx",
+    "title": "User Profiles",
+    "permalink": "/docs/manage-users/user-profiles",
+    "navPaths": [
+      "Documentation > Manage Users > User Profiles"
+    ]
+  },
+  {
+    "id": "demo/docs/customize/actions.mdx",
+    "type": "page",
+    "filePath": "demo/docs/customize/actions.mdx",
+    "title": "Actions",
+    "permalink": "/docs/customize/actions",
+    "navPaths": [
+      "Documentation > Customize > Actions"
+    ]
+  },
+  {
+    "id": "demo/docs/customize/rules.mdx",
+    "type": "page",
+    "filePath": "demo/docs/customize/rules.mdx",
+    "title": "Rules (Deprecated)",
+    "permalink": "/docs/customize/rules",
+    "navPaths": [
+      "Documentation > Customize > Rules"
+    ]
+  },
+  {
+    "id": "demo/docs/api/management-api.mdx",
+    "type": "page",
+    "filePath": "demo/docs/api/management-api.mdx",
+    "title": "Management API",
+    "permalink": "/docs/api/management-api",
+    "navPaths": [
+      "API Reference > Management API"
+    ]
+  },
+  {
+    "id": "demo/docs/api/authentication-api.mdx",
+    "type": "page",
+    "filePath": "demo/docs/api/authentication-api.mdx",
+    "title": "Authentication API",
+    "permalink": "/docs/api/authentication-api",
+    "navPaths": [
+      "API Reference > Authentication API"
+    ]
+  },
+  {
+    "id": "demo/docs/troubleshoot.mdx",
+    "type": "page",
+    "filePath": "demo/docs/troubleshoot.mdx",
+    "title": "Troubleshoot",
+    "permalink": "/docs/troubleshoot",
+    "navPaths": [
+      "Documentation > Troubleshoot > Troubleshoot"
+    ]
+  },
+  {
+    "id": "demo/docs/troubleshoot/errors.mdx",
+    "type": "page",
+    "filePath": "demo/docs/troubleshoot/errors.mdx",
+    "title": "Common Errors",
+    "permalink": "/docs/troubleshoot/errors",
+    "navPaths": [
+      "Documentation > Troubleshoot > Common Errors"
+    ]
+  },
+  {
+    "id": "demo/docs/best-practices.mdx",
+    "type": "page",
+    "filePath": "demo/docs/best-practices.mdx",
+    "title": "Best Practices",
+    "permalink": "/docs/best-practices",
+    "navPaths": [
+      "Documentation > Best Practices"
+    ]
+  },
+  {
+    "id": "demo/docs/legacy-migration.mdx",
+    "type": "page",
+    "filePath": "demo/docs/legacy-migration.mdx",
+    "title": "Legacy Migration Guide",
+    "permalink": "/docs/legacy-migration",
+    "navPaths": []
+  },
+  {
+    "id": "demo/docs/hidden-feature.mdx",
+    "type": "page",
+    "filePath": "demo/docs/hidden-feature.mdx",
+    "title": "Hidden Feature",
+    "permalink": "/docs/hidden-feature",
+    "navPaths": []
+  },
+  {
+    "id": "demo/docs/deep-nav/page1.mdx",
+    "type": "page",
+    "filePath": "demo/docs/deep-nav/page1.mdx",
+    "title": "Deep Navigation Page",
+    "permalink": "/docs/deep-nav/page1",
+    "navPaths": [
+      "Documentation > Section A > Subsection B > Category C > Deep Navigation Page"
+    ]
+  },
+  {
+    "id": "demo/snippets/auth.jsx",
+    "type": "snippet",
+    "filePath": "demo/snippets/auth.jsx",
+    "title": "Auth snippet"
+  },
+  {
+    "id": "demo/snippets/login.js",
+    "type": "snippet",
+    "filePath": "demo/snippets/login.js",
+    "title": "Login snippet"
+  },
+  {
+    "id": "demo/snippets/api-call.ts",
+    "type": "snippet",
+    "filePath": "demo/snippets/api-call.ts",
+    "title": "API call snippet"
+  },
+  {
+    "id": "demo/docs/dead-end-page.mdx",
+    "type": "page",
+    "filePath": "demo/docs/dead-end-page.mdx",
+    "title": "Dead End Page",
+    "permalink": "/docs/dead-end-page",
+    "navPaths": [
+      "Documentation > Dead End Page"
+    ]
+  },
+  {
+    "id": "demo/docs/hub-page.mdx",
+    "type": "page",
+    "filePath": "demo/docs/hub-page.mdx",
+    "title": "Hub Page (High Traffic)",
+    "permalink": "/docs/hub-page",
+    "navPaths": [
+      "Documentation > Hub Page"
+    ]
+  },
+  {
+    "id": "demo/docs/orphan-page.mdx",
+    "type": "page",
+    "filePath": "demo/docs/orphan-page.mdx",
+    "title": "Orphan Page",
+    "permalink": "/docs/orphan-page",
+    "navPaths": []
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "demo/docs/get-started.mdx": [
+    {
+      "id": "demo/docs/hub-page.mdx",
+      "score": 0.72,
+      "simOut": 0.6,
+      "simIn": 0.9,
+      "sharedOut": 4,
+      "sharedIn": 8,
+      "reasons": ["shared_inbound", "shared_outbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": true
+    },
+    {
+      "id": "demo/docs/authenticate.mdx",
+      "score": 0.45,
+      "simOut": 0.5,
+      "simIn": 0.4,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": ["shared_outbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    }
+  ],
+  "demo/docs/authenticate.mdx": [
+    {
+      "id": "demo/docs/secure.mdx",
+      "score": 0.58,
+      "simOut": 0.65,
+      "simIn": 0.5,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": ["shared_outbound", "shared_inbound"],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "demo/docs/hub-page.mdx",
+      "score": 0.55,
+      "simOut": 0.5,
+      "simIn": 0.6,
+      "sharedOut": 4,
+      "sharedIn": 6,
+      "reasons": ["shared_inbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    }
+  ],
+  "demo/docs/secure.mdx": [
+    {
+      "id": "demo/docs/authenticate.mdx",
+      "score": 0.58,
+      "simOut": 0.65,
+      "simIn": 0.5,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": ["shared_outbound", "shared_inbound"],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
+  "demo/docs/customize.mdx": [
+    {
+      "id": "demo/docs/hub-page.mdx",
+      "score": 0.62,
+      "simOut": 0.55,
+      "simIn": 0.7,
+      "sharedOut": 4,
+      "sharedIn": 7,
+      "reasons": ["shared_inbound", "shared_outbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": true
+    }
+  ],
+  "demo/docs/authenticate/oidc.mdx": [
+    {
+      "id": "demo/docs/authenticate/oauth2.mdx",
+      "score": 0.85,
+      "simOut": 0.9,
+      "simIn": 0.75,
+      "sharedOut": 4,
+      "sharedIn": 3,
+      "reasons": ["shared_outbound", "shared_inbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": true
+    }
+  ],
+  "demo/docs/authenticate/oauth2.mdx": [
+    {
+      "id": "demo/docs/authenticate/oidc.mdx",
+      "score": 0.85,
+      "simOut": 0.9,
+      "simIn": 0.75,
+      "sharedOut": 4,
+      "sharedIn": 3,
+      "reasons": ["shared_outbound", "shared_inbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": true
+    }
+  ],
+  "demo/docs/customize/rules.mdx": [
+    {
+      "id": "demo/docs/customize/actions.mdx",
+      "score": 0.72,
+      "simOut": 0.8,
+      "simIn": 0.6,
+      "sharedOut": 2,
+      "sharedIn": 3,
+      "reasons": ["shared_outbound", "shared_inbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": true
+    }
+  ],
+  "demo/docs/customize/actions.mdx": [
+    {
+      "id": "demo/docs/customize/rules.mdx",
+      "score": 0.72,
+      "simOut": 0.8,
+      "simIn": 0.6,
+      "sharedOut": 2,
+      "sharedIn": 3,
+      "reasons": ["shared_outbound", "shared_inbound"],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": true
+    }
+  ]
+}

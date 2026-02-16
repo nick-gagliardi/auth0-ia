@@ -1,0 +1,69 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "pagesScanned": 25,
+  "blocksFound": 12,
+  "uniqueBlocks": 10,
+  "byLang": {
+    "(none)": 5,
+    "javascript": 3,
+    "json": 2,
+    "bash": 2
+  },
+  "items": [
+    {
+      "filePath": "demo/docs/authenticate/oidc.mdx",
+      "startLine": 45,
+      "endLine": 58,
+      "lang": "javascript",
+      "code": "const auth0 = new Auth0Client({\n  domain: 'your-domain.auth0.com',\n  clientId: 'your-client-id',\n  authorizationParams: {\n    redirect_uri: window.location.origin\n  }\n});",
+      "hash": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2",
+      "snippetId": "s_demo_oidc_01",
+      "occurrences": 3,
+      "preview": "const auth0 = new Auth0Client({ domain: 'your-domain.auth0.com', clientId: 'your-client-id'..."
+    },
+    {
+      "filePath": "demo/docs/authenticate/oauth2.mdx",
+      "startLine": 32,
+      "endLine": 45,
+      "lang": "javascript",
+      "code": "async function getToken() {\n  const response = await fetch('/oauth/token', {\n    method: 'POST',\n    headers: { 'Content-Type': 'application/json' },\n    body: JSON.stringify({\n      grant_type: 'client_credentials'\n    })\n  });\n  return response.json();\n}",
+      "hash": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3",
+      "snippetId": "s_demo_oauth_01",
+      "occurrences": 2,
+      "preview": "async function getToken() { const response = await fetch('/oauth/token', { method: 'POST'..."
+    },
+    {
+      "filePath": "demo/docs/api/management-api.mdx",
+      "startLine": 28,
+      "endLine": 42,
+      "lang": "bash",
+      "code": "curl --request GET \\\n  --url 'https://your-domain.auth0.com/api/v2/users' \\\n  --header 'authorization: Bearer YOUR_MGMT_API_TOKEN' \\\n  --header 'content-type: application/json'",
+      "hash": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4",
+      "snippetId": "s_demo_mgmt_01",
+      "occurrences": 4,
+      "preview": "curl --request GET --url 'https://your-domain.auth0.com/api/v2/users'..."
+    },
+    {
+      "filePath": "demo/docs/get-started/applications.mdx",
+      "startLine": 18,
+      "endLine": 32,
+      "lang": "json",
+      "code": "{\n  \"auth0\": {\n    \"domain\": \"your-domain.auth0.com\",\n    \"clientId\": \"your-client-id\",\n    \"callbackUrl\": \"http://localhost:3000/callback\"\n  }\n}",
+      "hash": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5",
+      "snippetId": "s_demo_app_01",
+      "occurrences": 5,
+      "preview": '{ "auth0": { "domain": "your-domain.auth0.com", "clientId": "your-client-id"... }'
+    },
+    {
+      "filePath": "demo/docs/customize/actions.mdx",
+      "startLine": 22,
+      "endLine": 38,
+      "lang": "javascript",
+      "code": "exports.onExecutePostLogin = async (event, api) => {\n  const namespace = 'https://myapp.example.com';\n  if (event.authorization) {\n    api.idToken.setCustomClaim(namespace + '/roles', event.authorization.roles);\n  }\n};",
+      "hash": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6",
+      "snippetId": "s_demo_actions_01",
+      "occurrences": 2,
+      "preview": "exports.onExecutePostLogin = async (event, api) => { const namespace = 'https://myapp..."
+    }
+  ]
+}

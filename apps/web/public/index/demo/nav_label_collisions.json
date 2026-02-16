@@ -1,0 +1,23 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "collisions": [
+    {
+      "label": "Troubleshoot",
+      "count": 2,
+      "pages": [
+        {
+          "id": "demo/docs/troubleshoot.mdx",
+          "filePath": "demo/docs/troubleshoot.mdx",
+          "title": "Troubleshoot",
+          "navPath": "Documentation > Troubleshoot > Troubleshoot"
+        },
+        {
+          "id": "demo/docs/troubleshoot/errors.mdx",
+          "filePath": "demo/docs/troubleshoot/errors.mdx",
+          "title": "Common Errors",
+          "navPath": "Documentation > Troubleshoot > Common Errors"
+        }
+      ]
+    }
+  ]
+}

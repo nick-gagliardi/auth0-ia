@@ -1,0 +1,226 @@
+{
+  "demo/docs/get-started.mdx": {
+    "link": [
+      "demo/docs/get-started/applications.mdx",
+      "demo/docs/get-started/apis.mdx",
+      "demo/docs/authenticate.mdx",
+      "demo/docs/secure.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/authenticate.mdx": {
+    "link": [
+      "demo/docs/authenticate/oidc.mdx",
+      "demo/docs/authenticate/oauth2.mdx",
+      "demo/docs/get-started.mdx",
+      "demo/docs/secure/tokens.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/secure.mdx": {
+    "link": [
+      "demo/docs/secure/tokens.mdx",
+      "demo/docs/secure/tokens/access-tokens.mdx",
+      "demo/docs/authenticate.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/manage-users.mdx": {
+    "link": [
+      "demo/docs/manage-users/user-profiles.mdx",
+      "demo/docs/get-started.mdx",
+      "demo/docs/api/management-api.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/customize.mdx": {
+    "link": [
+      "demo/docs/customize/actions.mdx",
+      "demo/docs/customize/rules.mdx",
+      "demo/docs/get-started.mdx",
+      "demo/docs/troubleshoot.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/get-started/applications.mdx": {
+    "link": [
+      "demo/docs/authenticate.mdx",
+      "demo/docs/get-started.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/get-started/apis.mdx": {
+    "link": [
+      "demo/docs/api/management-api.mdx",
+      "demo/docs/authenticate/oauth2.mdx",
+      "demo/docs/get-started.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/authenticate/oidc.mdx": {
+    "link": [
+      "demo/docs/authenticate/oauth2.mdx",
+      "demo/docs/secure/tokens.mdx",
+      "demo/docs/authenticate.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/authenticate/oauth2.mdx": {
+    "link": [
+      "demo/docs/authenticate/oidc.mdx",
+      "demo/docs/secure/tokens/access-tokens.mdx",
+      "demo/docs/api/authentication-api.mdx",
+      "demo/docs/authenticate.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/secure/tokens.mdx": {
+    "link": [
+      "demo/docs/secure/tokens/access-tokens.mdx",
+      "demo/docs/authenticate/oauth2.mdx",
+      "demo/docs/secure.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/secure/tokens/access-tokens.mdx": {
+    "link": [
+      "demo/docs/secure/tokens.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/manage-users/user-profiles.mdx": {
+    "link": [
+      "demo/docs/manage-users.mdx",
+      "demo/docs/api/management-api.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/customize/actions.mdx": {
+    "link": [
+      "demo/docs/customize/rules.mdx",
+      "demo/docs/customize.mdx",
+      "demo/docs/troubleshoot.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/customize/rules.mdx": {
+    "link": [
+      "demo/docs/customize/actions.mdx",
+      "demo/docs/customize.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/api/management-api.mdx": {
+    "link": [
+      "demo/docs/get-started/apis.mdx",
+      "demo/docs/authenticate/oauth2.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/api/authentication-api.mdx": {
+    "link": [
+      "demo/docs/authenticate/oauth2.mdx",
+      "demo/docs/authenticate/oidc.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/troubleshoot.mdx": {
+    "link": [
+      "demo/docs/troubleshoot/errors.mdx",
+      "demo/docs/customize.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/troubleshoot/errors.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/best-practices.mdx": {
+    "link": [
+      "demo/docs/secure.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/legacy-migration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/hidden-feature.mdx": {
+    "link": [
+      "demo/docs/customize/actions.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/deep-nav/page1.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "demo/snippets/auth.jsx": {
+    "link": [],
+    "import": [
+      "demo/docs/authenticate/oidc.mdx",
+      "demo/docs/authenticate/oauth2.mdx"
+    ],
+    "redirect": []
+  },
+  "demo/snippets/login.js": {
+    "link": [],
+    "import": [
+      "demo/docs/get-started/applications.mdx"
+    ],
+    "redirect": []
+  },
+  "demo/snippets/api-call.ts": {
+    "link": [],
+    "import": [
+      "demo/docs/api/management-api.mdx"
+    ],
+    "redirect": []
+  },
+  "demo/docs/dead-end-page.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/hub-page.mdx": {
+    "link": [
+      "demo/docs/get-started.mdx",
+      "demo/docs/authenticate.mdx",
+      "demo/docs/secure.mdx",
+      "demo/docs/manage-users.mdx",
+      "demo/docs/customize.mdx",
+      "demo/docs/troubleshoot.mdx",
+      "demo/docs/api/management-api.mdx",
+      "demo/docs/api/authentication-api.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "demo/docs/orphan-page.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  }
+}

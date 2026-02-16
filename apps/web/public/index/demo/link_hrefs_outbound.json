@@ -1,0 +1,112 @@
+{
+  "demo/docs/get-started.mdx": [
+    {
+      "href": "/docs/authenticate",
+      "toId": "demo/docs/authenticate.mdx"
+    },
+    {
+      "href": "/docs/secure",
+      "toId": "demo/docs/secure.mdx"
+    }
+  ],
+  "demo/docs/authenticate.mdx": [
+    {
+      "href": "/docs/secure/tokens",
+      "toId": "demo/docs/secure/tokens.mdx"
+    },
+    {
+      "href": "/docs/authenticate/oidc",
+      "toId": "demo/docs/authenticate/oidc.mdx"
+    }
+  ],
+  "demo/docs/secure.mdx": [
+    {
+      "href": "/docs/authenticate",
+      "toId": "demo/docs/authenticate.mdx"
+    }
+  ],
+  "demo/docs/manage-users.mdx": [
+    {
+      "href": "/docs/api/management-api",
+      "toId": "demo/docs/api/management-api.mdx"
+    }
+  ],
+  "demo/docs/customize.mdx": [
+    {
+      "href": "/docs/troubleshoot",
+      "toId": "demo/docs/troubleshoot.mdx"
+    }
+  ],
+  "demo/docs/get-started/applications.mdx": [],
+  "demo/docs/get-started/apis.mdx": [
+    {
+      "href": "/docs/api/management-api",
+      "toId": "demo/docs/api/management-api.mdx"
+    }
+  ],
+  "demo/docs/authenticate/oidc.mdx": [
+    {
+      "href": "/docs/secure/tokens",
+      "toId": "demo/docs/secure/tokens.mdx"
+    }
+  ],
+  "demo/docs/authenticate/oauth2.mdx": [
+    {
+      "href": "/docs/secure/tokens/access-tokens",
+      "toId": "demo/docs/secure/tokens/access-tokens.mdx"
+    }
+  ],
+  "demo/docs/secure/tokens.mdx": [],
+  "demo/docs/secure/tokens/access-tokens.mdx": [],
+  "demo/docs/manage-users/user-profiles.mdx": [],
+  "demo/docs/customize/actions.mdx": [
+    {
+      "href": "/docs/customize/rules",
+      "toId": "demo/docs/customize/rules.mdx"
+    }
+  ],
+  "demo/docs/customize/rules.mdx": [
+    {
+      "href": "/docs/customize/actions",
+      "toId": "demo/docs/customize/actions.mdx"
+    }
+  ],
+  "demo/docs/api/management-api.mdx": [],
+  "demo/docs/api/authentication-api.mdx": [
+    {
+      "href": "/docs/authenticate/oauth2",
+      "toId": "demo/docs/authenticate/oauth2.mdx"
+    }
+  ],
+  "demo/docs/troubleshoot.mdx": [
+    {
+      "href": "/docs/troubleshoot/errors",
+      "toId": "demo/docs/troubleshoot/errors.mdx"
+    }
+  ],
+  "demo/docs/troubleshoot/errors.mdx": [],
+  "demo/docs/best-practices.mdx": [],
+  "demo/docs/legacy-migration.mdx": [],
+  "demo/docs/hidden-feature.mdx": [
+    {
+      "href": "/docs/customize/actions",
+      "toId": "demo/docs/customize/actions.mdx"
+    }
+  ],
+  "demo/docs/deep-nav/page1.mdx": [],
+  "demo/snippets/auth.jsx": [],
+  "demo/snippets/login.js": [],
+  "demo/snippets/api-call.ts": [],
+  "demo/docs/dead-end-page.mdx": [],
+  "demo/docs/hub-page.mdx": [
+    {
+      "href": "/docs/get-started",
+      "toId": "demo/docs/get-started.mdx"
+    },
+    {
+      "href": "/docs/authenticate",
+      "toId": "demo/docs/authenticate.mdx"
+    }
+  ],
+  "demo/docs/orphan-page.mdx": []
+}

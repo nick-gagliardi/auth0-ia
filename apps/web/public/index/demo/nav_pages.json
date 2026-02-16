@@ -1,0 +1,674 @@
+{
+  "demo/docs/get-started.mdx": {
+    "filePath": "demo/docs/get-started.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/page:demo/get-started"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Get Started"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Get Started",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Get Started",
+        "pathString": "Documentation > Get Started > Get Started"
+      }
+    ],
+    "navLabel": "Get Started",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/authenticate.mdx": {
+    "filePath": "demo/docs/authenticate.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/page:demo/authenticate"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "Authenticate"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Authenticate",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Authenticate",
+        "pathString": "Documentation > Authenticate > Authenticate"
+      }
+    ],
+    "navLabel": "Authenticate",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/secure.mdx": {
+    "filePath": "demo/docs/secure.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/secure",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:secure",
+          "root/tab:documentation/dropdown:secure/page:demo/secure"
+        ],
+        "labels": [
+          "Documentation",
+          "Secure",
+          "Secure"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Secure",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Secure",
+        "pathString": "Documentation > Secure > Secure"
+      }
+    ],
+    "navLabel": "Secure",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/manage-users.mdx": {
+    "filePath": "demo/docs/manage-users.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/manage-users",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:manage-users",
+          "root/tab:documentation/dropdown:manage-users/page:demo/manage-users"
+        ],
+        "labels": [
+          "Documentation",
+          "Manage Users",
+          "Manage Users"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Manage Users",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Manage Users",
+        "pathString": "Documentation > Manage Users > Manage Users"
+      }
+    ],
+    "navLabel": "Manage Users",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/customize.mdx": {
+    "filePath": "demo/docs/customize.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/customize",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/page:demo/customize"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Customize"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Customize",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Customize",
+        "pathString": "Documentation > Customize > Customize"
+      }
+    ],
+    "navLabel": "Customize",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/get-started/applications.mdx": {
+    "filePath": "demo/docs/get-started/applications.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/page:demo/applications"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Applications",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Get Started",
+        "pathString": "Documentation > Get Started > Applications"
+      }
+    ],
+    "navLabel": "Applications",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/get-started/apis.mdx": {
+    "filePath": "demo/docs/get-started/apis.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/apis",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/page:demo/apis"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "APIs"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "APIs",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Get Started",
+        "pathString": "Documentation > Get Started > APIs"
+      }
+    ],
+    "navLabel": "APIs",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/authenticate/oidc.mdx": {
+    "filePath": "demo/docs/authenticate/oidc.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate/oidc",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/page:demo/oidc"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "OpenID Connect"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "OpenID Connect",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Authenticate",
+        "pathString": "Documentation > Authenticate > OpenID Connect"
+      }
+    ],
+    "navLabel": "OpenID Connect",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/authenticate/oauth2.mdx": {
+    "filePath": "demo/docs/authenticate/oauth2.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate/oauth2",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/page:demo/oauth2"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "OAuth 2.0"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "OAuth 2.0",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Authenticate",
+        "pathString": "Documentation > Authenticate > OAuth 2.0"
+      }
+    ],
+    "navLabel": "OAuth 2.0",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/secure/tokens.mdx": {
+    "filePath": "demo/docs/secure/tokens.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/secure/tokens",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:secure",
+          "root/tab:documentation/dropdown:secure/group:tokens",
+          "root/tab:documentation/dropdown:secure/group:tokens/page:demo/tokens"
+        ],
+        "labels": [
+          "Documentation",
+          "Secure",
+          "Tokens",
+          "Tokens Overview"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Tokens Overview",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Secure > Tokens",
+        "pathString": "Documentation > Secure > Tokens > Tokens Overview"
+      }
+    ],
+    "navLabel": "Tokens Overview",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/secure/tokens/access-tokens.mdx": {
+    "filePath": "demo/docs/secure/tokens/access-tokens.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/secure/tokens/access-tokens",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:secure",
+          "root/tab:documentation/dropdown:secure/group:tokens",
+          "root/tab:documentation/dropdown:secure/group:tokens/page:demo/access-tokens"
+        ],
+        "labels": [
+          "Documentation",
+          "Secure",
+          "Tokens",
+          "Access Tokens"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Access Tokens",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Secure > Tokens",
+        "pathString": "Documentation > Secure > Tokens > Access Tokens"
+      }
+    ],
+    "navLabel": "Access Tokens",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/manage-users/user-profiles.mdx": {
+    "filePath": "demo/docs/manage-users/user-profiles.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/manage-users/user-profiles",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:manage-users",
+          "root/tab:documentation/dropdown:manage-users/page:demo/user-profiles"
+        ],
+        "labels": [
+          "Documentation",
+          "Manage Users",
+          "User Profiles"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "User Profiles",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Manage Users",
+        "pathString": "Documentation > Manage Users > User Profiles"
+      }
+    ],
+    "navLabel": "User Profiles",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/customize/actions.mdx": {
+    "filePath": "demo/docs/customize/actions.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/actions",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/page:demo/actions"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Actions"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Actions",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Customize",
+        "pathString": "Documentation > Customize > Actions"
+      }
+    ],
+    "navLabel": "Actions",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/customize/rules.mdx": {
+    "filePath": "demo/docs/customize/rules.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/rules",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/page:demo/rules"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Rules"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Rules",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Customize",
+        "pathString": "Documentation > Customize > Rules"
+      }
+    ],
+    "navLabel": "Rules",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/api/management-api.mdx": {
+    "filePath": "demo/docs/api/management-api.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management-api",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/page:demo/management-api"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API"
+        ],
+        "kinds": [
+          "tab",
+          "page"
+        ],
+        "leafLabel": "Management API",
+        "leafLabelSource": "nav",
+        "containerString": "API Reference",
+        "pathString": "API Reference > Management API"
+      }
+    ],
+    "navLabel": "Management API",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/api/authentication-api.mdx": {
+    "filePath": "demo/docs/api/authentication-api.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication-api",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/page:demo/authentication-api"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API"
+        ],
+        "kinds": [
+          "tab",
+          "page"
+        ],
+        "leafLabel": "Authentication API",
+        "leafLabelSource": "nav",
+        "containerString": "API Reference",
+        "pathString": "API Reference > Authentication API"
+      }
+    ],
+    "navLabel": "Authentication API",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/troubleshoot.mdx": {
+    "filePath": "demo/docs/troubleshoot.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/troubleshoot",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/page:demo/troubleshoot"
+        ],
+        "labels": [
+          "Documentation",
+          "Troubleshoot",
+          "Troubleshoot"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Troubleshoot",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Troubleshoot",
+        "pathString": "Documentation > Troubleshoot > Troubleshoot"
+      }
+    ],
+    "navLabel": "Troubleshoot",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/troubleshoot/errors.mdx": {
+    "filePath": "demo/docs/troubleshoot/errors.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/troubleshoot/errors",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/page:demo/errors"
+        ],
+        "labels": [
+          "Documentation",
+          "Troubleshoot",
+          "Common Errors"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Common Errors",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Troubleshoot",
+        "pathString": "Documentation > Troubleshoot > Common Errors"
+      }
+    ],
+    "navLabel": "Common Errors",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/best-practices.mdx": {
+    "filePath": "demo/docs/best-practices.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/best-practices",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/page:best-practices"
+        ],
+        "labels": [
+          "Documentation",
+          "Best Practices"
+        ],
+        "kinds": [
+          "tab",
+          "page"
+        ],
+        "leafLabel": "Best Practices",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation",
+        "pathString": "Documentation > Best Practices"
+      }
+    ],
+    "navLabel": "Best Practices",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/legacy-migration.mdx": {
+    "filePath": "demo/docs/legacy-migration.mdx",
+    "navDepth": null,
+    "navNodePaths": []
+  },
+  "demo/docs/hidden-feature.mdx": {
+    "filePath": "demo/docs/hidden-feature.mdx",
+    "navDepth": null,
+    "navNodePaths": []
+  },
+  "demo/docs/deep-nav/page1.mdx": {
+    "filePath": "demo/docs/deep-nav/page1.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/deep-nav/page1",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:section-a",
+          "root/tab:documentation/dropdown:section-a/subsection-b",
+          "root/tab:documentation/dropdown:section-a/subsection-b/category-c",
+          "root/tab:documentation/dropdown:section-a/subsection-b/category-c/page:demo/deep-nav/page1"
+        ],
+        "labels": [
+          "Documentation",
+          "Section A",
+          "Subsection B",
+          "Category C",
+          "Deep Navigation Page"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Deep Navigation Page",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation > Section A > Subsection B > Category C",
+        "pathString": "Documentation > Section A > Subsection B > Category C > Deep Navigation Page"
+      }
+    ],
+    "navLabel": "Deep Navigation Page",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/dead-end-page.mdx": {
+    "filePath": "demo/docs/dead-end-page.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/dead-end-page",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/page:dead-end"
+        ],
+        "labels": [
+          "Documentation",
+          "Dead End Page"
+        ],
+        "kinds": [
+          "tab",
+          "page"
+        ],
+        "leafLabel": "Dead End Page",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation",
+        "pathString": "Documentation > Dead End Page"
+      }
+    ],
+    "navLabel": "Dead End Page",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/hub-page.mdx": {
+    "filePath": "demo/docs/hub-page.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/hub-page",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/page:hub"
+        ],
+        "labels": [
+          "Documentation",
+          "Hub Page"
+        ],
+        "kinds": [
+          "tab",
+          "page"
+        ],
+        "leafLabel": "Hub Page",
+        "leafLabelSource": "nav",
+        "containerString": "Documentation",
+        "pathString": "Documentation > Hub Page"
+      }
+    ],
+    "navLabel": "Hub Page",
+    "navLabelSource": "nav"
+  },
+  "demo/docs/orphan-page.mdx": {
+    "filePath": "demo/docs/orphan-page.mdx",
+    "navDepth": null,
+    "navNodePaths": []
+  }
+}

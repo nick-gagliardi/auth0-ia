@@ -1,0 +1,218 @@
+{
+  "generatedAtUtc": "2026-02-15T20:50:00.000Z",
+  "language": "en",
+  "root": {
+    "id": "root",
+    "kind": "root",
+    "label": "root",
+    "children": [
+      {
+        "id": "root/tab:documentation",
+        "kind": "tab",
+        "label": "Documentation",
+        "children": [
+          {
+            "id": "root/tab:documentation/dropdown:get-started",
+            "kind": "dropdown",
+            "label": "Get Started",
+            "children": [
+              {
+                "id": "root/tab:documentation/dropdown:get-started/page:demo/get-started",
+                "kind": "page",
+                "label": "Get Started",
+                "route": "docs/get-started",
+                "filePath": "demo/docs/get-started.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:get-started/page:demo/applications",
+                "kind": "page",
+                "label": "Applications",
+                "route": "docs/get-started/applications",
+                "filePath": "demo/docs/get-started/applications.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:get-started/page:demo/apis",
+                "kind": "page",
+                "label": "APIs",
+                "route": "docs/get-started/apis",
+                "filePath": "demo/docs/get-started/apis.mdx",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root/tab:documentation/dropdown:authenticate",
+            "kind": "dropdown",
+            "label": "Authenticate",
+            "children": [
+              {
+                "id": "root/tab:documentation/dropdown:authenticate/page:demo/authenticate",
+                "kind": "page",
+                "label": "Authenticate",
+                "route": "docs/authenticate",
+                "filePath": "demo/docs/authenticate.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:authenticate/page:demo/oidc",
+                "kind": "page",
+                "label": "OpenID Connect",
+                "route": "docs/authenticate/oidc",
+                "filePath": "demo/docs/authenticate/oidc.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:authenticate/page:demo/oauth2",
+                "kind": "page",
+                "label": "OAuth 2.0",
+                "route": "docs/authenticate/oauth2",
+                "filePath": "demo/docs/authenticate/oauth2.mdx",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root/tab:documentation/dropdown:secure",
+            "kind": "dropdown",
+            "label": "Secure",
+            "children": [
+              {
+                "id": "root/tab:documentation/dropdown:secure/page:demo/secure",
+                "kind": "page",
+                "label": "Secure",
+                "route": "docs/secure",
+                "filePath": "demo/docs/secure.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:secure/group:tokens",
+                "kind": "group",
+                "label": "Tokens",
+                "children": [
+                  {
+                    "id": "root/tab:documentation/dropdown:secure/group:tokens/page:demo/tokens",
+                    "kind": "page",
+                    "label": "Tokens Overview",
+                    "route": "docs/secure/tokens",
+                    "filePath": "demo/docs/secure/tokens.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:secure/group:tokens/page:demo/access-tokens",
+                    "kind": "page",
+                    "label": "Access Tokens",
+                    "route": "docs/secure/tokens/access-tokens",
+                    "filePath": "demo/docs/secure/tokens/access-tokens.mdx",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root/tab:documentation/dropdown:manage-users",
+            "kind": "dropdown",
+            "label": "Manage Users",
+            "children": [
+              {
+                "id": "root/tab:documentation/dropdown:manage-users/page:demo/manage-users",
+                "kind": "page",
+                "label": "Manage Users",
+                "route": "docs/manage-users",
+                "filePath": "demo/docs/manage-users.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:manage-users/page:demo/user-profiles",
+                "kind": "page",
+                "label": "User Profiles",
+                "route": "docs/manage-users/user-profiles",
+                "filePath": "demo/docs/manage-users/user-profiles.mdx",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root/tab:documentation/dropdown:customize",
+            "kind": "dropdown",
+            "label": "Customize",
+            "children": [
+              {
+                "id": "root/tab:documentation/dropdown:customize/page:demo/customize",
+                "kind": "page",
+                "label": "Customize",
+                "route": "docs/customize",
+                "filePath": "demo/docs/customize.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:customize/page:demo/actions",
+                "kind": "page",
+                "label": "Actions",
+                "route": "docs/customize/actions",
+                "filePath": "demo/docs/customize/actions.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:customize/page:demo/rules",
+                "kind": "page",
+                "label": "Rules",
+                "route": "docs/customize/rules",
+                "filePath": "demo/docs/customize/rules.mdx",
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "root/tab:documentation/dropdown:troubleshoot",
+            "kind": "dropdown",
+            "label": "Troubleshoot",
+            "children": [
+              {
+                "id": "root/tab:documentation/dropdown:troubleshoot/page:demo/troubleshoot",
+                "kind": "page",
+                "label": "Troubleshoot",
+                "route": "docs/troubleshoot",
+                "filePath": "demo/docs/troubleshoot.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:documentation/dropdown:troubleshoot/page:demo/errors",
+                "kind": "page",
+                "label": "Common Errors",
+                "route": "docs/troubleshoot/errors",
+                "filePath": "demo/docs/troubleshoot/errors.mdx",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root/tab:api-reference",
+        "kind": "tab",
+        "label": "API Reference",
+        "children": [
+          {
+            "id": "root/tab:api-reference/page:demo/management-api",
+            "kind": "page",
+            "label": "Management API",
+            "route": "docs/api/management-api",
+            "filePath": "demo/docs/api/management-api.mdx",
+            "children": []
+          },
+          {
+            "id": "root/tab:api-reference/page:demo/authentication-api",
+            "kind": "page",
+            "label": "Authentication API",
+            "route": "docs/api/authentication-api",
+            "filePath": "demo/docs/api/authentication-api.mdx",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
