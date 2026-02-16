@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github, Search, AlertCircle, Sparkles, Compass } from 'lucide-react';
+import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github, Search, AlertCircle, Sparkles, Compass, X, Filter, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -14,6 +14,62 @@ import NodeCard from '@/components/NodeCard';
 import SharedLinksExpander from '@/components/SharedLinksExpander';
 import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity, useNavPages } from '@/hooks/use-index-data';
 import type { DocNode, NodeMetrics } from '@/types';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+
+// Date filter options
+type DateFilter = 'all' | 'last30days' | 'last6months' | 'older1year';
+
+// Extract unique nav sections from nodes
+function extractNavSections(nodes: DocNode[]): string[] {
+  const sections = new Set<string>();
+  nodes.forEach((node) => {
+    node.navPaths?.forEach((path) => {
+      const parts = path.split(' > ');
+      if (parts.length >= 2) {
+        sections.add(parts[1]); // Second level is the section
+      }
+    });
+  });
+  return Array.from(sections).sort();
+}
+
+// Check if node matches date filter
+function matchesDateFilter(node: DocNode, filter: DateFilter): boolean {
+  if (filter === 'all') return true;
+  if (!node.lastModified) return filter === 'older1year'; // Treat missing dates as old
+
+  const modified = new Date(node.lastModified).getTime();
+  const now = Date.now();
+  const days30 = 30 * 24 * 60 * 60 * 1000;
+  const months6 = 180 * 24 * 60 * 60 * 1000;
+  const year1 = 365 * 24 * 60 * 60 * 1000;
+
+  switch (filter) {
+    case 'last30days':
+      return now - modified <= days30;
+    case 'last6months':
+      return now - modified <= months6;
+    case 'older1year':
+      return now - modified >= year1;
+    default:
+      return true;
+  }
+}
+
+// Check if node matches nav section filter
+function matchesNavSection(node: DocNode, section: string): boolean {
+  if (!section) return true;
+  return node.navPaths?.some((path) => {
+    const parts = path.split(' > ');
+    return parts.length >= 2 && parts[1] === section;
+  }) ?? false;
+}
 
 // Loading skeleton components
 function NodeHeaderSkeleton() {
@@ -226,21 +282,35 @@ function EmptyState({
   onSelectPage: (id: string) => void;
 }) {
   const [query, setQuery] = useState('');
+  const [navSection, setNavSection] = useState<string>('');
+  const [dateFilter, setDateFilter] = useState<DateFilter>('all');
 
   const pages = (nodes || []).filter((n) => n.type === 'page');
+  const navSections = useMemo(() => extractNavSections(nodes || []), [nodes]);
   const q = query.trim().toLowerCase();
 
-  const results = (() => {
+  // Count active filters
+  const activeFilterCount = (navSection ? 1 : 0) + (dateFilter !== 'all' ? 1 : 0);
+
+  const results = useMemo(() => {
     if (!metrics) return [];
+    
+    // First apply nav section and date filters
+    let filtered = pages.filter((n) => {
+      const matchesNav = matchesNavSection(n, navSection);
+      const matchesDate = matchesDateFilter(n, dateFilter);
+      return matchesNav && matchesDate;
+    });
+
     if (!q) {
-      return [...pages]
+      return [...filtered]
         .map((n) => ({ ...n, score: metrics[n.id]?.inboundLinks ?? 0 }))
         .sort((a, b) => b.score - a.score)
         .slice(0, 20);
     }
 
     const out: (typeof pages[number] & { score: number })[] = [];
-    for (const n of pages) {
+    for (const n of filtered) {
       const title = (n.title || '').toLowerCase();
       const path = n.filePath.toLowerCase();
       const permalink = (n.permalink || '').toLowerCase();
@@ -251,7 +321,20 @@ function EmptyState({
       }
     }
     return out.sort((a, b) => b.score - a.score).slice(0, 30);
-  })();
+  }, [pages, metrics, q, navSection, dateFilter]);
+
+  const clearFilters = () => {
+    setNavSection('');
+    setDateFilter('all');
+    setQuery('');
+  };
+
+  const dateFilterLabel: Record<DateFilter, string> = {
+    all: 'All time',
+    last30days: 'Last 30 days',
+    last6months: 'Last 6 months',
+    older1year: 'Older than 1 year',
+  };
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -265,7 +348,7 @@ function EmptyState({
         </p>
       </div>
 
-      <div className="relative mb-6">
+      <div className="relative mb-4">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
         <Input
           value={query}
@@ -275,6 +358,84 @@ function EmptyState({
           autoFocus
         />
       </div>
+
+      {/* Filter bar */}
+      <div className="flex flex-wrap items-center gap-2 mb-6">
+        <div className="flex items-center gap-1 text-sm text-muted-foreground mr-1">
+          <Filter className="w-4 h-4" />
+          <span>Filters:</span>
+        </div>
+        
+        {/* Nav Section dropdown */}
+        <Select value={navSection} onValueChange={setNavSection}>
+          <SelectTrigger className="w-auto min-w-[140px] h-9 text-sm rounded-full border-dashed">
+            <SelectValue placeholder="Nav section" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="">All sections</SelectItem>
+            {navSections.map((section) => (
+              <SelectItem key={section} value={section}>
+                {section}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        {/* Date filter dropdown */}
+        <Select value={dateFilter} onValueChange={(v) => setDateFilter(v as DateFilter)}>
+          <SelectTrigger className="w-auto min-w-[140px] h-9 text-sm rounded-full border-dashed">
+            <Calendar className="w-3.5 h-3.5 mr-2" />
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All time</SelectItem>
+            <SelectItem value="last30days">Last 30 days</SelectItem>
+            <SelectItem value="last6months">Last 6 months</SelectItem>
+            <SelectItem value="older1year">Older than 1 year</SelectItem>
+          </SelectContent>
+        </Select>
+
+        {activeFilterCount > 0 && (
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={clearFilters}
+            className="h-9 text-xs"
+          >
+            Clear all
+          </Button>
+        )}
+      </div>
+
+      {/* Active filter pills */}
+      {activeFilterCount > 0 && (
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          {navSection && (
+            <Badge variant="secondary" className="flex items-center gap-1 px-2 py-1">
+              <span>Section: {navSection}</span>
+              <button
+                onClick={() => setNavSection('')}
+                className="ml-1 hover:text-destructive"
+                aria-label="Remove section filter"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </Badge>
+          )}
+          {dateFilter !== 'all' && (
+            <Badge variant="secondary" className="flex items-center gap-1 px-2 py-1">
+              <span>Date: {dateFilterLabel[dateFilter]}</span>
+              <button
+                onClick={() => setDateFilter('all')}
+                className="ml-1 hover:text-destructive"
+                aria-label="Remove date filter"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </Badge>
+          )}
+        </div>
+      )}
 
       <div className="flex items-baseline justify-between mb-4">
         <h2 className="font-semibold text-sm text-muted-foreground uppercase tracking-wider flex items-center gap-2">
@@ -290,7 +451,10 @@ function EmptyState({
             </>
           )}
         </h2>
-        <span className="text-xs text-muted-foreground">{results.length} results</span>
+        <span className="text-xs text-muted-foreground">
+          {results.length} result{results.length !== 1 ? 's' : ''}
+          {activeFilterCount > 0 && ' (filtered)'}
+        </span>
       </div>
 
       {results.length > 0 ? (
@@ -306,13 +470,26 @@ function EmptyState({
             </button>
           ))}
         </div>
-      ) : q ? (
+      ) : (
         <div className="text-center py-12 rounded-xl border bg-card">
           <Search className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
-          <p className="text-muted-foreground">No pages found matching &quot;{query}&quot;</p>
-          <p className="text-sm text-muted-foreground mt-1">Try a different search term</p>
+          <p className="text-muted-foreground">
+            {activeFilterCount > 0 
+              ? "No pages match your filters" 
+              : `No pages found matching "${query}"`}
+          </p>
+          {activeFilterCount > 0 && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={clearFilters}
+              className="mt-3"
+            >
+              Clear filters
+            </Button>
+          )}
         </div>
-      ) : null}
+      )}
     </div>
   );
 }

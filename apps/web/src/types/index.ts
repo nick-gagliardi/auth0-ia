@@ -7,6 +7,7 @@ export type DocNode = {
   title?: string;
   permalink?: string;
   navPaths: string[];
+  lastModified?: string; // ISO 8601 timestamp
 };
 
 export type NavNodeKind = 'root' | 'tab' | 'dropdown' | 'group' | 'page';
