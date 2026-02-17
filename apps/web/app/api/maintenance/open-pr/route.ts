@@ -208,7 +208,7 @@ export async function POST(req: Request) {
             '--prBody',
             body.prBody || '',
             '--targetRepo',
-            body.targetRepo || '',
+            body.targetRepo || process.env.MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2',
             '--baseBranch',
             process.env.MAINTENANCE_BASE_BRANCH || 'main',
           ],
@@ -232,7 +232,7 @@ export async function POST(req: Request) {
 
     // Vercel mode: call GitHub API directly using MAINTENANCE_GH_TOKEN.
     const token = requireEnv('MAINTENANCE_GH_TOKEN');
-    const defaultTarget = process.env.MAINTENANCE_TARGET_REPO || 'auth0/docs-v2';
+    const defaultTarget = process.env.MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2';
 
     const targetRepo = (body.targetRepo || defaultTarget).trim();
     const [owner, repo] = targetRepo.split('/');

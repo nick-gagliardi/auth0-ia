@@ -362,3 +362,50 @@ export type Summary = {
   pages: number;
   snippets: number;
 };
+
+// Audit types
+export type AuditCheckStatus = 'PASS' | 'FAIL' | 'WARN' | 'NA' | 'MANUAL';
+
+export type AuditCheckItem = {
+  id: string;
+  label: string;
+  status: AuditCheckStatus;
+  details?: string;
+  evidence?: any;
+};
+
+export type AuditSuggestionType =
+  | 'tooltip'
+  | 'heading-case'
+  | 'callout-migration'
+  | 'heading-in-callout'
+  | 'typo';
+
+export type AuditSuggestion = {
+  id: string;
+  type: AuditSuggestionType;
+  description: string;
+  line?: number;
+  original: string;      // The text to find/replace
+  suggestion: string;    // The replacement text
+  context?: string;      // Surrounding context for display
+};
+
+export type AuditResult = {
+  ok: boolean;
+  error?: string;
+  url: string;
+  filePath?: string;
+  pageTitle?: string;
+  checkedAt: string;
+  screenshot?: string; // base64 PNG
+  checks: AuditCheckItem[];
+  suggestions?: AuditSuggestion[];  // Actionable suggestions with accept/decline
+  summary: {
+    pass: number;
+    fail: number;
+    warn: number;
+    na: number;
+    manual: number;
+  };
+};

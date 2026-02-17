@@ -6712,8 +6712,16 @@
   ],
   "main/docs/secure/data-privacy-and-compliance/data-processing.mdx": [
     {
-      "href": "/docs/secure/data-privacy-and-compliance/gdpr",
-      "toId": "main/docs/secure/data-privacy-and-compliance/gdpr.mdx"
+      "href": "/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant",
+      "toId": "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-accounts/manage-users-using-the-management-api",
+      "toId": "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-accounts/manage-users-using-the-dashboard",
+      "toId": "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx"
     }
   ],
   "main/docs/secure/highly-regulated-identity/transactional-authorization-with-authorization-code-flow.mdx": [
@@ -11817,6 +11825,74 @@
       "toId": "main/docs/get-started/manage-dashboard-access/add-dashboard-users.mdx"
     }
   ],
+  "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": [
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/customer-support/product-support-matrix",
+      "toId": "main/docs/troubleshoot/customer-support/product-support-matrix.mdx"
+    },
+    {
+      "href": "/docs/get-started/manage-dashboard-access",
+      "toId": "main/docs/get-started/manage-dashboard-access.mdx"
+    },
+    {
+      "href": "/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps",
+      "toId": "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0",
+      "toId": "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx"
+    },
+    {
+      "href": "/docs/get-started/apis/scopes/api-scopes",
+      "toId": "main/docs/get-started/apis/scopes/api-scopes.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/basic-issues/check-error-messages",
+      "toId": "main/docs/troubleshoot/basic-issues/check-error-messages.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/authentication-issues/check-api-calls",
+      "toId": "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/authentication-issues/check-user-profiles",
+      "toId": "main/docs/troubleshoot/authentication-issues/check-user-profiles.mdx"
+    },
+    {
+      "href": "/docs/libraries/auth0-swift/auth0-swift-user-management",
+      "toId": "main/docs/libraries/auth0-swift/auth0-swift-user-management.mdx"
+    },
+    {
+      "href": "/docs/libraries/auth0-android/auth0-android-user-management",
+      "toId": "main/docs/libraries/auth0-android/auth0-android-user-management.mdx"
+    }
+  ],
+  "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": [
+    {
+      "href": "/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0",
+      "toId": "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx"
+    },
+    {
+      "href": "/docs/get-started/manage-dashboard-access",
+      "toId": "main/docs/get-started/manage-dashboard-access.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-search",
+      "toId": "main/docs/manage-users/user-search.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-accounts/user-profiles",
+      "toId": "main/docs/manage-users/user-accounts/user-profiles.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration",
+      "toId": "main/docs/manage-users/user-migration.mdx"
+    }
+  ],
   "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-conditions-for-consent.mdx": [
     {
       "href": "/docs/manage-users/user-accounts/metadata/metadata-fields-data",
@@ -14225,12 +14301,28 @@
   ],
   "main/docs/authenticate/database-connections.mdx": [
     {
+      "href": "/docs/authenticate/database-connections/passkeys/configure-passkey-policy",
+      "toId": "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
+    },
+    {
       "href": "/docs/authenticate/database-connections/password-strength",
       "toId": "main/docs/authenticate/database-connections/password-strength.mdx"
     },
     {
-      "href": "/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits",
-      "toId": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx"
+      "href": "/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy",
+      "toId": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration/configure-automatic-migration-from-your-database",
+      "toId": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration/bulk-user-imports",
+      "toId": "main/docs/manage-users/user-migration/bulk-user-imports.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration/user-migration-scenarios",
+      "toId": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx"
     },
     {
       "href": "/docs/authenticate/database-connections/custom-db",
@@ -14241,8 +14333,12 @@
       "toId": "main/docs/authenticate/database-connections/custom-db/templates.mdx"
     },
     {
-      "href": "/docs/manage-users/user-migration/configure-automatic-migration-from-your-database",
-      "toId": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx"
+      "href": "/docs/authenticate/database-connections/custom-db/overview-custom-db-connections",
+      "toId": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/custom-db/create-db-connection",
+      "toId": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
     },
     {
       "href": "/docs/manage-users",
@@ -15079,10 +15175,6 @@
   ],
   "main/docs/manage-users/user-accounts/identify-users.mdx": [
     {
-      "href": "/docs/authenticate/database-connections/auth0-user-store",
-      "toId": "main/docs/authenticate/database-connections/auth0-user-store.mdx"
-    },
-    {
       "href": "/docs/authenticate/database-connections/custom-db",
       "toId": "main/docs/authenticate/database-connections/custom-db.mdx"
     }
@@ -15146,24 +15238,6 @@
       "toId": "main/docs/authenticate/identity-providers/locate-the-connection-id.mdx"
     }
   ],
-  "main/docs/authenticate/database-connections/auth0-user-store.mdx": [
-    {
-      "href": "/docs/authenticate/database-connections/password-strength",
-      "toId": "main/docs/authenticate/database-connections/password-strength.mdx"
-    },
-    {
-      "href": "/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits",
-      "toId": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx"
-    },
-    {
-      "href": "/docs/manage-users/user-migration/configure-automatic-migration-from-your-database",
-      "toId": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx"
-    },
-    {
-      "href": "/docs/manage-users",
-      "toId": "main/docs/manage-users.mdx"
-    }
-  ],
   "main/docs/get-started/auth0-overview/create-tenants/create-multiple-tenants.mdx": [
     {
       "href": "/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments",
@@ -15214,74 +15288,6 @@
     {
       "href": "/docs/libraries/lock/lock-api-reference",
       "toId": "main/docs/libraries/lock/lock-api-reference.mdx"
-    }
-  ],
-  "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": [
-    {
-      "href": "/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0",
-      "toId": "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx"
-    },
-    {
-      "href": "/docs/get-started/manage-dashboard-access",
-      "toId": "main/docs/get-started/manage-dashboard-access.mdx"
-    },
-    {
-      "href": "/docs/manage-users/user-search",
-      "toId": "main/docs/manage-users/user-search.mdx"
-    },
-    {
-      "href": "/docs/manage-users/user-accounts/user-profiles",
-      "toId": "main/docs/manage-users/user-accounts/user-profiles.mdx"
-    },
-    {
-      "href": "/docs/manage-users/user-migration",
-      "toId": "main/docs/manage-users/user-migration.mdx"
-    }
-  ],
-  "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": [
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    },
-    {
-      "href": "/docs/troubleshoot/customer-support/product-support-matrix",
-      "toId": "main/docs/troubleshoot/customer-support/product-support-matrix.mdx"
-    },
-    {
-      "href": "/docs/get-started/manage-dashboard-access",
-      "toId": "main/docs/get-started/manage-dashboard-access.mdx"
-    },
-    {
-      "href": "/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps",
-      "toId": "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx"
-    },
-    {
-      "href": "/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0",
-      "toId": "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx"
-    },
-    {
-      "href": "/docs/get-started/apis/scopes/api-scopes",
-      "toId": "main/docs/get-started/apis/scopes/api-scopes.mdx"
-    },
-    {
-      "href": "/docs/troubleshoot/basic-issues/check-error-messages",
-      "toId": "main/docs/troubleshoot/basic-issues/check-error-messages.mdx"
-    },
-    {
-      "href": "/docs/troubleshoot/authentication-issues/check-api-calls",
-      "toId": "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx"
-    },
-    {
-      "href": "/docs/troubleshoot/authentication-issues/check-user-profiles",
-      "toId": "main/docs/troubleshoot/authentication-issues/check-user-profiles.mdx"
-    },
-    {
-      "href": "/docs/libraries/auth0-swift/auth0-swift-user-management",
-      "toId": "main/docs/libraries/auth0-swift/auth0-swift-user-management.mdx"
-    },
-    {
-      "href": "/docs/libraries/auth0-android/auth0-android-user-management",
-      "toId": "main/docs/libraries/auth0-android/auth0-android-user-management.mdx"
     }
   ],
   "main/docs/libraries/auth0-swift/auth0-swift-user-management.mdx": [
@@ -31814,6 +31820,32 @@
       "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     }
   ],
+  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": [
+    {
+      "href": "/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience",
+      "toId": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
+    },
+    {
+      "href": "/docs/customize/custom-domains",
+      "toId": "main/docs/customize/custom-domains.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/auth0-universal-login/identifier-first",
+      "toId": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/custom-db/create-db-connection",
+      "toId": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration/user-migration-scenarios",
+      "toId": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx"
+    },
+    {
+      "href": "/docs/manage-users/organizations/configure-organizations/invite-members",
+      "toId": "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
+    }
+  ],
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx": [
     {
       "href": "/docs/authenticate/identity-providers/enterprise-identity-providers/oidc",
@@ -33654,32 +33686,6 @@
     {
       "href": "/docs/authenticate/database-connections/flexible-identifiers-and-attributes",
       "toId": "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx"
-    }
-  ],
-  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": [
-    {
-      "href": "/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience",
-      "toId": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
-    },
-    {
-      "href": "/docs/customize/custom-domains",
-      "toId": "main/docs/customize/custom-domains.mdx"
-    },
-    {
-      "href": "/docs/authenticate/login/auth0-universal-login/identifier-first",
-      "toId": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx"
-    },
-    {
-      "href": "/docs/authenticate/database-connections/custom-db/create-db-connection",
-      "toId": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
-    },
-    {
-      "href": "/docs/manage-users/user-migration/user-migration-scenarios",
-      "toId": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx"
-    },
-    {
-      "href": "/docs/manage-users/organizations/configure-organizations/invite-members",
-      "toId": "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
     }
   ],
   "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": [

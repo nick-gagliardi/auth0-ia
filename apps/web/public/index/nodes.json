@@ -3110,6 +3110,7 @@
     "id": "main/docs/quickstart/webapp/express/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/webapp/express/index.mdx",
+    "title": "Add Login to Your Express Application",
     "navPaths": []
   },
   {
@@ -3933,7 +3934,9 @@
     "type": "page",
     "filePath": "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx",
     "title": "Bulk User Import Schema and Examples",
-    "navPaths": []
+    "navPaths": [
+      "Documentation > Manage Users > Manage Users > User Migration > Bulk User Import Schema and Examples"
+    ]
   },
   {
     "id": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
@@ -17225,15 +17228,6 @@
     "title": "Activate and Configure Attributes for Flexible Identifiers",
     "navPaths": [
       "Documentation > Authenticate > Provision Users > Database Connections > Activate and Configure Attributes for Flexible Identifiers"
-    ]
-  },
-  {
-    "id": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
-    "type": "page",
-    "filePath": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
-    "title": "Auth0 User Store",
-    "navPaths": [
-      "Documentation > Authenticate > Provision Users > Database Connections > Auth0 User Store"
     ]
   },
   {

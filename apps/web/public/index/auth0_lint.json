@@ -1,5 +1,5 @@
 {
-  "pagesScanned": 2163,
+  "pagesScanned": 2162,
   "pagesWithWarnings": 551,
   "warningCount": 785,
   "byCode": {
@@ -73,11 +73,6 @@
     {
       "id": "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx",
       "filePath": "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
-      "filePath": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
       "warnings": []
     },
     {
@@ -160,14 +155,14 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "By default, Auth0 will give you a token for any API if you authenticate successfully and include the appropriate audience. Restricting access to the legacy identity store API by re",
-          "line": 140
+          "line": 134
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "By default, Auth0 will give you a token for any API if you authenticate successfully and include the appropriate audience. Restricting access to the legacy identity store API by re",
-          "line": 140
+          "line": 134
         }
       ]
     },
@@ -13859,7 +13854,7 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "This guide demonstrates how to integrate Auth0, add authentication, and display user profile information in an Express.js web application using the `express-openid-connect` SDK.",
+          "evidence": "description: This guide demonstrates how to integrate Auth0, add authentication, and display user profile information in an Express.js web application using the express-openid-conn",
           "line": 3
         }
       ]
@@ -18560,7 +18555,7 @@
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "This guide demonstrates how to integrate Auth0, add authentication, and display user profile information in an Express.js web application using the `express-openid-connect` SDK.",
+        "evidence": "description: This guide demonstrates how to integrate Auth0, add authentication, and display user profile information in an Express.js web application using the express-openid-conn",
         "line": 3
       }
     ],
@@ -24963,7 +24958,6 @@
     ],
     "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": [],
     "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx": [],
-    "main/docs/authenticate/database-connections/auth0-user-store.mdx": [],
     "main/docs/authenticate/database-connections/custom-db.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -25026,14 +25020,14 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "By default, Auth0 will give you a token for any API if you authenticate successfully and include the appropriate audience. Restricting access to the legacy identity store API by re",
-        "line": 140
+        "line": 134
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "By default, Auth0 will give you a token for any API if you authenticate successfully and include the appropriate audience. Restricting access to the legacy identity store API by re",
-        "line": 140
+        "line": 134
       }
     ],
     "main/docs/authenticate/database-connections/custom-db/templates.mdx": [],

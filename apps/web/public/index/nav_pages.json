@@ -12939,7 +12939,39 @@
   },
   "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx": {
     "filePath": "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx",
-    "navNodePaths": []
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/manage-users/user-migration/bulk-user-import-schema",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:manage-users",
+          "root/tab:documentation/dropdown:manage-users/group:manage-users",
+          "root/tab:documentation/dropdown:manage-users/group:manage-users/group:user-migration",
+          "root/tab:documentation/dropdown:manage-users/group:manage-users/group:user-migration/page:docs/manage-users/user-migration/bulk-user-import-schema:doc"
+        ],
+        "labels": [
+          "Documentation",
+          "Manage Users",
+          "Manage Users",
+          "User Migration",
+          "Bulk User Import Schema and Examples"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Bulk User Import Schema and Examples",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Manage Users > Manage Users > User Migration",
+        "pathString": "Documentation > Manage Users > Manage Users > User Migration > Bulk User Import Schema and Examples"
+      }
+    ],
+    "navLabel": "Bulk User Import Schema and Examples",
+    "navLabelSource": "frontmatter"
   },
   "main/docs/manage-users/user-migration/bulk-user-imports.mdx": {
     "filePath": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
@@ -48674,42 +48706,6 @@
       }
     ],
     "navLabel": "Activate and Configure Attributes for Flexible Identifiers",
-    "navLabelSource": "frontmatter"
-  },
-  "main/docs/authenticate/database-connections/auth0-user-store.mdx": {
-    "filePath": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/authenticate/database-connections/auth0-user-store",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:authenticate",
-          "root/tab:documentation/dropdown:authenticate/group:provision-users",
-          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections",
-          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/page:docs/authenticate/database-connections/auth0-user-store:docs"
-        ],
-        "labels": [
-          "Documentation",
-          "Authenticate",
-          "Provision Users",
-          "Database Connections",
-          "Auth0 User Store"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Auth0 User Store",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Authenticate > Provision Users > Database Connections",
-        "pathString": "Documentation > Authenticate > Provision Users > Database Connections > Auth0 User Store"
-      }
-    ],
-    "navLabel": "Auth0 User Store",
     "navLabelSource": "frontmatter"
   },
   "main/docs/authenticate/database-connections/custom-db.mdx": {

@@ -16997,6 +16997,10 @@
       "destination": "/docs/fr-ca/customize/actions/actions-real-time-logs"
     },
     {
+      "source": "/docs/authenticate/database-connections/auth0-user-store",
+      "destination": "/docs/authenticate/database-connections"
+    },
+    {
       "source": "/docs/quickstart/webapp/aspnet-core-blazor-server/interactive",
       "destination": "/docs/quickstart/webapp/aspnet-core-blazor-server"
     },
@@ -35184,6 +35188,10 @@
       {
         "source": "/docs/fr-ca/customize/extensions/real-time-webtask-logs",
         "destination": "/docs/fr-ca/customize/actions/actions-real-time-logs"
+      },
+      {
+        "source": "/docs/authenticate/database-connections/auth0-user-store",
+        "destination": "/docs/authenticate/database-connections"
       },
       {
         "source": "/docs/quickstart/webapp/aspnet-core-blazor-server/interactive",

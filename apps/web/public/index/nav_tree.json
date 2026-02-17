@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-02-11T16:59:12.466Z",
+  "generatedAtUtc": "2026-02-16T13:20:37.636Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -3461,14 +3461,6 @@
                         "children": []
                       },
                       {
-                        "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/page:docs/authenticate/database-connections/auth0-user-store:docs",
-                        "kind": "page",
-                        "label": "docs/authenticate/database-connections/auth0-user-store",
-                        "route": "docs/authenticate/database-connections/auth0-user-store",
-                        "filePath": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
-                        "children": []
-                      },
-                      {
                         "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/group:your-user-store",
                         "kind": "group",
                         "label": "Your User Store",
@@ -4526,6 +4518,14 @@
                         "label": "docs/manage-users/user-migration/bulk-user-imports",
                         "route": "docs/manage-users/user-migration/bulk-user-imports",
                         "filePath": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:manage-users/group:manage-users/group:user-migration/page:docs/manage-users/user-migration/bulk-user-import-schema:doc",
+                        "kind": "page",
+                        "label": "docs/manage-users/user-migration/bulk-user-import-schema",
+                        "route": "docs/manage-users/user-migration/bulk-user-import-schema",
+                        "filePath": "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx",
                         "children": []
                       },
                       {

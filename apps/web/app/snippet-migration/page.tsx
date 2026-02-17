@@ -2,13 +2,20 @@
 
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, Copy, Filter, GitPullRequest, Search } from 'lucide-react';
+import { ArrowUpRight, Copy, Filter, GitPullRequest, Search, Loader2, CheckCircle, ExternalLink } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
 import { useSnippetMigration } from '@/hooks/use-index-data';
 
@@ -18,6 +25,12 @@ export default function SnippetMigrationPage() {
 
   const [q, setQ] = useState('');
   const [lang, setLang] = useState<string>('all');
+  const [migratingId, setMigratingId] = useState<string | null>(null);
+  const [successModal, setSuccessModal] = useState<{ open: boolean; prUrl: string; snippetId: string }>({
+    open: false,
+    prUrl: '',
+    snippetId: '',
+  });
 
   const items = data?.items ?? [];
 
@@ -50,6 +63,8 @@ export default function SnippetMigrationPage() {
   }
 
   async function migrate(item: any) {
+    const itemId = `${item.filePath}:${item.startLine}:${item.hash}`;
+    setMigratingId(itemId);
     try {
       const res = await fetch('/api/snippets/migrate', {
         method: 'POST',
@@ -67,10 +82,11 @@ export default function SnippetMigrationPage() {
       });
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || 'Migration failed');
-      toast({ title: 'PR opened', description: json.prUrl });
-      window.open(json.prUrl, '_blank');
+      setSuccessModal({ open: true, prUrl: json.prUrl, snippetId: item.snippetId });
     } catch (e: any) {
       toast({ title: 'Migration failed', description: e?.message || String(e), variant: 'destructive' });
+    } finally {
+      setMigratingId(null);
     }
   }
 
@@ -143,21 +159,59 @@ export default function SnippetMigrationPage() {
           </TabsList>
 
           <TabsContent value="repeated" className="mt-4">
-            <List items={repeated} onCopy={copy} onMigrate={migrate} />
+            <List items={repeated} onCopy={copy} onMigrate={migrate} migratingId={migratingId} />
           </TabsContent>
 
           <TabsContent value="all" className="mt-4">
-            <List items={filtered} onCopy={copy} onMigrate={migrate} />
+            <List items={filtered} onCopy={copy} onMigrate={migrate} migratingId={migratingId} />
           </TabsContent>
 
           <TabsContent value="single" className="mt-4">
-            <List items={singletons} onCopy={copy} onMigrate={migrate} />
+            <List items={singletons} onCopy={copy} onMigrate={migrate} migratingId={migratingId} />
           </TabsContent>
         </Tabs>
 
         <div className="text-xs text-muted-foreground">
-          Note: the PR only migrates the selected occurrence for now. We can add “migrate all identical occurrences” once we’re comfortable.
+          Note: the PR only migrates the selected occurrence for now. We can add "migrate all identical occurrences" once we're comfortable.
         </div>
+
+        {/* Success Modal */}
+        <Dialog open={successModal.open} onOpenChange={(open) => setSuccessModal({ ...successModal, open })}>
+          <DialogContent className="sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                PR Created Successfully
+              </DialogTitle>
+              <DialogDescription>
+                A pull request has been opened to migrate the snippet <code className="font-mono text-xs bg-muted px-1 py-0.5 rounded">{successModal.snippetId}</code>
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <div className="p-3 bg-muted rounded-lg">
+                <div className="text-xs text-muted-foreground mb-1">Pull Request URL</div>
+                <div className="font-mono text-sm break-all">{successModal.prUrl}</div>
+              </div>
+              <div className="flex gap-2">
+                <Button
+                  className="flex-1"
+                  onClick={() => {
+                    window.open(successModal.prUrl, '_blank');
+                  }}
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Open PR
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => setSuccessModal({ open: false, prUrl: '', snippetId: '' })}
+                >
+                  Close
+                </Button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </AppLayout>
   );
@@ -167,50 +221,64 @@ function List({
   items,
   onCopy,
   onMigrate,
+  migratingId,
 }: {
   items: any[];
   onCopy: (text: string, label: string) => Promise<void>;
   onMigrate: (item: any) => Promise<void>;
+  migratingId: string | null;
 }) {
   return (
     <div className="space-y-2">
-      {items.slice(0, 200).map((x) => (
-        <div key={`${x.filePath}:${x.startLine}:${x.hash}`} className="rounded-xl border bg-card p-4">
-          <div className="flex items-start justify-between gap-3">
-            <div className="min-w-0">
-              <div className="flex items-center gap-2 flex-wrap">
-                <Badge variant="secondary">{(x.lang || '(none)').toLowerCase()}</Badge>
-                <Badge variant={x.occurrences >= 2 ? 'default' : 'secondary'}>{x.occurrences}x</Badge>
-                <span className="text-xs text-muted-foreground font-mono break-all">{x.snippetId}</span>
+      {items.slice(0, 200).map((x) => {
+        const itemId = `${x.filePath}:${x.startLine}:${x.hash}`;
+        const isMigrating = migratingId === itemId;
+        return (
+          <div key={itemId} className="rounded-xl border bg-card p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <Badge variant="secondary">{(x.lang || '(none)').toLowerCase()}</Badge>
+                  <Badge variant={x.occurrences >= 2 ? 'default' : 'secondary'}>{x.occurrences}x</Badge>
+                  <span className="text-xs text-muted-foreground font-mono break-all">{x.snippetId}</span>
+                </div>
+
+                <div className="mt-2 text-sm font-mono break-all">
+                  {x.filePath}:{x.startLine}-{x.endLine}
+                </div>
+
+                <div className="mt-2 text-sm text-muted-foreground">{x.preview}</div>
+
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <Link
+                    className="text-sm text-primary hover:underline inline-flex items-center gap-1"
+                    href={`/explain?id=${encodeURIComponent(x.filePath)}`}
+                  >
+                    Explain page <ArrowUpRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
 
-              <div className="mt-2 text-sm font-mono break-all">
-                {x.filePath}:{x.startLine}-{x.endLine}
+              <div className="flex flex-col gap-2">
+                <Button variant="secondary" size="sm" onClick={() => onCopy(x.code, 'Snippet code')} disabled={isMigrating}>
+                  <Copy className="w-4 h-4 mr-2" /> Copy
+                </Button>
+                <Button variant="default" size="sm" onClick={() => onMigrate(x)} disabled={isMigrating || migratingId !== null}>
+                  {isMigrating ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" /> Creating PR...
+                    </>
+                  ) : (
+                    <>
+                      <GitPullRequest className="w-4 h-4 mr-2" /> Migrate
+                    </>
+                  )}
+                </Button>
               </div>
-
-              <div className="mt-2 text-sm text-muted-foreground">{x.preview}</div>
-
-              <div className="mt-3 flex flex-wrap gap-2">
-                <Link
-                  className="text-sm text-primary hover:underline inline-flex items-center gap-1"
-                  href={`/explain?id=${encodeURIComponent(x.filePath)}`}
-                >
-                  Explain page <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <Button variant="secondary" size="sm" onClick={() => onCopy(x.code, 'Snippet code')}>
-                <Copy className="w-4 h-4 mr-2" /> Copy
-              </Button>
-              <Button variant="default" size="sm" onClick={() => onMigrate(x)}>
-                <GitPullRequest className="w-4 h-4 mr-2" /> Migrate
-              </Button>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {items.length > 200 ? <div className="text-xs text-muted-foreground">Showing first 200 of {items.length}</div> : null}
       {items.length === 0 ? <div className="text-sm text-muted-foreground">No items</div> : null}

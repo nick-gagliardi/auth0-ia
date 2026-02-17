@@ -3389,7 +3389,9 @@
   },
   "main/docs/secure/data-privacy-and-compliance/data-processing.mdx": {
     "link": [
-      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx"
+      "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx",
+      "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx",
+      "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx"
     ],
     "import": [],
     "redirect": []
@@ -6017,6 +6019,34 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": {
+    "link": [
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/troubleshoot/customer-support/product-support-matrix.mdx",
+      "main/docs/get-started/manage-dashboard-access.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
+      "main/docs/get-started/apis/scopes/api-scopes.mdx",
+      "main/docs/troubleshoot/basic-issues/check-error-messages.mdx",
+      "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
+      "main/docs/troubleshoot/authentication-issues/check-user-profiles.mdx",
+      "main/docs/libraries/auth0-swift/auth0-swift-user-management.mdx",
+      "main/docs/libraries/auth0-android/auth0-android-user-management.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": {
+    "link": [
+      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
+      "main/docs/get-started/manage-dashboard-access.mdx",
+      "main/docs/manage-users/user-search.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles.mdx",
+      "main/docs/manage-users/user-migration.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-conditions-for-consent.mdx": {
     "link": [
       "main/docs/manage-users/user-accounts/metadata/metadata-fields-data.mdx",
@@ -7199,7 +7229,9 @@
   },
   "main/docs/quickstart/webapp/express/index.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/recipe.jsx"
+    ],
     "redirect": []
   },
   "main/docs/quickstart/webapp/django/_index.mdx": {
@@ -8702,11 +8734,16 @@
   },
   "main/docs/authenticate/database-connections.mdx": {
     "link": [
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
       "main/docs/authenticate/database-connections/password-strength.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
+      "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
       "main/docs/authenticate/database-connections/custom-db.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
+      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
       "main/docs/manage-users.mdx"
     ],
     "import": [],
@@ -9176,7 +9213,6 @@
   },
   "main/docs/manage-users/user-accounts/identify-users.mdx": {
     "link": [
-      "main/docs/authenticate/database-connections/auth0-user-store.mdx",
       "main/docs/authenticate/database-connections/custom-db.mdx"
     ],
     "import": [],
@@ -9220,16 +9256,6 @@
     ],
     "redirect": []
   },
-  "main/docs/authenticate/database-connections/auth0-user-store.mdx": {
-    "link": [
-      "main/docs/authenticate/database-connections/password-strength.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx",
-      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "main/docs/manage-users.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/get-started/auth0-overview/create-tenants/create-multiple-tenants.mdx": {
     "link": [
       "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
@@ -9254,34 +9280,6 @@
     "import": [
       "main/snippets/AuthCodeBlock.jsx"
     ],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
-      "main/docs/get-started/manage-dashboard-access.mdx",
-      "main/docs/manage-users/user-search.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles.mdx",
-      "main/docs/manage-users/user-migration.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": {
-    "link": [
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "main/docs/troubleshoot/customer-support/product-support-matrix.mdx",
-      "main/docs/get-started/manage-dashboard-access.mdx",
-      "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
-      "main/docs/get-started/apis/scopes/api-scopes.mdx",
-      "main/docs/troubleshoot/basic-issues/check-error-messages.mdx",
-      "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
-      "main/docs/troubleshoot/authentication-issues/check-user-profiles.mdx",
-      "main/docs/libraries/auth0-swift/auth0-swift-user-management.mdx",
-      "main/docs/libraries/auth0-android/auth0-android-user-management.mdx"
-    ],
-    "import": [],
     "redirect": []
   },
   "main/docs/libraries/auth0-swift/auth0-swift-user-management.mdx": {
@@ -20267,6 +20265,18 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
+    "link": [
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+      "main/docs/customize/custom-domains.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
+      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx": {
     "link": [
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx",
@@ -21276,18 +21286,6 @@
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
-    "link": [
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/customize/custom-domains.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
-      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
     ],
     "import": [],
     "redirect": []

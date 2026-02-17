@@ -226,6 +226,7 @@
       "main/docs/customize/rules.mdx",
       "main/docs/customize/rules/create-rules.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+      "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/passwordless/best-practices.mdx",
       "main/docs/authenticate/passwordless/implement-login/embedded-login/webapps.mdx",
       "main/docs/authenticate/login/logout/log-users-out-of-applications.mdx",
@@ -576,8 +577,7 @@
     "link": [
       "main/docs/get-started/manage-dashboard-access/add-change-remove-mfa/remove-or-change-dashboard-multi-factor-authentication.mdx",
       "main/docs/get-started/identity-fundamentals/introduction-to-auth0.mdx",
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/database-connections/auth0-user-store.mdx"
+      "main/docs/authenticate/database-connections.mdx"
     ],
     "import": [],
     "redirect": []
@@ -2671,6 +2671,7 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/quality-assurance.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/operations-readiness.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/testing.mdx",
+      "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx",
       "main/docs/authenticate/database-connections/custom-db.mdx",
       "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
@@ -3460,6 +3461,7 @@
       "main/docs/troubleshoot/customer-support/operational-policies.mdx",
       "main/docs/troubleshoot/customer-support/manage-subscriptions/downgrade-or-cancel-subscriptions.mdx",
       "main/docs/troubleshoot/customer-support/manage-subscriptions/export-data.mdx",
+      "main/docs/secure/data-privacy-and-compliance/data-processing.mdx",
       "main/docs/get-started/tenant-settings.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/child-tenants.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/create-multiple-tenants.mdx",
@@ -3945,9 +3947,7 @@
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx": {
     "link": [
       "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/database-connections/auth0-user-store.mdx"
+      "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4923,7 +4923,6 @@
       "main/docs/secure/data-privacy-and-compliance.mdx",
       "main/docs/secure/mdl-verification/configure-mdl-verification-request.mdx",
       "main/docs/secure/mdl-verification/mdl-conditional-check.mdx",
-      "main/docs/secure/data-privacy-and-compliance/data-processing.mdx",
       "main/docs/manage-users/sessions/session-metadata.mdx",
       "main/docs/manage-users/sessions/session-metadata/add-organization-information.mdx",
       "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
@@ -7649,7 +7648,6 @@
       "main/docs/customize/integrations/cms/wordpress-plugin/troubleshoot-login-by-auth0.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/database-connections/auth0-user-store.mdx",
       "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/get-user.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/login.mdx",
@@ -7669,6 +7667,7 @@
       "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
       "main/docs/customize/integrations/cms/wordpress-plugin/troubleshoot-login-by-auth0.mdx",
+      "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx"
     ],
     "import": [],
@@ -7677,6 +7676,7 @@
   "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx": {
     "link": [
       "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/import-user-mfa-authenticator-enrollments.mdx",
+      "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/database-connections/custom-db.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/change-email.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/change-password.mdx",
@@ -7790,6 +7790,26 @@
   "main/docs/secure/highly-regulated-identity/customer-managed-keys/customer-managed-keys-management-api.mdx": {
     "link": [
       "main/docs/secure/highly-regulated-identity/customer-managed-keys.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": {
+    "link": [
+      "main/docs/secure/data-privacy-and-compliance/data-processing.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles.mdx",
+      "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
+      "main/docs/authenticate/enterprise-connections/connection-profile.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": {
+    "link": [
+      "main/docs/secure/data-privacy-and-compliance/data-processing.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8317,6 +8337,7 @@
       "main/docs/quickstart/webapp/java-ee/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
+      "main/docs/quickstart/webapp/express/index.mdx",
       "main/docs/quickstart/webapp/django/_index.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/_index.mdx",
@@ -10511,6 +10532,7 @@
       "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
+      "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     ],
     "import": [],
@@ -10684,13 +10706,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/database-connections/auth0-user-store.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/identify-users.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/get-started/auth0-overview/create-tenants/create-multiple-tenants.mdx": {
     "link": [
       "main/docs/manage-users/user-accounts/manage-user-access-to-applications.mdx",
@@ -10708,24 +10723,6 @@
       "main/docs/manage-users/user-accounts/manage-user-access-to-applications.mdx",
       "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps/part-3.mdx",
       "main/docs/authenticate/protocols/saml/saml-configuration.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/user-profiles.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/user-profiles.mdx",
-      "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
-      "main/docs/authenticate/enterprise-connections/connection-profile.mdx"
     ],
     "import": [],
     "redirect": []
@@ -11854,7 +11851,6 @@
       "main/docs/libraries/custom-signup.mdx",
       "main/docs/customize/integrations/cms/wordpress-plugin/install-login-by-auth0.mdx",
       "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/database-connections/auth0-user-store.mdx",
       "main/docs/authenticate/database-connections/password-options.mdx",
       "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx"
     ],
@@ -20898,6 +20894,14 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
+    "link": [
+      "main/docs/authenticate/database-connections.mdx",
+      "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx": {
     "link": [
       "main/docs/authenticate/enterprise-connections.mdx",
@@ -21760,13 +21764,6 @@
   },
   "main/docs/authenticate/database-connections/non-unique-emails.mdx": {
     "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
-    "link": [
-      "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx"
-    ],
     "import": [],
     "redirect": []
   },

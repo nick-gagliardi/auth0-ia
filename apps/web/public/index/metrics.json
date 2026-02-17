@@ -136,7 +136,7 @@
     "deadEndScore": 27
   },
   "main/docs/manage-users.mdx": {
-    "inboundLinks": 4,
+    "inboundLinks": 3,
     "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 2,
@@ -145,9 +145,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 4,
+    "hubScore": 3,
     "deadEnd": false,
-    "deadEndScore": 4
+    "deadEndScore": 3
   },
   "main/docs/quickstarts.mdx": {
     "inboundLinks": 15,
@@ -1267,7 +1267,7 @@
     "deadEndScore": 2
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx": {
-    "inboundLinks": 39,
+    "inboundLinks": 40,
     "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 6,
@@ -1276,9 +1276,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 39,
+    "hubScore": 40,
     "deadEnd": false,
-    "deadEndScore": 3.9
+    "deadEndScore": 4
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/authentication-api-endpoint-rate-limits.mdx": {
     "inboundLinks": 1,
@@ -1294,7 +1294,7 @@
     "deadEndScore": 0.1
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx": {
-    "inboundLinks": 4,
+    "inboundLinks": 2,
     "outboundLinks": 10,
     "importedBy": 0,
     "orphanNav": true,
@@ -1302,9 +1302,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 4,
+    "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 0.4
+    "deadEndScore": 0.2
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits.mdx": {
     "inboundLinks": 12,
@@ -1488,7 +1488,7 @@
     "deadEndScore": 0
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx": {
-    "inboundLinks": 8,
+    "inboundLinks": 9,
     "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
@@ -1497,9 +1497,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 8,
+    "hubScore": 9,
     "deadEnd": false,
-    "deadEndScore": 1.1429
+    "deadEndScore": 1.2857
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions/downgrade-or-cancel-subscriptions.mdx": {
     "inboundLinks": 3,
@@ -4032,7 +4032,7 @@
   },
   "main/docs/secure/data-privacy-and-compliance/data-processing.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 1,
+    "outboundLinks": 3,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -4042,10 +4042,10 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 1
+    "deadEndScore": 0.3333
   },
   "main/docs/secure/data-privacy-and-compliance/gdpr.mdx": {
-    "inboundLinks": 9,
+    "inboundLinks": 8,
     "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 5,
@@ -4054,9 +4054,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 9,
+    "hubScore": 8,
     "deadEnd": false,
-    "deadEndScore": 1.8
+    "deadEndScore": 1.6
   },
   "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-conditions-for-consent.mdx": {
     "inboundLinks": 5,
@@ -6415,17 +6415,18 @@
     "inboundLinks": 0,
     "outboundLinks": 5,
     "importedBy": 0,
-    "orphanNav": true,
+    "navDepth": 4,
+    "orphanNav": false,
     "orphanLinks": true,
-    "orphanTrue": true,
-    "orphanReference": false,
+    "orphanTrue": false,
+    "orphanReference": true,
     "deepNav": false,
     "hubScore": 0,
     "deadEnd": false,
     "deadEndScore": 0
   },
   "main/docs/manage-users/user-migration/bulk-user-imports.mdx": {
-    "inboundLinks": 10,
+    "inboundLinks": 11,
     "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
@@ -6434,12 +6435,12 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 10,
+    "hubScore": 11,
     "deadEnd": false,
-    "deadEndScore": 1.6667
+    "deadEndScore": 1.8333
   },
   "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx": {
-    "inboundLinks": 15,
+    "inboundLinks": 14,
     "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
@@ -6448,9 +6449,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 15,
+    "hubScore": 14,
     "deadEnd": false,
-    "deadEndScore": 1.875
+    "deadEndScore": 1.75
   },
   "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx": {
     "inboundLinks": 0,
@@ -6493,7 +6494,7 @@
     "deadEndScore": 2.25
   },
   "main/docs/manage-users/user-migration/user-migration-scenarios.mdx": {
-    "inboundLinks": 4,
+    "inboundLinks": 5,
     "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 4,
@@ -6502,9 +6503,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 4,
+    "hubScore": 5,
     "deadEnd": false,
-    "deadEndScore": 0.6667
+    "deadEndScore": 0.8333
   },
   "main/docs/manage-users/user-accounts/block-and-unblock-users.mdx": {
     "inboundLinks": 4,
@@ -6592,7 +6593,7 @@
   },
   "main/docs/manage-users/user-accounts/identify-users.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 2,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -6602,7 +6603,7 @@
     "deepNav": false,
     "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 2
+    "deadEndScore": 4
   },
   "main/docs/manage-users/user-accounts/manage-user-access-to-applications.mdx": {
     "inboundLinks": 3,
@@ -6619,7 +6620,7 @@
     "deadEndScore": 0.6
   },
   "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": {
-    "inboundLinks": 3,
+    "inboundLinks": 4,
     "outboundLinks": 5,
     "importedBy": 0,
     "navDepth": 4,
@@ -6628,12 +6629,12 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 3,
+    "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 0.6
+    "deadEndScore": 0.8
   },
   "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx": {
-    "inboundLinks": 3,
+    "inboundLinks": 4,
     "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 4,
@@ -6642,9 +6643,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 3,
+    "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 0.2727
+    "deadEndScore": 0.3636
   },
   "main/docs/manage-users/user-accounts/metadata.mdx": {
     "inboundLinks": 30,
@@ -26354,7 +26355,7 @@
   },
   "main/docs/authenticate/database-connections.mdx": {
     "inboundLinks": 30,
-    "outboundLinks": 6,
+    "outboundLinks": 11,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -26364,7 +26365,7 @@
     "deepNav": false,
     "hubScore": 30,
     "deadEnd": false,
-    "deadEndScore": 5
+    "deadEndScore": 2.7273
   },
   "main/docs/authenticate/enterprise-connections.mdx": {
     "inboundLinks": 8,
@@ -28829,20 +28830,6 @@
     "deadEnd": false,
     "deadEndScore": 3
   },
-  "main/docs/authenticate/database-connections/auth0-user-store.mdx": {
-    "inboundLinks": 1,
-    "outboundLinks": 4,
-    "importedBy": 0,
-    "navDepth": 4,
-    "orphanNav": false,
-    "orphanLinks": false,
-    "orphanTrue": false,
-    "orphanReference": false,
-    "deepNav": false,
-    "hubScore": 1,
-    "deadEnd": false,
-    "deadEndScore": 0.25
-  },
   "main/docs/authenticate/database-connections/custom-db.mdx": {
     "inboundLinks": 18,
     "outboundLinks": 11,
@@ -28942,7 +28929,7 @@
     "deadEndScore": 4
   },
   "main/docs/authenticate/database-connections/password-strength.mdx": {
-    "inboundLinks": 7,
+    "inboundLinks": 6,
     "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
@@ -28951,9 +28938,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 7,
+    "hubScore": 6,
     "deadEnd": false,
-    "deadEndScore": 1.75
+    "deadEndScore": 1.5
   },
   "main/docs/authenticate/database-connections/require-username.mdx": {
     "inboundLinks": 4,
@@ -28970,7 +28957,7 @@
     "deadEndScore": 4
   },
   "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
-    "inboundLinks": 1,
+    "inboundLinks": 2,
     "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
@@ -28979,9 +28966,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 1,
+    "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 0.1667
+    "deadEndScore": 0.3333
   },
   "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": {
     "inboundLinks": 0,
@@ -29024,7 +29011,7 @@
     "deadEndScore": 0.3333
   },
   "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx": {
-    "inboundLinks": 18,
+    "inboundLinks": 19,
     "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 5,
@@ -29033,9 +29020,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 18,
+    "hubScore": 19,
     "deadEnd": false,
-    "deadEndScore": 1.8
+    "deadEndScore": 1.9
   },
   "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts.mdx": {
     "inboundLinks": 4,
@@ -29066,7 +29053,7 @@
     "deadEndScore": 2.3333
   },
   "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx": {
-    "inboundLinks": 5,
+    "inboundLinks": 6,
     "outboundLinks": 7,
     "importedBy": 0,
     "navDepth": 5,
@@ -29075,9 +29062,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 5,
+    "hubScore": 6,
     "deadEnd": false,
-    "deadEndScore": 0.7143
+    "deadEndScore": 0.8571
   },
   "main/docs/authenticate/database-connections/custom-db/templates.mdx": {
     "inboundLinks": 11,
@@ -29554,8 +29541,8 @@
   "main/snippets/recipe.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 59,
-    "impactPages": 59,
+    "importedBy": 60,
+    "impactPages": 60,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,

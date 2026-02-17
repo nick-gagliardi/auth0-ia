@@ -2253,9 +2253,9 @@
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx": [
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits.mdx",
-      "score": 0.6083,
+      "score": 0.6082,
       "simOut": 1,
-      "simIn": 0.0208,
+      "simIn": 0.0204,
       "sharedOut": 10,
       "sharedIn": 1,
       "reasons": [
@@ -2295,9 +2295,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.1134,
+      "score": 0.113,
       "simOut": 0.1538,
-      "simIn": 0.0526,
+      "simIn": 0.0517,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -2351,9 +2351,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/load-testing-policy.mdx",
-      "score": 0.0949,
+      "score": 0.0938,
       "simOut": 0.0769,
-      "simIn": 0.122,
+      "simIn": 0.119,
       "sharedOut": 1,
       "sharedIn": 5,
       "reasons": [
@@ -2365,9 +2365,9 @@
     },
     {
       "id": "main/docs/libraries/common-auth0-library-authentication-errors.mdx",
-      "score": 0.0872,
+      "score": 0.0862,
       "simOut": 0.0769,
-      "simIn": 0.1026,
+      "simIn": 0.1,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -2551,9 +2551,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/bot-detection.mdx",
-      "score": 0.1267,
+      "score": 0.1308,
       "simOut": 0.1667,
-      "simIn": 0.0667,
+      "simIn": 0.0769,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -2623,9 +2623,9 @@
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits.mdx": [
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.6083,
+      "score": 0.6082,
       "simOut": 1,
-      "simIn": 0.0208,
+      "simIn": 0.0204,
       "sharedOut": 10,
       "sharedIn": 1,
       "reasons": [
@@ -3759,9 +3759,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.1189,
+      "score": 0.1157,
       "simOut": 0.0769,
-      "simIn": 0.1818,
+      "simIn": 0.1739,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -3873,9 +3873,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.1227,
+      "score": 0.1196,
       "simOut": 0.0833,
-      "simIn": 0.1818,
+      "simIn": 0.1739,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -4301,9 +4301,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.2182,
+      "score": 0.2111,
       "simOut": 0.0909,
-      "simIn": 0.4091,
+      "simIn": 0.3913,
       "sharedOut": 1,
       "sharedIn": 9,
       "reasons": [
@@ -4358,38 +4358,10 @@
   ],
   "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx": [
     {
-      "id": "main/docs/customize/extensions.mdx",
-      "score": 0.2182,
-      "simOut": 0.0909,
-      "simIn": 0.4091,
-      "sharedOut": 1,
-      "sharedIn": 9,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.2028,
+      "score": 0.2194,
       "simOut": 0.3077,
-      "simIn": 0.0455,
-      "sharedOut": 4,
-      "sharedIn": 1,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts/environment.mdx",
-      "score": 0.1964,
-      "simOut": 0.2667,
-      "simIn": 0.0909,
+      "simIn": 0.087,
       "sharedOut": 4,
       "sharedIn": 2,
       "reasons": [
@@ -4400,10 +4372,52 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/customize/extensions.mdx",
+      "score": 0.2111,
+      "simOut": 0.0909,
+      "simIn": 0.3913,
+      "sharedOut": 1,
+      "sharedIn": 9,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts/environment.mdx",
+      "score": 0.1948,
+      "simOut": 0.2667,
+      "simIn": 0.087,
+      "sharedOut": 4,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
+      "score": 0.1711,
+      "simOut": 0.2667,
+      "simIn": 0.0278,
+      "sharedOut": 4,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/customize/hooks/hook-secrets.mdx",
-      "score": 0.1778,
+      "score": 0.1684,
       "simOut": 0,
-      "simIn": 0.4444,
+      "simIn": 0.4211,
       "sharedOut": 0,
       "sharedIn": 8,
       "reasons": [
@@ -4414,24 +4428,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
-      "score": 0.16,
-      "simOut": 0.2667,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/customize/rules/configuration.mdx",
-      "score": 0.16,
+      "score": 0.1524,
       "simOut": 0,
-      "simIn": 0.4,
+      "simIn": 0.381,
       "sharedOut": 0,
       "sharedIn": 8,
       "reasons": [
@@ -4443,9 +4443,9 @@
     },
     {
       "id": "main/docs/customize/hooks.mdx",
-      "score": 0.13,
+      "score": 0.1285,
       "simOut": 0.1333,
-      "simIn": 0.125,
+      "simIn": 0.1212,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -4456,10 +4456,24 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/database-connections/custom-db/templates.mdx",
+      "score": 0.1282,
+      "simOut": 0.1111,
+      "simIn": 0.1538,
+      "sharedOut": 2,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/penetration-testing-policy.mdx",
-      "score": 0.1227,
+      "score": 0.1196,
       "simOut": 0.0833,
-      "simIn": 0.1818,
+      "simIn": 0.1739,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -4471,9 +4485,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/load-testing-policy.mdx",
-      "score": 0.1189,
+      "score": 0.1157,
       "simOut": 0.0769,
-      "simIn": 0.1818,
+      "simIn": 0.1739,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -4481,20 +4495,6 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "score": 0.1128,
-      "simOut": 0.1111,
-      "simIn": 0.1154,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
       "highValueConvergence": false
     }
   ],
@@ -5539,6 +5539,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/database-connections.mdx",
+      "score": 0.1158,
+      "simOut": 0.15,
+      "simIn": 0.0645,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "score": 0.1121,
       "simOut": 0.1034,
@@ -5592,20 +5606,6 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
-      "score": 0.0529,
-      "simOut": 0.0882,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
       "highValueConvergence": false
     }
   ],
@@ -5823,6 +5823,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/database-connections.mdx",
+      "score": 0.0849,
+      "simOut": 0.12,
+      "simIn": 0.0323,
+      "sharedOut": 3,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
       "score": 0.0811,
       "simOut": 0.1351,
@@ -5877,20 +5891,6 @@
       "isCrossNav": true,
       "diffFolder": true,
       "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/architecture-scenarios/business-to-business/architecture.mdx",
-      "score": 0.0643,
-      "simOut": 0.1071,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
     }
   ],
   "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx": [
@@ -5938,9 +5938,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.0838,
+      "score": 0.0816,
       "simOut": 0.0526,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -5973,6 +5973,150 @@
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
+  "main/docs/authenticate/database-connections.mdx": [
+    {
+      "id": "main/docs/manage-users/user-migration.mdx",
+      "score": 0.1855,
+      "simOut": 0.2308,
+      "simIn": 0.1176,
+      "sharedOut": 3,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
+      "score": 0.1524,
+      "simOut": 0.1765,
+      "simIn": 0.1163,
+      "sharedOut": 3,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/import-user-mfa-authenticator-enrollments.mdx",
+      "score": 0.15,
+      "simOut": 0.25,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
+      "score": 0.1158,
+      "simOut": 0.15,
+      "simIn": 0.0645,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
+      "score": 0.0849,
+      "simOut": 0.12,
+      "simIn": 0.0323,
+      "sharedOut": 3,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db/error-handling.mdx",
+      "score": 0.0814,
+      "simOut": 0.0769,
+      "simIn": 0.0882,
+      "sharedOut": 1,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db/templates.mdx",
+      "score": 0.0616,
+      "simOut": 0.05,
+      "simIn": 0.0789,
+      "sharedOut": 1,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/identity-providers.mdx",
+      "score": 0.0582,
+      "simOut": 0,
+      "simIn": 0.1455,
+      "sharedOut": 0,
+      "sharedIn": 8,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
+      "score": 0.0556,
+      "simOut": 0,
+      "simIn": 0.1389,
+      "sharedOut": 0,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
+      "score": 0.0545,
+      "simOut": 0,
+      "simIn": 0.1364,
+      "sharedOut": 0,
+      "sharedIn": 6,
+      "reasons": [
+        "shared_inbound"
       ],
       "isCrossNav": true,
       "diffFolder": true,
@@ -8277,9 +8421,9 @@
     },
     {
       "id": "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx",
-      "score": 0.1,
+      "score": 0.0923,
       "simOut": 0,
-      "simIn": 0.25,
+      "simIn": 0.2308,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -8347,9 +8491,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0255,
+      "score": 0.025,
       "simOut": 0,
-      "simIn": 0.0638,
+      "simIn": 0.0625,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -8903,6 +9047,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/secure/data-privacy-and-compliance/gdpr.mdx",
+      "score": 0.12,
+      "simOut": 0,
+      "simIn": 0.3,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/get-started/architecture-scenarios/business-to-business/logout.mdx",
       "score": 0.1125,
       "simOut": 0.1875,
@@ -8911,20 +9069,6 @@
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/data-privacy-and-compliance/gdpr.mdx",
-      "score": 0.1091,
-      "simOut": 0,
-      "simIn": 0.2727,
-      "sharedOut": 0,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
       ],
       "isCrossNav": true,
       "diffFolder": true,
@@ -14489,9 +14633,9 @@
   "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts/environment.mdx": [
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.1964,
+      "score": 0.1948,
       "simOut": 0.2667,
-      "simIn": 0.0909,
+      "simIn": 0.087,
       "sharedOut": 4,
       "sharedIn": 2,
       "reasons": [
@@ -14864,9 +15008,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0602,
+      "score": 0.0597,
       "simOut": 0.0526,
-      "simIn": 0.0714,
+      "simIn": 0.0704,
       "sharedOut": 1,
       "sharedIn": 5,
       "reasons": [
@@ -15849,11 +15993,11 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "score": 0.1385,
+      "score": 0.1651,
       "simOut": 0.2308,
-      "simIn": 0,
+      "simIn": 0.0667,
       "sharedOut": 3,
-      "sharedIn": 0,
+      "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
@@ -17331,9 +17475,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "score": 0.1667,
+      "score": 0.1686,
       "simOut": 0.2143,
-      "simIn": 0.0952,
+      "simIn": 0.1,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -17345,9 +17489,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.12,
+      "score": 0.1091,
       "simOut": 0,
-      "simIn": 0.3,
+      "simIn": 0.2727,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -17479,9 +17623,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.1143,
+      "score": 0.1067,
       "simOut": 0,
-      "simIn": 0.2857,
+      "simIn": 0.2667,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -17493,9 +17637,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
-      "score": 0.1062,
+      "score": 0.1033,
       "simOut": 0.0769,
-      "simIn": 0.15,
+      "simIn": 0.1429,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -20186,9 +20330,23 @@
   "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx": [
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.2028,
+      "score": 0.2194,
       "simOut": 0.3077,
-      "simIn": 0.0455,
+      "simIn": 0.087,
+      "sharedOut": 4,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
+      "score": 0.2174,
+      "simOut": 0.3333,
+      "simIn": 0.0435,
       "sharedOut": 4,
       "sharedIn": 1,
       "reasons": [
@@ -20199,24 +20357,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
-      "score": 0.2,
-      "simOut": 0.3333,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/get-user.mdx",
-      "score": 0.1257,
+      "score": 0.12,
       "simOut": 0.0667,
-      "simIn": 0.2143,
+      "simIn": 0.2,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -20228,9 +20372,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/create.mdx",
-      "score": 0.12,
+      "score": 0.1091,
       "simOut": 0,
-      "simIn": 0.3,
+      "simIn": 0.2727,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -20242,9 +20386,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/login.mdx",
-      "score": 0.1143,
+      "score": 0.1067,
       "simOut": 0,
-      "simIn": 0.2857,
+      "simIn": 0.2667,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -20256,9 +20400,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/delete.mdx",
-      "score": 0.1091,
+      "score": 0.1,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.25,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -20270,9 +20414,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/verify.mdx",
-      "score": 0.1091,
+      "score": 0.1,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.25,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -22631,11 +22775,11 @@
   "main/docs/authenticate/database-connections/custom-db.mdx": [
     {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.2,
+      "score": 0.2174,
       "simOut": 0.3333,
-      "simIn": 0,
+      "simIn": 0.0435,
       "sharedOut": 4,
-      "sharedIn": 0,
+      "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
@@ -22645,11 +22789,11 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.16,
+      "score": 0.1711,
       "simOut": 0.2667,
-      "simIn": 0,
+      "simIn": 0.0278,
       "sharedOut": 4,
-      "sharedIn": 0,
+      "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
@@ -22658,10 +22802,25 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/database-connections.mdx",
+      "score": 0.1524,
+      "simOut": 0.1765,
+      "simIn": 0.1163,
+      "sharedOut": 3,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "score": 0.1257,
+      "score": 0.1271,
       "simOut": 0.1429,
-      "simIn": 0.1,
+      "simIn": 0.1034,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -22683,20 +22842,6 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/database-connections.mdx",
-      "score": 0.0894,
-      "simOut": 0.0714,
-      "simIn": 0.1163,
-      "sharedOut": 1,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -22728,6 +22873,34 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
+      "score": 0.06,
+      "simOut": 0,
+      "simIn": 0.15,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "score": 0.0462,
+      "simOut": 0,
+      "simIn": 0.1154,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/authenticate/identity-providers.mdx",
       "score": 0.034,
       "simOut": 0,
@@ -22739,34 +22912,6 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/libraries.mdx",
-      "score": 0.0293,
-      "simOut": 0,
-      "simIn": 0.0732,
-      "sharedOut": 0,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0226,
-      "simOut": 0,
-      "simIn": 0.0566,
-      "sharedOut": 0,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -22891,9 +23036,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.1257,
+      "score": 0.12,
       "simOut": 0.0667,
-      "simIn": 0.2143,
+      "simIn": 0.2,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -27924,11 +28069,11 @@
   "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx": [
     {
       "id": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "score": 0.2889,
+      "score": 0.3137,
       "simOut": 0.4444,
-      "simIn": 0.0556,
+      "simIn": 0.1176,
       "sharedOut": 4,
-      "sharedIn": 1,
+      "sharedIn": 2,
       "reasons": [
         "shared_outbound"
       ],
@@ -27937,10 +28082,24 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "score": 0.1809,
+      "simOut": 0.0909,
+      "simIn": 0.3158,
+      "sharedOut": 1,
+      "sharedIn": 6,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/create.mdx",
-      "score": 0.1667,
+      "score": 0.1686,
       "simOut": 0.2143,
-      "simIn": 0.0952,
+      "simIn": 0.1,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -27951,24 +28110,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
-      "score": 0.1545,
-      "simOut": 0.0909,
-      "simIn": 0.25,
-      "sharedOut": 1,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/change-password.mdx",
-      "score": 0.1495,
+      "score": 0.1523,
       "simOut": 0.1538,
-      "simIn": 0.1429,
+      "simIn": 0.15,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -27980,9 +28125,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db.mdx",
-      "score": 0.1257,
+      "score": 0.1271,
       "simOut": 0.1429,
-      "simIn": 0.1,
+      "simIn": 0.1034,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -28008,9 +28153,9 @@
     },
     {
       "id": "main/docs/manage-users/user-accounts/user-profiles/normalized-user-profile-schema.mdx",
-      "score": 0.0706,
+      "score": 0.075,
       "simOut": 0,
-      "simIn": 0.1765,
+      "simIn": 0.1875,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -28711,9 +28856,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.1134,
+      "score": 0.113,
       "simOut": 0.1538,
-      "simIn": 0.0526,
+      "simIn": 0.0517,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -44042,9 +44187,9 @@
   "main/docs/manage-users/user-migration.mdx": [
     {
       "id": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "score": 0.305,
+      "score": 0.2977,
       "simOut": 0.375,
-      "simIn": 0.2,
+      "simIn": 0.1818,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -44056,12 +44201,13 @@
     },
     {
       "id": "main/docs/authenticate/database-connections.mdx",
-      "score": 0.1804,
-      "simOut": 0.2222,
+      "score": 0.1855,
+      "simOut": 0.2308,
       "simIn": 0.1176,
-      "sharedOut": 2,
+      "sharedOut": 3,
       "sharedIn": 4,
       "reasons": [
+        "shared_outbound",
         "shared_inbound"
       ],
       "isCrossNav": true,
@@ -44112,9 +44258,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.0522,
+      "score": 0.05,
       "simOut": 0,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -44126,9 +44272,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0279,
+      "score": 0.0273,
       "simOut": 0,
-      "simIn": 0.0698,
+      "simIn": 0.0682,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -44155,10 +44301,24 @@
   ],
   "main/docs/manage-users/user-migration/user-migration-scenarios.mdx": [
     {
+      "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
+      "score": 0.3137,
+      "simOut": 0.4444,
+      "simIn": 0.1176,
+      "sharedOut": 4,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/manage-users/user-migration.mdx",
-      "score": 0.305,
+      "score": 0.2977,
       "simOut": 0.375,
-      "simIn": 0.2,
+      "simIn": 0.1818,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -44169,26 +44329,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "score": 0.2889,
-      "simOut": 0.4444,
-      "simIn": 0.0556,
-      "sharedOut": 4,
-      "sharedIn": 1,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "score": 0.1385,
+      "score": 0.1651,
       "simOut": 0.2308,
-      "simIn": 0,
+      "simIn": 0.0667,
       "sharedOut": 3,
-      "sharedIn": 0,
+      "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
@@ -44198,9 +44344,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
-      "score": 0.12,
+      "score": 0.1091,
       "simOut": 0,
-      "simIn": 0.3,
+      "simIn": 0.2727,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -44209,16 +44355,44 @@
       "isCrossNav": false,
       "diffFolder": false,
       "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
+      "score": 0.06,
+      "simOut": 0,
+      "simIn": 0.15,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+      "score": 0.0293,
+      "simOut": 0,
+      "simIn": 0.0732,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
     }
   ],
   "main/docs/manage-users/user-migration/bulk-user-imports.mdx": [
     {
       "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "score": 0.1545,
+      "score": 0.1809,
       "simOut": 0.0909,
-      "simIn": 0.25,
+      "simIn": 0.3158,
       "sharedOut": 1,
-      "sharedIn": 5,
+      "sharedIn": 6,
       "reasons": [
         "shared_inbound"
       ],
@@ -44228,9 +44402,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
-      "score": 0.15,
+      "score": 0.1456,
       "simOut": 0.125,
-      "simIn": 0.1875,
+      "simIn": 0.1765,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -44242,9 +44416,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/templates/login.mdx",
-      "score": 0.1062,
+      "score": 0.1033,
       "simOut": 0.0769,
-      "simIn": 0.15,
+      "simIn": 0.1429,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -44255,10 +44429,24 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/user-accounts/metadata.mdx",
-      "score": 0.0324,
+      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
+      "score": 0.0462,
       "simOut": 0,
-      "simIn": 0.0811,
+      "simIn": 0.1154,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/user-accounts/metadata.mdx",
+      "score": 0.0316,
+      "simOut": 0,
+      "simIn": 0.0789,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -45623,9 +45811,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx",
-      "score": 0.1025,
+      "score": 0.1007,
       "simOut": 0.0909,
-      "simIn": 0.12,
+      "simIn": 0.1154,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -45753,9 +45941,9 @@
   "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx": [
     {
       "id": "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-      "score": 0.1025,
+      "score": 0.1007,
       "simOut": 0.0909,
-      "simIn": 0.12,
+      "simIn": 0.1154,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -45767,9 +45955,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.016,
+      "score": 0.0158,
       "simOut": 0,
-      "simIn": 0.04,
+      "simIn": 0.0395,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -46144,12 +46332,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.0923,
+      "id": "main/docs/get-started/architecture-scenarios/business-to-consumer/architecture.mdx",
+      "score": 0.0889,
       "simOut": 0,
-      "simIn": 0.2308,
+      "simIn": 0.2222,
       "sharedOut": 0,
-      "sharedIn": 6,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -46158,12 +46346,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/get-started/architecture-scenarios/business-to-consumer/architecture.mdx",
+      "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
       "score": 0.0889,
       "simOut": 0,
       "simIn": 0.2222,
       "sharedOut": 0,
-      "sharedIn": 4,
+      "sharedIn": 6,
       "reasons": [
         "shared_inbound"
       ],
@@ -46619,9 +46807,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0872,
+      "score": 0.0862,
       "simOut": 0.0769,
-      "simIn": 0.1026,
+      "simIn": 0.1,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -47394,148 +47582,6 @@
       "simIn": 0.04,
       "sharedOut": 0,
       "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/authenticate/database-connections.mdx": [
-    {
-      "id": "main/docs/authenticate/database-connections/auth0-user-store.mdx",
-      "score": 0.4,
-      "simOut": 0.6667,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/manage-users/user-migration.mdx",
-      "score": 0.1804,
-      "simOut": 0.2222,
-      "simIn": 0.1176,
-      "sharedOut": 2,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/custom-db/error-handling.mdx",
-      "score": 0.1103,
-      "simOut": 0.125,
-      "simIn": 0.0882,
-      "sharedOut": 1,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/custom-db.mdx",
-      "score": 0.0894,
-      "simOut": 0.0714,
-      "simIn": 0.1163,
-      "sharedOut": 1,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "score": 0.0716,
-      "simOut": 0.0667,
-      "simIn": 0.0789,
-      "sharedOut": 1,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0582,
-      "simOut": 0,
-      "simIn": 0.1455,
-      "sharedOut": 0,
-      "sharedIn": 8,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
-      "score": 0.0556,
-      "simOut": 0,
-      "simIn": 0.1389,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
-      "score": 0.0545,
-      "simOut": 0,
-      "simIn": 0.1364,
-      "sharedOut": 0,
-      "sharedIn": 6,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
-      "score": 0.0541,
-      "simOut": 0,
-      "simIn": 0.1351,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
-      "score": 0.0457,
-      "simOut": 0,
-      "simIn": 0.1143,
-      "sharedOut": 0,
-      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -48584,9 +48630,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
-      "score": 0.15,
+      "score": 0.1456,
       "simOut": 0.125,
-      "simIn": 0.1875,
+      "simIn": 0.1765,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -48598,9 +48644,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "score": 0.12,
+      "score": 0.1091,
       "simOut": 0,
-      "simIn": 0.3,
+      "simIn": 0.2727,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -55242,20 +55288,6 @@
   ],
   "main/docs/authenticate/database-connections/custom-db/error-handling.mdx": [
     {
-      "id": "main/docs/authenticate/database-connections.mdx",
-      "score": 0.1103,
-      "simOut": 0.125,
-      "simIn": 0.0882,
-      "sharedOut": 1,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/manage-users/user-migration.mdx",
       "score": 0.1,
       "simOut": 0,
@@ -55267,6 +55299,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/database-connections.mdx",
+      "score": 0.0814,
+      "simOut": 0.0769,
+      "simIn": 0.0882,
+      "sharedOut": 1,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -57419,19 +57465,19 @@
       "highValueConvergence": false
     }
   ],
-  "main/docs/authenticate/database-connections/auth0-user-store.mdx": [
+  "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa/import-user-mfa-authenticator-enrollments.mdx": [
     {
       "id": "main/docs/authenticate/database-connections.mdx",
-      "score": 0.4,
-      "simOut": 0.6667,
+      "score": 0.15,
+      "simOut": 0.25,
       "simIn": 0,
-      "sharedOut": 4,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
-      "diffFolder": false,
+      "isCrossNav": true,
+      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -57676,9 +57722,9 @@
     },
     {
       "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "score": 0.1495,
+      "score": 0.1523,
       "simOut": 0.1538,
-      "simIn": 0.1429,
+      "simIn": 0.15,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -57810,9 +57856,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.1091,
+      "score": 0.1,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.25,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -57944,9 +57990,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "score": 0.1091,
+      "score": 0.1,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.25,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -58581,9 +58627,9 @@
   "main/docs/secure/data-privacy-and-compliance/gdpr.mdx": [
     {
       "id": "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-right-to-access-correct-and-erase-data.mdx",
-      "score": 0.5371,
+      "score": 0.5415,
       "simOut": 0.8,
-      "simIn": 0.1429,
+      "simIn": 0.1538,
       "sharedOut": 4,
       "sharedIn": 2,
       "reasons": [
@@ -58651,9 +58697,9 @@
     },
     {
       "id": "main/docs/authenticate/login/logout/back-channel-logout.mdx",
-      "score": 0.1091,
+      "score": 0.12,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.3,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -58665,9 +58711,9 @@
     },
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "score": 0.0324,
+      "score": 0.0333,
       "simOut": 0,
-      "simIn": 0.0811,
+      "simIn": 0.0833,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -58954,9 +59000,9 @@
     },
     {
       "id": "main/docs/secure/data-privacy-and-compliance/gdpr.mdx",
-      "score": 0.5371,
+      "score": 0.5415,
       "simOut": 0.8,
-      "simIn": 0.1429,
+      "simIn": 0.1538,
       "sharedOut": 4,
       "sharedIn": 2,
       "reasons": [
@@ -63954,9 +64000,9 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "score": 0.0444,
+      "score": 0.0432,
       "simOut": 0,
-      "simIn": 0.1111,
+      "simIn": 0.1081,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -64376,9 +64422,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0508,
+      "score": 0.05,
       "simOut": 0,
-      "simIn": 0.127,
+      "simIn": 0.125,
       "sharedOut": 0,
       "sharedIn": 8,
       "reasons": [
@@ -64459,12 +64505,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx",
-      "score": 0.0364,
+      "id": "main/docs/customize/rules.mdx",
+      "score": 0.0356,
       "simOut": 0,
-      "simIn": 0.0909,
+      "simIn": 0.0889,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 8,
       "reasons": [
         "shared_inbound"
       ],
@@ -64473,12 +64519,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/rules.mdx",
-      "score": 0.0356,
+      "id": "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx",
+      "score": 0.0353,
       "simOut": 0,
-      "simIn": 0.0889,
+      "simIn": 0.0882,
       "sharedOut": 0,
-      "sharedIn": 8,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -64732,9 +64778,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.034,
+      "score": 0.0333,
       "simOut": 0,
-      "simIn": 0.0851,
+      "simIn": 0.0833,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -64776,9 +64822,9 @@
   "main/docs/manage-users/user-accounts/block-and-unblock-users.mdx": [
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0308,
+      "score": 0.03,
       "simOut": 0,
-      "simIn": 0.0769,
+      "simIn": 0.075,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -64806,9 +64852,9 @@
   "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx": [
     {
       "id": "main/docs/manage-users/user-accounts/user-profiles/normalized-user-profiles.mdx",
-      "score": 0.1,
+      "score": 0.0923,
       "simOut": 0,
-      "simIn": 0.25,
+      "simIn": 0.2308,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -64820,9 +64866,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0364,
+      "score": 0.0353,
       "simOut": 0,
-      "simIn": 0.0909,
+      "simIn": 0.0882,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -66220,9 +66266,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0308,
+      "score": 0.03,
       "simOut": 0,
-      "simIn": 0.0769,
+      "simIn": 0.075,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -67304,9 +67350,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0421,
+      "score": 0.041,
       "simOut": 0,
-      "simIn": 0.1053,
+      "simIn": 0.1026,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -68028,9 +68074,9 @@
   "main/docs/manage-users/user-accounts/user-profiles/normalized-user-profile-schema.mdx": [
     {
       "id": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "score": 0.0706,
+      "score": 0.075,
       "simOut": 0,
-      "simIn": 0.1765,
+      "simIn": 0.1875,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
