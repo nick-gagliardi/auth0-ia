@@ -391,6 +391,18 @@ export type AuditSuggestion = {
   context?: string;      // Surrounding context for display
 };
 
+// AI-generated suggestions (not auto-applicable)
+export type AiSuggestionCategory = 'grammar' | 'clarity' | 'technical' | 'content-gap' | 'link-suggestion' | 'tone';
+
+export type AiSuggestion = {
+  category: AiSuggestionCategory;
+  title: string;
+  description: string;
+  original?: string;
+  suggestion?: string;
+  line?: number;
+};
+
 export type AuditResult = {
   ok: boolean;
   error?: string;
@@ -401,6 +413,7 @@ export type AuditResult = {
   screenshot?: string; // base64 PNG
   checks: AuditCheckItem[];
   suggestions?: AuditSuggestion[];  // Actionable suggestions with accept/decline
+  aiSuggestions?: AiSuggestion[];   // AI-generated suggestions (review only)
   summary: {
     pass: number;
     fail: number;

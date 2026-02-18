@@ -21,7 +21,9 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
-import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion } from '@/types';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion, AiSuggestion } from '@/types';
 
 function StatusIcon({ status }: { status: AuditCheckStatus }) {
   switch (status) {
@@ -96,6 +98,9 @@ export default function AuditPage() {
   const [creatingPr, setCreatingPr] = useState(false);
   const [prUrl, setPrUrl] = useState<string | null>(null);
   const [prError, setPrError] = useState<string | null>(null);
+  const [includeAiSuggestions, setIncludeAiSuggestions] = useState(false);
+  const [expandedAiItems, setExpandedAiItems] = useState<Set<number>>(new Set());
+  const [acceptedAiSuggestions, setAcceptedAiSuggestions] = useState<Set<number>>(new Set());
 
   const toggleItem = (id: string) => {
     const next = new Set(expandedItems);
@@ -125,6 +130,44 @@ export default function AuditPage() {
     }
   };
 
+  const toggleAiSuggestion = (idx: number) => {
+    const next = new Set(acceptedAiSuggestions);
+    if (next.has(idx)) {
+      next.delete(idx);
+    } else {
+      next.add(idx);
+    }
+    setAcceptedAiSuggestions(next);
+  };
+
+  // Check if AI suggestion looks like actual replacement text (not an instruction)
+  const isValidAiSuggestion = (s: AiSuggestion): boolean => {
+    if (!s.original || !s.suggestion) return false;
+    // Check if suggestion looks like an instruction rather than replacement text
+    const instructionPatterns = [
+      /^(remove|delete|add|insert|replace|change|update|fix|correct|modify|consider|should|could|would|ensure|make sure)/i,
+      /^(the|this|that|a|an)\s+(section|paragraph|sentence|text|content|line)/i,
+    ];
+    for (const pattern of instructionPatterns) {
+      if (pattern.test(s.suggestion.trim())) return false;
+    }
+    // Suggestion should not be much longer than original (likely an instruction)
+    if (s.suggestion.length > s.original.length * 3 && s.suggestion.length > 200) return false;
+    return true;
+  };
+
+  const toggleAllAiSuggestions = (accept: boolean) => {
+    if (accept && result?.aiSuggestions) {
+      // Only select suggestions that have valid replacement text
+      const applicableIndices = result.aiSuggestions
+        .map((s, idx) => isValidAiSuggestion(s) ? idx : -1)
+        .filter(idx => idx !== -1);
+      setAcceptedAiSuggestions(new Set(applicableIndices));
+    } else {
+      setAcceptedAiSuggestions(new Set());
+    }
+  };
+
   const runAudit = async () => {
     if (!url.trim()) return;
 
@@ -132,6 +175,7 @@ export default function AuditPage() {
     setResult(null);
     setExpandedItems(new Set());
     setAcceptedSuggestions(new Set());
+    setAcceptedAiSuggestions(new Set());
     setPrUrl(null);
     setPrError(null);
 
@@ -139,7 +183,7 @@ export default function AuditPage() {
       const res = await fetch('/api/audit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ input: url.trim() }),
+        body: JSON.stringify({ input: url.trim(), includeAiSuggestions }),
       });
 
       const data = await res.json();
@@ -148,6 +192,14 @@ export default function AuditPage() {
       // Initialize all suggestions as accepted by default
       if (data.suggestions?.length > 0) {
         setAcceptedSuggestions(new Set(data.suggestions.map((s: AuditSuggestion) => s.id)));
+      }
+
+      // Initialize applicable AI suggestions as accepted by default
+      if (data.aiSuggestions?.length > 0) {
+        const applicableIndices = data.aiSuggestions
+          .map((s: AiSuggestion, idx: number) => isValidAiSuggestion(s) ? idx : -1)
+          .filter((idx: number) => idx !== -1);
+        setAcceptedAiSuggestions(new Set(applicableIndices));
       }
 
       if (!data.ok) {
@@ -207,39 +259,58 @@ export default function AuditPage() {
       // Get accepted suggestions to apply
       const suggestionsToApply = result.suggestions?.filter(s => acceptedSuggestions.has(s.id)) || [];
 
+      // Get accepted AI suggestions to apply (convert to same format)
+      const aiSuggestionsToApply = result.aiSuggestions
+        ?.map((s, idx) => ({ ...s, idx }))
+        .filter(s => acceptedAiSuggestions.has(s.idx) && isValidAiSuggestion(s))
+        .map((s, i) => ({
+          id: `ai-${s.idx}`,
+          type: `ai-${s.category}`,
+          description: s.title,
+          line: s.line,
+          original: s.original!,
+          suggestion: s.suggestion!,
+          context: s.description,
+        })) || [];
+
+      // Combine all suggestions
+      const allSuggestions = [...suggestionsToApply, ...aiSuggestionsToApply];
+
       // Group suggestions by type for the PR body
       const suggestionsByType: Record<string, typeof suggestionsToApply> = {};
-      for (const s of suggestionsToApply) {
+      for (const s of allSuggestions) {
         if (!suggestionsByType[s.type]) suggestionsByType[s.type] = [];
         suggestionsByType[s.type].push(s);
       }
 
       // Build automated fixes section
       const fixesLines: string[] = [];
-      if (suggestionsToApply.length > 0) {
+      if (allSuggestions.length > 0) {
         fixesLines.push('', '## Automated Fixes', '');
         fixesLines.push(`- validatedOn set to: ${validatedOn}`);
 
+        const getTypeLabel = (type: string) => {
+          if (type === 'tooltip') return 'Glossary tooltips added';
+          if (type === 'heading-case') return 'Heading capitalization fixes';
+          if (type === 'callout-migration') return 'Legacy callouts migrated';
+          if (type === 'heading-in-callout') return 'Headings in callouts removed';
+          if (type === 'typo') return 'Typo fixes';
+          if (type === 'ai-grammar') return 'AI grammar fixes';
+          if (type === 'ai-clarity') return 'AI clarity improvements';
+          if (type === 'ai-technical') return 'AI technical corrections';
+          if (type === 'ai-tone') return 'AI tone adjustments';
+          if (type.startsWith('ai-')) return `AI ${type.replace('ai-', '')} fixes`;
+          return `${type} fixes`;
+        };
+
         for (const [type, suggestions] of Object.entries(suggestionsByType)) {
-          const label = type === 'tooltip' ? 'Glossary tooltips added'
-            : type === 'heading-case' ? 'Heading capitalization fixes'
-            : type === 'callout-migration' ? 'Legacy callouts migrated'
-            : type === 'heading-in-callout' ? 'Headings in callouts removed'
-            : type === 'typo' ? 'Typo fixes'
-            : `${type} fixes`;
-          fixesLines.push(`- ${label}: ${suggestions.length}`);
+          fixesLines.push(`- ${getTypeLabel(type)}: ${suggestions.length}`);
         }
 
         // Add details for each type
         for (const [type, suggestions] of Object.entries(suggestionsByType)) {
           if (suggestions.length > 0) {
-            const typeLabel = type === 'tooltip' ? 'Glossary tooltips added'
-              : type === 'heading-case' ? 'Heading capitalization fixed'
-              : type === 'callout-migration' ? 'Legacy callouts migrated'
-              : type === 'heading-in-callout' ? 'Headings in callouts removed'
-              : type === 'typo' ? 'Typos fixed'
-              : type;
-            fixesLines.push('', `### ${typeLabel}`, '');
+            fixesLines.push('', `### ${getTypeLabel(type)}`, '');
             for (const s of suggestions.slice(0, 10)) {
               fixesLines.push(`- ${s.description}`);
             }
@@ -277,7 +348,7 @@ export default function AuditPage() {
           validatedOn,
           prTitle: `Content maintenance: ${result.pageTitle || result.filePath}`,
           prBody,
-          suggestions: suggestionsToApply,
+          suggestions: allSuggestions,
         }),
       });
 
@@ -332,12 +403,22 @@ export default function AuditPage() {
                 {loading ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Auditing...
+                    {includeAiSuggestions ? 'Auditing (with AI)...' : 'Auditing...'}
                   </>
                 ) : (
                   'Run Audit'
                 )}
               </Button>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Switch
+                id="ai-suggestions"
+                checked={includeAiSuggestions}
+                onCheckedChange={setIncludeAiSuggestions}
+              />
+              <Label htmlFor="ai-suggestions" className="text-sm text-muted-foreground">
+                Include AI suggestions (grammar, clarity, technical accuracy, content gaps)
+              </Label>
             </div>
           </CardContent>
         </Card>
@@ -399,7 +480,7 @@ export default function AuditPage() {
                             ) : (
                               <>
                                 <GitPullRequest className="w-4 h-4 mr-2" />
-                                Create PR{acceptedSuggestions.size > 0 ? ` (${acceptedSuggestions.size} fix${acceptedSuggestions.size === 1 ? '' : 'es'})` : ''}
+                                Create PR{(acceptedSuggestions.size + acceptedAiSuggestions.size) > 0 ? ` (${acceptedSuggestions.size + acceptedAiSuggestions.size} fix${(acceptedSuggestions.size + acceptedAiSuggestions.size) === 1 ? '' : 'es'})` : ''}
                               </>
                             )}
                           </Button>
@@ -553,6 +634,116 @@ export default function AuditPage() {
                             </div>
                           </div>
                         ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
+                {/* AI Suggestions Card */}
+                {result.aiSuggestions && result.aiSuggestions.length > 0 && (
+                  <Card className="border-purple-200 dark:border-purple-900">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <CardTitle className="flex items-center gap-2">
+                            <span className="text-purple-600 dark:text-purple-400">AI</span>
+                            Content Suggestions ({acceptedAiSuggestions.size}/{result.aiSuggestions.filter(s => isValidAiSuggestion(s)).length} applicable)
+                          </CardTitle>
+                          <CardDescription>
+                            AI-generated suggestions. Select which to include in the PR. Only suggestions with original/replacement text can be auto-applied.
+                          </CardDescription>
+                        </div>
+                        <div className="flex gap-2">
+                          <Button variant="outline" size="sm" onClick={() => toggleAllAiSuggestions(true)}>
+                            Accept All
+                          </Button>
+                          <Button variant="outline" size="sm" onClick={() => toggleAllAiSuggestions(false)}>
+                            Decline All
+                          </Button>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                      <div className="divide-y">
+                        {result.aiSuggestions.map((suggestion, idx) => {
+                          const categoryColors: Record<string, string> = {
+                            grammar: 'bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300',
+                            clarity: 'bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300',
+                            technical: 'bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300',
+                            'content-gap': 'bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300',
+                            'link-suggestion': 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300',
+                            tone: 'bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300',
+                          };
+                          const isExpanded = expandedAiItems.has(idx);
+                          const canApply = isValidAiSuggestion(suggestion);
+                          const isAccepted = acceptedAiSuggestions.has(idx);
+
+                          return (
+                            <div
+                              key={idx}
+                              className={`p-4 ${!canApply ? 'opacity-60' : ''} ${canApply && !isAccepted ? 'opacity-50 bg-muted/30' : ''}`}
+                            >
+                              <div className="flex items-start gap-3">
+                                {canApply ? (
+                                  <Checkbox
+                                    checked={isAccepted}
+                                    onCheckedChange={() => toggleAiSuggestion(idx)}
+                                    className="mt-1"
+                                  />
+                                ) : (
+                                  <div className="w-4 h-4 mt-1" title="Cannot be auto-applied (no specific replacement)" />
+                                )}
+                                <div
+                                  className="flex-1 min-w-0 cursor-pointer"
+                                  onClick={() => {
+                                    const next = new Set(expandedAiItems);
+                                    if (next.has(idx)) {
+                                      next.delete(idx);
+                                    } else {
+                                      next.add(idx);
+                                    }
+                                    setExpandedAiItems(next);
+                                  }}
+                                >
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <span className={`text-xs px-2 py-0.5 rounded-full ${categoryColors[suggestion.category] || 'bg-gray-100 text-gray-700'}`}>
+                                      {suggestion.category}
+                                    </span>
+                                    {!canApply && (
+                                      <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 dark:bg-gray-800">
+                                        manual only
+                                      </span>
+                                    )}
+                                    <span className="font-medium text-sm">{suggestion.title}</span>
+                                    {isExpanded ? (
+                                      <ChevronDown className="w-4 h-4 text-muted-foreground ml-auto" />
+                                    ) : (
+                                      <ChevronRight className="w-4 h-4 text-muted-foreground ml-auto" />
+                                    )}
+                                  </div>
+                                  <p className="text-sm text-muted-foreground">{suggestion.description}</p>
+
+                                  {isExpanded && (suggestion.original || suggestion.suggestion) && (
+                                    <div className="mt-3 bg-muted rounded-lg p-3 space-y-2">
+                                      {suggestion.original && (
+                                        <div>
+                                          <span className="text-xs text-red-500 font-medium">- </span>
+                                          <code className="text-xs break-all">{suggestion.original}</code>
+                                        </div>
+                                      )}
+                                      {suggestion.suggestion && (
+                                        <div>
+                                          <span className="text-xs text-green-500 font-medium">+ </span>
+                                          <code className="text-xs break-all">{suggestion.suggestion}</code>
+                                        </div>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </CardContent>
                   </Card>

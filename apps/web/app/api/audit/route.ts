@@ -1,10 +1,102 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion, DocNode } from '@/types';
+import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion, AiSuggestion, DocNode } from '@/types';
 
 const BodySchema = z.object({
   input: z.string().min(1),
+  includeAiSuggestions: z.boolean().optional().default(false),
 });
+
+// Call Claude API for content analysis
+async function getAiSuggestions(content: string, pageTitle: string, pageUrl: string): Promise<AiSuggestion[]> {
+  // Support both standard Anthropic API and custom proxy (Okta)
+  const apiKey = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+  const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+
+  if (!apiKey) {
+    console.warn('ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN not configured, skipping AI suggestions');
+    return [];
+  }
+
+  try {
+    const response = await fetch(`${baseUrl}/v1/messages`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet',
+        max_tokens: 4096,
+        messages: [
+          {
+            role: 'user',
+            content: `You are a technical documentation reviewer for Auth0. Analyze the following documentation page and provide specific, actionable suggestions for improvement.
+
+Page Title: ${pageTitle}
+Page URL: ${pageUrl}
+
+Content:
+${content.slice(0, 15000)}
+
+Provide suggestions in the following categories:
+1. **grammar** - Grammar errors, typos, awkward phrasing
+2. **clarity** - Sentences that are hard to understand, passive voice overuse, jargon without explanation
+3. **technical** - Potentially outdated information, missing security considerations, technical inaccuracies
+4. **content-gap** - Missing sections like prerequisites, next steps, examples, or error handling
+5. **link-suggestion** - Opportunities to cross-link to related Auth0 docs
+6. **tone** - Inconsistencies with professional technical writing style
+
+Return your response as a JSON array of objects with this structure:
+{
+  "suggestions": [
+    {
+      "category": "grammar|clarity|technical|content-gap|link-suggestion|tone",
+      "title": "Short title for the issue",
+      "description": "Detailed description of the issue and why it matters",
+      "original": "The exact original text that needs to be changed (copy verbatim from the content)",
+      "suggestion": "The exact replacement text (not instructions - the actual text that should replace the original)",
+      "line": null
+    }
+  ]
+}
+
+IMPORTANT for original/suggestion fields:
+- "original" must be the EXACT text from the document (copied verbatim)
+- "suggestion" must be the EXACT replacement text, NOT instructions like "remove this" or "add X here"
+- If you can't provide exact replacement text (e.g., for content gaps or restructuring), set both original and suggestion to null
+- For deletions, set suggestion to "" (empty string)
+- These fields are used for automated find-and-replace, so they must be exact
+
+Focus on the most impactful suggestions. Limit to 10 suggestions maximum. Only include suggestions where you're confident there's a real issue. Return ONLY the JSON, no other text.`,
+          },
+        ],
+      }),
+    });
+
+    if (!response.ok) {
+      console.error('Claude API error:', response.status, await response.text());
+      return [];
+    }
+
+    const data = await response.json();
+    const text = data.content?.[0]?.text || '';
+
+    // Parse JSON from response
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      console.error('Failed to parse AI response as JSON');
+      return [];
+    }
+
+    const parsed = JSON.parse(jsonMatch[0]);
+    return parsed.suggestions || [];
+  } catch (error) {
+    console.error('AI suggestions error:', error);
+    return [];
+  }
+}
 
 // Convert file path to production URL
 function filePathToUrl(filePath: string): string {
@@ -470,6 +562,7 @@ export async function POST(req: Request) {
     let analysis: any = null;
     let renderCheck: any = null;
     let curlExec: any[] = [];
+    let mdxContent: string | null = null; // Store MDX content for AI analysis
 
     if (mode === 'local') {
       // Full analysis using local file system
@@ -493,6 +586,7 @@ export async function POST(req: Request) {
       let mdx: string;
       try {
         mdx = await fs.readFile(abs, 'utf8');
+        mdxContent = mdx; // Store for AI analysis
       } catch {
         return NextResponse.json({
           ok: false,
@@ -866,102 +960,102 @@ export async function POST(req: Request) {
         headingsInCallouts.length > 0 ? headingsInCallouts.slice(0, 10) : undefined
       ));
 
-      // Glossary tooltips check
-      const glossaryTerms = await loadGlossaryTerms();
-      if (glossaryTerms && analysis.textOnly) {
-        const missingTooltips = findMissingTooltips(
-          analysis.textOnly,
-          glossaryTerms,
-          analysis.existingTooltips || []
-        );
+      // Glossary tooltips check - DISABLED
+      // const glossaryTerms = await loadGlossaryTerms();
+      // if (glossaryTerms && analysis.textOnly) {
+      //   const missingTooltips = findMissingTooltips(
+      //     analysis.textOnly,
+      //     glossaryTerms,
+      //     analysis.existingTooltips || []
+      //   );
 
-        checks.push(createCheck(
-          'glossary-tooltips',
-          'Glossary terms have tooltips',
-          missingTooltips.length === 0 ? 'PASS' : 'WARN',
-          missingTooltips.length === 0
-            ? 'All glossary terms have tooltips (or none found)'
-            : `${missingTooltips.length} glossary term(s) missing tooltips`,
-          missingTooltips.length > 0 ? missingTooltips.map(t => t.originalTerm) : undefined
-        ));
+      //   checks.push(createCheck(
+      //     'glossary-tooltips',
+      //     'Glossary terms have tooltips',
+      //     missingTooltips.length === 0 ? 'PASS' : 'WARN',
+      //     missingTooltips.length === 0
+      //       ? 'All glossary terms have tooltips (or none found)'
+      //       : `${missingTooltips.length} glossary term(s) missing tooltips`,
+      //     missingTooltips.length > 0 ? missingTooltips.map(t => t.originalTerm) : undefined
+      //   ));
 
-        // Generate tooltip suggestions (skip frontmatter and URLs)
-        const frontmatterEnd = mdx.match(/^---\n[\s\S]*?\n---\n/);
-        const bodyStartIndex = frontmatterEnd ? frontmatterEnd[0].length : 0;
-        const tooltipLines = mdx.split('\n');
+      //   // Generate tooltip suggestions (skip frontmatter and URLs)
+      //   const frontmatterEnd = mdx.match(/^---\n[\s\S]*?\n---\n/);
+      //   const bodyStartIndex = frontmatterEnd ? frontmatterEnd[0].length : 0;
+      //   const tooltipLines = mdx.split('\n');
 
-        // Helper to check if position is inside a markdown link (text or URL) or href attribute
-        const isInsideLink = (content: string, pos: number): boolean => {
-          const before = content.slice(Math.max(0, pos - 500), pos);
-          const after = content.slice(pos, pos + 500);
+      //   // Helper to check if position is inside a markdown link (text or URL) or href attribute
+      //   const isInsideLink = (content: string, pos: number): boolean => {
+      //     const before = content.slice(Math.max(0, pos - 500), pos);
+      //     const after = content.slice(pos, pos + 500);
 
-          // Check if we're inside markdown link text [...]
-          const lastOpenBracket = before.lastIndexOf('[');
-          const lastCloseBracket = before.lastIndexOf(']');
-          if (lastOpenBracket > -1 && (lastCloseBracket === -1 || lastOpenBracket > lastCloseBracket)) {
-            // We're after a [ - check if there's a ]( after us (meaning we're in link text)
-            const afterMatch = after.match(/^\w*\s*\]\s*\(/);
-            if (afterMatch || after.indexOf('](') > -1) {
-              return true;
-            }
-          }
+      //     // Check if we're inside markdown link text [...]
+      //     const lastOpenBracket = before.lastIndexOf('[');
+      //     const lastCloseBracket = before.lastIndexOf(']');
+      //     if (lastOpenBracket > -1 && (lastCloseBracket === -1 || lastOpenBracket > lastCloseBracket)) {
+      //       // We're after a [ - check if there's a ]( after us (meaning we're in link text)
+      //       const afterMatch = after.match(/^\w*\s*\]\s*\(/);
+      //       if (afterMatch || after.indexOf('](') > -1) {
+      //         return true;
+      //       }
+      //     }
 
-          // Check if we're inside markdown link URL ](...)
-          const lastLinkStart = before.lastIndexOf('](');
-          const lastLinkEnd = before.lastIndexOf(')');
-          if (lastLinkStart > -1 && (lastLinkEnd === -1 || lastLinkStart > lastLinkEnd)) {
-            // We're after a ]( - check if there's a closing ) after us
-            if (after.indexOf(')') > -1) {
-              return true;
-            }
-          }
+      //     // Check if we're inside markdown link URL ](...)
+      //     const lastLinkStart = before.lastIndexOf('](');
+      //     const lastLinkEnd = before.lastIndexOf(')');
+      //     if (lastLinkStart > -1 && (lastLinkEnd === -1 || lastLinkStart > lastLinkEnd)) {
+      //       // We're after a ]( - check if there's a closing ) after us
+      //       if (after.indexOf(')') > -1) {
+      //         return true;
+      //       }
+      //     }
 
-          // Check if we're inside href="..." or src="..."
-          const hrefMatch = before.match(/(?:href|src)\s*=\s*["'][^"']*$/i);
-          if (hrefMatch) {
-            return true;
-          }
+      //     // Check if we're inside href="..." or src="..."
+      //     const hrefMatch = before.match(/(?:href|src)\s*=\s*["'][^"']*$/i);
+      //     if (hrefMatch) {
+      //       return true;
+      //     }
 
-          return false;
-        };
+      //     return false;
+      //   };
 
-        for (const { originalTerm } of missingTooltips) {
-          // Find first occurrence in body content that's not inside a URL
-          const termRegex = new RegExp(`\\b${originalTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
-          let termMatch;
-          let validMatch = null;
+      //   for (const { originalTerm } of missingTooltips) {
+      //     // Find first occurrence in body content that's not inside a URL
+      //     const termRegex = new RegExp(`\\b${originalTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+      //     let termMatch;
+      //     let validMatch = null;
 
-          while ((termMatch = termRegex.exec(mdx)) !== null) {
-            if (termMatch.index >= bodyStartIndex && !isInsideLink(mdx, termMatch.index)) {
-              validMatch = termMatch;
-              break;
-            }
-          }
+      //     while ((termMatch = termRegex.exec(mdx)) !== null) {
+      //       if (termMatch.index >= bodyStartIndex && !isInsideLink(mdx, termMatch.index)) {
+      //         validMatch = termMatch;
+      //         break;
+      //       }
+      //     }
 
-          if (!validMatch) continue;
+      //     if (!validMatch) continue;
 
-          // Find line number
-          const beforeMatch = mdx.slice(0, validMatch.index);
-          const lineNum = beforeMatch.split('\n').length;
-          const originalLine = tooltipLines[lineNum - 1] || '';
-          const actualText = validMatch[0]; // Preserve original case
+      //     // Find line number
+      //     const beforeMatch = mdx.slice(0, validMatch.index);
+      //     const lineNum = beforeMatch.split('\n').length;
+      //     const originalLine = tooltipLines[lineNum - 1] || '';
+      //     const actualText = validMatch[0]; // Preserve original case
 
-          // Create full line replacement
-          const tooltipReplacement = `<Tooltip tip="..." cta="View Glossary" href="/docs/glossary?term=${encodeURIComponent(originalTerm)}">${actualText}</Tooltip>`;
-          const lineTermRegex = new RegExp(`\\b${originalTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
-          const suggestionLine = originalLine.replace(lineTermRegex, tooltipReplacement);
+      //     // Create full line replacement
+      //     const tooltipReplacement = `<Tooltip tip="..." cta="View Glossary" href="/docs/glossary?term=${encodeURIComponent(originalTerm)}">${actualText}</Tooltip>`;
+      //     const lineTermRegex = new RegExp(`\\b${originalTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
+      //     const suggestionLine = originalLine.replace(lineTermRegex, tooltipReplacement);
 
-          suggestions.push({
-            id: `tooltip-${suggestions.length}`,
-            type: 'tooltip',
-            description: `Add tooltip for "${actualText}"`,
-            line: lineNum,
-            original: originalLine,
-            suggestion: suggestionLine,
-            context: `Line ${lineNum}`,
-          });
-        }
-      }
+      //     suggestions.push({
+      //       id: `tooltip-${suggestions.length}`,
+      //       type: 'tooltip',
+      //       description: `Add tooltip for "${actualText}"`,
+      //       line: lineNum,
+      //       original: originalLine,
+      //       suggestion: suggestionLine,
+      //       context: `Line ${lineNum}`,
+      //     });
+      //   }
+      // }
 
       // Tab rendering (from Playwright)
       if (renderCheck) {
@@ -1019,6 +1113,12 @@ export async function POST(req: Request) {
       manual: checks.filter(c => c.status === 'MANUAL').length,
     };
 
+    // Get AI suggestions if requested
+    let aiSuggestions: AiSuggestion[] | undefined;
+    if (body.includeAiSuggestions && mdxContent) {
+      aiSuggestions = await getAiSuggestions(mdxContent, title || filePath, url);
+    }
+
     return NextResponse.json({
       ok: true,
       url,
@@ -1028,6 +1128,7 @@ export async function POST(req: Request) {
       screenshot: (renderCheck as any)?.screenshot,
       checks,
       suggestions: suggestions.length > 0 ? suggestions : undefined,
+      aiSuggestions: aiSuggestions && aiSuggestions.length > 0 ? aiSuggestions : undefined,
       summary,
     } satisfies AuditResult);
 

@@ -14,10 +14,10 @@ const SuggestionSchema = z.object({
   id: z.string(),
   type: z.string(),
   description: z.string(),
-  line: z.number().optional(),
+  line: z.number().nullable().optional(),
   original: z.string(),
   suggestion: z.string(),
-  context: z.string().optional(),
+  context: z.string().nullable().optional(),
 });
 
 const BodySchema = z.object({
