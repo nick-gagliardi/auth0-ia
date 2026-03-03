@@ -21,10 +21,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset>
+      <SidebarInset className="flex flex-col overflow-hidden">
         <AppHeader />
-        <div className="flex flex-1 flex-col">
-          <main className="flex-1 p-4 md:p-6 lg:p-8">
+        <div className="flex flex-1 flex-col overflow-auto">
+          <main className="flex-1 p-4 md:p-6 lg:p-8 w-full max-w-full">
             {children}
           </main>
           <footer className="border-t py-4 text-center text-xs text-muted-foreground">
