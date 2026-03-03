@@ -59,6 +59,16 @@ jobs:
           git commit -m "chore(automated): update index with latest Auth0 docs ($PAGES pages, $SNIPPETS snippets)"
           git push
 
+      - name: Deploy to Vercel
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: apps/web
+          vercel-args: '--prod'
+
       - name: No changes detected
         if: steps.check_changes.outputs.has_changes == 'false'
         run: echo "No changes in index, skipping commit"
