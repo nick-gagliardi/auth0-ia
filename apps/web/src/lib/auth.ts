@@ -16,6 +16,24 @@ const authConfig: NextAuthConfig = {
     }),
   ],
   callbacks: {
+    authorized: async ({ auth, request }) => {
+      // Check if user is authenticated
+      const isAuthenticated = !!auth?.user;
+      const isOnLoginPage = request.nextUrl.pathname.startsWith('/login');
+      const isAuthAPI = request.nextUrl.pathname.startsWith('/api/auth');
+
+      // Allow access to auth API and login page without authentication
+      if (isAuthAPI || isOnLoginPage) {
+        return true;
+      }
+
+      // Redirect to login if not authenticated
+      if (!isAuthenticated) {
+        return false;
+      }
+
+      return true;
+    },
     async signIn({ user, account, profile }) {
       if (account?.provider === 'github' && account.access_token) {
         try {
