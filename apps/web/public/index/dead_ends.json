@@ -1,22 +1,14 @@
 {
-  "generatedAtUtc": "2026-02-16T13:20:40.049Z",
+  "generatedAtUtc": "2026-03-03T18:24:05.938Z",
   "minInbound": 20,
   "maxOutbound": 1,
-  "count": 4,
+  "count": 3,
   "items": [
     {
-      "id": "main/docs/customize/actions.mdx",
-      "inboundLinks": 55,
-      "outboundLinks": 0,
-      "deadEndScore": 55,
-      "navRoot": "Customize",
-      "navDepth": 4
-    },
-    {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "inboundLinks": 33,
+      "inboundLinks": 34,
       "outboundLinks": 0,
-      "deadEndScore": 33,
+      "deadEndScore": 34,
       "navRoot": "Authenticate",
       "navDepth": 4
     },

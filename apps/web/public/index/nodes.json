@@ -122,6 +122,15 @@
     ]
   },
   {
+    "id": "main/docs/troubleshoot/api-best-practices.mdx",
+    "type": "page",
+    "filePath": "main/docs/troubleshoot/api-best-practices.mdx",
+    "title": "API Best Practices",
+    "navPaths": [
+      "Documentation > Troubleshoot > Troubleshoot > API Best Practices"
+    ]
+  },
+  {
     "id": "main/docs/troubleshoot/auth0-blog.mdx",
     "type": "page",
     "filePath": "main/docs/troubleshoot/auth0-blog.mdx",
@@ -2859,6 +2868,15 @@
     ]
   },
   {
+    "id": "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+    "type": "page",
+    "filePath": "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+    "title": "Signup Attack Playbook",
+    "navPaths": [
+      "Documentation > Secure > Protect Your Application > Attack Protection > Playbooks > Signup Attack Playbook"
+    ]
+  },
+  {
     "id": "main/docs/secure/attack-protection/bot-detection/bot-detection-custom-login-pages.mdx",
     "type": "page",
     "filePath": "main/docs/secure/attack-protection/bot-detection/bot-detection-custom-login-pages.mdx",
@@ -3100,6 +3118,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/quickstart/webapp/fastify/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/quickstart/webapp/fastify/index.mdx",
+    "title": "Add Login to Your Fastify Application",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/quickstart/webapp/fastapi/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/webapp/fastapi/index.mdx",
@@ -3243,7 +3268,7 @@
     "id": "main/docs/quickstart/native/xamarin.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/xamarin.mdx",
-    "title": "Auth0 .NET Android and iOS SDK Quickstarts: Add login to your .NET Android or iOS application",
+    "title": "Add Login to Your .NET Android & iOS Application",
     "navPaths": []
   },
   {
@@ -3257,7 +3282,7 @@
     "id": "main/docs/quickstart/native/xamarin/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/xamarin/index.mdx",
-    "title": ".NET Android and iOS",
+    "title": "Add Login to Your .NET Android & iOS Application",
     "navPaths": []
   },
   {
@@ -3323,17 +3348,10 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/native/net-android-ios/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/native/net-android-ios/_index.mdx",
-    "title": "Add Login to Your .NET Android and iOS Application",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/native/net-android-ios/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/net-android-ios/index.mdx",
-    "title": ".NET Android and iOS",
+    "title": "Add Login to Your .NET Android & iOS Application",
     "navPaths": []
   },
   {
@@ -3368,7 +3386,7 @@
     "id": "main/docs/quickstart/native/ios-swift/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/ios-swift/index.mdx",
-    "title": "Add Login to Your iOS or macOS Application",
+    "title": "Add Login to Your iOS or macOS Application using the Auth0.swift SDK",
     "navPaths": []
   },
   {
@@ -3487,7 +3505,7 @@
     "id": "main/docs/quickstart/native/android/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/android/index.mdx",
-    "title": "Add Login to Your Android Application",
+    "title": "Add Login to Your Android Application using the Auth0.Android SDK",
     "navPaths": []
   },
   {
@@ -3634,6 +3652,7 @@
     "id": "main/docs/quickstart/backend/nodejs/interactive.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/backend/nodejs/interactive.mdx",
+    "title": "Secure Your Node.js API with Auth0",
     "navPaths": []
   },
   {
@@ -3718,6 +3737,13 @@
     "type": "page",
     "filePath": "main/docs/quickstart/backend/golang/interactive.mdx",
     "title": "Add Authorization to Your Go Application",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/quickstart/backend/fastify/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/quickstart/backend/fastify/index.mdx",
+    "title": "Protect Your Fastify API",
     "navPaths": []
   },
   {
@@ -12769,6 +12795,15 @@
     ]
   },
   {
+    "id": "main/docs/deploy-monitor/metric-streams.mdx",
+    "type": "page",
+    "filePath": "main/docs/deploy-monitor/metric-streams.mdx",
+    "title": "Metric Streams",
+    "navPaths": [
+      "Documentation > Deploy and Monitor > Monitoring > Metric Streams"
+    ]
+  },
+  {
     "id": "main/docs/deploy-monitor/monitor.mdx",
     "type": "page",
     "filePath": "main/docs/deploy-monitor/monitor.mdx",
@@ -13054,15 +13089,6 @@
     "title": "Use as a Node Module",
     "navPaths": [
       "Documentation > Deploy and Monitor > Deployment > Deploy CLI > Use as a Node Module"
-    ]
-  },
-  {
-    "id": "main/docs/customize/actions.mdx",
-    "type": "page",
-    "filePath": "main/docs/customize/actions.mdx",
-    "title": "Auth0 Actions",
-    "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Auth0 Actions"
     ]
   },
   {
@@ -13362,18 +13388,18 @@
     "id": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/action-triggers-custom-phone-provider-api-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/action-triggers-custom-phone-provider-api-object.mdx",
-    "title": "Action Triggers: custom-phone-provider API Object",
+    "title": "Actions Triggers: custom-phone-provider - API Object",
     "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Action Triggers: custom-phone-provider API Object"
+      "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Actions Triggers: custom-phone-provider - API Object"
     ]
   },
   {
     "id": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx",
-    "title": "Actions Triggers: custom-phone-provider Event Object",
+    "title": "Actions Triggers: custom-phone-provider - Event Object",
     "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Actions Triggers: custom-phone-provider Event Object"
+      "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Actions Triggers: custom-phone-provider - Event Object"
     ]
   },
   {
@@ -14379,9 +14405,9 @@
     "id": "main/docs/customize/forms/flows.mdx",
     "type": "page",
     "filePath": "main/docs/customize/forms/flows.mdx",
-    "title": "Introduction to Flows",
+    "title": "Flows",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Forms > Flows > Introduction to Flows"
+      "Documentation > Customize > Code Customization > Forms > Flows > Flows"
     ]
   },
   {
@@ -14430,12 +14456,84 @@
     ]
   },
   {
-    "id": "main/docs/customize/forms/vault.mdx",
+    "id": "main/docs/customize/forms/vaults.mdx",
     "type": "page",
-    "filePath": "main/docs/customize/forms/vault.mdx",
-    "title": "Vault",
+    "filePath": "main/docs/customize/forms/vaults.mdx",
+    "title": "Vaults",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Forms > Vault"
+      "Documentation > Customize > Code Customization > Forms > Vaults > Vaults"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/auth0.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/auth0.mdx",
+    "title": "Auth0 Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > Auth0 Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/http.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/http.mdx",
+    "title": "HTTP Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > HTTP Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/jwt.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/jwt.mdx",
+    "title": "JWT Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > JWT Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/mailjet.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/mailjet.mdx",
+    "title": "MailJet Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > MailJet Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/sendgrid.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/sendgrid.mdx",
+    "title": "SendGrid Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > SendGrid Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/telegram.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/telegram.mdx",
+    "title": "Telegram Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > Telegram Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/twilio.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/twilio.mdx",
+    "title": "Twilio Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > Twilio Vault Connection"
+    ]
+  },
+  {
+    "id": "main/docs/customize/forms/vaults/whatsapp.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/forms/vaults/whatsapp.mdx",
+    "title": "WhatsApp Vault Connection",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Forms > Vaults > WhatsApp Vault Connection"
     ]
   },
   {
@@ -14514,9 +14612,9 @@
     "id": "main/docs/customize/forms/flows/integrations/mailjet.mdx",
     "type": "page",
     "filePath": "main/docs/customize/forms/flows/integrations/mailjet.mdx",
-    "title": "Mailjet",
+    "title": "MailJet",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Forms > Flows > Integrations > Mailjet"
+      "Documentation > Customize > Code Customization > Forms > Flows > Integrations > MailJet"
     ]
   },
   {
@@ -14980,18 +15078,18 @@
     "id": "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-api-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-api-object.mdx",
-    "title": "Action Triggers: custom-email-provider API Object",
+    "title": "Actions Triggers: custom-email-provider - API Object",
     "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Action Triggers: custom-email-provider API Object"
+      "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Actions Triggers: custom-email-provider - API Object"
     ]
   },
   {
     "id": "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
-    "title": "Action Triggers: custom-email-provider Event Object",
+    "title": "Actions Triggers: custom-email-provider - Event Object",
     "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Action Triggers: custom-email-provider Event Object"
+      "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Actions Triggers: custom-email-provider - Event Object"
     ]
   },
   {
@@ -15283,6 +15381,24 @@
     ]
   },
   {
+    "id": "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+    "title": "Actions Modules",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Actions > Actions Modules > Actions Modules"
+    ]
+  },
+  {
+    "id": "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
+    "title": "Write Your First Action Module",
+    "navPaths": [
+      "Documentation > Customize > Code Customization > Actions > Actions Modules > Write Your First Action Module"
+    ]
+  },
+  {
     "id": "main/docs/customize/actions/migrate/actions-migration-limitations.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/migrate/actions-migration-limitations.mdx",
@@ -15429,9 +15545,9 @@
     "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-api-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-api-object.mdx",
-    "title": "Actions - Triggers - post-user-registration - API object",
+    "title": "Actions Triggers: post-user-registration - API Object",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Post-user Registration Trigger > Actions - Triggers - post-user-registration - API object"
+      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Post-user Registration Trigger > Actions Triggers: post-user-registration - API Object"
     ]
   },
   {
@@ -15544,18 +15660,18 @@
     "id": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object.mdx",
-    "title": "Actions Triggers: post-challenge - API Object",
+    "title": "Actions Triggers: password-reset-post-challenge - API Object",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: post-challenge - API Object"
+      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: password-reset-post-challenge - API Object"
     ]
   },
   {
     "id": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx",
-    "title": "Actions Triggers: post-challenge - Event Object",
+    "title": "Actions Triggers: password-reset-post-challenge - Event Object",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: post-challenge - Event Object"
+      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: password-reset-post-challenge - Event Object"
     ]
   },
   {
@@ -15605,20 +15721,18 @@
     "id": "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-api-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-api-object.mdx",
-    "title": "Actions: event-stream - API Object",
-    "permalink": "event-stream-api-object",
+    "title": "Actions Triggers: event-stream - API Object",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions: event-stream - API Object"
+      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions Triggers: event-stream - API Object"
     ]
   },
   {
     "id": "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-event-object.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-event-object.mdx",
-    "title": "Actions: event-stream - Event Object",
-    "permalink": "event-stream-event-object",
+    "title": "Actions Triggers: event-stream - Event Object",
     "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions: event-stream - Event Object"
+      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions Triggers: event-stream - Event Object"
     ]
   },
   {
@@ -17258,6 +17372,15 @@
     ]
   },
   {
+    "id": "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
+    "type": "page",
+    "filePath": "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
+    "title": "Configure the Flexible Password Policy for Auth0 Database Connections",
+    "navPaths": [
+      "Documentation > Authenticate > Provision Users > Database Connections > Configure the Flexible Password Policy for Auth0 Database Connections"
+    ]
+  },
+  {
     "id": "main/docs/authenticate/database-connections/non-unique-emails.mdx",
     "type": "page",
     "filePath": "main/docs/authenticate/database-connections/non-unique-emails.mdx",
@@ -17288,18 +17411,9 @@
     "id": "main/docs/authenticate/database-connections/password-options.mdx",
     "type": "page",
     "filePath": "main/docs/authenticate/database-connections/password-options.mdx",
-    "title": "Password Options in Auth0 Database Connections",
+    "title": "Configure Password Policies in Auth0 Database Connections",
     "navPaths": [
-      "Documentation > Authenticate > Provision Users > Database Connections > Password Options in Auth0 Database Connections"
-    ]
-  },
-  {
-    "id": "main/docs/authenticate/database-connections/password-strength.mdx",
-    "type": "page",
-    "filePath": "main/docs/authenticate/database-connections/password-strength.mdx",
-    "title": "Password Strength in Auth0 Database Connections",
-    "navPaths": [
-      "Documentation > Authenticate > Provision Users > Database Connections > Password Strength in Auth0 Database Connections"
+      "Documentation > Authenticate > Provision Users > Database Connections > Configure Password Policies in Auth0 Database Connections"
     ]
   },
   {
@@ -17533,6 +17647,334 @@
     ]
   },
   {
+    "id": "main/docs/api/myorganization/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/index.mdx",
+    "title": "MyOrganization API Reference",
+    "navPaths": [
+      "API Reference > MyOrganization API > MyOrganization API Reference"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Domain Management > create a domain for an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Domain Management > delete domain from organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Domain Management > get identity providers associated with an organization domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Domain Management > get organization domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Domain Management > list organization domains"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Domain Management > start domain verification"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Details > get organization details"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Org Details > modify organization details"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > associate domain with identity provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > create identity provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > create provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > create provisioning scim token"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > delete identity provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > delete provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > detach identity provider from organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > get identity provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > get provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > list identity providers"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > list provisioning scim tokens"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > refresh identity provider attributes mapping"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > refresh provisioning configuration attributes mapping"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > remove domain from identity provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > revoke provisioning scim token"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Idp Management > update identity provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/config/get-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/config/get-configuration.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Configuration > get configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+    "navPaths": [
+      "API Reference > MyOrganization API >   > Configuration > get identity providers configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/index.mdx",
+    "title": "MyAccount API Reference",
+    "navPaths": [
+      "API Reference > MyAccount API > MyAccount API Reference"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Factors > get the status of all factors"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Connected Accounts > complete a connected account request"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Connected Accounts > create a connected account request"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Connected Accounts > delete a connected account by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Connected Accounts > get a list of available connections for connected accounts"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Connected Accounts > get a list of connected accounts"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Authentication Methods > confirm the enrollment of a supported authentication method"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Authentication Methods > delete an authentication method by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Authentication Methods > get a list of authentication methods"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Authentication Methods > get an authentication method by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Authentication Methods > start the enrollment of a supported authentication method"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
+    "navPaths": [
+      "API Reference > MyAccount API >   > Authentication Methods > update details of an authentication method by id"
+    ]
+  },
+  {
+    "id": "main/snippets/ApiReleaseLifecycle.jsx",
+    "type": "snippet",
+    "filePath": "main/snippets/ApiReleaseLifecycle.jsx",
+    "navPaths": []
+  },
+  {
     "id": "main/snippets/ApiScopes.jsx",
     "type": "snippet",
     "filePath": "main/snippets/ApiScopes.jsx",
@@ -17608,12 +18050,6 @@
     "id": "main/snippets/RelatedPages.mdx",
     "type": "snippet",
     "filePath": "main/snippets/RelatedPages.mdx",
-    "navPaths": []
-  },
-  {
-    "id": "main/snippets/ReleaseLifecycle.jsx",
-    "type": "snippet",
-    "filePath": "main/snippets/ReleaseLifecycle.jsx",
     "navPaths": []
   },
   {

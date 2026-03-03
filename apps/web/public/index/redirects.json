@@ -1,6 +1,62 @@
 {
   "redirects": [
     {
+      "source": "/docs/authenticate/database-connections/password-strength",
+      "destination": "/docs/authenticate/database-connections/password-options"
+    },
+    {
+      "source": "/docs/authenticate/database-connections/auth0-user-store",
+      "destination": "/docs/authenticate/database-connections"
+    },
+    {
+      "source": "/docs/api/myaccount/get-factors",
+      "destination": "/docs/api/myaccount/factors/get-factors"
+    },
+    {
+      "source": "/docs/api/myaccount/get-authentication-methods",
+      "destination": "/docs/api/myaccount/authentication-methods/get-authentication-methods"
+    },
+    {
+      "source": "/docs/api/myaccount/create-authentication-method",
+      "destination": "/docs/api/myaccount/authentication-methods/create-authentication-method"
+    },
+    {
+      "source": "/docs/api/myaccount/get-authentication-method",
+      "destination": "/docs/api/myaccount/authentication-methods/get-authentication-method"
+    },
+    {
+      "source": "/docs/api/myaccount/delete-authentication-method",
+      "destination": "/docs/api/myaccount/authentication-methods/delete-authentication-method"
+    },
+    {
+      "source": "/docs/api/myaccount/update-authentication-method",
+      "destination": "/docs/api/myaccount/authentication-methods/update-authentication-method"
+    },
+    {
+      "source": "/docs/api/myaccount/confirm-authentication-method",
+      "destination": "/docs/api/myaccount/authentication-methods/confirm-authentication-method"
+    },
+    {
+      "source": "/docs/api/myaccount/create-connected-account-request",
+      "destination": "/docs/api/myaccount/connected-accounts/create-connected-account-request"
+    },
+    {
+      "source": "/docs/api/myaccount/complete-connected-account-request",
+      "destination": "/docs/api/myaccount/connected-accounts/complete-connected-account-request"
+    },
+    {
+      "source": "/docs/api/myaccount/get-connected-accounts",
+      "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts"
+    },
+    {
+      "source": "/docs/api/myaccount/get-connected-accounts-connections",
+      "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts-connections"
+    },
+    {
+      "source": "/docs/api/myaccount/delete-connected-account",
+      "destination": "/docs/api/myaccount/connected-accounts/delete-connected-account"
+    },
+    {
       "source": "/docs/native-passkeys-api",
       "destination": "/docs/authenticate/database-connections/passkeys/native-passkeys-api"
     },
@@ -419,6 +475,10 @@
     {
       "source": "/docs/customize/forms/intro-to-forms",
       "destination": "/docs/customize/forms/nodes-and-components"
+    },
+    {
+      "source": "/docs/customize/forms/vault",
+      "destination": "/docs/customize/forms/vaults"
     },
     {
       "source": "/docs/videos/get-started-series/learn-logout",
@@ -12498,7 +12558,11 @@
     },
     {
       "source": "/docs/actions",
-      "destination": "/docs/customize/actions"
+      "destination": "/docs/customize/actions/actions-overview"
+    },
+    {
+      "source": "/docs/customize/actions",
+      "destination": "/docs/customize/actions/actions-overview"
     },
     {
       "source": "/docs/authenticate/protocols/scim/configure-inbound-scim/inbound-scim-for-okta-workforce-connections",
@@ -16250,7 +16314,7 @@
     },
     {
       "source": "/docs/quickstart/native/xamarin",
-      "destination": "/docs/quickstart/native/net-android-ios"
+      "destination": "/docs/quickstart/native/net-android-ios/interactive"
     },
     {
       "source": "/docs/xamarin-tutorial",
@@ -16997,10 +17061,6 @@
       "destination": "/docs/fr-ca/customize/actions/actions-real-time-logs"
     },
     {
-      "source": "/docs/authenticate/database-connections/auth0-user-store",
-      "destination": "/docs/authenticate/database-connections"
-    },
-    {
       "source": "/docs/quickstart/webapp/aspnet-core-blazor-server/interactive",
       "destination": "/docs/quickstart/webapp/aspnet-core-blazor-server"
     },
@@ -17011,6 +17071,54 @@
   ],
   "warnings": {
     "missingDestination": [
+      {
+        "source": "/docs/api/myaccount/get-factors",
+        "destination": "/docs/api/myaccount/factors/get-factors"
+      },
+      {
+        "source": "/docs/api/myaccount/get-authentication-methods",
+        "destination": "/docs/api/myaccount/authentication-methods/get-authentication-methods"
+      },
+      {
+        "source": "/docs/api/myaccount/create-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/create-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/get-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/get-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/delete-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/delete-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/update-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/update-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/confirm-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/confirm-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/create-connected-account-request",
+        "destination": "/docs/api/myaccount/connected-accounts/create-connected-account-request"
+      },
+      {
+        "source": "/docs/api/myaccount/complete-connected-account-request",
+        "destination": "/docs/api/myaccount/connected-accounts/complete-connected-account-request"
+      },
+      {
+        "source": "/docs/api/myaccount/get-connected-accounts",
+        "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts"
+      },
+      {
+        "source": "/docs/api/myaccount/get-connected-accounts-connections",
+        "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts-connections"
+      },
+      {
+        "source": "/docs/api/myaccount/delete-connected-account",
+        "destination": "/docs/api/myaccount/connected-accounts/delete-connected-account"
+      },
       {
         "source": "/docs/articles",
         "destination": "/docs"
@@ -17968,6 +18076,14 @@
         "destination": "/docs/quickstart/native"
       },
       {
+        "source": "/docs/connections/database/password-strength",
+        "destination": "/docs/authenticate/database-connections/password-strength"
+      },
+      {
+        "source": "/docs/password-strength",
+        "destination": "/docs/authenticate/database-connections/password-strength"
+      },
+      {
         "source": "/docs/connections/enterprise/okta",
         "destination": "/docs/authenticate/identity-providers/enterprise-identity-providers/okta"
       },
@@ -18269,6 +18385,62 @@
       }
     ],
     "missingSource": [
+      {
+        "source": "/docs/authenticate/database-connections/password-strength",
+        "destination": "/docs/authenticate/database-connections/password-options"
+      },
+      {
+        "source": "/docs/authenticate/database-connections/auth0-user-store",
+        "destination": "/docs/authenticate/database-connections"
+      },
+      {
+        "source": "/docs/api/myaccount/get-factors",
+        "destination": "/docs/api/myaccount/factors/get-factors"
+      },
+      {
+        "source": "/docs/api/myaccount/get-authentication-methods",
+        "destination": "/docs/api/myaccount/authentication-methods/get-authentication-methods"
+      },
+      {
+        "source": "/docs/api/myaccount/create-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/create-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/get-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/get-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/delete-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/delete-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/update-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/update-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/confirm-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/confirm-authentication-method"
+      },
+      {
+        "source": "/docs/api/myaccount/create-connected-account-request",
+        "destination": "/docs/api/myaccount/connected-accounts/create-connected-account-request"
+      },
+      {
+        "source": "/docs/api/myaccount/complete-connected-account-request",
+        "destination": "/docs/api/myaccount/connected-accounts/complete-connected-account-request"
+      },
+      {
+        "source": "/docs/api/myaccount/get-connected-accounts",
+        "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts"
+      },
+      {
+        "source": "/docs/api/myaccount/get-connected-accounts-connections",
+        "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts-connections"
+      },
+      {
+        "source": "/docs/api/myaccount/delete-connected-account",
+        "destination": "/docs/api/myaccount/connected-accounts/delete-connected-account"
+      },
       {
         "source": "/docs/native-passkeys-api",
         "destination": "/docs/authenticate/database-connections/passkeys/native-passkeys-api"
@@ -18656,6 +18828,10 @@
       {
         "source": "/docs/customize/forms/intro-to-forms",
         "destination": "/docs/customize/forms/nodes-and-components"
+      },
+      {
+        "source": "/docs/customize/forms/vault",
+        "destination": "/docs/customize/forms/vaults"
       },
       {
         "source": "/docs/videos/get-started-series/learn-logout",
@@ -30703,7 +30879,11 @@
       },
       {
         "source": "/docs/actions",
-        "destination": "/docs/customize/actions"
+        "destination": "/docs/customize/actions/actions-overview"
+      },
+      {
+        "source": "/docs/customize/actions",
+        "destination": "/docs/customize/actions/actions-overview"
       },
       {
         "source": "/docs/authenticate/protocols/scim/configure-inbound-scim/inbound-scim-for-okta-workforce-connections",
@@ -35190,10 +35370,6 @@
         "destination": "/docs/fr-ca/customize/actions/actions-real-time-logs"
       },
       {
-        "source": "/docs/authenticate/database-connections/auth0-user-store",
-        "destination": "/docs/authenticate/database-connections"
-      },
-      {
         "source": "/docs/quickstart/webapp/aspnet-core-blazor-server/interactive",
         "destination": "/docs/quickstart/webapp/aspnet-core-blazor-server"
       },
@@ -36198,6 +36374,20 @@
         "loop": false
       },
       {
+        "source": "/docs/connections/database/password-strength",
+        "destination": "/docs/authenticate/database-connections/password-strength",
+        "finalDestination": "/docs/authenticate/database-connections/password-options",
+        "hops": 1,
+        "loop": false
+      },
+      {
+        "source": "/docs/password-strength",
+        "destination": "/docs/authenticate/database-connections/password-strength",
+        "finalDestination": "/docs/authenticate/database-connections/password-options",
+        "hops": 1,
+        "loop": false
+      },
+      {
         "source": "/docs/quickstart/native/cordova",
         "destination": "/docs/quickstart",
         "finalDestination": "/docs/quickstarts",
@@ -36227,6 +36417,90 @@
       }
     ],
     "missingDestinationUnresolvable": [
+      {
+        "source": "/docs/api/myaccount/get-factors",
+        "destination": "/docs/api/myaccount/factors/get-factors",
+        "finalDestination": "/docs/api/myaccount/factors/get-factors",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/get-authentication-methods",
+        "destination": "/docs/api/myaccount/authentication-methods/get-authentication-methods",
+        "finalDestination": "/docs/api/myaccount/authentication-methods/get-authentication-methods",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/create-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/create-authentication-method",
+        "finalDestination": "/docs/api/myaccount/authentication-methods/create-authentication-method",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/get-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/get-authentication-method",
+        "finalDestination": "/docs/api/myaccount/authentication-methods/get-authentication-method",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/delete-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/delete-authentication-method",
+        "finalDestination": "/docs/api/myaccount/authentication-methods/delete-authentication-method",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/update-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/update-authentication-method",
+        "finalDestination": "/docs/api/myaccount/authentication-methods/update-authentication-method",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/confirm-authentication-method",
+        "destination": "/docs/api/myaccount/authentication-methods/confirm-authentication-method",
+        "finalDestination": "/docs/api/myaccount/authentication-methods/confirm-authentication-method",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/create-connected-account-request",
+        "destination": "/docs/api/myaccount/connected-accounts/create-connected-account-request",
+        "finalDestination": "/docs/api/myaccount/connected-accounts/create-connected-account-request",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/complete-connected-account-request",
+        "destination": "/docs/api/myaccount/connected-accounts/complete-connected-account-request",
+        "finalDestination": "/docs/api/myaccount/connected-accounts/complete-connected-account-request",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/get-connected-accounts",
+        "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts",
+        "finalDestination": "/docs/api/myaccount/connected-accounts/get-connected-accounts",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/get-connected-accounts-connections",
+        "destination": "/docs/api/myaccount/connected-accounts/get-connected-accounts-connections",
+        "finalDestination": "/docs/api/myaccount/connected-accounts/get-connected-accounts-connections",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/myaccount/delete-connected-account",
+        "destination": "/docs/api/myaccount/connected-accounts/delete-connected-account",
+        "finalDestination": "/docs/api/myaccount/connected-accounts/delete-connected-account",
+        "hops": 0,
+        "loop": false
+      },
       {
         "source": "/docs/articles",
         "destination": "/docs",
@@ -39023,6 +39297,22 @@
         ]
       },
       {
+        "source": "/docs/connections/database/password-strength",
+        "chain": [
+          "/docs/connections/database/password-strength",
+          "/docs/authenticate/database-connections/password-strength",
+          "/docs/authenticate/database-connections/password-options"
+        ]
+      },
+      {
+        "source": "/docs/password-strength",
+        "chain": [
+          "/docs/password-strength",
+          "/docs/authenticate/database-connections/password-strength",
+          "/docs/authenticate/database-connections/password-options"
+        ]
+      },
+      {
         "source": "/docs/quickstart/native/cordova",
         "chain": [
           "/docs/quickstart/native/cordova",
@@ -39035,7 +39325,7 @@
         "chain": [
           "/docs/xamarin-tutorial",
           "/docs/quickstart/native/xamarin",
-          "/docs/quickstart/native/net-android-ios"
+          "/docs/quickstart/native/net-android-ios/interactive"
         ]
       },
       {

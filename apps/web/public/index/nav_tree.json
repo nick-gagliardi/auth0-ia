@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-02-16T13:20:37.636Z",
+  "generatedAtUtc": "2026-03-03T18:24:03.490Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -3665,11 +3665,11 @@
                         "children": []
                       },
                       {
-                        "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/page:docs/authenticate/database-connections/password-strength:doc",
+                        "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/page:docs/authenticate/database-connections/flexible-password-pol",
                         "kind": "page",
-                        "label": "docs/authenticate/database-connections/password-strength",
-                        "route": "docs/authenticate/database-connections/password-strength",
-                        "filePath": "main/docs/authenticate/database-connections/password-strength.mdx",
+                        "label": "docs/authenticate/database-connections/flexible-password-policy",
+                        "route": "docs/authenticate/database-connections/flexible-password-policy",
+                        "filePath": "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
                         "children": []
                       },
                       {
@@ -6135,14 +6135,6 @@
                     "label": "Actions",
                     "children": [
                       {
-                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions:docs/customize/actions",
-                        "kind": "page",
-                        "label": "docs/customize/actions",
-                        "route": "docs/customize/actions",
-                        "filePath": "main/docs/customize/actions.mdx",
-                        "children": []
-                      },
-                      {
                         "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/actions-overview:docs/customize/actio",
                         "kind": "page",
                         "label": "docs/customize/actions/actions-overview",
@@ -6156,6 +6148,37 @@
                         "label": "docs/customize/actions/write-your-first-action",
                         "route": "docs/customize/actions/write-your-first-action",
                         "filePath": "main/docs/customize/actions/write-your-first-action.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules",
+                        "kind": "group",
+                        "label": "Actions Modules",
+                        "children": [
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules/page:docs/customize/actions/modules/actions-modules-overview:docs",
+                            "kind": "page",
+                            "label": "docs/customize/actions/modules/actions-modules-overview",
+                            "route": "docs/customize/actions/modules/actions-modules-overview",
+                            "filePath": "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules/page:docs/customize/actions/modules/write-your-first-action-modul",
+                            "kind": "page",
+                            "label": "docs/customize/actions/modules/write-your-first-action-module",
+                            "route": "docs/customize/actions/modules/write-your-first-action-module",
+                            "filePath": "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/action-coding-guidelines:docs/customi",
+                        "kind": "page",
+                        "label": "docs/customize/actions/action-coding-guidelines",
+                        "route": "docs/customize/actions/action-coding-guidelines",
+                        "filePath": "main/docs/customize/actions/action-coding-guidelines.mdx",
                         "children": []
                       },
                       {
@@ -6507,11 +6530,11 @@
                         "children": []
                       },
                       {
-                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/action-coding-guidelines:docs/customi",
+                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/transaction-metadata:docs/customize/a",
                         "kind": "page",
-                        "label": "docs/customize/actions/action-coding-guidelines",
-                        "route": "docs/customize/actions/action-coding-guidelines",
-                        "filePath": "main/docs/customize/actions/action-coding-guidelines.mdx",
+                        "label": "docs/customize/actions/transaction-metadata",
+                        "route": "docs/customize/actions/transaction-metadata",
+                        "filePath": "main/docs/customize/actions/transaction-metadata.mdx",
                         "children": []
                       },
                       {
@@ -6520,6 +6543,22 @@
                         "label": "docs/customize/actions/limitations",
                         "route": "docs/customize/actions/limitations",
                         "filePath": "main/docs/customize/actions/limitations.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/actions-real-time-logs:docs/customize",
+                        "kind": "page",
+                        "label": "docs/customize/actions/actions-real-time-logs",
+                        "route": "docs/customize/actions/actions-real-time-logs",
+                        "filePath": "main/docs/customize/actions/actions-real-time-logs.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/actions-templates:docs/customize/acti",
+                        "kind": "page",
+                        "label": "docs/customize/actions/actions-templates",
+                        "route": "docs/customize/actions/actions-templates",
+                        "filePath": "main/docs/customize/actions/actions-templates.mdx",
                         "children": []
                       },
                       {
@@ -6536,14 +6575,6 @@
                         "label": "docs/customize/actions/actions-unit-test",
                         "route": "docs/customize/actions/actions-unit-test",
                         "filePath": "main/docs/customize/actions/actions-unit-test.mdx",
-                        "children": []
-                      },
-                      {
-                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/transaction-metadata:docs/customize/a",
-                        "kind": "page",
-                        "label": "docs/customize/actions/transaction-metadata",
-                        "route": "docs/customize/actions/transaction-metadata",
-                        "filePath": "main/docs/customize/actions/transaction-metadata.mdx",
                         "children": []
                       },
                       {
@@ -6624,22 +6655,6 @@
                             "children": []
                           }
                         ]
-                      },
-                      {
-                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/actions-templates:docs/customize/acti",
-                        "kind": "page",
-                        "label": "docs/customize/actions/actions-templates",
-                        "route": "docs/customize/actions/actions-templates",
-                        "filePath": "main/docs/customize/actions/actions-templates.mdx",
-                        "children": []
-                      },
-                      {
-                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions/actions-real-time-logs:docs/customize",
-                        "kind": "page",
-                        "label": "docs/customize/actions/actions-real-time-logs",
-                        "route": "docs/customize/actions/actions-real-time-logs",
-                        "filePath": "main/docs/customize/actions/actions-real-time-logs.mdx",
-                        "children": []
                       }
                     ]
                   },
@@ -6878,12 +6893,83 @@
                         "children": []
                       },
                       {
-                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/page:docs/customize/forms/vault:docs/customize/forms/vault",
-                        "kind": "page",
-                        "label": "docs/customize/forms/vault",
-                        "route": "docs/customize/forms/vault",
-                        "filePath": "main/docs/customize/forms/vault.mdx",
-                        "children": []
+                        "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+                        "kind": "group",
+                        "label": "Vaults",
+                        "children": [
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults:docs/customize/forms/vaults",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults",
+                            "route": "docs/customize/forms/vaults",
+                            "filePath": "main/docs/customize/forms/vaults.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/auth0:docs/customize/forms/vault",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/auth0",
+                            "route": "docs/customize/forms/vaults/auth0",
+                            "filePath": "main/docs/customize/forms/vaults/auth0.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/http:docs/customize/forms/vaults",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/http",
+                            "route": "docs/customize/forms/vaults/http",
+                            "filePath": "main/docs/customize/forms/vaults/http.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/jwt:docs/customize/forms/vaults/",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/jwt",
+                            "route": "docs/customize/forms/vaults/jwt",
+                            "filePath": "main/docs/customize/forms/vaults/jwt.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/mailjet:docs/customize/forms/vau",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/mailjet",
+                            "route": "docs/customize/forms/vaults/mailjet",
+                            "filePath": "main/docs/customize/forms/vaults/mailjet.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/sendgrid:docs/customize/forms/va",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/sendgrid",
+                            "route": "docs/customize/forms/vaults/sendgrid",
+                            "filePath": "main/docs/customize/forms/vaults/sendgrid.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/telegram:docs/customize/forms/va",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/telegram",
+                            "route": "docs/customize/forms/vaults/telegram",
+                            "filePath": "main/docs/customize/forms/vaults/telegram.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/twilio:docs/customize/forms/vaul",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/twilio",
+                            "route": "docs/customize/forms/vaults/twilio",
+                            "filePath": "main/docs/customize/forms/vaults/twilio.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/whatsapp:docs/customize/forms/va",
+                            "kind": "page",
+                            "label": "docs/customize/forms/vaults/whatsapp",
+                            "route": "docs/customize/forms/vaults/whatsapp",
+                            "filePath": "main/docs/customize/forms/vaults/whatsapp.mdx",
+                            "children": []
+                          }
+                        ]
                       },
                       {
                         "id": "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/page:docs/customize/forms/custom-messages-and-translation:docs/cu",
@@ -8162,6 +8248,14 @@
                             "label": "docs/secure/attack-protection/playbooks/mfa-playbook",
                             "route": "docs/secure/attack-protection/playbooks/mfa-playbook",
                             "filePath": "main/docs/secure/attack-protection/playbooks/mfa-playbook.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:attack-protection/group:playbooks/page:docs/secure/attack-protection/playbooks/signup-attack-playbo",
+                            "kind": "page",
+                            "label": "docs/secure/attack-protection/playbooks/signup-attack-playbook",
+                            "route": "docs/secure/attack-protection/playbooks/signup-attack-playbook",
+                            "filePath": "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
                             "children": []
                           }
                         ]
@@ -10150,6 +10244,14 @@
                         "children": []
                       }
                     ]
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:deploy-and-monitor/group:monitoring/page:docs/deploy-monitor/metric-streams:docs/deploy-monitor/metri",
+                    "kind": "page",
+                    "label": "docs/deploy-monitor/metric-streams",
+                    "route": "docs/deploy-monitor/metric-streams",
+                    "filePath": "main/docs/deploy-monitor/metric-streams.mdx",
+                    "children": []
                   }
                 ]
               }
@@ -10819,6 +10921,14 @@
                     ]
                   },
                   {
+                    "id": "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot/page:docs/troubleshoot/api-best-practices:docs/troubleshoot/api-b",
+                    "kind": "page",
+                    "label": "docs/troubleshoot/api-best-practices",
+                    "route": "docs/troubleshoot/api-best-practices",
+                    "filePath": "main/docs/troubleshoot/api-best-practices.mdx",
+                    "children": []
+                  },
+                  {
                     "id": "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot/page:docs/troubleshoot/debugging-best-practices:docs/troubleshoot",
                     "kind": "page",
                     "label": "docs/troubleshoot/debugging-best-practices",
@@ -11195,6 +11305,403 @@
                 "route": "docs/api",
                 "filePath": "main/docs/api.mdx",
                 "children": []
+              }
+            ]
+          },
+          {
+            "id": "root/tab:api-reference/dropdown:myaccount-api",
+            "kind": "dropdown",
+            "label": "MyAccount API",
+            "children": [
+              {
+                "id": "root/tab:api-reference/dropdown:myaccount-api/page:docs/api/myaccount/index:docs/api/myaccount/index",
+                "kind": "page",
+                "label": "docs/api/myaccount/index",
+                "route": "docs/api/myaccount/index",
+                "filePath": "main/docs/api/myaccount/index.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+                "kind": "group",
+                "label": " ",
+                "children": [
+                  {
+                    "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:factors",
+                    "kind": "group",
+                    "label": "Factors",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:factors/page:docs/api/myaccount/factors/get-the-status-of-all-factors:doc",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/factors/get-the-status-of-all-factors",
+                        "route": "docs/api/myaccount/factors/get-the-status-of-all-factors",
+                        "filePath": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+                    "kind": "group",
+                    "label": "Authentication Methods",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/get-a-list-of-auth",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods",
+                        "route": "docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods",
+                        "filePath": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/start-the-enrollme",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method",
+                        "route": "docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method",
+                        "filePath": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/get-an-authenticat",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id",
+                        "route": "docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id",
+                        "filePath": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/delete-an-authenti",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id",
+                        "route": "docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id",
+                        "filePath": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/update-details-of-",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id",
+                        "route": "docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id",
+                        "filePath": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/confirm-the-enroll",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method",
+                        "route": "docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method",
+                        "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts",
+                    "kind": "group",
+                    "label": "Connected Accounts",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/create-a-connected-acc",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/create-a-connected-account-request",
+                        "route": "docs/api/myaccount/connected-accounts/create-a-connected-account-request",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/complete-a-connected-a",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/complete-a-connected-account-request",
+                        "route": "docs/api/myaccount/connected-accounts/complete-a-connected-account-request",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-connecte",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
+                        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-availabl",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
+                        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/delete-a-connected-acc",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
+                        "route": "docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root/tab:api-reference/dropdown:myorganization-api",
+            "kind": "dropdown",
+            "label": "MyOrganization API",
+            "children": [
+              {
+                "id": "root/tab:api-reference/dropdown:myorganization-api/page:docs/api/myorganization/index:docs/api/myorganization/index",
+                "kind": "page",
+                "label": "docs/api/myorganization/index",
+                "route": "docs/api/myorganization/index",
+                "filePath": "main/docs/api/myorganization/index.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+                "kind": "group",
+                "label": " ",
+                "children": [
+                  {
+                    "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration",
+                    "kind": "group",
+                    "label": "Configuration",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration/page:docs/api/myorganization/config/get-configuration:docs/api/my",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/config/get-configuration",
+                        "route": "docs/api/myorganization/config/get-configuration",
+                        "filePath": "main/docs/api/myorganization/config/get-configuration.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration/page:docs/api/myorganization/config/get-identity-providers-config",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/config/get-identity-providers-configuration",
+                        "route": "docs/api/myorganization/config/get-identity-providers-configuration",
+                        "filePath": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details",
+                    "kind": "group",
+                    "label": "Org Details",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details/page:docs/api/myorganization/org-details/get-organization-details",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-details/get-organization-details",
+                        "route": "docs/api/myorganization/org-details/get-organization-details",
+                        "filePath": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details/page:docs/api/myorganization/org-details/modify-organization-deta",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-details/modify-organization-details",
+                        "route": "docs/api/myorganization/org-details/modify-organization-details",
+                        "filePath": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+                    "kind": "group",
+                    "label": "Org Domain Management",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/list-organizat",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-domain-management/list-organization-domains",
+                        "route": "docs/api/myorganization/org-domain-management/list-organization-domains",
+                        "filePath": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/create-a-domai",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization",
+                        "route": "docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization",
+                        "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/get-organizati",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-domain-management/get-organization-domain",
+                        "route": "docs/api/myorganization/org-domain-management/get-organization-domain",
+                        "filePath": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/delete-domain-",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-domain-management/delete-domain-from-organization",
+                        "route": "docs/api/myorganization/org-domain-management/delete-domain-from-organization",
+                        "filePath": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/start-domain-v",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-domain-management/start-domain-verification",
+                        "route": "docs/api/myorganization/org-domain-management/start-domain-verification",
+                        "filePath": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/get-identity-p",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain",
+                        "route": "docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain",
+                        "filePath": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+                    "kind": "group",
+                    "label": "Idp Management",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/list-identity-provide",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/list-identity-providers",
+                        "route": "docs/api/myorganization/idp-management/list-identity-providers",
+                        "filePath": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/create-identity-provi",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/create-identity-provider",
+                        "route": "docs/api/myorganization/idp-management/create-identity-provider",
+                        "filePath": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/get-identity-provider",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/get-identity-provider",
+                        "route": "docs/api/myorganization/idp-management/get-identity-provider",
+                        "filePath": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/update-identity-provi",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/update-identity-provider",
+                        "route": "docs/api/myorganization/idp-management/update-identity-provider",
+                        "filePath": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/delete-identity-provi",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/delete-identity-provider",
+                        "route": "docs/api/myorganization/idp-management/delete-identity-provider",
+                        "filePath": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/refresh-identity-prov",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping",
+                        "route": "docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping",
+                        "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/detach-identity-provi",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/detach-identity-provider-from-organization",
+                        "route": "docs/api/myorganization/idp-management/detach-identity-provider-from-organization",
+                        "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/associate-domain-with",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/associate-domain-with-identity-provider",
+                        "route": "docs/api/myorganization/idp-management/associate-domain-with-identity-provider",
+                        "filePath": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/remove-domain-from-id",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/remove-domain-from-identity-provider",
+                        "route": "docs/api/myorganization/idp-management/remove-domain-from-identity-provider",
+                        "filePath": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/get-provisioning-conf",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/get-provisioning-configuration",
+                        "route": "docs/api/myorganization/idp-management/get-provisioning-configuration",
+                        "filePath": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/create-provisioning-c",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/create-provisioning-configuration",
+                        "route": "docs/api/myorganization/idp-management/create-provisioning-configuration",
+                        "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/delete-provisioning-c",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/delete-provisioning-configuration",
+                        "route": "docs/api/myorganization/idp-management/delete-provisioning-configuration",
+                        "filePath": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/refresh-provisioning-",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping",
+                        "route": "docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping",
+                        "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/list-provisioning-sci",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/list-provisioning-scim-tokens",
+                        "route": "docs/api/myorganization/idp-management/list-provisioning-scim-tokens",
+                        "filePath": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/create-provisioning-s",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/create-provisioning-scim-token",
+                        "route": "docs/api/myorganization/idp-management/create-provisioning-scim-token",
+                        "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/revoke-provisioning-s",
+                        "kind": "page",
+                        "label": "docs/api/myorganization/idp-management/revoke-provisioning-scim-token",
+                        "route": "docs/api/myorganization/idp-management/revoke-provisioning-scim-token",
+                        "filePath": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }

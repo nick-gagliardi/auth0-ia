@@ -1,20 +1,220 @@
 {
-  "pagesScanned": 2162,
-  "pagesWithWarnings": 551,
-  "warningCount": 785,
+  "pagesScanned": 2215,
+  "pagesWithWarnings": 543,
+  "warningCount": 776,
   "byCode": {
     "missing_pkce_mention": 128,
     "missing_state_mention": 129,
-    "missing_nonce_mention": 274,
+    "missing_nonce_mention": 270,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
-    "rules_vs_actions_language": 240
+    "rules_vs_actions_language": 235
   },
   "items": [
     {
       "id": "main/docs/api.mdx",
       "filePath": "main/docs/api.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+      "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+      "filePath": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+      "filePath": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+      "filePath": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+      "filePath": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
+      "filePath": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+      "filePath": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+      "filePath": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+      "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+      "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+      "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+      "filePath": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myaccount/index.mdx",
+      "filePath": "main/docs/api/myaccount/index.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/config/get-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/config/get-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/index.mdx",
+      "filePath": "main/docs/api/myorganization/index.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+      "filePath": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+      "filePath": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
       "warnings": []
     },
     {
@@ -78,15 +278,7 @@
     {
       "id": "main/docs/authenticate/database-connections/custom-db.mdx",
       "filePath": "main/docs/authenticate/database-connections/custom-db.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "* **Rules** run when artifacts for user authenticity are generated (i.e., an <Tooltip tip=\"ID Token: Credential meant for the client itself, rather than for accessing a resource.\" ",
-          "line": 12
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
@@ -230,6 +422,19 @@
       "warnings": []
     },
     {
+      "id": "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
+      "filePath": "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "description: Use the Flexible Password Policy to define password strength and composition rules for database connections in Auth0.",
+          "line": 4
+        }
+      ]
+    },
+    {
       "id": "main/docs/authenticate/database-connections/non-unique-emails.mdx",
       "filePath": "main/docs/authenticate/database-connections/non-unique-emails.mdx",
       "warnings": []
@@ -284,19 +489,6 @@
       "id": "main/docs/authenticate/database-connections/password-options.mdx",
       "filePath": "main/docs/authenticate/database-connections/password-options.mdx",
       "warnings": []
-    },
-    {
-      "id": "main/docs/authenticate/database-connections/password-strength.mdx",
-      "filePath": "main/docs/authenticate/database-connections/password-strength.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Some rules are composites. A rule may contain an `items` field that specifies which sub-rules have failed. Each sub-rule will have a `message` and may have a `format`, if required.",
-          "line": 202
-        }
-      ]
     },
     {
       "id": "main/docs/authenticate/database-connections/require-username.mdx",
@@ -1880,7 +2072,7 @@
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "5. Auth0 authorizes the Session Transfer Token as part of the cookie or as a URL parameter, and then returns an [authorization code](/docs/get-started/authentication-and-authorizat",
-          "line": 24
+          "line": 22
         }
       ]
     },
@@ -1893,14 +2085,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Once a user is authenticated, Auth0 returns an [Access token](/docs/secure/tokens/access-tokens), and [ID token](/docs/secure/tokens/id-tokens), and (optionally) a [Refresh token](",
-          "line": 58
-        },
-        {
-          "code": "missing_state_mention",
-          "severity": "warn",
-          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "Native to Web SSO supports any authentication flow that returns a refresh token, such as [Resource Owner Password Flow](/docs/secure/multi-factor-authentication/authenticate-using-",
-          "line": 29
+          "line": 53
         }
       ]
     },
@@ -1913,14 +2098,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": ".scope(\"profile email offline_access openid\")",
-          "line": 299
+          "line": 295
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "If the `session_transfer_token` is injected into the browser with a cookie no additional changes to your web application are required. The only requirement is that the browser navi",
-          "line": 111
+          "line": 107
         }
       ]
     },
@@ -1933,21 +2118,21 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "When a WebView or browser initiates a call to the `/authorize` endpoint, Auth0 determines if there is an active session, and then either reuses the existing session or honors the p",
-          "line": 11
+          "line": 7
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "When a WebView or browser initiates a call to the `/authorize` endpoint, Auth0 determines if there is an active session, and then either reuses the existing session or honors the p",
-          "line": 11
+          "line": 7
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "Native to Web SSO applies a set of revocation rules to ensure consistent and secure behavior when sessions and refresh tokens are revoked:",
-          "line": 30
+          "line": 26
         }
       ]
     },
@@ -2069,11 +2254,6 @@
     {
       "id": "main/docs/customize.mdx",
       "filePath": "main/docs/customize.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/customize/actions.mdx",
-      "filePath": "main/docs/customize/actions.mdx",
       "warnings": []
     },
     {
@@ -2229,28 +2409,12 @@
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx",
       "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "## `api.idToken`",
-          "line": 559
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
       "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "<li><code>id_token</code></li>",
-          "line": 710
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx",
@@ -2288,15 +2452,7 @@
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx",
       "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "<li><code>id_token</code></li>",
-          "line": 229
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx",
@@ -2311,15 +2467,7 @@
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx",
       "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "<li><code>id_token</code></li>",
-          "line": 282
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/customize/actions/limitations.mdx",
@@ -2359,6 +2507,16 @@
     {
       "id": "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
       "filePath": "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+      "filePath": "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
+      "filePath": "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
       "warnings": []
     },
     {
@@ -2960,7 +3118,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Data to encode. We recommend to format it according to OpenID standards.",
-          "line": 32
+          "line": 30
         }
       ]
     },
@@ -3046,8 +3204,48 @@
       "warnings": []
     },
     {
-      "id": "main/docs/customize/forms/vault.mdx",
-      "filePath": "main/docs/customize/forms/vault.mdx",
+      "id": "main/docs/customize/forms/vaults.mdx",
+      "filePath": "main/docs/customize/forms/vaults.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/auth0.mdx",
+      "filePath": "main/docs/customize/forms/vaults/auth0.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/http.mdx",
+      "filePath": "main/docs/customize/forms/vaults/http.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/jwt.mdx",
+      "filePath": "main/docs/customize/forms/vaults/jwt.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/mailjet.mdx",
+      "filePath": "main/docs/customize/forms/vaults/mailjet.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/sendgrid.mdx",
+      "filePath": "main/docs/customize/forms/vaults/sendgrid.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/telegram.mdx",
+      "filePath": "main/docs/customize/forms/vaults/telegram.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/twilio.mdx",
+      "filePath": "main/docs/customize/forms/vaults/twilio.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/forms/vaults/whatsapp.mdx",
+      "filePath": "main/docs/customize/forms/vaults/whatsapp.mdx",
       "warnings": []
     },
     {
@@ -4192,6 +4390,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/deploy-monitor/metric-streams.mdx",
+      "filePath": "main/docs/deploy-monitor/metric-streams.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/deploy-monitor/monitor.mdx",
       "filePath": "main/docs/deploy-monitor/monitor.mdx",
       "warnings": []
@@ -4606,7 +4809,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "The [Client-Initiated Backchannel Authentication (CIBA) flow](/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow) is a decoupl",
-          "line": 10
+          "line": 11
         }
       ]
     },
@@ -4618,15 +4821,15 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "<td>Returns only OIDC conformant error codes. In some cases, Auth0 may return additional error codes, but enabling this compliance level ensures that Auth0 only uses error codes de",
-          "line": 123
+          "evidence": "<td>code <code>id_token</code></td>",
+          "line": 136
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "The following tables summarize the additional validation rules and changes to Auth0’s behavior that each compliance level enables:",
-          "line": 36
+          "line": 38
         }
       ]
     },
@@ -5100,7 +5303,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "* The second category is where access is either granted or denied to a specific subset of application or API functionality. The data required to enforce this is typically stored in",
-          "line": 15
+          "line": 17
         }
       ]
     },
@@ -5162,15 +5365,7 @@
     {
       "id": "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
       "filePath": "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "The Normalized User Profile is updated from the identity provider during login, and you can change the limited set of the information it contains through the Auth0 Management API. ",
-          "line": 21
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
@@ -5755,7 +5950,15 @@
     {
       "id": "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "filePath": "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "To integrate Auth0 with a native application, you must first register your app with Auth0 using the <Tooltip tip=\"Auth0 Dashboard: Auth0's main product to configure your services.\"",
+          "line": 6
+        }
+      ]
     },
     {
       "id": "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
@@ -6153,21 +6356,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Scope:        \"openid\",",
-          "line": 82
+          "line": 83
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "//Authorize",
-          "line": 98
+          "line": 99
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "//Authorize",
-          "line": 98
+          "line": 99
         }
       ]
     },
@@ -6180,21 +6383,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Scope = \"openid\",",
-          "line": 63
+          "line": 64
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "//Authorize",
-          "line": 98
+          "line": 99
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "//Authorize",
-          "line": 98
+          "line": 99
         }
       ]
     },
@@ -6207,21 +6410,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "<td>Must include <code>openid</code>.<br/><br/>The scope can optionally include <code>offline_access</code> to request a refresh token. However, for one-time authorization of a tra",
-          "line": 108
+          "line": 109
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "* [Authorization Code Flow with Rich Authorization Requests (RAR)](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar)",
-          "line": 558
+          "line": 559
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "* [Authorization Code Flow with Rich Authorization Requests (RAR)](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar)",
-          "line": 558
+          "line": 559
         }
       ]
     },
@@ -6239,21 +6442,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "<td>The <a href=\"/docs/get-started/apis/scopes\">scopes</a> for which you want to request authorization. These must be separated by a space. You can request any of the <a href=\"http",
-          "line": 273
+          "line": 218
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "* [CLI (Node.js)](https://gist.github.com/panva/ebaacfe433a8677bdbf458f6e1132045): Sample implementation of a CLI that uses the Device Authorization Flow instead of the Authorizati",
-          "line": 1153
+          "line": 937
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "* [CLI (Node.js)](https://gist.github.com/panva/ebaacfe433a8677bdbf458f6e1132045): Sample implementation of a CLI that uses the Device Authorization Flow instead of the Authorizati",
-          "line": 1153
+          "line": 937
         }
       ]
     },
@@ -6307,7 +6510,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "You can use rules to change the returned scopes of Access Tokens and/or add claims to Access and ID Tokens. (To learn more about rules, read [Auth0 Rules](/docs/customize/rules).) ",
-          "line": 920
+          "line": 757
         }
       ]
     },
@@ -6723,7 +6926,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "url: \"https://github.com/auth0-samples/auth0-react-native-sample/tree/master/00-Login-Hooks\",",
-          "line": 458
+          "line": 490
         }
       ]
     },
@@ -12894,6 +13097,11 @@
       ]
     },
     {
+      "id": "main/docs/quickstart/backend/fastify/index.mdx",
+      "filePath": "main/docs/quickstart/backend/fastify/index.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/quickstart/backend/golang/02-using.mdx",
       "filePath": "main/docs/quickstart/backend/golang/02-using.mdx",
       "warnings": []
@@ -13136,14 +13344,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": ".withScope(\"openid profile email offline_access\")",
-          "line": 164
+          "line": 163
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "* Add ProGuard rules for Auth0 SDK if using code obfuscation",
-          "line": 339
+          "line": 338
         }
       ]
     },
@@ -13349,7 +13557,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": ".scope(\"openid profile email offline_access\")",
-          "line": 195
+          "line": 194
         }
       ]
     },
@@ -13400,11 +13608,6 @@
       ]
     },
     {
-      "id": "main/docs/quickstart/native/net-android-ios/_index.mdx",
-      "filePath": "main/docs/quickstart/native/net-android-ios/_index.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/quickstart/native/net-android-ios/index.mdx",
       "filePath": "main/docs/quickstart/native/net-android-ios/index.mdx",
       "warnings": [
@@ -13412,15 +13615,15 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-          "line": 285
+          "evidence": "var idToken = loginResult.IdentityToken;",
+          "line": 302
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-          "line": 356
+          "evidence": "* **ProGuard/Code Obfuscation**: Add appropriate rules if using code obfuscation on Android",
+          "line": 522
         }
       ]
     },
@@ -13458,14 +13661,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "await authorize({scope: 'openid profile email'});",
-          "line": 274
+          "line": 294
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "<Tab title=\"Hooks-based (with Provider)\">",
-          "line": 179
+          "line": 199
         }
       ]
     },
@@ -13554,14 +13757,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-          "line": 282
+          "line": 283
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "[* Configure other identity providers](/docs/authenticate/identity-providers)[* Enable multifactor authentication](/docs/secure/multi-factor-authentication)[* Learn about attack pr",
-          "line": 345
+          "line": 346
         }
       ]
     },
@@ -13579,14 +13782,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-          "line": 286
+          "line": 287
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-          "line": 357
+          "line": 358
         }
       ]
     },
@@ -13598,15 +13801,7 @@
     {
       "id": "main/docs/quickstart/spa/angular/index.mdx",
       "filePath": "main/docs/quickstart/spa/angular/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-          "line": 70
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/quickstart/spa/capn-web/index.mdx",
@@ -13631,7 +13826,15 @@
     {
       "id": "main/docs/quickstart/spa/flutter/index.mdx",
       "filePath": "main/docs/quickstart/spa/flutter/index.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "scope: 'openid profile email read:messages',",
+          "line": 636
+        }
+      ]
     },
     {
       "id": "main/docs/quickstart/spa/react/index.mdx",
@@ -13641,8 +13844,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-          "line": 67
+          "evidence": "<Accordion title=\"Using Auth0 with Custom Hooks\">",
+          "line": 741
         }
       ]
     },
@@ -13660,22 +13863,14 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-          "line": 81
+          "line": 85
         }
       ]
     },
     {
       "id": "main/docs/quickstart/spa/vuejs/index.mdx",
       "filePath": "main/docs/quickstart/spa/vuejs/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-          "line": 67
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/quickstart/webapp/apache/_index.mdx",
@@ -13871,6 +14066,11 @@
           "line": 585
         }
       ]
+    },
+    {
+      "id": "main/docs/quickstart/webapp/fastify/index.mdx",
+      "filePath": "main/docs/quickstart/webapp/fastify/index.mdx",
+      "warnings": []
     },
     {
       "id": "main/docs/quickstart/webapp/golang/_index.mdx",
@@ -14078,15 +14278,7 @@
     {
       "id": "main/docs/quickstart/webapp/nextjs/index.mdx",
       "filePath": "main/docs/quickstart/webapp/nextjs/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-          "line": 82
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/quickstart/webapp/nginx-plus/_index.mdx",
@@ -14342,6 +14534,11 @@
     {
       "id": "main/docs/secure/attack-protection/playbooks/mfa-playbook.mdx",
       "filePath": "main/docs/secure/attack-protection/playbooks/mfa-playbook.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+      "filePath": "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "warnings": []
     },
     {
@@ -15378,7 +15575,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Sender constraining is an <Tooltip tip=\"OAuth 2.0: Authorization framework that defines authorization protocols and workflows.\" cta=\"View Glossary\" href=\"/docs/glossary?term=OAuth+",
-          "line": 13
+          "line": 8
         }
       ]
     },
@@ -15391,7 +15588,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "[Sender constraining](/docs/secure/sender-constraining) is an <Tooltip tip=\"OAuth 2.0: Authorization framework that defines authorization protocols and workflows.\" cta=\"View Glossa",
-          "line": 12
+          "line": 7
         }
       ]
     },
@@ -15404,14 +15601,14 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "<td>Authorization Code Grant</td>",
-          "line": 44
+          "line": 38
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "<td>Authorization Code Grant</td>",
-          "line": 44
+          "line": 38
         }
       ]
     },
@@ -15950,6 +16147,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/troubleshoot/api-best-practices.mdx",
+      "filePath": "main/docs/troubleshoot/api-best-practices.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/troubleshoot/auth0-blog.mdx",
       "filePath": "main/docs/troubleshoot/auth0-blog.mdx",
       "warnings": []
@@ -16290,15 +16492,7 @@
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx",
       "filePath": "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Entities in Auth0 are tenant configuration elements such as applications, connections, rules, and API <Tooltip tip=\"Resource Server: Server hosting protected resources. Resource se",
-          "line": 5
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/load-testing-policy.mdx",
@@ -16908,7 +17102,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "url: \"https://github.com/auth0-samples/auth0-react-native-sample/tree/master/00-Login-Hooks\",",
-        "line": 458
+        "line": 490
       }
     ],
     "main/docs/manage-users.mdx": [],
@@ -16916,6 +17110,7 @@
     "main/docs/releases.mdx": [],
     "main/docs/secure.mdx": [],
     "main/docs/troubleshoot.mdx": [],
+    "main/docs/troubleshoot/api-best-practices.mdx": [],
     "main/docs/troubleshoot/auth0-blog.mdx": [],
     "main/docs/troubleshoot/auth0-community.mdx": [],
     "main/docs/troubleshoot/authentication-issues.mdx": [],
@@ -17174,15 +17369,7 @@
     "main/docs/troubleshoot/customer-support/operational-policies/billing-policy.mdx": [],
     "main/docs/troubleshoot/customer-support/operational-policies/change-freeze-policy.mdx": [],
     "main/docs/troubleshoot/customer-support/operational-policies/data-export-and-transfer-policy.mdx": [],
-    "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Entities in Auth0 are tenant configuration elements such as applications, connections, rules, and API <Tooltip tip=\"Resource Server: Server hosting protected resources. Resource se",
-        "line": 5
-      }
-    ],
+    "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx": [],
     "main/docs/troubleshoot/customer-support/operational-policies/load-testing-policy.mdx": [],
     "main/docs/troubleshoot/customer-support/operational-policies/penetration-testing-policy.mdx": [],
     "main/docs/troubleshoot/customer-support/operational-policies/public-cloud-service-endpoints.mdx": [],
@@ -17438,7 +17625,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Sender constraining is an <Tooltip tip=\"OAuth 2.0: Authorization framework that defines authorization protocols and workflows.\" cta=\"View Glossary\" href=\"/docs/glossary?term=OAuth+",
-        "line": 13
+        "line": 8
       }
     ],
     "main/docs/secure/tenant-access-control-list.mdx": [
@@ -17771,7 +17958,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "[Sender constraining](/docs/secure/sender-constraining) is an <Tooltip tip=\"OAuth 2.0: Authorization framework that defines authorization protocols and workflows.\" cta=\"View Glossa",
-        "line": 12
+        "line": 7
       }
     ],
     "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx": [
@@ -17780,14 +17967,14 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "<td>Authorization Code Grant</td>",
-        "line": 44
+        "line": 38
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "<td>Authorization Code Grant</td>",
-        "line": 44
+        "line": 38
       }
     ],
     "main/docs/secure/sender-constraining/mtls-sender-constraining.mdx": [],
@@ -18297,6 +18484,7 @@
       }
     ],
     "main/docs/secure/attack-protection/playbooks/mfa-playbook.mdx": [],
+    "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx": [],
     "main/docs/secure/attack-protection/bot-detection/bot-detection-custom-login-pages.mdx": [],
     "main/docs/secure/attack-protection/bot-detection/bot-detection-native-apps.mdx": [],
     "main/docs/secure/attack-protection/bot-detection/bot-detection-passwordless-flows.mdx": [],
@@ -18385,15 +18573,7 @@
         "line": 3
       }
     ],
-    "main/docs/quickstart/webapp/nextjs/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-        "line": 82
-      }
-    ],
+    "main/docs/quickstart/webapp/nextjs/index.mdx": [],
     "main/docs/quickstart/webapp/laravel/_index.mdx": [],
     "main/docs/quickstart/webapp/laravel/index.mdx": [],
     "main/docs/quickstart/webapp/laravel/interactive.mdx": [],
@@ -18541,6 +18721,7 @@
         "line": 181
       }
     ],
+    "main/docs/quickstart/webapp/fastify/index.mdx": [],
     "main/docs/quickstart/webapp/fastapi/index.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -18684,22 +18865,14 @@
         "line": 15
       }
     ],
-    "main/docs/quickstart/spa/vuejs/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-        "line": 67
-      }
-    ],
+    "main/docs/quickstart/spa/vuejs/index.mdx": [],
     "main/docs/quickstart/spa/vanillajs/index.mdx": [
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-        "line": 81
+        "line": 85
       }
     ],
     "main/docs/quickstart/spa/svelte/index.mdx": [],
@@ -18708,11 +18881,19 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-        "line": 67
+        "evidence": "<Accordion title=\"Using Auth0 with Custom Hooks\">",
+        "line": 741
       }
     ],
-    "main/docs/quickstart/spa/flutter/index.mdx": [],
+    "main/docs/quickstart/spa/flutter/index.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "scope: 'openid profile email read:messages',",
+        "line": 636
+      }
+    ],
     "main/docs/quickstart/spa/capn-web/index.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -18729,29 +18910,21 @@
         "line": 77
       }
     ],
-    "main/docs/quickstart/spa/angular/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "🚨 DIRECTORY NAVIGATION RULES:",
-        "line": 70
-      }
-    ],
+    "main/docs/quickstart/spa/angular/index.mdx": [],
     "main/docs/quickstart/native/xamarin.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-        "line": 282
+        "line": 283
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "[* Configure other identity providers](/docs/authenticate/identity-providers)[* Enable multifactor authentication](/docs/secure/multi-factor-authentication)[* Learn about attack pr",
-        "line": 345
+        "line": 346
       }
     ],
     "main/docs/quickstart/native/xamarin/_index.mdx": [],
@@ -18761,14 +18934,14 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-        "line": 286
+        "line": 287
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-        "line": 357
+        "line": 358
       }
     ],
     "main/docs/quickstart/native/xamarin/interactive.mdx": [],
@@ -18846,31 +19019,30 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "await authorize({scope: 'openid profile email'});",
-        "line": 274
+        "line": 294
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "<Tab title=\"Hooks-based (with Provider)\">",
-        "line": 179
+        "line": 199
       }
     ],
-    "main/docs/quickstart/native/net-android-ios/_index.mdx": [],
     "main/docs/quickstart/native/net-android-ios/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-        "line": 285
+        "evidence": "var idToken = loginResult.IdentityToken;",
+        "line": 302
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-        "line": 356
+        "evidence": "* **ProGuard/Code Obfuscation**: Add appropriate rules if using code obfuscation on Android",
+        "line": 522
       }
     ],
     "main/docs/quickstart/native/net-android-ios/interactive.mdx": [],
@@ -18914,7 +19086,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": ".scope(\"openid profile email offline_access\")",
-        "line": 195
+        "line": 194
       }
     ],
     "main/docs/quickstart/native/ionic-vue/_index.mdx": [],
@@ -19082,14 +19254,14 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": ".withScope(\"openid profile email offline_access\")",
-        "line": 164
+        "line": 163
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "* Add ProGuard rules for Auth0 SDK if using code obfuscation",
-        "line": 339
+        "line": 338
       }
     ],
     "main/docs/quickstart/backend/webapi-owin/02-using.mdx": [],
@@ -19164,6 +19336,7 @@
     "main/docs/quickstart/backend/golang/03-troubleshooting.mdx": [],
     "main/docs/quickstart/backend/golang/index.mdx": [],
     "main/docs/quickstart/backend/golang/interactive.mdx": [],
+    "main/docs/quickstart/backend/fastify/index.mdx": [],
     "main/docs/quickstart/backend/fastapi/index.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -21902,7 +22075,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "You can use rules to change the returned scopes of Access Tokens and/or add claims to Access and ID Tokens. (To learn more about rules, read [Auth0 Rules](/docs/customize/rules).) ",
-        "line": 920
+        "line": 757
       }
     ],
     "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx": [
@@ -21911,21 +22084,21 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "<td>The <a href=\"/docs/get-started/apis/scopes\">scopes</a> for which you want to request authorization. These must be separated by a space. You can request any of the <a href=\"http",
-        "line": 273
+        "line": 218
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "* [CLI (Node.js)](https://gist.github.com/panva/ebaacfe433a8677bdbf458f6e1132045): Sample implementation of a CLI that uses the Device Authorization Flow instead of the Authorizati",
-        "line": 1153
+        "line": 937
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* [CLI (Node.js)](https://gist.github.com/panva/ebaacfe433a8677bdbf458f6e1132045): Sample implementation of a CLI that uses the Device Authorization Flow instead of the Authorizati",
-        "line": 1153
+        "line": 937
       }
     ],
     "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/email-notifications-with-ciba.mdx": [
@@ -21934,21 +22107,21 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Scope:        \"openid\",",
-        "line": 82
+        "line": 83
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "//Authorize",
-        "line": 98
+        "line": 99
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "//Authorize",
-        "line": 98
+        "line": 99
       }
     ],
     "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/mobile-push-notifications-with-ciba.mdx": [
@@ -21957,21 +22130,21 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Scope = \"openid\",",
-        "line": 63
+        "line": 64
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "//Authorize",
-        "line": 98
+        "line": 99
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "//Authorize",
-        "line": 98
+        "line": 99
       }
     ],
     "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/user-authorization-with-ciba.mdx": [
@@ -21980,21 +22153,21 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "<td>Must include <code>openid</code>.<br/><br/>The scope can optionally include <code>offline_access</code> to request a refresh token. However, for one-time authorization of a tra",
-        "line": 108
+        "line": 109
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "* [Authorization Code Flow with Rich Authorization Requests (RAR)](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar)",
-        "line": 558
+        "line": 559
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* [Authorization Code Flow with Rich Authorization Requests (RAR)](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar)",
-        "line": 558
+        "line": 559
       }
     ],
     "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow/call-your-api-using-the-client-credentials-flow.mdx": [
@@ -22156,7 +22329,15 @@
     ],
     "main/docs/get-started/auth0-overview/create-applications/configure-an-identity-provider-in-access-gateway.mdx": [],
     "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx": [],
-    "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx": [],
+    "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "To integrate Auth0 with a native application, you must first register your app with Auth0 using the <Tooltip tip=\"Auth0 Dashboard: Auth0's main product to configure your services.\"",
+        "line": 6
+      }
+    ],
     "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx": [],
     "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx": [],
     "main/docs/get-started/auth0-mcp-server/auth0-mcp-server-guides.mdx": [],
@@ -22537,7 +22718,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "* The second category is where access is either granted or denied to a specific subset of application or API functionality. The data required to enforce this is typically stored in",
-        "line": 15
+        "line": 17
       }
     ],
     "main/docs/get-started/architecture-scenarios/business-to-consumer/branding.mdx": [],
@@ -22545,15 +22726,7 @@
     "main/docs/get-started/architecture-scenarios/business-to-consumer/launch.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-consumer/logout.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-consumer/operations.mdx": [],
-    "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "The Normalized User Profile is updated from the identity provider during login, and you can change the limited set of the information it contains through the Auth0 Management API. ",
-        "line": 21
-      }
-    ],
+    "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-consumer/quality-assurance.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-consumer/launch/compliance-readiness.mdx": [],
@@ -22699,7 +22872,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "The [Client-Initiated Backchannel Authentication (CIBA) flow](/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow) is a decoupl",
-        "line": 10
+        "line": 11
       }
     ],
     "main/docs/get-started/applications/configure-fapi-compliance.mdx": [
@@ -22707,15 +22880,15 @@
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "<td>Returns only OIDC conformant error codes. In some cases, Auth0 may return additional error codes, but enabling this compliance level ensures that Auth0 only uses error codes de",
-        "line": 123
+        "evidence": "<td>code <code>id_token</code></td>",
+        "line": 136
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "The following tables summarize the additional validation rules and changes to Auth0’s behavior that each compliance level enables:",
-        "line": 36
+        "line": 38
       }
     ],
     "main/docs/get-started/applications/configure-jar.mdx": [
@@ -23004,6 +23177,7 @@
     "main/docs/deploy-monitor/deployment-best-practices.mdx": [],
     "main/docs/deploy-monitor/deployment-options.mdx": [],
     "main/docs/deploy-monitor/logs.mdx": [],
+    "main/docs/deploy-monitor/metric-streams.mdx": [],
     "main/docs/deploy-monitor/monitor.mdx": [],
     "main/docs/deploy-monitor/pre-deployment-checks.mdx": [],
     "main/docs/deploy-monitor/pre-deployment-checks/how-to-run-production-checks.mdx": [],
@@ -23106,7 +23280,6 @@
     "main/docs/deploy-monitor/deploy-cli-tool/resource-specific-documentation.mdx": [],
     "main/docs/deploy-monitor/deploy-cli-tool/use-as-a-cli.mdx": [],
     "main/docs/deploy-monitor/deploy-cli-tool/use-as-a-node-module.mdx": [],
-    "main/docs/customize/actions.mdx": [],
     "main/docs/customize/auth0-marketplace.mdx": [],
     "main/docs/customize/custom-domains.mdx": [
       {
@@ -23577,7 +23750,15 @@
       }
     ],
     "main/docs/customize/forms/variables.mdx": [],
-    "main/docs/customize/forms/vault.mdx": [],
+    "main/docs/customize/forms/vaults.mdx": [],
+    "main/docs/customize/forms/vaults/auth0.mdx": [],
+    "main/docs/customize/forms/vaults/http.mdx": [],
+    "main/docs/customize/forms/vaults/jwt.mdx": [],
+    "main/docs/customize/forms/vaults/mailjet.mdx": [],
+    "main/docs/customize/forms/vaults/sendgrid.mdx": [],
+    "main/docs/customize/forms/vaults/telegram.mdx": [],
+    "main/docs/customize/forms/vaults/twilio.mdx": [],
+    "main/docs/customize/forms/vaults/whatsapp.mdx": [],
     "main/docs/customize/forms/flows/flow-execution-and-debugger.mdx": [],
     "main/docs/customize/forms/flows/integrations.mdx": [],
     "main/docs/customize/forms/flows/integrations/auth0.mdx": [],
@@ -23589,7 +23770,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Data to encode. We recommend to format it according to OpenID standards.",
-        "line": 32
+        "line": 30
       }
     ],
     "main/docs/customize/forms/flows/integrations/json.mdx": [],
@@ -23813,6 +23994,8 @@
     "main/docs/customize/actions/transaction-metadata.mdx": [],
     "main/docs/customize/actions/use-cases.mdx": [],
     "main/docs/customize/actions/write-your-first-action.mdx": [],
+    "main/docs/customize/actions/modules/actions-modules-overview.mdx": [],
+    "main/docs/customize/actions/modules/write-your-first-action-module.mdx": [],
     "main/docs/customize/actions/migrate/actions-migration-limitations.mdx": [],
     "main/docs/customize/actions/migrate/migrate-a-rule-to-an-action.mdx": [],
     "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx": [],
@@ -23827,44 +24010,12 @@
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-api-object.mdx": [],
-    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "<li><code>id_token</code></li>",
-        "line": 282
-      }
-    ],
+    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/api-object.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-api-object.mdx": [],
-    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "<li><code>id_token</code></li>",
-        "line": 229
-      }
-    ],
-    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "## `api.idToken`",
-        "line": 559
-      }
-    ],
-    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "<li><code>id_token</code></li>",
-        "line": 710
-      }
-    ],
+    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": [],
+    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx": [],
+    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -23940,7 +24091,7 @@
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "5. Auth0 authorizes the Session Transfer Token as part of the cookie or as a URL parameter, and then returns an [authorization code](/docs/get-started/authentication-and-authorizat",
-        "line": 24
+        "line": 22
       }
     ],
     "main/docs/authenticate/single-sign-on/okta-access-gateway.mdx": [],
@@ -23971,14 +24122,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Once a user is authenticated, Auth0 returns an [Access token](/docs/secure/tokens/access-tokens), and [ID token](/docs/secure/tokens/id-tokens), and (optionally) a [Refresh token](",
-        "line": 58
-      },
-      {
-        "code": "missing_state_mention",
-        "severity": "warn",
-        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "Native to Web SSO supports any authentication flow that returns a refresh token, such as [Resource Owner Password Flow](/docs/secure/multi-factor-authentication/authenticate-using-",
-        "line": 29
+        "line": 53
       }
     ],
     "main/docs/authenticate/single-sign-on/native-to-web/configure-mobile-to-web-payment-flows.mdx": [
@@ -23987,14 +24131,14 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": ".scope(\"profile email offline_access openid\")",
-        "line": 299
+        "line": 295
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "If the `session_transfer_token` is injected into the browser with a cookie no additional changes to your web application are required. The only requirement is that the browser navi",
-        "line": 111
+        "line": 107
       }
     ],
     "main/docs/authenticate/single-sign-on/native-to-web/native-to-web-sso-and-sessions.mdx": [
@@ -24003,21 +24147,21 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "When a WebView or browser initiates a call to the `/authorize` endpoint, Auth0 determines if there is an active session, and then either reuses the existing session or honors the p",
-        "line": 11
+        "line": 7
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "When a WebView or browser initiates a call to the `/authorize` endpoint, Auth0 determines if there is an active session, and then either reuses the existing session or honors the p",
-        "line": 11
+        "line": 7
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "Native to Web SSO applies a set of revocation rules to ensure consistent and secure behavior when sessions and refresh tokens are revoked:",
-        "line": 30
+        "line": 26
       }
     ],
     "main/docs/authenticate/single-sign-on/native-to-web/native-to-web-sso-best-practices.mdx": [],
@@ -24958,30 +25102,22 @@
     ],
     "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": [],
     "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx": [],
-    "main/docs/authenticate/database-connections/custom-db.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "* **Rules** run when artifacts for user authenticity are generated (i.e., an <Tooltip tip=\"ID Token: Credential meant for the client itself, rather than for accessing a resource.\" ",
-        "line": 12
-      }
-    ],
+    "main/docs/authenticate/database-connections/custom-db.mdx": [],
     "main/docs/authenticate/database-connections/db2-script.mdx": [],
     "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx": [],
-    "main/docs/authenticate/database-connections/non-unique-emails.mdx": [],
-    "main/docs/authenticate/database-connections/passkeys.mdx": [],
-    "main/docs/authenticate/database-connections/password-change.mdx": [],
-    "main/docs/authenticate/database-connections/password-options.mdx": [],
-    "main/docs/authenticate/database-connections/password-strength.mdx": [
+    "main/docs/authenticate/database-connections/flexible-password-policy.mdx": [
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Some rules are composites. A rule may contain an `items` field that specifies which sub-rules have failed. Each sub-rule will have a `message` and may have a `format`, if required.",
-        "line": 202
+        "evidence": "description: Use the Flexible Password Policy to define password strength and composition rules for database connections in Auth0.",
+        "line": 4
       }
     ],
+    "main/docs/authenticate/database-connections/non-unique-emails.mdx": [],
+    "main/docs/authenticate/database-connections/passkeys.mdx": [],
+    "main/docs/authenticate/database-connections/password-change.mdx": [],
+    "main/docs/authenticate/database-connections/password-options.mdx": [],
     "main/docs/authenticate/database-connections/require-username.mdx": [],
     "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": [],
     "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": [],
@@ -25077,6 +25213,46 @@
         "line": 128
       }
     ],
-    "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx": []
+    "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx": [],
+    "main/docs/api/myorganization/index.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx": [],
+    "main/docs/api/myorganization/org-details/get-organization-details.mdx": [],
+    "main/docs/api/myorganization/org-details/modify-organization-details.mdx": [],
+    "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/create-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx": [],
+    "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx": [],
+    "main/docs/api/myorganization/idp-management/get-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/idp-management/list-identity-providers.mdx": [],
+    "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx": [],
+    "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx": [],
+    "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx": [],
+    "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx": [],
+    "main/docs/api/myorganization/idp-management/update-identity-provider.mdx": [],
+    "main/docs/api/myorganization/config/get-configuration.mdx": [],
+    "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx": [],
+    "main/docs/api/myaccount/index.mdx": [],
+    "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx": [],
+    "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx": [],
+    "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx": [],
+    "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx": [],
+    "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx": [],
+    "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx": [],
+    "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx": [],
+    "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx": [],
+    "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx": [],
+    "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx": [],
+    "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx": [],
+    "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx": []
   }
 }

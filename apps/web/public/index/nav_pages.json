@@ -290,6 +290,39 @@
     "navLabel": "Troubleshoot",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/troubleshoot/api-best-practices.mdx": {
+    "filePath": "main/docs/troubleshoot/api-best-practices.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/troubleshoot/api-best-practices",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot/page:docs/troubleshoot/api-best-practices:docs/troubleshoot/api-b"
+        ],
+        "labels": [
+          "Documentation",
+          "Troubleshoot",
+          "Troubleshoot",
+          "API Best Practices"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "API Best Practices",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Troubleshoot > Troubleshoot",
+        "pathString": "Documentation > Troubleshoot > Troubleshoot > API Best Practices"
+      }
+    ],
+    "navLabel": "API Best Practices",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/troubleshoot/auth0-blog.mdx": {
     "filePath": "main/docs/troubleshoot/auth0-blog.mdx",
     "navDepth": 3,
@@ -11636,6 +11669,45 @@
     "navLabel": "MFA Playbook",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx": {
+    "filePath": "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/secure/attack-protection/playbooks/signup-attack-playbook",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:secure",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:attack-protection",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:attack-protection/group:playbooks",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:attack-protection/group:playbooks/page:docs/secure/attack-protection/playbooks/signup-attack-playbo"
+        ],
+        "labels": [
+          "Documentation",
+          "Secure",
+          "Protect Your Application",
+          "Attack Protection",
+          "Playbooks",
+          "Signup Attack Playbook"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Signup Attack Playbook",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Secure > Protect Your Application > Attack Protection > Playbooks",
+        "pathString": "Documentation > Secure > Protect Your Application > Attack Protection > Playbooks > Signup Attack Playbook"
+      }
+    ],
+    "navLabel": "Signup Attack Playbook",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/secure/attack-protection/bot-detection/bot-detection-custom-login-pages.mdx": {
     "filePath": "main/docs/secure/attack-protection/bot-detection/bot-detection-custom-login-pages.mdx",
     "navDepth": 5,
@@ -11940,6 +12012,10 @@
     "filePath": "main/docs/quickstart/webapp/golang/interactive.mdx",
     "navNodePaths": []
   },
+  "main/docs/quickstart/webapp/fastify/index.mdx": {
+    "filePath": "main/docs/quickstart/webapp/fastify/index.mdx",
+    "navNodePaths": []
+  },
   "main/docs/quickstart/webapp/fastapi/index.mdx": {
     "filePath": "main/docs/quickstart/webapp/fastapi/index.mdx",
     "navNodePaths": []
@@ -12066,10 +12142,6 @@
   },
   "main/docs/quickstart/native/react-native/index.mdx": {
     "filePath": "main/docs/quickstart/native/react-native/index.mdx",
-    "navNodePaths": []
-  },
-  "main/docs/quickstart/native/net-android-ios/_index.mdx": {
-    "filePath": "main/docs/quickstart/native/net-android-ios/_index.mdx",
     "navNodePaths": []
   },
   "main/docs/quickstart/native/net-android-ios/index.mdx": {
@@ -12294,6 +12366,10 @@
   },
   "main/docs/quickstart/backend/golang/interactive.mdx": {
     "filePath": "main/docs/quickstart/backend/golang/interactive.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/quickstart/backend/fastify/index.mdx": {
+    "filePath": "main/docs/quickstart/backend/fastify/index.mdx",
     "navNodePaths": []
   },
   "main/docs/quickstart/backend/fastapi/index.mdx": {
@@ -29495,6 +29571,39 @@
     "navLabel": "Logs",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/deploy-monitor/metric-streams.mdx": {
+    "filePath": "main/docs/deploy-monitor/metric-streams.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/deploy-monitor/metric-streams",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:deploy-and-monitor",
+          "root/tab:documentation/dropdown:deploy-and-monitor/group:monitoring",
+          "root/tab:documentation/dropdown:deploy-and-monitor/group:monitoring/page:docs/deploy-monitor/metric-streams:docs/deploy-monitor/metri"
+        ],
+        "labels": [
+          "Documentation",
+          "Deploy and Monitor",
+          "Monitoring",
+          "Metric Streams"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Metric Streams",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Deploy and Monitor > Monitoring",
+        "pathString": "Documentation > Deploy and Monitor > Monitoring > Metric Streams"
+      }
+    ],
+    "navLabel": "Metric Streams",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/deploy-monitor/monitor.mdx": {
     "filePath": "main/docs/deploy-monitor/monitor.mdx",
     "navDepth": 4,
@@ -30645,42 +30754,6 @@
       }
     ],
     "navLabel": "Use as a Node Module",
-    "navLabelSource": "frontmatter"
-  },
-  "main/docs/customize/actions.mdx": {
-    "filePath": "main/docs/customize/actions.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/actions",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:code-customization",
-          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions",
-          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/page:docs/customize/actions:docs/customize/actions"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Code Customization",
-          "Actions",
-          "Auth0 Actions"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Auth0 Actions",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Code Customization > Actions",
-        "pathString": "Documentation > Customize > Code Customization > Actions > Auth0 Actions"
-      }
-    ],
-    "navLabel": "Auth0 Actions",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/auth0-marketplace.mdx": {
@@ -31847,7 +31920,7 @@
           "Customize Phone Messages",
           "Configure Phone Messaging Providers",
           "Configure a Custom Phone Provider",
-          "Action Triggers: custom-phone-provider API Object"
+          "Actions Triggers: custom-phone-provider - API Object"
         ],
         "kinds": [
           "tab",
@@ -31858,13 +31931,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Action Triggers: custom-phone-provider API Object",
+        "leafLabel": "Actions Triggers: custom-phone-provider - API Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Action Triggers: custom-phone-provider API Object"
+        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Actions Triggers: custom-phone-provider - API Object"
       }
     ],
-    "navLabel": "Action Triggers: custom-phone-provider API Object",
+    "navLabel": "Actions Triggers: custom-phone-provider - API Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx": {
@@ -31889,7 +31962,7 @@
           "Customize Phone Messages",
           "Configure Phone Messaging Providers",
           "Configure a Custom Phone Provider",
-          "Actions Triggers: custom-phone-provider Event Object"
+          "Actions Triggers: custom-phone-provider - Event Object"
         ],
         "kinds": [
           "tab",
@@ -31900,13 +31973,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Actions Triggers: custom-phone-provider Event Object",
+        "leafLabel": "Actions Triggers: custom-phone-provider - Event Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Actions Triggers: custom-phone-provider Event Object"
+        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Actions Triggers: custom-phone-provider - Event Object"
       }
     ],
-    "navLabel": "Actions Triggers: custom-phone-provider Event Object",
+    "navLabel": "Actions Triggers: custom-phone-provider - Event Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/configure-a-custom-phone-provider-with-terraform.mdx": {
@@ -36219,7 +36292,7 @@
           "Code Customization",
           "Forms",
           "Flows",
-          "Introduction to Flows"
+          "Flows"
         ],
         "kinds": [
           "tab",
@@ -36229,13 +36302,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Introduction to Flows",
+        "leafLabel": "Flows",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Forms > Flows",
-        "pathString": "Documentation > Customize > Code Customization > Forms > Flows > Introduction to Flows"
+        "pathString": "Documentation > Customize > Code Customization > Forms > Flows > Flows"
       }
     ],
-    "navLabel": "Introduction to Flows",
+    "navLabel": "Flows",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/forms/nodes-and-components.mdx": {
@@ -36418,40 +36491,355 @@
     "navLabel": "Variables and helper functions",
     "navLabelSource": "frontmatter"
   },
-  "main/docs/customize/forms/vault.mdx": {
-    "filePath": "main/docs/customize/forms/vault.mdx",
-    "navDepth": 4,
+  "main/docs/customize/forms/vaults.mdx": {
+    "filePath": "main/docs/customize/forms/vaults.mdx",
+    "navDepth": 5,
     "navNodePaths": [
       {
-        "route": "docs/customize/forms/vault",
+        "route": "docs/customize/forms/vaults",
         "nodeIds": [
           "root/tab:documentation",
           "root/tab:documentation/dropdown:customize",
           "root/tab:documentation/dropdown:customize/group:code-customization",
           "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
-          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/page:docs/customize/forms/vault:docs/customize/forms/vault"
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults:docs/customize/forms/vaults"
         ],
         "labels": [
           "Documentation",
           "Customize",
           "Code Customization",
           "Forms",
-          "Vault"
+          "Vaults",
+          "Vaults"
         ],
         "kinds": [
           "tab",
           "dropdown",
           "group",
           "group",
+          "group",
           "page"
         ],
-        "leafLabel": "Vault",
+        "leafLabel": "Vaults",
         "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Code Customization > Forms",
-        "pathString": "Documentation > Customize > Code Customization > Forms > Vault"
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > Vaults"
       }
     ],
-    "navLabel": "Vault",
+    "navLabel": "Vaults",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/auth0.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/auth0.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/auth0",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/auth0:docs/customize/forms/vault"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "Auth0 Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Auth0 Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > Auth0 Vault Connection"
+      }
+    ],
+    "navLabel": "Auth0 Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/http.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/http.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/http",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/http:docs/customize/forms/vaults"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "HTTP Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "HTTP Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > HTTP Vault Connection"
+      }
+    ],
+    "navLabel": "HTTP Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/jwt.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/jwt.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/jwt",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/jwt:docs/customize/forms/vaults/"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "JWT Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "JWT Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > JWT Vault Connection"
+      }
+    ],
+    "navLabel": "JWT Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/mailjet.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/mailjet.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/mailjet",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/mailjet:docs/customize/forms/vau"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "MailJet Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "MailJet Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > MailJet Vault Connection"
+      }
+    ],
+    "navLabel": "MailJet Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/sendgrid.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/sendgrid.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/sendgrid",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/sendgrid:docs/customize/forms/va"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "SendGrid Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "SendGrid Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > SendGrid Vault Connection"
+      }
+    ],
+    "navLabel": "SendGrid Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/telegram.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/telegram.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/telegram",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/telegram:docs/customize/forms/va"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "Telegram Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Telegram Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > Telegram Vault Connection"
+      }
+    ],
+    "navLabel": "Telegram Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/twilio.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/twilio.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/twilio",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/twilio:docs/customize/forms/vaul"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "Twilio Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Twilio Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > Twilio Vault Connection"
+      }
+    ],
+    "navLabel": "Twilio Vault Connection",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/forms/vaults/whatsapp.mdx": {
+    "filePath": "main/docs/customize/forms/vaults/whatsapp.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/forms/vaults/whatsapp",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:forms/group:vaults/page:docs/customize/forms/vaults/whatsapp:docs/customize/forms/va"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Forms",
+          "Vaults",
+          "WhatsApp Vault Connection"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "WhatsApp Vault Connection",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Forms > Vaults",
+        "pathString": "Documentation > Customize > Code Customization > Forms > Vaults > WhatsApp Vault Connection"
+      }
+    ],
+    "navLabel": "WhatsApp Vault Connection",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/forms/flows/flow-execution-and-debugger.mdx": {
@@ -36809,7 +37197,7 @@
           "Forms",
           "Flows",
           "Integrations",
-          "Mailjet"
+          "MailJet"
         ],
         "kinds": [
           "tab",
@@ -36820,13 +37208,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Mailjet",
+        "leafLabel": "MailJet",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Forms > Flows > Integrations",
-        "pathString": "Documentation > Customize > Code Customization > Forms > Flows > Integrations > Mailjet"
+        "pathString": "Documentation > Customize > Code Customization > Forms > Flows > Integrations > MailJet"
       }
     ],
-    "navLabel": "Mailjet",
+    "navLabel": "MailJet",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/forms/flows/integrations/sendgrid.mdx": {
@@ -38811,7 +39199,7 @@
           "Customize Emails",
           "SMTP Email Providers",
           "Custom Configuration with Actions",
-          "Action Triggers: custom-email-provider API Object"
+          "Actions Triggers: custom-email-provider - API Object"
         ],
         "kinds": [
           "tab",
@@ -38822,13 +39210,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Action Triggers: custom-email-provider API Object",
+        "leafLabel": "Actions Triggers: custom-email-provider - API Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Action Triggers: custom-email-provider API Object"
+        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Actions Triggers: custom-email-provider - API Object"
       }
     ],
-    "navLabel": "Action Triggers: custom-email-provider API Object",
+    "navLabel": "Actions Triggers: custom-email-provider - API Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx": {
@@ -38853,7 +39241,7 @@
           "Customize Emails",
           "SMTP Email Providers",
           "Custom Configuration with Actions",
-          "Action Triggers: custom-email-provider Event Object"
+          "Actions Triggers: custom-email-provider - Event Object"
         ],
         "kinds": [
           "tab",
@@ -38864,13 +39252,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Action Triggers: custom-email-provider Event Object",
+        "leafLabel": "Actions Triggers: custom-email-provider - Event Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Action Triggers: custom-email-provider Event Object"
+        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Actions Triggers: custom-email-provider - Event Object"
       }
     ],
-    "navLabel": "Action Triggers: custom-email-provider Event Object",
+    "navLabel": "Actions Triggers: custom-email-provider - Event Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx": {
@@ -40076,6 +40464,84 @@
     "navLabel": "Write Your First Action",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/customize/actions/modules/actions-modules-overview.mdx": {
+    "filePath": "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/actions/modules/actions-modules-overview",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules/page:docs/customize/actions/modules/actions-modules-overview:docs"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Actions",
+          "Actions Modules",
+          "Actions Modules"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Actions Modules",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Actions > Actions Modules",
+        "pathString": "Documentation > Customize > Code Customization > Actions > Actions Modules > Actions Modules"
+      }
+    ],
+    "navLabel": "Actions Modules",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/actions/modules/write-your-first-action-module.mdx": {
+    "filePath": "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/actions/modules/write-your-first-action-module",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:code-customization",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules",
+          "root/tab:documentation/dropdown:customize/group:code-customization/group:actions/group:actions-modules/page:docs/customize/actions/modules/write-your-first-action-modul"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Code Customization",
+          "Actions",
+          "Actions Modules",
+          "Write Your First Action Module"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Write Your First Action Module",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Code Customization > Actions > Actions Modules",
+        "pathString": "Documentation > Customize > Code Customization > Actions > Actions Modules > Write Your First Action Module"
+      }
+    ],
+    "navLabel": "Write Your First Action Module",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/customize/actions/migrate/actions-migration-limitations.mdx": {
     "filePath": "main/docs/customize/actions/migrate/actions-migration-limitations.mdx",
     "navDepth": 5,
@@ -40740,7 +41206,7 @@
           "Explore Triggers",
           "Signup and Login Triggers",
           "Post-user Registration Trigger",
-          "Actions - Triggers - post-user-registration - API object"
+          "Actions Triggers: post-user-registration - API Object"
         ],
         "kinds": [
           "tab",
@@ -40752,13 +41218,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Actions - Triggers - post-user-registration - API object",
+        "leafLabel": "Actions Triggers: post-user-registration - API Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Post-user Registration Trigger",
-        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Post-user Registration Trigger > Actions - Triggers - post-user-registration - API object"
+        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Post-user Registration Trigger > Actions Triggers: post-user-registration - API Object"
       }
     ],
-    "navLabel": "Actions - Triggers - post-user-registration - API object",
+    "navLabel": "Actions Triggers: post-user-registration - API Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": {
@@ -41284,7 +41750,7 @@
           "Explore Triggers",
           "Password Reset Triggers",
           "Post-challenge Trigger",
-          "Actions Triggers: post-challenge - API Object"
+          "Actions Triggers: password-reset-post-challenge - API Object"
         ],
         "kinds": [
           "tab",
@@ -41296,13 +41762,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Actions Triggers: post-challenge - API Object",
+        "leafLabel": "Actions Triggers: password-reset-post-challenge - API Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger",
-        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: post-challenge - API Object"
+        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: password-reset-post-challenge - API Object"
       }
     ],
-    "navLabel": "Actions Triggers: post-challenge - API Object",
+    "navLabel": "Actions Triggers: password-reset-post-challenge - API Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx": {
@@ -41329,7 +41795,7 @@
           "Explore Triggers",
           "Password Reset Triggers",
           "Post-challenge Trigger",
-          "Actions Triggers: post-challenge - Event Object"
+          "Actions Triggers: password-reset-post-challenge - Event Object"
         ],
         "kinds": [
           "tab",
@@ -41341,13 +41807,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Actions Triggers: post-challenge - Event Object",
+        "leafLabel": "Actions Triggers: password-reset-post-challenge - Event Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger",
-        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: post-challenge - Event Object"
+        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Password Reset Triggers > Post-challenge Trigger > Actions Triggers: password-reset-post-challenge - Event Object"
       }
     ],
-    "navLabel": "Actions Triggers: post-challenge - Event Object",
+    "navLabel": "Actions Triggers: password-reset-post-challenge - Event Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/api-object.mdx": {
@@ -41544,7 +42010,7 @@
           "Actions",
           "Explore Triggers",
           "Event Stream Triggers",
-          "Actions: event-stream - API Object"
+          "Actions Triggers: event-stream - API Object"
         ],
         "kinds": [
           "tab",
@@ -41555,13 +42021,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Actions: event-stream - API Object",
+        "leafLabel": "Actions Triggers: event-stream - API Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers",
-        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions: event-stream - API Object"
+        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions Triggers: event-stream - API Object"
       }
     ],
-    "navLabel": "Actions: event-stream - API Object",
+    "navLabel": "Actions Triggers: event-stream - API Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-event-object.mdx": {
@@ -41586,7 +42052,7 @@
           "Actions",
           "Explore Triggers",
           "Event Stream Triggers",
-          "Actions: event-stream - Event Object"
+          "Actions Triggers: event-stream - Event Object"
         ],
         "kinds": [
           "tab",
@@ -41597,13 +42063,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Actions: event-stream - Event Object",
+        "leafLabel": "Actions Triggers: event-stream - Event Object",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers",
-        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions: event-stream - Event Object"
+        "pathString": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Event Stream Triggers > Actions Triggers: event-stream - Event Object"
       }
     ],
-    "navLabel": "Actions: event-stream - Event Object",
+    "navLabel": "Actions Triggers: event-stream - Event Object",
     "navLabelSource": "frontmatter"
   },
   "main/docs/authenticate/connection-settings-best-practices.mdx": {
@@ -48819,6 +49285,42 @@
     "navLabel": "Flexible Identifiers and Attributes",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/authenticate/database-connections/flexible-password-policy.mdx": {
+    "filePath": "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate/database-connections/flexible-password-policy",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/page:docs/authenticate/database-connections/flexible-password-pol"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "Provision Users",
+          "Database Connections",
+          "Configure the Flexible Password Policy for Auth0 Database Connections"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Configure the Flexible Password Policy for Auth0 Database Connections",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Authenticate > Provision Users > Database Connections",
+        "pathString": "Documentation > Authenticate > Provision Users > Database Connections > Configure the Flexible Password Policy for Auth0 Database Connections"
+      }
+    ],
+    "navLabel": "Configure the Flexible Password Policy for Auth0 Database Connections",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/authenticate/database-connections/non-unique-emails.mdx": {
     "filePath": "main/docs/authenticate/database-connections/non-unique-emails.mdx",
     "navDepth": 4,
@@ -48948,7 +49450,7 @@
           "Authenticate",
           "Provision Users",
           "Database Connections",
-          "Password Options in Auth0 Database Connections"
+          "Configure Password Policies in Auth0 Database Connections"
         ],
         "kinds": [
           "tab",
@@ -48957,49 +49459,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Password Options in Auth0 Database Connections",
+        "leafLabel": "Configure Password Policies in Auth0 Database Connections",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Authenticate > Provision Users > Database Connections",
-        "pathString": "Documentation > Authenticate > Provision Users > Database Connections > Password Options in Auth0 Database Connections"
+        "pathString": "Documentation > Authenticate > Provision Users > Database Connections > Configure Password Policies in Auth0 Database Connections"
       }
     ],
-    "navLabel": "Password Options in Auth0 Database Connections",
-    "navLabelSource": "frontmatter"
-  },
-  "main/docs/authenticate/database-connections/password-strength.mdx": {
-    "filePath": "main/docs/authenticate/database-connections/password-strength.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/authenticate/database-connections/password-strength",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:authenticate",
-          "root/tab:documentation/dropdown:authenticate/group:provision-users",
-          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections",
-          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:database-connections/page:docs/authenticate/database-connections/password-strength:doc"
-        ],
-        "labels": [
-          "Documentation",
-          "Authenticate",
-          "Provision Users",
-          "Database Connections",
-          "Password Strength in Auth0 Database Connections"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Password Strength in Auth0 Database Connections",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Authenticate > Provision Users > Database Connections",
-        "pathString": "Documentation > Authenticate > Provision Users > Database Connections > Password Strength in Auth0 Database Connections"
-      }
-    ],
-    "navLabel": "Password Strength in Auth0 Database Connections",
+    "navLabel": "Configure Password Policies in Auth0 Database Connections",
     "navLabelSource": "frontmatter"
   },
   "main/docs/authenticate/database-connections/require-username.mdx": {
@@ -49969,5 +50435,1433 @@
     ],
     "navLabel": "Multi-Factor Authentication (MFA) with Custom Token Exchange",
     "navLabelSource": "frontmatter"
+  },
+  "main/docs/api/myorganization/index.mdx": {
+    "filePath": "main/docs/api/myorganization/index.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/index",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/page:docs/api/myorganization/index:docs/api/myorganization/index"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          "MyOrganization API Reference"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "MyOrganization API Reference",
+        "leafLabelSource": "frontmatter",
+        "containerString": "API Reference > MyOrganization API",
+        "pathString": "API Reference > MyOrganization API > MyOrganization API Reference"
+      }
+    ],
+    "navLabel": "MyOrganization API Reference",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx": {
+    "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/create-a-domai"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Domain Management",
+          "create a domain for an organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "create a domain for an organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Domain Management",
+        "pathString": "API Reference > MyOrganization API >   > Org Domain Management > create a domain for an organization"
+      }
+    ],
+    "navLabel": "create a domain for an organization",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx": {
+    "filePath": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-domain-management/delete-domain-from-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/delete-domain-"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Domain Management",
+          "delete domain from organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete domain from organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Domain Management",
+        "pathString": "API Reference > MyOrganization API >   > Org Domain Management > delete domain from organization"
+      }
+    ],
+    "navLabel": "delete domain from organization",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx": {
+    "filePath": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/get-identity-p"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Domain Management",
+          "get identity providers associated with an organization domain"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get identity providers associated with an organization domain",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Domain Management",
+        "pathString": "API Reference > MyOrganization API >   > Org Domain Management > get identity providers associated with an organization domain"
+      }
+    ],
+    "navLabel": "get identity providers associated with an organization domain",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx": {
+    "filePath": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-domain-management/get-organization-domain",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/get-organizati"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Domain Management",
+          "get organization domain"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get organization domain",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Domain Management",
+        "pathString": "API Reference > MyOrganization API >   > Org Domain Management > get organization domain"
+      }
+    ],
+    "navLabel": "get organization domain",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx": {
+    "filePath": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-domain-management/list-organization-domains",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/list-organizat"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Domain Management",
+          "list organization domains"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "list organization domains",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Domain Management",
+        "pathString": "API Reference > MyOrganization API >   > Org Domain Management > list organization domains"
+      }
+    ],
+    "navLabel": "list organization domains",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx": {
+    "filePath": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-domain-management/start-domain-verification",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-domain-management/page:docs/api/myorganization/org-domain-management/start-domain-v"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Domain Management",
+          "start domain verification"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "start domain verification",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Domain Management",
+        "pathString": "API Reference > MyOrganization API >   > Org Domain Management > start domain verification"
+      }
+    ],
+    "navLabel": "start domain verification",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-details/get-organization-details.mdx": {
+    "filePath": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-details/get-organization-details",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details/page:docs/api/myorganization/org-details/get-organization-details"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Details",
+          "get organization details"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get organization details",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Details",
+        "pathString": "API Reference > MyOrganization API >   > Org Details > get organization details"
+      }
+    ],
+    "navLabel": "get organization details",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/org-details/modify-organization-details.mdx": {
+    "filePath": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/org-details/modify-organization-details",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:org-details/page:docs/api/myorganization/org-details/modify-organization-deta"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Org Details",
+          "modify organization details"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "modify organization details",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Org Details",
+        "pathString": "API Reference > MyOrganization API >   > Org Details > modify organization details"
+      }
+    ],
+    "navLabel": "modify organization details",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/associate-domain-with-identity-provider",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/associate-domain-with"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "associate domain with identity provider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "associate domain with identity provider",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > associate domain with identity provider"
+      }
+    ],
+    "navLabel": "associate domain with identity provider",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/create-identity-provider.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/create-identity-provider",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/create-identity-provi"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "create identity provider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "create identity provider",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > create identity provider"
+      }
+    ],
+    "navLabel": "create identity provider",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/create-provisioning-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/create-provisioning-c"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "create provisioning configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "create provisioning configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > create provisioning configuration"
+      }
+    ],
+    "navLabel": "create provisioning configuration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/create-provisioning-scim-token",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/create-provisioning-s"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "create provisioning scim token"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "create provisioning scim token",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > create provisioning scim token"
+      }
+    ],
+    "navLabel": "create provisioning scim token",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/delete-identity-provider",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/delete-identity-provi"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "delete identity provider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete identity provider",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > delete identity provider"
+      }
+    ],
+    "navLabel": "delete identity provider",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/delete-provisioning-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/delete-provisioning-c"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "delete provisioning configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete provisioning configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > delete provisioning configuration"
+      }
+    ],
+    "navLabel": "delete provisioning configuration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/detach-identity-provider-from-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/detach-identity-provi"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "detach identity provider from organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "detach identity provider from organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > detach identity provider from organization"
+      }
+    ],
+    "navLabel": "detach identity provider from organization",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/get-identity-provider.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/get-identity-provider",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/get-identity-provider"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "get identity provider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get identity provider",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > get identity provider"
+      }
+    ],
+    "navLabel": "get identity provider",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/get-provisioning-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/get-provisioning-conf"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "get provisioning configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get provisioning configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > get provisioning configuration"
+      }
+    ],
+    "navLabel": "get provisioning configuration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/list-identity-providers.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/list-identity-providers",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/list-identity-provide"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "list identity providers"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "list identity providers",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > list identity providers"
+      }
+    ],
+    "navLabel": "list identity providers",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/list-provisioning-scim-tokens",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/list-provisioning-sci"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "list provisioning scim tokens"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "list provisioning scim tokens",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > list provisioning scim tokens"
+      }
+    ],
+    "navLabel": "list provisioning scim tokens",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/refresh-identity-prov"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "refresh identity provider attributes mapping"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "refresh identity provider attributes mapping",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > refresh identity provider attributes mapping"
+      }
+    ],
+    "navLabel": "refresh identity provider attributes mapping",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/refresh-provisioning-"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "refresh provisioning configuration attributes mapping"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "refresh provisioning configuration attributes mapping",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > refresh provisioning configuration attributes mapping"
+      }
+    ],
+    "navLabel": "refresh provisioning configuration attributes mapping",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/remove-domain-from-identity-provider",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/remove-domain-from-id"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "remove domain from identity provider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "remove domain from identity provider",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > remove domain from identity provider"
+      }
+    ],
+    "navLabel": "remove domain from identity provider",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/revoke-provisioning-scim-token",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/revoke-provisioning-s"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "revoke provisioning scim token"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "revoke provisioning scim token",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > revoke provisioning scim token"
+      }
+    ],
+    "navLabel": "revoke provisioning scim token",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/idp-management/update-identity-provider.mdx": {
+    "filePath": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/idp-management/update-identity-provider",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:idp-management/page:docs/api/myorganization/idp-management/update-identity-provi"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Idp Management",
+          "update identity provider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "update identity provider",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Idp Management",
+        "pathString": "API Reference > MyOrganization API >   > Idp Management > update identity provider"
+      }
+    ],
+    "navLabel": "update identity provider",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/config/get-configuration.mdx": {
+    "filePath": "main/docs/api/myorganization/config/get-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/config/get-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration/page:docs/api/myorganization/config/get-configuration:docs/api/my"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Configuration",
+          "get configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Configuration",
+        "pathString": "API Reference > MyOrganization API >   > Configuration > get configuration"
+      }
+    ],
+    "navLabel": "get configuration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx": {
+    "filePath": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myorganization/config/get-identity-providers-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myorganization-api",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration",
+          "root/tab:api-reference/dropdown:myorganization-api/group:unnamed/group:configuration/page:docs/api/myorganization/config/get-identity-providers-config"
+        ],
+        "labels": [
+          "API Reference",
+          "MyOrganization API",
+          " ",
+          "Configuration",
+          "get identity providers configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get identity providers configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyOrganization API >   > Configuration",
+        "pathString": "API Reference > MyOrganization API >   > Configuration > get identity providers configuration"
+      }
+    ],
+    "navLabel": "get identity providers configuration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/index.mdx": {
+    "filePath": "main/docs/api/myaccount/index.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/index",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/page:docs/api/myaccount/index:docs/api/myaccount/index"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          "MyAccount API Reference"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "MyAccount API Reference",
+        "leafLabelSource": "frontmatter",
+        "containerString": "API Reference > MyAccount API",
+        "pathString": "API Reference > MyAccount API > MyAccount API Reference"
+      }
+    ],
+    "navLabel": "MyAccount API Reference",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx": {
+    "filePath": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/factors/get-the-status-of-all-factors",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:factors",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:factors/page:docs/api/myaccount/factors/get-the-status-of-all-factors:doc"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Factors",
+          "get the status of all factors"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get the status of all factors",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Factors",
+        "pathString": "API Reference > MyAccount API >   > Factors > get the status of all factors"
+      }
+    ],
+    "navLabel": "get the status of all factors",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/complete-a-connected-account-request",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/complete-a-connected-a"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Connected Accounts",
+          "complete a connected account request"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "complete a connected account request",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Connected Accounts",
+        "pathString": "API Reference > MyAccount API >   > Connected Accounts > complete a connected account request"
+      }
+    ],
+    "navLabel": "complete a connected account request",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/create-a-connected-account-request",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/create-a-connected-acc"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Connected Accounts",
+          "create a connected account request"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "create a connected account request",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Connected Accounts",
+        "pathString": "API Reference > MyAccount API >   > Connected Accounts > create a connected account request"
+      }
+    ],
+    "navLabel": "create a connected account request",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/delete-a-connected-acc"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Connected Accounts",
+          "delete a connected account by id"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete a connected account by id",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Connected Accounts",
+        "pathString": "API Reference > MyAccount API >   > Connected Accounts > delete a connected account by id"
+      }
+    ],
+    "navLabel": "delete a connected account by id",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-availabl"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Connected Accounts",
+          "get a list of available connections for connected accounts"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get a list of available connections for connected accounts",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Connected Accounts",
+        "pathString": "API Reference > MyAccount API >   > Connected Accounts > get a list of available connections for connected accounts"
+      }
+    ],
+    "navLabel": "get a list of available connections for connected accounts",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-connecte"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Connected Accounts",
+          "get a list of connected accounts"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get a list of connected accounts",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Connected Accounts",
+        "pathString": "API Reference > MyAccount API >   > Connected Accounts > get a list of connected accounts"
+      }
+    ],
+    "navLabel": "get a list of connected accounts",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx": {
+    "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/confirm-the-enroll"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Authentication Methods",
+          "confirm the enrollment of a supported authentication method"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "confirm the enrollment of a supported authentication method",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Authentication Methods",
+        "pathString": "API Reference > MyAccount API >   > Authentication Methods > confirm the enrollment of a supported authentication method"
+      }
+    ],
+    "navLabel": "confirm the enrollment of a supported authentication method",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx": {
+    "filePath": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/delete-an-authenti"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Authentication Methods",
+          "delete an authentication method by id"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete an authentication method by id",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Authentication Methods",
+        "pathString": "API Reference > MyAccount API >   > Authentication Methods > delete an authentication method by id"
+      }
+    ],
+    "navLabel": "delete an authentication method by id",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx": {
+    "filePath": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/get-a-list-of-auth"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Authentication Methods",
+          "get a list of authentication methods"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get a list of authentication methods",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Authentication Methods",
+        "pathString": "API Reference > MyAccount API >   > Authentication Methods > get a list of authentication methods"
+      }
+    ],
+    "navLabel": "get a list of authentication methods",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx": {
+    "filePath": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/get-an-authenticat"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Authentication Methods",
+          "get an authentication method by id"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get an authentication method by id",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Authentication Methods",
+        "pathString": "API Reference > MyAccount API >   > Authentication Methods > get an authentication method by id"
+      }
+    ],
+    "navLabel": "get an authentication method by id",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx": {
+    "filePath": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/start-the-enrollme"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Authentication Methods",
+          "start the enrollment of a supported authentication method"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "start the enrollment of a supported authentication method",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Authentication Methods",
+        "pathString": "API Reference > MyAccount API >   > Authentication Methods > start the enrollment of a supported authentication method"
+      }
+    ],
+    "navLabel": "start the enrollment of a supported authentication method",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx": {
+    "filePath": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:myaccount-api",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods",
+          "root/tab:api-reference/dropdown:myaccount-api/group:unnamed/group:authentication-methods/page:docs/api/myaccount/authentication-methods/update-details-of-"
+        ],
+        "labels": [
+          "API Reference",
+          "MyAccount API",
+          " ",
+          "Authentication Methods",
+          "update details of an authentication method by id"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "update details of an authentication method by id",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > MyAccount API >   > Authentication Methods",
+        "pathString": "API Reference > MyAccount API >   > Authentication Methods > update details of an authentication method by id"
+      }
+    ],
+    "navLabel": "update details of an authentication method by id",
+    "navLabelSource": "fallback"
   }
 }

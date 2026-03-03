@@ -120,11 +120,9 @@
       "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
       "main/docs/customize/events/event-types.mdx",
       "main/docs/customize/events/events-best-practices.mdx",
-      "main/docs/customize/actions/transaction-metadata.mdx",
+      "main/docs/customize/actions/modules/actions-modules-overview.mdx",
       "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger.mdx",
-      "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-event-object.mdx",
       "main/docs/authenticate/custom-token-exchange.mdx",
       "main/docs/authenticate/passwordless/implement-login/embedded-login/native.mdx",
       "main/docs/authenticate/passwordless/implement-login/embedded-login/relevant-api-endpoints.mdx",
@@ -204,6 +202,7 @@
       "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
       "main/docs/secure/tokens/json-web-tokens/locate-json-web-key-sets.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-tokens-for-single-page-applications.mdx",
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/operations.mdx",
@@ -287,6 +286,7 @@
       "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/java-ee/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
+      "main/docs/quickstart/webapp/fastify/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/apache/index.mdx",
       "main/docs/quickstart/spa/vuejs/index.mdx",
@@ -298,7 +298,6 @@
       "main/docs/quickstart/native/xamarin/index.mdx",
       "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
-      "main/docs/quickstart/native/net-android-ios/index.mdx",
       "main/docs/quickstart/native/maui/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -661,6 +660,29 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/troubleshoot/api-best-practices.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/self-managed-certificates/tls-ssl.mdx": {
+    "link": [
+      "main/docs/troubleshoot/api-best-practices.mdx",
+      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
+      "main/docs/secure/attack-protection/playbooks/bot-detection-playbook.mdx",
+      "main/docs/secure/attack-protection/playbooks/breached-password-playbook.mdx",
+      "main/docs/secure/attack-protection/playbooks/brute-force-protection-playbook.mdx",
+      "main/docs/get-started/onboarding/self-service-m2m.mdx",
+      "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates/configure-aws-cloudfront-for-use-as-reverse-proxy.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates/configure-azure-cdn-for-use-as-reverse-proxy.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates/configure-cloudflare-for-use-as-reverse-proxy.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx",
+      "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/troubleshoot/auth0-blog.mdx": {
     "link": [],
     "import": [],
@@ -1000,6 +1022,7 @@
     "link": [
       "main/docs/troubleshoot/basic-issues.mdx",
       "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
       "main/docs/troubleshoot/basic-issues/check-deprecation-errors.mdx"
     ],
     "import": [],
@@ -1167,6 +1190,7 @@
       "main/docs/troubleshoot/troubleshooting-tools.mdx",
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-to-tenant-log-search-v3.mdx",
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-v2-v3.mdx",
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-use-cases.mdx",
       "main/docs/troubleshoot/basic-issues/check-deprecation-errors.mdx",
       "main/docs/troubleshoot/basic-issues/check-error-messages.mdx",
@@ -1176,6 +1200,7 @@
       "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
       "main/docs/secure/highly-regulated-identity/customer-managed-keys.mdx",
       "main/docs/secure/attack-protection/view-attack-protection-events.mdx",
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/quickstart/native/device/index.mdx",
       "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
       "main/docs/get-started/applications.mdx",
@@ -1238,7 +1263,6 @@
       "main/docs/customize/phone-messages/customize-phone-templates.mdx",
       "main/docs/customize/email/send-email-invitations-for-application-signup.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx"
     ],
@@ -1518,7 +1542,6 @@
       "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
-      "main/docs/quickstart/native/net-android-ios/index.mdx",
       "main/docs/quickstart/native/maui/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -1535,6 +1558,7 @@
       "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/add-login-using-the-implicit-flow-with-form-post.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/architecture-scenarios/mobile-api.mdx",
       "main/docs/get-started/architecture-scenarios/spa-api/part-3.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authentication.mdx",
@@ -1605,6 +1629,7 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/support-readiness.mdx",
       "main/docs/customize/rules/debug-rules.mdx",
       "main/docs/customize/rules/use-management-api.mdx",
+      "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/authenticate/database-connections/custom-db/error-handling.mdx",
       "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/create.mdx"
@@ -1798,7 +1823,6 @@
       "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock.mdx",
       "main/docs/secure/attack-protection/bot-detection.mdx",
       "main/docs/secure/attack-protection/bot-detection/bot-detection-native-apps.mdx",
-      "main/docs/quickstart/spa/flutter/index.mdx",
       "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
@@ -1855,8 +1879,7 @@
       "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-sso.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/authenticate/database-connections/password-strength.mdx"
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
     ],
     "import": [],
     "redirect": []
@@ -1910,8 +1933,6 @@
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
       "main/docs/get-started/architecture-scenarios/mobile-api/part-1.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
@@ -1936,7 +1957,6 @@
       "main/docs/authenticate/passwordless/sample-use-cases-rules.mdx",
       "main/docs/authenticate/login/configure-silent-authentication.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx",
-      "main/docs/authenticate/database-connections/custom-db.mdx",
       "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts.mdx"
     ],
     "import": [],
@@ -1974,68 +1994,6 @@
       "main/docs/customize/hooks/hook-secrets.mdx",
       "main/docs/customize/hooks/hook-secrets/create-hook-secrets.mdx",
       "main/docs/customize/hooks/hook-secrets/update-hook-secrets.mdx",
-      "main/docs/authenticate/database-connections/custom-db.mdx",
-      "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/past-migrations.mdx",
-      "main/docs/troubleshoot/product-lifecycle/past-migrations/custom-claims-migration.mdx",
-      "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-from-edge-js-extensibility-features.mdx",
-      "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-from-oracledb-extensibility-features.mdx",
-      "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-to-1-hour-expiration.mdx",
-      "main/docs/secure/continuous-session-protection.mdx",
-      "main/docs/secure/highly-regulated-identity.mdx",
-      "main/docs/secure/multi-factor-authentication.mdx",
-      "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx",
-      "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-      "main/docs/secure/multi-factor-authentication/enable-mfa.mdx",
-      "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors.mdx",
-      "main/docs/secure/multi-factor-authentication/step-up-authentication.mdx",
-      "main/docs/secure/multi-factor-authentication/step-up-authentication/configure-step-up-authentication-for-apis.mdx",
-      "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-sms-voice-notifications-mfa.mdx",
-      "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login.mdx",
-      "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
-      "main/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa.mdx",
-      "main/docs/secure/highly-regulated-identity/transactional-authorization-with-authorization-code-flow.mdx",
-      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
-      "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx",
-      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "main/docs/manage-users/user-accounts/metadata.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/progressive-profiling.mdx",
-      "main/docs/manage-users/user-accounts/metadata/configure-application-metadata.mdx",
-      "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
-      "main/docs/manage-users/sessions/session-metadata/add-organization-information.mdx",
-      "main/docs/manage-users/organizations/custom-development.mdx",
-      "main/docs/manage-users/access-control/sample-use-cases-actions-with-authorization.mdx",
-      "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow/call-your-api-using-the-client-credentials-flow.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
-      "main/docs/get-started/auth0-overview/create-tenants.mdx",
-      "main/docs/get-started/auth0-mcp-server/auth0-mcp-server-guides/streamline-api-authorization-flows-with-auth0-model-context-protocol-mcp.mdx",
-      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
-      "main/docs/get-started/applications/configure-application-metadata.mdx",
-      "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
-      "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
-      "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
-      "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-azure.mdx",
-      "main/docs/customize/integrations/aws.mdx",
-      "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
-      "main/docs/customize/forms/render.mdx",
-      "main/docs/customize/extensions/delegated-administration-extension.mdx",
-      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
-      "main/docs/authenticate/custom-token-exchange.mdx",
-      "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
-      "main/docs/authenticate/protocols/saml/saml-sso-integrations/sign-and-encrypt-saml-requests.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/authenticate/database-connections/custom-db.mdx",
       "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts.mdx"
     ],
     "import": [],
@@ -2451,6 +2409,7 @@
       "main/docs/secure/tokens/access-tokens/use-access-tokens.mdx",
       "main/docs/secure/tokens/access-tokens/validate-access-tokens.mdx",
       "main/docs/libraries/auth0-react.mdx",
+      "main/docs/get-started/architecture-scenarios/mobile-api/api-implementation-nodejs.mdx",
       "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-client.mdx",
       "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-tenant.mdx",
       "main/docs/customize/integrations/aws/aws-api-gateway-custom-authorizers.mdx"
@@ -2513,7 +2472,6 @@
       "main/docs/quickstart/spa/react/index.mdx",
       "main/docs/quickstart/spa/capn-web/index.mdx",
       "main/docs/quickstart/spa/angular/index.mdx",
-      "main/docs/quickstart/native/net-android-ios/_index.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx",
       "main/docs/quickstart/native/ios-swift/index.mdx",
       "main/docs/quickstart/native/ionic-vue/_index.mdx",
@@ -2638,6 +2596,7 @@
       "main/docs/customize/email/manage-email-flow.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
+      "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
       "main/docs/authenticate/passwordless/implement-login/embedded-login/native.mdx",
@@ -2736,26 +2695,16 @@
     "link": [
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-nodejs-16-to-nodejs-18.mdx",
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-to-nodejs-16.mdx",
-      "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/action-triggers-custom-phone-provider-api-object.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-api-object.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
       "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/customize/actions/transaction-metadata.mdx",
+      "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+      "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-api-object.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/event-stream-triggers/event-stream-api-object.mdx"
+      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/api-object.mdx"
     ],
     "import": [],
     "redirect": []
@@ -2904,7 +2853,6 @@
       "main/docs/get-started/architecture-scenarios/mobile-api/part-1.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications.mdx",
       "main/docs/get-started/applications/work-with-auth0-locally.mdx",
-      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx",
       "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
       "main/docs/customize/integrations/cms/wordpress-plugin/integrate-with-wordpress.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web.mdx",
@@ -3165,6 +3113,54 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/deploy-monitor/deploy-private-cloud.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
+      "main/docs/troubleshoot/customer-support/services-level-descriptions.mdx",
+      "main/docs/get-started/manage-dashboard-access/configure-single-sign-on-for-auth0-dashboard.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/extensions/user-import-export-extension.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
+      "main/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint.mdx",
+      "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
+      "main/docs/customize/extensions/user-import-export-extension.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-migration/bulk-user-import-export.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
+      "main/docs/manage-users/user-migration.mdx",
+      "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
+      "main/docs/customize/extensions/user-import-export-extension.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/identity-providers/social-identity-providers.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
+      "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
+      "main/docs/customize/integrations/sharepoint-2010-2013.mdx",
+      "main/docs/customize/integrations/cms/wordpress-plugin/configure-login-by-auth0.mdx",
+      "main/docs/authenticate/login/auth0-universal-login.mdx",
+      "main/docs/authenticate/identity-providers/calling-an-external-idp-api.mdx",
+      "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
+      "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx",
+      "main/docs/authenticate/database-connections/password-change.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx"
@@ -3380,6 +3376,7 @@
       "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/secure/attack-protection/playbooks/bot-detection-playbook.mdx",
       "main/docs/secure/attack-protection/playbooks/brute-force-protection-playbook.mdx",
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/get-started/onboarding/self-service-m2m.mdx",
       "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-client.mdx",
       "main/docs/get-started/applications/configure-mtls/set-up-the-customer-edge.mdx",
@@ -3391,23 +3388,6 @@
       "main/docs/customize/custom-domains/self-managed-certificates/configure-azure-cdn-for-use-as-reverse-proxy.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates/configure-cloudflare-for-use-as-reverse-proxy.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/custom-domains/self-managed-certificates/tls-ssl.mdx": {
-    "link": [
-      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
-      "main/docs/secure/attack-protection/playbooks/bot-detection-playbook.mdx",
-      "main/docs/secure/attack-protection/playbooks/breached-password-playbook.mdx",
-      "main/docs/secure/attack-protection/playbooks/brute-force-protection-playbook.mdx",
-      "main/docs/get-started/onboarding/self-service-m2m.mdx",
-      "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
-      "main/docs/customize/custom-domains/self-managed-certificates/configure-aws-cloudfront-for-use-as-reverse-proxy.mdx",
-      "main/docs/customize/custom-domains/self-managed-certificates/configure-azure-cdn-for-use-as-reverse-proxy.mdx",
-      "main/docs/customize/custom-domains/self-managed-certificates/configure-cloudflare-for-use-as-reverse-proxy.mdx",
-      "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx",
-      "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx"
     ],
     "import": [],
     "redirect": []
@@ -3680,6 +3660,7 @@
       "main/docs/manage-users/organizations/organizations-overview.mdx",
       "main/docs/manage-users/access-control/authorization-core-vs-authorization-extension.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/multi-tenant-apps-best-practices.mdx",
+      "main/docs/customize/actions/limitations.mdx",
       "main/docs/authenticate/enterprise-connections.mdx"
     ],
     "import": [],
@@ -3736,14 +3717,6 @@
   },
   "main/docs/troubleshoot/customer-support/self-service-support.mdx": {
     "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/deploy-monitor/deploy-private-cloud.mdx": {
-    "link": [
-      "main/docs/troubleshoot/customer-support/services-level-descriptions.mdx",
-      "main/docs/get-started/manage-dashboard-access/configure-single-sign-on-for-auth0-dashboard.mdx"
-    ],
     "import": [],
     "redirect": []
   },
@@ -3862,6 +3835,7 @@
       "main/docs/secure/attack-protection/playbooks/bot-detection-playbook.mdx",
       "main/docs/secure/attack-protection/playbooks/breached-password-playbook.mdx",
       "main/docs/secure/attack-protection/playbooks/brute-force-protection-playbook.mdx",
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/authenticate/custom-token-exchange/cte-attack-protection.mdx"
     ],
     "import": [],
@@ -3913,14 +3887,13 @@
       "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
       "main/docs/get-started/manage-dashboard-access/feature-access-by-role.mdx",
       "main/docs/get-started/manage-dashboard-access/support-center-users.mdx",
+      "main/docs/get-started/auth0-overview/dashboard/activity.mdx",
       "main/docs/deploy-monitor/logs.mdx",
       "main/docs/deploy-monitor/logs/log-event-filters.mdx",
       "main/docs/deploy-monitor/logs/log-search-query-syntax.mdx",
       "main/docs/deploy-monitor/logs/retrieve-log-events-using-mgmt-api.mdx",
-      "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/action-triggers-custom-phone-provider-api-object.mdx",
       "main/docs/customize/log-streams/custom-log-streams.mdx",
       "main/docs/customize/log-streams/sumo-logic-dashboard.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-api-object.mdx",
       "main/docs/authenticate/login/logout/universal-logout.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx"
     ],
@@ -3968,8 +3941,7 @@
       "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
-      "main/docs/authenticate/database-connections/password-change.mdx",
-      "main/docs/authenticate/database-connections/password-strength.mdx"
+      "main/docs/authenticate/database-connections/password-change.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4195,7 +4167,6 @@
       "main/docs/customize/hooks/hook-secrets/update-hook-secrets.mdx",
       "main/docs/customize/hooks/hook-secrets/view-hook-secrets.mdx",
       "main/docs/customize/extensions/authorization-extension/migrate-to-authorization-extension-v2.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
       "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx",
       "main/docs/customize/email/email-templates/customize-email-templates.mdx",
       "main/docs/customize/actions/limitations.mdx",
@@ -4372,7 +4343,6 @@
       "main/docs/manage-users/user-migration/bulk-user-import-export.mdx",
       "main/docs/manage-users/user-accounts/manage-users-using-the-dashboard.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "main/docs/authenticate/protocols/openid-connect-protocol.mdx"
     ],
@@ -4415,7 +4385,8 @@
       "main/docs/customize/actions/action-coding-guidelines.mdx",
       "main/docs/customize/actions/releases.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-      "main/docs/authenticate/login/oidc-conformant-authentication.mdx"
+      "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4468,6 +4439,7 @@
       "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx",
       "main/docs/get-started/auth0-overview/create-tenants.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/architecture.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/architecture.mdx",
@@ -4840,6 +4812,7 @@
       "main/docs/secure/attack-protection/view-attack-protection-events.mdx",
       "main/docs/secure/attack-protection/playbooks/bot-detection-playbook.mdx",
       "main/docs/secure/attack-protection/playbooks/breached-password-playbook.mdx",
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/secure/attack-protection/bot-detection/bot-detection-native-apps.mdx",
       "main/docs/secure/attack-protection/bot-detection/configure-captcha.mdx",
       "main/docs/get-started/identity-fundamentals/introduction-to-auth0.mdx",
@@ -4968,7 +4941,8 @@
       "main/docs/get-started/authentication-and-authorization-flow.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar.mdx",
-      "main/docs/get-started/applications/configure-par.mdx"
+      "main/docs/get-started/applications/configure-par.mdx",
+      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4980,7 +4954,8 @@
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar.mdx",
-      "main/docs/get-started/applications/configure-fapi-compliance.mdx"
+      "main/docs/get-started/applications/configure-fapi-compliance.mdx",
+      "main/docs/get-started/applications/configure-fapi-compliance/configure-auth0-to-pass-openid-fapi-certification-tests.mdx"
     ],
     "import": [],
     "redirect": []
@@ -5152,6 +5127,7 @@
       "main/docs/secure/highly-regulated-identity/transactional-authorization-with-authorization-code-flow.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/mobile-push-notifications-with-ciba.mdx",
       "main/docs/get-started/applications/configure-client-initiated-backchannel-authentication.mdx",
+      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx",
       "main/docs/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication.mdx",
       "main/docs/customize/email/email-templates.mdx"
     ],
@@ -5194,6 +5170,7 @@
   "main/docs/secure/sender-constraining/mtls-sender-constraining.mdx": {
     "link": [
       "main/docs/secure/sender-constraining.mdx",
+      "main/docs/get-started/applications/configure-fapi-compliance.mdx",
       "main/docs/get-started/applications/configure-sender-constraining.mdx"
     ],
     "import": [],
@@ -5214,6 +5191,7 @@
       "main/docs/secure/attack-protection/playbooks/bot-detection-playbook.mdx",
       "main/docs/secure/attack-protection/playbooks/breached-password-playbook.mdx",
       "main/docs/secure/attack-protection/playbooks/brute-force-protection-playbook.mdx",
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx"
     ],
     "import": [],
@@ -5971,7 +5949,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/tenant-check.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
     ],
     "import": [],
@@ -6460,7 +6437,7 @@
       "main/docs/customize/forms/configure-additional-signup-steps.mdx",
       "main/docs/customize/forms/configure-progressive-profile-form.mdx",
       "main/docs/customize/forms/configure-update-policy-form.mdx",
-      "main/docs/customize/forms/flows/integrations/auth0.mdx",
+      "main/docs/customize/forms/vaults/auth0.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
     ],
     "import": [],
@@ -6868,7 +6845,6 @@
       "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
-      "main/docs/quickstart/native/net-android-ios/index.mdx",
       "main/docs/quickstart/native/maui/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -7180,7 +7156,6 @@
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
       "main/docs/customize/forms/render.mdx",
       "main/docs/customize/extensions/delegated-administration-extension.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
       "main/docs/customize/actions/action-coding-guidelines.mdx",
       "main/docs/customize/actions/actions-npm.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
@@ -7623,6 +7598,7 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
       "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider.mdx",
+      "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
@@ -7646,7 +7622,6 @@
       "main/docs/manage-users/user-accounts/user-profiles/update-user-profiles-using-your-database.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
       "main/docs/customize/integrations/cms/wordpress-plugin/troubleshoot-login-by-auth0.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/get-user.mdx",
@@ -7767,8 +7742,7 @@
       "main/docs/manage-users/user-accounts/user-profiles/progressive-profiling.mdx",
       "main/docs/manage-users/user-accounts/metadata/metadata-fields-data.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx"
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8025,6 +7999,7 @@
       "main/docs/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault.mdx",
       "main/docs/get-started/auth0-overview/set-up-apis.mdx",
       "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
+      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx",
       "main/docs/get-started/apis/scopes/api-scopes.mdx"
     ],
     "import": [],
@@ -8042,6 +8017,7 @@
       "main/docs/customize/login-pages/advanced-customizations/quickstart.mdx",
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/create-theme-tailwind.mdx",
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/integrate-custom-component.mdx",
+      "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory-native.mdx",
@@ -8095,7 +8071,6 @@
       "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authentication.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
     ],
     "import": [],
@@ -8130,7 +8105,8 @@
       "main/docs/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault.mdx",
       "main/docs/manage-users/my-account-api.mdx",
       "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
+      "main/docs/get-started/apis/api-access-policies-for-applications.mdx",
+      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8187,7 +8163,6 @@
       "main/docs/secure/attack-protection/brute-force-protection.mdx",
       "main/docs/manage-users/user-accounts/create-users.mdx",
       "main/docs/manage-users/user-accounts/verify-emails.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx",
       "main/docs/authenticate/database-connections/non-unique-emails.mdx"
     ],
@@ -8220,7 +8195,8 @@
     "link": [
       "main/docs/secure/attack-protection/brute-force-protection.mdx",
       "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
-      "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx"
+      "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8270,6 +8246,13 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/playbooks.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx": {
     "link": [],
     "import": [],
@@ -8282,6 +8265,65 @@
       "main/docs/deploy-monitor/logs.mdx",
       "main/docs/deploy-monitor/logs/log-event-filters.mdx",
       "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/passwordless.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/root-attributes.mdx",
+      "main/docs/libraries/lock/lock-configuration.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow.mdx",
+      "main/docs/customize/hooks.mdx",
+      "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/connection-switching.mdx",
+      "main/docs/customize/email/smtp-email-providers/sendgrid.mdx",
+      "main/docs/customize/email/smtp-email-providers/troubleshooting.mdx",
+      "main/docs/customize/actions/explore-triggers.mdx",
+      "main/docs/authenticate/passwordless.mdx",
+      "main/docs/authenticate/passwordless/passwordless-connection-limitations.mdx",
+      "main/docs/authenticate/passwordless/passwordless-with-universal-login.mdx",
+      "main/docs/authenticate/passwordless/sample-use-cases-rules.mdx",
+      "main/docs/authenticate/passwordless/implement-login/embedded-login.mdx",
+      "main/docs/authenticate/passwordless/authentication-methods/sms-otp.mdx",
+      "main/docs/authenticate/passwordless/authentication-methods/use-sms-gateway-passwordless.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+      "main/docs/authenticate/passwordless.mdx",
+      "main/docs/authenticate/passwordless/passwordless-connection-limitations.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/passwordless-login.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+      "main/docs/customize/rules/use-cases.mdx",
+      "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
+      "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
+      "main/docs/customize/actions/use-cases.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/verify-emails.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
+      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/profile-management.mdx",
+      "main/docs/customize/email.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/azuread-adfs-email-verification.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8337,6 +8379,7 @@
       "main/docs/quickstart/webapp/java-ee/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
+      "main/docs/quickstart/webapp/fastify/index.mdx",
       "main/docs/quickstart/webapp/express/index.mdx",
       "main/docs/quickstart/webapp/django/_index.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
@@ -8348,13 +8391,11 @@
       "main/docs/quickstart/spa/vanillajs/index.mdx",
       "main/docs/quickstart/spa/svelte/index.mdx",
       "main/docs/quickstart/spa/react/index.mdx",
-      "main/docs/quickstart/spa/flutter/index.mdx",
       "main/docs/quickstart/spa/angular/index.mdx",
       "main/docs/quickstart/native/wpf-winforms/_index.mdx",
       "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/interactive.mdx",
-      "main/docs/quickstart/native/net-android-ios/_index.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx",
       "main/docs/quickstart/native/maui/_index.mdx",
       "main/docs/quickstart/native/maui/interactive.mdx",
@@ -8408,7 +8449,6 @@
       "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/interactive.mdx",
-      "main/docs/quickstart/native/net-android-ios/_index.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx",
       "main/docs/quickstart/native/maui/_index.mdx",
       "main/docs/quickstart/native/maui/interactive.mdx",
@@ -8496,7 +8536,6 @@
       "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
-      "main/docs/quickstart/native/net-android-ios/index.mdx",
       "main/docs/quickstart/native/maui/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -8984,6 +9023,20 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/quickstart/webapp/fastify/index.mdx": {
+    "link": [
+      "main/docs/quickstart/backend/fastify/index.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/quickstart/backend/fastify/index.mdx": {
+    "link": [
+      "main/docs/quickstart/webapp/fastify/index.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/quickstart/webapp/fastapi/index.mdx": {
     "link": [],
     "import": [],
@@ -9208,7 +9261,8 @@
       "main/docs/authenticate/identity-providers/retrieve-connection-options.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx"
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx",
+      "main/docs/authenticate/database-connections/password-options.mdx"
     ],
     "import": [],
     "redirect": []
@@ -9308,15 +9362,22 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/quickstart/native/net-android-ios/_index.mdx": {
+  "main/docs/quickstart/native/net-android-ios/index.mdx": {
     "link": [],
     "import": [],
     "redirect": []
   },
+  "main/docs/quickstart/native/net-android-ios/interactive.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": [
+      "main/docs/quickstart/native/xamarin/interactive.mdx",
+      "main/docs/quickstart/native/xamarin.mdx"
+    ]
+  },
   "main/snippets/quickstart/native/net-android-ios/MainActivity.cs.mdx": {
     "link": [],
     "import": [
-      "main/docs/quickstart/native/net-android-ios/_index.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx"
     ],
     "redirect": []
@@ -9324,7 +9385,6 @@
   "main/snippets/quickstart/native/net-android-ios/AppDelegate.cs.mdx": {
     "link": [],
     "import": [
-      "main/docs/quickstart/native/net-android-ios/_index.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx"
     ],
     "redirect": []
@@ -9332,24 +9392,9 @@
   "main/snippets/quickstart/native/net-android-ios/MyViewController.cs.mdx": {
     "link": [],
     "import": [
-      "main/docs/quickstart/native/net-android-ios/_index.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx"
     ],
     "redirect": []
-  },
-  "main/docs/quickstart/native/net-android-ios/index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": [
-      "main/docs/quickstart/native/xamarin.mdx"
-    ]
-  },
-  "main/docs/quickstart/native/net-android-ios/interactive.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": [
-      "main/docs/quickstart/native/xamarin/interactive.mdx"
-    ]
   },
   "main/docs/quickstart/native/maui/_index.mdx": {
     "link": [],
@@ -10420,15 +10465,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/manage-users/user-migration/bulk-user-import-export.mdx": {
-    "link": [
-      "main/docs/manage-users/user-migration.mdx",
-      "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
-      "main/docs/customize/extensions/user-import-export-extension.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/manage-users/user-search/view-search-results-by-page.mdx": {
     "link": [
       "main/docs/manage-users/user-search.mdx",
@@ -10493,15 +10529,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/extensions/user-import-export-extension.mdx": {
-    "link": [
-      "main/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint.mdx",
-      "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
-      "main/docs/customize/extensions/user-import-export-extension.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/manage-users/user-accounts/user-account-linking.mdx": {
     "link": [
       "main/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint.mdx",
@@ -10523,7 +10550,9 @@
     "redirect": []
   },
   "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -10599,8 +10628,7 @@
     "link": [
       "main/docs/manage-users/user-accounts/user-profiles/normalized-user-profile-schema.mdx",
       "main/docs/customize/rules/use-cases.mdx",
-      "main/docs/customize/actions/use-cases.mdx",
-      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object.mdx"
+      "main/docs/customize/actions/use-cases.mdx"
     ],
     "import": [],
     "redirect": []
@@ -10819,16 +10847,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/manage-users/user-accounts/verify-emails.mdx": {
-    "link": [
-      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/profile-management.mdx",
-      "main/docs/customize/email.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/azuread-adfs-email-verification.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/manage-users/user-accounts/view-user-details.mdx": {
     "link": [
       "main/docs/manage-users/access-control/configure-core-rbac/rbac-users/view-user-roles.mdx"
@@ -10905,29 +10923,6 @@
     "link": [
       "main/docs/manage-users/user-accounts/user-profiles/progressive-profiling.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-mobile-to-web-payment-flows.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/passwordless.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/user-profiles/root-attributes.mdx",
-      "main/docs/libraries/lock/lock-configuration.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow.mdx",
-      "main/docs/customize/hooks.mdx",
-      "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx",
-      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/connection-switching.mdx",
-      "main/docs/customize/email/smtp-email-providers/sendgrid.mdx",
-      "main/docs/customize/email/smtp-email-providers/troubleshooting.mdx",
-      "main/docs/customize/actions/explore-triggers.mdx",
-      "main/docs/authenticate/passwordless.mdx",
-      "main/docs/authenticate/passwordless/passwordless-connection-limitations.mdx",
-      "main/docs/authenticate/passwordless/passwordless-with-universal-login.mdx",
-      "main/docs/authenticate/passwordless/sample-use-cases-rules.mdx",
-      "main/docs/authenticate/passwordless/implement-login/embedded-login.mdx",
-      "main/docs/authenticate/passwordless/authentication-methods/sms-otp.mdx",
-      "main/docs/authenticate/passwordless/authentication-methods/use-sms-gateway-passwordless.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms.mdx"
     ],
     "import": [],
     "redirect": []
@@ -11057,8 +11052,7 @@
   "main/docs/authenticate/login/logout/back-channel-logout/oidc-back-channel-logout-initiators.mdx": {
     "link": [
       "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
-      "main/docs/manage-users/sessions/manage-user-sessions-with-auth0-management-api.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx"
+      "main/docs/manage-users/sessions/manage-user-sessions-with-auth0-management-api.mdx"
     ],
     "import": [],
     "redirect": []
@@ -11318,6 +11312,10 @@
       "main/docs/manage-users/organizations/configure-organizations/send-membership-invitations.mdx",
       "main/docs/manage-users/access-control/authorization-core-vs-authorization-extension.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/multi-tenant-apps-best-practices.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations.mdx",
@@ -11432,24 +11430,6 @@
   "main/docs/manage-users/organizations/organizations-for-m2m-applications/audit-m2m-access.mdx": {
     "link": [
       "main/docs/manage-users/organizations/organizations-for-m2m-applications.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/identity-providers/social-identity-providers.mdx": {
-    "link": [
-      "main/docs/manage-users/organizations/organizations-overview.mdx",
-      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
-      "main/docs/customize/integrations/sharepoint-2010-2013.mdx",
-      "main/docs/customize/integrations/cms/wordpress-plugin/configure-login-by-auth0.mdx",
-      "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "main/docs/authenticate/identity-providers/calling-an-external-idp-api.mdx",
-      "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
-      "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx",
-      "main/docs/authenticate/database-connections/password-change.mdx"
     ],
     "import": [],
     "redirect": []
@@ -11573,6 +11553,7 @@
   "main/docs/manage-users/access-control/sample-use-cases-actions-with-authorization.mdx": {
     "link": [
       "main/docs/manage-users/access-control/rbac.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx",
       "main/docs/customize/rules/use-cases.mdx",
       "main/docs/customize/extensions/delegated-administration-extension.mdx",
       "main/docs/customize/actions/use-cases.mdx",
@@ -11585,7 +11566,6 @@
     "link": [
       "main/docs/manage-users/access-control/rules-for-authorization-policies.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authorization.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx"
     ],
     "import": [],
@@ -11845,23 +11825,11 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/database-connections/password-strength.mdx": {
-    "link": [
-      "main/docs/libraries/common-auth0-library-authentication-errors.mdx",
-      "main/docs/libraries/custom-signup.mdx",
-      "main/docs/customize/integrations/cms/wordpress-plugin/install-login-by-auth0.mdx",
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/database-connections/password-options.mdx",
-      "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/authenticate/database-connections/password-options.mdx": {
     "link": [
       "main/docs/libraries/common-auth0-library-authentication-errors.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
-      "main/docs/authenticate/database-connections/password-strength.mdx",
+      "main/docs/authenticate/database-connections/flexible-password-policy.mdx",
       "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx"
     ],
     "import": [],
@@ -18165,7 +18133,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/database-connections/passkeys.mdx"
     ],
     "import": [],
@@ -18177,7 +18144,6 @@
       "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps/part-2.mdx",
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
       "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx"
     ],
     "import": [],
@@ -18186,7 +18152,6 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/adfs.mdx": {
     "link": [
       "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/call-your-api-using-resource-owner-password-flow.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx"
     ],
     "import": [],
@@ -18224,8 +18189,7 @@
       "main/docs/get-started/architecture-scenarios/server-application-api/api-implementation-nodejs.mdx",
       "main/docs/get-started/architecture-scenarios/server-application-api/cron-implementation-python.mdx",
       "main/docs/get-started/architecture-scenarios/server-application-api/part-3.mdx",
-      "main/docs/get-started/architecture-scenarios/server-application-api/part-4.mdx",
-      "main/docs/get-started/architecture-scenarios/mobile-api/api-implementation-nodejs.mdx"
+      "main/docs/get-started/architecture-scenarios/server-application-api/part-4.mdx"
     ],
     "import": [],
     "redirect": []
@@ -18658,7 +18622,6 @@
     "link": [
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authorization.mdx",
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/protocols/scim/configure-inbound-scim-for-identity-providers-using-saml-or-openid.mdx",
       "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx",
       "main/docs/authenticate/protocols/scim/inbound-scim-for-okta-workforce-saml-connections.mdx",
@@ -18823,7 +18786,6 @@
       "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
       "main/docs/customize/email/send-email-invitations-for-application-signup.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx",
-      "main/docs/authenticate/database-connections/password-strength.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/change-password.mdx"
     ],
     "import": [],
@@ -18941,7 +18903,6 @@
   "main/docs/authenticate/database-connections/require-username.mdx": {
     "link": [
       "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/create.mdx"
     ],
@@ -19312,6 +19273,11 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/deploy-monitor/metric-streams.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/deploy-monitor/pre-deployment-checks/production-check-required-fixes.mdx": {
     "link": [
       "main/docs/deploy-monitor/pre-deployment-checks/how-to-run-production-checks.mdx",
@@ -19512,16 +19478,6 @@
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
       "main/docs/customize/actions/use-cases.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx": {
-    "link": [
-      "main/docs/customize/rules/use-cases.mdx",
-      "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
-      "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
-      "main/docs/customize/actions/use-cases.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20083,8 +20039,10 @@
   "main/docs/customize/actions/action-coding-guidelines.mdx": {
     "link": [
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
+      "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/customize/actions/actions-templates.mdx",
+      "main/docs/customize/actions/modules/actions-modules-overview.mdx",
+      "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
     ],
     "import": [],
@@ -20093,7 +20051,6 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx": {
     "link": [
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx",
       "main/docs/authenticate/enterprise-connections.mdx",
       "main/docs/authenticate/protocols/scim/configure-inbound-scim-for-identity-providers-using-saml-or-openid.mdx",
       "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx",
@@ -20265,15 +20222,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/forms/vault.mdx": {
-    "link": [
-      "main/docs/customize/forms/configure-additional-signup-steps.mdx",
-      "main/docs/customize/forms/configure-progressive-profile-form.mdx",
-      "main/docs/customize/forms/configure-update-policy-form.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/customize/forms/configure-update-policy-form.mdx": {
     "link": [],
     "import": [],
@@ -20333,6 +20281,67 @@
   "main/docs/customize/forms/flows/flow-execution-and-debugger.mdx": {
     "link": [
       "main/docs/customize/forms/variables.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/auth0.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/auth0.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/http.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/http-request.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/jwt.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/json-web-token.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/mailjet.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/mailjet.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/sendgrid.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/sendgrid.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/telegram.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/telegram.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/twilio.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/twilio.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/forms/vaults/whatsapp.mdx": {
+    "link": [
+      "main/docs/customize/forms/flows/integrations/whatsapp.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20715,6 +20724,13 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/actions/modules/actions-modules-overview.mdx": {
+    "link": [
+      "main/docs/customize/actions/actions-overview.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/customize/actions/actions-templates.mdx": {
     "link": [],
     "import": [],
@@ -20732,6 +20748,13 @@
   },
   "main/docs/customize/actions/releases.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/modules/write-your-first-action-module.mdx": {
+    "link": [
+      "main/docs/customize/actions/modules/actions-modules-overview.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -20990,18 +21013,6 @@
     "link": [
       "main/docs/authenticate/passwordless.mdx",
       "main/docs/authenticate/passwordless/passwordless-with-universal-login.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx": {
-    "link": [
-      "main/docs/authenticate/passwordless.mdx",
-      "main/docs/authenticate/passwordless/passwordless-connection-limitations.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/passwordless-login.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/passwordless-login/email-or-sms.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21762,6 +21773,11 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/authenticate/database-connections/flexible-password-policy.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/database-connections/non-unique-emails.mdx": {
     "link": [],
     "import": [],
@@ -21842,17 +21858,295 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/api/myorganization/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/ApiReleaseLifecycle.jsx": {
+    "link": [],
+    "import": [
+      "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+      "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+      "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+      "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+      "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+      "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+      "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+      "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+      "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+      "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+      "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+      "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+      "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+      "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+      "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+      "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+      "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+      "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+      "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+      "main/docs/api/myorganization/config/get-configuration.mdx",
+      "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+      "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+      "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+      "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+      "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+      "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+      "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+      "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+      "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+      "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+      "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+      "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+      "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx"
+    ],
+    "redirect": []
+  },
   "main/snippets/ApiScopes.jsx": {
+    "link": [],
+    "import": [
+      "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+      "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+      "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+      "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+      "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+      "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
+      "main/docs/api/myorganization/org-details/get-organization-details.mdx",
+      "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+      "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+      "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+      "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+      "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+      "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+      "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
+      "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
+      "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+      "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+      "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+      "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+      "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+      "main/docs/api/myorganization/config/get-configuration.mdx",
+      "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+      "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
+      "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+      "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
+      "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+      "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+      "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+      "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
+      "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+      "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+      "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+      "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
+      "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-details/get-organization-details.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/org-details/modify-organization-details.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/create-identity-provider.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/get-identity-provider.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/list-identity-providers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/idp-management/update-identity-provider.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/config/get-configuration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx": {
     "link": [],
     "import": [],
     "redirect": []
   },
   "main/snippets/RelatedPages.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/ReleaseLifecycle.jsx": {
     "link": [],
     "import": [],
     "redirect": []
