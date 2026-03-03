@@ -306,7 +306,7 @@ export default function AuditPage() {
       const allSuggestions = [...suggestionsToApply, ...aiSuggestionsToApply];
 
       // Group suggestions by type for the PR body
-      const suggestionsByType: Record<string, typeof suggestionsToApply> = {};
+      const suggestionsByType: Record<string, (typeof allSuggestions)> = {};
       for (const s of allSuggestions) {
         if (!suggestionsByType[s.type]) suggestionsByType[s.type] = [];
         suggestionsByType[s.type].push(s);
