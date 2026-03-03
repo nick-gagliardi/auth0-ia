@@ -149,8 +149,8 @@ export function AppHeader() {
           </PopoverContent>
         </Popover>
 
-        {/* User Menu */}
-        {session && (
+        {/* User Menu or Sign In */}
+        {session ? (
           <>
             <Separator orientation="vertical" className="mx-2 h-4" />
             <DropdownMenu>
@@ -189,6 +189,14 @@ export function AppHeader() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+          </>
+        ) : (
+          <>
+            <Separator orientation="vertical" className="mx-2 h-4" />
+            <Button variant="default" size="sm" onClick={() => router.push('/login')} className="gap-2">
+              <User className="h-4 w-4" />
+              <span className="hidden sm:inline">Sign In</span>
+            </Button>
           </>
         )}
       </header>
