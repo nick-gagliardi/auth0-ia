@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion, AiSuggestion, DocNode } from '@/types';
+import { requireSession } from '@/lib/session';
 
 const BodySchema = z.object({
   input: z.string().min(1),
@@ -8,13 +9,14 @@ const BodySchema = z.object({
 });
 
 // Call Claude API for content analysis
-async function getAiSuggestions(content: string, pageTitle: string, pageUrl: string): Promise<AiSuggestion[]> {
+async function getAiSuggestions(content: string, pageTitle: string, pageUrl: string, userApiKey?: string): Promise<AiSuggestion[]> {
   // Support both standard Anthropic API and custom proxy (Okta)
-  const apiKey = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+  // Priority: user's API key → global env var (for 30-day transition)
+  const apiKey = userApiKey || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
   const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
 
   if (!apiKey) {
-    console.warn('ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN not configured, skipping AI suggestions');
+    console.warn('No Anthropic API key available (user or global), skipping AI suggestions');
     return [];
   }
 
@@ -519,7 +521,11 @@ async function validateInternalLinks(
 
 export async function POST(req: Request) {
   try {
+    // Get authenticated user and their credentials
+    // Only fetch Anthropic key if AI suggestions are requested
     const body = BodySchema.parse(await req.json());
+    const { user } = await requireSession(body.includeAiSuggestions);
+
     const parsed = parseInput(body.input);
     const url = parsed.url;
 
@@ -1116,7 +1122,12 @@ export async function POST(req: Request) {
     // Get AI suggestions if requested
     let aiSuggestions: AiSuggestion[] | undefined;
     if (body.includeAiSuggestions && mdxContent) {
-      aiSuggestions = await getAiSuggestions(mdxContent, title || filePath, url);
+      aiSuggestions = await getAiSuggestions(
+        mdxContent,
+        title || filePath,
+        url,
+        user.anthropic_api_key_decrypted || undefined
+      );
     }
 
     return NextResponse.json({

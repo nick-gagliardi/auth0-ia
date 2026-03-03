@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { execSync } from 'child_process';
 import type { AuditCheckStatus, DocNode } from '@/types';
+import { requireSession } from '@/lib/session';
 
 type PRFile = {
   path: string;
@@ -34,14 +35,29 @@ type PRReviewResult = {
   issues?: AuditIssue[];
 };
 
-function run(cmd: string, args: string[], options?: { cwd?: string }): string {
+function run(cmd: string, args: string[], options?: { cwd?: string; githubToken?: string }): string {
   const fullCmd = [cmd, ...args].join(' ');
   try {
-    return execSync(fullCmd, {
+    const execOptions: any = {
       cwd: options?.cwd,
       encoding: 'utf-8',
       maxBuffer: 50 * 1024 * 1024,
-    });
+    };
+
+    // If GitHub token is provided, inject it via environment variable
+    // Priority: user's token → global env var (for 30-day transition)
+    if (options?.githubToken) {
+      const token = options.githubToken || process.env.MAINTENANCE_GH_TOKEN;
+      if (token) {
+        execOptions.env = {
+          ...process.env,
+          GH_TOKEN: token, // GitHub CLI uses GH_TOKEN for authentication
+          GITHUB_TOKEN: token, // Some tools use GITHUB_TOKEN
+        };
+      }
+    }
+
+    return execSync(fullCmd, execOptions);
   } catch (e: any) {
     throw new Error(e?.stderr || e?.message || String(e));
   }
@@ -176,6 +192,10 @@ function getLineNumber(content: string, index: number): number {
 
 export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResult>> {
   try {
+    // Get authenticated user and their GitHub token
+    const { user } = await requireSession();
+    const githubToken = user.github_access_token_decrypted;
+
     const { prUrl } = await req.json();
 
     if (!prUrl || typeof prUrl !== 'string') {
@@ -196,7 +216,7 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
       'pr', 'view', prNumber,
       '--repo', fullRepo,
       '--json', 'number,title,author,url,headRefName,baseRefName,files',
-    ]);
+    ], { githubToken });
     const prDetails = JSON.parse(prDetailsRaw);
 
     // Filter to MDX files only
@@ -233,7 +253,7 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
           'api',
           `/repos/${fullRepo}/contents/${file.path}?ref=${prDetails.headRefName}`,
           '--jq', '.content',
-        ]);
+        ], { githubToken });
 
         // Decode base64 content
         const content = Buffer.from(contentRaw.trim(), 'base64').toString('utf-8');

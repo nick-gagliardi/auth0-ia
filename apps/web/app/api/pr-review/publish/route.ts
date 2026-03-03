@@ -3,6 +3,7 @@ import { execSync } from 'child_process';
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
+import { requireSession } from '@/lib/session';
 
 type ReviewComment = {
   path: string;
@@ -18,21 +19,56 @@ type PublishResult = {
   reviewUrl?: string;
 };
 
-function run(cmd: string, args: string[], options?: { cwd?: string }): string {
+function run(cmd: string, args: string[], options?: { cwd?: string; githubToken?: string }): string {
   const fullCmd = [cmd, ...args].join(' ');
   try {
-    return execSync(fullCmd, {
+    const execOptions: any = {
       cwd: options?.cwd,
       encoding: 'utf-8',
       maxBuffer: 50 * 1024 * 1024,
-    });
+    };
+
+    // If GitHub token is provided, inject it via environment variable
+    // Priority: user's token → global env var (for 30-day transition)
+    if (options?.githubToken) {
+      const token = options.githubToken || process.env.MAINTENANCE_GH_TOKEN;
+      if (token) {
+        execOptions.env = {
+          ...process.env,
+          GH_TOKEN: token,
+          GITHUB_TOKEN: token,
+        };
+      }
+    }
+
+    return execSync(fullCmd, execOptions);
   } catch (e: any) {
     throw new Error(e?.stderr || e?.message || String(e));
   }
 }
 
+// Helper to run shell commands with GitHub token
+function runWithToken(cmd: string, githubToken?: string): string {
+  const token = githubToken || process.env.MAINTENANCE_GH_TOKEN;
+  const env = token ? {
+    ...process.env,
+    GH_TOKEN: token,
+    GITHUB_TOKEN: token,
+  } : process.env;
+
+  return execSync(cmd, {
+    encoding: 'utf-8',
+    maxBuffer: 50 * 1024 * 1024,
+    env,
+  });
+}
+
 export async function POST(req: NextRequest): Promise<NextResponse<PublishResult>> {
   try {
+    // Get authenticated user and their GitHub token
+    const { user } = await requireSession();
+    const githubToken = user.github_access_token_decrypted;
+
     const { prUrl, comments, summary } = await req.json();
 
     if (!prUrl || typeof prUrl !== 'string') {
@@ -53,7 +89,7 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
       'pr', 'view', prNumber,
       '--repo', fullRepo,
       '--json', 'headRefOid',
-    ]);
+    ], { githubToken });
     const prDetails = JSON.parse(prDetailsRaw);
     const commitId = prDetails.headRefOid;
 
@@ -61,7 +97,7 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
     const diffRaw = run('gh', [
       'pr', 'diff', prNumber,
       '--repo', fullRepo,
-    ]);
+    ], { githubToken });
 
     // Parse diff to build a map of file -> line -> can comment
     // GitHub allows comments on any line visible in the diff (added, context, or removed)
@@ -186,16 +222,16 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
 
     // First, delete any pending reviews from the current user
     try {
-      const pendingReviewsRaw = execSync(
+      const pendingReviewsRaw = runWithToken(
         `gh api /repos/${fullRepo}/pulls/${prNumber}/reviews --jq '[.[] | select(.state == "PENDING")] | .[0].id' 2>/dev/null || echo ""`,
-        { encoding: 'utf-8', maxBuffer: 50 * 1024 * 1024 }
+        githubToken
       ).trim();
 
       if (pendingReviewsRaw && pendingReviewsRaw !== 'null') {
         console.log(`Found pending review ${pendingReviewsRaw}, deleting...`);
-        execSync(
+        runWithToken(
           `gh api --method DELETE /repos/${fullRepo}/pulls/${prNumber}/reviews/${pendingReviewsRaw} 2>&1 || true`,
-          { encoding: 'utf-8', maxBuffer: 50 * 1024 * 1024 }
+          githubToken
         );
         console.log('Deleted pending review');
       }
@@ -228,9 +264,9 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
 
       try {
         // Use -i to include headers and capture the full response
-        const result = execSync(
+        const result = runWithToken(
           `gh api --method POST /repos/${fullRepo}/pulls/${prNumber}/reviews --input ${tmpFile} 2>&1 || true`,
-          { encoding: 'utf-8', maxBuffer: 50 * 1024 * 1024 }
+          githubToken
         );
         console.log('GitHub API response:', result);
 
@@ -259,7 +295,7 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
           const fallbackFile = path.join(os.tmpdir(), `pr-review-fallback-${Date.now()}.md`);
           fs.writeFileSync(fallbackFile, combinedBody, 'utf8');
           try {
-            run('gh', ['pr', 'comment', prNumber, '--repo', fullRepo, '--body-file', fallbackFile]);
+            run('gh', ['pr', 'comment', prNumber, '--repo', fullRepo, '--body-file', fallbackFile], { githubToken });
           } finally {
             try { fs.unlinkSync(fallbackFile); } catch {}
           }
@@ -277,7 +313,7 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
           'pr', 'comment', prNumber,
           '--repo', fullRepo,
           '--body-file', tmpFile,
-        ]);
+        ], { githubToken });
       } finally {
         try { fs.unlinkSync(tmpFile); } catch {}
       }

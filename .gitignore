@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 .work/
 index/
+auth0-ia/
 
 # Allow publishing index for the web app (temporary until we host it elsewhere)
 !apps/web/public/index/
@@ -12,3 +13,7 @@ apps/web/.next/
 apps/web/out/
 apps/web/.vercel/
 apps/web/tsconfig.tsbuildinfo
+
+# Environment files
+apps/web/.env.local
+.env.local

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   ClipboardCheck,
   Loader2,
@@ -23,6 +23,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
+import { AnthropicKeyPrompt } from '@/components/AnthropicKeyPrompt';
 import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion, AiSuggestion } from '@/types';
 
 function StatusIcon({ status }: { status: AuditCheckStatus }) {
@@ -101,6 +102,34 @@ export default function AuditPage() {
   const [includeAiSuggestions, setIncludeAiSuggestions] = useState(false);
   const [expandedAiItems, setExpandedAiItems] = useState<Set<number>>(new Set());
   const [acceptedAiSuggestions, setAcceptedAiSuggestions] = useState<Set<number>>(new Set());
+  const [hasAnthropicKey, setHasAnthropicKey] = useState(false);
+  const [showKeyPrompt, setShowKeyPrompt] = useState(false);
+
+  // Check if user has Anthropic key configured
+  useEffect(() => {
+    const checkSettings = async () => {
+      try {
+        const response = await fetch('/api/settings');
+        if (response.ok) {
+          const data = await response.json();
+          setHasAnthropicKey(data.hasAnthropicKey);
+        }
+      } catch (error) {
+        // Fail silently - user can still use the app without AI features
+      }
+    };
+    checkSettings();
+  }, []);
+
+  // Handle AI suggestions toggle
+  const handleAiSuggestionsToggle = (checked: boolean) => {
+    if (checked && !hasAnthropicKey) {
+      // Show prompt to configure API key
+      setShowKeyPrompt(true);
+      return;
+    }
+    setIncludeAiSuggestions(checked);
+  };
 
   const toggleItem = (id: string) => {
     const next = new Set(expandedItems);
@@ -414,10 +443,13 @@ export default function AuditPage() {
               <Switch
                 id="ai-suggestions"
                 checked={includeAiSuggestions}
-                onCheckedChange={setIncludeAiSuggestions}
+                onCheckedChange={handleAiSuggestionsToggle}
               />
               <Label htmlFor="ai-suggestions" className="text-sm text-muted-foreground">
                 Include AI suggestions (grammar, clarity, technical accuracy, content gaps)
+                {!hasAnthropicKey && (
+                  <span className="text-yellow-600 dark:text-yellow-400 ml-1">(requires API key)</span>
+                )}
               </Label>
             </div>
           </CardContent>
@@ -761,6 +793,9 @@ export default function AuditPage() {
             </CardContent>
           </Card>
         )}
+
+        {/* Anthropic API Key Prompt Modal */}
+        <AnthropicKeyPrompt open={showKeyPrompt} onOpenChange={setShowKeyPrompt} />
       </div>
     </AppLayout>
   );
