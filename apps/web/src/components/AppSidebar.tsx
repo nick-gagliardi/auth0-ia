@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Network, Home } from 'lucide-react';
+import { Network, Home, Shield } from 'lucide-react';
+import { useSession } from 'next-auth/react';
 import {
   Sidebar,
   SidebarContent,
@@ -17,8 +18,14 @@ import {
 } from '@/components/ui/sidebar';
 import { navigationGroups } from './navigation-config';
 
+const ADMIN_USERNAMES = ['nick-gagliardi'];
+
 export function AppSidebar() {
   const pathname = usePathname();
+  const { data: session } = useSession();
+
+  // Check if current user is admin
+  const isAdmin = session?.user?.githubUsername && ADMIN_USERNAMES.includes(session.user.githubUsername);
 
   return (
     <Sidebar collapsible="icon">
@@ -63,6 +70,25 @@ export function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
         ))}
+
+        {/* Admin Section - Only visible to admins, access controlled server-side */}
+        {isAdmin && (
+          <SidebarGroup>
+            <SidebarGroupLabel>Admin</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                <SidebarMenuItem>
+                  <SidebarMenuButton asChild isActive={pathname === '/admin/users'} tooltip="Users">
+                    <Link href="/admin/users">
+                      <Shield className="size-4" />
+                      <span>Users</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        )}
       </SidebarContent>
 
       <SidebarRail />

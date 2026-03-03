@@ -1,6 +1,6 @@
 import NextAuth, { NextAuthConfig } from "next-auth";
 import GitHub from "next-auth/providers/github";
-import { createUser, getUserByGithubId, updateGithubToken } from "@/lib/db";
+import { createUser, getUserByGithubId, updateGithubToken, getUserById } from "@/lib/db";
 import { encrypt } from "@/lib/encryption";
 
 const authConfig: NextAuthConfig = {
@@ -67,9 +67,19 @@ const authConfig: NextAuthConfig = {
     },
 
     async session({ session, token }) {
-      // Add user ID to session
+      // Add user ID and GitHub username to session
       if (token?.sub) {
         session.user.id = token.sub;
+
+        // Fetch GitHub username for admin checks
+        try {
+          const dbUser = await getUserById(token.sub);
+          if (dbUser) {
+            session.user.githubUsername = dbUser.github_username;
+          }
+        } catch (error) {
+          console.error('Error fetching user in session callback:', error);
+        }
       }
       return session;
     },
