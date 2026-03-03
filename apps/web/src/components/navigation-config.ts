@@ -16,6 +16,7 @@ import {
   Database,
   BookOpen,
   ClipboardCheck,
+  Settings,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -57,6 +58,7 @@ export const navigationGroups: NavGroup[] = [
       { label: 'Snippet Migration', href: '/snippet-migration', icon: FileCode },
       { label: 'Refactor', href: '/refactor', icon: GitBranch },
       { label: 'Verify', href: '/verify', icon: CheckCircle },
+      { label: 'Settings', href: '/settings', icon: Settings },
     ],
   },
   {

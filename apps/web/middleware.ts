@@ -7,10 +7,14 @@ export default auth((req) => {
 
 export const config = {
   matcher: [
-    '/api/audit/:path*',
-    '/api/pr-review/:path*',
-    '/api/maintenance/:path*',
-    '/api/curl-execute/:path*',
-    '/api/settings/:path*',
+    /*
+     * Match all request paths except:
+     * - /api/auth (authentication endpoints)
+     * - /login (login page)
+     * - /_next/static (static files)
+     * - /_next/image (image optimization files)
+     * - /favicon.ico, /sitemap.xml, /robots.txt (public files)
+     */
+    '/((?!api/auth|login|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
   ],
 };
