@@ -1,8 +1,9 @@
+import { Session } from "next-auth";
 import { auth } from "@/lib/auth";
 import { getUserWithDecryptedCreds, type UserWithDecryptedCreds } from "@/lib/db";
 
 export interface SessionUser {
-  session: NonNullable<Awaited<ReturnType<typeof auth>>>;
+  session: Session;
   user: UserWithDecryptedCreds;
 }
 
