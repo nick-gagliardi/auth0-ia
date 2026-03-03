@@ -1,9 +1,9 @@
-import { NextAuthOptions } from "next-auth";
+import NextAuth, { NextAuthConfig } from "next-auth";
 import GitHub from "next-auth/providers/github";
 import { createUser, getUserByGithubId, updateGithubToken } from "@/lib/db";
 import { encrypt } from "@/lib/encryption";
 
-export const authOptions: NextAuthOptions = {
+const authConfig: NextAuthConfig = {
   providers: [
     GitHub({
       clientId: process.env.GITHUB_CLIENT_ID!,
@@ -74,3 +74,5 @@ export const authOptions: NextAuthOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
 };
+
+export const { handlers, auth, signIn, signOut } = NextAuth(authConfig);

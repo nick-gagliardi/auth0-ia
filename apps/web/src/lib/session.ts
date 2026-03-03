@@ -1,9 +1,8 @@
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import { getUserWithDecryptedCreds, type UserWithDecryptedCreds } from "@/lib/db";
 
 export interface SessionUser {
-  session: NonNullable<Awaited<ReturnType<typeof getServerSession>>>;
+  session: NonNullable<Awaited<ReturnType<typeof auth>>>;
   user: UserWithDecryptedCreds;
 }
 
@@ -17,7 +16,7 @@ export interface SessionUser {
  * @throws Error if user is not authenticated or user not found in database
  */
 export async function requireSession(includeAnthropicKey = false): Promise<SessionUser> {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
 
   if (!session?.user?.id) {
     throw new Error('Unauthorized - no active session');

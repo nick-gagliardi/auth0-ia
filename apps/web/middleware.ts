@@ -1,4 +1,9 @@
-export { default } from "next-auth/middleware";
+import { auth } from "@/lib/auth";
+
+export default auth((req) => {
+  // The auth function automatically handles authentication
+  // If the request is not authenticated, it will redirect to the sign-in page
+});
 
 export const config = {
   matcher: [

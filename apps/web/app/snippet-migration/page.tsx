@@ -172,7 +172,7 @@ export default function SnippetMigrationPage() {
         </Tabs>
 
         <div className="text-xs text-muted-foreground">
-          Note: the PR only migrates the selected occurrence for now. We can add "migrate all identical occurrences" once we're comfortable.
+          Note: the PR only migrates the selected occurrence for now. We can add &ldquo;migrate all identical occurrences&rdquo; once we&rsquo;re comfortable.
         </div>
 
         {/* Success Modal */}
