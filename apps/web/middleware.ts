@@ -1,8 +1,24 @@
 import { auth } from "@/lib/auth";
+import { NextResponse } from "next/server";
 
 export default auth((req) => {
-  // The auth function automatically handles authentication
-  // If the request is not authenticated, it will redirect to the sign-in page
+  const { auth: session } = req;
+  const isLoggedIn = !!session?.user;
+  const { pathname } = req.nextUrl;
+
+  // Allow access to login page and auth API
+  if (pathname.startsWith('/login') || pathname.startsWith('/api/auth')) {
+    return NextResponse.next();
+  }
+
+  // Redirect to login if not authenticated
+  if (!isLoggedIn) {
+    const loginUrl = new URL('/login', req.url);
+    loginUrl.searchParams.set('callbackUrl', pathname);
+    return NextResponse.redirect(loginUrl);
+  }
+
+  return NextResponse.next();
 });
 
 export const config = {
