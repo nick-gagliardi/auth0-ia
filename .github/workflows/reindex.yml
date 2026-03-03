@@ -1,0 +1,64 @@
+name: Daily Reindex
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build and run indexer
+        run: pnpm run index
+        env:
+          DOCS_REPO_URL: https://github.com/auth0/docs-v2.git
+          DOCS_REPO_REF: main
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet apps/web/public/index/; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add apps/web/public/index/
+
+          # Get summary info
+          PAGES=$(jq -r '.pages' apps/web/public/index/summary.json)
+          SNIPPETS=$(jq -r '.snippets' apps/web/public/index/summary.json)
+
+          git commit -m "chore(automated): update index with latest Auth0 docs ($PAGES pages, $SNIPPETS snippets)"
+          git push
+
+      - name: No changes detected
+        if: steps.check_changes.outputs.has_changes == 'false'
+        run: echo "No changes in index, skipping commit"
