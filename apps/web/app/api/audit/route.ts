@@ -1216,15 +1216,22 @@ export async function POST(req: Request) {
 
         // Broken links
         if (linkValidation) {
-          const brokenLinks = linkValidation.filter(l => l.status === 'broken' || l.status === 'outdated');
+          const brokenCount = linkValidation.broken.length;
+          const redirectCount = linkValidation.redirected.length;
+          const totalLinks = analysis.internalDocsLinks.length;
+
           checks.push(createCheck(
             'broken-links',
             'No broken links',
-            brokenLinks.length === 0 ? 'PASS' : 'FAIL',
-            brokenLinks.length === 0
-              ? `All ${linkValidation.length} internal link(s) valid`
-              : `${brokenLinks.length}/${linkValidation.length} broken or outdated link(s)`,
-            brokenLinks.length > 0 ? brokenLinks.slice(0, 10) : undefined
+            brokenCount === 0 ? (redirectCount > 0 ? 'WARN' : 'PASS') : 'FAIL',
+            brokenCount === 0
+              ? (redirectCount > 0
+                  ? `${redirectCount} outdated link(s) (use redirects instead)`
+                  : `All ${totalLinks} internal link(s) valid`)
+              : `${brokenCount} broken, ${redirectCount} outdated (${totalLinks} total)`,
+            brokenCount > 0 || redirectCount > 0
+              ? { broken: linkValidation.broken.slice(0, 5), redirected: linkValidation.redirected.slice(0, 5) }
+              : undefined
           ));
         } else {
           checks.push(createCheck('broken-links', 'No broken links', 'NA', 'Permalink set unavailable'));
