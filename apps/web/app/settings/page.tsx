@@ -24,7 +24,6 @@ export default function SettingsPage() {
   const [anthropicKey, setAnthropicKey] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-  const [isTesting, setIsTesting] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
 
   // Redirect to login if not authenticated
@@ -145,55 +144,6 @@ export default function SettingsPage() {
     }
   };
 
-  const handleTestKey = async () => {
-    if (!anthropicKey.trim()) {
-      toast({
-        title: 'Error',
-        description: 'Please enter an Anthropic API key to test',
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    setIsTesting(true);
-    try {
-      const response = await fetch('https://api.anthropic.com/v1/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': anthropicKey,
-          'anthropic-version': '2023-06-01',
-        },
-        body: JSON.stringify({
-          model: 'claude-3-5-sonnet-20241022',
-          max_tokens: 10,
-          messages: [{ role: 'user', content: 'Hi' }],
-        }),
-      });
-
-      if (response.ok) {
-        toast({
-          title: 'Success',
-          description: 'API key is valid',
-        });
-      } else {
-        const errorData = await response.json().catch(() => ({}));
-        toast({
-          title: 'Error',
-          description: errorData.error?.message || 'API key is invalid',
-          variant: 'destructive',
-        });
-      }
-    } catch (error: any) {
-      toast({
-        title: 'Error',
-        description: error?.message || 'Failed to test API key',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsTesting(false);
-    }
-  };
 
   if (status === 'loading' || isLoading) {
     return (
@@ -276,7 +226,7 @@ export default function SettingsPage() {
                   placeholder="sk-ant-..."
                   value={anthropicKey}
                   onChange={(e) => setAnthropicKey(e.target.value)}
-                  disabled={isSaving || isTesting}
+                  disabled={isSaving}
                 />
                 <p className="text-sm text-muted-foreground">
                   Get your API key from{' '}
@@ -295,24 +245,16 @@ export default function SettingsPage() {
               <div className="flex flex-wrap gap-3">
                 <Button
                   onClick={handleSaveKey}
-                  disabled={!anthropicKey.trim() || isSaving || isTesting}
+                  disabled={!anthropicKey.trim() || isSaving}
                 >
-                  {isSaving ? 'Saving...' : settings?.hasAnthropicKey ? 'Update Key' : 'Save Key'}
-                </Button>
-
-                <Button
-                  variant="outline"
-                  onClick={handleTestKey}
-                  disabled={!anthropicKey.trim() || isSaving || isTesting}
-                >
-                  {isTesting ? 'Testing...' : 'Test Key'}
+                  {isSaving ? 'Validating and saving...' : settings?.hasAnthropicKey ? 'Update Key' : 'Save Key'}
                 </Button>
 
                 {settings?.hasAnthropicKey && (
                   <Button
                     variant="destructive"
                     onClick={handleDeleteKey}
-                    disabled={isSaving || isTesting || isDeleting}
+                    disabled={isSaving || isDeleting}
                   >
                     {isDeleting ? 'Deleting...' : 'Delete Key'}
                   </Button>
