@@ -1163,6 +1163,18 @@ export async function POST(req: Request) {
       if (mdx) {
         mdxContent = mdx; // Store for AI analysis
 
+        // Extract frontmatter metadata
+        const frontmatterMatch = mdx.match(/^---\n([\s\S]*?)\n---/);
+        let metadata: any = {};
+        if (frontmatterMatch) {
+          try {
+            const yaml = await import('js-yaml');
+            metadata = yaml.load(frontmatterMatch[1]) || {};
+          } catch (err) {
+            console.error('[audit] Failed to parse frontmatter:', err);
+          }
+        }
+
         // Import analysis helpers dynamically
         const { analyzeMdx, computeProdUrl } = await import('./analyze-helpers');
         analysis = analyzeMdx(mdx);
@@ -1195,23 +1207,23 @@ export async function POST(req: Request) {
         ));
 
         // HAR samples
-        const hasHar = analysis.detected.harSamples.length > 0;
+        const hasHar = analysis.detected.hasHarSample;
         checks.push(createCheck(
           'har-samples',
           'HAR samples render',
           hasHar ? 'MANUAL' : 'NA',
-          hasHar ? `${analysis.detected.harSamples.length} HAR sample(s) (visual check needed)` : 'No HAR samples',
-          hasHar ? analysis.detected.harSamples : undefined
+          hasHar ? 'HAR sample(s) found (visual check needed)' : 'No HAR samples',
+          undefined
         ));
 
         // Screenshots
-        const hasScreenshots = analysis.detected.screenshots.length > 0;
+        const hasScreenshots = analysis.images.length > 0;
         checks.push(createCheck(
           'screenshots-present',
           'Screenshots present',
           hasScreenshots ? 'PASS' : 'NA',
-          hasScreenshots ? `${analysis.detected.screenshots.length} screenshot(s)` : 'No screenshots',
-          hasScreenshots ? analysis.detected.screenshots.slice(0, 10) : undefined
+          hasScreenshots ? `${analysis.images.length} image(s)` : 'No images',
+          hasScreenshots ? analysis.images.slice(0, 10) : undefined
         ));
 
         // Broken links
@@ -1238,21 +1250,22 @@ export async function POST(req: Request) {
         }
 
         // validatedOn frontmatter
-        const hasValidatedOn = !!analysis.metadata.validatedOn;
+        const hasValidatedOn = !!metadata.validatedOn;
         checks.push(createCheck(
           'validated-on',
           'validatedOn frontmatter',
           hasValidatedOn ? 'PASS' : 'WARN',
-          hasValidatedOn ? `Last validated: ${analysis.metadata.validatedOn}` : 'Missing validatedOn field',
-          hasValidatedOn ? { validatedOn: analysis.metadata.validatedOn } : undefined
+          hasValidatedOn ? `Last validated: ${metadata.validatedOn}` : 'Missing validatedOn field',
+          hasValidatedOn ? { validatedOn: metadata.validatedOn } : undefined
         ));
 
         // Code tabs rendering - skip Playwright check in production
+        const codeBlockCount = analysis.allCodeBlocks?.length || 0;
         checks.push(createCheck(
           'tab-rendering',
           'Code tabs render correctly',
           'MANUAL',
-          `${analysis.detected.codeBlocks.length} code block(s) (visual check needed)`,
+          `${codeBlockCount} code block(s) (visual check needed)`,
           undefined
         ));
 
