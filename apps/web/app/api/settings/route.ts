@@ -41,8 +41,12 @@ export async function POST(req: Request) {
     const body = UpdateKeySchema.parse(await req.json());
 
     // Validate the API key by making a test call to Anthropic
+    console.log('[Settings POST] Validating API key...');
     const testResult = await testAnthropicKey(body.anthropicApiKey);
+    console.log('[Settings POST] Validation result:', testResult);
+
     if (!testResult.ok) {
+      console.error('[Settings POST] Validation failed:', testResult.error);
       return NextResponse.json(
         { ok: false, error: testResult.error || 'Invalid Anthropic API key' },
         { status: 400 }
