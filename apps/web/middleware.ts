@@ -30,7 +30,8 @@ export const config = {
      * - /_next/static (static files)
      * - /_next/image (image optimization files)
      * - /favicon.ico, /sitemap.xml, /robots.txt (public files)
+     * - /index (public JSON data files)
      */
-    '/((?!api/auth|login|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+    '/((?!api/auth|login|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|index).*)',
   ],
 };

@@ -159,10 +159,12 @@ function parseInput(input: string): { type: 'url' | 'filepath'; url: string; fil
 // Resolve production URL to file path
 async function resolveUrlToFilePath(url: string, req: Request): Promise<{ filePath: string; title?: string } | null> {
   try {
+    console.log('[resolveUrlToFilePath] Starting resolution for URL:', url);
     const parsed = new URL(url);
 
     // Must be auth0.com/docs
     if (!parsed.hostname.endsWith('auth0.com')) {
+      console.log('[resolveUrlToFilePath] Hostname does not end with auth0.com:', parsed.hostname);
       return null;
     }
 
@@ -171,47 +173,64 @@ async function resolveUrlToFilePath(url: string, req: Request): Promise<{ filePa
     if (!match) {
       // Root docs page
       if (parsed.pathname === '/docs' || parsed.pathname === '/docs/') {
+        console.log('[resolveUrlToFilePath] Root docs page detected');
         return { filePath: 'main/docs/index.mdx', title: 'Documentation Home' };
       }
+      console.log('[resolveUrlToFilePath] No /docs/ path found:', parsed.pathname);
       return null;
     }
 
     let docPath = match[1].replace(/\/$/, ''); // Remove trailing slash
+    console.log('[resolveUrlToFilePath] Extracted docPath:', docPath);
 
     // Fetch nodes.json to find matching file
     const origin = new URL(req.url).origin;
     const base = process.env.NEXT_PUBLIC_INDEX_BASE_URL || '/index';
     const nodesUrl = new URL(`${base.replace(/\/$/, '')}/nodes.json`, origin);
+    console.log('[resolveUrlToFilePath] Fetching nodes from:', nodesUrl.toString());
+
     const nodesRes = await fetch(nodesUrl.toString(), { cache: 'no-store' });
 
     if (!nodesRes.ok) {
+      console.error('[resolveUrlToFilePath] Failed to fetch nodes.json:', nodesRes.status, nodesRes.statusText);
       return null;
     }
 
     const nodes = (await nodesRes.json()) as DocNode[];
+    console.log('[resolveUrlToFilePath] Loaded', nodes.length, 'nodes from nodes.json');
 
     // Try exact match: main/docs/{path}.mdx
     const exactPath = `main/docs/${docPath}.mdx`;
+    console.log('[resolveUrlToFilePath] Trying exact path:', exactPath);
     const exactMatch = nodes.find(n => n.filePath === exactPath);
     if (exactMatch) {
+      console.log('[resolveUrlToFilePath] Found exact match:', exactMatch.filePath);
       return { filePath: exactMatch.filePath, title: exactMatch.title };
     }
 
     // Try index page: main/docs/{path}/index.mdx
     const indexPath = `main/docs/${docPath}/index.mdx`;
+    console.log('[resolveUrlToFilePath] Trying index path:', indexPath);
     const indexMatch = nodes.find(n => n.filePath === indexPath);
     if (indexMatch) {
+      console.log('[resolveUrlToFilePath] Found index match:', indexMatch.filePath);
       return { filePath: indexMatch.filePath, title: indexMatch.title };
     }
 
     // Try without .mdx extension variations
-    const mdMatch = nodes.find(n => n.filePath === `main/docs/${docPath}.md`);
+    const mdPath = `main/docs/${docPath}.md`;
+    console.log('[resolveUrlToFilePath] Trying .md path:', mdPath);
+    const mdMatch = nodes.find(n => n.filePath === mdPath);
     if (mdMatch) {
+      console.log('[resolveUrlToFilePath] Found .md match:', mdMatch.filePath);
       return { filePath: mdMatch.filePath, title: mdMatch.title };
     }
 
+    console.log('[resolveUrlToFilePath] No match found for docPath:', docPath);
+    console.log('[resolveUrlToFilePath] Sample node paths:', nodes.slice(0, 5).map(n => n.filePath));
     return null;
-  } catch {
+  } catch (err) {
+    console.error('[resolveUrlToFilePath] Error during resolution:', err);
     return null;
   }
 }
