@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
+import AppLayout from '@/components/AppLayout';
 
 type SettingsData = {
   githubUsername: string;
@@ -147,12 +148,14 @@ export default function SettingsPage() {
 
   if (status === 'loading' || isLoading) {
     return (
-      <div className="container mx-auto py-8 px-4">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Settings</h1>
-          <p className="text-muted-foreground">Loading...</p>
+      <AppLayout>
+        <div className="container mx-auto py-8 px-4">
+          <div className="max-w-2xl mx-auto">
+            <h1 className="text-3xl font-bold mb-8">Settings</h1>
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
         </div>
-      </div>
+      </AppLayout>
     );
   }
 
@@ -161,9 +164,10 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="container mx-auto py-8 px-4">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8">Settings</h1>
+    <AppLayout>
+      <div className="container mx-auto py-8 px-4">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-3xl font-bold mb-8">Settings</h1>
 
         {/* GitHub Account */}
         <Card className="mb-6">
@@ -271,5 +275,6 @@ export default function SettingsPage() {
         </Card>
       </div>
     </div>
+    </AppLayout>
   );
 }
