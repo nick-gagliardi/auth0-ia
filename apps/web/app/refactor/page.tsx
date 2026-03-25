@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { Download, GitPullRequest, Info, Search } from 'lucide-react';
+import { Download, GitPullRequest, Info, Search, Loader2, CheckCircle, ExternalLink, FileText, ArrowRight, AlertTriangle } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -11,7 +11,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useMetrics, useNodes } from '@/hooks/use-index-data';
+import { Switch } from '@/components/ui/switch';
+import { useToast } from '@/hooks/use-toast';
+import { useMetrics, useNodes, useEdgesInbound } from '@/hooks/use-index-data';
+import { recordActivity } from '@/hooks/use-activity-history';
 
 type Operation = 'move-page' | 'move-subtree';
 
@@ -28,9 +31,11 @@ function downloadJson(filename: string, obj: unknown) {
 }
 
 export default function RefactorPage() {
+  const { toast } = useToast();
   const { data: nodes, isLoading: loadingNodes } = useNodes();
   const { data: metrics, isLoading: loadingMetrics } = useMetrics();
-  const loading = loadingNodes || loadingMetrics;
+  const { data: inboundEdges, isLoading: loadingInbound } = useEdgesInbound();
+  const loading = loadingNodes || loadingMetrics || loadingInbound;
 
   const [op, setOp] = useState<Operation>('move-page');
   const [sourceQuery, setSourceQuery] = useState('');
@@ -39,7 +44,20 @@ export default function RefactorPage() {
   const [destPermalink, setDestPermalink] = useState('');
   const [destFilePath, setDestFilePath] = useState('');
 
+  const [applyLinkRewrites, setApplyLinkRewrites] = useState(true);
+  const [applyRedirects, setApplyRedirects] = useState(true);
+  const [creatingPr, setCreatingPr] = useState(false);
+  const [prUrl, setPrUrl] = useState<string | null>(null);
+  const [prError, setPrError] = useState<string | null>(null);
+
   const pages = useMemo(() => (nodes || []).filter((n) => n.type === 'page'), [nodes]);
+
+  // Build a map of page ID to node for lookups
+  const nodeById = useMemo(() => {
+    const m = new Map<string, typeof pages[number]>();
+    pages.forEach((n) => m.set(n.id, n));
+    return m;
+  }, [pages]);
 
   const sourceMatches = useMemo(() => {
     if (!pages || !metrics) return [];
@@ -70,6 +88,15 @@ export default function RefactorPage() {
     return pages.find((p) => p.id === selectedSourceId) || null;
   }, [pages, selectedSourceId]);
 
+  // Get inbound links to the selected page
+  const inboundPages = useMemo(() => {
+    if (!selected || !inboundEdges) return [];
+    const links = inboundEdges[selected.id]?.link || [];
+    return links
+      .map(id => nodeById.get(id))
+      .filter((n): n is NonNullable<typeof n> => !!n);
+  }, [selected, inboundEdges, nodeById]);
+
   const plan = useMemo(() => {
     if (!selected) return null;
 
@@ -95,8 +122,20 @@ export default function RefactorPage() {
         ? [{ from: oldFilePath, to: nextFilePath }]
         : [];
 
+    // Detect link rewrites needed in inbound pages
+    const linkRewrites: { file: string; oldLink: string; newLink: string }[] = [];
+    if (oldPermalink && nextPermalink && oldPermalink !== nextPermalink) {
+      for (const page of inboundPages) {
+        linkRewrites.push({
+          file: page.filePath,
+          oldLink: oldPermalink,
+          newLink: nextPermalink,
+        });
+      }
+    }
+
     return {
-      kind: 'refactor-plan',
+      kind: 'refactor-plan' as const,
       version: 1,
       operation: op,
       source: {
@@ -113,7 +152,7 @@ export default function RefactorPage() {
       proposed: {
         moves,
         redirects,
-        linkRewrites: [],
+        linkRewrites,
         docsJsonEdits: [],
       },
       notes: {
@@ -122,7 +161,73 @@ export default function RefactorPage() {
       warnings,
       generatedAtUtc: new Date().toISOString(),
     };
-  }, [destFilePath, destPermalink, metrics, op, selected]);
+  }, [destFilePath, destPermalink, metrics, op, selected, inboundPages]);
+
+  // Create PR handler
+  const handleCreatePr = async () => {
+    if (!plan) return;
+
+    setCreatingPr(true);
+    setPrUrl(null);
+    setPrError(null);
+
+    try {
+      const prTitle = `Refactor: ${plan.source.title || 'page'} → ${plan.destination.permalink || plan.destination.filePath}`;
+      const prBody = [
+        '## Refactor Summary',
+        '',
+        `**Source:** ${plan.source.title || plan.source.filePath}`,
+        `**From:** ${plan.source.permalink}`,
+        `**To:** ${plan.destination.permalink}`,
+        '',
+        '### Changes',
+        '',
+        plan.proposed.moves.length > 0 ? `- File moves: ${plan.proposed.moves.length}` : '',
+        plan.proposed.redirects.length > 0 ? `- Redirects: ${plan.proposed.redirects.length}` : '',
+        plan.proposed.linkRewrites.length > 0 ? `- Link rewrites: ${plan.proposed.linkRewrites.length}` : '',
+        '',
+        '---',
+        'Generated by Auth0 IA Refactor Assistant',
+      ].filter(Boolean).join('\n');
+
+      const res = await fetch('/api/refactor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          plan,
+          prTitle,
+          prBody,
+          applyLinkRewrites,
+          applyRedirects,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        setPrUrl(data.compareUrl);
+        toast({ title: 'Branch created', description: 'Review changes and open PR' });
+
+        // Record activity
+        recordActivity({
+          type: 'refactor',
+          title: plan.source.title || plan.source.filePath,
+          description: `Moved to ${plan.destination.permalink || plan.destination.filePath}`,
+          filePath: plan.source.filePath,
+          url: data.compareUrl,
+          metadata: { nodeId: plan.source.id, branchName: data.branchName },
+        });
+      } else {
+        setPrError(data.error || 'Unknown error');
+        toast({ title: 'PR creation failed', description: data.error, variant: 'destructive' });
+      }
+    } catch (e: any) {
+      setPrError(e?.message || 'Network error');
+      toast({ title: 'Error', description: e?.message || 'Network error', variant: 'destructive' });
+    } finally {
+      setCreatingPr(false);
+    }
+  };
 
   return (
     <AppLayout>
@@ -132,10 +237,9 @@ export default function RefactorPage() {
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3">
               <GitPullRequest className="w-6 h-6 text-primary" />
               Refactor Assistant
-              <Badge variant="secondary" className="text-xs">MVP</Badge>
             </h1>
             <p className="text-muted-foreground mt-1">
-              Plan a move/rename safely. This MVP generates an exportable refactor plan (moves + redirects) from the index.
+              Plan and execute page moves safely. Generates redirects, rewrites links, and creates PRs.
             </p>
           </div>
 
@@ -153,12 +257,31 @@ export default function RefactorPage() {
 
         <Alert>
           <Info className="h-4 w-4" />
-          <AlertTitle>What this does (today)</AlertTitle>
+          <AlertTitle>Refactor Workflow</AlertTitle>
           <AlertDescription>
-            You pick a source page, type the destination permalink/file path, and export a plan JSON you can hand to a human or CI automation.
-            Next iteration will add link rewrite detection + docs.json diff + PR creation.
+            1. Pick a source page  2. Enter the new permalink/file path  3. Review proposed changes  4. Create a PR with file moves, redirects, and link updates
           </AlertDescription>
         </Alert>
+
+        {prUrl && (
+          <Alert className="border-green-500/50 bg-green-500/5">
+            <CheckCircle className="h-4 w-4 text-green-500" />
+            <AlertTitle>Branch Created</AlertTitle>
+            <AlertDescription className="flex items-center gap-2">
+              <a href={prUrl} target="_blank" rel="noreferrer" className="text-primary hover:underline flex items-center gap-1">
+                Review and Open PR <ExternalLink className="w-3 h-3" />
+              </a>
+            </AlertDescription>
+          </Alert>
+        )}
+
+        {prError && (
+          <Alert variant="destructive">
+            <AlertTriangle className="h-4 w-4" />
+            <AlertTitle>PR Creation Failed</AlertTitle>
+            <AlertDescription>{prError}</AlertDescription>
+          </Alert>
+        )}
 
         <Tabs value={op} onValueChange={(v) => setOp(v as Operation)}>
           <TabsList>
@@ -236,6 +359,34 @@ export default function RefactorPage() {
                 />
               </div>
 
+              {/* PR Options */}
+              {plan && (plan.proposed.linkRewrites.length > 0 || plan.proposed.redirects.length > 0) && (
+                <div className="border-t pt-4 space-y-3">
+                  <div className="text-sm font-semibold">PR Options</div>
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="applyRedirects"
+                      checked={applyRedirects}
+                      onCheckedChange={setApplyRedirects}
+                    />
+                    <Label htmlFor="applyRedirects" className="text-sm">
+                      Add redirects ({plan.proposed.redirects.length})
+                    </Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="applyLinkRewrites"
+                      checked={applyLinkRewrites}
+                      onCheckedChange={setApplyLinkRewrites}
+                    />
+                    <Label htmlFor="applyLinkRewrites" className="text-sm">
+                      Rewrite links in {plan.proposed.linkRewrites.length} files
+                    </Label>
+                  </div>
+                </div>
+              )}
+
+              {/* Actions */}
               <div className="pt-2 flex flex-col sm:flex-row gap-2">
                 <Button
                   variant="secondary"
@@ -245,8 +396,46 @@ export default function RefactorPage() {
                 >
                   <Download className="w-4 h-4" /> Export plan
                 </Button>
+                <Button
+                  disabled={!plan || creatingPr || plan.warnings.length > 0}
+                  onClick={handleCreatePr}
+                  className="gap-2"
+                >
+                  {creatingPr ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" /> Creating...
+                    </>
+                  ) : (
+                    <>
+                      <GitPullRequest className="w-4 h-4" /> Create PR
+                    </>
+                  )}
+                </Button>
               </div>
 
+              {/* Link Rewrites Preview */}
+              {plan && plan.proposed.linkRewrites.length > 0 && (
+                <div className="border-t pt-4">
+                  <div className="text-sm font-semibold mb-2 flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    Link Rewrites ({plan.proposed.linkRewrites.length} files)
+                  </div>
+                  <div className="space-y-1 max-h-40 overflow-y-auto">
+                    {plan.proposed.linkRewrites.slice(0, 20).map((rewrite, i) => (
+                      <div key={i} className="text-xs font-mono bg-secondary/30 rounded px-2 py-1 flex items-center gap-1">
+                        <span className="truncate">{rewrite.file}</span>
+                      </div>
+                    ))}
+                    {plan.proposed.linkRewrites.length > 20 && (
+                      <div className="text-xs text-muted-foreground">
+                        +{plan.proposed.linkRewrites.length - 20} more files
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Plan Preview */}
               <div className="border-t pt-4">
                 <div className="text-sm font-semibold mb-2">Plan preview</div>
                 {!plan ? (

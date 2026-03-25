@@ -9,19 +9,33 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useEdgesOutbound, useLinkHrefsOut, useNodes } from '@/hooks/use-index-data';
+import { useEdgesOutbound, useLinkHrefsOut, useNodes, useRedirects } from '@/hooks/use-index-data';
 
 export default function BrokenLinksPage() {
   const { data: nodes, isLoading: l1 } = useNodes();
   const { data: outbound, isLoading: l2 } = useEdgesOutbound();
   const { data: hrefsOut, isLoading: l3 } = useLinkHrefsOut();
-  const loading = l1 || l2 || l3;
+  const { data: redirectsData, isLoading: l4 } = useRedirects();
+  const loading = l1 || l2 || l3 || l4;
 
   const [q, setQ] = useState('');
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
   const pages = useMemo(() => (nodes || []).filter((n) => n.type === 'page'), [nodes]);
   const nodeById = useMemo(() => new Map((nodes || []).map((n) => [n.id, n] as const)), [nodes]);
+
+  // Build redirect map: source path → destination path
+  const redirectMap = useMemo(() => {
+    const map = new Map<string, string>();
+    if (redirectsData?.redirects) {
+      for (const r of redirectsData.redirects) {
+        // Normalize source to match link format (e.g., /docs/foo)
+        const source = r.source.startsWith('/docs') ? r.source : `/docs${r.source}`;
+        map.set(source, r.destination);
+      }
+    }
+    return map;
+  }, [redirectsData]);
 
   const matches = useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -116,19 +130,37 @@ export default function BrokenLinksPage() {
                     <Badge variant="secondary" className="ml-auto">{hrefPairs.length}</Badge>
                   </div>
                   <div className="space-y-2">
-                    {hrefPairs.map((x, idx) => (
-                      <div key={`${x.href}||${idx}`} className="rounded-xl border p-4">
-                        <div className="text-sm font-mono break-all">{x.href}</div>
-                        <div className="text-xs text-muted-foreground mt-1">→ {x.toId}</div>
-                        {nodeById.has(x.toId) ? (
-                          <Link className="text-sm text-primary hover:underline mt-2 inline-block" href={`/explain?id=${encodeURIComponent(x.toId)}`}>
-                            Open target
-                          </Link>
-                        ) : (
-                          <div className="text-sm text-destructive mt-2">Target not found in index</div>
-                        )}
-                      </div>
-                    ))}
+                    {hrefPairs.map((x, idx) => {
+                      const targetExists = nodeById.has(x.toId);
+                      const redirectDest = redirectMap.get(x.href);
+                      const hasRedirect = !targetExists && !!redirectDest;
+
+                      return (
+                        <div key={`${x.href}||${idx}`} className="rounded-xl border p-4">
+                          <div className="text-sm font-mono break-all">{x.href}</div>
+                          <div className="text-xs text-muted-foreground mt-1">→ {x.toId}</div>
+                          {targetExists ? (
+                            <Link className="text-sm text-primary hover:underline mt-2 inline-block" href={`/explain?id=${encodeURIComponent(x.toId)}`}>
+                              Open target
+                            </Link>
+                          ) : hasRedirect ? (
+                            <div className="mt-2">
+                              <Badge variant="outline" className="bg-yellow-500/10 text-yellow-600 border-yellow-500/30">
+                                Redirects
+                              </Badge>
+                              <div className="text-sm text-muted-foreground mt-1">
+                                → <span className="font-mono">{redirectDest}</span>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="mt-2">
+                              <Badge variant="destructive">Broken</Badge>
+                              <div className="text-sm text-destructive mt-1">Target not found and no redirect configured</div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                     {hrefPairs.length === 0 && <div className="text-sm text-muted-foreground">No /docs links found.</div>}
                   </div>
                 </div>
@@ -141,11 +173,29 @@ export default function BrokenLinksPage() {
                     <Badge variant={missingTargets.length ? 'destructive' : 'secondary'}>{missingTargets.length}</Badge>
                   </div>
                   <div className="space-y-2">
-                    {missingTargets.map((t) => (
-                      <div key={t} className="rounded-xl border p-4">
-                        <div className="text-sm font-mono break-all">{t}</div>
-                      </div>
-                    ))}
+                    {missingTargets.map((t) => {
+                      // Convert target ID to path format for redirect lookup
+                      const pathFromId = t.startsWith('/docs') ? t : `/docs/${t.replace(/^main\/docs\//, '').replace(/\.mdx?$/, '').replace(/\/index$/, '')}`;
+                      const redirectDest = redirectMap.get(pathFromId);
+
+                      return (
+                        <div key={t} className="rounded-xl border p-4">
+                          <div className="text-sm font-mono break-all">{t}</div>
+                          {redirectDest ? (
+                            <div className="mt-2">
+                              <Badge variant="outline" className="bg-yellow-500/10 text-yellow-600 border-yellow-500/30">
+                                Has redirect
+                              </Badge>
+                              <div className="text-sm text-muted-foreground mt-1">
+                                → <span className="font-mono">{redirectDest}</span>
+                              </div>
+                            </div>
+                          ) : (
+                            <Badge variant="destructive" className="mt-2">No redirect</Badge>
+                          )}
+                        </div>
+                      );
+                    })}
                     {missingTargets.length === 0 && <div className="text-sm text-muted-foreground">None</div>}
                   </div>
                 </div>

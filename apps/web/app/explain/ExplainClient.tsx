@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ArrowLeft, ArrowDownLeft, ArrowUpRight, FileText, Code2, Copy, Github, Search, AlertCircle, Sparkles, Compass, X, Filter, Calendar } from 'lucide-react';
@@ -13,6 +13,7 @@ import AppLayout from '@/components/AppLayout';
 import NodeCard from '@/components/NodeCard';
 import SharedLinksExpander from '@/components/SharedLinksExpander';
 import { useEdgesInbound, useEdgesOutbound, useMetrics, useNodes, useSimilarity, useNavPages } from '@/hooks/use-index-data';
+import { recordActivity } from '@/hooks/use-activity-history';
 import type { DocNode, NodeMetrics } from '@/types';
 import {
   Select,
@@ -549,6 +550,20 @@ export default function ExplainPage() {
   }, [nodes]);
 
   const node = useMemo(() => nodes?.find((n) => n.id === id) ?? null, [nodes, id]);
+
+  // Record activity when viewing a node
+  useEffect(() => {
+    if (node) {
+      recordActivity({
+        type: 'explain',
+        title: node.title || node.filePath,
+        description: node.permalink,
+        filePath: node.filePath,
+        url: node.permalink,
+        metadata: { nodeId: node.id, nodeType: node.type },
+      });
+    }
+  }, [node?.id]);
 
   const handleSelectPage = (pageId: string) => {
     router.push(`/explain?id=${encodeURIComponent(pageId)}`);

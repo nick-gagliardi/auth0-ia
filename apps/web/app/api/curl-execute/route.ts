@@ -43,10 +43,10 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-// Global rate limiter: 30 requests per minute
-const globalRateLimiter = new RateLimiter(30, 60000);
+// Global rate limiter: 60 requests per minute (increased for production use)
+const globalRateLimiter = new RateLimiter(60, 60000);
 
-// Auth0 domain patterns to detect and replace
+// Auth0 domain patterns to detect and replace (only used in safe mode)
 const AUTH0_DOMAIN_PATTERNS = [
   /https:\/\/([a-z0-9-]+)\.auth0\.com/gi,
   /https:\/\/([a-z0-9-]+)\.us\.auth0\.com/gi,
@@ -54,7 +54,7 @@ const AUTH0_DOMAIN_PATTERNS = [
   /https:\/\/([a-z0-9-]+)\.au\.auth0\.com/gi,
 ];
 
-// Patterns to detect credentials that should be replaced
+// Patterns to detect credentials that should be replaced (only used in safe mode)
 const SENSITIVE_PATTERNS = [
   { regex: /"client_id":\s*"[^"]+"/gi, replacement: '"client_id": "YOUR_CLIENT_ID"' },
   { regex: /"client_secret":\s*"[^"]+"/gi, replacement: '"client_secret": "YOUR_CLIENT_SECRET"' },
@@ -67,12 +67,11 @@ const SENSITIVE_PATTERNS = [
   { regex: /"id_token":\s*"[^"]+"/gi, replacement: '"id_token": "YOUR_ID_TOKEN"' },
 ];
 
-// Side-effect HTTP methods that should be warned about
+// Side-effect HTTP methods
 const SIDE_EFFECT_METHODS = ['POST', 'PUT', 'PATCH', 'DELETE'];
 
-// Test tenant configuration
+// Test tenant configuration (for safe mode)
 const TEST_DOMAIN = process.env.AUTH0_TEST_DOMAIN || 'dev-example.us.auth0.com';
-const TEST_BASE_URL = `https://${TEST_DOMAIN}`;
 
 type ParsedCurl = {
   url: string;
@@ -80,6 +79,28 @@ type ParsedCurl = {
   headers: Record<string, string>;
   body?: string;
 };
+
+type Variables = Record<string, string>;
+
+// Apply variable substitution to a string
+function applyVariables(str: string, variables: Variables): string {
+  let result = str;
+  for (const [key, value] of Object.entries(variables)) {
+    // Support both {{var}} and ${var} syntax
+    const patterns = [
+      new RegExp(`\\{\\{\\s*${escapeRegExp(key)}\\s*\\}\\}`, 'gi'),
+      new RegExp(`\\$\\{\\s*${escapeRegExp(key)}\\s*\\}`, 'gi'),
+    ];
+    for (const pattern of patterns) {
+      result = result.replace(pattern, value);
+    }
+  }
+  return result;
+}
+
+function escapeRegExp(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 
 function parseCurlCommand(command: string): ParsedCurl | null {
   const lines = command.split('\\\n').map((l) => l.trim()).join(' ');
@@ -91,14 +112,20 @@ function parseCurlCommand(command: string): ParsedCurl | null {
   // Extract URL - look for http:// or https://
   const urlMatch = singleLine.match(/(https?:\/\/[^\s'"]+)/);
   if (!urlMatch) return null;
-  const url = urlMatch[1].replace(/['"]/g, '');
+  let url = urlMatch[1].replace(/['"]/g, '');
+
+  // Also try to extract URL from quoted strings
+  const quotedUrlMatch = singleLine.match(/['"]?(https?:\/\/[^'">\s]+)['"]?/);
+  if (quotedUrlMatch) {
+    url = quotedUrlMatch[1];
+  }
 
   // Extract method - default to GET
   let method = 'GET';
   const methodMatch = singleLine.match(/-X\s+(\w+)/i) || singleLine.match(/--request\s+(\w+)/i);
   if (methodMatch) {
     method = methodMatch[1].toUpperCase();
-  } else if (/-d\s|--+data/.test(singleLine)) {
+  } else if (/-d\s|--data/.test(singleLine)) {
     method = 'POST';
   }
 
@@ -115,19 +142,34 @@ function parseCurlCommand(command: string): ParsedCurl | null {
     }
   }
 
-  // Extract body data
+  // Extract body data - improved parsing
   let body: string | undefined;
-  const bodyMatch = singleLine.match(/-d\s+['"]([^'"]+)['"]/i) || 
-                    singleLine.match(/--data\s+['"]([^'"]+)['"]/i) ||
-                    singleLine.match(/-d\s+(\{[^}]+\})/);
-  if (bodyMatch) {
-    body = bodyMatch[1];
+
+  // Try different body patterns
+  const bodyPatterns = [
+    /-d\s+'([^']+)'/i,
+    /-d\s+"([^"]+)"/i,
+    /--data\s+'([^']+)'/i,
+    /--data\s+"([^"]+)"/i,
+    /--data-raw\s+'([^']+)'/i,
+    /--data-raw\s+"([^"]+)"/i,
+    /-d\s+(\{[^}]+\})/,
+  ];
+
+  for (const pattern of bodyPatterns) {
+    const match = singleLine.match(pattern);
+    if (match) {
+      body = match[1];
+      break;
+    }
   }
 
   return { url, method, headers, body };
 }
 
-function sanitizeCommand(command: string): string {
+function sanitizeCommand(command: string, safeMode: boolean): string {
+  if (!safeMode) return command;
+
   let sanitized = command;
 
   // Replace Auth0 domains with test domain
@@ -145,9 +187,22 @@ function sanitizeCommand(command: string): string {
   return sanitized;
 }
 
-function makeSafeForExecution(parsed: ParsedCurl): { url: string; headers: Record<string, string>; body?: string } {
+function makeSafeForExecution(
+  parsed: ParsedCurl,
+  safeMode: boolean
+): { url: string; headers: Record<string, string>; body?: string } {
+  if (!safeMode) {
+    // Production mode - pass through as-is
+    return {
+      url: parsed.url,
+      headers: parsed.headers,
+      body: parsed.body,
+    };
+  }
+
+  // Safe mode - sanitize everything
   let url = parsed.url;
-  
+
   // Replace domain in URL
   for (const pattern of AUTH0_DOMAIN_PATTERNS) {
     url = url.replace(pattern, (match, tenant) => {
@@ -185,8 +240,9 @@ async function executeRequest(
   url: string,
   method: string,
   headers: Record<string, string>,
+  body?: string,
   timeoutMs: number = 10000
-): Promise<{ statusCode?: number; statusText?: string; responseTimeMs: number; error?: string; responseBody?: string }> {
+): Promise<{ statusCode?: number; statusText?: string; responseTimeMs: number; error?: string; responseBody?: string; responseHeaders?: Record<string, string> }> {
   const startTime = Date.now();
 
   return new Promise((resolve) => {
@@ -194,33 +250,55 @@ async function executeRequest(
       const parsedUrl = new URL(url);
       const client = parsedUrl.protocol === 'https:' ? https : http;
 
+      const requestHeaders: Record<string, string> = {
+        'User-Agent': 'Auth0-IA-CurlValidator/1.0',
+        ...headers,
+      };
+
+      // Set content-type for body requests if not set
+      if (body && !requestHeaders['Content-Type'] && !requestHeaders['content-type']) {
+        requestHeaders['Content-Type'] = 'application/json';
+      }
+
+      // Set content-length for body
+      if (body) {
+        requestHeaders['Content-Length'] = Buffer.byteLength(body).toString();
+      }
+
       const options: http.RequestOptions = {
         hostname: parsedUrl.hostname,
         port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80),
         path: parsedUrl.pathname + parsedUrl.search,
         method,
-        headers: {
-          'User-Agent': 'Auth0-Docs-Validator/1.0',
-          'Accept': 'application/json',
-          ...headers,
-        },
+        headers: requestHeaders,
         timeout: timeoutMs,
       };
 
       const req = client.request(options, (res) => {
         const responseTimeMs = Date.now() - startTime;
         let responseBody = '';
-        
+
         res.on('data', (chunk) => {
           responseBody += chunk;
         });
-        
+
         res.on('end', () => {
+          // Convert response headers to Record<string, string>
+          const responseHeaders: Record<string, string> = {};
+          for (const [key, value] of Object.entries(res.headers)) {
+            if (typeof value === 'string') {
+              responseHeaders[key] = value;
+            } else if (Array.isArray(value)) {
+              responseHeaders[key] = value.join(', ');
+            }
+          }
+
           resolve({
             statusCode: res.statusCode,
             statusText: res.statusMessage,
             responseTimeMs,
-            responseBody: responseBody.slice(0, 5000), // Limit response size
+            responseBody: responseBody.slice(0, 50000), // Increased limit for production use
+            responseHeaders,
           });
         });
       });
@@ -239,6 +317,11 @@ async function executeRequest(
           error: 'Request timeout',
         });
       });
+
+      // Write body if present
+      if (body) {
+        req.write(body);
+      }
 
       req.end();
     } catch (err: any) {
@@ -263,7 +346,7 @@ function categorizeResult(statusCode?: number, error?: string): 'working' | 'aut
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { command, options = {} } = body;
+    const { command, options = {}, variables = {} } = body;
 
     if (!command || typeof command !== 'string') {
       return NextResponse.json(
@@ -273,39 +356,53 @@ export async function POST(req: NextRequest) {
     }
 
     // Parse options
-    const timeoutMs = options.timeoutMs || 10000;
+    const timeoutMs = Math.min(options.timeoutMs || 30000, 60000); // Max 60s
     const skipExecution = options.skipExecution || false;
-    const getOnly = options.getOnly !== false; // Default to true for safety
+    const safeMode = options.safeMode !== false; // Default to safe mode
+    const allowAllMethods = options.allowAllMethods === true; // Must explicitly enable
     const applyRateLimit = options.applyRateLimit !== false; // Default to true
 
+    // Apply variable substitution first
+    const processedCommand = applyVariables(command, variables as Variables);
+
     // Parse the curl command
-    const parsed = parseCurlCommand(command);
-    
+    const parsed = parseCurlCommand(processedCommand);
+
     if (!parsed) {
       return NextResponse.json(
-        { error: 'Failed to parse curl command' },
+        { error: 'Failed to parse curl command. Make sure it contains a valid URL.' },
         { status: 400 }
       );
     }
 
-    // Make safe for execution
-    const safe = makeSafeForExecution(parsed);
-    const sanitizedCmd = sanitizeCommand(command);
+    // Apply variables to parsed components as well
+    parsed.url = applyVariables(parsed.url, variables as Variables);
+    if (parsed.body) {
+      parsed.body = applyVariables(parsed.body, variables as Variables);
+    }
+    for (const [key, value] of Object.entries(parsed.headers)) {
+      parsed.headers[key] = applyVariables(value, variables as Variables);
+    }
+
+    // Make safe for execution (or pass through in production mode)
+    const safe = makeSafeForExecution(parsed, safeMode);
+    const sanitizedCmd = sanitizeCommand(processedCommand, safeMode);
 
     // Check safety rules
     const warnings: string[] = [];
-    
-    if (getOnly && parsed.method !== 'GET') {
-      warnings.push(`${parsed.method} requests are not executed for safety (GET-only mode)`);
+
+    if (!safeMode) {
+      warnings.push('Production mode: Using real credentials and endpoints');
     }
 
-    if (SIDE_EFFECT_METHODS.includes(parsed.method)) {
-      warnings.push(`This is a ${parsed.method} request which may have side effects`);
+    if (!allowAllMethods && SIDE_EFFECT_METHODS.includes(parsed.method)) {
+      warnings.push(`${parsed.method} method requires explicit allowAllMethods option`);
     }
 
     // Prepare response
     const result: {
       originalCommand: string;
+      processedCommand: string;
       modifiedCommand: string;
       url: string;
       method: string;
@@ -316,6 +413,7 @@ export async function POST(req: NextRequest) {
       statusText?: string;
       responseTimeMs?: number;
       responseBody?: string;
+      responseHeaders?: Record<string, string>;
       error?: string;
       category: 'working' | 'auth_required' | 'not_found' | 'failing' | 'skipped';
       warnings: string[];
@@ -323,8 +421,11 @@ export async function POST(req: NextRequest) {
         currentRequests: number;
         maxRequests: number;
       };
+      variablesApplied: string[];
+      safeMode: boolean;
     } = {
       originalCommand: command,
+      processedCommand: processedCommand,
       modifiedCommand: sanitizedCmd,
       url: safe.url,
       method: parsed.method,
@@ -333,11 +434,13 @@ export async function POST(req: NextRequest) {
       executed: false,
       category: 'skipped',
       warnings,
+      variablesApplied: Object.keys(variables),
+      safeMode,
     };
 
-    // Skip execution if GET-only mode and not GET
-    if (getOnly && parsed.method !== 'GET') {
-      result.warnings.push('Execution skipped: GET-only safety mode is enabled');
+    // Skip execution if non-GET in safe mode without allowAllMethods
+    if (!allowAllMethods && SIDE_EFFECT_METHODS.includes(parsed.method)) {
+      result.warnings.push(`Execution skipped: ${parsed.method} requires allowAllMethods option`);
       return NextResponse.json(result);
     }
 
@@ -352,7 +455,7 @@ export async function POST(req: NextRequest) {
       await globalRateLimiter.acquire();
       result.rateLimitStatus = {
         currentRequests: globalRateLimiter.currentCount,
-        maxRequests: 30,
+        maxRequests: 60,
       };
     }
 
@@ -361,6 +464,7 @@ export async function POST(req: NextRequest) {
       safe.url,
       parsed.method,
       safe.headers,
+      safe.body,
       timeoutMs
     );
 
@@ -369,6 +473,7 @@ export async function POST(req: NextRequest) {
     result.statusText = response.statusText;
     result.responseTimeMs = response.responseTimeMs;
     result.responseBody = response.responseBody;
+    result.responseHeaders = response.responseHeaders;
     result.error = response.error;
     result.category = categorizeResult(response.statusCode, response.error);
 
@@ -388,8 +493,13 @@ export async function GET() {
     status: 'ok',
     testDomain: TEST_DOMAIN,
     rateLimit: {
-      maxRequests: 30,
+      maxRequests: 60,
       windowMs: 60000,
+    },
+    features: {
+      variableSubstitution: true,
+      productionMode: true,
+      allHttpMethods: true,
     },
   });
 }

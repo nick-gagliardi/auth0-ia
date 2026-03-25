@@ -575,31 +575,107 @@ function ValidationResultsTab({
   );
 }
 
+// Variable type
+type Variable = { key: string; value: string };
+
+// Extended result type for production mode
+type ExtendedExecutionResult = LiveExecutionResult & {
+  processedCommand?: string;
+  responseHeaders?: Record<string, string>;
+  variablesApplied?: string[];
+  safeMode?: boolean;
+};
+
+// Load saved variables from localStorage
+function loadSavedVariables(): Variable[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const saved = localStorage.getItem('curl-validator-variables');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (Array.isArray(parsed)) return parsed;
+    }
+  } catch {}
+  return [];
+}
+
+// Save variables to localStorage
+function saveVariables(variables: Variable[]) {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem('curl-validator-variables', JSON.stringify(variables));
+  } catch {}
+}
+
 function LiveTestTab() {
   const [command, setCommand] = useState('');
-  const [result, setResult] = useState<LiveExecutionResult | null>(null);
+  const [result, setResult] = useState<ExtendedExecutionResult | null>(null);
   const [isExecuting, setIsExecuting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showResponseHeaders, setShowResponseHeaders] = useState(false);
+
+  // Variables state
+  const [variables, setVariables] = useState<Variable[]>(() => loadSavedVariables());
+  const [newVarKey, setNewVarKey] = useState('');
+  const [newVarValue, setNewVarValue] = useState('');
+  const [showVariables, setShowVariables] = useState(true);
+
+  // Options state
   const [options, setOptions] = useState({
-    getOnly: true,
-    timeoutMs: 10000,
+    safeMode: true,
+    allowAllMethods: false,
+    timeoutMs: 30000,
   });
+
+  // Save variables when they change
+  const updateVariables = (newVars: Variable[]) => {
+    setVariables(newVars);
+    saveVariables(newVars);
+  };
+
+  const addVariable = () => {
+    if (!newVarKey.trim()) return;
+    const newVar: Variable = { key: newVarKey.trim(), value: newVarValue };
+    updateVariables([...variables, newVar]);
+    setNewVarKey('');
+    setNewVarValue('');
+  };
+
+  const removeVariable = (index: number) => {
+    updateVariables(variables.filter((_, i) => i !== index));
+  };
+
+  const updateVariable = (index: number, field: 'key' | 'value', value: string) => {
+    const updated = [...variables];
+    updated[index] = { ...updated[index], [field]: value };
+    updateVariables(updated);
+  };
 
   const executeCommand = async () => {
     if (!command.trim()) return;
-    
+
     setIsExecuting(true);
     setError(null);
     setResult(null);
 
     try {
+      // Convert variables array to object
+      const variablesObj: Record<string, string> = {};
+      for (const v of variables) {
+        if (v.key.trim()) {
+          variablesObj[v.key.trim()] = v.value;
+        }
+      }
+
       const response = await fetch('/api/curl-execute', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           command: command.trim(),
+          variables: variablesObj,
           options: {
-            getOnly: options.getOnly,
+            safeMode: options.safeMode,
+            allowAllMethods: options.allowAllMethods,
             timeoutMs: options.timeoutMs,
           },
         }),
@@ -626,8 +702,133 @@ function LiveTestTab() {
     setError(null);
   };
 
+  const loadExampleWithVariables = () => {
+    setCommand(`curl -X POST "https://{{tenant}}/oauth/token" \\
+  -H "Content-Type: application/json" \\
+  -d '{"client_id":"{{client_id}}","client_secret":"{{client_secret}}","audience":"{{audience}}","grant_type":"client_credentials"}'`);
+
+    // Add example variables if not present
+    const existingKeys = new Set(variables.map(v => v.key));
+    const newVars = [...variables];
+
+    if (!existingKeys.has('tenant')) {
+      newVars.push({ key: 'tenant', value: 'your-tenant.us.auth0.com' });
+    }
+    if (!existingKeys.has('client_id')) {
+      newVars.push({ key: 'client_id', value: '' });
+    }
+    if (!existingKeys.has('client_secret')) {
+      newVars.push({ key: 'client_secret', value: '' });
+    }
+    if (!existingKeys.has('audience')) {
+      newVars.push({ key: 'audience', value: 'https://your-tenant.us.auth0.com/api/v2/' });
+    }
+
+    updateVariables(newVars);
+    setResult(null);
+    setError(null);
+  };
+
   return (
     <div className="space-y-6">
+      {/* Variables Panel */}
+      <Card>
+        <CardHeader className="pb-3">
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Code className="w-5 h-5" />
+              Variables
+            </CardTitle>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowVariables(!showVariables)}
+            >
+              {showVariables ? 'Hide' : 'Show'}
+            </Button>
+          </div>
+          <CardDescription>
+            Define variables like <code className="text-xs bg-muted px-1 rounded">{`{{tenant}}`}</code> or <code className="text-xs bg-muted px-1 rounded">{`\${client_id}`}</code> to use in your commands. Variables are saved locally.
+          </CardDescription>
+        </CardHeader>
+        {showVariables && (
+          <CardContent className="space-y-3">
+            {/* Existing Variables */}
+            {variables.length > 0 && (
+              <div className="space-y-2">
+                {variables.map((v, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <Input
+                      value={v.key}
+                      onChange={(e) => updateVariable(i, 'key', e.target.value)}
+                      placeholder="Variable name"
+                      className="w-32 font-mono text-sm"
+                    />
+                    <span className="text-muted-foreground">=</span>
+                    <Input
+                      value={v.value}
+                      onChange={(e) => updateVariable(i, 'value', e.target.value)}
+                      placeholder="Value"
+                      className="flex-1 font-mono text-sm"
+                      type={v.key.toLowerCase().includes('secret') || v.key.toLowerCase().includes('password') ? 'password' : 'text'}
+                    />
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => removeVariable(i)}
+                      className="text-muted-foreground hover:text-destructive"
+                    >
+                      <XCircle className="w-4 h-4" />
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Add New Variable */}
+            <div className="flex items-center gap-2 pt-2 border-t">
+              <Input
+                value={newVarKey}
+                onChange={(e) => setNewVarKey(e.target.value)}
+                placeholder="New variable name"
+                className="w-32 font-mono text-sm"
+                onKeyDown={(e) => e.key === 'Enter' && addVariable()}
+              />
+              <span className="text-muted-foreground">=</span>
+              <Input
+                value={newVarValue}
+                onChange={(e) => setNewVarValue(e.target.value)}
+                placeholder="Value"
+                className="flex-1 font-mono text-sm"
+                onKeyDown={(e) => e.key === 'Enter' && addVariable()}
+              />
+              <Button variant="outline" size="sm" onClick={addVariable}>
+                Add
+              </Button>
+            </div>
+
+            {/* Quick Add Common Variables */}
+            <div className="flex flex-wrap gap-2 pt-2">
+              <span className="text-xs text-muted-foreground">Quick add:</span>
+              {['tenant', 'client_id', 'client_secret', 'access_token', 'audience'].map((key) => (
+                !variables.some(v => v.key === key) && (
+                  <Button
+                    key={key}
+                    variant="outline"
+                    size="sm"
+                    className="text-xs h-6"
+                    onClick={() => updateVariables([...variables, { key, value: '' }])}
+                  >
+                    + {key}
+                  </Button>
+                )
+              ))}
+            </div>
+          </CardContent>
+        )}
+      </Card>
+
+      {/* Main Execution Card */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -635,35 +836,72 @@ function LiveTestTab() {
             Live Curl Execution
           </CardTitle>
           <CardDescription>
-            Test curl commands in real-time. Commands are sanitized to replace production domains with test domains.
-            Only GET requests are allowed by default for safety.
+            Test curl commands in real-time. Use production mode to test with real credentials against your Auth0 tenant.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {/* Options */}
-          <div className="flex flex-wrap gap-4 p-4 bg-muted/50 rounded-lg">
-            <label className="flex items-center gap-2 text-sm">
-              <input
-                type="checkbox"
-                checked={options.getOnly}
-                onChange={(e) => setOptions({ ...options, getOnly: e.target.checked })}
-                className="rounded"
-              />
-              GET-only mode (safety)
-            </label>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">Timeout:</span>
-              <select
-                className="text-sm border rounded px-2 py-1"
-                value={options.timeoutMs}
-                onChange={(e) => setOptions({ ...options, timeoutMs: parseInt(e.target.value) })}
-              >
-                <option value={5000}>5s</option>
-                <option value={10000}>10s</option>
-                <option value={30000}>30s</option>
-              </select>
+          <div className="grid md:grid-cols-2 gap-4 p-4 bg-muted/50 rounded-lg">
+            <div className="space-y-3">
+              <div className="font-medium text-sm">Execution Mode</div>
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={!options.safeMode}
+                  onChange={(e) => setOptions({ ...options, safeMode: !e.target.checked })}
+                  className="rounded"
+                />
+                <span className={!options.safeMode ? 'text-amber-600 font-medium' : ''}>
+                  Production mode
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  (use real credentials)
+                </span>
+              </label>
+              <label className="flex items-center gap-2 text-sm cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={options.allowAllMethods}
+                  onChange={(e) => setOptions({ ...options, allowAllMethods: e.target.checked })}
+                  className="rounded"
+                />
+                <span className={options.allowAllMethods ? 'text-amber-600 font-medium' : ''}>
+                  Allow all HTTP methods
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  (POST, PUT, DELETE)
+                </span>
+              </label>
+            </div>
+            <div className="space-y-3">
+              <div className="font-medium text-sm">Settings</div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">Timeout:</span>
+                <select
+                  className="text-sm border rounded px-2 py-1 bg-background"
+                  value={options.timeoutMs}
+                  onChange={(e) => setOptions({ ...options, timeoutMs: parseInt(e.target.value) })}
+                >
+                  <option value={5000}>5s</option>
+                  <option value={10000}>10s</option>
+                  <option value={30000}>30s</option>
+                  <option value={60000}>60s</option>
+                </select>
+              </div>
             </div>
           </div>
+
+          {/* Warning for production mode */}
+          {(!options.safeMode || options.allowAllMethods) && (
+            <div className="flex items-start gap-2 p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg text-amber-700 dark:text-amber-400 text-sm">
+              <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+              <div>
+                <strong>Warning:</strong> You have enabled production features.
+                {!options.safeMode && ' Commands will be executed with real credentials.'}
+                {options.allowAllMethods && ' Non-GET methods may modify data.'}
+              </div>
+            </div>
+          )}
 
           {/* Command Input */}
           <div className="space-y-2">
@@ -671,9 +909,15 @@ function LiveTestTab() {
             <Textarea
               value={command}
               onChange={(e) => setCommand(e.target.value)}
-              placeholder="curl https://tenant.auth0.com/api/v2/..."
-              className="font-mono min-h-[120px]"
+              placeholder={`curl https://{{tenant}}/api/v2/users \\
+  -H "Authorization: Bearer {{access_token}}"`}
+              className="font-mono min-h-[150px]"
             />
+            {variables.length > 0 && (
+              <div className="text-xs text-muted-foreground">
+                Available variables: {variables.map(v => `{{${v.key}}}`).join(', ')}
+              </div>
+            )}
           </div>
 
           {/* Examples */}
@@ -683,18 +927,27 @@ function LiveTestTab() {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => loadExample('curl https://myapp.auth0.com/.well-known/openid-configuration')}
+                onClick={() => loadExample('curl https://{{tenant}}/.well-known/openid-configuration')}
               >
                 <Code className="w-3 h-3 mr-1" />
-                OIDC Config
+                OIDC Discovery
               </Button>
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => loadExample('curl https://myapp.auth0.com/api/v2/tenant/settings')}
+                onClick={() => loadExample(`curl "https://{{tenant}}/api/v2/users" \\
+  -H "Authorization: Bearer {{access_token}}"`)}
               >
                 <Code className="w-3 h-3 mr-1" />
-                Tenant Settings
+                List Users
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={loadExampleWithVariables}
+              >
+                <Code className="w-3 h-3 mr-1" />
+                Client Credentials (POST)
               </Button>
             </div>
           </div>
@@ -704,6 +957,7 @@ function LiveTestTab() {
             onClick={executeCommand}
             disabled={isExecuting || !command.trim()}
             className="w-full"
+            variant={!options.safeMode || options.allowAllMethods ? 'destructive' : 'default'}
           >
             {isExecuting ? (
               <>
@@ -714,6 +968,7 @@ function LiveTestTab() {
               <>
                 <Play className="w-4 h-4 mr-2" />
                 Execute Command
+                {!options.safeMode && ' (Production)'}
               </>
             )}
           </Button>
@@ -728,12 +983,12 @@ function LiveTestTab() {
           {/* Result */}
           {result && (
             <div className="space-y-4 pt-4 border-t">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-medium">Result:</span>
                 <LiveCategoryBadge category={result.category} />
                 {result.statusCode && (
                   <Badge variant={result.statusCode < 400 ? 'default' : 'destructive'}>
-                    HTTP {result.statusCode}
+                    HTTP {result.statusCode} {result.statusText}
                   </Badge>
                 )}
                 {result.responseTimeMs && (
@@ -741,9 +996,20 @@ function LiveTestTab() {
                     {result.responseTimeMs}ms
                   </span>
                 )}
+                {result.safeMode === false && (
+                  <Badge variant="outline" className="text-amber-600 border-amber-600">
+                    Production
+                  </Badge>
+                )}
               </div>
 
-              {result.warnings.length > 0 && (
+              {result.variablesApplied && result.variablesApplied.length > 0 && (
+                <div className="text-xs text-muted-foreground">
+                  Variables applied: {result.variablesApplied.join(', ')}
+                </div>
+              )}
+
+              {result.warnings && result.warnings.length > 0 && (
                 <div className="space-y-1">
                   {result.warnings.map((warning, i) => (
                     <div key={i} className="text-sm text-amber-600 flex items-center gap-1">
@@ -756,16 +1022,27 @@ function LiveTestTab() {
 
               {result.rateLimitStatus && (
                 <div className="text-xs text-muted-foreground">
-                  Rate limit: {result.rateLimitStatus.currentRequests}/{result.rateLimitStatus.maxRequests} requests
+                  Rate limit: {result.rateLimitStatus.currentRequests}/{result.rateLimitStatus.maxRequests} requests/min
                 </div>
               )}
 
-              <div className="space-y-2">
-                <div className="text-sm font-medium">Modified Command:</div>
-                <code className="block p-3 bg-secondary rounded-lg text-xs font-mono break-all">
-                  {result.modifiedCommand}
-                </code>
-              </div>
+              {result.processedCommand && result.processedCommand !== result.originalCommand && (
+                <div className="space-y-2">
+                  <div className="text-sm font-medium">Processed Command (with variables):</div>
+                  <code className="block p-3 bg-green-50 dark:bg-green-950/30 rounded-lg text-xs font-mono break-all border border-green-200 dark:border-green-800">
+                    {result.processedCommand}
+                  </code>
+                </div>
+              )}
+
+              {result.url && (
+                <div className="space-y-2">
+                  <div className="text-sm font-medium">Request URL:</div>
+                  <code className="block p-3 bg-secondary rounded-lg text-xs font-mono break-all">
+                    {result.method} {result.url}
+                  </code>
+                </div>
+              )}
 
               {result.error && (
                 <div className="space-y-2">
@@ -776,11 +1053,34 @@ function LiveTestTab() {
                 </div>
               )}
 
+              {result.responseHeaders && Object.keys(result.responseHeaders).length > 0 && (
+                <div className="space-y-2">
+                  <button
+                    className="text-sm font-medium flex items-center gap-1 hover:underline"
+                    onClick={() => setShowResponseHeaders(!showResponseHeaders)}
+                  >
+                    Response Headers ({Object.keys(result.responseHeaders).length})
+                    {showResponseHeaders ? ' ▼' : ' ▶'}
+                  </button>
+                  {showResponseHeaders && (
+                    <pre className="p-3 bg-muted rounded-lg text-xs font-mono overflow-x-auto max-h-[200px]">
+                      {JSON.stringify(result.responseHeaders, null, 2)}
+                    </pre>
+                  )}
+                </div>
+              )}
+
               {result.responseBody && (
                 <div className="space-y-2">
                   <div className="text-sm font-medium">Response Body:</div>
                   <pre className="p-3 bg-muted rounded-lg text-xs font-mono overflow-x-auto max-h-[400px]">
-                    {result.responseBody}
+                    {(() => {
+                      try {
+                        return JSON.stringify(JSON.parse(result.responseBody), null, 2);
+                      } catch {
+                        return result.responseBody;
+                      }
+                    })()}
                   </pre>
                 </div>
               )}

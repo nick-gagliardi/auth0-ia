@@ -8,6 +8,9 @@ import * as os from 'os';
 
 const execAsync = promisify(exec);
 
+// Dynamic import for pdf-parse (CommonJS module)
+const pdfParse = require('pdf-parse');
+
 // Full Doc Generator system prompt matching the Claude Code skill
 const DOC_GENERATOR_PROMPT = `# Doc Generator
 
@@ -165,10 +168,18 @@ export async function POST(req: NextRequest) {
     let prdContent: string;
 
     if (file.type === 'application/pdf') {
-      return NextResponse.json(
-        { ok: false, error: 'PDF support coming soon. Please convert your PRD to .txt or .md format.' },
-        { status: 400 }
-      );
+      // Parse PDF
+      try {
+        const arrayBuffer = await file.arrayBuffer();
+        const buffer = Buffer.from(arrayBuffer);
+        const pdfData = await pdfParse(buffer);
+        prdContent = pdfData.text;
+      } catch (err: any) {
+        return NextResponse.json(
+          { ok: false, error: `Failed to parse PDF: ${err.message}` },
+          { status: 400 }
+        );
+      }
     } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
       return NextResponse.json(
         { ok: false, error: 'Word document support coming soon. Please convert your PRD to .txt or .md format.' },
@@ -180,7 +191,7 @@ export async function POST(req: NextRequest) {
 
     if (!prdContent.trim()) {
       return NextResponse.json(
-        { ok: false, error: 'File is empty' },
+        { ok: false, error: 'File is empty or could not extract text' },
         { status: 400 }
       );
     }
