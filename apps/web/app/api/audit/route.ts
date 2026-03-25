@@ -21,15 +21,23 @@ async function getAiSuggestions(content: string, pageTitle: string, pageUrl: str
   }
 
   try {
-    const response = await fetch(`${baseUrl}/v1/messages`, {
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+    };
+
+    const endpoint = `${baseUrl}/v1/messages`;
+    // Use standard model names that work with LiteLLM proxies
+    const model = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+
+    console.log('[Anthropic] Request config:', { endpoint, model, baseUrl });
+
+    const response = await fetch(endpoint, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
+      headers,
       body: JSON.stringify({
-        model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet',
+        model,
         max_tokens: 4096,
         messages: [
           {
@@ -78,7 +86,13 @@ Focus on the most impactful suggestions. Limit to 10 suggestions maximum. Only i
     });
 
     if (!response.ok) {
-      console.error('Claude API error:', response.status, await response.text());
+      const errorText = await response.text();
+      console.error('[Anthropic] API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        body: errorText,
+        endpoint,
+      });
       return [];
     }
 

@@ -92,16 +92,26 @@ export async function DELETE() {
 async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: string }> {
   try {
     const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    // Use standard model names that work with LiteLLM proxies
+    const model = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+    };
+
+    console.log('[Settings] Testing Anthropic key:', {
+      baseUrl,
+      model,
+      keyPrefix: apiKey.substring(0, 10) + '...',
+    });
 
     const response = await fetch(`${baseUrl}/v1/messages`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
+      headers,
       body: JSON.stringify({
-        model: 'claude-3-5-sonnet-20241022',
+        model,
         max_tokens: 10,
         messages: [
           {
@@ -114,13 +124,26 @@ async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: 
 
     if (!response.ok) {
       const errorText = await response.text();
-      let errorMessage = 'Invalid API key';
+      console.error('[Settings] Anthropic API error:', {
+        status: response.status,
+        statusText: response.statusText,
+        body: errorText,
+        baseUrl,
+        model,
+      });
+
+      let errorMessage = `API Error (${response.status}): `;
 
       try {
         const errorJson = JSON.parse(errorText);
-        errorMessage = errorJson.error?.message || errorMessage;
+        errorMessage += errorJson.error?.message || errorJson.message || errorJson.error?.type || 'Invalid API key';
       } catch {
-        // If error is not JSON, use default message
+        // If error is not JSON, use the raw text if it's short
+        if (errorText.length < 200) {
+          errorMessage += errorText;
+        } else {
+          errorMessage += response.status === 403 ? 'Forbidden - check API key and model permissions' : 'Invalid API key';
+        }
       }
 
       return { ok: false, error: errorMessage };
@@ -128,6 +151,7 @@ async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: 
 
     return { ok: true };
   } catch (err: any) {
+    console.error('[Settings] Anthropic test error:', err);
     return { ok: false, error: err?.message || 'Failed to validate API key' };
   }
 }
