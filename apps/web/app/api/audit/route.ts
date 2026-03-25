@@ -235,6 +235,32 @@ async function resolveUrlToFilePath(url: string, req: Request): Promise<{ filePa
   }
 }
 
+// Fetch MDX content from GitHub
+async function fetchMdxFromGitHub(filePath: string): Promise<string | null> {
+  try {
+    // Default to docs-v2 repo - can be overridden with env var
+    const githubRepo = process.env.GITHUB_DOCS_REPO || 'auth0/docs-v2';
+    const githubBranch = process.env.GITHUB_DOCS_BRANCH || 'main';
+
+    // GitHub raw content URL
+    const url = `https://raw.githubusercontent.com/${githubRepo}/${githubBranch}/${filePath}`;
+    console.log('[fetchMdxFromGitHub] Fetching:', url);
+
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) {
+      console.error('[fetchMdxFromGitHub] Failed:', response.status, response.statusText);
+      return null;
+    }
+
+    const content = await response.text();
+    console.log('[fetchMdxFromGitHub] Success, content length:', content.length);
+    return content;
+  } catch (err) {
+    console.error('[fetchMdxFromGitHub] Error:', err);
+    return null;
+  }
+}
+
 // Fetch auth0_lint data
 async function fetchLintData(req: Request): Promise<Map<string, any[]> | null> {
   try {
@@ -1129,27 +1155,137 @@ export async function POST(req: Request) {
       }
 
     } else {
-      // Index-only mode - use pre-indexed data
-      const lintData = await fetchLintData(req);
-      const pageWarnings = lintData?.get(filePath) || [];
+      // Index-only mode - fetch content from GitHub and analyze
+      console.log('[audit] Running in index-only mode, fetching from GitHub:', filePath);
 
-      const rulesWarnings = pageWarnings.filter((w: any) => w.code === 'rules_vs_actions_language');
+      const mdx = await fetchMdxFromGitHub(filePath);
 
-      checks.push(createCheck(
-        'rules-actions',
-        'Rules → Actions migration',
-        rulesWarnings.length === 0 ? 'PASS' : 'FAIL',
-        rulesWarnings.length === 0 ? 'No Rules references found' : `${rulesWarnings.length} Rules reference(s)`,
-        rulesWarnings.slice(0, 5)
-      ));
+      if (mdx) {
+        mdxContent = mdx; // Store for AI analysis
 
-      // Other checks require local mode
-      checks.push(createCheck('curl-work', 'cURL samples work', 'MANUAL', 'Requires local mode for execution'));
-      checks.push(createCheck('sdk-samples', 'SDK samples present', 'MANUAL', 'Requires local mode'));
-      checks.push(createCheck('har-samples', 'HAR samples render', 'MANUAL', 'Requires local mode'));
-      checks.push(createCheck('screenshots-present', 'Screenshots present', 'MANUAL', 'Requires local mode'));
-      checks.push(createCheck('broken-links', 'No broken links', 'MANUAL', 'Requires local mode'));
-      checks.push(createCheck('validated-on', 'validatedOn frontmatter', 'MANUAL', 'Requires local mode'));
+        // Import analysis helpers dynamically
+        const { analyzeMdx, computeProdUrl } = await import('./analyze-helpers');
+        analysis = analyzeMdx(mdx);
+
+        // Broken links check
+        const permalinkSet = await fetchPermalinkSet(req);
+        const redirectsMap = await fetchRedirectsMap(req);
+        const linkValidation = permalinkSet
+          ? await validateInternalLinks(analysis.internalDocsLinks, permalinkSet, redirectsMap)
+          : null;
+
+        // Build checks (similar to local mode but skip curl execution and render check)
+
+        // cURL samples - can't execute without API token in production
+        const hasCurl = analysis.curlBlocks.length > 0;
+        checks.push(createCheck(
+          'curl-work',
+          'cURL samples work',
+          hasCurl ? 'MANUAL' : 'NA',
+          hasCurl ? `${analysis.curlBlocks.length} cURL sample(s) found (execution requires API token)` : 'No cURL samples found',
+          hasCurl ? analysis.curlBlocks.slice(0, 3).map((b: any) => ({ url: b.url, method: b.method })) : undefined
+        ));
+
+        checks.push(createCheck(
+          'sdk-samples',
+          'SDK samples present',
+          analysis.detected.sdkLangs.length > 0 ? 'MANUAL' : 'NA',
+          analysis.detected.sdkLangs.length > 0 ? `Found: ${analysis.detected.sdkLangs.join(', ')}` : 'No SDK samples detected',
+          analysis.detected.sdkLangs
+        ));
+
+        // HAR samples
+        const hasHar = analysis.detected.harSamples.length > 0;
+        checks.push(createCheck(
+          'har-samples',
+          'HAR samples render',
+          hasHar ? 'MANUAL' : 'NA',
+          hasHar ? `${analysis.detected.harSamples.length} HAR sample(s) (visual check needed)` : 'No HAR samples',
+          hasHar ? analysis.detected.harSamples : undefined
+        ));
+
+        // Screenshots
+        const hasScreenshots = analysis.detected.screenshots.length > 0;
+        checks.push(createCheck(
+          'screenshots-present',
+          'Screenshots present',
+          hasScreenshots ? 'PASS' : 'NA',
+          hasScreenshots ? `${analysis.detected.screenshots.length} screenshot(s)` : 'No screenshots',
+          hasScreenshots ? analysis.detected.screenshots.slice(0, 10) : undefined
+        ));
+
+        // Broken links
+        if (linkValidation) {
+          const brokenLinks = linkValidation.filter(l => l.status === 'broken' || l.status === 'outdated');
+          checks.push(createCheck(
+            'broken-links',
+            'No broken links',
+            brokenLinks.length === 0 ? 'PASS' : 'FAIL',
+            brokenLinks.length === 0
+              ? `All ${linkValidation.length} internal link(s) valid`
+              : `${brokenLinks.length}/${linkValidation.length} broken or outdated link(s)`,
+            brokenLinks.length > 0 ? brokenLinks.slice(0, 10) : undefined
+          ));
+        } else {
+          checks.push(createCheck('broken-links', 'No broken links', 'NA', 'Permalink set unavailable'));
+        }
+
+        // validatedOn frontmatter
+        const hasValidatedOn = !!analysis.metadata.validatedOn;
+        checks.push(createCheck(
+          'validated-on',
+          'validatedOn frontmatter',
+          hasValidatedOn ? 'PASS' : 'WARN',
+          hasValidatedOn ? `Last validated: ${analysis.metadata.validatedOn}` : 'Missing validatedOn field',
+          hasValidatedOn ? { validatedOn: analysis.metadata.validatedOn } : undefined
+        ));
+
+        // Code tabs rendering - skip Playwright check in production
+        checks.push(createCheck(
+          'tab-rendering',
+          'Code tabs render correctly',
+          'MANUAL',
+          `${analysis.detected.codeBlocks.length} code block(s) (visual check needed)`,
+          undefined
+        ));
+
+        // Use lint data for additional checks
+        const lintData = await fetchLintData(req);
+        const pageWarnings = lintData?.get(filePath) || [];
+        const rulesWarnings = pageWarnings.filter((w: any) => w.code === 'rules_vs_actions_language');
+
+        checks.push(createCheck(
+          'rules-actions',
+          'Rules → Actions migration',
+          rulesWarnings.length === 0 ? 'PASS' : 'FAIL',
+          rulesWarnings.length === 0 ? 'No Rules references found' : `${rulesWarnings.length} Rules reference(s)`,
+          rulesWarnings.slice(0, 5)
+        ));
+
+      } else {
+        // Fallback if GitHub fetch fails - use only lint data
+        console.error('[audit] Failed to fetch MDX from GitHub, falling back to lint-only checks');
+
+        const lintData = await fetchLintData(req);
+        const pageWarnings = lintData?.get(filePath) || [];
+        const rulesWarnings = pageWarnings.filter((w: any) => w.code === 'rules_vs_actions_language');
+
+        checks.push(createCheck(
+          'rules-actions',
+          'Rules → Actions migration',
+          rulesWarnings.length === 0 ? 'PASS' : 'FAIL',
+          rulesWarnings.length === 0 ? 'No Rules references found' : `${rulesWarnings.length} Rules reference(s)`,
+          rulesWarnings.slice(0, 5)
+        ));
+
+        // All other checks unavailable
+        checks.push(createCheck('curl-work', 'cURL samples work', 'NA', 'Content unavailable'));
+        checks.push(createCheck('sdk-samples', 'SDK samples present', 'NA', 'Content unavailable'));
+        checks.push(createCheck('har-samples', 'HAR samples render', 'NA', 'Content unavailable'));
+        checks.push(createCheck('screenshots-present', 'Screenshots present', 'NA', 'Content unavailable'));
+        checks.push(createCheck('broken-links', 'No broken links', 'NA', 'Content unavailable'));
+        checks.push(createCheck('validated-on', 'validatedOn frontmatter', 'NA', 'Content unavailable'));
+      }
     }
 
     // Calculate summary
