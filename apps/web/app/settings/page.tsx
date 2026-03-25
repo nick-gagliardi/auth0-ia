@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { useToast } from '@/hooks/use-toast';
 import AppLayout from '@/components/AppLayout';
+import { RefreshCw } from 'lucide-react';
 
 type SettingsData = {
   githubUsername: string;
@@ -26,6 +27,7 @@ export default function SettingsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isReindexing, setIsReindexing] = useState(false);
 
   // Redirect to login if not authenticated
   useEffect(() => {
@@ -142,6 +144,42 @@ export default function SettingsPage() {
       });
     } finally {
       setIsDeleting(false);
+    }
+  };
+
+  const handleReindex = async () => {
+    if (!confirm('This will trigger a full reindex of the Auth0 docs. This may take several minutes. Continue?')) {
+      return;
+    }
+
+    setIsReindexing(true);
+    try {
+      const response = await fetch('/api/maintenance/reindex', {
+        method: 'POST',
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: 'Reindex Started',
+          description: 'The reindex workflow has been triggered. Check the Actions tab on GitHub for progress.',
+        });
+      } else {
+        toast({
+          title: 'Error',
+          description: result.error || 'Failed to trigger reindex',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to trigger reindex',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsReindexing(false);
     }
   };
 
@@ -268,6 +306,56 @@ export default function SettingsPage() {
               <Alert>
                 <AlertDescription className="text-xs">
                   Your API key is encrypted and stored securely. It is never logged or shared.
+                </AlertDescription>
+              </Alert>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Reindex */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Reindex Documentation</CardTitle>
+            <CardDescription>
+              Refresh the search index with the latest Auth0 documentation
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <Alert>
+                <AlertDescription>
+                  Last indexed: <span className="font-medium">March 3, 2026</span> (2215 pages, 201 snippets)
+                </AlertDescription>
+              </Alert>
+
+              <div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Triggers a GitHub Actions workflow that fetches the latest docs from the{' '}
+                  <code className="text-xs bg-muted px-1 py-0.5 rounded">auth0/docs-v2</code> repository
+                  and rebuilds the search index. This typically takes 5-10 minutes.
+                </p>
+
+                <Button
+                  onClick={handleReindex}
+                  disabled={isReindexing}
+                  variant="outline"
+                >
+                  <RefreshCw className={`w-4 h-4 mr-2 ${isReindexing ? 'animate-spin' : ''}`} />
+                  {isReindexing ? 'Triggering Reindex...' : 'Reindex Now'}
+                </Button>
+              </div>
+
+              <Alert>
+                <AlertDescription className="text-xs">
+                  Monitor progress on the{' '}
+                  <a
+                    href="https://github.com/nick-gagliardi/auth0-ia/actions/workflows/reindex.yml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-primary"
+                  >
+                    GitHub Actions page
+                  </a>
                 </AlertDescription>
               </Alert>
             </div>
