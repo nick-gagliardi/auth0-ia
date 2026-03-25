@@ -68,19 +68,9 @@ jobs:
           git commit -m "chore(automated): update index with latest Auth0 docs ($PAGES pages, $SNIPPETS snippets)"
           git push
 
-      - name: Install Vercel CLI
+      - name: Deployment triggered
         if: steps.check_changes.outputs.has_changes == 'true'
-        run: npm install --global vercel@latest
-
-      - name: Pull Vercel Environment Information
-        if: steps.check_changes.outputs.has_changes == 'true'
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: ./apps/web
-
-      - name: Deploy to Vercel
-        if: steps.check_changes.outputs.has_changes == 'true'
-        run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
-        working-directory: ./apps/web
+        run: echo "Index updated and pushed. The deploy.yml workflow will automatically deploy to Vercel."
 
       - name: No changes detected
         if: steps.check_changes.outputs.has_changes == 'false'
