@@ -95,11 +95,20 @@ async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: 
     // Use model name compatible with Okta LiteLLM proxy
     const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
 
+    // Okta LiteLLM uses OpenAI-compatible format with Bearer token
+    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
-      'x-api-key': apiKey,
-      'anthropic-version': '2023-06-01',
     };
+
+    // Use Bearer token format for LiteLLM, x-api-key for standard Anthropic
+    if (isLiteLLMProxy) {
+      headers['Authorization'] = `Bearer ${apiKey}`;
+    } else {
+      headers['x-api-key'] = apiKey;
+      headers['anthropic-version'] = '2023-06-01';
+    }
 
     console.log('[Settings] Testing Anthropic key:', {
       baseUrl,

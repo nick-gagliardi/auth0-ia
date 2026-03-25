@@ -21,11 +21,20 @@ async function getAiSuggestions(content: string, pageTitle: string, pageUrl: str
   }
 
   try {
+    // Okta LiteLLM uses OpenAI-compatible format with Bearer token
+    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
-      'x-api-key': apiKey,
-      'anthropic-version': '2023-06-01',
     };
+
+    // Use Bearer token format for LiteLLM, x-api-key for standard Anthropic
+    if (isLiteLLMProxy) {
+      headers['Authorization'] = `Bearer ${apiKey}`;
+    } else {
+      headers['x-api-key'] = apiKey;
+      headers['anthropic-version'] = '2023-06-01';
+    }
 
     const endpoint = `${baseUrl}/v1/messages`;
     // Use model name compatible with Okta LiteLLM proxy
