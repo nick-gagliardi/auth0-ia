@@ -122,20 +122,10 @@ async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: 
       authHeader: isLiteLLMProxy ? 'Bearer' : 'x-api-key',
     });
 
-    // LiteLLM might use OpenAI-compatible endpoint format
-    const endpoint = isLiteLLMProxy ? `${baseUrl}/v1/chat/completions` : `${baseUrl}/v1/messages`;
+    // Try Anthropic-style endpoint even for LiteLLM (many proxies support both)
+    const endpoint = `${baseUrl}/v1/messages`;
 
-    // Use OpenAI format for LiteLLM, Anthropic format for standard API
-    const requestBody = isLiteLLMProxy ? {
-      model,
-      max_tokens: 10,
-      messages: [
-        {
-          role: 'user',
-          content: 'Hi',
-        },
-      ],
-    } : {
+    const requestBody = {
       model,
       max_tokens: 10,
       messages: [
@@ -146,7 +136,7 @@ async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: 
       ],
     };
 
-    console.log('[Settings] Request:', { endpoint, requestBody });
+    console.log('[Settings] Request:', { endpoint, requestBody, headers: Object.keys(headers) });
 
     const response = await fetch(endpoint, {
       method: 'POST',
