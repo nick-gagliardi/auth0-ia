@@ -3,10 +3,14 @@ import GitHub from "next-auth/providers/github";
 import { createUser, getUserByGithubId, updateGithubToken, getUserById, initializeDatabase } from "@/lib/db";
 import { encrypt } from "@/lib/encryption";
 
-// Initialize database tables on startup
-initializeDatabase().catch(error => {
-  console.error('Failed to initialize database on startup:', error);
-});
+// Track database initialization
+let dbInitialized = false;
+async function ensureDatabaseInitialized() {
+  if (!dbInitialized) {
+    await initializeDatabase();
+    dbInitialized = true;
+  }
+}
 
 const authConfig: NextAuthConfig = {
   providers: [
@@ -42,6 +46,9 @@ const authConfig: NextAuthConfig = {
     async signIn({ user, account, profile }) {
       if (account?.provider === 'github' && account.access_token) {
         try {
+          // Ensure database is initialized before any operations
+          await ensureDatabaseInitialized();
+
           const encryptedToken = encrypt(account.access_token);
 
           // Check if user already exists
