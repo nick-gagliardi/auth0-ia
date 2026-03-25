@@ -40,17 +40,26 @@ export async function POST(req: Request) {
     const { user } = await requireSession();
     const body = UpdateKeySchema.parse(await req.json());
 
-    // Validate the API key by making a test call to Anthropic
-    console.log('[Settings POST] Validating API key...');
-    const testResult = await testAnthropicKey(body.anthropicApiKey);
-    console.log('[Settings POST] Validation result:', testResult);
+    // For Okta LiteLLM proxy, skip validation since it has IP restrictions
+    // and won't work from Vercel's servers. The key will work client-side.
+    const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isOktaProxy = baseUrl.includes('llm.atko.ai');
 
-    if (!testResult.ok) {
-      console.error('[Settings POST] Validation failed:', testResult.error);
-      return NextResponse.json(
-        { ok: false, error: testResult.error || 'Invalid Anthropic API key' },
-        { status: 400 }
-      );
+    if (!isOktaProxy) {
+      // Only validate for standard Anthropic API (not IP-restricted)
+      console.log('[Settings POST] Validating API key...');
+      const testResult = await testAnthropicKey(body.anthropicApiKey);
+      console.log('[Settings POST] Validation result:', testResult);
+
+      if (!testResult.ok) {
+        console.error('[Settings POST] Validation failed:', testResult.error);
+        return NextResponse.json(
+          { ok: false, error: testResult.error || 'Invalid Anthropic API key' },
+          { status: 400 }
+        );
+      }
+    } else {
+      console.log('[Settings POST] Skipping validation for Okta LiteLLM proxy (IP-restricted)');
     }
 
     // Encrypt and save the key
