@@ -414,6 +414,7 @@ export type AuditResult = {
   checks: AuditCheckItem[];
   suggestions?: AuditSuggestion[];  // Actionable suggestions with accept/decline
   aiSuggestions?: AiSuggestion[];   // AI-generated suggestions (review only)
+  mdxContent?: string;              // MDX content for client-side AI processing
   summary: {
     pass: number;
     fail: number;

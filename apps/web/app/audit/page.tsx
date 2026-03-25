@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   ClipboardCheck,
   Loader2,
@@ -13,6 +13,10 @@ import {
   ChevronDown,
   ChevronRight,
   GitPullRequest,
+  Plus,
+  Trash2,
+  ListPlus,
+  Play,
 } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import { Button } from '@/components/ui/button';
@@ -23,7 +27,11 @@ import { useToast } from '@/hooks/use-toast';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Progress } from '@/components/ui/progress';
+import { Textarea } from '@/components/ui/textarea';
 import { AnthropicKeyPrompt } from '@/components/AnthropicKeyPrompt';
+import { recordActivity } from '@/hooks/use-activity-history';
 import type { AuditResult, AuditCheckItem, AuditCheckStatus, AuditSuggestion, AiSuggestion } from '@/types';
 
 function StatusIcon({ status }: { status: AuditCheckStatus }) {
@@ -84,6 +92,390 @@ function CheckItemRow({ item, expanded, onToggle }: { item: AuditCheckItem; expa
             </pre>
           </div>
         </div>
+      )}
+    </div>
+  );
+}
+
+// Batch Audit Types
+interface BatchAuditItem {
+  url: string;
+  status: 'pending' | 'running' | 'completed' | 'failed';
+  result?: AuditResult;
+  error?: string;
+}
+
+// Batch Audit Component
+function BatchAuditTab({ hasAnthropicKey, onShowKeyPrompt }: { hasAnthropicKey: boolean; onShowKeyPrompt: () => void }) {
+  const { toast } = useToast();
+  const [items, setItems] = useState<BatchAuditItem[]>([]);
+  const [newUrl, setNewUrl] = useState('');
+  const [bulkInput, setBulkInput] = useState('');
+  const [showBulkInput, setShowBulkInput] = useState(false);
+  const [isRunning, setIsRunning] = useState(false);
+  const [includeAiSuggestions, setIncludeAiSuggestions] = useState(false);
+  const [concurrency, setConcurrency] = useState(3);
+
+  const addItem = useCallback(() => {
+    if (!newUrl.trim()) return;
+    setItems(prev => [...prev, { url: newUrl.trim(), status: 'pending' }]);
+    setNewUrl('');
+  }, [newUrl]);
+
+  const addBulkItems = useCallback(() => {
+    const urls = bulkInput
+      .split('\n')
+      .map(u => u.trim())
+      .filter(u => u.length > 0 && (u.startsWith('http') || u.startsWith('main/')));
+
+    if (urls.length === 0) {
+      toast({ title: 'No valid URLs', description: 'Enter one URL per line', variant: 'destructive' });
+      return;
+    }
+
+    setItems(prev => [...prev, ...urls.map(url => ({ url, status: 'pending' as const }))]);
+    setBulkInput('');
+    setShowBulkInput(false);
+    toast({ title: `Added ${urls.length} URLs`, description: 'Ready to audit' });
+  }, [bulkInput, toast]);
+
+  const removeItem = useCallback((index: number) => {
+    setItems(prev => prev.filter((_, i) => i !== index));
+  }, []);
+
+  const clearAll = useCallback(() => {
+    setItems([]);
+  }, []);
+
+  const clearCompleted = useCallback(() => {
+    setItems(prev => prev.filter(item => item.status !== 'completed' && item.status !== 'failed'));
+  }, []);
+
+  const runBatchAudit = useCallback(async () => {
+    const pendingItems = items.filter(item => item.status === 'pending');
+    if (pendingItems.length === 0) {
+      toast({ title: 'No pending items', description: 'Add URLs to audit first', variant: 'destructive' });
+      return;
+    }
+
+    setIsRunning(true);
+
+    // Process items with concurrency limit
+    const queue = [...pendingItems];
+    const runningPromises: Promise<void>[] = [];
+
+    const processItem = async (item: BatchAuditItem) => {
+      const index = items.findIndex(i => i.url === item.url);
+
+      // Update status to running
+      setItems(prev => prev.map((it, i) =>
+        i === index ? { ...it, status: 'running' as const } : it
+      ));
+
+      try {
+        const res = await fetch('/api/audit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ input: item.url, includeAiSuggestions }),
+        });
+
+        const data = await res.json();
+
+        setItems(prev => prev.map((it, i) =>
+          i === index ? {
+            ...it,
+            status: data.ok ? 'completed' as const : 'failed' as const,
+            result: data.ok ? data : undefined,
+            error: data.ok ? undefined : data.error,
+          } : it
+        ));
+      } catch (e: any) {
+        setItems(prev => prev.map((it, i) =>
+          i === index ? {
+            ...it,
+            status: 'failed' as const,
+            error: e?.message || 'Network error',
+          } : it
+        ));
+      }
+    };
+
+    // Process with concurrency
+    while (queue.length > 0 || runningPromises.length > 0) {
+      // Start new tasks up to concurrency limit
+      while (queue.length > 0 && runningPromises.length < concurrency) {
+        const item = queue.shift()!;
+        const promise = processItem(item).then(() => {
+          const idx = runningPromises.indexOf(promise);
+          if (idx > -1) runningPromises.splice(idx, 1);
+        });
+        runningPromises.push(promise);
+      }
+
+      // Wait for at least one to complete
+      if (runningPromises.length > 0) {
+        await Promise.race(runningPromises);
+      }
+    }
+
+    setIsRunning(false);
+    toast({ title: 'Batch audit complete', description: `Processed ${pendingItems.length} pages` });
+  }, [items, includeAiSuggestions, concurrency, toast]);
+
+  const completedCount = items.filter(i => i.status === 'completed').length;
+  const failedCount = items.filter(i => i.status === 'failed').length;
+  const pendingCount = items.filter(i => i.status === 'pending').length;
+  const runningCount = items.filter(i => i.status === 'running').length;
+  const progress = items.length > 0 ? ((completedCount + failedCount) / items.length) * 100 : 0;
+
+  // Aggregate stats
+  const aggregateStats = items
+    .filter(i => i.result)
+    .reduce((acc, i) => {
+      if (i.result?.summary) {
+        acc.pass += i.result.summary.pass;
+        acc.fail += i.result.summary.fail;
+        acc.warn += i.result.summary.warn;
+        acc.manual += i.result.summary.manual;
+        acc.na += i.result.summary.na;
+      }
+      return acc;
+    }, { pass: 0, fail: 0, warn: 0, manual: 0, na: 0 });
+
+  return (
+    <div className="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Batch Audit</CardTitle>
+          <CardDescription>
+            Audit multiple pages at once. Add URLs one by one or paste a list.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {!showBulkInput ? (
+            <div className="flex gap-2">
+              <Input
+                value={newUrl}
+                onChange={(e) => setNewUrl(e.target.value)}
+                placeholder="https://auth0.com/docs/... or main/docs/path/to/file.mdx"
+                className="flex-1"
+                onKeyDown={(e) => e.key === 'Enter' && addItem()}
+                disabled={isRunning}
+              />
+              <Button onClick={addItem} disabled={isRunning || !newUrl.trim()}>
+                <Plus className="w-4 h-4 mr-2" />
+                Add
+              </Button>
+              <Button variant="outline" onClick={() => setShowBulkInput(true)} disabled={isRunning}>
+                <ListPlus className="w-4 h-4 mr-2" />
+                Bulk Add
+              </Button>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              <Textarea
+                value={bulkInput}
+                onChange={(e) => setBulkInput(e.target.value)}
+                placeholder="Paste URLs here, one per line..."
+                rows={6}
+                className="font-mono text-sm"
+              />
+              <div className="flex gap-2">
+                <Button onClick={addBulkItems}>
+                  Add All
+                </Button>
+                <Button variant="outline" onClick={() => setShowBulkInput(false)}>
+                  Cancel
+                </Button>
+              </div>
+            </div>
+          )}
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <Switch
+                  id="batch-ai-suggestions"
+                  checked={includeAiSuggestions}
+                  onCheckedChange={(checked) => {
+                    if (checked && !hasAnthropicKey) {
+                      onShowKeyPrompt();
+                      return;
+                    }
+                    setIncludeAiSuggestions(checked);
+                  }}
+                  disabled={isRunning}
+                />
+                <Label htmlFor="batch-ai-suggestions" className="text-sm">
+                  Include AI suggestions
+                  {!hasAnthropicKey && <span className="text-yellow-600 ml-1">(requires API key)</span>}
+                </Label>
+              </div>
+              <div className="flex items-center gap-2">
+                <Label className="text-sm">Concurrency:</Label>
+                <Input
+                  type="number"
+                  min={1}
+                  max={10}
+                  value={concurrency}
+                  onChange={(e) => setConcurrency(Math.max(1, Math.min(10, parseInt(e.target.value) || 1)))}
+                  className="w-16"
+                  disabled={isRunning}
+                />
+              </div>
+            </div>
+            <div className="flex gap-2">
+              <Button variant="outline" onClick={clearCompleted} disabled={isRunning || completedCount + failedCount === 0}>
+                Clear Finished
+              </Button>
+              <Button variant="outline" onClick={clearAll} disabled={isRunning || items.length === 0}>
+                Clear All
+              </Button>
+              <Button onClick={runBatchAudit} disabled={isRunning || pendingCount === 0}>
+                {isRunning ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Running...
+                  </>
+                ) : (
+                  <>
+                    <Play className="w-4 h-4 mr-2" />
+                    Run Audit ({pendingCount})
+                  </>
+                )}
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {items.length > 0 && (
+        <>
+          {/* Progress & Stats */}
+          <Card>
+            <CardContent className="pt-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between text-sm">
+                  <span>Progress: {completedCount + failedCount} / {items.length}</span>
+                  <span>{Math.round(progress)}%</span>
+                </div>
+                <Progress value={progress} className="h-2" />
+                <div className="flex gap-4 flex-wrap">
+                  <Badge variant="outline" className="gap-1">
+                    <div className="w-2 h-2 rounded-full bg-gray-400" />
+                    Pending: {pendingCount}
+                  </Badge>
+                  <Badge variant="outline" className="gap-1">
+                    <Loader2 className="w-3 h-3 animate-spin" />
+                    Running: {runningCount}
+                  </Badge>
+                  <Badge variant="outline" className="gap-1 bg-green-500/10 text-green-600">
+                    <CheckCircle className="w-3 h-3" />
+                    Completed: {completedCount}
+                  </Badge>
+                  <Badge variant="outline" className="gap-1 bg-red-500/10 text-red-600">
+                    <XCircle className="w-3 h-3" />
+                    Failed: {failedCount}
+                  </Badge>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Aggregate Results */}
+          {completedCount > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Aggregate Results</CardTitle>
+                <CardDescription>Combined statistics from {completedCount} audited pages</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-4 flex-wrap">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                    <span className="text-sm">Pass: {aggregateStats.pass}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                    <span className="text-sm">Fail: {aggregateStats.fail}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                    <span className="text-sm">Warn: {aggregateStats.warn}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-blue-500" />
+                    <span className="text-sm">Manual: {aggregateStats.manual}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-gray-400" />
+                    <span className="text-sm">N/A: {aggregateStats.na}</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Items List */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Audit Queue</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="divide-y max-h-[500px] overflow-y-auto">
+                {items.map((item, index) => (
+                  <div key={`${item.url}-${index}`} className="p-4 flex items-center gap-3">
+                    {item.status === 'pending' && <div className="w-5 h-5 rounded-full bg-gray-300" />}
+                    {item.status === 'running' && <Loader2 className="w-5 h-5 animate-spin text-blue-500" />}
+                    {item.status === 'completed' && <CheckCircle className="w-5 h-5 text-green-500" />}
+                    {item.status === 'failed' && <XCircle className="w-5 h-5 text-red-500" />}
+
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-mono truncate">{item.url}</div>
+                      {item.result && (
+                        <div className="flex gap-2 mt-1">
+                          <span className="text-xs text-green-600">Pass: {item.result.summary.pass}</span>
+                          <span className="text-xs text-red-600">Fail: {item.result.summary.fail}</span>
+                          <span className="text-xs text-yellow-600">Warn: {item.result.summary.warn}</span>
+                        </div>
+                      )}
+                      {item.error && (
+                        <div className="text-xs text-red-500 mt-1">{item.error}</div>
+                      )}
+                    </div>
+
+                    <div className="flex gap-2">
+                      {item.result && (
+                        <Button variant="ghost" size="sm" asChild>
+                          <a href={item.result.url} target="_blank" rel="noreferrer">
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => removeItem(index)}
+                        disabled={item.status === 'running'}
+                      >
+                        <Trash2 className="w-4 h-4 text-muted-foreground" />
+                      </Button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </>
+      )}
+
+      {items.length === 0 && (
+        <Card className="border-dashed">
+          <CardContent className="py-12 text-center text-muted-foreground">
+            <ListPlus className="w-12 h-12 mx-auto mb-4 opacity-50" />
+            <p>Add URLs above to batch audit multiple pages</p>
+          </CardContent>
+        </Card>
       )}
     </div>
   );
@@ -197,6 +589,122 @@ export default function AuditPage() {
     }
   };
 
+  // Client-side AI suggestions call (bypasses Vercel IP restrictions)
+  const getClientSideAiSuggestions = async (mdxContent: string, pageTitle: string, pageUrl: string): Promise<AiSuggestion[]> => {
+    try {
+      // Get user's API key from settings
+      const settingsRes = await fetch('/api/settings');
+      if (!settingsRes.ok) {
+        throw new Error('Failed to get API key');
+      }
+      const settings = await settingsRes.json();
+
+      // This will decrypt and return the user's key
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) {
+        throw new Error('API key not configured');
+      }
+      const { apiKey } = await keyRes.json();
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+      };
+
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const endpoint = `${baseUrl}/v1/messages`;
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model,
+          max_tokens: 4096,
+          messages: [
+            {
+              role: 'user',
+              content: `You are a technical documentation reviewer for Auth0. Analyze the following documentation page and provide specific, actionable suggestions for improvement.
+
+Page Title: ${pageTitle}
+Page URL: ${pageUrl}
+
+Content:
+${mdxContent.slice(0, 15000)}
+
+Provide suggestions in the following categories:
+1. **grammar** - Grammar errors, typos, awkward phrasing
+2. **clarity** - Sentences that are hard to understand, passive voice overuse, jargon without explanation
+3. **technical** - Potentially outdated information, missing security considerations, technical inaccuracies
+4. **content-gap** - Missing sections like prerequisites, next steps, examples, or error handling
+5. **link-suggestion** - Opportunities to cross-link to related Auth0 docs
+6. **tone** - Inconsistencies with professional technical writing style
+
+Return your response as a JSON array of objects with this structure:
+{
+  "suggestions": [
+    {
+      "category": "grammar|clarity|technical|content-gap|link-suggestion|tone",
+      "title": "Short title for the issue",
+      "description": "Detailed description of the issue and why it matters",
+      "original": "The exact original text that needs to be changed (copy verbatim from the content)",
+      "suggestion": "The exact replacement text (not instructions - the actual text that should replace the original)",
+      "line": null
+    }
+  ]
+}
+
+IMPORTANT for original/suggestion fields:
+- "original" must be the EXACT text from the document (copied verbatim)
+- "suggestion" must be the EXACT replacement text, NOT instructions like "remove this" or "add X here"
+- If you can't provide exact replacement text (e.g., for content gaps or restructuring), set both original and suggestion to null
+- For deletions, set suggestion to "" (empty string)
+- These fields are used for automated find-and-replace, so they must be exact
+
+Focus on the most impactful suggestions. Limit to 10 suggestions maximum. Only include suggestions where you're confident there's a real issue. Return ONLY the JSON, no other text.`,
+            },
+          ],
+        }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`AI API error (${response.status}): ${errorText.slice(0, 200)}`);
+      }
+
+      const result = await response.json();
+      const content = result.content?.[0]?.text;
+      if (!content) {
+        throw new Error('No response from AI');
+      }
+
+      // Parse JSON from response
+      const jsonMatch = content.match(/\{[\s\S]*"suggestions"[\s\S]*\}/);
+      if (!jsonMatch) {
+        throw new Error('Invalid AI response format');
+      }
+
+      const parsed = JSON.parse(jsonMatch[0]);
+      return parsed.suggestions || [];
+    } catch (err: any) {
+      console.error('[Client AI] Error:', err);
+      toast({
+        title: 'AI Suggestions Failed',
+        description: err.message || 'Failed to get AI suggestions',
+        variant: 'destructive',
+      });
+      return [];
+    }
+  };
+
   const runAudit = async () => {
     if (!url.trim()) return;
 
@@ -216,6 +724,24 @@ export default function AuditPage() {
       });
 
       const data = await res.json();
+
+      // If MDX content is returned, make client-side AI call
+      if (data.mdxContent && includeAiSuggestions) {
+        toast({
+          title: 'Getting AI suggestions...',
+          description: 'Analyzing content with Claude',
+        });
+
+        const aiSuggestions = await getClientSideAiSuggestions(
+          data.mdxContent,
+          data.pageTitle || data.filePath || '',
+          data.url
+        );
+
+        data.aiSuggestions = aiSuggestions.length > 0 ? aiSuggestions : undefined;
+        delete data.mdxContent; // Remove large content from state
+      }
+
       setResult(data);
 
       // Initialize all suggestions as accepted by default
@@ -233,6 +759,16 @@ export default function AuditPage() {
 
       if (!data.ok) {
         toast({ title: 'Audit failed', description: data.error, variant: 'destructive' });
+      } else {
+        // Record successful audit in activity history
+        recordActivity({
+          type: 'audit',
+          title: data.pageTitle || data.filePath || url.trim(),
+          description: `Pass: ${data.summary.pass}, Fail: ${data.summary.fail}, Warn: ${data.summary.warn}`,
+          url: data.url,
+          filePath: data.filePath,
+          metadata: { summary: data.summary },
+        });
       }
     } catch (e: any) {
       toast({ title: 'Error', description: e?.message || 'Network error', variant: 'destructive' });
@@ -405,10 +941,27 @@ export default function AuditPage() {
             Content Audit
           </h1>
           <p className="text-muted-foreground">
-            Paste a production docs URL to run the technical correctness checklist automatically.
+            Run technical correctness checks on documentation pages.
           </p>
         </div>
 
+        <Tabs defaultValue="single">
+          <TabsList className="mb-4">
+            <TabsTrigger value="single" className="gap-1.5">
+              <ClipboardCheck className="w-4 h-4" />
+              Single Page
+            </TabsTrigger>
+            <TabsTrigger value="batch" className="gap-1.5">
+              <ListPlus className="w-4 h-4" />
+              Batch Audit
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="batch">
+            <BatchAuditTab hasAnthropicKey={hasAnthropicKey} onShowKeyPrompt={() => setShowKeyPrompt(true)} />
+          </TabsContent>
+
+          <TabsContent value="single" className="space-y-6">
         <Card>
           <CardHeader>
             <CardTitle>Audit Page</CardTitle>
@@ -793,6 +1346,8 @@ export default function AuditPage() {
             </CardContent>
           </Card>
         )}
+          </TabsContent>
+        </Tabs>
 
         {/* Anthropic API Key Prompt Modal */}
         <AnthropicKeyPrompt open={showKeyPrompt} onOpenChange={setShowKeyPrompt} />

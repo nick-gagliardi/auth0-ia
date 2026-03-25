@@ -1317,16 +1317,9 @@ export async function POST(req: Request) {
       manual: checks.filter(c => c.status === 'MANUAL').length,
     };
 
-    // Get AI suggestions if requested
-    let aiSuggestions: AiSuggestion[] | undefined;
-    if (body.includeAiSuggestions && mdxContent) {
-      aiSuggestions = await getAiSuggestions(
-        mdxContent,
-        title || filePath,
-        url,
-        user.anthropic_api_key_decrypted || undefined
-      );
-    }
+    // Return MDX content for client-side AI processing (bypasses IP restrictions)
+    // Client will call Anthropic API directly using user's stored key
+    const returnMdxContent = body.includeAiSuggestions && mdxContent;
 
     return NextResponse.json({
       ok: true,
@@ -1337,7 +1330,7 @@ export async function POST(req: Request) {
       screenshot: (renderCheck as any)?.screenshot,
       checks,
       suggestions: suggestions.length > 0 ? suggestions : undefined,
-      aiSuggestions: aiSuggestions && aiSuggestions.length > 0 ? aiSuggestions : undefined,
+      mdxContent: returnMdxContent ? mdxContent : undefined,
       summary,
     } satisfies AuditResult);
 
