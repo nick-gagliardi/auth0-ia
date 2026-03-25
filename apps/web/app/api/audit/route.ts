@@ -28,8 +28,8 @@ async function getAiSuggestions(content: string, pageTitle: string, pageUrl: str
     };
 
     const endpoint = `${baseUrl}/v1/messages`;
-    // Use standard model names that work with LiteLLM proxies
-    const model = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+    // Use model name compatible with Okta LiteLLM proxy
+    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
 
     console.log('[Anthropic] Request config:', { endpoint, model, baseUrl });
 
