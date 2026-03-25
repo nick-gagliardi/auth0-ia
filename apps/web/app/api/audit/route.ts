@@ -1330,7 +1330,7 @@ export async function POST(req: Request) {
       screenshot: (renderCheck as any)?.screenshot,
       checks,
       suggestions: suggestions.length > 0 ? suggestions : undefined,
-      mdxContent: returnMdxContent ? mdxContent : undefined,
+      mdxContent: returnMdxContent && mdxContent ? mdxContent : undefined,
       summary,
     } satisfies AuditResult);
 
