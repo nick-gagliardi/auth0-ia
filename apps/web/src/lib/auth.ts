@@ -1,7 +1,12 @@
 import NextAuth, { NextAuthConfig } from "next-auth";
 import GitHub from "next-auth/providers/github";
-import { createUser, getUserByGithubId, updateGithubToken, getUserById } from "@/lib/db";
+import { createUser, getUserByGithubId, updateGithubToken, getUserById, initializeDatabase } from "@/lib/db";
 import { encrypt } from "@/lib/encryption";
+
+// Initialize database tables on startup
+initializeDatabase().catch(error => {
+  console.error('Failed to initialize database on startup:', error);
+});
 
 const authConfig: NextAuthConfig = {
   providers: [
