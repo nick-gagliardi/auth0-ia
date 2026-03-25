@@ -56,6 +56,7 @@ export const navigationGroups: NavGroup[] = [
       { label: 'Verify', href: '/verify', icon: CheckCircle },
       { label: 'Snippet Migration', href: '/snippet-migration', icon: FileCode },
       { label: 'Curl Validator', href: '/curl-validator', icon: Terminal },
+      { label: 'Doc Generator', href: '/doc-generator', icon: FileText },
     ],
   },
   {
