@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FileText, Loader2, Download, Copy, CheckCircle } from 'lucide-react';
+import { FileText, Loader2, Download, Copy, CheckCircle, GitPullRequest, ChevronDown, ChevronRight } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,7 +11,62 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
 import { recordActivity } from '@/hooks/use-activity-history';
+
+interface GeneratedFile {
+  path: string;
+  title: string;
+  content: string;
+}
+
+interface DocGenResult {
+  structured: boolean;
+  documentation?: string; // Fallback for unstructured
+  featureSummary?: {
+    what: string;
+    who: string;
+    why: string;
+    keyConcepts: string[];
+    prerequisites: string[];
+    configurationSurfaces: string[];
+    limitations: string;
+  };
+  relatedDocs?: Array<{
+    path: string;
+    relationship: string;
+    action: string;
+  }>;
+  iaProposal?: {
+    section: string;
+    group: string;
+    title: string;
+    path: string;
+    rationale: string;
+  };
+  documentationPlan?: Array<{
+    type: string;
+    title: string;
+    rationale: string;
+  }>;
+  generatedFiles?: GeneratedFile[];
+  docsToUpdate?: Array<{
+    path: string;
+    change: string;
+    suggestion: string;
+  }>;
+  crossLinks?: Array<{
+    fromPage: string;
+    linkText: string;
+    context: string;
+  }>;
+  navigationUpdate?: {
+    section: string;
+    jsonSnippet: string;
+  };
+  fileName: string;
+  targetSite: string;
+}
 
 export default function DocGeneratorPage() {
   const { toast } = useToast();
@@ -19,12 +74,14 @@ export default function DocGeneratorPage() {
   const [file, setFile] = useState<File | null>(null);
   const [pmInput, setPmInput] = useState('');
   const [targetSite, setTargetSite] = useState<'main' | 'auth4genai'>('main');
-  const [result, setResult] = useState<string | null>(null);
+  const [result, setResult] = useState<DocGenResult | null>(null);
+  const [expandedFiles, setExpandedFiles] = useState<Set<number>>(new Set());
+  const [creatingPr, setCreatingPr] = useState(false);
+  const [prUrl, setPrUrl] = useState<string | null>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
-      // Check file type
       const validTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain', 'text/markdown'];
       if (!validTypes.includes(selectedFile.type) && !selectedFile.name.endsWith('.md')) {
         toast({
@@ -35,6 +92,7 @@ export default function DocGeneratorPage() {
         return;
       }
       setFile(selectedFile);
+      setPrUrl(null);
     }
   };
 
@@ -50,6 +108,7 @@ export default function DocGeneratorPage() {
 
     setLoading(true);
     setResult(null);
+    setPrUrl(null);
 
     try {
       const formData = new FormData();
@@ -68,22 +127,23 @@ export default function DocGeneratorPage() {
         throw new Error(data.error || 'Failed to generate documentation');
       }
 
-      setResult(data.documentation);
+      setResult(data);
 
       // Record activity
       recordActivity({
         type: 'search',
         title: `Doc Generation: ${file.name}`,
-        description: `Generated documentation for ${targetSite} site`,
+        description: `Generated ${data.generatedFiles?.length || 0} documentation files for ${targetSite} site`,
         metadata: {
           fileName: file.name,
           targetSite,
+          fileCount: data.generatedFiles?.length || 0,
         },
       });
 
       toast({
         title: 'Documentation generated',
-        description: 'Review the output below',
+        description: data.structured ? `Generated ${data.generatedFiles?.length || 0} documentation files` : 'Review the output below',
       });
     } catch (error: any) {
       toast({
@@ -96,28 +156,76 @@ export default function DocGeneratorPage() {
     }
   };
 
-  const copyToClipboard = () => {
-    if (result) {
-      navigator.clipboard.writeText(result);
-      toast({
-        title: 'Copied',
-        description: 'Documentation copied to clipboard',
+  const createPr = async () => {
+    if (!result || !result.generatedFiles) return;
+
+    setCreatingPr(true);
+
+    try {
+      const res = await fetch('/api/doc-generator/create-pr', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          targetSite: result.targetSite,
+          generatedFiles: result.generatedFiles,
+          navigationUpdate: result.navigationUpdate,
+          featureSummary: result.featureSummary,
+          docsToUpdate: result.docsToUpdate,
+          crossLinks: result.crossLinks,
+        }),
       });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to create PR');
+      }
+
+      setPrUrl(data.prUrl);
+      toast({
+        title: 'PR Created',
+        description: `Pull request #${data.prNumber} created successfully`,
+      });
+    } catch (error: any) {
+      toast({
+        title: 'PR creation failed',
+        description: error.message || 'Failed to create pull request',
+        variant: 'destructive',
+      });
+    } finally {
+      setCreatingPr(false);
     }
   };
 
-  const downloadMarkdown = () => {
-    if (result) {
-      const blob = new Blob([result], { type: 'text/markdown' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `auth0-docs-${Date.now()}.md`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+  const copyToClipboard = (content: string) => {
+    navigator.clipboard.writeText(content);
+    toast({
+      title: 'Copied',
+      description: 'Content copied to clipboard',
+    });
+  };
+
+  const downloadFile = (filePath: string, content: string) => {
+    const blob = new Blob([content], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    // Extract filename from path
+    a.download = filePath.split('/').pop() || 'document.mdx';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const toggleFile = (idx: number) => {
+    const next = new Set(expandedFiles);
+    if (next.has(idx)) {
+      next.delete(idx);
+    } else {
+      next.add(idx);
     }
+    setExpandedFiles(next);
   };
 
   return (
@@ -138,7 +246,7 @@ export default function DocGeneratorPage() {
           <CardHeader>
             <CardTitle>Upload PRD & Configure</CardTitle>
             <CardDescription>
-              Upload your Product Requirements Document and provide additional context to generate complete, publication-ready Auth0 documentation
+              Upload your Product Requirements Document and provide additional context
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -153,7 +261,7 @@ export default function DocGeneratorPage() {
                 disabled={loading}
               />
               <p className="text-xs text-muted-foreground">
-                Supported formats: PDF, Word (.docx), Text (.txt), Markdown (.md)
+                Supported: Text (.txt), Markdown (.md). PDF and Word coming soon.
               </p>
               {file && (
                 <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
@@ -170,7 +278,7 @@ export default function DocGeneratorPage() {
                 id="pm-input"
                 value={pmInput}
                 onChange={(e) => setPmInput(e.target.value)}
-                placeholder="Additional context, scope clarifications, or notes from the Product Manager..."
+                placeholder="Additional context, scope clarifications, or notes..."
                 rows={4}
                 disabled={loading}
               />
@@ -212,61 +320,229 @@ export default function DocGeneratorPage() {
           </CardContent>
         </Card>
 
-        {/* Results */}
-        {result && (
+        {/* Structured Results */}
+        {result && result.structured && (
+          <div className="space-y-4">
+            {/* Feature Summary */}
+            {result.featureSummary && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Feature Summary</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div>
+                    <span className="font-semibold">What:</span> {result.featureSummary.what}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Who:</span> {result.featureSummary.who}
+                  </div>
+                  <div>
+                    <span className="font-semibold">Why:</span> {result.featureSummary.why}
+                  </div>
+                  {result.featureSummary.keyConcepts.length > 0 && (
+                    <div>
+                      <span className="font-semibold">Key Concepts:</span>
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        {result.featureSummary.keyConcepts.map((concept, i) => (
+                          <Badge key={i} variant="outline">{concept}</Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            )}
+
+            {/* IA Proposal */}
+            {result.iaProposal && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Information Architecture Proposal</CardTitle>
+                  <CardDescription>Suggested placement in documentation navigation</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div><span className="font-semibold">Section:</span> {result.iaProposal.section}</div>
+                  {result.iaProposal.group && (
+                    <div><span className="font-semibold">Group:</span> {result.iaProposal.group}</div>
+                  )}
+                  <div><span className="font-semibold">Page Title:</span> {result.iaProposal.title}</div>
+                  <div><span className="font-semibold">Path:</span> <code className="text-sm">{result.iaProposal.path}</code></div>
+                  <div className="text-sm text-muted-foreground mt-2">{result.iaProposal.rationale}</div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Generated Files */}
+            {result.generatedFiles && result.generatedFiles.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <CardTitle>Generated Documentation Files ({result.generatedFiles.length})</CardTitle>
+                      <CardDescription>Complete .mdx files ready for PR</CardDescription>
+                    </div>
+                    {prUrl ? (
+                      <Button asChild>
+                        <a href={prUrl} target="_blank" rel="noreferrer">
+                          <GitPullRequest className="w-4 h-4 mr-2" />
+                          View PR
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button onClick={createPr} disabled={creatingPr}>
+                        {creatingPr ? (
+                          <>
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Creating PR...
+                          </>
+                        ) : (
+                          <>
+                            <GitPullRequest className="w-4 h-4 mr-2" />
+                            Create PR
+                          </>
+                        )}
+                      </Button>
+                    )}
+                  </div>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="divide-y">
+                    {result.generatedFiles.map((file, idx) => {
+                      const isExpanded = expandedFiles.has(idx);
+                      return (
+                        <div key={idx} className="p-4">
+                          <div
+                            className="flex items-center justify-between cursor-pointer"
+                            onClick={() => toggleFile(idx)}
+                          >
+                            <div className="flex items-center gap-2 flex-1">
+                              {isExpanded ? (
+                                <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                              ) : (
+                                <ChevronRight className="w-4 h-4 text-muted-foreground" />
+                              )}
+                              <div>
+                                <div className="font-medium">{file.title}</div>
+                                <div className="text-sm text-muted-foreground font-mono">{file.path}</div>
+                              </div>
+                            </div>
+                            <div className="flex gap-2">
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  copyToClipboard(file.content);
+                                }}
+                              >
+                                <Copy className="w-4 h-4" />
+                              </Button>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  downloadFile(file.path, file.content);
+                                }}
+                              >
+                                <Download className="w-4 h-4" />
+                              </Button>
+                            </div>
+                          </div>
+                          {isExpanded && (
+                            <div className="mt-4 border rounded-lg p-4 bg-muted/50">
+                              <pre className="text-xs font-mono whitespace-pre-wrap overflow-x-auto">
+                                {file.content}
+                              </pre>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Docs to Update */}
+            {result.docsToUpdate && result.docsToUpdate.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Existing Docs to Update</CardTitle>
+                  <CardDescription>Suggested changes to existing documentation</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    {result.docsToUpdate.map((update, idx) => (
+                      <div key={idx} className="border-l-2 border-orange-500 pl-4 py-2">
+                        <div className="font-mono text-sm text-orange-600 dark:text-orange-400">{update.path}</div>
+                        <div className="text-sm mt-1">{update.change}</div>
+                        {update.suggestion && (
+                          <div className="text-xs text-muted-foreground mt-2 bg-muted p-2 rounded">
+                            {update.suggestion}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {/* Cross Links */}
+            {result.crossLinks && result.crossLinks.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>Suggested Cross-Links</CardTitle>
+                  <CardDescription>Pages that should link to the new documentation</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    {result.crossLinks.map((link, idx) => (
+                      <div key={idx} className="text-sm">
+                        <span className="font-mono text-muted-foreground">{link.fromPage}</span>: {link.linkText}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        )}
+
+        {/* Fallback: Unstructured Output */}
+        {result && !result.structured && result.documentation && (
           <Card>
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle>Generated Documentation</CardTitle>
-                  <CardDescription>
-                    Review the documentation set below. Use the actions to copy or download.
-                  </CardDescription>
+                  <CardDescription>Review and copy the generated content</CardDescription>
                 </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm" onClick={copyToClipboard}>
-                    <Copy className="w-4 h-4 mr-2" />
-                    Copy
-                  </Button>
-                  <Button variant="outline" size="sm" onClick={downloadMarkdown}>
-                    <Download className="w-4 h-4 mr-2" />
-                    Download
-                  </Button>
-                </div>
+                <Button variant="outline" size="sm" onClick={() => copyToClipboard(result.documentation!)}>
+                  <Copy className="w-4 h-4 mr-2" />
+                  Copy
+                </Button>
               </div>
             </CardHeader>
             <CardContent>
-              <Tabs defaultValue="formatted">
-                <TabsList>
-                  <TabsTrigger value="formatted">Formatted</TabsTrigger>
-                  <TabsTrigger value="raw">Raw Markdown</TabsTrigger>
-                </TabsList>
-                <TabsContent value="formatted" className="mt-4">
-                  <div className="prose prose-sm dark:prose-invert max-w-none border rounded-lg p-6 max-h-[600px] overflow-y-auto">
-                    <pre className="whitespace-pre-wrap break-words text-sm leading-relaxed">
-                      {result}
-                    </pre>
-                  </div>
-                </TabsContent>
-                <TabsContent value="raw" className="mt-4">
-                  <div className="border rounded-lg p-4 max-h-[600px] overflow-y-auto">
-                    <pre className="text-xs font-mono whitespace-pre-wrap break-all">
-                      {result}
-                    </pre>
-                  </div>
-                </TabsContent>
-              </Tabs>
+              <div className="border rounded-lg p-4 max-h-[600px] overflow-y-auto">
+                <pre className="text-xs font-mono whitespace-pre-wrap break-all">
+                  {result.documentation}
+                </pre>
+              </div>
             </CardContent>
           </Card>
         )}
 
+        {/* Empty State */}
         {!result && !loading && (
           <Card className="border-dashed">
             <CardContent className="py-12 text-center text-muted-foreground">
               <FileText className="w-12 h-12 mx-auto mb-4 opacity-50" />
               <p>Upload a PRD file above to generate Auth0 documentation</p>
               <p className="text-xs mt-2">
-                The AI will analyze your PRD and generate a complete documentation set following the Auth0 style guide
+                The AI will search related docs, propose navigation placement, and generate complete .mdx files
               </p>
             </CardContent>
           </Card>

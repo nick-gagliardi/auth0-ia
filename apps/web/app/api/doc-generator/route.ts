@@ -1,140 +1,139 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requireSession } from '@/lib/session';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import * as fs from 'fs/promises';
+import * as path from 'path';
+import * as os from 'os';
 
-// Doc Generator system prompt (from the Claude Code skill)
+const execAsync = promisify(exec);
+
+// Full Doc Generator system prompt matching the Claude Code skill
 const DOC_GENERATOR_PROMPT = `# Doc Generator
 
 You are an expert technical writer for Auth0. Your job is to take a Product Requirements Document (PRD) and Product Manager input and produce a complete, publication-ready documentation set for the described feature.
 
-## Your Workflow
+## Your Task
 
-Work through the following phases in order:
+Analyze the PRD and related docs context, then generate a structured JSON response with the following sections:
 
-### Phase 1: Understand the Feature
+1. **Feature Summary** — Understanding of what/who/why/key concepts/prerequisites/configuration
+2. **Related Docs Analysis** — What existing docs were found and how they relate
+3. **IA Proposal** — Where in the navigation this should go (section, group, title, path, rationale)
+4. **Documentation Plan** — Which page types to create and why
+5. **Generated Files** — Complete .mdx content for each file
+6. **Docs to Update** — Existing files that need changes
+7. **Cross Links** — Suggestions for linking from other pages
 
-Carefully read the PRD and PM input. Extract and summarize:
+Return your response as valid JSON with this exact structure:
 
-- **What** the feature does (one paragraph)
-- **Who** the target audience is (developers, admins, end users)
-- **Why** it exists (the user problem it solves)
-- **Key concepts** that need to be explained
-- **Prerequisites** a user would need before using this feature
-- **Configuration surfaces** (Dashboard UI, Management API, CLI, SDK)
-- **Any limitations, Early Access/Beta status, or plan restrictions** (Enterprise, Professional, etc.)
+\`\`\`json
+{
+  "featureSummary": {
+    "what": "One paragraph description",
+    "who": "Target audience",
+    "why": "Problem it solves",
+    "keyConcepts": ["concept1", "concept2"],
+    "prerequisites": ["prereq1", "prereq2"],
+    "configurationSurfaces": ["Dashboard", "API", "SDK"],
+    "limitations": "Any EA/Beta status or restrictions"
+  },
+  "relatedDocs": [
+    {
+      "path": "path/to/file.mdx",
+      "relationship": "Describes related feature",
+      "action": "Add cross-link to new doc"
+    }
+  ],
+  "iaProposal": {
+    "section": "Section name from docs.json",
+    "group": "Group name if applicable",
+    "title": "Page title",
+    "path": "proposed/file/path.mdx",
+    "rationale": "Why this placement makes sense"
+  },
+  "documentationPlan": [
+    {
+      "type": "concept|guide|howto|reference|troubleshooting",
+      "title": "Page title",
+      "rationale": "Why this page type"
+    }
+  ],
+  "generatedFiles": [
+    {
+      "path": "docs/path/to/file.mdx",
+      "title": "Page Title",
+      "content": "Complete .mdx content with frontmatter"
+    }
+  ],
+  "docsToUpdate": [
+    {
+      "path": "existing/file.mdx",
+      "change": "Description of needed change",
+      "suggestion": "Specific text to add or modify"
+    }
+  ],
+  "crossLinks": [
+    {
+      "fromPage": "existing/page.mdx",
+      "linkText": "Suggested link text",
+      "context": "Where/why to add it"
+    }
+  ],
+  "navigationUpdate": {
+    "section": "Section in docs.json",
+    "jsonSnippet": "Exact JSON to add to docs.json navigation"
+  }
+}
+\`\`\`
 
-Present this summary first.
-
-### Phase 2: Determine Documentation Types
-
-Determine which page types to create. Only create pages warranted by the feature's complexity:
-
-- **Concept page** — What it is, how it works, key terms. Answer: Who uses it, What it does, When it's used, Where it fits, Why it's needed, How it works.
-- **Guide page** — End-to-end task-oriented tutorial. Start with the goal, list all prerequisites, include examples for every step.
-- **How-to guides** — Task-oriented pages for specific configurations or use cases.
-- **Reference page** — Configuration options, API parameters, response fields, error codes, settings.
-- **Troubleshooting page** — Only if the feature has known failure modes.
-
-### Phase 3: Generate the Documentation Set
-
-Write the full documentation set. Each page should:
-- Include frontmatter with title and description
-- Follow the Auth0 Style Guide strictly
-- Use MDX format with proper components
-- Be complete and publication-ready
-
-Present your output with:
-1. **Summary** — Feature understanding from Phase 1
-2. **Documentation Plan** — Which page types you're creating and why
-3. **Documentation Files** — Complete .mdx content for each page with proposed file paths
-
-## Auth0 Style Guide (Critical Rules)
+## Auth0 Style Guide (apply to all generated content)
 
 ### Language
-- American English per AP Stylebook
-- Active voice and present tense always
-- Short sentences (3-5 sentences per paragraph)
-- Spell out one through nine; use numerals for 10+
+- American English, active voice, present tense
+- Short sentences (3-5 per paragraph)
+- Spell out one-nine; numerals for 10+
 
 ### Document Structure
 - **Title case** for document titles
 - **Sentence case** for headings
 - Max 3 heading levels
-- Start with the goal/what user achieves, not "This guide will..."
-- Never open with: "This guide will show...", "This tutorial...", "This article..."
+- Start with goal/outcome, never "This guide will..."
 
 ### Content Types
-**Concept pages:**
-- Simple subject-only titles: "Custom Database Connections" not "Introduction to..."
-- Answer: Who, What, When, Where, Why, How
-- No step-by-step instructions
+**Concept pages:** Simple titles, answer Who/What/When/Where/Why/How, no steps
+**Guide pages:** Goal first, list prerequisites, every step has examples
+**Reference pages:** Dictionary-style, each item standalone with examples
 
-**Guide pages:**
-- Start with the goal
-- List all prerequisites
-- Every step needs a copy/paste example
-- Task-oriented titles: "Use Your Own Database" not "How to Connect a Custom Database"
-
-**Reference pages:**
-- Each item stands alone (like a dictionary)
-- Include examples
-- Simple titles, minimal acronyms
-
-### Code and Commands
-- Inline code for: file names, function names, parameter names
-- Code blocks for: mandatory commands, long snippets, config files
-- All code blocks must have: language and \`wrap lines\`
-- Example: \`\`\`tsx wrap lines
-- Four spaces for indentation
-- ALL_CAPS for placeholder variables (e.g., YOUR_API_KEY)
+### Code
+- Inline code: file/function/parameter names
+- Code blocks: commands, long snippets (always include language + \`wrap lines\`)
+- ALL_CAPS for placeholders (YOUR_API_KEY)
+- Four-space indentation
 
 ### Components
-- **\`<Callout>\`** for notes (use exactly: \`<Callout icon="file-lines" color="#0EA5E9" iconType="regular">\`)
-- **\`<Warning>\`** for security issues, deprecated content, or Beta/EA notices
-- **\`<Tabs>\`** for 2-3 options for the same function only
-- Use components sparingly
+- \`<Callout icon="file-lines" color="#0EA5E9" iconType="regular">\` for notes
+- \`<Warning>\` for security/deprecated/EA content
+- \`<Tabs>\` only for 2-3 options of same function
 
-### Beta/Early Access Notices
-For features in Beta or Early Access, add at the top:
-
+### Beta/EA Notice (if applicable)
 \`\`\`mdx
 <Warning>
-[Feature name] is currently available in Early Access. To learn more about Auth0's product release cycle, read [Product Release Stages](https://auth0.com/docs/troubleshoot/product-lifecycle/product-release-stages). To participate in this program, contact [Auth0 Support](https://support.auth0.com) or your Technical Account Manager.
+[Feature] is currently available in Early Access. Read [Product Release Stages](https://auth0.com/docs/troubleshoot/product-lifecycle/product-release-stages). Contact [Auth0 Support](https://support.auth0.com) or your TAM to participate.
 
-By using this feature, you agree to the applicable Free Trial terms in Okta's [Master Subscription Agreement](https://www.okta.com/legal).
+By using this feature, you agree to applicable Free Trial terms in Okta's [Master Subscription Agreement](https://www.okta.com/legal).
 </Warning>
 \`\`\`
 
-### Frontmatter
-Every page must begin with:
-
+### Frontmatter (required)
 \`\`\`yaml
 ---
-title: "Clear, specific, keyword-rich title under 60 characters"
-description: "Concise description explaining page purpose and value"
+title: "Keyword-rich title under 60 chars"
+description: "Concise purpose and value"
 ---
 \`\`\`
 
-### Links
-- Link text must be self-explanatory
-- Put important words at the front
-- Format: \`To learn more, read [article name].\`
-- Dashboard navigation: "Navigate to **Auth0 Dashboard > Authentication > Database**"
-
-### Brand Names
-- First mention: full name (e.g., "Auth0 Management API")
-- Subsequent: abbreviated (e.g., "Management API")
-- No "the" before product names unless qualifying
-- Do use "the" before tool/API names
-
-### Writing Conventions
-- "must" = required, "can" = available, "may" = optional
-- "Select" not "click" for all UI interactions
-- "for example" not "e.g."
-- Never use "etc."
-- No jargon, idioms, or cultural references
-- Write for non-native English speakers
-
-Now generate the documentation.`;
+Return ONLY valid JSON, no other text.`;
 
 export async function POST(req: NextRequest) {
   try {
@@ -162,24 +161,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Extract text from file based on type
+    // Extract text from file
     let prdContent: string;
 
     if (file.type === 'application/pdf') {
-      // For PDF files, we'll need pdf-parse or similar
-      // For now, return an error asking user to convert to text
       return NextResponse.json(
-        { ok: false, error: 'PDF support coming soon. Please convert your PRD to .txt or .md format for now.' },
+        { ok: false, error: 'PDF support coming soon. Please convert your PRD to .txt or .md format.' },
         { status: 400 }
       );
     } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
-      // For Word files, we'll need mammoth or similar
       return NextResponse.json(
-        { ok: false, error: 'Word document support coming soon. Please convert your PRD to .txt or .md format for now.' },
+        { ok: false, error: 'Word document support coming soon. Please convert your PRD to .txt or .md format.' },
         { status: 400 }
       );
     } else {
-      // Plain text or markdown
       prdContent = await file.text();
     }
 
@@ -190,7 +185,23 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Build the user message
+    // Clone or use cached docs-v2 repo
+    const docsRepoPath = await getDocsRepo();
+
+    // Search for related docs (basic keyword search)
+    const keywords = extractKeywords(prdContent);
+    const relatedDocs = await searchDocs(docsRepoPath, targetSite, keywords);
+
+    // Read docs.json for navigation context
+    const docsJsonPath = path.join(docsRepoPath, targetSite, 'docs.json');
+    let docsJson = '{}';
+    try {
+      docsJson = await fs.readFile(docsJsonPath, 'utf-8');
+    } catch {
+      console.warn('[DocGenerator] Could not read docs.json from', docsJsonPath);
+    }
+
+    // Build comprehensive user message
     const userMessage = `## PRD
 
 ${prdContent}
@@ -199,7 +210,18 @@ ${pmInput ? `## PM Input\n\n${pmInput}\n\n` : ''}## Target Documentation Site
 
 ${targetSite === 'main' ? 'Main site (auth0.com/docs)' : 'Auth4GenAI site (auth0.com/ai/docs)'}
 
-Please generate the complete documentation set following the Auth0 Style Guide.`;
+## Related Documentation Found
+
+The following existing docs were found that may be related:
+${relatedDocs.length > 0 ? relatedDocs.map(d => `- ${d.path}: ${d.excerpt}`).join('\n') : 'None found'}
+
+## Current Navigation Structure (docs.json)
+
+\`\`\`json
+${docsJson.slice(0, 5000)}
+\`\`\`
+
+Generate the complete structured JSON response with feature summary, IA proposal, documentation files, and navigation updates.`;
 
     // Call Claude API
     const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
@@ -224,7 +246,7 @@ Please generate the complete documentation set following the Auth0 Style Guide.`
       headers,
       body: JSON.stringify({
         model,
-        max_tokens: 16000, // Large output for comprehensive docs
+        max_tokens: 16000,
         system: DOC_GENERATOR_PROMPT,
         messages: [
           {
@@ -245,21 +267,47 @@ Please generate the complete documentation set following the Auth0 Style Guide.`
     }
 
     const result = await response.json();
-    const documentation = result.content?.[0]?.text;
+    const content = result.content?.[0]?.text;
 
-    if (!documentation) {
+    if (!content) {
       return NextResponse.json(
-        { ok: false, error: 'No documentation generated' },
+        { ok: false, error: 'No response from AI' },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({
-      ok: true,
-      documentation,
-      fileName: file.name,
-      targetSite,
-    });
+    // Extract JSON from response (Claude might wrap it in markdown)
+    const jsonMatch = content.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      // Fallback: return raw content if JSON parsing fails
+      return NextResponse.json({
+        ok: true,
+        documentation: content,
+        fileName: file.name,
+        targetSite,
+        structured: false,
+      });
+    }
+
+    try {
+      const parsed = JSON.parse(jsonMatch[0]);
+      return NextResponse.json({
+        ok: true,
+        ...parsed,
+        fileName: file.name,
+        targetSite,
+        structured: true,
+      });
+    } catch {
+      // Fallback to raw content
+      return NextResponse.json({
+        ok: true,
+        documentation: content,
+        fileName: file.name,
+        targetSite,
+        structured: false,
+      });
+    }
   } catch (err: any) {
     console.error('[DocGenerator] Error:', err);
     return NextResponse.json(
@@ -267,4 +315,77 @@ Please generate the complete documentation set following the Auth0 Style Guide.`
       { status: 500 }
     );
   }
+}
+
+// Helper: Get or clone docs-v2 repo
+async function getDocsRepo(): Promise<string> {
+  const tmpDir = os.tmpdir();
+  const repoPath = path.join(tmpDir, 'docs-v2-cache');
+
+  try {
+    // Check if repo already exists
+    await fs.access(repoPath);
+    // Pull latest
+    await execAsync('git pull origin main', { cwd: repoPath });
+    return repoPath;
+  } catch {
+    // Clone repo
+    const repoUrl = 'https://github.com/auth0/docs-v2.git';
+    await execAsync(`git clone --depth 1 ${repoUrl} ${repoPath}`);
+    return repoPath;
+  }
+}
+
+// Helper: Extract keywords from PRD
+function extractKeywords(prdContent: string): string[] {
+  // Simple keyword extraction - get significant words
+  const words = prdContent.toLowerCase()
+    .split(/\s+/)
+    .filter(w => w.length > 4)
+    .filter(w => !['about', 'should', 'would', 'could', 'there', 'which', 'these', 'those'].includes(w));
+
+  // Get most common words
+  const freq: Record<string, number> = {};
+  for (const word of words) {
+    freq[word] = (freq[word] || 0) + 1;
+  }
+
+  return Object.entries(freq)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([word]) => word);
+}
+
+// Helper: Search docs for related content
+async function searchDocs(repoPath: string, targetSite: string, keywords: string[]): Promise<Array<{ path: string; excerpt: string }>> {
+  if (keywords.length === 0) return [];
+
+  const docsPath = path.join(repoPath, targetSite, 'docs');
+  const results: Array<{ path: string; excerpt: string }> = [];
+
+  try {
+    // Use grep to search for keywords
+    const keywordPattern = keywords.join('|');
+    const { stdout } = await execAsync(
+      `grep -r -i -l "${keywordPattern}" "${docsPath}" | head -20`,
+      { maxBuffer: 1024 * 1024 }
+    );
+
+    const files = stdout.trim().split('\n').filter(Boolean);
+
+    for (const file of files.slice(0, 10)) {
+      const relativePath = file.replace(repoPath + '/', '');
+      try {
+        const content = await fs.readFile(file, 'utf-8');
+        const excerpt = content.slice(0, 200).replace(/\n/g, ' ');
+        results.push({ path: relativePath, excerpt });
+      } catch {
+        // Skip files we can't read
+      }
+    }
+  } catch {
+    // No matches or grep failed
+  }
+
+  return results;
 }
