@@ -28,7 +28,6 @@ export default function RedirectsPage() {
   const chains = useMemo(() => data?.warnings?.chains ?? [], [data]);
   const loops = useMemo(() => data?.warnings?.loops ?? [], [data]);
   const missingDst = useMemo(() => data?.warnings?.missingDestination ?? [], [data]);
-  const missingSrc = useMemo(() => data?.warnings?.missingSource ?? [], [data]);
   const missingDstResolvable = useMemo(() => data?.warnings?.missingDestinationResolvable ?? [], [data]);
   const missingDstUnresolvable = useMemo(() => data?.warnings?.missingDestinationUnresolvable ?? [], [data]);
 
@@ -67,7 +66,6 @@ export default function RedirectsPage() {
             <Badge variant="secondary">redirects: {data?.redirects?.length ?? 0}</Badge>
             <Badge variant={missingDstUnresolvable.length ? 'destructive' : 'secondary'}>missing dest (unresolvable): {missingDstUnresolvable.length}</Badge>
             <Badge variant={missingDstResolvable.length ? 'default' : 'secondary'}>missing dest (resolves via redirects): {missingDstResolvable.length}</Badge>
-            <Badge variant={missingSrc.length ? 'secondary' : 'secondary'}>missing source: {missingSrc.length}</Badge>
             <Badge variant={chains.length ? 'default' : 'secondary'}>chains: {chains.length}</Badge>
             <Badge variant={loops.length ? 'destructive' : 'secondary'}>loops: {loops.length}</Badge>
           </CardContent>
@@ -80,9 +78,6 @@ export default function RedirectsPage() {
             </TabsTrigger>
             <TabsTrigger value="missing-dst-resolvable" className="gap-1.5">
               <Repeat2 className="w-4 h-4" /> Missing destination (resolves)
-            </TabsTrigger>
-            <TabsTrigger value="missing-src" className="gap-1.5">
-              <ShieldAlert className="w-4 h-4" /> Missing source
             </TabsTrigger>
             <TabsTrigger value="chains" className="gap-1.5">
               <Repeat2 className="w-4 h-4" /> Chains
@@ -109,10 +104,6 @@ export default function RedirectsPage() {
               ))}
               {missingDstResolvable.length === 0 && <div className="text-sm text-muted-foreground">None</div>}
             </div>
-          </TabsContent>
-
-          <TabsContent value="missing-src" className="mt-4">
-            <RouteList items={missingSrc} />
           </TabsContent>
 
           <TabsContent value="chains" className="mt-4">
