@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { execSync } from 'child_process';
 import type { AuditCheckStatus, DocNode } from '@/types';
 import { requireSession } from '@/lib/session';
 
@@ -35,32 +34,26 @@ type PRReviewResult = {
   issues?: AuditIssue[];
 };
 
-function run(cmd: string, args: string[], options?: { cwd?: string; githubToken?: string }): string {
-  const fullCmd = [cmd, ...args].join(' ');
-  try {
-    const execOptions: any = {
-      cwd: options?.cwd,
-      encoding: 'utf-8',
-      maxBuffer: 50 * 1024 * 1024,
-    };
+// Make GitHub API calls directly instead of using gh CLI
+async function githubApi(endpoint: string, token: string, options?: RequestInit): Promise<any> {
+  const url = endpoint.startsWith('http') ? endpoint : `https://api.github.com${endpoint}`;
 
-    // If GitHub token is provided, inject it via environment variable
-    // Priority: user's token → global env var (for 30-day transition)
-    if (options?.githubToken) {
-      const token = options.githubToken || process.env.MAINTENANCE_GH_TOKEN;
-      if (token) {
-        execOptions.env = {
-          ...process.env,
-          GH_TOKEN: token, // GitHub CLI uses GH_TOKEN for authentication
-          GITHUB_TOKEN: token, // Some tools use GITHUB_TOKEN
-        };
-      }
-    }
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...options?.headers,
+    },
+  });
 
-    return execSync(fullCmd, execOptions);
-  } catch (e: any) {
-    throw new Error(e?.stderr || e?.message || String(e));
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`GitHub API error (${response.status}): ${error}`);
   }
+
+  return response.json();
 }
 
 // Fetch permalinks for broken link check
@@ -211,13 +204,21 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
     const [, owner, repo, prNumber] = match;
     const fullRepo = `${owner}/${repo}`;
 
-    // Get PR details
-    const prDetailsRaw = run('gh', [
-      'pr', 'view', prNumber,
-      '--repo', fullRepo,
-      '--json', 'number,title,author,url,headRefName,baseRefName,files',
-    ], { githubToken });
-    const prDetails = JSON.parse(prDetailsRaw);
+    // Get PR details via GitHub API
+    const prDetails = await githubApi(`/repos/${fullRepo}/pulls/${prNumber}`, githubToken);
+
+    // Get PR files
+    const prFiles = await githubApi(`/repos/${fullRepo}/pulls/${prNumber}/files`, githubToken);
+
+    // Transform to match expected format
+    prDetails.files = prFiles.map((f: any) => ({
+      path: f.filename,
+      status: f.status,
+      additions: f.additions,
+      deletions: f.deletions,
+    }));
+    prDetails.headRefName = prDetails.head.ref;
+    prDetails.baseRefName = prDetails.base.ref;
 
     // Filter to MDX files only
     const mdxFiles = (prDetails.files || []).filter((f: PRFile) =>
@@ -248,15 +249,14 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
       if (file.status === 'removed') continue;
 
       try {
-        // Fetch file content from PR branch
-        const contentRaw = run('gh', [
-          'api',
+        // Fetch file content from PR branch via GitHub API
+        const fileData = await githubApi(
           `/repos/${fullRepo}/contents/${file.path}?ref=${prDetails.headRefName}`,
-          '--jq', '.content',
-        ], { githubToken });
+          githubToken
+        );
 
         // Decode base64 content
-        const content = Buffer.from(contentRaw.trim(), 'base64').toString('utf-8');
+        const content = Buffer.from(fileData.content, 'base64').toString('utf-8');
 
         // Run analysis
         const analysis = analyzeMdx(content);
