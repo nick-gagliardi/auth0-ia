@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-03T18:24:05.928Z",
+  "generatedAtUtc": "2026-03-25T18:55:57.871Z",
   "hubCutoff": 50,
   "minIntersection": 3,
   "scoreThreshold": 0.4,
@@ -73,6 +73,20 @@
       "bNav": "Troubleshoot",
       "aFolder": "customize",
       "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/manage-users/sessions/session-metadata.mdx",
+      "b": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
+      "score": 0.4947,
+      "simOut": 0.1579,
+      "simIn": 1,
+      "sharedOut": 3,
+      "sharedIn": 1,
+      "convergenceType": "context",
+      "aNav": "Manage Users",
+      "bNav": "Secure",
+      "aFolder": "manage-users",
+      "bFolder": "secure"
     },
     {
       "a": "main/docs/customize/extensions/authorization-extension/configure-authorization-extension.mdx",

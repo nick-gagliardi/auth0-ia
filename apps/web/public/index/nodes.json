@@ -97,13 +97,6 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/releases.mdx",
-    "type": "page",
-    "filePath": "main/docs/releases.mdx",
-    "title": "Releases",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/secure.mdx",
     "type": "page",
     "filePath": "main/docs/secure.mdx",
@@ -865,9 +858,9 @@
     "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx",
     "type": "page",
     "filePath": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx",
-    "title": "Enterprise",
+    "title": "Enterprise Rate Limits",
     "navPaths": [
-      "Documentation > Troubleshoot > Get Support > Customer Support > Operational Policies > Rate Limit Policy > Rate Limit Configurations > Enterprise"
+      "Documentation > Troubleshoot > Get Support > Customer Support > Operational Policies > Rate Limit Policy > Rate Limit Configurations > Enterprise Rate Limits"
     ]
   },
   {
@@ -1451,6 +1444,15 @@
     "title": "Configure Refresh Token Metadata",
     "navPaths": [
       "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Metadata > Configure Refresh Token Metadata"
+    ]
+  },
+  {
+    "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
+    "type": "page",
+    "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
+    "title": "Refresh token metadata and session metadata Use Cases",
+    "navPaths": [
+      "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Metadata > Refresh token metadata and session metadata Use Cases"
     ]
   },
   {
@@ -3062,24 +3064,10 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/webapp/java-ee/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/webapp/java-ee/_index.mdx",
-    "title": "Add Login to Your Java EE web application",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/webapp/java-ee/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/webapp/java-ee/index.mdx",
-    "title": "Java EE",
-    "navPaths": []
-  },
-  {
-    "id": "main/docs/quickstart/webapp/java-ee/interactive.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/webapp/java-ee/interactive.mdx",
-    "title": "Add Login to Your Java EE web application",
+    "title": "Add Login to Your Java EE Application",
     "navPaths": []
   },
   {
@@ -3362,24 +3350,17 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/native/maui/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/native/maui/_index.mdx",
-    "title": "Add Login to Your MAUI Application",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/native/maui/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/maui/index.mdx",
-    "title": "MAUI",
+    "title": "Add login to your .NET MAUI application",
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/native/maui/interactive.mdx",
+    "id": "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx",
     "type": "page",
-    "filePath": "main/docs/quickstart/native/maui/interactive.mdx",
-    "title": "Add Login to Your MAUI Application",
+    "filePath": "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx",
+    "title": "Add Native Facebook Login to Your iOS Application",
     "navPaths": []
   },
   {
@@ -3481,24 +3462,10 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/native/android-facebook-login/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/native/android-facebook-login/_index.mdx",
-    "title": "Android - Facebook Login",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/native/android-facebook-login/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/android-facebook-login/index.mdx",
-    "title": "Android - Facebook Login",
-    "navPaths": []
-  },
-  {
-    "id": "main/docs/quickstart/native/android-facebook-login/interactive.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/native/android-facebook-login/interactive.mdx",
-    "title": "Android - Facebook Login",
+    "title": "Add Native Facebook Login to Your Android Application",
     "navPaths": []
   },
   {
@@ -3652,7 +3619,7 @@
     "id": "main/docs/quickstart/backend/nodejs/interactive.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/backend/nodejs/interactive.mdx",
-    "title": "Secure Your Node.js API with Auth0",
+    "title": "Secure Express API with Auth0",
     "navPaths": []
   },
   {
@@ -3691,24 +3658,10 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/backend/java-spring-security5/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/backend/java-spring-security5/_index.mdx",
-    "title": "Add Authorization to Your Spring Boot Application",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/backend/java-spring-security5/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/backend/java-spring-security5/index.mdx",
-    "title": "Spring Boot API: Authorization",
-    "navPaths": []
-  },
-  {
-    "id": "main/docs/quickstart/backend/java-spring-security5/interactive.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/backend/java-spring-security5/interactive.mdx",
-    "title": "Add Authorization to Your Spring Boot Application",
+    "title": "Java Springboot API",
     "navPaths": []
   },
   {
@@ -3793,13 +3746,6 @@
     "type": "page",
     "filePath": "main/docs/quickstart/backend/aspnet-core-webapi/index.mdx",
     "title": "ASP.NET Core Web API",
-    "navPaths": []
-  },
-  {
-    "id": "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx",
-    "type": "page",
-    "filePath": "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx",
-    "title": "Understand How Metadata Works in User Profiles",
     "navPaths": []
   },
   {
@@ -10735,6 +10681,15 @@
     ]
   },
   {
+    "id": "main/docs/get-started/build-with-ai-tools.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/build-with-ai-tools.mdx",
+    "title": "Build with AI Tools",
+    "navPaths": [
+      "Documentation > Get Started > Auth0 AI > Build with AI Tools"
+    ]
+  },
+  {
     "id": "main/docs/get-started/dashboard-profile.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/dashboard-profile.mdx",
@@ -10866,7 +10821,7 @@
     "filePath": "main/docs/get-started/manage-dashboard-access/add-change-remove-mfa.mdx",
     "title": "Multi-Factor Authentication for Dashboard Users",
     "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Manage Dashboard Access > Auth0 AI > Multi-Factor Authentication for Dashboard Users"
+      "Documentation > Get Started > Configure Auth0 > Manage Dashboard Access > Multi-factor authentication for Dashboard users > Multi-Factor Authentication for Dashboard Users"
     ]
   },
   {
@@ -10936,7 +10891,7 @@
     "filePath": "main/docs/get-started/manage-dashboard-access/add-change-remove-mfa/add-mfa.mdx",
     "title": "Add Multi-Factor Authentication for Auth0 Dashboard Access",
     "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Manage Dashboard Access > Auth0 AI > Add Multi-Factor Authentication for Auth0 Dashboard Access"
+      "Documentation > Get Started > Configure Auth0 > Manage Dashboard Access > Multi-factor authentication for Dashboard users > Add Multi-Factor Authentication for Auth0 Dashboard Access"
     ]
   },
   {
@@ -10945,7 +10900,7 @@
     "filePath": "main/docs/get-started/manage-dashboard-access/add-change-remove-mfa/remove-or-change-dashboard-multi-factor-authentication.mdx",
     "title": "Remove or Change Dashboard Multi-Factor Authentication",
     "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Manage Dashboard Access > Auth0 AI > Remove or Change Dashboard Multi-Factor Authentication"
+      "Documentation > Get Started > Configure Auth0 > Manage Dashboard Access > Multi-factor authentication for Dashboard users > Remove or Change Dashboard Multi-Factor Authentication"
     ]
   },
   {
@@ -11252,15 +11207,6 @@
     "title": "Authorization Code Flow with JWT-Secured Authorization Requests (JAR)",
     "navPaths": [
       "Documentation > Get Started > Plan and Design > Authentication and Authorization Flows > Authorization Code Flow > Authorization Code Flow with JWT-Secured Authorization Requests (JAR)"
-    ]
-  },
-  {
-    "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
-    "type": "page",
-    "filePath": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
-    "title": "Authorization Code Flow with PAR and JAR",
-    "navPaths": [
-      "Documentation > Get Started > Plan and Design > Authentication and Authorization Flows > Authorization Code Flow > Authorization Code Flow with PAR and JAR"
     ]
   },
   {
@@ -15336,15 +15282,6 @@
     ]
   },
   {
-    "id": "main/docs/customize/actions/releases.mdx",
-    "type": "page",
-    "filePath": "main/docs/customize/actions/releases.mdx",
-    "title": "Releases",
-    "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Releases"
-    ]
-  },
-  {
     "id": "main/docs/customize/actions/test-actions.mdx",
     "type": "page",
     "filePath": "main/docs/customize/actions/test-actions.mdx",
@@ -15584,15 +15521,6 @@
     "title": "Redirect with Actions",
     "navPaths": [
       "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Login Trigger > Redirect with Actions"
-    ]
-  },
-  {
-    "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-    "type": "page",
-    "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-    "title": "Releases",
-    "navPaths": [
-      "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Login Trigger > Releases"
     ]
   },
   {
@@ -17448,14 +17376,18 @@
     "type": "page",
     "filePath": "main/docs/authenticate/database-connections/passkeys/native-passkeys-api.mdx",
     "title": "Native Passkeys API",
-    "navPaths": []
+    "navPaths": [
+      "Documentation > Authenticate > Provision Users > Database Connections > Passkeys > Native Passkeys API"
+    ]
   },
   {
     "id": "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx",
     "type": "page",
     "filePath": "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx",
     "title": "Native Passkeys for Mobile Applications",
-    "navPaths": []
+    "navPaths": [
+      "Documentation > Authenticate > Provision Users > Database Connections > Passkeys > Native Passkeys for Mobile Applications"
+    ]
   },
   {
     "id": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
@@ -17650,49 +17582,49 @@
     "id": "main/docs/api/myorganization/index.mdx",
     "type": "page",
     "filePath": "main/docs/api/myorganization/index.mdx",
-    "title": "MyOrganization API Reference",
+    "title": "My Organization API Reference",
     "navPaths": [
-      "API Reference > MyOrganization API > MyOrganization API Reference"
+      "API Reference > My Organization API > My Organization API Reference"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+    "id": "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+    "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Domain Management > create a domain for an organization"
+      "API Reference > My Organization API >   > Domain Management > create a domain"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+    "id": "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+    "filePath": "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Domain Management > delete domain from organization"
+      "API Reference > My Organization API >   > Domain Management > delete a domain"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+    "id": "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+    "filePath": "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Domain Management > get identity providers associated with an organization domain"
+      "API Reference > My Organization API >   > Domain Management > get a domain"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+    "id": "main/docs/api/myorganization/org-domain-management/list-domains.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+    "filePath": "main/docs/api/myorganization/org-domain-management/list-domains.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Domain Management > get organization domain"
+      "API Reference > My Organization API >   > Domain Management > list domains"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+    "id": "main/docs/api/myorganization/org-domain-management/list-identity-providers-for-a-domain.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+    "filePath": "main/docs/api/myorganization/org-domain-management/list-identity-providers-for-a-domain.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Domain Management > list organization domains"
+      "API Reference > My Organization API >   > Domain Management > list identity providers for a domain"
     ]
   },
   {
@@ -17700,7 +17632,7 @@
     "type": "page",
     "filePath": "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Domain Management > start domain verification"
+      "API Reference > My Organization API >   > Domain Management > start domain verification"
     ]
   },
   {
@@ -17708,87 +17640,87 @@
     "type": "page",
     "filePath": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Details > get organization details"
+      "API Reference > My Organization API >   > Organization Details Management > get organization details"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+    "id": "main/docs/api/myorganization/org-details/update-organization-details.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+    "filePath": "main/docs/api/myorganization/org-details/update-organization-details.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Org Details > modify organization details"
+      "API Reference > My Organization API >   > Organization Details Management > update organization details"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+    "id": "main/docs/api/myorganization/idp-management/associate-a-domain-with-an-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/associate-a-domain-with-an-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > associate domain with identity provider"
+      "API Reference > My Organization API >   > Identity Provider Management > associate a domain with an identity provider"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+    "id": "main/docs/api/myorganization/idp-management/create-a-provisioning-configuration.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/create-a-provisioning-configuration.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > create identity provider"
+      "API Reference > My Organization API >   > Identity Provider Management > create a provisioning configuration"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+    "id": "main/docs/api/myorganization/idp-management/create-a-provisioning-scim-token.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/create-a-provisioning-scim-token.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > create provisioning configuration"
+      "API Reference > My Organization API >   > Identity Provider Management > create a provisioning scim token"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+    "id": "main/docs/api/myorganization/idp-management/create-an-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/create-an-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > create provisioning scim token"
+      "API Reference > My Organization API >   > Identity Provider Management > create an identity provider"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+    "id": "main/docs/api/myorganization/idp-management/delete-a-provisioning-configuration.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/delete-a-provisioning-configuration.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > delete identity provider"
+      "API Reference > My Organization API >   > Identity Provider Management > delete a provisioning configuration"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+    "id": "main/docs/api/myorganization/idp-management/delete-an-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/delete-an-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > delete provisioning configuration"
+      "API Reference > My Organization API >   > Identity Provider Management > delete an identity provider"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+    "id": "main/docs/api/myorganization/idp-management/detach-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > detach identity provider from organization"
+      "API Reference > My Organization API >   > Identity Provider Management > detach identity provider"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+    "id": "main/docs/api/myorganization/idp-management/get-a-provisioning-configuration.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/get-a-provisioning-configuration.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > get identity provider"
+      "API Reference > My Organization API >   > Identity Provider Management > get a provisioning configuration"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+    "id": "main/docs/api/myorganization/idp-management/get-an-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/get-an-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > get provisioning configuration"
+      "API Reference > My Organization API >   > Identity Provider Management > get an identity provider"
     ]
   },
   {
@@ -17796,7 +17728,7 @@
     "type": "page",
     "filePath": "main/docs/api/myorganization/idp-management/list-identity-providers.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > list identity providers"
+      "API Reference > My Organization API >   > Identity Provider Management > list identity providers"
     ]
   },
   {
@@ -17804,72 +17736,72 @@
     "type": "page",
     "filePath": "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > list provisioning scim tokens"
+      "API Reference > My Organization API >   > Identity Provider Management > list provisioning scim tokens"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+    "id": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attribute-mapping.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attribute-mapping.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > refresh identity provider attributes mapping"
+      "API Reference > My Organization API >   > Identity Provider Management > refresh identity provider attribute mapping"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+    "id": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attribute-mapping.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attribute-mapping.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > refresh provisioning configuration attributes mapping"
+      "API Reference > My Organization API >   > Identity Provider Management > refresh provisioning configuration attribute mapping"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+    "id": "main/docs/api/myorganization/idp-management/remove-a-domain-from-an-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/remove-a-domain-from-an-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > remove domain from identity provider"
+      "API Reference > My Organization API >   > Identity Provider Management > remove a domain from an identity provider"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+    "id": "main/docs/api/myorganization/idp-management/revoke-a-provisioning-scim-token.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/revoke-a-provisioning-scim-token.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > revoke provisioning scim token"
+      "API Reference > My Organization API >   > Identity Provider Management > revoke a provisioning scim token"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+    "id": "main/docs/api/myorganization/idp-management/update-an-identity-provider.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+    "filePath": "main/docs/api/myorganization/idp-management/update-an-identity-provider.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Idp Management > update identity provider"
+      "API Reference > My Organization API >   > Identity Provider Management > update an identity provider"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/config/get-configuration.mdx",
+    "id": "main/docs/api/myorganization/config/get-identity-provider-configuration.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/config/get-configuration.mdx",
+    "filePath": "main/docs/api/myorganization/config/get-identity-provider-configuration.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Configuration > get configuration"
+      "API Reference > My Organization API >   > Configuration > get identity provider configuration"
     ]
   },
   {
-    "id": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+    "id": "main/docs/api/myorganization/config/get-my-organization-api-configuration.mdx",
     "type": "page",
-    "filePath": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+    "filePath": "main/docs/api/myorganization/config/get-my-organization-api-configuration.mdx",
     "navPaths": [
-      "API Reference > MyOrganization API >   > Configuration > get identity providers configuration"
+      "API Reference > My Organization API >   > Configuration > get my organization api configuration"
     ]
   },
   {
     "id": "main/docs/api/myaccount/index.mdx",
     "type": "page",
     "filePath": "main/docs/api/myaccount/index.mdx",
-    "title": "MyAccount API Reference",
+    "title": "My Account API Reference",
     "navPaths": [
-      "API Reference > MyAccount API > MyAccount API Reference"
+      "API Reference > My Account API > My Account API Reference"
     ]
   },
   {
@@ -17877,7 +17809,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Factors > get the status of all factors"
+      "API Reference > My Account API >   > Factors > get the status of all factors"
     ]
   },
   {
@@ -17885,7 +17817,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Connected Accounts > complete a connected account request"
+      "API Reference > My Account API >   > Connected Accounts > complete a connected account request"
     ]
   },
   {
@@ -17893,31 +17825,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Connected Accounts > create a connected account request"
-    ]
-  },
-  {
-    "id": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
-    "type": "page",
-    "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
-    "navPaths": [
-      "API Reference > MyAccount API >   > Connected Accounts > delete a connected account by id"
-    ]
-  },
-  {
-    "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
-    "type": "page",
-    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
-    "navPaths": [
-      "API Reference > MyAccount API >   > Connected Accounts > get a list of available connections for connected accounts"
-    ]
-  },
-  {
-    "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
-    "type": "page",
-    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
-    "navPaths": [
-      "API Reference > MyAccount API >   > Connected Accounts > get a list of connected accounts"
+      "API Reference > My Account API >   > Connected Accounts > create a connected account request"
     ]
   },
   {
@@ -17925,7 +17833,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Authentication Methods > confirm the enrollment of a supported authentication method"
+      "API Reference > My Account API >   > Authentication Methods > confirm the enrollment of a supported authentication method"
     ]
   },
   {
@@ -17933,7 +17841,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Authentication Methods > delete an authentication method by id"
+      "API Reference > My Account API >   > Authentication Methods > delete an authentication method by id"
     ]
   },
   {
@@ -17941,7 +17849,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Authentication Methods > get a list of authentication methods"
+      "API Reference > My Account API >   > Authentication Methods > get a list of authentication methods"
     ]
   },
   {
@@ -17949,7 +17857,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Authentication Methods > get an authentication method by id"
+      "API Reference > My Account API >   > Authentication Methods > get an authentication method by id"
     ]
   },
   {
@@ -17957,7 +17865,7 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Authentication Methods > start the enrollment of a supported authentication method"
+      "API Reference > My Account API >   > Authentication Methods > start the enrollment of a supported authentication method"
     ]
   },
   {
@@ -17965,7 +17873,3152 @@
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx",
     "navPaths": [
-      "API Reference > MyAccount API >   > Authentication Methods > update details of an authentication method by id"
+      "API Reference > My Account API >   > Authentication Methods > update details of an authentication method by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/index.mdx",
+    "title": "Management API Reference",
+    "navPaths": [
+      "API Reference > Management API > Management API Reference"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Verifiable Credentials > create a verifiable credential template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Verifiable Credentials > delete a verifiable credential template by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Verifiable Credentials > get a verifiable credential template by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Verifiable Credentials > list verifiable credentials template for tenant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Verifiable Credentials > update a verifiable credential template by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users By Email > search users by email"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > assign permissions to a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/assign-roles-to-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/assign-roles-to-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > assign roles to a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/clear-risk-assessment-assessors-for-a-specific-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/clear-risk-assessment-assessors-for-a-specific-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > clear risk assessment assessors for a specific user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/create-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/create-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > create a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/creates-an-authentication-method-for-a-given-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/creates-an-authentication-method-for-a-given-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > creates an authentication method for a given user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-a-users-multi-factor-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-a-users-multi-factor-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete a users multi factor provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-all-authentication-methods-for-the-given-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-all-authentication-methods-for-the-given-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete all authentication methods for the given user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-all-authenticators.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-all-authenticators.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete all authenticators"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete an authentication method by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete refresh tokens for a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/delete-sessions-for-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/delete-sessions-for-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > delete sessions for user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > deletes a tokenset for federated connections by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > generate new multi factor authentication recovery code"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get a list of authentication methods"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get a users connected accounts"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-a-users-permissions.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-a-users-permissions.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get a users permissions"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-a-users-roles.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-a-users-roles.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get a users roles"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get an authentication method by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get refresh tokens for a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-sessions-for-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-sessions-for-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get sessions for user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get the first confirmed multi factor authentication enrollment"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get tokensets for a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-users-groups.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-users-groups.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get users groups"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/get-users-log-events.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/get-users-log-events.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > get users log events"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > invalidate all remembered browsers for multi factor authentication"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/link-a-user-account.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/link-a-user-account.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > link a user account"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/list-or-search-users.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/list-or-search-users.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > list or search users"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/list-users-organizations.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/list-users-organizations.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > list users organizations"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/remove-permissions-from-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/remove-permissions-from-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > remove permissions from a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/removes-roles-from-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/removes-roles-from-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > removes roles from a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/revokes-selected-resources-from-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/revokes-selected-resources-from-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > revokes selected resources from a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/unlink-a-user-identity.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/unlink-a-user-identity.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > unlink a user identity"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/update-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/update-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > update a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/update-all-authentication-methods-by-replacing-them-with-the-given-ones.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/update-all-authentication-methods-by-replacing-them-with-the-given-ones.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > update all authentication methods by replacing them with the given ones"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/users/update-an-authentication-method.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/users/update-an-authentication-method.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Users > update an authentication method"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-blocks/get-a-users-blocks.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-blocks/get-a-users-blocks.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Blocks > get a users blocks"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-blocks/get-blocks-by-identifier.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-blocks/get-blocks-by-identifier.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Blocks > get blocks by identifier"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-blocks/unblock-a-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-blocks/unblock-a-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Blocks > unblock a user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-blocks/unblock-by-identifier.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-blocks/unblock-by-identifier.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Blocks > unblock by identifier"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/delete-user-attribute-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/delete-user-attribute-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > delete user attribute profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > get user attribute profile template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > get user attribute profile templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > get user attribute profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profiles.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profiles.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > get user attribute profiles"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/modify-a-user-attribute-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/modify-a-user-attribute-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > modify a user attribute profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/user-attribute-profiles/post-user-attribute-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/user-attribute-profiles/post-user-attribute-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > User Attribute Profiles > post user attribute profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/token-exchange-profiles/create-a-token-exchange-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/token-exchange-profiles/create-a-token-exchange-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Token Exchange Profiles > create a token exchange profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/token-exchange-profiles/delete-a-token-exchange-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/token-exchange-profiles/delete-a-token-exchange-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Token Exchange Profiles > delete a token exchange profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/token-exchange-profiles/get-a-token-exchange-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/token-exchange-profiles/get-a-token-exchange-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Token Exchange Profiles > get a token exchange profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/token-exchange-profiles/get-token-exchange-profiles.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/token-exchange-profiles/get-token-exchange-profiles.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Token Exchange Profiles > get token exchange profiles"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/token-exchange-profiles/update-an-existing-token-exchange-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/token-exchange-profiles/update-an-existing-token-exchange-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Token Exchange Profiles > update an existing token exchange profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/tickets/create-a-password-change-ticket.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/tickets/create-a-password-change-ticket.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Tickets > create a password change ticket"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/tickets/create-an-email-verification-ticket.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/tickets/create-an-email-verification-ticket.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Tickets > create an email verification ticket"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/tenants/get-tenant-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/tenants/get-tenant-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Tenants > get tenant settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/tenants/update-tenant-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/tenants/update-tenant-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Tenants > update tenant settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/supplemental-signals/get-the-supplemental-signals-configuration-for-a-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/supplemental-signals/get-the-supplemental-signals-configuration-for-a-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Supplemental Signals > get the supplemental signals configuration for a tenant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/supplemental-signals/update-the-supplemental-signals-configuration-for-a-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/supplemental-signals/update-the-supplemental-signals-configuration-for-a-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Supplemental Signals > update the supplemental signals configuration for a tenant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/stats/get-active-users-count.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/stats/get-active-users-count.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Stats > get active users count"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/stats/get-daily-stats.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/stats/get-daily-stats.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Stats > get daily stats"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/sessions/delete-session.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/sessions/delete-session.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Sessions > delete session"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/sessions/get-session.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/sessions/get-session.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Sessions > get session"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/sessions/revokes-a-session.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/sessions/revokes-a-session.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Sessions > revokes a session"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/sessions/update-session.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/sessions/update-session.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Sessions > update session"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > create a self service profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > create an sso access ticket to initiate the self service sso flow"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > delete a self service profile by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > get a self service profile by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > get custom text for a self service profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > get self service profiles"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > revoke an sso access ticket"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > set custom text for a self service profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Self Service Profiles > update a self service profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules Configs > delete rules config for a given key"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules-configs/retrieve-config-variable-keys-for-rules-get-rules-configs.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules-configs/retrieve-config-variable-keys-for-rules-get-rules-configs.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules Configs > retrieve config variable keys for rules get rules configs"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules-configs/set-rules-config-for-a-given-key.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules-configs/set-rules-config-for-a-given-key.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules Configs > set rules config for a given key"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules/create-a-rule.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules/create-a-rule.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules > create a rule"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules/delete-a-rule.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules/delete-a-rule.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules > delete a rule"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules/get-a-rule.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules/get-a-rule.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules > get a rule"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules/get-rules.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules/get-rules.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules > get rules"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/rules/update-a-rule.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/rules/update-a-rule.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Rules > update a rule"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/assign-users-to-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/assign-users-to-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > assign users to a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/associate-permissions-with-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/associate-permissions-with-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > associate permissions with a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/create-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/create-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > create a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/delete-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/delete-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > delete a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/get-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/get-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > get a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/get-a-roles-users.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/get-a-roles-users.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > get a roles users"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/get-permissions-granted-by-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/get-permissions-granted-by-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > get permissions granted by role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/get-roles.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/get-roles.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > get roles"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/remove-permissions-from-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/remove-permissions-from-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > remove permissions from a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/roles/update-a-role.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/roles/update-a-role.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Roles > update a role"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/risk-assessments/get-new-device-assessor.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/risk-assessments/get-new-device-assessor.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Risk Assessments > get new device assessor"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/risk-assessments/get-risk-assessment-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/risk-assessments/get-risk-assessment-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Risk Assessments > get risk assessment settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/risk-assessments/update-new-device-assessor.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/risk-assessments/update-new-device-assessor.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Risk Assessments > update new device assessor"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/risk-assessments/update-risk-assessment-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/risk-assessments/update-risk-assessment-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Risk Assessments > update risk assessment settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/resource-servers/create-a-resource-server.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/resource-servers/create-a-resource-server.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Resource Servers > create a resource server"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/resource-servers/delete-a-resource-server.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/resource-servers/delete-a-resource-server.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Resource Servers > delete a resource server"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/resource-servers/get-a-resource-server.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/resource-servers/get-a-resource-server.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Resource Servers > get a resource server"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/resource-servers/get-resource-servers.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/resource-servers/get-resource-servers.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Resource Servers > get resource servers"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Resource Servers > update a resource server"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Refresh Tokens > delete a refresh token"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Refresh Tokens > get a refresh token"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Refresh Tokens > update a refresh token"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > get custom text for a prompt"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > get partials for a prompt"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/get-prompt-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/get-prompt-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > get prompt settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/get-render-setting-configurations-for-all-screens.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/get-render-setting-configurations-for-all-screens.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > get render setting configurations for all screens"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/get-render-settings-for-a-screen.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/get-render-settings-for-a-screen.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > get render settings for a screen"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/set-custom-text-for-a-specific-prompt.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/set-custom-text-for-a-specific-prompt.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > set custom text for a specific prompt"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/set-partials-for-a-prompt.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/set-partials-for-a-prompt.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > set partials for a prompt"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/update-prompt-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/update-prompt-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > update prompt settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/update-render-settings-for-a-screen.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/update-render-settings-for-a-screen.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > update render settings for a screen"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Prompts > update render settings for multiple screens"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > add connections to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > add members to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > assign user roles to an organization member"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > associate a client grant with an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > create an organization discovery domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/create-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/create-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > create an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > create invitations to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete an invitation to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete an organization discovery domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete connections from an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete members from an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete user roles from an organization member"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get a specific invitation to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get an enabled connection for an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get client grants associated to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get connections enabled for an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get invitations to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get members who belong to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-organization-by-name.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-organization-by-name.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get organization by name"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-organizations.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-organizations.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get organizations"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-user-roles-assigned-to-an-organization-member.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-user-roles-assigned-to-an-organization-member.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get user roles assigned to an organization member"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/modify-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/modify-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > modify an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > remove a client grant from an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > retrieve all organization discovery domains"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > retrieve an organization discovery domain by domain name"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > retrieve an organization discovery domain by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > update an organization discovery domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > update the connection of an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/network-acls/create-access-control-list.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/network-acls/create-access-control-list.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Network Acls > create access control list"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/network-acls/delete-access-control-list.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/network-acls/delete-access-control-list.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Network Acls > delete access control list"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/network-acls/get-a-specific-access-control-list-entry-for-a-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/network-acls/get-a-specific-access-control-list-entry-for-a-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Network Acls > get a specific access control list entry for a tenant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/network-acls/get-all-access-control-list-entries-for-a-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/network-acls/get-all-access-control-list-entries-for-a-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Network Acls > get all access control list entries for a tenant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/network-acls/partial-update-for-an-access-control-list.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/network-acls/partial-update-for-an-access-control-list.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Network Acls > partial update for an access control list"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/network-acls/update-access-control-list.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/network-acls/update-access-control-list.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Network Acls > update access control list"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/logs/get-a-log-event-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/logs/get-a-log-event-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Logs > get a log event by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/logs/search-log-events.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/logs/search-log-events.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Logs > search log events"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/log-streams/create-a-log-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/log-streams/create-a-log-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Log Streams > create a log stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/log-streams/delete-log-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/log-streams/delete-log-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Log Streams > delete log stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/log-streams/get-log-stream-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/log-streams/get-log-stream-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Log Streams > get log stream by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/log-streams/get-log-streams.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/log-streams/get-log-streams.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Log Streams > get log streams"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/log-streams/update-a-log-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/log-streams/update-a-log-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Log Streams > update a log stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/create-or-replace-custom-signing-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/create-or-replace-custom-signing-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > create or replace custom signing keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/create-the-new-encryption-key.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/create-the-new-encryption-key.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > create the new encryption key"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/create-the-public-wrapping-key.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/create-the-public-wrapping-key.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > create the public wrapping key"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/delete-custom-signing-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/delete-custom-signing-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > delete custom signing keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/delete-the-encryption-key-by-its-key-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/delete-the-encryption-key-by-its-key-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > delete the encryption key by its key id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/get-all-application-signing-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/get-all-application-signing-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > get all application signing keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/get-all-encryption-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/get-all-encryption-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > get all encryption keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/get-an-application-signing-key-by-its-key-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/get-an-application-signing-key-by-its-key-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > get an application signing key by its key id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/get-custom-signing-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/get-custom-signing-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > get custom signing keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/get-the-encryption-key-by-its-key-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/get-the-encryption-key-by-its-key-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > get the encryption key by its key id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/import-the-encryption-key.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/import-the-encryption-key.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > import the encryption key"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/rekey-the-key-hierarchy.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/rekey-the-key-hierarchy.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > rekey the key hierarchy"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/revoke-an-application-signing-key-by-its-key-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/revoke-an-application-signing-key-by-its-key-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > revoke an application signing key by its key id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/keys/rotate-the-application-signing-key.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/keys/rotate-the-application-signing-key.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Keys > rotate the application signing key"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/jobs/create-export-users-job.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/jobs/create-export-users-job.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Jobs > create export users job"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/jobs/create-import-users-job.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/jobs/create-import-users-job.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Jobs > create import users job"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/jobs/get-a-job.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/jobs/get-a-job.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Jobs > get a job"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/jobs/get-job-error-details.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/jobs/get-job-error-details.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Jobs > get job error details"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/jobs/send-an-email-address-verification-email.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/jobs/send-an-email-address-verification-email.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Jobs > send an email address verification email"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/add-hook-secrets.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/add-hook-secrets.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > add hook secrets"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/create-a-hook.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/create-a-hook.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > create a hook"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/delete-a-hook.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/delete-a-hook.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > delete a hook"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/delete-hook-secrets.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/delete-hook-secrets.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > delete hook secrets"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/get-a-hook.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/get-a-hook.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > get a hook"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/get-hook-secrets.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/get-hook-secrets.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > get hook secrets"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/get-hooks.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/get-hooks.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > get hooks"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/update-a-hook.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/update-a-hook.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > update a hook"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/hooks/update-hook-secrets.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/hooks/update-hook-secrets.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Hooks > update hook secrets"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/configure-aws-sns-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/configure-aws-sns-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > configure aws sns configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/create-a-multi-factor-authentication-enrollment-ticket.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/create-a-multi-factor-authentication-enrollment-ticket.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > create a multi factor authentication enrollment ticket"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/delete-a-multi-factor-authentication-enrollment.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/delete-a-multi-factor-authentication-enrollment.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > delete a multi factor authentication enrollment"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-a-multi-factor-authentication-enrollment.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-a-multi-factor-authentication-enrollment.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get a multi factor authentication enrollment"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-apns-push-notification-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-apns-push-notification-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get apns push notification configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-aws-sns-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-aws-sns-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get aws sns configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-duo-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-duo-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get duo configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-enabled-phone-factors.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-enabled-phone-factors.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get enabled phone factors"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-enrollment-and-verification-phone-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-enrollment-and-verification-phone-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get enrollment and verification phone templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-factors-and-multi-factor-authentication-details.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-factors-and-multi-factor-authentication-details.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get factors and multi factor authentication details"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-multi-factor-authentication-policies.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-multi-factor-authentication-policies.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get multi factor authentication policies"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-phone-provider-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-phone-provider-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get phone provider configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-push-notification-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-push-notification-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get push notification provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-sms-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-sms-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get sms configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-sms-enrollment-and-verification-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-sms-enrollment-and-verification-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get sms enrollment and verification templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-twilio-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-twilio-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get twilio configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/get-twilio-sms-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/get-twilio-sms-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > get twilio sms configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/overwrite-fcm-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/overwrite-fcm-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > overwrite fcm configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/overwrite-fcmv-1-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/overwrite-fcmv-1-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > overwrite fcmv 1 configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/set-the-duo-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/set-the-duo-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > set the duo configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-ap-ns-provider-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-ap-ns-provider-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update ap ns provider configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-apns-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-apns-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update apns configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-aws-sns-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-aws-sns-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update aws sns configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-enrollment-and-verification-phone-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-enrollment-and-verification-phone-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update enrollment and verification phone templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-policies.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-policies.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update multi factor authentication policies"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-type.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-type.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update multi factor authentication type"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-phone-provider-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-phone-provider-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update phone provider configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-push-notification-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-push-notification-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update push notification configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-sms-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-sms-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update sms configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-sms-enrollment-and-verification-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-sms-enrollment-and-verification-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update sms enrollment and verification templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-the-duo-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-the-duo-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update the duo configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-the-enabled-phone-factors.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-the-enabled-phone-factors.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update the enabled phone factors"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-twilio-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-twilio-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update twilio configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/update-twilio-sms-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/update-twilio-sms-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > update twilio sms configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/updates-fcm-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/updates-fcm-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > updates fcm configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/guardian/updates-fcmv-1-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/guardian/updates-fcmv-1-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Guardian > updates fcmv 1 configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/groups/delete-a-group.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/groups/delete-a-group.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Groups > delete a group"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/groups/get-a-group.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/groups/get-a-group.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Groups > get a group"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/groups/get-all-groups.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/groups/get-all-groups.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Groups > get all groups"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/groups/get-group-members.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/groups/get-group-members.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Groups > get group members"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/grants/delete-a-grant-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/grants/delete-a-grant-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Grants > delete a grant by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/grants/delete-a-grant-by-user-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/grants/delete-a-grant-by-user-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Grants > delete a grant by user id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/grants/get-grants.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/grants/get-grants.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Grants > get grants"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/forms/create-a-form.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/forms/create-a-form.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Forms > create a form"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/forms/delete-a-form.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/forms/delete-a-form.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Forms > delete a form"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/forms/get-a-form.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/forms/get-a-form.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Forms > get a form"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/forms/get-forms.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/forms/get-forms.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Forms > get forms"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/forms/update-a-form.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/forms/update-a-form.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Forms > update a form"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/create-a-flow.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/create-a-flow.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > create a flow"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/create-a-flows-vault-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/create-a-flows-vault-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > create a flows vault connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/delete-a-flow-execution.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/delete-a-flow-execution.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > delete a flow execution"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/delete-a-flow.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/delete-a-flow.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > delete a flow"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/delete-a-flows-vault-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/delete-a-flows-vault-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > delete a flows vault connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/get-a-flow-execution.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/get-a-flow-execution.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > get a flow execution"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/get-a-flow.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/get-a-flow.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > get a flow"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/get-a-flows-vault-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/get-a-flows-vault-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > get a flows vault connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/get-flow-executions.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/get-flow-executions.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > get flow executions"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/get-flows-vault-connection-list.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/get-flows-vault-connection-list.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > get flows vault connection list"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/get-flows.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/get-flows.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > get flows"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/update-a-flow.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/update-a-flow.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > update a flow"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Flows > update a flows vault connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > create an event stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > delete an event stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > get a specific events delivery history"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/get-an-event-stream-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/get-an-event-stream-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > get an event stream by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/get-event-streams.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/get-event-streams.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > get event streams"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/get-this-event-streams-delivery-history.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/get-this-event-streams-delivery-history.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > get this event streams delivery history"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/redeliver-a-single-failed-event-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/redeliver-a-single-failed-event-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > redeliver a single failed event by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/redeliver-failed-events.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/redeliver-failed-events.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > redeliver failed events"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/send-a-test-event-to-an-event-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/send-a-test-event-to-an-event-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > send a test event to an event stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/event-streams/update-an-event-stream.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/event-streams/update-an-event-stream.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Event Streams > update an event stream"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/emails/configure-email-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/emails/configure-email-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Emails > configure email provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/emails/delete-email-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/emails/delete-email-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Emails > delete email provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/emails/get-email-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/emails/get-email-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Emails > get email provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/emails/update-email-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/emails/update-email-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Emails > update email provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/email-templates/create-an-email-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/email-templates/create-an-email-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Email Templates > create an email template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/email-templates/get-an-email-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/email-templates/get-an-email-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Email Templates > get an email template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/email-templates/patch-an-email-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/email-templates/patch-an-email-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Email Templates > patch an email template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/email-templates/update-an-email-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/email-templates/update-an-email-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Email Templates > update an email template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/device-credentials/create-a-device-public-key-credential.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/device-credentials/create-a-device-public-key-credential.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Device Credentials > create a device public key credential"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/device-credentials/delete-a-device-credential.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/device-credentials/delete-a-device-credential.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Device Credentials > delete a device credential"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/device-credentials/retrieve-device-credentials.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/device-credentials/retrieve-device-credentials.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Device Credentials > retrieve device credentials"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/configure-a-new-custom-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/configure-a-new-custom-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > configure a new custom domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > delete custom domain configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > get custom domain configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > get custom domains configurations"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > test a custom domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > update custom domain configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > verify a custom domain"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections Scim Configurations > get a list of scim configurations"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections Directory Provisionings > get a list of directory provisioning configurations"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/check-connection-status.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/check-connection-status.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > check connection status"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/create-a-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/create-a-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > create a connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/create-a-directory-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/create-a-directory-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > create a directory provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > create a scim configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/create-a-scim-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/create-a-scim-token.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > create a scim token"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/create-connection-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/create-connection-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > create connection keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > delete a connection user"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/delete-a-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/delete-a-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > delete a connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > delete a connections scim configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/delete-a-connections-scim-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/delete-a-connections-scim-token.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > delete a connections scim token"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/delete-a-directory-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/delete-a-directory-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > delete a directory provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-a-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-a-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get a connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-a-connections-default-directory-provisioning-attribute-mapping.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-a-connections-default-directory-provisioning-attribute-mapping.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get a connections default directory provisioning attribute mapping"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-a-connections-default-scim-mapping.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-a-connections-default-scim-mapping.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get a connections default scim mapping"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-a-connections-scim-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-a-connections-scim-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get a connections scim configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-a-connections-scim-tokens.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-a-connections-scim-tokens.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get a connections scim tokens"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-a-directory-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-a-directory-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get a directory provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-all-connections.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-all-connections.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get all connections"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-connection-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-connection-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get connection keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > get enabled clients for a connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > patch a connections scim configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > patch a directory provisioning configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > request an on demand synchronization of the directory"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/rotate-connection-keys.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/rotate-connection-keys.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > rotate connection keys"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/update-a-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/update-a-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > update a connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connections/update-enabled-clients-for-a-connection.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connections/update-enabled-clients-for-a-connection.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connections > update enabled clients for a connection"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/create-a-connection-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/create-a-connection-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > create a connection profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/delete-connection-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/delete-connection-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > delete connection profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/get-connection-profile-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profile-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > get connection profile template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/get-connection-profile-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profile-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > get connection profile templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/get-connection-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > get connection profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/get-connection-profiles.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profiles.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > get connection profiles"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/connection-profiles/modify-a-connection-profile.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/connection-profiles/modify-a-connection-profile.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Connection Profiles > modify a connection profile"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/create-a-client-credential.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/create-a-client-credential.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > create a client credential"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/create-a-client.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/create-a-client.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > create a client"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/delete-a-client-credential.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/delete-a-client-credential.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > delete a client credential"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/delete-a-client.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/delete-a-client.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > delete a client"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/get-client-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/get-client-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > get client by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/get-client-credential-details.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/get-client-credential-details.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > get client credential details"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/get-client-credentials.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/get-client-credentials.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > get client credentials"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/get-clients.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/get-clients.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > get clients"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > get enabled connections for a client"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > rotate a client secret"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/update-a-client-credential.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/update-a-client-credential.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > update a client credential"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/update-a-client.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/update-a-client.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > update a client"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/client-grants/create-client-grant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/client-grants/create-client-grant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Client Grants > create client grant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/client-grants/delete-client-grant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/client-grants/delete-client-grant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Client Grants > delete client grant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/client-grants/get-client-grant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/client-grants/get-client-grant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Client Grants > get client grant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/client-grants/get-client-grants.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/client-grants/get-client-grants.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Client Grants > get client grants"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/client-grants/get-the-organizations-associated-to-a-client-grant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/client-grants/get-the-organizations-associated-to-a-client-grant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Client Grants > get the organizations associated to a client grant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/client-grants/update-client-grant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/client-grants/update-client-grant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Client Grants > update client grant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/configure-the-phone-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/configure-the-phone-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > configure the phone provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/create-a-phone-notification-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/create-a-phone-notification-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > create a phone notification template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/create-branding-theme.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/create-branding-theme.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > create branding theme"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/delete-a-phone-notification-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/delete-a-phone-notification-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > delete a phone notification template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/delete-branding-theme.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/delete-branding-theme.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > delete branding theme"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/delete-template-for-new-universal-login-experience.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/delete-template-for-new-universal-login-experience.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > delete template for new universal login experience"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/deletes-a-phone-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/deletes-a-phone-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > deletes a phone provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-a-list-of-phone-notification-templates.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-a-list-of-phone-notification-templates.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get a list of phone notification templates"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-a-list-of-phone-providers.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-a-list-of-phone-providers.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get a list of phone providers"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-a-phone-notification-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-a-phone-notification-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get a phone notification template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-a-phone-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-a-phone-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get a phone provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-branding-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-branding-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get branding settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-branding-theme.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-branding-theme.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get branding theme"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-default-branding-theme.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-default-branding-theme.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get default branding theme"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/get-template-for-new-universal-login-experience.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/get-template-for-new-universal-login-experience.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > get template for new universal login experience"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/resets-a-phone-notification-template-values.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/resets-a-phone-notification-template-values.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > resets a phone notification template values"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > send a test phone notification for the configured provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > send a test phone notification for the configured template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/set-template-for-new-universal-login-experience.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/set-template-for-new-universal-login-experience.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > set template for new universal login experience"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/update-a-phone-notification-template.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/update-a-phone-notification-template.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > update a phone notification template"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/update-branding-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/update-branding-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > update branding settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/update-branding-theme.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/update-branding-theme.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > update branding theme"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/branding/update-the-phone-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/branding/update-the-phone-provider.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Branding > update the phone provider"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/get-bot-detection-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/get-bot-detection-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > get bot detection settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/get-breached-password-detection-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/get-breached-password-detection-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > get breached password detection settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/get-brute-force-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/get-brute-force-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > get brute force settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/get-suspicious-ip-throttling-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/get-suspicious-ip-throttling-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > get suspicious ip throttling settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/get-the-captcha-configuration-for-a-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/get-the-captcha-configuration-for-a-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > get the captcha configuration for a tenant"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/partial-update-for-captcha-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/partial-update-for-captcha-configuration.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > partial update for captcha configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/update-bot-detection-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/update-bot-detection-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > update bot detection settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/update-breached-password-detection-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/update-breached-password-detection-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > update breached password detection settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/update-brute-force-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/update-brute-force-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > update brute force settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/attack-protection/update-suspicious-ip-throttling-settings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/attack-protection/update-suspicious-ip-throttling-settings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Attack Protection > update suspicious ip throttling settings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/anomaly/check-if-an-ip-address-is-blocked.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/anomaly/check-if-an-ip-address-is-blocked.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Anomaly > check if an ip address is blocked"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/anomaly/remove-the-blocked-ip-address.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/anomaly/remove-the-blocked-ip-address.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Anomaly > remove the blocked ip address"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/create-a-new-actions-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/create-a-new-actions-module.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > create a new actions module"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/create-a-new-version-of-an-actions-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/create-a-new-version-of-an-actions-module.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > create a new version of an actions module"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/create-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/create-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > create an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/delete-a-specific-actions-module-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/delete-a-specific-actions-module-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > delete a specific actions module by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/delete-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/delete-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > delete an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/deploy-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/deploy-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > deploy an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-a-specific-actions-module-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-a-specific-actions-module-by-id.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get a specific actions module by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get a specific version of an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-actions-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-actions-module.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get a specific version of an actions module"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-actions.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-actions.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get actions"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-an-actions-versions.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-an-actions-versions.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get an actions versions"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-an-execution.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-an-execution.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get an execution"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-trigger-bindings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-trigger-bindings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get trigger bindings"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/get-triggers.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/get-triggers.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > get triggers"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/list-actions-modules.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/list-actions-modules.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > list actions modules"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/list-all-actions-using-an-actions-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/list-all-actions-using-an-actions-module.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > list all actions using an actions module"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/list-all-versions-of-an-actions-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/list-all-versions-of-an-actions-module.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > list all versions of an actions module"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/roll-back-to-a-previous-action-version.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/roll-back-to-a-previous-action-version.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > roll back to a previous action version"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/rollback-an-actions-module-to-a-previous-version.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/rollback-an-actions-module-to-a-previous-version.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > rollback an actions module to a previous version"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/test-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/test-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > test an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > update a specific actions module"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/update-an-action.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/update-an-action.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > update an action"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/actions/update-trigger-bindings.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/actions/update-trigger-bindings.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Actions > update trigger bindings"
     ]
   },
   {
@@ -18056,6 +21109,18 @@
     "id": "main/snippets/SectionsWithCards.jsx",
     "type": "snippet",
     "filePath": "main/snippets/SectionsWithCards.jsx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/api-fr.jsx",
+    "type": "snippet",
+    "filePath": "main/snippets/api-fr.jsx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/api-jp.jsx",
+    "type": "snippet",
+    "filePath": "main/snippets/api-jp.jsx",
     "navPaths": []
   },
   {
@@ -18740,6 +21805,42 @@
     "id": "main/snippets/quickstart/native/maui/MainPage.xaml.cs4.mdx",
     "type": "snippet",
     "filePath": "main/snippets/quickstart/native/maui/MainPage.xaml.cs4.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/quickstart/native/ios-swift-facebook-login/exchangeTokens.mdx",
+    "type": "snippet",
+    "filePath": "main/snippets/quickstart/native/ios-swift-facebook-login/exchangeTokens.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/quickstart/native/ios-swift-facebook-login/fetchSessionToken.mdx",
+    "type": "snippet",
+    "filePath": "main/snippets/quickstart/native/ios-swift-facebook-login/fetchSessionToken.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/quickstart/native/ios-swift-facebook-login/fetchUserProfile.mdx",
+    "type": "snippet",
+    "filePath": "main/snippets/quickstart/native/ios-swift-facebook-login/fetchUserProfile.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/quickstart/native/ios-swift-facebook-login/onCreate.mdx",
+    "type": "snippet",
+    "filePath": "main/snippets/quickstart/native/ios-swift-facebook-login/onCreate.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/quickstart/native/ios-swift-facebook-login/performLogin + SimpleCallback.mdx",
+    "type": "snippet",
+    "filePath": "main/snippets/quickstart/native/ios-swift-facebook-login/performLogin + SimpleCallback.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/quickstart/native/ios-swift-facebook-login/performLogin.mdx",
+    "type": "snippet",
+    "filePath": "main/snippets/quickstart/native/ios-swift-facebook-login/performLogin.mdx",
     "navPaths": []
   },
   {

@@ -1,20 +1,2121 @@
 {
-  "pagesScanned": 2215,
-  "pagesWithWarnings": 543,
-  "warningCount": 776,
+  "pagesScanned": 2595,
+  "pagesWithWarnings": 558,
+  "warningCount": 783,
   "byCode": {
-    "missing_pkce_mention": 128,
-    "missing_state_mention": 129,
-    "missing_nonce_mention": 270,
+    "missing_pkce_mention": 125,
+    "missing_state_mention": 126,
+    "missing_nonce_mention": 268,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
-    "token_storage_cookie": 11,
-    "rules_vs_actions_language": 235
+    "token_storage_cookie": 12,
+    "rules_vs_actions_language": 249
   },
   "items": [
     {
       "id": "main/docs/api.mdx",
       "filePath": "main/docs/api.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/create-a-new-actions-module.mdx",
+      "filePath": "main/docs/api/management/v2/actions/create-a-new-actions-module.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/create-a-new-version-of-an-actions-module.mdx",
+      "filePath": "main/docs/api/management/v2/actions/create-a-new-version-of-an-actions-module.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/create-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/create-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/delete-a-specific-actions-module-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/actions/delete-a-specific-actions-module-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/delete-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/delete-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/deploy-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/deploy-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-a-specific-actions-module-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-a-specific-actions-module-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-actions-module.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-a-specific-version-of-an-actions-module.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-actions.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-actions.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-an-actions-versions.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-an-actions-versions.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-an-execution.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-an-execution.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-trigger-bindings.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-trigger-bindings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/get-triggers.mdx",
+      "filePath": "main/docs/api/management/v2/actions/get-triggers.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/list-actions-modules.mdx",
+      "filePath": "main/docs/api/management/v2/actions/list-actions-modules.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/list-all-actions-using-an-actions-module.mdx",
+      "filePath": "main/docs/api/management/v2/actions/list-all-actions-using-an-actions-module.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/list-all-versions-of-an-actions-module.mdx",
+      "filePath": "main/docs/api/management/v2/actions/list-all-versions-of-an-actions-module.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/roll-back-to-a-previous-action-version.mdx",
+      "filePath": "main/docs/api/management/v2/actions/roll-back-to-a-previous-action-version.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/rollback-an-actions-module-to-a-previous-version.mdx",
+      "filePath": "main/docs/api/management/v2/actions/rollback-an-actions-module-to-a-previous-version.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/test-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/test-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx",
+      "filePath": "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/update-an-action.mdx",
+      "filePath": "main/docs/api/management/v2/actions/update-an-action.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/actions/update-trigger-bindings.mdx",
+      "filePath": "main/docs/api/management/v2/actions/update-trigger-bindings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/anomaly/check-if-an-ip-address-is-blocked.mdx",
+      "filePath": "main/docs/api/management/v2/anomaly/check-if-an-ip-address-is-blocked.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/anomaly/remove-the-blocked-ip-address.mdx",
+      "filePath": "main/docs/api/management/v2/anomaly/remove-the-blocked-ip-address.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/get-bot-detection-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/get-bot-detection-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/get-breached-password-detection-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/get-breached-password-detection-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/get-brute-force-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/get-brute-force-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/get-suspicious-ip-throttling-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/get-suspicious-ip-throttling-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/get-the-captcha-configuration-for-a-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/get-the-captcha-configuration-for-a-tenant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/partial-update-for-captcha-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/partial-update-for-captcha-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/update-bot-detection-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/update-bot-detection-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/update-breached-password-detection-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/update-breached-password-detection-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/update-brute-force-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/update-brute-force-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/attack-protection/update-suspicious-ip-throttling-settings.mdx",
+      "filePath": "main/docs/api/management/v2/attack-protection/update-suspicious-ip-throttling-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/configure-the-phone-provider.mdx",
+      "filePath": "main/docs/api/management/v2/branding/configure-the-phone-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/create-a-phone-notification-template.mdx",
+      "filePath": "main/docs/api/management/v2/branding/create-a-phone-notification-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/create-branding-theme.mdx",
+      "filePath": "main/docs/api/management/v2/branding/create-branding-theme.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/delete-a-phone-notification-template.mdx",
+      "filePath": "main/docs/api/management/v2/branding/delete-a-phone-notification-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/delete-branding-theme.mdx",
+      "filePath": "main/docs/api/management/v2/branding/delete-branding-theme.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/delete-template-for-new-universal-login-experience.mdx",
+      "filePath": "main/docs/api/management/v2/branding/delete-template-for-new-universal-login-experience.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/deletes-a-phone-provider.mdx",
+      "filePath": "main/docs/api/management/v2/branding/deletes-a-phone-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-a-list-of-phone-notification-templates.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-a-list-of-phone-notification-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-a-list-of-phone-providers.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-a-list-of-phone-providers.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-a-phone-notification-template.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-a-phone-notification-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-a-phone-provider.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-a-phone-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-branding-settings.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-branding-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-branding-theme.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-branding-theme.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-default-branding-theme.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-default-branding-theme.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/get-template-for-new-universal-login-experience.mdx",
+      "filePath": "main/docs/api/management/v2/branding/get-template-for-new-universal-login-experience.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/resets-a-phone-notification-template-values.mdx",
+      "filePath": "main/docs/api/management/v2/branding/resets-a-phone-notification-template-values.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-provider.mdx",
+      "filePath": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-template.mdx",
+      "filePath": "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/set-template-for-new-universal-login-experience.mdx",
+      "filePath": "main/docs/api/management/v2/branding/set-template-for-new-universal-login-experience.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/update-a-phone-notification-template.mdx",
+      "filePath": "main/docs/api/management/v2/branding/update-a-phone-notification-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/update-branding-settings.mdx",
+      "filePath": "main/docs/api/management/v2/branding/update-branding-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/update-branding-theme.mdx",
+      "filePath": "main/docs/api/management/v2/branding/update-branding-theme.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/branding/update-the-phone-provider.mdx",
+      "filePath": "main/docs/api/management/v2/branding/update-the-phone-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/client-grants/create-client-grant.mdx",
+      "filePath": "main/docs/api/management/v2/client-grants/create-client-grant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/client-grants/delete-client-grant.mdx",
+      "filePath": "main/docs/api/management/v2/client-grants/delete-client-grant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/client-grants/get-client-grant.mdx",
+      "filePath": "main/docs/api/management/v2/client-grants/get-client-grant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/client-grants/get-client-grants.mdx",
+      "filePath": "main/docs/api/management/v2/client-grants/get-client-grants.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/client-grants/get-the-organizations-associated-to-a-client-grant.mdx",
+      "filePath": "main/docs/api/management/v2/client-grants/get-the-organizations-associated-to-a-client-grant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/client-grants/update-client-grant.mdx",
+      "filePath": "main/docs/api/management/v2/client-grants/update-client-grant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/create-a-client-credential.mdx",
+      "filePath": "main/docs/api/management/v2/clients/create-a-client-credential.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/create-a-client.mdx",
+      "filePath": "main/docs/api/management/v2/clients/create-a-client.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/delete-a-client-credential.mdx",
+      "filePath": "main/docs/api/management/v2/clients/delete-a-client-credential.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/delete-a-client.mdx",
+      "filePath": "main/docs/api/management/v2/clients/delete-a-client.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/get-client-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/clients/get-client-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/get-client-credential-details.mdx",
+      "filePath": "main/docs/api/management/v2/clients/get-client-credential-details.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/get-client-credentials.mdx",
+      "filePath": "main/docs/api/management/v2/clients/get-client-credentials.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/get-clients.mdx",
+      "filePath": "main/docs/api/management/v2/clients/get-clients.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx",
+      "filePath": "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
+      "filePath": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/update-a-client-credential.mdx",
+      "filePath": "main/docs/api/management/v2/clients/update-a-client-credential.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/update-a-client.mdx",
+      "filePath": "main/docs/api/management/v2/clients/update-a-client.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/create-a-connection-profile.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/create-a-connection-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/delete-connection-profile.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/delete-connection-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/get-connection-profile-template.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profile-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/get-connection-profile-templates.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profile-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/get-connection-profile.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/get-connection-profiles.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/get-connection-profiles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connection-profiles/modify-a-connection-profile.mdx",
+      "filePath": "main/docs/api/management/v2/connection-profiles/modify-a-connection-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx",
+      "filePath": "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx",
+      "filePath": "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/check-connection-status.mdx",
+      "filePath": "main/docs/api/management/v2/connections/check-connection-status.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/create-a-connection.mdx",
+      "filePath": "main/docs/api/management/v2/connections/create-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/create-a-directory-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/create-a-directory-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/create-a-scim-token.mdx",
+      "filePath": "main/docs/api/management/v2/connections/create-a-scim-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/create-connection-keys.mdx",
+      "filePath": "main/docs/api/management/v2/connections/create-connection-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
+      "filePath": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/delete-a-connection.mdx",
+      "filePath": "main/docs/api/management/v2/connections/delete-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/delete-a-connections-scim-token.mdx",
+      "filePath": "main/docs/api/management/v2/connections/delete-a-connections-scim-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/delete-a-directory-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/delete-a-directory-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-a-connection.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-a-connections-default-directory-provisioning-attribute-mapping.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-a-connections-default-directory-provisioning-attribute-mapping.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-a-connections-default-scim-mapping.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-a-connections-default-scim-mapping.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-a-connections-scim-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-a-connections-scim-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-a-connections-scim-tokens.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-a-connections-scim-tokens.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-a-directory-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-a-directory-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-all-connections.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-all-connections.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-connection-keys.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-connection-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
+      "filePath": "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/rotate-connection-keys.mdx",
+      "filePath": "main/docs/api/management/v2/connections/rotate-connection-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/update-a-connection.mdx",
+      "filePath": "main/docs/api/management/v2/connections/update-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/update-enabled-clients-for-a-connection.mdx",
+      "filePath": "main/docs/api/management/v2/connections/update-enabled-clients-for-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/configure-a-new-custom-domain.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/configure-a-new-custom-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/device-credentials/create-a-device-public-key-credential.mdx",
+      "filePath": "main/docs/api/management/v2/device-credentials/create-a-device-public-key-credential.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/device-credentials/delete-a-device-credential.mdx",
+      "filePath": "main/docs/api/management/v2/device-credentials/delete-a-device-credential.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/device-credentials/retrieve-device-credentials.mdx",
+      "filePath": "main/docs/api/management/v2/device-credentials/retrieve-device-credentials.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/email-templates/create-an-email-template.mdx",
+      "filePath": "main/docs/api/management/v2/email-templates/create-an-email-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/email-templates/get-an-email-template.mdx",
+      "filePath": "main/docs/api/management/v2/email-templates/get-an-email-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/email-templates/patch-an-email-template.mdx",
+      "filePath": "main/docs/api/management/v2/email-templates/patch-an-email-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/email-templates/update-an-email-template.mdx",
+      "filePath": "main/docs/api/management/v2/email-templates/update-an-email-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/emails/configure-email-provider.mdx",
+      "filePath": "main/docs/api/management/v2/emails/configure-email-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/emails/delete-email-provider.mdx",
+      "filePath": "main/docs/api/management/v2/emails/delete-email-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/emails/get-email-provider.mdx",
+      "filePath": "main/docs/api/management/v2/emails/get-email-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/emails/update-email-provider.mdx",
+      "filePath": "main/docs/api/management/v2/emails/update-email-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/get-an-event-stream-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/get-an-event-stream-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/get-event-streams.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/get-event-streams.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/get-this-event-streams-delivery-history.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/get-this-event-streams-delivery-history.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/redeliver-a-single-failed-event-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/redeliver-a-single-failed-event-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/redeliver-failed-events.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/redeliver-failed-events.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/send-a-test-event-to-an-event-stream.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/send-a-test-event-to-an-event-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/event-streams/update-an-event-stream.mdx",
+      "filePath": "main/docs/api/management/v2/event-streams/update-an-event-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/create-a-flow.mdx",
+      "filePath": "main/docs/api/management/v2/flows/create-a-flow.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/create-a-flows-vault-connection.mdx",
+      "filePath": "main/docs/api/management/v2/flows/create-a-flows-vault-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/delete-a-flow-execution.mdx",
+      "filePath": "main/docs/api/management/v2/flows/delete-a-flow-execution.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/delete-a-flow.mdx",
+      "filePath": "main/docs/api/management/v2/flows/delete-a-flow.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/delete-a-flows-vault-connection.mdx",
+      "filePath": "main/docs/api/management/v2/flows/delete-a-flows-vault-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/get-a-flow-execution.mdx",
+      "filePath": "main/docs/api/management/v2/flows/get-a-flow-execution.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/get-a-flow.mdx",
+      "filePath": "main/docs/api/management/v2/flows/get-a-flow.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/get-a-flows-vault-connection.mdx",
+      "filePath": "main/docs/api/management/v2/flows/get-a-flows-vault-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/get-flow-executions.mdx",
+      "filePath": "main/docs/api/management/v2/flows/get-flow-executions.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/get-flows-vault-connection-list.mdx",
+      "filePath": "main/docs/api/management/v2/flows/get-flows-vault-connection-list.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/get-flows.mdx",
+      "filePath": "main/docs/api/management/v2/flows/get-flows.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/update-a-flow.mdx",
+      "filePath": "main/docs/api/management/v2/flows/update-a-flow.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx",
+      "filePath": "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/forms/create-a-form.mdx",
+      "filePath": "main/docs/api/management/v2/forms/create-a-form.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/forms/delete-a-form.mdx",
+      "filePath": "main/docs/api/management/v2/forms/delete-a-form.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/forms/get-a-form.mdx",
+      "filePath": "main/docs/api/management/v2/forms/get-a-form.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/forms/get-forms.mdx",
+      "filePath": "main/docs/api/management/v2/forms/get-forms.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/forms/update-a-form.mdx",
+      "filePath": "main/docs/api/management/v2/forms/update-a-form.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/grants/delete-a-grant-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/grants/delete-a-grant-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/grants/delete-a-grant-by-user-id.mdx",
+      "filePath": "main/docs/api/management/v2/grants/delete-a-grant-by-user-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/grants/get-grants.mdx",
+      "filePath": "main/docs/api/management/v2/grants/get-grants.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/groups/delete-a-group.mdx",
+      "filePath": "main/docs/api/management/v2/groups/delete-a-group.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/groups/get-a-group.mdx",
+      "filePath": "main/docs/api/management/v2/groups/get-a-group.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/groups/get-all-groups.mdx",
+      "filePath": "main/docs/api/management/v2/groups/get-all-groups.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/groups/get-group-members.mdx",
+      "filePath": "main/docs/api/management/v2/groups/get-group-members.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/configure-aws-sns-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/configure-aws-sns-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/create-a-multi-factor-authentication-enrollment-ticket.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/create-a-multi-factor-authentication-enrollment-ticket.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/delete-a-multi-factor-authentication-enrollment.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/delete-a-multi-factor-authentication-enrollment.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-a-multi-factor-authentication-enrollment.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-a-multi-factor-authentication-enrollment.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-apns-push-notification-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-apns-push-notification-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-aws-sns-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-aws-sns-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-duo-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-duo-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-enabled-phone-factors.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-enabled-phone-factors.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-enrollment-and-verification-phone-templates.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-enrollment-and-verification-phone-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-factors-and-multi-factor-authentication-details.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-factors-and-multi-factor-authentication-details.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-multi-factor-authentication-policies.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-multi-factor-authentication-policies.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-phone-provider-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-phone-provider-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-push-notification-provider.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-push-notification-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-sms-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-sms-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-sms-enrollment-and-verification-templates.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-sms-enrollment-and-verification-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-twilio-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-twilio-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/get-twilio-sms-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/get-twilio-sms-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/overwrite-fcm-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/overwrite-fcm-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/overwrite-fcmv-1-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/overwrite-fcmv-1-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/set-the-duo-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/set-the-duo-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-ap-ns-provider-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-ap-ns-provider-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-apns-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-apns-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-aws-sns-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-aws-sns-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-enrollment-and-verification-phone-templates.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-enrollment-and-verification-phone-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-policies.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-policies.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-type.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-multi-factor-authentication-type.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-phone-provider-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-phone-provider-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-push-notification-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-push-notification-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-sms-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-sms-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-sms-enrollment-and-verification-templates.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-sms-enrollment-and-verification-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-the-duo-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-the-duo-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-the-enabled-phone-factors.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-the-enabled-phone-factors.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-twilio-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-twilio-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/update-twilio-sms-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/update-twilio-sms-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/updates-fcm-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/updates-fcm-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/guardian/updates-fcmv-1-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/guardian/updates-fcmv-1-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/add-hook-secrets.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/add-hook-secrets.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas post /hooks/{id}/secrets",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/create-a-hook.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/create-a-hook.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas post /hooks",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/delete-a-hook.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/delete-a-hook.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas delete /hooks/{id}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/delete-hook-secrets.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/delete-hook-secrets.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas delete /hooks/{id}/secrets",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/get-a-hook.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/get-a-hook.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas get /hooks/{id}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/get-hook-secrets.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/get-hook-secrets.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas get /hooks/{id}/secrets",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/get-hooks.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/get-hooks.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas get /hooks",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/update-a-hook.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/update-a-hook.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas patch /hooks/{id}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/hooks/update-hook-secrets.mdx",
+      "filePath": "main/docs/api/management/v2/hooks/update-hook-secrets.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas patch /hooks/{id}/secrets",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/index.mdx",
+      "filePath": "main/docs/api/management/v2/index.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/jobs/create-export-users-job.mdx",
+      "filePath": "main/docs/api/management/v2/jobs/create-export-users-job.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/jobs/create-import-users-job.mdx",
+      "filePath": "main/docs/api/management/v2/jobs/create-import-users-job.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/jobs/get-a-job.mdx",
+      "filePath": "main/docs/api/management/v2/jobs/get-a-job.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/jobs/get-job-error-details.mdx",
+      "filePath": "main/docs/api/management/v2/jobs/get-job-error-details.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/jobs/send-an-email-address-verification-email.mdx",
+      "filePath": "main/docs/api/management/v2/jobs/send-an-email-address-verification-email.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/create-or-replace-custom-signing-keys.mdx",
+      "filePath": "main/docs/api/management/v2/keys/create-or-replace-custom-signing-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/create-the-new-encryption-key.mdx",
+      "filePath": "main/docs/api/management/v2/keys/create-the-new-encryption-key.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/create-the-public-wrapping-key.mdx",
+      "filePath": "main/docs/api/management/v2/keys/create-the-public-wrapping-key.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/delete-custom-signing-keys.mdx",
+      "filePath": "main/docs/api/management/v2/keys/delete-custom-signing-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/delete-the-encryption-key-by-its-key-id.mdx",
+      "filePath": "main/docs/api/management/v2/keys/delete-the-encryption-key-by-its-key-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/get-all-application-signing-keys.mdx",
+      "filePath": "main/docs/api/management/v2/keys/get-all-application-signing-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/get-all-encryption-keys.mdx",
+      "filePath": "main/docs/api/management/v2/keys/get-all-encryption-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/get-an-application-signing-key-by-its-key-id.mdx",
+      "filePath": "main/docs/api/management/v2/keys/get-an-application-signing-key-by-its-key-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/get-custom-signing-keys.mdx",
+      "filePath": "main/docs/api/management/v2/keys/get-custom-signing-keys.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/get-the-encryption-key-by-its-key-id.mdx",
+      "filePath": "main/docs/api/management/v2/keys/get-the-encryption-key-by-its-key-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/import-the-encryption-key.mdx",
+      "filePath": "main/docs/api/management/v2/keys/import-the-encryption-key.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/rekey-the-key-hierarchy.mdx",
+      "filePath": "main/docs/api/management/v2/keys/rekey-the-key-hierarchy.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/revoke-an-application-signing-key-by-its-key-id.mdx",
+      "filePath": "main/docs/api/management/v2/keys/revoke-an-application-signing-key-by-its-key-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/keys/rotate-the-application-signing-key.mdx",
+      "filePath": "main/docs/api/management/v2/keys/rotate-the-application-signing-key.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/log-streams/create-a-log-stream.mdx",
+      "filePath": "main/docs/api/management/v2/log-streams/create-a-log-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/log-streams/delete-log-stream.mdx",
+      "filePath": "main/docs/api/management/v2/log-streams/delete-log-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/log-streams/get-log-stream-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/log-streams/get-log-stream-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/log-streams/get-log-streams.mdx",
+      "filePath": "main/docs/api/management/v2/log-streams/get-log-streams.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/log-streams/update-a-log-stream.mdx",
+      "filePath": "main/docs/api/management/v2/log-streams/update-a-log-stream.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/logs/get-a-log-event-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/logs/get-a-log-event-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/logs/search-log-events.mdx",
+      "filePath": "main/docs/api/management/v2/logs/search-log-events.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/network-acls/create-access-control-list.mdx",
+      "filePath": "main/docs/api/management/v2/network-acls/create-access-control-list.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/network-acls/delete-access-control-list.mdx",
+      "filePath": "main/docs/api/management/v2/network-acls/delete-access-control-list.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/network-acls/get-a-specific-access-control-list-entry-for-a-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/network-acls/get-a-specific-access-control-list-entry-for-a-tenant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/network-acls/get-all-access-control-list-entries-for-a-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/network-acls/get-all-access-control-list-entries-for-a-tenant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/network-acls/partial-update-for-an-access-control-list.mdx",
+      "filePath": "main/docs/api/management/v2/network-acls/partial-update-for-an-access-control-list.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/network-acls/update-access-control-list.mdx",
+      "filePath": "main/docs/api/management/v2/network-acls/update-access-control-list.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/create-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/create-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-organization-by-name.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-organization-by-name.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-organizations.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-organizations.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-user-roles-assigned-to-an-organization-member.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-user-roles-assigned-to-an-organization-member.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/modify-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/modify-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/get-prompt-settings.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/get-prompt-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/get-render-setting-configurations-for-all-screens.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/get-render-setting-configurations-for-all-screens.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/get-render-settings-for-a-screen.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/get-render-settings-for-a-screen.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/set-custom-text-for-a-specific-prompt.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/set-custom-text-for-a-specific-prompt.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/set-partials-for-a-prompt.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/set-partials-for-a-prompt.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/update-prompt-settings.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/update-prompt-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/update-render-settings-for-a-screen.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/update-render-settings-for-a-screen.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx",
+      "filePath": "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx",
+      "filePath": "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
+      "filePath": "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
+      "filePath": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/resource-servers/create-a-resource-server.mdx",
+      "filePath": "main/docs/api/management/v2/resource-servers/create-a-resource-server.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/resource-servers/delete-a-resource-server.mdx",
+      "filePath": "main/docs/api/management/v2/resource-servers/delete-a-resource-server.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/resource-servers/get-a-resource-server.mdx",
+      "filePath": "main/docs/api/management/v2/resource-servers/get-a-resource-server.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/resource-servers/get-resource-servers.mdx",
+      "filePath": "main/docs/api/management/v2/resource-servers/get-resource-servers.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx",
+      "filePath": "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/risk-assessments/get-new-device-assessor.mdx",
+      "filePath": "main/docs/api/management/v2/risk-assessments/get-new-device-assessor.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/risk-assessments/get-risk-assessment-settings.mdx",
+      "filePath": "main/docs/api/management/v2/risk-assessments/get-risk-assessment-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/risk-assessments/update-new-device-assessor.mdx",
+      "filePath": "main/docs/api/management/v2/risk-assessments/update-new-device-assessor.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/risk-assessments/update-risk-assessment-settings.mdx",
+      "filePath": "main/docs/api/management/v2/risk-assessments/update-risk-assessment-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/assign-users-to-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/assign-users-to-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/associate-permissions-with-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/associate-permissions-with-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/create-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/create-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/delete-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/delete-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/get-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/get-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/get-a-roles-users.mdx",
+      "filePath": "main/docs/api/management/v2/roles/get-a-roles-users.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/get-permissions-granted-by-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/get-permissions-granted-by-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/get-roles.mdx",
+      "filePath": "main/docs/api/management/v2/roles/get-roles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/remove-permissions-from-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/remove-permissions-from-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/roles/update-a-role.mdx",
+      "filePath": "main/docs/api/management/v2/roles/update-a-role.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx",
+      "filePath": "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas delete /rules-configs/{key}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules-configs/retrieve-config-variable-keys-for-rules-get-rules-configs.mdx",
+      "filePath": "main/docs/api/management/v2/rules-configs/retrieve-config-variable-keys-for-rules-get-rules-configs.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas get /rules-configs",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules-configs/set-rules-config-for-a-given-key.mdx",
+      "filePath": "main/docs/api/management/v2/rules-configs/set-rules-config-for-a-given-key.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas put /rules-configs/{key}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules/create-a-rule.mdx",
+      "filePath": "main/docs/api/management/v2/rules/create-a-rule.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas post /rules",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules/delete-a-rule.mdx",
+      "filePath": "main/docs/api/management/v2/rules/delete-a-rule.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas delete /rules/{id}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules/get-a-rule.mdx",
+      "filePath": "main/docs/api/management/v2/rules/get-a-rule.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas get /rules/{id}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules/get-rules.mdx",
+      "filePath": "main/docs/api/management/v2/rules/get-rules.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas get /rules",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/rules/update-a-rule.mdx",
+      "filePath": "main/docs/api/management/v2/rules/update-a-rule.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "openapi: management-api-oas patch /rules/{id}",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx",
+      "filePath": "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/sessions/delete-session.mdx",
+      "filePath": "main/docs/api/management/v2/sessions/delete-session.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/sessions/get-session.mdx",
+      "filePath": "main/docs/api/management/v2/sessions/get-session.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/sessions/revokes-a-session.mdx",
+      "filePath": "main/docs/api/management/v2/sessions/revokes-a-session.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/sessions/update-session.mdx",
+      "filePath": "main/docs/api/management/v2/sessions/update-session.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/stats/get-active-users-count.mdx",
+      "filePath": "main/docs/api/management/v2/stats/get-active-users-count.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/stats/get-daily-stats.mdx",
+      "filePath": "main/docs/api/management/v2/stats/get-daily-stats.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/supplemental-signals/get-the-supplemental-signals-configuration-for-a-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/supplemental-signals/get-the-supplemental-signals-configuration-for-a-tenant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/supplemental-signals/update-the-supplemental-signals-configuration-for-a-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/supplemental-signals/update-the-supplemental-signals-configuration-for-a-tenant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/tenants/get-tenant-settings.mdx",
+      "filePath": "main/docs/api/management/v2/tenants/get-tenant-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/tenants/update-tenant-settings.mdx",
+      "filePath": "main/docs/api/management/v2/tenants/update-tenant-settings.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/tickets/create-a-password-change-ticket.mdx",
+      "filePath": "main/docs/api/management/v2/tickets/create-a-password-change-ticket.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/tickets/create-an-email-verification-ticket.mdx",
+      "filePath": "main/docs/api/management/v2/tickets/create-an-email-verification-ticket.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/token-exchange-profiles/create-a-token-exchange-profile.mdx",
+      "filePath": "main/docs/api/management/v2/token-exchange-profiles/create-a-token-exchange-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/token-exchange-profiles/delete-a-token-exchange-profile.mdx",
+      "filePath": "main/docs/api/management/v2/token-exchange-profiles/delete-a-token-exchange-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/token-exchange-profiles/get-a-token-exchange-profile.mdx",
+      "filePath": "main/docs/api/management/v2/token-exchange-profiles/get-a-token-exchange-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/token-exchange-profiles/get-token-exchange-profiles.mdx",
+      "filePath": "main/docs/api/management/v2/token-exchange-profiles/get-token-exchange-profiles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/token-exchange-profiles/update-an-existing-token-exchange-profile.mdx",
+      "filePath": "main/docs/api/management/v2/token-exchange-profiles/update-an-existing-token-exchange-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/delete-user-attribute-profile.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/delete-user-attribute-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-template.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-templates.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profiles.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profiles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/modify-a-user-attribute-profile.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/modify-a-user-attribute-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-attribute-profiles/post-user-attribute-profile.mdx",
+      "filePath": "main/docs/api/management/v2/user-attribute-profiles/post-user-attribute-profile.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-blocks/get-a-users-blocks.mdx",
+      "filePath": "main/docs/api/management/v2/user-blocks/get-a-users-blocks.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-blocks/get-blocks-by-identifier.mdx",
+      "filePath": "main/docs/api/management/v2/user-blocks/get-blocks-by-identifier.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-blocks/unblock-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/user-blocks/unblock-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/user-blocks/unblock-by-identifier.mdx",
+      "filePath": "main/docs/api/management/v2/user-blocks/unblock-by-identifier.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx",
+      "filePath": "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/assign-roles-to-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/assign-roles-to-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/clear-risk-assessment-assessors-for-a-specific-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/clear-risk-assessment-assessors-for-a-specific-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/create-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/create-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/creates-an-authentication-method-for-a-given-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/creates-an-authentication-method-for-a-given-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-a-users-multi-factor-provider.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-a-users-multi-factor-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-all-authentication-methods-for-the-given-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-all-authentication-methods-for-the-given-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-all-authenticators.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-all-authenticators.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/delete-sessions-for-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/delete-sessions-for-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+      "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-a-users-permissions.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-a-users-permissions.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-a-users-roles.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-a-users-roles.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-sessions-for-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-sessions-for-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-users-groups.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-users-groups.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/get-users-log-events.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-users-log-events.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+      "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/link-a-user-account.mdx",
+      "filePath": "main/docs/api/management/v2/users/link-a-user-account.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/list-or-search-users.mdx",
+      "filePath": "main/docs/api/management/v2/users/list-or-search-users.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/list-users-organizations.mdx",
+      "filePath": "main/docs/api/management/v2/users/list-users-organizations.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/remove-permissions-from-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/remove-permissions-from-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/removes-roles-from-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/removes-roles-from-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/revokes-selected-resources-from-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/revokes-selected-resources-from-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/unlink-a-user-identity.mdx",
+      "filePath": "main/docs/api/management/v2/users/unlink-a-user-identity.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/update-a-user.mdx",
+      "filePath": "main/docs/api/management/v2/users/update-a-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/update-all-authentication-methods-by-replacing-them-with-the-given-ones.mdx",
+      "filePath": "main/docs/api/management/v2/users/update-all-authentication-methods-by-replacing-them-with-the-given-ones.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/users/update-an-authentication-method.mdx",
+      "filePath": "main/docs/api/management/v2/users/update-an-authentication-method.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx",
+      "filePath": "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
+      "filePath": "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
       "warnings": []
     },
     {
@@ -58,21 +2159,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
-      "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
-      "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
-      "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
       "filePath": "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx",
       "warnings": []
@@ -80,61 +2166,69 @@
     {
       "id": "main/docs/api/myaccount/index.mdx",
       "filePath": "main/docs/api/myaccount/index.mdx",
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "- [Call Your API Using the Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authori",
+          "line": 76
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/myorganization/config/get-identity-provider-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/config/get-identity-provider-configuration.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/config/get-configuration.mdx",
-      "filePath": "main/docs/api/myorganization/config/get-configuration.mdx",
+      "id": "main/docs/api/myorganization/config/get-my-organization-api-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/config/get-my-organization-api-configuration.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
-      "filePath": "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx",
+      "id": "main/docs/api/myorganization/idp-management/associate-a-domain-with-an-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/associate-a-domain-with-an-identity-provider.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx",
+      "id": "main/docs/api/myorganization/idp-management/create-a-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/create-a-provisioning-configuration.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/create-identity-provider.mdx",
+      "id": "main/docs/api/myorganization/idp-management/create-a-provisioning-scim-token.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/create-a-provisioning-scim-token.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx",
+      "id": "main/docs/api/myorganization/idp-management/create-an-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/create-an-identity-provider.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx",
+      "id": "main/docs/api/myorganization/idp-management/delete-a-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/delete-a-provisioning-configuration.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx",
+      "id": "main/docs/api/myorganization/idp-management/delete-an-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/delete-an-identity-provider.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx",
+      "id": "main/docs/api/myorganization/idp-management/detach-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx",
+      "id": "main/docs/api/myorganization/idp-management/get-a-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/get-a-provisioning-configuration.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/get-identity-provider.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx",
+      "id": "main/docs/api/myorganization/idp-management/get-an-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/get-an-identity-provider.mdx",
       "warnings": []
     },
     {
@@ -148,28 +2242,28 @@
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx",
+      "id": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attribute-mapping.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/refresh-identity-provider-attribute-mapping.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx",
+      "id": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attribute-mapping.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attribute-mapping.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx",
+      "id": "main/docs/api/myorganization/idp-management/remove-a-domain-from-an-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/remove-a-domain-from-an-identity-provider.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx",
+      "id": "main/docs/api/myorganization/idp-management/revoke-a-provisioning-scim-token.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/revoke-a-provisioning-scim-token.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
-      "filePath": "main/docs/api/myorganization/idp-management/update-identity-provider.mdx",
+      "id": "main/docs/api/myorganization/idp-management/update-an-identity-provider.mdx",
+      "filePath": "main/docs/api/myorganization/idp-management/update-an-identity-provider.mdx",
       "warnings": []
     },
     {
@@ -183,33 +2277,33 @@
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
-      "filePath": "main/docs/api/myorganization/org-details/modify-organization-details.mdx",
+      "id": "main/docs/api/myorganization/org-details/update-organization-details.mdx",
+      "filePath": "main/docs/api/myorganization/org-details/update-organization-details.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
-      "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx",
+      "id": "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
-      "filePath": "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx",
+      "id": "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
-      "filePath": "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx",
+      "id": "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
-      "filePath": "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx",
+      "id": "main/docs/api/myorganization/org-domain-management/list-domains.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/list-domains.mdx",
       "warnings": []
     },
     {
-      "id": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
-      "filePath": "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx",
+      "id": "main/docs/api/myorganization/org-domain-management/list-identity-providers-for-a-domain.mdx",
+      "filePath": "main/docs/api/myorganization/org-domain-management/list-identity-providers-for-a-domain.mdx",
       "warnings": []
     },
     {
@@ -475,7 +2569,7 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "\"id_token\": \"<BASE64_TOKEN>\",",
+          "evidence": "\"id_token\": \"{BASE64_TOKEN}\",",
           "line": 181
         }
       ]
@@ -2430,11 +4524,6 @@
       ]
     },
     {
-      "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-      "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx",
       "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx",
       "warnings": []
@@ -2520,11 +4609,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/customize/actions/releases.mdx",
-      "filePath": "main/docs/customize/actions/releases.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/customize/actions/test-actions.mdx",
       "filePath": "main/docs/customize/actions/test-actions.mdx",
       "warnings": []
@@ -2558,21 +4642,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "* [Configure Applications with OpenID Connect Discovery](/docs/get-started/applications/configure-applications-with-oidc-discovery)",
-          "line": 141
+          "line": 148
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "<td>Using the <a href=\"https://auth0.com/docs/api/authentication/authorization-code-flow/authorize-application\"><code>/authorize</code></a> and <a href=\"https://auth0.com/docs/api/",
-          "line": 106
+          "line": 113
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "<td>Using the <a href=\"https://auth0.com/docs/api/authentication/authorization-code-flow/authorize-application\"><code>/authorize</code></a> and <a href=\"https://auth0.com/docs/api/",
-          "line": 106
+          "line": 113
         }
       ]
     },
@@ -4610,14 +6694,14 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "2. Your app redirects the user to the Auth0 Authorization Server (`/authorize` endpoint), including the following scopes:",
-          "line": 12
+          "line": 13
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "2. Your app redirects the user to the Auth0 Authorization Server (`/authorize` endpoint), including the following scopes:",
-          "line": 12
+          "line": 13
         }
       ]
     },
@@ -5160,7 +7244,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "For customer facing applications, <Tooltip tip=\"OpenID: Open standard for authentication that allows applications to verify users' identities without collecting and storing login i",
-          "line": 37
+          "line": 38
         }
       ]
     },
@@ -5173,7 +7257,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "* The second category is where access is either granted or denied to a specific subset of application or API functionality. The data required to enforce this is typically stored in",
-          "line": 17
+          "line": 18
         }
       ]
     },
@@ -5235,15 +7319,7 @@
     {
       "id": "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "filePath": "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "The Normalized User Profile is updated from the identity provider during login, and you can change the limited set of the information it contains through the Auth0 Management API. ",
-          "line": 21
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
@@ -6211,26 +8287,6 @@
       ]
     },
     {
-      "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
-      "filePath": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
-      "warnings": [
-        {
-          "code": "missing_pkce_mention",
-          "severity": "warn",
-          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-          "evidence": "description: Learn how to use PAR and JAR with the Authorization Code Flow.",
-          "line": 2
-        },
-        {
-          "code": "missing_state_mention",
-          "severity": "warn",
-          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "description: Learn how to use PAR and JAR with the Authorization Code Flow.",
-          "line": 2
-        }
-      ]
-    },
-    {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
       "filePath": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
       "warnings": [
@@ -6647,6 +8703,11 @@
           "line": 23
         }
       ]
+    },
+    {
+      "id": "main/docs/get-started/build-with-ai-tools.mdx",
+      "filePath": "main/docs/get-started/build-with-ai-tools.mdx",
+      "warnings": []
     },
     {
       "id": "main/docs/get-started/dashboard-profile.mdx",
@@ -12764,7 +14825,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "api.idToken.setCustomClaim(property, identity.profileData[property]);",
-          "line": 251
+          "line": 209
         }
       ]
     },
@@ -13036,11 +15097,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx",
-      "filePath": "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/quickstart/agent-skills.mdx",
       "filePath": "main/docs/quickstart/agent-skills.mdx",
       "warnings": []
@@ -13132,19 +15188,17 @@
       "warnings": []
     },
     {
-      "id": "main/docs/quickstart/backend/java-spring-security5/_index.mdx",
-      "filePath": "main/docs/quickstart/backend/java-spring-security5/_index.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/quickstart/backend/java-spring-security5/index.mdx",
       "filePath": "main/docs/quickstart/backend/java-spring-security5/index.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/quickstart/backend/java-spring-security5/interactive.mdx",
-      "filePath": "main/docs/quickstart/backend/java-spring-security5/interactive.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "# Required firewall rules (outbound HTTPS/443)",
+          "line": 686
+        }
+      ]
     },
     {
       "id": "main/docs/quickstart/backend/laravel/_index.mdx",
@@ -13306,11 +15360,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/quickstart/native/android-facebook-login/_index.mdx",
-      "filePath": "main/docs/quickstart/native/android-facebook-login/_index.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/quickstart/native/android-facebook-login/index.mdx",
       "filePath": "main/docs/quickstart/native/android-facebook-login/index.mdx",
       "warnings": [
@@ -13318,22 +15367,10 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": ".setScope(\"openid email profile offline_access\")",
-          "line": 305
-        },
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "<td><a href=\"/docs/quickstart/native/android/01-user-metadata\">Learn about rules</a></td>",
-          "line": 389
+          "evidence": ".setScope(\"openid profile email offline_access\")",
+          "line": 196
         }
       ]
-    },
-    {
-      "id": "main/docs/quickstart/native/android-facebook-login/interactive.mdx",
-      "filePath": "main/docs/quickstart/native/android-facebook-login/interactive.mdx",
-      "warnings": []
     },
     {
       "id": "main/docs/quickstart/native/android/index.mdx",
@@ -13549,6 +15586,19 @@
       "warnings": []
     },
     {
+      "id": "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx",
+      "filePath": "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "scope: \"openid profile email offline_access\"",
+          "line": 183
+        }
+      ]
+    },
+    {
       "id": "main/docs/quickstart/native/ios-swift/index.mdx",
       "filePath": "main/docs/quickstart/native/ios-swift/index.mdx",
       "warnings": [
@@ -13562,19 +15612,6 @@
       ]
     },
     {
-      "id": "main/docs/quickstart/native/maui/_index.mdx",
-      "filePath": "main/docs/quickstart/native/maui/_index.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "Scope = \"openid profile email\"",
-          "line": 166
-        }
-      ]
-    },
-    {
       "id": "main/docs/quickstart/native/maui/index.mdx",
       "filePath": "main/docs/quickstart/native/maui/index.mdx",
       "warnings": [
@@ -13582,28 +15619,8 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "Scope = \"openid profile email\"",
-          "line": 167
-        },
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-          "line": 232
-        }
-      ]
-    },
-    {
-      "id": "main/docs/quickstart/native/maui/interactive.mdx",
-      "filePath": "main/docs/quickstart/native/maui/interactive.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "Scope = \"openid profile email\"",
-          "line": 165
+          "evidence": "**Fix:** Verify that `openid profile email` are included in `Auth0ClientOptions.Scope`. If you have customized the scope, ensure `openid` is always present.",
+          "line": 421
         }
       ]
     },
@@ -14145,33 +16162,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/quickstart/webapp/java-ee/_index.mdx",
-      "filePath": "main/docs/quickstart/webapp/java-ee/_index.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "private final DecodedJWT idToken;",
-          "line": 179
-        },
-        {
-          "code": "missing_pkce_mention",
-          "severity": "warn",
-          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-          "evidence": "This sample uses the [Authorization Code",
-          "line": 385
-        },
-        {
-          "code": "missing_state_mention",
-          "severity": "warn",
-          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "This sample uses the [Authorization Code",
-          "line": 385
-        }
-      ]
-    },
-    {
       "id": "main/docs/quickstart/webapp/java-ee/index.mdx",
       "filePath": "main/docs/quickstart/webapp/java-ee/index.mdx",
       "warnings": [
@@ -14180,55 +16170,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "<env-entry-value>openid profile email</env-entry-value>",
-          "line": 135
+          "line": 181
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-          "evidence": "This sample uses the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/concepts/auth-code) to exchange an Authorization Code for a ",
-          "line": 375
+          "evidence": "Create the servlets for login, callback, and logout. The `LoginServlet` builds the Auth0 authorization URL and redirects the user. The `CallbackServlet` handles the redirect after ",
+          "line": 405
         },
         {
-          "code": "missing_state_mention",
-          "severity": "warn",
-          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "This sample uses the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/concepts/auth-code) to exchange an Authorization Code for a ",
-          "line": 375
-        },
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-          "line": 619
-        }
-      ]
-    },
-    {
-      "id": "main/docs/quickstart/webapp/java-ee/interactive.mdx",
-      "filePath": "main/docs/quickstart/webapp/java-ee/interactive.mdx",
-      "warnings": [
-        {
-          "code": "missing_nonce_mention",
-          "severity": "warn",
-          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "private final DecodedJWT idToken;",
-          "line": 172
-        },
-        {
-          "code": "missing_pkce_mention",
-          "severity": "warn",
-          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-          "evidence": "This sample uses the [Authorization Code",
-          "line": 378
-        },
-        {
-          "code": "missing_state_mention",
-          "severity": "warn",
-          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "This sample uses the [Authorization Code",
-          "line": 378
+          "code": "token_storage_cookie",
+          "severity": "info",
+          "message": "This page mentions cookies alongside tokens. Consider explicitly noting secure cookie attributes (HttpOnly/Secure/SameSite) where appropriate.",
+          "evidence": "If you receive an `a0.invalid_state` error after login, the state cookie was not found or does not match the state returned from Auth0.",
+          "line": 846
         }
       ]
     },
@@ -14413,11 +16369,6 @@
     {
       "id": "main/docs/quickstarts.mdx",
       "filePath": "main/docs/quickstarts.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/releases.mdx",
-      "filePath": "main/docs/releases.mdx",
       "warnings": []
     },
     {
@@ -16002,14 +17953,14 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "* Decrease risk of [rate limitation](/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy) due to repeated full authorization code flows.",
-          "line": 27
+          "line": 22
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "* Decrease risk of [rate limitation](/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy) due to repeated full authorization code flows.",
-          "line": 27
+          "line": 22
         }
       ]
     },
@@ -16022,21 +17973,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "\"scope\": \"openid profile read:messages\"",
-          "line": 792
+          "line": 787
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "To facilitate this, your application needs to initiate a login flow using either the [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization",
-          "line": 446
+          "line": 441
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "To facilitate this, your application needs to initiate a login flow using either the [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization",
-          "line": 446
+          "line": 441
         }
       ]
     },
@@ -16049,7 +18000,7 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "* Authorization Code Flow",
-          "line": 31
+          "line": 32
         }
       ]
     },
@@ -16057,6 +18008,19 @@
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx",
       "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx",
       "warnings": []
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
+      "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "Refresh token metadata and session metadata together lets you create persistent custom claims to extend information contained within [ID](/docs/secure/tokens#id-tokens) and [access",
+          "line": 23
+        }
+      ]
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
@@ -17107,7 +19071,6 @@
     ],
     "main/docs/manage-users.mdx": [],
     "main/docs/quickstarts.mdx": [],
-    "main/docs/releases.mdx": [],
     "main/docs/secure.mdx": [],
     "main/docs/troubleshoot.mdx": [],
     "main/docs/troubleshoot/api-best-practices.mdx": [],
@@ -17748,14 +19711,14 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "* Decrease risk of [rate limitation](/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy) due to repeated full authorization code flows.",
-        "line": 27
+        "line": 22
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* Decrease risk of [rate limitation](/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy) due to repeated full authorization code flows.",
-        "line": 27
+        "line": 22
       }
     ],
     "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx": [
@@ -17764,7 +19727,7 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "* Authorization Code Flow",
-        "line": 31
+        "line": 32
       }
     ],
     "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx": [],
@@ -17803,27 +19766,36 @@
       }
     ],
     "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx": [],
+    "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "Refresh token metadata and session metadata together lets you create persistent custom claims to extend information contained within [ID](/docs/secure/tokens#id-tokens) and [access",
+        "line": 23
+      }
+    ],
     "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "\"scope\": \"openid profile read:messages\"",
-        "line": 792
+        "line": 787
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "To facilitate this, your application needs to initiate a login flow using either the [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization",
-        "line": 446
+        "line": 441
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "To facilitate this, your application needs to initiate a login flow using either the [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization",
-        "line": 446
+        "line": 441
       }
     ],
     "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx": [],
@@ -18588,80 +20560,27 @@
       }
     ],
     "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx": [],
-    "main/docs/quickstart/webapp/java-ee/_index.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "private final DecodedJWT idToken;",
-        "line": 179
-      },
-      {
-        "code": "missing_pkce_mention",
-        "severity": "warn",
-        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-        "evidence": "This sample uses the [Authorization Code",
-        "line": 385
-      },
-      {
-        "code": "missing_state_mention",
-        "severity": "warn",
-        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "This sample uses the [Authorization Code",
-        "line": 385
-      }
-    ],
     "main/docs/quickstart/webapp/java-ee/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "<env-entry-value>openid profile email</env-entry-value>",
-        "line": 135
+        "line": 181
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-        "evidence": "This sample uses the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/concepts/auth-code) to exchange an Authorization Code for a ",
-        "line": 375
+        "evidence": "Create the servlets for login, callback, and logout. The `LoginServlet` builds the Auth0 authorization URL and redirects the user. The `CallbackServlet` handles the redirect after ",
+        "line": 405
       },
       {
-        "code": "missing_state_mention",
-        "severity": "warn",
-        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "This sample uses the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/concepts/auth-code) to exchange an Authorization Code for a ",
-        "line": 375
-      },
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-        "line": 619
-      }
-    ],
-    "main/docs/quickstart/webapp/java-ee/interactive.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "private final DecodedJWT idToken;",
-        "line": 172
-      },
-      {
-        "code": "missing_pkce_mention",
-        "severity": "warn",
-        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-        "evidence": "This sample uses the [Authorization Code",
-        "line": 378
-      },
-      {
-        "code": "missing_state_mention",
-        "severity": "warn",
-        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "This sample uses the [Authorization Code",
-        "line": 378
+        "code": "token_storage_cookie",
+        "severity": "info",
+        "message": "This page mentions cookies alongside tokens. Consider explicitly noting secure cookie attributes (HttpOnly/Secure/SameSite) where appropriate.",
+        "evidence": "If you receive an `a0.invalid_state` error after login, the state cookie was not found or does not match the state returned from Auth0.",
+        "line": 846
       }
     ],
     "main/docs/quickstart/webapp/java/index.mdx": [],
@@ -19046,38 +20965,22 @@
       }
     ],
     "main/docs/quickstart/native/net-android-ios/interactive.mdx": [],
-    "main/docs/quickstart/native/maui/_index.mdx": [
-      {
-        "code": "missing_nonce_mention",
-        "severity": "warn",
-        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "Scope = \"openid profile email\"",
-        "line": 166
-      }
-    ],
     "main/docs/quickstart/native/maui/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "Scope = \"openid profile email\"",
-        "line": 167
-      },
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "<td><a href=\"/docs/customize/rules\">Learn about rules</a></td>",
-        "line": 232
+        "evidence": "**Fix:** Verify that `openid profile email` are included in `Auth0ClientOptions.Scope`. If you have customized the scope, ensure `openid` is always present.",
+        "line": 421
       }
     ],
-    "main/docs/quickstart/native/maui/interactive.mdx": [
+    "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "Scope = \"openid profile email\"",
-        "line": 165
+        "evidence": "scope: \"openid profile email offline_access\"",
+        "line": 183
       }
     ],
     "main/docs/quickstart/native/ios-swift/index.mdx": [
@@ -19230,24 +21133,15 @@
         "line": 453
       }
     ],
-    "main/docs/quickstart/native/android-facebook-login/_index.mdx": [],
     "main/docs/quickstart/native/android-facebook-login/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": ".setScope(\"openid email profile offline_access\")",
-        "line": 305
-      },
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "<td><a href=\"/docs/quickstart/native/android/01-user-metadata\">Learn about rules</a></td>",
-        "line": 389
+        "evidence": ".setScope(\"openid profile email offline_access\")",
+        "line": 196
       }
     ],
-    "main/docs/quickstart/native/android-facebook-login/interactive.mdx": [],
     "main/docs/quickstart/native/android/index.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -19329,9 +21223,15 @@
     "main/docs/quickstart/backend/laravel/interactive.mdx": [],
     "main/docs/quickstart/backend/java-spring-security5/02-using.mdx": [],
     "main/docs/quickstart/backend/java-spring-security5/03-troubleshooting.mdx": [],
-    "main/docs/quickstart/backend/java-spring-security5/_index.mdx": [],
-    "main/docs/quickstart/backend/java-spring-security5/index.mdx": [],
-    "main/docs/quickstart/backend/java-spring-security5/interactive.mdx": [],
+    "main/docs/quickstart/backend/java-spring-security5/index.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "# Required firewall rules (outbound HTTPS/443)",
+        "line": 686
+      }
+    ],
     "main/docs/quickstart/backend/golang/02-using.mdx": [],
     "main/docs/quickstart/backend/golang/03-troubleshooting.mdx": [],
     "main/docs/quickstart/backend/golang/index.mdx": [],
@@ -19360,7 +21260,6 @@
     ],
     "main/docs/quickstart/backend/django/interactive.mdx": [],
     "main/docs/quickstart/backend/aspnet-core-webapi/index.mdx": [],
-    "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx": [],
     "main/docs/manage-users/access-control.mdx": [],
     "main/docs/manage-users/cookies.mdx": [],
     "main/docs/manage-users/my-account-api.mdx": [
@@ -19539,7 +21438,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "api.idToken.setCustomClaim(property, identity.profileData[property]);",
-        "line": 251
+        "line": 209
       }
     ],
     "main/docs/manage-users/user-accounts/user-account-linking/suggested-account-linking-server-side-implementation.mdx": [
@@ -21737,6 +23636,7 @@
         "line": 24
       }
     ],
+    "main/docs/get-started/build-with-ai-tools.mdx": [],
     "main/docs/get-started/dashboard-profile.mdx": [],
     "main/docs/get-started/identity-fundamentals.mdx": [],
     "main/docs/get-started/manage-dashboard-access.mdx": [],
@@ -22228,22 +24128,6 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "description: Learn how to use JWT-Secured Authorization Requests (JAR) with the Authorization Code Flow.",
-        "line": 2
-      }
-    ],
-    "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx": [
-      {
-        "code": "missing_pkce_mention",
-        "severity": "warn",
-        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-        "evidence": "description: Learn how to use PAR and JAR with the Authorization Code Flow.",
-        "line": 2
-      },
-      {
-        "code": "missing_state_mention",
-        "severity": "warn",
-        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "description: Learn how to use PAR and JAR with the Authorization Code Flow.",
         "line": 2
       }
     ],
@@ -22750,7 +24634,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "For customer facing applications, <Tooltip tip=\"OpenID: Open standard for authentication that allows applications to verify users' identities without collecting and storing login i",
-        "line": 37
+        "line": 38
       }
     ],
     "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx": [
@@ -22759,7 +24643,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "* The second category is where access is either granted or denied to a specific subset of application or API functionality. The data required to enforce this is typically stored in",
-        "line": 17
+        "line": 18
       }
     ],
     "main/docs/get-started/architecture-scenarios/business-to-business/branding.mdx": [],
@@ -22767,15 +24651,7 @@
     "main/docs/get-started/architecture-scenarios/business-to-business/launch.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-business/logout.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-business/operations.mdx": [],
-    "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "The Normalized User Profile is updated from the identity provider during login, and you can change the limited set of the information it contains through the Auth0 Management API. ",
-        "line": 21
-      }
-    ],
+    "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx": [],
     "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx": [
       {
         "code": "rules_vs_actions_language",
@@ -23150,14 +25026,14 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "2. Your app redirects the user to the Auth0 Authorization Server (`/authorize` endpoint), including the following scopes:",
-        "line": 12
+        "line": 13
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "2. Your app redirects the user to the Auth0 Authorization Server (`/authorize` endpoint), including the following scopes:",
-        "line": 12
+        "line": 13
       }
     ],
     "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx": [
@@ -23287,21 +25163,21 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "* [Configure Applications with OpenID Connect Discovery](/docs/get-started/applications/configure-applications-with-oidc-discovery)",
-        "line": 141
+        "line": 148
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "<td>Using the <a href=\"https://auth0.com/docs/api/authentication/authorization-code-flow/authorize-application\"><code>/authorize</code></a> and <a href=\"https://auth0.com/docs/api/",
-        "line": 106
+        "line": 113
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "<td>Using the <a href=\"https://auth0.com/docs/api/authentication/authorization-code-flow/authorize-application\"><code>/authorize</code></a> and <a href=\"https://auth0.com/docs/api/",
-        "line": 106
+        "line": 113
       }
     ],
     "main/docs/customize/customize-sms-or-voice-messages.mdx": [],
@@ -23989,7 +25865,6 @@
     "main/docs/customize/actions/manage-dependencies.mdx": [],
     "main/docs/customize/actions/manage-versions.mdx": [],
     "main/docs/customize/actions/migrate.mdx": [],
-    "main/docs/customize/actions/releases.mdx": [],
     "main/docs/customize/actions/test-actions.mdx": [],
     "main/docs/customize/actions/transaction-metadata.mdx": [],
     "main/docs/customize/actions/use-cases.mdx": [],
@@ -24025,7 +25900,6 @@
         "line": 211
       }
     ],
-    "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-api-object.mdx": [],
     "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger/custom-token-exchange-event-object.mdx": [],
     "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx": [],
@@ -25135,7 +27009,7 @@
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "\"id_token\": \"<BASE64_TOKEN>\",",
+        "evidence": "\"id_token\": \"{BASE64_TOKEN}\",",
         "line": 181
       }
     ],
@@ -25215,44 +27089,578 @@
     ],
     "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx": [],
     "main/docs/api/myorganization/index.mdx": [],
-    "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx": [],
-    "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx": [],
-    "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx": [],
-    "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx": [],
-    "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/list-domains.mdx": [],
+    "main/docs/api/myorganization/org-domain-management/list-identity-providers-for-a-domain.mdx": [],
     "main/docs/api/myorganization/org-domain-management/start-domain-verification.mdx": [],
     "main/docs/api/myorganization/org-details/get-organization-details.mdx": [],
-    "main/docs/api/myorganization/org-details/modify-organization-details.mdx": [],
-    "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx": [],
-    "main/docs/api/myorganization/idp-management/create-identity-provider.mdx": [],
-    "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx": [],
-    "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx": [],
-    "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx": [],
-    "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx": [],
-    "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx": [],
-    "main/docs/api/myorganization/idp-management/get-identity-provider.mdx": [],
-    "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/org-details/update-organization-details.mdx": [],
+    "main/docs/api/myorganization/idp-management/associate-a-domain-with-an-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/create-a-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/idp-management/create-a-provisioning-scim-token.mdx": [],
+    "main/docs/api/myorganization/idp-management/create-an-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/delete-a-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/idp-management/delete-an-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/detach-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/get-a-provisioning-configuration.mdx": [],
+    "main/docs/api/myorganization/idp-management/get-an-identity-provider.mdx": [],
     "main/docs/api/myorganization/idp-management/list-identity-providers.mdx": [],
     "main/docs/api/myorganization/idp-management/list-provisioning-scim-tokens.mdx": [],
-    "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx": [],
-    "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx": [],
-    "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx": [],
-    "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx": [],
-    "main/docs/api/myorganization/idp-management/update-identity-provider.mdx": [],
-    "main/docs/api/myorganization/config/get-configuration.mdx": [],
-    "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx": [],
-    "main/docs/api/myaccount/index.mdx": [],
+    "main/docs/api/myorganization/idp-management/refresh-identity-provider-attribute-mapping.mdx": [],
+    "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attribute-mapping.mdx": [],
+    "main/docs/api/myorganization/idp-management/remove-a-domain-from-an-identity-provider.mdx": [],
+    "main/docs/api/myorganization/idp-management/revoke-a-provisioning-scim-token.mdx": [],
+    "main/docs/api/myorganization/idp-management/update-an-identity-provider.mdx": [],
+    "main/docs/api/myorganization/config/get-identity-provider-configuration.mdx": [],
+    "main/docs/api/myorganization/config/get-my-organization-api-configuration.mdx": [],
+    "main/docs/api/myaccount/index.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "- [Call Your API Using the Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authori",
+        "line": 76
+      }
+    ],
     "main/docs/api/myaccount/factors/get-the-status-of-all-factors.mdx": [],
     "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx": [],
     "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx": [],
-    "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx": [],
-    "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx": [],
-    "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx": [],
     "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx": [],
     "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx": [],
     "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx": [],
     "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx": [],
     "main/docs/api/myaccount/authentication-methods/start-the-enrollment-of-a-supported-authentication-method.mdx": [],
-    "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx": []
+    "main/docs/api/myaccount/authentication-methods/update-details-of-an-authentication-method-by-id.mdx": [],
+    "main/docs/api/management/v2/index.mdx": [],
+    "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx": [],
+    "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx": [],
+    "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx": [],
+    "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx": [],
+    "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx": [],
+    "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx": [],
+    "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx": [],
+    "main/docs/api/management/v2/users/assign-roles-to-a-user.mdx": [],
+    "main/docs/api/management/v2/users/clear-risk-assessment-assessors-for-a-specific-user.mdx": [],
+    "main/docs/api/management/v2/users/create-a-user.mdx": [],
+    "main/docs/api/management/v2/users/creates-an-authentication-method-for-a-given-user.mdx": [],
+    "main/docs/api/management/v2/users/delete-a-user.mdx": [],
+    "main/docs/api/management/v2/users/delete-a-users-multi-factor-provider.mdx": [],
+    "main/docs/api/management/v2/users/delete-all-authentication-methods-for-the-given-user.mdx": [],
+    "main/docs/api/management/v2/users/delete-all-authenticators.mdx": [],
+    "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx": [],
+    "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx": [],
+    "main/docs/api/management/v2/users/delete-sessions-for-user.mdx": [],
+    "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx": [],
+    "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx": [],
+    "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx": [],
+    "main/docs/api/management/v2/users/get-a-user.mdx": [],
+    "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx": [],
+    "main/docs/api/management/v2/users/get-a-users-permissions.mdx": [],
+    "main/docs/api/management/v2/users/get-a-users-roles.mdx": [],
+    "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx": [],
+    "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx": [],
+    "main/docs/api/management/v2/users/get-sessions-for-user.mdx": [],
+    "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx": [],
+    "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx": [],
+    "main/docs/api/management/v2/users/get-users-groups.mdx": [],
+    "main/docs/api/management/v2/users/get-users-log-events.mdx": [],
+    "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx": [],
+    "main/docs/api/management/v2/users/link-a-user-account.mdx": [],
+    "main/docs/api/management/v2/users/list-or-search-users.mdx": [],
+    "main/docs/api/management/v2/users/list-users-organizations.mdx": [],
+    "main/docs/api/management/v2/users/remove-permissions-from-a-user.mdx": [],
+    "main/docs/api/management/v2/users/removes-roles-from-a-user.mdx": [],
+    "main/docs/api/management/v2/users/revokes-selected-resources-from-a-user.mdx": [],
+    "main/docs/api/management/v2/users/unlink-a-user-identity.mdx": [],
+    "main/docs/api/management/v2/users/update-a-user.mdx": [],
+    "main/docs/api/management/v2/users/update-all-authentication-methods-by-replacing-them-with-the-given-ones.mdx": [],
+    "main/docs/api/management/v2/users/update-an-authentication-method.mdx": [],
+    "main/docs/api/management/v2/user-blocks/get-a-users-blocks.mdx": [],
+    "main/docs/api/management/v2/user-blocks/get-blocks-by-identifier.mdx": [],
+    "main/docs/api/management/v2/user-blocks/unblock-a-user.mdx": [],
+    "main/docs/api/management/v2/user-blocks/unblock-by-identifier.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/delete-user-attribute-profile.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-template.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-templates.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profiles.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/modify-a-user-attribute-profile.mdx": [],
+    "main/docs/api/management/v2/user-attribute-profiles/post-user-attribute-profile.mdx": [],
+    "main/docs/api/management/v2/token-exchange-profiles/create-a-token-exchange-profile.mdx": [],
+    "main/docs/api/management/v2/token-exchange-profiles/delete-a-token-exchange-profile.mdx": [],
+    "main/docs/api/management/v2/token-exchange-profiles/get-a-token-exchange-profile.mdx": [],
+    "main/docs/api/management/v2/token-exchange-profiles/get-token-exchange-profiles.mdx": [],
+    "main/docs/api/management/v2/token-exchange-profiles/update-an-existing-token-exchange-profile.mdx": [],
+    "main/docs/api/management/v2/tickets/create-a-password-change-ticket.mdx": [],
+    "main/docs/api/management/v2/tickets/create-an-email-verification-ticket.mdx": [],
+    "main/docs/api/management/v2/tenants/get-tenant-settings.mdx": [],
+    "main/docs/api/management/v2/tenants/update-tenant-settings.mdx": [],
+    "main/docs/api/management/v2/supplemental-signals/get-the-supplemental-signals-configuration-for-a-tenant.mdx": [],
+    "main/docs/api/management/v2/supplemental-signals/update-the-supplemental-signals-configuration-for-a-tenant.mdx": [],
+    "main/docs/api/management/v2/stats/get-active-users-count.mdx": [],
+    "main/docs/api/management/v2/stats/get-daily-stats.mdx": [],
+    "main/docs/api/management/v2/sessions/delete-session.mdx": [],
+    "main/docs/api/management/v2/sessions/get-session.mdx": [],
+    "main/docs/api/management/v2/sessions/revokes-a-session.mdx": [],
+    "main/docs/api/management/v2/sessions/update-session.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx": [],
+    "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx": [],
+    "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas delete /rules-configs/{key}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules-configs/retrieve-config-variable-keys-for-rules-get-rules-configs.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas get /rules-configs",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules-configs/set-rules-config-for-a-given-key.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas put /rules-configs/{key}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules/create-a-rule.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas post /rules",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules/delete-a-rule.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas delete /rules/{id}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules/get-a-rule.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas get /rules/{id}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules/get-rules.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas get /rules",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/rules/update-a-rule.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas patch /rules/{id}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/roles/assign-users-to-a-role.mdx": [],
+    "main/docs/api/management/v2/roles/associate-permissions-with-a-role.mdx": [],
+    "main/docs/api/management/v2/roles/create-a-role.mdx": [],
+    "main/docs/api/management/v2/roles/delete-a-role.mdx": [],
+    "main/docs/api/management/v2/roles/get-a-role.mdx": [],
+    "main/docs/api/management/v2/roles/get-a-roles-users.mdx": [],
+    "main/docs/api/management/v2/roles/get-permissions-granted-by-role.mdx": [],
+    "main/docs/api/management/v2/roles/get-roles.mdx": [],
+    "main/docs/api/management/v2/roles/remove-permissions-from-a-role.mdx": [],
+    "main/docs/api/management/v2/roles/update-a-role.mdx": [],
+    "main/docs/api/management/v2/risk-assessments/get-new-device-assessor.mdx": [],
+    "main/docs/api/management/v2/risk-assessments/get-risk-assessment-settings.mdx": [],
+    "main/docs/api/management/v2/risk-assessments/update-new-device-assessor.mdx": [],
+    "main/docs/api/management/v2/risk-assessments/update-risk-assessment-settings.mdx": [],
+    "main/docs/api/management/v2/resource-servers/create-a-resource-server.mdx": [],
+    "main/docs/api/management/v2/resource-servers/delete-a-resource-server.mdx": [],
+    "main/docs/api/management/v2/resource-servers/get-a-resource-server.mdx": [],
+    "main/docs/api/management/v2/resource-servers/get-resource-servers.mdx": [],
+    "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx": [],
+    "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx": [],
+    "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx": [],
+    "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": [],
+    "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx": [],
+    "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx": [],
+    "main/docs/api/management/v2/prompts/get-prompt-settings.mdx": [],
+    "main/docs/api/management/v2/prompts/get-render-setting-configurations-for-all-screens.mdx": [],
+    "main/docs/api/management/v2/prompts/get-render-settings-for-a-screen.mdx": [],
+    "main/docs/api/management/v2/prompts/set-custom-text-for-a-specific-prompt.mdx": [],
+    "main/docs/api/management/v2/prompts/set-partials-for-a-prompt.mdx": [],
+    "main/docs/api/management/v2/prompts/update-prompt-settings.mdx": [],
+    "main/docs/api/management/v2/prompts/update-render-settings-for-a-screen.mdx": [],
+    "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx": [],
+    "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx": [],
+    "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx": [],
+    "main/docs/api/management/v2/organizations/create-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx": [],
+    "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-organization-by-name.mdx": [],
+    "main/docs/api/management/v2/organizations/get-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-organizations.mdx": [],
+    "main/docs/api/management/v2/organizations/get-user-roles-assigned-to-an-organization-member.mdx": [],
+    "main/docs/api/management/v2/organizations/modify-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx": [],
+    "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx": [],
+    "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx": [],
+    "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx": [],
+    "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx": [],
+    "main/docs/api/management/v2/network-acls/create-access-control-list.mdx": [],
+    "main/docs/api/management/v2/network-acls/delete-access-control-list.mdx": [],
+    "main/docs/api/management/v2/network-acls/get-a-specific-access-control-list-entry-for-a-tenant.mdx": [],
+    "main/docs/api/management/v2/network-acls/get-all-access-control-list-entries-for-a-tenant.mdx": [],
+    "main/docs/api/management/v2/network-acls/partial-update-for-an-access-control-list.mdx": [],
+    "main/docs/api/management/v2/network-acls/update-access-control-list.mdx": [],
+    "main/docs/api/management/v2/logs/get-a-log-event-by-id.mdx": [],
+    "main/docs/api/management/v2/logs/search-log-events.mdx": [],
+    "main/docs/api/management/v2/log-streams/create-a-log-stream.mdx": [],
+    "main/docs/api/management/v2/log-streams/delete-log-stream.mdx": [],
+    "main/docs/api/management/v2/log-streams/get-log-stream-by-id.mdx": [],
+    "main/docs/api/management/v2/log-streams/get-log-streams.mdx": [],
+    "main/docs/api/management/v2/log-streams/update-a-log-stream.mdx": [],
+    "main/docs/api/management/v2/keys/create-or-replace-custom-signing-keys.mdx": [],
+    "main/docs/api/management/v2/keys/create-the-new-encryption-key.mdx": [],
+    "main/docs/api/management/v2/keys/create-the-public-wrapping-key.mdx": [],
+    "main/docs/api/management/v2/keys/delete-custom-signing-keys.mdx": [],
+    "main/docs/api/management/v2/keys/delete-the-encryption-key-by-its-key-id.mdx": [],
+    "main/docs/api/management/v2/keys/get-all-application-signing-keys.mdx": [],
+    "main/docs/api/management/v2/keys/get-all-encryption-keys.mdx": [],
+    "main/docs/api/management/v2/keys/get-an-application-signing-key-by-its-key-id.mdx": [],
+    "main/docs/api/management/v2/keys/get-custom-signing-keys.mdx": [],
+    "main/docs/api/management/v2/keys/get-the-encryption-key-by-its-key-id.mdx": [],
+    "main/docs/api/management/v2/keys/import-the-encryption-key.mdx": [],
+    "main/docs/api/management/v2/keys/rekey-the-key-hierarchy.mdx": [],
+    "main/docs/api/management/v2/keys/revoke-an-application-signing-key-by-its-key-id.mdx": [],
+    "main/docs/api/management/v2/keys/rotate-the-application-signing-key.mdx": [],
+    "main/docs/api/management/v2/jobs/create-export-users-job.mdx": [],
+    "main/docs/api/management/v2/jobs/create-import-users-job.mdx": [],
+    "main/docs/api/management/v2/jobs/get-a-job.mdx": [],
+    "main/docs/api/management/v2/jobs/get-job-error-details.mdx": [],
+    "main/docs/api/management/v2/jobs/send-an-email-address-verification-email.mdx": [],
+    "main/docs/api/management/v2/hooks/add-hook-secrets.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas post /hooks/{id}/secrets",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/create-a-hook.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas post /hooks",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/delete-a-hook.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas delete /hooks/{id}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/delete-hook-secrets.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas delete /hooks/{id}/secrets",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/get-a-hook.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas get /hooks/{id}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/get-hook-secrets.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas get /hooks/{id}/secrets",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/get-hooks.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas get /hooks",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/update-a-hook.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas patch /hooks/{id}",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/hooks/update-hook-secrets.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "openapi: management-api-oas patch /hooks/{id}/secrets",
+        "line": 2
+      }
+    ],
+    "main/docs/api/management/v2/guardian/configure-aws-sns-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/create-a-multi-factor-authentication-enrollment-ticket.mdx": [],
+    "main/docs/api/management/v2/guardian/delete-a-multi-factor-authentication-enrollment.mdx": [],
+    "main/docs/api/management/v2/guardian/get-a-multi-factor-authentication-enrollment.mdx": [],
+    "main/docs/api/management/v2/guardian/get-apns-push-notification-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/get-aws-sns-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/get-duo-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/get-enabled-phone-factors.mdx": [],
+    "main/docs/api/management/v2/guardian/get-enrollment-and-verification-phone-templates.mdx": [],
+    "main/docs/api/management/v2/guardian/get-factors-and-multi-factor-authentication-details.mdx": [],
+    "main/docs/api/management/v2/guardian/get-multi-factor-authentication-policies.mdx": [],
+    "main/docs/api/management/v2/guardian/get-phone-provider-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/get-push-notification-provider.mdx": [],
+    "main/docs/api/management/v2/guardian/get-sms-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/get-sms-enrollment-and-verification-templates.mdx": [],
+    "main/docs/api/management/v2/guardian/get-twilio-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/get-twilio-sms-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/overwrite-fcm-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/overwrite-fcmv-1-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/set-the-duo-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-ap-ns-provider-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-apns-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-aws-sns-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-enrollment-and-verification-phone-templates.mdx": [],
+    "main/docs/api/management/v2/guardian/update-multi-factor-authentication-policies.mdx": [],
+    "main/docs/api/management/v2/guardian/update-multi-factor-authentication-type.mdx": [],
+    "main/docs/api/management/v2/guardian/update-phone-provider-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-push-notification-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-sms-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-sms-enrollment-and-verification-templates.mdx": [],
+    "main/docs/api/management/v2/guardian/update-the-duo-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-the-enabled-phone-factors.mdx": [],
+    "main/docs/api/management/v2/guardian/update-twilio-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/update-twilio-sms-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/updates-fcm-configuration.mdx": [],
+    "main/docs/api/management/v2/guardian/updates-fcmv-1-configuration.mdx": [],
+    "main/docs/api/management/v2/groups/delete-a-group.mdx": [],
+    "main/docs/api/management/v2/groups/get-a-group.mdx": [],
+    "main/docs/api/management/v2/groups/get-all-groups.mdx": [],
+    "main/docs/api/management/v2/groups/get-group-members.mdx": [],
+    "main/docs/api/management/v2/grants/delete-a-grant-by-id.mdx": [],
+    "main/docs/api/management/v2/grants/delete-a-grant-by-user-id.mdx": [],
+    "main/docs/api/management/v2/grants/get-grants.mdx": [],
+    "main/docs/api/management/v2/forms/create-a-form.mdx": [],
+    "main/docs/api/management/v2/forms/delete-a-form.mdx": [],
+    "main/docs/api/management/v2/forms/get-a-form.mdx": [],
+    "main/docs/api/management/v2/forms/get-forms.mdx": [],
+    "main/docs/api/management/v2/forms/update-a-form.mdx": [],
+    "main/docs/api/management/v2/flows/create-a-flow.mdx": [],
+    "main/docs/api/management/v2/flows/create-a-flows-vault-connection.mdx": [],
+    "main/docs/api/management/v2/flows/delete-a-flow-execution.mdx": [],
+    "main/docs/api/management/v2/flows/delete-a-flow.mdx": [],
+    "main/docs/api/management/v2/flows/delete-a-flows-vault-connection.mdx": [],
+    "main/docs/api/management/v2/flows/get-a-flow-execution.mdx": [],
+    "main/docs/api/management/v2/flows/get-a-flow.mdx": [],
+    "main/docs/api/management/v2/flows/get-a-flows-vault-connection.mdx": [],
+    "main/docs/api/management/v2/flows/get-flow-executions.mdx": [],
+    "main/docs/api/management/v2/flows/get-flows-vault-connection-list.mdx": [],
+    "main/docs/api/management/v2/flows/get-flows.mdx": [],
+    "main/docs/api/management/v2/flows/update-a-flow.mdx": [],
+    "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx": [],
+    "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx": [],
+    "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx": [],
+    "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx": [],
+    "main/docs/api/management/v2/event-streams/get-an-event-stream-by-id.mdx": [],
+    "main/docs/api/management/v2/event-streams/get-event-streams.mdx": [],
+    "main/docs/api/management/v2/event-streams/get-this-event-streams-delivery-history.mdx": [],
+    "main/docs/api/management/v2/event-streams/redeliver-a-single-failed-event-by-id.mdx": [],
+    "main/docs/api/management/v2/event-streams/redeliver-failed-events.mdx": [],
+    "main/docs/api/management/v2/event-streams/send-a-test-event-to-an-event-stream.mdx": [],
+    "main/docs/api/management/v2/event-streams/update-an-event-stream.mdx": [],
+    "main/docs/api/management/v2/emails/configure-email-provider.mdx": [],
+    "main/docs/api/management/v2/emails/delete-email-provider.mdx": [],
+    "main/docs/api/management/v2/emails/get-email-provider.mdx": [],
+    "main/docs/api/management/v2/emails/update-email-provider.mdx": [],
+    "main/docs/api/management/v2/email-templates/create-an-email-template.mdx": [],
+    "main/docs/api/management/v2/email-templates/get-an-email-template.mdx": [],
+    "main/docs/api/management/v2/email-templates/patch-an-email-template.mdx": [],
+    "main/docs/api/management/v2/email-templates/update-an-email-template.mdx": [],
+    "main/docs/api/management/v2/device-credentials/create-a-device-public-key-credential.mdx": [],
+    "main/docs/api/management/v2/device-credentials/delete-a-device-credential.mdx": [],
+    "main/docs/api/management/v2/device-credentials/retrieve-device-credentials.mdx": [],
+    "main/docs/api/management/v2/custom-domains/configure-a-new-custom-domain.mdx": [],
+    "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx": [],
+    "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx": [],
+    "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx": [],
+    "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": [],
+    "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx": [],
+    "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx": [],
+    "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx": [],
+    "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx": [],
+    "main/docs/api/management/v2/connections/check-connection-status.mdx": [],
+    "main/docs/api/management/v2/connections/create-a-connection.mdx": [],
+    "main/docs/api/management/v2/connections/create-a-directory-provisioning-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/create-a-scim-token.mdx": [],
+    "main/docs/api/management/v2/connections/create-connection-keys.mdx": [],
+    "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": [],
+    "main/docs/api/management/v2/connections/delete-a-connection.mdx": [],
+    "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/delete-a-connections-scim-token.mdx": [],
+    "main/docs/api/management/v2/connections/delete-a-directory-provisioning-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/get-a-connection.mdx": [],
+    "main/docs/api/management/v2/connections/get-a-connections-default-directory-provisioning-attribute-mapping.mdx": [],
+    "main/docs/api/management/v2/connections/get-a-connections-default-scim-mapping.mdx": [],
+    "main/docs/api/management/v2/connections/get-a-connections-scim-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/get-a-connections-scim-tokens.mdx": [],
+    "main/docs/api/management/v2/connections/get-a-directory-provisioning-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/get-all-connections.mdx": [],
+    "main/docs/api/management/v2/connections/get-connection-keys.mdx": [],
+    "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx": [],
+    "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx": [],
+    "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx": [],
+    "main/docs/api/management/v2/connections/rotate-connection-keys.mdx": [],
+    "main/docs/api/management/v2/connections/update-a-connection.mdx": [],
+    "main/docs/api/management/v2/connections/update-enabled-clients-for-a-connection.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/create-a-connection-profile.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/delete-connection-profile.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/get-connection-profile-template.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/get-connection-profile-templates.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/get-connection-profile.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/get-connection-profiles.mdx": [],
+    "main/docs/api/management/v2/connection-profiles/modify-a-connection-profile.mdx": [],
+    "main/docs/api/management/v2/clients/create-a-client-credential.mdx": [],
+    "main/docs/api/management/v2/clients/create-a-client.mdx": [],
+    "main/docs/api/management/v2/clients/delete-a-client-credential.mdx": [],
+    "main/docs/api/management/v2/clients/delete-a-client.mdx": [],
+    "main/docs/api/management/v2/clients/get-client-by-id.mdx": [],
+    "main/docs/api/management/v2/clients/get-client-credential-details.mdx": [],
+    "main/docs/api/management/v2/clients/get-client-credentials.mdx": [],
+    "main/docs/api/management/v2/clients/get-clients.mdx": [],
+    "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx": [],
+    "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx": [],
+    "main/docs/api/management/v2/clients/update-a-client-credential.mdx": [],
+    "main/docs/api/management/v2/clients/update-a-client.mdx": [],
+    "main/docs/api/management/v2/client-grants/create-client-grant.mdx": [],
+    "main/docs/api/management/v2/client-grants/delete-client-grant.mdx": [],
+    "main/docs/api/management/v2/client-grants/get-client-grant.mdx": [],
+    "main/docs/api/management/v2/client-grants/get-client-grants.mdx": [],
+    "main/docs/api/management/v2/client-grants/get-the-organizations-associated-to-a-client-grant.mdx": [],
+    "main/docs/api/management/v2/client-grants/update-client-grant.mdx": [],
+    "main/docs/api/management/v2/branding/configure-the-phone-provider.mdx": [],
+    "main/docs/api/management/v2/branding/create-a-phone-notification-template.mdx": [],
+    "main/docs/api/management/v2/branding/create-branding-theme.mdx": [],
+    "main/docs/api/management/v2/branding/delete-a-phone-notification-template.mdx": [],
+    "main/docs/api/management/v2/branding/delete-branding-theme.mdx": [],
+    "main/docs/api/management/v2/branding/delete-template-for-new-universal-login-experience.mdx": [],
+    "main/docs/api/management/v2/branding/deletes-a-phone-provider.mdx": [],
+    "main/docs/api/management/v2/branding/get-a-list-of-phone-notification-templates.mdx": [],
+    "main/docs/api/management/v2/branding/get-a-list-of-phone-providers.mdx": [],
+    "main/docs/api/management/v2/branding/get-a-phone-notification-template.mdx": [],
+    "main/docs/api/management/v2/branding/get-a-phone-provider.mdx": [],
+    "main/docs/api/management/v2/branding/get-branding-settings.mdx": [],
+    "main/docs/api/management/v2/branding/get-branding-theme.mdx": [],
+    "main/docs/api/management/v2/branding/get-default-branding-theme.mdx": [],
+    "main/docs/api/management/v2/branding/get-template-for-new-universal-login-experience.mdx": [],
+    "main/docs/api/management/v2/branding/resets-a-phone-notification-template-values.mdx": [],
+    "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-provider.mdx": [],
+    "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-template.mdx": [],
+    "main/docs/api/management/v2/branding/set-template-for-new-universal-login-experience.mdx": [],
+    "main/docs/api/management/v2/branding/update-a-phone-notification-template.mdx": [],
+    "main/docs/api/management/v2/branding/update-branding-settings.mdx": [],
+    "main/docs/api/management/v2/branding/update-branding-theme.mdx": [],
+    "main/docs/api/management/v2/branding/update-the-phone-provider.mdx": [],
+    "main/docs/api/management/v2/attack-protection/get-bot-detection-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/get-breached-password-detection-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/get-brute-force-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/get-suspicious-ip-throttling-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/get-the-captcha-configuration-for-a-tenant.mdx": [],
+    "main/docs/api/management/v2/attack-protection/partial-update-for-captcha-configuration.mdx": [],
+    "main/docs/api/management/v2/attack-protection/update-bot-detection-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/update-breached-password-detection-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/update-brute-force-settings.mdx": [],
+    "main/docs/api/management/v2/attack-protection/update-suspicious-ip-throttling-settings.mdx": [],
+    "main/docs/api/management/v2/anomaly/check-if-an-ip-address-is-blocked.mdx": [],
+    "main/docs/api/management/v2/anomaly/remove-the-blocked-ip-address.mdx": [],
+    "main/docs/api/management/v2/actions/create-a-new-actions-module.mdx": [],
+    "main/docs/api/management/v2/actions/create-a-new-version-of-an-actions-module.mdx": [],
+    "main/docs/api/management/v2/actions/create-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/delete-a-specific-actions-module-by-id.mdx": [],
+    "main/docs/api/management/v2/actions/delete-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/deploy-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/get-a-specific-actions-module-by-id.mdx": [],
+    "main/docs/api/management/v2/actions/get-a-specific-version-of-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/get-a-specific-version-of-an-actions-module.mdx": [],
+    "main/docs/api/management/v2/actions/get-actions.mdx": [],
+    "main/docs/api/management/v2/actions/get-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/get-an-actions-versions.mdx": [],
+    "main/docs/api/management/v2/actions/get-an-execution.mdx": [],
+    "main/docs/api/management/v2/actions/get-trigger-bindings.mdx": [],
+    "main/docs/api/management/v2/actions/get-triggers.mdx": [],
+    "main/docs/api/management/v2/actions/list-actions-modules.mdx": [],
+    "main/docs/api/management/v2/actions/list-all-actions-using-an-actions-module.mdx": [],
+    "main/docs/api/management/v2/actions/list-all-versions-of-an-actions-module.mdx": [],
+    "main/docs/api/management/v2/actions/roll-back-to-a-previous-action-version.mdx": [],
+    "main/docs/api/management/v2/actions/rollback-an-actions-module-to-a-previous-version.mdx": [],
+    "main/docs/api/management/v2/actions/test-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx": [],
+    "main/docs/api/management/v2/actions/update-an-action.mdx": [],
+    "main/docs/api/management/v2/actions/update-trigger-bindings.mdx": []
   }
 }

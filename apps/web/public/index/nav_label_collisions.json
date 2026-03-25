@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-03T18:24:05.278Z",
+  "generatedAtUtc": "2026-03-25T18:55:56.845Z",
   "collisions": [
     {
       "label": "Configure Application Metadata",
@@ -16,6 +16,22 @@
           "filePath": "main/docs/get-started/applications/configure-application-metadata.mdx",
           "title": "Configure Application Metadata",
           "navPath": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Configure Application Metadata"
+        }
+      ]
+    },
+    {
+      "label": "delete an authentication method by id",
+      "count": 2,
+      "pages": [
+        {
+          "id": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+          "filePath": "main/docs/api/myaccount/authentication-methods/delete-an-authentication-method-by-id.mdx",
+          "navPath": "API Reference > My Account API >   > Authentication Methods > delete an authentication method by id"
+        },
+        {
+          "id": "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx",
+          "filePath": "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx",
+          "navPath": "API Reference > Management API >   > Users > delete an authentication method by id"
         }
       ]
     },
@@ -38,20 +54,34 @@
       ]
     },
     {
-      "label": "Releases",
+      "label": "get a list of authentication methods",
       "count": 2,
       "pages": [
         {
-          "id": "main/docs/customize/actions/releases.mdx",
-          "filePath": "main/docs/customize/actions/releases.mdx",
-          "title": "Releases",
-          "navPath": "Documentation > Customize > Code Customization > Actions > Releases"
+          "id": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+          "filePath": "main/docs/api/myaccount/authentication-methods/get-a-list-of-authentication-methods.mdx",
+          "navPath": "API Reference > My Account API >   > Authentication Methods > get a list of authentication methods"
         },
         {
-          "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-          "filePath": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx",
-          "title": "Releases",
-          "navPath": "Documentation > Customize > Code Customization > Actions > Explore Triggers > Signup and Login Triggers > Login Trigger > Releases"
+          "id": "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
+          "filePath": "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
+          "navPath": "API Reference > Management API >   > Users > get a list of authentication methods"
+        }
+      ]
+    },
+    {
+      "label": "get an authentication method by id",
+      "count": 2,
+      "pages": [
+        {
+          "id": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+          "filePath": "main/docs/api/myaccount/authentication-methods/get-an-authentication-method-by-id.mdx",
+          "navPath": "API Reference > My Account API >   > Authentication Methods > get an authentication method by id"
+        },
+        {
+          "id": "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
+          "filePath": "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
+          "navPath": "API Reference > Management API >   > Users > get an authentication method by id"
         }
       ]
     },

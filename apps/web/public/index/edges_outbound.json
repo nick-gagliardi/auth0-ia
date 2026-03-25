@@ -195,25 +195,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/releases.mdx": {
-    "link": [
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx": {
-    "link": [
-      "main/docs/secure/multi-factor-authentication.mdx",
-      "main/docs/secure/security-guidance/prevent-threats.mdx",
-      "main/docs/secure/tokens/json-web-tokens.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx",
-      "main/docs/secure/tokens/refresh-tokens.mdx",
-      "main/docs/manage-users/user-accounts/metadata/manage-user-metadata.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/secure.mdx": {
     "link": [],
     "import": [
@@ -781,6 +762,7 @@
   },
   "main/docs/authenticate/database-connections/custom-db/error-handling.mdx": {
     "link": [
+      "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
       "main/docs/customize/login-pages/classic-login/customize-lock-error-messages.mdx",
       "main/docs/customize/actions/actions-real-time-logs.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates.mdx"
@@ -908,6 +890,7 @@
       "main/docs/deploy-monitor/logs.mdx",
       "main/docs/troubleshoot/basic-issues/search-logs-for-deprecation-errors.mdx",
       "main/docs/customize/extensions/user-import-export-extension.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/install-delegated-admin-extension.mdx",
       "main/docs/manage-users/user-migration/bulk-user-import-export.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers.mdx"
     ],
@@ -1358,7 +1341,6 @@
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-jar.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
       "main/docs/secure/tokens/access-tokens/json-web-encryption.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/add-login-using-the-implicit-flow-with-form-post.mdx",
@@ -1554,6 +1536,7 @@
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
       "main/docs/customize/rules.mdx",
+      "main/docs/authenticate/protocols/oauth.mdx",
       "main/docs/libraries/auth0js.mdx",
       "main/docs/troubleshoot/authentication-issues/renew-tokens-when-using-safari.mdx",
       "main/docs/secure/multi-factor-authentication.mdx",
@@ -1748,6 +1731,18 @@
   },
   "main/docs/authenticate/protocols/saml.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx": {
+    "link": [
+      "main/docs/secure/multi-factor-authentication.mdx",
+      "main/docs/secure/security-guidance/prevent-threats.mdx",
+      "main/docs/secure/tokens/json-web-tokens.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx",
+      "main/docs/secure/tokens/refresh-tokens.mdx",
+      "main/docs/manage-users/user-accounts/metadata/manage-user-metadata.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -1999,6 +1994,8 @@
   },
   "main/docs/customize/custom-domains.mdx": {
     "link": [
+      "main/docs/authenticate/database-connections/passkeys.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
       "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
       "main/docs/secure/security-guidance/data-security/allowlist.mdx",
       "main/docs/authenticate/login/redirect-users-after-login.mdx",
@@ -2477,7 +2474,11 @@
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx": {
     "link": [
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+      "main/docs/authenticate/database-connections/password-change.mdx",
+      "main/docs/authenticate/custom-token-exchange.mdx",
+      "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
+      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx"
     ],
     "import": [],
     "redirect": []
@@ -2542,6 +2543,48 @@
       "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
       "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
       "main/docs/authenticate/database-connections/custom-db/error-handling.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/database-connections/password-change.mdx": {
+    "link": [
+      "main/docs/authenticate/database-connections.mdx",
+      "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
+      "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx",
+      "main/docs/troubleshoot/customer-support/reset-account-passwords.mdx",
+      "main/docs/customize/email/email-templates.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/authenticate/custom-token-exchange.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx",
+      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger.mdx",
+      "main/docs/authenticate/custom-token-exchange/cte-attack-protection.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/get-started/auth0-overview/create-applications.mdx",
+      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
+      "main/docs/get-started/applications/application-settings.mdx",
+      "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx"
     ],
     "import": [],
     "redirect": []
@@ -3277,7 +3320,6 @@
     "link": [
       "main/docs/secure/application-credentials/generate-rsa-key-pair.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-jar.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx",
       "main/docs/get-started/applications/configure-private-key-jwt.mdx"
     ],
     "import": [
@@ -3287,9 +3329,10 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-jar.mdx": {
     "link": [
+      "main/docs/secure/tokens/json-web-tokens.mdx",
       "main/docs/secure/application-credentials/generate-rsa-key-pair.mdx",
       "main/docs/get-started/applications/configure-jar.mdx",
-      "main/docs/secure/tokens/json-web-tokens.mdx"
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4239,11 +4282,11 @@
   "main/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa.mdx": {
     "link": [
       "main/docs/secure/multi-factor-authentication/adaptive-mfa.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
       "main/docs/troubleshoot/error-handling-best-practices.mdx",
       "main/docs/secure/multi-factor-authentication/adaptive-mfa/enable-adaptive-mfa.mdx",
       "main/docs/secure/multi-factor-authentication/adaptive-mfa/adaptive-mfa-log-events.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx"
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4282,7 +4325,6 @@
   },
   "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx": {
     "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/secure/tokens/refresh-tokens.mdx",
       "main/docs/secure/tokens/access-tokens.mdx",
       "main/docs/get-started/apis.mdx",
@@ -4331,7 +4373,6 @@
   },
   "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx": {
     "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-rop-flow.mdx",
       "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
@@ -4404,6 +4445,48 @@
       "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx"
     ],
     "import": [],
+    "redirect": []
+  },
+  "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx": {
+    "link": [
+      "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx",
+      "main/docs/manage-users/sessions/session-metadata.mdx",
+      "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
+      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx",
+      "main/docs/secure/tokens.mdx",
+      "main/docs/secure/tokens/access-tokens.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
+      "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
+      "main/docs/get-started/apis.mdx",
+      "main/docs/authenticate/login/configure-silent-authentication.mdx",
+      "main/docs/api/management/v2/sessions/get-session.mdx",
+      "main/docs/secure/tokens/refresh-tokens.mdx",
+      "main/docs/manage-users/sessions.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/sessions/session-metadata.mdx": {
+    "link": [
+      "main/docs/manage-users/sessions.mdx",
+      "main/docs/manage-users/sessions/session-metadata/add-organization-information.mdx",
+      "main/docs/manage-users/sessions/session-lifecycle.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
+      "main/docs/authenticate/login/logout/back-channel-logout.mdx",
+      "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
+      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/sessions/get-session.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
     "redirect": []
   },
   "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-rop-flow.mdx": {
@@ -7107,67 +7190,9 @@
     ],
     "redirect": []
   },
-  "main/docs/quickstart/webapp/java-ee/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/java-ee/web.xml.mdx",
-      "main/snippets/quickstart/webapp/java-ee/Auth0AuthenticationConfig.java.mdx",
-      "main/snippets/quickstart/webapp/java-ee/LoginServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java-ee/HomeServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java-ee/LogoutServlet.java.mdx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-ee/web.xml.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-ee/Auth0AuthenticationConfig.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-ee/LoginServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-ee/HomeServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-ee/LogoutServlet.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/webapp/java-ee/index.mdx": {
-    "link": [
-      "main/docs/get-started/auth0-overview.mdx",
-      "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/quickstart/webapp/java-ee/interactive.mdx": {
     "link": [],
     "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/java-ee/web.xml.mdx",
-      "main/snippets/quickstart/webapp/java-ee/Auth0AuthenticationConfig.java.mdx",
-      "main/snippets/quickstart/webapp/java-ee/LoginServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java-ee/HomeServlet.java.mdx",
-      "main/snippets/quickstart/webapp/java-ee/LogoutServlet.java.mdx",
-      "main/snippets/QuickstartButtons.jsx",
       "main/snippets/AuthCodeGroup.jsx"
     ],
     "redirect": []
@@ -7730,59 +7755,28 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/quickstart/native/maui/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs.mdx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs2.mdx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs3.mdx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs4.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/maui/MainPage.xaml.cs.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/maui/MainPage.xaml.cs2.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/maui/MainPage.xaml.cs3.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/maui/MainPage.xaml.cs4.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/native/maui/index.mdx": {
     "link": [
-      "main/docs/get-started/auth0-overview.mdx",
-      "main/docs/get-started/architecture-scenarios/mobile-api.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+      "main/docs/manage-users/organizations.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx": {
+    "link": [
+      "main/docs/authenticate/identity-providers/social-identity-providers/facebook-native.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/identity-providers/social-identity-providers/facebook-native.mdx": {
+    "link": [
+      "main/docs/quickstart/native/ios-swift-facebook-login/index.mdx",
+      "main/docs/quickstart/native/android-facebook-login/index.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
     ],
     "import": [
       "main/snippets/AuthCodeBlock.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/quickstart/native/maui/interactive.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs.mdx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs2.mdx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs3.mdx",
-      "main/snippets/quickstart/native/maui/MainPage.xaml.cs4.mdx",
-      "main/snippets/QuickstartButtons.jsx"
     ],
     "redirect": []
   },
@@ -8131,69 +8125,12 @@
     ],
     "redirect": []
   },
-  "main/docs/quickstart/native/android-facebook-login/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/native/android-facebook-login/performLogin + SimpleCallback.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/onCreate.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/fetchSessionToken.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/fetchUserProfile.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/exchangeTokens.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/performLogin.mdx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/android-facebook-login/performLogin + SimpleCallback.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/android-facebook-login/onCreate.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/android-facebook-login/fetchSessionToken.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/android-facebook-login/fetchUserProfile.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/android-facebook-login/exchangeTokens.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/android-facebook-login/performLogin.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/native/android-facebook-login/index.mdx": {
     "link": [
       "main/docs/authenticate/identity-providers/social-identity-providers/facebook-native.mdx",
-      "main/docs/libraries/auth0-android.mdx",
-      "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx"
+      "main/docs/libraries/auth0-android.mdx"
     ],
     "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/identity-providers/social-identity-providers/facebook-native.mdx": {
-    "link": [
-      "main/docs/quickstart/native/ios-swift/index.mdx",
-      "main/docs/quickstart/native/android-facebook-login/index.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx"
-    ],
     "redirect": []
   },
   "main/docs/libraries/auth0-android.mdx": {
@@ -8206,22 +8143,6 @@
       "main/docs/libraries/auth0-android/auth0-android-user-management.mdx"
     ],
     "import": [],
-    "redirect": []
-  },
-  "main/docs/quickstart/native/android-facebook-login/interactive.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/native/android-facebook-login/performLogin + SimpleCallback.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/onCreate.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/fetchSessionToken.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/fetchUserProfile.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/exchangeTokens.mdx",
-      "main/snippets/quickstart/native/android-facebook-login/performLogin.mdx",
-      "main/snippets/QuickstartButtons.jsx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
     "redirect": []
   },
   "main/docs/quickstart/native/android/index.mdx": {
@@ -8568,57 +8489,9 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/quickstart/backend/java-spring-security5/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/backend/java-spring-security5/application.yml.mdx",
-      "main/snippets/quickstart/backend/java-spring-security5/SecurityConfig.java.mdx",
-      "main/snippets/quickstart/backend/java-spring-security5/APIController.java.mdx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/backend/java-spring-security5/application.yml.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/backend/java-spring-security5/SecurityConfig.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/backend/java-spring-security5/APIController.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/backend/java-spring-security5/index.mdx": {
-    "link": [
-      "main/docs/secure/tokens/json-web-tokens/json-web-key-sets.mdx",
-      "main/docs/secure/tokens/access-tokens/validate-access-tokens.mdx",
-      "main/docs/get-started/auth0-overview.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "main/docs/quickstart/backend/java-spring-security5/02-using.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/quickstart/backend/java-spring-security5/interactive.mdx": {
     "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/backend/java-spring-security5/application.yml.mdx",
-      "main/snippets/quickstart/backend/java-spring-security5/SecurityConfig.java.mdx",
-      "main/snippets/quickstart/backend/java-spring-security5/APIController.java.mdx",
-      "main/snippets/QuickstartButtons.jsx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
+    "import": [],
     "redirect": []
   },
   "main/docs/quickstart/backend/golang/02-using.mdx": {
@@ -8769,106 +8642,6 @@
     ],
     "redirect": []
   },
-  "main/docs/microsites/manage-users/define-maintain-custom-user-data.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "main/docs/manage-users/user-accounts/metadata/manage-user-metadata.mdx",
-      "main/docs/get-started/applications/configure-application-metadata.mdx",
-      "main/docs/libraries/lock.mdx",
-      "main/docs/libraries/lock/lock-configuration.mdx",
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/libraries/custom-signup.mdx",
-      "main/docs/customize/email/email-templates.mdx",
-      "main/docs/troubleshoot/basic-issues/check-deprecation-errors.mdx",
-      "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
-      "main/docs/manage-users/user-accounts/metadata/metadata-fields-data.mdx",
-      "main/docs/manage-users/user-accounts/metadata/manage-metadata-rules.mdx",
-      "main/docs/manage-users/user-accounts/metadata/manage-metadata-api.mdx",
-      "main/docs/manage-users/user-accounts/metadata/manage-metadata-lock.mdx"
-    ],
-    "import": [],
-    "redirect": [
-      "main/docs/manage-users/user-accounts/metadata.mdx"
-    ]
-  },
-  "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/user-profiles/root-attributes/update-root-attributes-for-users.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/root-attributes/set-root-attributes-during-user-import.mdx",
-      "main/docs/authenticate/identity-providers/retrieve-connection-options.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/root-attributes/set-root-attributes-during-user-sign-up.mdx",
-      "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/authenticate/database-connections.mdx": {
-    "link": [
-      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
-      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "main/docs/authenticate/database-connections/custom-db.mdx",
-      "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "main/docs/manage-users.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/libraries/custom-signup.mdx": {
-    "link": [
-      "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx",
-      "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "main/docs/libraries/lock/lock-configuration.mdx",
-      "main/docs/customize/rules/redirect-users.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/progressive-profiling.mdx",
-      "main/docs/customize/rules.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/metadata/manage-metadata-rules.mdx": {
-    "link": [
-      "main/docs/customize/actions/actions-overview.mdx",
-      "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/rules.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
-      "main/docs/manage-users/user-accounts/metadata.mdx",
-      "main/docs/customize/rules/use-management-api.mdx",
-      "main/docs/customize/rules/context-object.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/metadata/manage-metadata-api.mdx": {
-    "link": [
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "main/docs/get-started/applications/configure-application-metadata.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/manage-users/user-accounts/metadata/manage-metadata-lock.mdx": {
-    "link": [
-      "main/docs/libraries/lock.mdx",
-      "main/docs/libraries/lock/lock-configuration.mdx",
-      "main/docs/libraries/lock/lock-api-reference.mdx",
-      "main/docs/troubleshoot/basic-issues/check-deprecation-errors.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/manage-users/access-control.mdx": {
     "link": [],
     "import": [],
@@ -8934,7 +8707,8 @@
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx",
-      "main/docs/manage-users/organizations/login-flows-for-organizations.mdx"
+      "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     ],
     "import": [],
     "redirect": []
@@ -9208,6 +8982,20 @@
     ],
     "redirect": []
   },
+  "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx": {
+    "link": [
+      "main/docs/manage-users/user-accounts/user-profiles/root-attributes/update-root-attributes-for-users.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/root-attributes/set-root-attributes-during-user-import.mdx",
+      "main/docs/authenticate/identity-providers/retrieve-connection-options.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/root-attributes/set-root-attributes-during-user-sign-up.mdx",
+      "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/manage-users/user-accounts/user-profiles/root-attributes.mdx": {
     "link": [
       "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx",
@@ -9215,6 +9003,31 @@
       "main/docs/authenticate/database-connections/custom-db.mdx",
       "main/docs/authenticate/passwordless.mdx",
       "main/docs/authenticate/identity-providers.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/metadata/manage-metadata-api.mdx": {
+    "link": [
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/get-started/applications/configure-application-metadata.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/metadata/manage-metadata-rules.mdx": {
+    "link": [
+      "main/docs/customize/actions/actions-overview.mdx",
+      "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+      "main/docs/customize/rules.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/configure-connection-sync-with-auth0.mdx",
+      "main/docs/manage-users/user-accounts/metadata.mdx",
+      "main/docs/customize/rules/use-management-api.mdx",
+      "main/docs/customize/rules/context-object.mdx"
     ],
     "import": [],
     "redirect": []
@@ -9351,6 +9164,44 @@
     ],
     "redirect": []
   },
+  "main/docs/authenticate/database-connections.mdx": {
+    "link": [
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
+      "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
+      "main/docs/authenticate/database-connections/custom-db.mdx",
+      "main/docs/authenticate/database-connections/custom-db/templates.mdx",
+      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
+      "main/docs/manage-users.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/custom-signup.mdx": {
+    "link": [
+      "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx",
+      "main/docs/authenticate/login/auth0-universal-login.mdx",
+      "main/docs/libraries/lock/lock-configuration.mdx",
+      "main/docs/customize/rules/redirect-users.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/progressive-profiling.mdx",
+      "main/docs/customize/rules.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-accounts/metadata/manage-metadata-lock.mdx": {
+    "link": [
+      "main/docs/libraries/lock.mdx",
+      "main/docs/libraries/lock/lock-configuration.mdx",
+      "main/docs/libraries/lock/lock-api-reference.mdx",
+      "main/docs/troubleshoot/basic-issues/check-deprecation-errors.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/manage-users/user-accounts/resend-verification-emails.mdx": {
     "link": [
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
@@ -9469,6 +9320,8 @@
   "main/docs/authenticate/database-connections/passkeys.mdx": {
     "link": [
       "main/docs/authenticate/database-connections.mdx",
+      "main/docs/authenticate/passwordless/implement-login/embedded-login/native.mdx",
+      "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
       "main/docs/secure/multi-factor-authentication.mdx"
@@ -9637,7 +9490,8 @@
       "main/docs/authenticate/login/configure-silent-authentication.mdx",
       "main/docs/authenticate/single-sign-on.mdx",
       "main/docs/manage-users/sessions/configure-session-lifetime.mdx",
-      "main/docs/manage-users/sessions/manage-sessions-actions.mdx"
+      "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
+      "main/docs/manage-users/sessions/manage-user-sessions-with-auth0-management-api.mdx"
     ],
     "import": [],
     "redirect": []
@@ -9752,19 +9606,6 @@
       "main/docs/authenticate/login/logout/log-users-out-of-auth0.mdx",
       "main/docs/authenticate/login/logout/log-users-out-of-applications.mdx",
       "main/docs/authenticate/login/logout/log-users-out-of-idps.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/manage-users/sessions/session-metadata.mdx": {
-    "link": [
-      "main/docs/manage-users/sessions.mdx",
-      "main/docs/manage-users/sessions/session-metadata/add-organization-information.mdx",
-      "main/docs/manage-users/sessions/session-lifecycle.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "main/docs/authenticate/login/logout/back-channel-logout.mdx",
-      "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
-      "main/docs/secure/data-privacy-and-compliance/gdpr.mdx"
     ],
     "import": [],
     "redirect": []
@@ -15945,15 +15786,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par-and-jar.mdx": {
-    "link": [
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-jar.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
-      "main/docs/get-started/applications/configure-par.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow/user-authorization-with-ciba.mdx": {
     "link": [
       "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow.mdx",
@@ -15980,14 +15812,8 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/application-settings.mdx",
-      "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx"
-    ],
+  "main/docs/get-started/build-with-ai-tools.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
@@ -16443,37 +16269,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/custom-token-exchange.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx",
-      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger.mdx",
-      "main/docs/authenticate/custom-token-exchange/cte-attack-protection.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/database-connections/password-change.mdx": {
-    "link": [
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
-      "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx",
-      "main/docs/troubleshoot/customer-support/reset-account-passwords.mdx",
-      "main/docs/customize/email/email-templates.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx": {
     "link": [
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-high-availability.mdx",
@@ -16599,7 +16394,6 @@
     "link": [
       "main/docs/authenticate/identity-providers.mdx",
       "main/docs/manage-users/user-accounts/user-profiles/normalized-user-profiles.mdx",
-      "main/docs/customize/rules.mdx",
       "main/docs/manage-users/user-accounts/user-profiles.mdx",
       "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/secure/data-privacy-and-compliance.mdx",
@@ -17191,7 +16985,6 @@
   "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx": {
     "link": [
       "main/docs/manage-users/user-accounts/metadata.mdx",
-      "main/docs/customize/rules.mdx",
       "main/docs/secure/tokens/id-tokens.mdx",
       "main/docs/secure/tokens/access-tokens.mdx",
       "main/docs/manage-users/access-control/sample-use-cases-rules-with-authorization.mdx",
@@ -18367,6 +18160,18 @@
   },
   "main/docs/customize/auth0-marketplace.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
+    "link": [
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+      "main/docs/customize/custom-domains.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
+      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -20092,16 +19897,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/actions/releases.mdx": {
-    "link": [
-      "main/docs/releases.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx"
-    ],
-    "import": [],
-    "redirect": [
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-    ]
-  },
   "main/docs/customize/actions/modules/write-your-first-action-module.mdx": {
     "link": [
       "main/docs/customize/actions/action-coding-guidelines.mdx",
@@ -20228,16 +20023,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/releases.mdx": {
-    "link": [
-      "main/docs/releases.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx"
-    ],
-    "import": [],
-    "redirect": [
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-    ]
-  },
   "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx": {
     "link": [
       "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx",
@@ -20270,18 +20055,6 @@
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx": {
-    "link": [
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/customize/custom-domains.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
-      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20321,6 +20094,7 @@
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/authenticate/database-connections/passkeys.mdx",
+      "main/docs/authenticate/passwordless/implement-login/embedded-login.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-api.mdx",
       "main/docs/customize/custom-domains.mdx",
       "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
@@ -21397,7 +21171,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/myorganization/org-domain-management/create-a-domain-for-an-organization.mdx": {
+  "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21415,7 +21189,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/myorganization/org-domain-management/delete-domain-from-organization.mdx": {
+  "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21423,7 +21197,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/org-domain-management/get-identity-providers-associated-with-an-organization-domain.mdx": {
+  "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21431,7 +21205,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/org-domain-management/get-organization-domain.mdx": {
+  "main/docs/api/myorganization/org-domain-management/list-domains.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21439,7 +21213,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/org-domain-management/list-organization-domains.mdx": {
+  "main/docs/api/myorganization/org-domain-management/list-identity-providers-for-a-domain.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21463,7 +21237,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/org-details/modify-organization-details.mdx": {
+  "main/docs/api/myorganization/org-details/update-organization-details.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21471,7 +21245,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/associate-domain-with-identity-provider.mdx": {
+  "main/docs/api/myorganization/idp-management/associate-a-domain-with-an-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21479,7 +21253,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/create-identity-provider.mdx": {
+  "main/docs/api/myorganization/idp-management/create-a-provisioning-configuration.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21487,7 +21261,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/create-provisioning-configuration.mdx": {
+  "main/docs/api/myorganization/idp-management/create-a-provisioning-scim-token.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21495,7 +21269,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/create-provisioning-scim-token.mdx": {
+  "main/docs/api/myorganization/idp-management/create-an-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21503,7 +21277,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/delete-identity-provider.mdx": {
+  "main/docs/api/myorganization/idp-management/delete-a-provisioning-configuration.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21511,7 +21285,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/delete-provisioning-configuration.mdx": {
+  "main/docs/api/myorganization/idp-management/delete-an-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21519,7 +21293,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/detach-identity-provider-from-organization.mdx": {
+  "main/docs/api/myorganization/idp-management/detach-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21527,7 +21301,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/get-identity-provider.mdx": {
+  "main/docs/api/myorganization/idp-management/get-a-provisioning-configuration.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21535,7 +21309,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/get-provisioning-configuration.mdx": {
+  "main/docs/api/myorganization/idp-management/get-an-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21559,7 +21333,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/refresh-identity-provider-attributes-mapping.mdx": {
+  "main/docs/api/myorganization/idp-management/refresh-identity-provider-attribute-mapping.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21567,7 +21341,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attributes-mapping.mdx": {
+  "main/docs/api/myorganization/idp-management/refresh-provisioning-configuration-attribute-mapping.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21575,7 +21349,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/remove-domain-from-identity-provider.mdx": {
+  "main/docs/api/myorganization/idp-management/remove-a-domain-from-an-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21583,7 +21357,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/revoke-provisioning-scim-token.mdx": {
+  "main/docs/api/myorganization/idp-management/revoke-a-provisioning-scim-token.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21591,7 +21365,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/idp-management/update-identity-provider.mdx": {
+  "main/docs/api/myorganization/idp-management/update-an-identity-provider.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21599,7 +21373,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/config/get-configuration.mdx": {
+  "main/docs/api/myorganization/config/get-identity-provider-configuration.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21607,7 +21381,7 @@
     ],
     "redirect": []
   },
-  "main/docs/api/myorganization/config/get-identity-providers-configuration.mdx": {
+  "main/docs/api/myorganization/config/get-my-organization-api-configuration.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21637,30 +21411,6 @@
     "redirect": []
   },
   "main/docs/api/myaccount/connected-accounts/create-a-connected-account-request.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiScopes.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiScopes.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiScopes.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21716,7 +21466,3150 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/assign-roles-to-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/clear-risk-assessment-assessors-for-a-specific-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/create-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/creates-an-authentication-method-for-a-given-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-a-users-multi-factor-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-all-authentication-methods-for-the-given-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-all-authenticators.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-an-authentication-method-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/delete-sessions-for-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-a-users-permissions.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-a-users-roles.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-sessions-for-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-users-groups.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/get-users-log-events.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/link-a-user-account.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/list-or-search-users.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/list-users-organizations.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/remove-permissions-from-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/removes-roles-from-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/revokes-selected-resources-from-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/unlink-a-user-identity.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/update-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/update-all-authentication-methods-by-replacing-them-with-the-given-ones.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/users/update-an-authentication-method.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-blocks/get-a-users-blocks.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-blocks/get-blocks-by-identifier.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-blocks/unblock-a-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-blocks/unblock-by-identifier.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/delete-user-attribute-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/get-user-attribute-profiles.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/modify-a-user-attribute-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/user-attribute-profiles/post-user-attribute-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/token-exchange-profiles/create-a-token-exchange-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/token-exchange-profiles/delete-a-token-exchange-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/token-exchange-profiles/get-a-token-exchange-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/token-exchange-profiles/get-token-exchange-profiles.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/token-exchange-profiles/update-an-existing-token-exchange-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/tickets/create-a-password-change-ticket.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/tickets/create-an-email-verification-ticket.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/tenants/get-tenant-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/tenants/update-tenant-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/supplemental-signals/get-the-supplemental-signals-configuration-for-a-tenant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/supplemental-signals/update-the-supplemental-signals-configuration-for-a-tenant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/stats/get-active-users-count.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/stats/get-daily-stats.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/sessions/delete-session.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/sessions/revokes-a-session.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/sessions/update-session.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules-configs/retrieve-config-variable-keys-for-rules-get-rules-configs.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules-configs/set-rules-config-for-a-given-key.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules/create-a-rule.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules/delete-a-rule.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules/get-a-rule.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules/get-rules.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/rules/update-a-rule.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/assign-users-to-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/associate-permissions-with-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/create-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/delete-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/get-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/get-a-roles-users.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/get-permissions-granted-by-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/get-roles.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/remove-permissions-from-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/roles/update-a-role.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/risk-assessments/get-new-device-assessor.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/risk-assessments/get-risk-assessment-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/risk-assessments/update-new-device-assessor.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/risk-assessments/update-risk-assessment-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/resource-servers/create-a-resource-server.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/resource-servers/delete-a-resource-server.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/resource-servers/get-a-resource-server.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/resource-servers/get-resource-servers.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/get-prompt-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/get-render-setting-configurations-for-all-screens.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/get-render-settings-for-a-screen.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/set-custom-text-for-a-specific-prompt.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/set-partials-for-a-prompt.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/update-prompt-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/update-render-settings-for-a-screen.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/create-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-organization-by-name.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-organizations.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-user-roles-assigned-to-an-organization-member.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/modify-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/network-acls/create-access-control-list.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/network-acls/delete-access-control-list.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/network-acls/get-a-specific-access-control-list-entry-for-a-tenant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/network-acls/get-all-access-control-list-entries-for-a-tenant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/network-acls/partial-update-for-an-access-control-list.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/network-acls/update-access-control-list.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/logs/get-a-log-event-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/logs/search-log-events.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/log-streams/create-a-log-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/log-streams/delete-log-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/log-streams/get-log-stream-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/log-streams/get-log-streams.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/log-streams/update-a-log-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/create-or-replace-custom-signing-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/create-the-new-encryption-key.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/create-the-public-wrapping-key.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/delete-custom-signing-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/delete-the-encryption-key-by-its-key-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/get-all-application-signing-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/get-all-encryption-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/get-an-application-signing-key-by-its-key-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/get-custom-signing-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/get-the-encryption-key-by-its-key-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/import-the-encryption-key.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/rekey-the-key-hierarchy.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/revoke-an-application-signing-key-by-its-key-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/keys/rotate-the-application-signing-key.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/jobs/create-export-users-job.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/jobs/create-import-users-job.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/jobs/get-a-job.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/jobs/get-job-error-details.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/jobs/send-an-email-address-verification-email.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/add-hook-secrets.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/create-a-hook.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/delete-a-hook.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/delete-hook-secrets.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/get-a-hook.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/get-hook-secrets.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/get-hooks.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/update-a-hook.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/hooks/update-hook-secrets.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/configure-aws-sns-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/create-a-multi-factor-authentication-enrollment-ticket.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/delete-a-multi-factor-authentication-enrollment.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-a-multi-factor-authentication-enrollment.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-apns-push-notification-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-aws-sns-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-duo-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-enabled-phone-factors.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-enrollment-and-verification-phone-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-factors-and-multi-factor-authentication-details.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-multi-factor-authentication-policies.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-phone-provider-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-push-notification-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-sms-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-sms-enrollment-and-verification-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-twilio-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/get-twilio-sms-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/overwrite-fcm-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/overwrite-fcmv-1-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/set-the-duo-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-ap-ns-provider-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-apns-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-aws-sns-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-enrollment-and-verification-phone-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-multi-factor-authentication-policies.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-multi-factor-authentication-type.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-phone-provider-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-push-notification-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-sms-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-sms-enrollment-and-verification-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-the-duo-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-the-enabled-phone-factors.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-twilio-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/update-twilio-sms-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/updates-fcm-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/guardian/updates-fcmv-1-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/groups/delete-a-group.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/groups/get-a-group.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/groups/get-all-groups.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/groups/get-group-members.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/grants/delete-a-grant-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/grants/delete-a-grant-by-user-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/grants/get-grants.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/forms/create-a-form.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/forms/delete-a-form.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/forms/get-a-form.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/forms/get-forms.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/forms/update-a-form.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/create-a-flow.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/create-a-flows-vault-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/delete-a-flow-execution.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/delete-a-flow.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/delete-a-flows-vault-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/get-a-flow-execution.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/get-a-flow.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/get-a-flows-vault-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/get-flow-executions.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/get-flows-vault-connection-list.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/get-flows.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/update-a-flow.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/get-an-event-stream-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/get-event-streams.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/get-this-event-streams-delivery-history.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/redeliver-a-single-failed-event-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/redeliver-failed-events.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/send-a-test-event-to-an-event-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/event-streams/update-an-event-stream.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/emails/configure-email-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/emails/delete-email-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/emails/get-email-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/emails/update-email-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/email-templates/create-an-email-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/email-templates/get-an-email-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/email-templates/patch-an-email-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/email-templates/update-an-email-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/device-credentials/create-a-device-public-key-credential.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/device-credentials/delete-a-device-credential.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/device-credentials/retrieve-device-credentials.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/configure-a-new-custom-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/check-connection-status.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/create-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/create-a-directory-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/create-a-scim-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/create-connection-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/delete-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/delete-a-connections-scim-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/delete-a-directory-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-a-connections-default-directory-provisioning-attribute-mapping.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-a-connections-default-scim-mapping.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-a-connections-scim-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-a-connections-scim-tokens.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-a-directory-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-all-connections.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-connection-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/rotate-connection-keys.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/update-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/update-enabled-clients-for-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/create-a-connection-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/delete-connection-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/get-connection-profile-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/get-connection-profile-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/get-connection-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/get-connection-profiles.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connection-profiles/modify-a-connection-profile.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/create-a-client-credential.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/create-a-client.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/delete-a-client-credential.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/delete-a-client.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/get-client-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/get-client-credential-details.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/get-client-credentials.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/get-clients.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/update-a-client-credential.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/update-a-client.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/client-grants/create-client-grant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/client-grants/delete-client-grant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/client-grants/get-client-grant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/client-grants/get-client-grants.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/client-grants/get-the-organizations-associated-to-a-client-grant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/client-grants/update-client-grant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/configure-the-phone-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/create-a-phone-notification-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/create-branding-theme.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/delete-a-phone-notification-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/delete-branding-theme.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/delete-template-for-new-universal-login-experience.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/deletes-a-phone-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-a-list-of-phone-notification-templates.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-a-list-of-phone-providers.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-a-phone-notification-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-a-phone-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-branding-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-branding-theme.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-default-branding-theme.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/get-template-for-new-universal-login-experience.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/resets-a-phone-notification-template-values.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/send-a-test-phone-notification-for-the-configured-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/set-template-for-new-universal-login-experience.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/update-a-phone-notification-template.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/update-branding-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/update-branding-theme.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/branding/update-the-phone-provider.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/get-bot-detection-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/get-breached-password-detection-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/get-brute-force-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/get-suspicious-ip-throttling-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/get-the-captcha-configuration-for-a-tenant.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/partial-update-for-captcha-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/update-bot-detection-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/update-breached-password-detection-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/update-brute-force-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/attack-protection/update-suspicious-ip-throttling-settings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/anomaly/check-if-an-ip-address-is-blocked.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/anomaly/remove-the-blocked-ip-address.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/create-a-new-actions-module.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/create-a-new-version-of-an-actions-module.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/create-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/delete-a-specific-actions-module-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/delete-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/deploy-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-a-specific-actions-module-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-a-specific-version-of-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-a-specific-version-of-an-actions-module.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-actions.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-an-actions-versions.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-an-execution.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-trigger-bindings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/get-triggers.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/list-actions-modules.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/list-all-actions-using-an-actions-module.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/list-all-versions-of-an-actions-module.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/roll-back-to-a-previous-action-version.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/rollback-an-actions-module-to-a-previous-version.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/test-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/update-an-action.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/actions/update-trigger-bindings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/snippets/RelatedPages.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/api-fr.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/api-jp.jsx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -21762,6 +24655,31 @@
     "redirect": []
   },
   "main/snippets/quickstart/webapp/nextjs/create-the-auth0-sdk-client.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-ee/Auth0AuthenticationConfig.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-ee/HomeServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-ee/LoginServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-ee/LogoutServlet.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-ee/web.xml.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -21971,6 +24889,56 @@
     "import": [],
     "redirect": []
   },
+  "main/snippets/quickstart/native/maui/MainPage.xaml.cs.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/maui/MainPage.xaml.cs2.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/maui/MainPage.xaml.cs3.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/maui/MainPage.xaml.cs4.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/ios-swift-facebook-login/exchangeTokens.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/ios-swift-facebook-login/fetchSessionToken.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/ios-swift-facebook-login/fetchUserProfile.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/ios-swift-facebook-login/onCreate.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/ios-swift-facebook-login/performLogin + SimpleCallback.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/ios-swift-facebook-login/performLogin.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/snippets/quickstart/native/ios-swift/Auth0.plist.mdx": {
     "link": [],
     "import": [],
@@ -22016,6 +24984,36 @@
     "import": [],
     "redirect": []
   },
+  "main/snippets/quickstart/native/android-facebook-login/exchangeTokens.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/android-facebook-login/fetchSessionToken.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/android-facebook-login/fetchUserProfile.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/android-facebook-login/onCreate.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/android-facebook-login/performLogin + SimpleCallback.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/android-facebook-login/performLogin.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/snippets/quickstart/native/android/MainActivity.kt.mdx": {
     "link": [],
     "import": [],
@@ -22052,6 +25050,21 @@
     "redirect": []
   },
   "main/snippets/quickstart/backend/python/validator.py.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/backend/java-spring-security5/APIController.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/backend/java-spring-security5/SecurityConfig.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/backend/java-spring-security5/application.yml.mdx": {
     "link": [],
     "import": [],
     "redirect": []
