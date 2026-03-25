@@ -165,48 +165,27 @@ export async function POST(req: NextRequest) {
     let prdContent: string;
 
     if (file.type === 'application/pdf') {
-      // Parse PDF using pdfjs-dist (serverless-friendly)
-      try {
-        const arrayBuffer = await file.arrayBuffer();
-        const uint8Array = new Uint8Array(arrayBuffer);
-
-        // Dynamic import pdfjs-dist to avoid bundling issues
-        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
-
-        const loadingTask = pdfjsLib.getDocument({ data: uint8Array });
-        const pdf = await loadingTask.promise;
-
-        // Extract text from all pages
-        const textParts: string[] = [];
-        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-          const page = await pdf.getPage(pageNum);
-          const textContent = await page.getTextContent();
-          const pageText = textContent.items
-            .map((item: any) => item.str)
-            .join(' ');
-          textParts.push(pageText);
-        }
-
-        prdContent = textParts.join('\n\n');
-      } catch (err: any) {
-        console.error('[DocGenerator] PDF parse error:', err);
-        return NextResponse.json(
-          { ok: false, error: `Failed to parse PDF: ${err.message}` },
-          { status: 400 }
-        );
-      }
+      // PDF parsing requires native dependencies that don't work in serverless
+      return NextResponse.json(
+        {
+          ok: false,
+          error: 'PDF files are not supported yet due to serverless limitations. Please convert your PRD to .txt or .md format. You can use: "Save As > Plain Text" in most PDF readers, or online tools like pdf2txt.'
+        },
+        { status: 400 }
+      );
     } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
       return NextResponse.json(
-        { ok: false, error: 'Word document support coming soon. Please convert your PRD to .txt or .md format.' },
+        { ok: false, error: 'Word documents are not supported yet. Please save your PRD as .txt or .md format.' },
         { status: 400 }
       );
     } else {
+      // Plain text or markdown
       prdContent = await file.text();
     }
 
     if (!prdContent.trim()) {
       return NextResponse.json(
-        { ok: false, error: 'File is empty or could not extract text' },
+        { ok: false, error: 'File is empty' },
         { status: 400 }
       );
     }

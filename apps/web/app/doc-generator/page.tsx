@@ -82,11 +82,11 @@ export default function DocGeneratorPage() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
-      const validTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain', 'text/markdown'];
-      if (!validTypes.includes(selectedFile.type) && !selectedFile.name.endsWith('.md')) {
+      const validTypes = ['text/plain', 'text/markdown'];
+      if (!validTypes.includes(selectedFile.type) && !selectedFile.name.endsWith('.md') && !selectedFile.name.endsWith('.txt')) {
         toast({
           title: 'Invalid file type',
-          description: 'Please upload a PDF, Word document, text, or markdown file',
+          description: 'Please upload a text (.txt) or markdown (.md) file. PDF and Word are not supported yet.',
           variant: 'destructive',
         });
         return;
@@ -257,14 +257,14 @@ export default function DocGeneratorPage() {
                 <Input
                   id="prd-file"
                   type="file"
-                  accept=".pdf,.docx,.txt,.md"
+                  accept=".txt,.md"
                   onChange={handleFileChange}
                   disabled={loading}
                   className="cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-primary-foreground hover:file:bg-primary/90 file:cursor-pointer"
                 />
               </div>
               <p className="text-xs text-muted-foreground">
-                Supported: PDF (.pdf), Text (.txt), Markdown (.md). Word (.docx) coming soon.
+                Supported: Text (.txt), Markdown (.md). PDF/Word not supported yet - please convert to text first.
               </p>
               {file && (
                 <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
