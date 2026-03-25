@@ -8,9 +8,6 @@ import * as os from 'os';
 
 const execAsync = promisify(exec);
 
-// Dynamic import for pdf-parse (CommonJS module)
-const pdfParse = require('pdf-parse');
-
 // Full Doc Generator system prompt matching the Claude Code skill
 const DOC_GENERATOR_PROMPT = `# Doc Generator
 
@@ -168,13 +165,31 @@ export async function POST(req: NextRequest) {
     let prdContent: string;
 
     if (file.type === 'application/pdf') {
-      // Parse PDF
+      // Parse PDF using pdfjs-dist (serverless-friendly)
       try {
         const arrayBuffer = await file.arrayBuffer();
-        const buffer = Buffer.from(arrayBuffer);
-        const pdfData = await pdfParse(buffer);
-        prdContent = pdfData.text;
+        const uint8Array = new Uint8Array(arrayBuffer);
+
+        // Dynamic import pdfjs-dist to avoid bundling issues
+        const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
+
+        const loadingTask = pdfjsLib.getDocument({ data: uint8Array });
+        const pdf = await loadingTask.promise;
+
+        // Extract text from all pages
+        const textParts: string[] = [];
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+          const page = await pdf.getPage(pageNum);
+          const textContent = await page.getTextContent();
+          const pageText = textContent.items
+            .map((item: any) => item.str)
+            .join(' ');
+          textParts.push(pageText);
+        }
+
+        prdContent = textParts.join('\n\n');
       } catch (err: any) {
+        console.error('[DocGenerator] PDF parse error:', err);
         return NextResponse.json(
           { ok: false, error: `Failed to parse PDF: ${err.message}` },
           { status: 400 }
@@ -197,19 +212,31 @@ export async function POST(req: NextRequest) {
     }
 
     // Clone or use cached docs-v2 repo
-    const docsRepoPath = await getDocsRepo();
-
-    // Search for related docs (basic keyword search)
-    const keywords = extractKeywords(prdContent);
-    const relatedDocs = await searchDocs(docsRepoPath, targetSite, keywords);
-
-    // Read docs.json for navigation context
-    const docsJsonPath = path.join(docsRepoPath, targetSite, 'docs.json');
+    let docsRepoPath: string;
+    let relatedDocs: Array<{ path: string; excerpt: string }> = [];
     let docsJson = '{}';
+
     try {
-      docsJson = await fs.readFile(docsJsonPath, 'utf-8');
-    } catch {
-      console.warn('[DocGenerator] Could not read docs.json from', docsJsonPath);
+      docsRepoPath = await getDocsRepo();
+      console.log('[DocGenerator] Docs repo ready at:', docsRepoPath);
+
+      // Search for related docs (basic keyword search)
+      const keywords = extractKeywords(prdContent);
+      relatedDocs = await searchDocs(docsRepoPath, targetSite, keywords);
+      console.log('[DocGenerator] Found', relatedDocs.length, 'related docs');
+
+      // Read docs.json for navigation context
+      const docsJsonPath = path.join(docsRepoPath, targetSite, 'docs.json');
+      try {
+        docsJson = await fs.readFile(docsJsonPath, 'utf-8');
+        console.log('[DocGenerator] Read docs.json, size:', docsJson.length);
+      } catch (err) {
+        console.warn('[DocGenerator] Could not read docs.json from', docsJsonPath, err);
+      }
+    } catch (repoErr: any) {
+      console.error('[DocGenerator] Failed to clone/access docs repo:', repoErr);
+      // Continue without repo context - still generate docs
+      console.log('[DocGenerator] Continuing without repo context');
     }
 
     // Build comprehensive user message
@@ -239,6 +266,8 @@ Generate the complete structured JSON response with feature summary, IA proposal
     const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
     const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
 
+    console.log('[DocGenerator] Using API:', { baseUrl, model, isLiteLLMProxy });
+
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
@@ -251,6 +280,7 @@ Generate the complete structured JSON response with feature summary, IA proposal
     }
 
     const endpoint = `${baseUrl}/v1/messages`;
+    console.log('[DocGenerator] Calling endpoint:', endpoint);
 
     const response = await fetch(endpoint, {
       method: 'POST',
@@ -272,17 +302,42 @@ Generate the complete structured JSON response with feature summary, IA proposal
       const errorText = await response.text();
       console.error('[DocGenerator] API error:', response.status, errorText);
       return NextResponse.json(
-        { ok: false, error: `AI API error (${response.status}): ${errorText.slice(0, 200)}` },
+        { ok: false, error: `AI API error (${response.status}): ${errorText.slice(0, 300)}` },
         { status: response.status }
       );
     }
 
-    const result = await response.json();
+    // Parse response - handle both JSON and HTML errors
+    let result;
+    const contentType = response.headers.get('content-type');
+
+    try {
+      const responseText = await response.text();
+
+      // Check if response is HTML (error page)
+      if (responseText.trim().startsWith('<!') || responseText.trim().startsWith('<html')) {
+        console.error('[DocGenerator] Received HTML response instead of JSON:', responseText.slice(0, 500));
+        return NextResponse.json(
+          { ok: false, error: 'API returned an error page. Please check your API key and endpoint configuration.' },
+          { status: 500 }
+        );
+      }
+
+      result = JSON.parse(responseText);
+    } catch (parseErr: any) {
+      console.error('[DocGenerator] Failed to parse API response:', parseErr.message);
+      return NextResponse.json(
+        { ok: false, error: `Failed to parse API response: ${parseErr.message}` },
+        { status: 500 }
+      );
+    }
+
     const content = result.content?.[0]?.text;
 
     if (!content) {
+      console.error('[DocGenerator] No content in response:', result);
       return NextResponse.json(
-        { ok: false, error: 'No response from AI' },
+        { ok: false, error: 'No content returned from AI. Response: ' + JSON.stringify(result).slice(0, 200) },
         { status: 500 }
       );
     }
@@ -290,6 +345,7 @@ Generate the complete structured JSON response with feature summary, IA proposal
     // Extract JSON from response (Claude might wrap it in markdown)
     const jsonMatch = content.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
+      console.log('[DocGenerator] No JSON found in response, returning raw content');
       // Fallback: return raw content if JSON parsing fails
       return NextResponse.json({
         ok: true,
@@ -302,6 +358,7 @@ Generate the complete structured JSON response with feature summary, IA proposal
 
     try {
       const parsed = JSON.parse(jsonMatch[0]);
+      console.log('[DocGenerator] Successfully parsed structured response');
       return NextResponse.json({
         ok: true,
         ...parsed,
@@ -309,7 +366,8 @@ Generate the complete structured JSON response with feature summary, IA proposal
         targetSite,
         structured: true,
       });
-    } catch {
+    } catch (jsonErr: any) {
+      console.log('[DocGenerator] Failed to parse JSON, returning raw content:', jsonErr.message);
       // Fallback to raw content
       return NextResponse.json({
         ok: true,
