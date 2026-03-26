@@ -51,7 +51,7 @@ export function AppHeader() {
               <span className="text-amber-600/70 dark:text-amber-400/70 hidden sm:inline">
                 Using sample data.
                 <a
-                  href="https://github.com/nickgag626/auth0-ia#readme"
+                  href="https://github.com/nick-gagliardi/auth0-ia#readme"
                   target="_blank"
                   rel="noreferrer"
                   className="underline hover:text-amber-800 dark:hover:text-amber-300 ml-1"
@@ -137,7 +137,7 @@ export function AppHeader() {
                 <div className="pt-2 border-t">
                   <a
                     className="text-primary hover:underline"
-                    href="https://github.com/nickgag626/auth0-ia#readme"
+                    href="https://github.com/nick-gagliardi/auth0-ia#readme"
                     target="_blank"
                     rel="noreferrer"
                   >
