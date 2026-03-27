@@ -51529,6 +51529,114 @@
     "navLabel": "create a connected account request",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:my-account-api",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/delete-a-connected-acc"
+        ],
+        "labels": [
+          "API Reference",
+          "My Account API",
+          " ",
+          "Connected Accounts",
+          "delete a connected account by id"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete a connected account by id",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > My Account API >   > Connected Accounts",
+        "pathString": "API Reference > My Account API >   > Connected Accounts > delete a connected account by id"
+      }
+    ],
+    "navLabel": "delete a connected account by id",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:my-account-api",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-availabl"
+        ],
+        "labels": [
+          "API Reference",
+          "My Account API",
+          " ",
+          "Connected Accounts",
+          "get a list of available connections for connected accounts"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get a list of available connections for connected accounts",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > My Account API >   > Connected Accounts",
+        "pathString": "API Reference > My Account API >   > Connected Accounts > get a list of available connections for connected accounts"
+      }
+    ],
+    "navLabel": "get a list of available connections for connected accounts",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx": {
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:my-account-api",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts",
+          "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-connecte"
+        ],
+        "labels": [
+          "API Reference",
+          "My Account API",
+          " ",
+          "Connected Accounts",
+          "get a list of connected accounts"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get a list of connected accounts",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > My Account API >   > Connected Accounts",
+        "pathString": "API Reference > My Account API >   > Connected Accounts > get a list of connected accounts"
+      }
+    ],
+    "navLabel": "get a list of connected accounts",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx": {
     "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
     "navDepth": 4,

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-26T04:36:29.868Z",
+  "generatedAtUtc": "2026-03-27T04:37:27.116Z",
   "hubCutoff": 50,
   "minIntersection": 3,
   "scoreThreshold": 0.4,
@@ -7,9 +7,9 @@
     {
       "a": "main/docs/customize/extensions/authorization-extension.mdx",
       "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
-      "score": 0.7132,
+      "score": 0.6934,
       "simOut": 0.875,
-      "simIn": 0.4706,
+      "simIn": 0.4211,
       "sharedOut": 7,
       "sharedIn": 8,
       "convergenceType": "journey",
@@ -17,6 +17,20 @@
       "bNav": "Troubleshoot",
       "aFolder": "customize",
       "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
+      "b": "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+      "score": 0.6,
+      "simOut": 1,
+      "simIn": 0,
+      "sharedOut": 6,
+      "sharedIn": 0,
+      "convergenceType": "journey",
+      "aNav": "Get Started",
+      "bNav": "Manage Users",
+      "aFolder": "get-started",
+      "bFolder": "manage-users"
     },
     {
       "a": "main/docs/customize/extensions/user-import-export-extension.mdx",
@@ -39,20 +53,6 @@
       "simOut": 1,
       "simIn": 0,
       "sharedOut": 4,
-      "sharedIn": 0,
-      "convergenceType": "journey",
-      "aNav": "Get Started",
-      "bNav": "Manage Users",
-      "aFolder": "get-started",
-      "bFolder": "manage-users"
-    },
-    {
-      "a": "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
-      "b": "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
-      "score": 0.5,
-      "simOut": 0.8333,
-      "simIn": 0,
-      "sharedOut": 5,
       "sharedIn": 0,
       "convergenceType": "journey",
       "aNav": "Get Started",
@@ -143,20 +143,6 @@
       "bNav": "Troubleshoot",
       "aFolder": "customize",
       "bFolder": "troubleshoot"
-    },
-    {
-      "a": "main/docs/customize/extensions/account-link-extension.mdx",
-      "b": "main/docs/manage-users/user-accounts/user-account-linking/unlink-user-accounts.mdx",
-      "score": 0.4333,
-      "simOut": 0.5,
-      "simIn": 0.3333,
-      "sharedOut": 3,
-      "sharedIn": 1,
-      "convergenceType": "journey",
-      "aNav": "Customize",
-      "bNav": "Manage Users",
-      "aFolder": "customize",
-      "bFolder": "manage-users"
     },
     {
       "a": "main/docs/customize/extensions/authorization-extension/install-authorization-extension.mdx",

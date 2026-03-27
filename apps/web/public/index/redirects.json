@@ -18536,18 +18536,6 @@
   "warnings": {
     "missingDestination": [
       {
-        "source": "/docs/api/myaccount/get-connected-accounts",
-        "destination": "/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts"
-      },
-      {
-        "source": "/docs/api/myaccount/get-connected-accounts-connections",
-        "destination": "/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts"
-      },
-      {
-        "source": "/docs/api/myaccount/delete-connected-account",
-        "destination": "/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id"
-      },
-      {
         "source": "/docs/articles",
         "destination": "/docs"
       },
@@ -39301,27 +39289,6 @@
       }
     ],
     "missingDestinationUnresolvable": [
-      {
-        "source": "/docs/api/myaccount/get-connected-accounts",
-        "destination": "/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
-        "finalDestination": "/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
-        "hops": 0,
-        "loop": false
-      },
-      {
-        "source": "/docs/api/myaccount/get-connected-accounts-connections",
-        "destination": "/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
-        "finalDestination": "/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
-        "hops": 0,
-        "loop": false
-      },
-      {
-        "source": "/docs/api/myaccount/delete-connected-account",
-        "destination": "/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
-        "finalDestination": "/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
-        "hops": 0,
-        "loop": false
-      },
       {
         "source": "/docs/articles",
         "destination": "/docs",

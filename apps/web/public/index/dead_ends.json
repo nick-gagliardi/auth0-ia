@@ -1,23 +1,23 @@
 {
-  "generatedAtUtc": "2026-03-26T04:36:29.889Z",
+  "generatedAtUtc": "2026-03-27T04:37:27.147Z",
   "minInbound": 20,
   "maxOutbound": 1,
   "count": 3,
   "items": [
-    {
-      "id": "main/docs/authenticate/identity-providers.mdx",
-      "inboundLinks": 34,
-      "outboundLinks": 0,
-      "deadEndScore": 34,
-      "navRoot": "Authenticate",
-      "navDepth": 4
-    },
     {
       "id": "main/docs/libraries.mdx",
       "inboundLinks": 27,
       "outboundLinks": 0,
       "deadEndScore": 27,
       "navRoot": null
+    },
+    {
+      "id": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
+      "inboundLinks": 25,
+      "outboundLinks": 1,
+      "deadEndScore": 25,
+      "navRoot": "Authenticate",
+      "navDepth": 5
     },
     {
       "id": "main/docs/get-started/applications/update-grant-types.mdx",

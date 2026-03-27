@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-26T04:36:24.222Z",
+  "generatedAtUtc": "2026-03-27T04:37:21.450Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -11423,6 +11423,30 @@
                         "label": "docs/api/myaccount/connected-accounts/complete-a-connected-account-request",
                         "route": "docs/api/myaccount/connected-accounts/complete-a-connected-account-request",
                         "filePath": "main/docs/api/myaccount/connected-accounts/complete-a-connected-account-request.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-connecte",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
+                        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/get-a-list-of-availabl",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
+                        "route": "docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:my-account-api/group:unnamed/group:connected-accounts/page:docs/api/myaccount/connected-accounts/delete-a-connected-acc",
+                        "kind": "page",
+                        "label": "docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
+                        "route": "docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id",
+                        "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
                         "children": []
                       }
                     ]

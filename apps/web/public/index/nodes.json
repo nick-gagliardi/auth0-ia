@@ -17829,6 +17829,30 @@
     ]
   },
   {
+    "id": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/delete-a-connected-account-by-id.mdx",
+    "navPaths": [
+      "API Reference > My Account API >   > Connected Accounts > delete a connected account by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-available-connections-for-connected-accounts.mdx",
+    "navPaths": [
+      "API Reference > My Account API >   > Connected Accounts > get a list of available connections for connected accounts"
+    ]
+  },
+  {
+    "id": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/myaccount/connected-accounts/get-a-list-of-connected-accounts.mdx",
+    "navPaths": [
+      "API Reference > My Account API >   > Connected Accounts > get a list of connected accounts"
+    ]
+  },
+  {
     "id": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
     "type": "page",
     "filePath": "main/docs/api/myaccount/authentication-methods/confirm-the-enrollment-of-a-supported-authentication-method.mdx",
