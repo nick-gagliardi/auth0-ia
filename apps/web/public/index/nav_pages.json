@@ -52567,12 +52567,12 @@
     "navLabel": "deletes a tokenset for federated connections by id",
     "navLabelSource": "fallback"
   },
-  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx": {
-    "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx": {
+    "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
     "navDepth": 4,
     "navNodePaths": [
       {
-        "route": "docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code",
+        "route": "docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code",
         "nodeIds": [
           "root/tab:api-reference",
           "root/tab:api-reference/dropdown:management-api",
@@ -52585,7 +52585,7 @@
           "Management API",
           " ",
           "Users",
-          "generate new multi factor authentication recovery code"
+          "generate new multi factor authentication mfa recovery code"
         ],
         "kinds": [
           "tab",
@@ -52594,13 +52594,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "generate new multi factor authentication recovery code",
+        "leafLabel": "generate new multi factor authentication mfa recovery code",
         "leafLabelSource": "fallback",
         "containerString": "API Reference > Management API >   > Users",
-        "pathString": "API Reference > Management API >   > Users > generate new multi factor authentication recovery code"
+        "pathString": "API Reference > Management API >   > Users > generate new multi factor authentication mfa recovery code"
       }
     ],
-    "navLabel": "generate new multi factor authentication recovery code",
+    "navLabel": "generate new multi factor authentication mfa recovery code",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx": {
@@ -52891,12 +52891,12 @@
     "navLabel": "get sessions for user",
     "navLabelSource": "fallback"
   },
-  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx": {
-    "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx": {
+    "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
     "navDepth": 4,
     "navNodePaths": [
       {
-        "route": "docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment",
+        "route": "docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment",
         "nodeIds": [
           "root/tab:api-reference",
           "root/tab:api-reference/dropdown:management-api",
@@ -52909,7 +52909,7 @@
           "Management API",
           " ",
           "Users",
-          "get the first confirmed multi factor authentication enrollment"
+          "get the first confirmed multi factor authentication mfa enrollment"
         ],
         "kinds": [
           "tab",
@@ -52918,13 +52918,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "get the first confirmed multi factor authentication enrollment",
+        "leafLabel": "get the first confirmed multi factor authentication mfa enrollment",
         "leafLabelSource": "fallback",
         "containerString": "API Reference > Management API >   > Users",
-        "pathString": "API Reference > Management API >   > Users > get the first confirmed multi factor authentication enrollment"
+        "pathString": "API Reference > Management API >   > Users > get the first confirmed multi factor authentication mfa enrollment"
       }
     ],
-    "navLabel": "get the first confirmed multi factor authentication enrollment",
+    "navLabel": "get the first confirmed multi factor authentication mfa enrollment",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx": {
@@ -53035,12 +53035,12 @@
     "navLabel": "get users log events",
     "navLabelSource": "fallback"
   },
-  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx": {
-    "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx": {
+    "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
     "navDepth": 4,
     "navNodePaths": [
       {
-        "route": "docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication",
+        "route": "docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa",
         "nodeIds": [
           "root/tab:api-reference",
           "root/tab:api-reference/dropdown:management-api",
@@ -53053,7 +53053,7 @@
           "Management API",
           " ",
           "Users",
-          "invalidate all remembered browsers for multi factor authentication"
+          "invalidate all remembered browsers for multi factor authentication mfa"
         ],
         "kinds": [
           "tab",
@@ -53062,13 +53062,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "invalidate all remembered browsers for multi factor authentication",
+        "leafLabel": "invalidate all remembered browsers for multi factor authentication mfa",
         "leafLabelSource": "fallback",
         "containerString": "API Reference > Management API >   > Users",
-        "pathString": "API Reference > Management API >   > Users > invalidate all remembered browsers for multi factor authentication"
+        "pathString": "API Reference > Management API >   > Users > invalidate all remembered browsers for multi factor authentication mfa"
       }
     ],
-    "navLabel": "invalidate all remembered browsers for multi factor authentication",
+    "navLabel": "invalidate all remembered browsers for multi factor authentication mfa",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/users/link-a-user-account.mdx": {

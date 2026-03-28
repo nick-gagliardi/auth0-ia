@@ -18536,6 +18536,18 @@
   "warnings": {
     "missingDestination": [
       {
+        "source": "/docs/api/management/v2/users/get-enrollments",
+        "destination": "/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment"
+      },
+      {
+        "source": "/docs/api/management/v2/users/post-invalidate-remember-browser",
+        "destination": "/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication"
+      },
+      {
+        "source": "/docs/api/management/v2/users/post-recovery-code-regeneration",
+        "destination": "/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code"
+      },
+      {
         "source": "/docs/articles",
         "destination": "/docs"
       },
@@ -39289,6 +39301,27 @@
       }
     ],
     "missingDestinationUnresolvable": [
+      {
+        "source": "/docs/api/management/v2/users/get-enrollments",
+        "destination": "/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment",
+        "finalDestination": "/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/management/v2/users/post-invalidate-remember-browser",
+        "destination": "/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication",
+        "finalDestination": "/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication",
+        "hops": 0,
+        "loop": false
+      },
+      {
+        "source": "/docs/api/management/v2/users/post-recovery-code-regeneration",
+        "destination": "/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code",
+        "finalDestination": "/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code",
+        "hops": 0,
+        "loop": false
+      },
       {
         "source": "/docs/articles",
         "destination": "/docs",

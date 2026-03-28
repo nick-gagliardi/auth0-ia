@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-27T04:37:26.608Z",
+  "generatedAtUtc": "2026-03-28T04:26:29.442Z",
   "pagesScanned": 2598,
   "blocksFound": 3113,
   "uniqueBlocks": 2552,
@@ -2364,8 +2364,8 @@
     },
     {
       "filePath": "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
-      "startLine": 38,
-      "endLine": 50,
+      "startLine": 40,
+      "endLine": 52,
       "lang": "json",
       "code": "{\n  \"organization\": {\n    \"show_as_button\": \"none\",\n    \"assign_membership_on_login\": \"none\"\n  },\n  \"connection_name_prefix_template\": \"ec-{org_id}-\",\n  \"enabled_features\": [\n    \"scim\",\n    \"universal_logout\"\n  ]\n}",
       "hash": "8b65d02bf4d4cc0da65defed43f88bf377c51339f424fba691eccd517803986d",

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-27T04:37:21.450Z",
+  "generatedAtUtc": "2026-03-28T04:26:24.020Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -14944,9 +14944,9 @@
                       {
                         "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:users/page:docs/api/management/v2/users/get-the-first-confirmed-multi-f",
                         "kind": "page",
-                        "label": "docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment",
-                        "route": "docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment",
-                        "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+                        "label": "docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment",
+                        "route": "docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment",
+                        "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
                         "children": []
                       },
                       {
@@ -15000,9 +15000,9 @@
                       {
                         "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:users/page:docs/api/management/v2/users/invalidate-all-remembered-brows",
                         "kind": "page",
-                        "label": "docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication",
-                        "route": "docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication",
-                        "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+                        "label": "docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa",
+                        "route": "docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa",
+                        "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
                         "children": []
                       },
                       {
@@ -15048,9 +15048,9 @@
                       {
                         "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:users/page:docs/api/management/v2/users/generate-new-multi-factor-authe",
                         "kind": "page",
-                        "label": "docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code",
-                        "route": "docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code",
-                        "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+                        "label": "docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code",
+                        "route": "docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code",
+                        "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
                         "children": []
                       },
                       {

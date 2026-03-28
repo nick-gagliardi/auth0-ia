@@ -22347,7 +22347,7 @@
       "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx",
       "main/docs/api/management/v2/users/delete-sessions-for-user.mdx",
       "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx",
-      "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+      "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
       "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
       "main/docs/api/management/v2/users/get-a-user.mdx",
       "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx",
@@ -22356,11 +22356,11 @@
       "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
       "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx",
       "main/docs/api/management/v2/users/get-sessions-for-user.mdx",
-      "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+      "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
       "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx",
       "main/docs/api/management/v2/users/get-users-groups.mdx",
       "main/docs/api/management/v2/users/get-users-log-events.mdx",
-      "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+      "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
       "main/docs/api/management/v2/users/link-a-user-account.mdx",
       "main/docs/api/management/v2/users/list-or-search-users.mdx",
       "main/docs/api/management/v2/users/list-users-organizations.mdx",
@@ -22783,7 +22783,7 @@
       "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx",
       "main/docs/api/management/v2/users/delete-sessions-for-user.mdx",
       "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx",
-      "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+      "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
       "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx",
       "main/docs/api/management/v2/users/get-a-user.mdx",
       "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx",
@@ -22792,11 +22792,11 @@
       "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx",
       "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx",
       "main/docs/api/management/v2/users/get-sessions-for-user.mdx",
-      "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+      "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
       "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx",
       "main/docs/api/management/v2/users/get-users-groups.mdx",
       "main/docs/api/management/v2/users/get-users-log-events.mdx",
-      "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+      "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
       "main/docs/api/management/v2/users/link-a-user-account.mdx",
       "main/docs/api/management/v2/users/list-or-search-users.mdx",
       "main/docs/api/management/v2/users/list-users-organizations.mdx",
@@ -23449,7 +23449,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx": {
+  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -23494,7 +23494,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx": {
+  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -23514,7 +23514,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx": {
+  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx": {
     "link": [],
     "import": [],
     "redirect": []

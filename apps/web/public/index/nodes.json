@@ -18062,11 +18062,11 @@
     ]
   },
   {
-    "id": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+    "id": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
     "type": "page",
-    "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+    "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
     "navPaths": [
-      "API Reference > Management API >   > Users > generate new multi factor authentication recovery code"
+      "API Reference > Management API >   > Users > generate new multi factor authentication mfa recovery code"
     ]
   },
   {
@@ -18134,11 +18134,11 @@
     ]
   },
   {
-    "id": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+    "id": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
     "type": "page",
-    "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+    "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
     "navPaths": [
-      "API Reference > Management API >   > Users > get the first confirmed multi factor authentication enrollment"
+      "API Reference > Management API >   > Users > get the first confirmed multi factor authentication mfa enrollment"
     ]
   },
   {
@@ -18166,11 +18166,11 @@
     ]
   },
   {
-    "id": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+    "id": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
     "type": "page",
-    "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+    "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
     "navPaths": [
-      "API Reference > Management API >   > Users > invalidate all remembered browsers for multi factor authentication"
+      "API Reference > Management API >   > Users > invalidate all remembered browsers for multi factor authentication mfa"
     ]
   },
   {

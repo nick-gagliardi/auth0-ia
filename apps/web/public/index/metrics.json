@@ -30196,7 +30196,7 @@
     "deadEnd": false,
     "deadEndScore": 0
   },
-  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx": {
+  "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
     "importedBy": 0,
@@ -30322,7 +30322,7 @@
     "deadEnd": false,
     "deadEndScore": 0
   },
-  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx": {
+  "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
     "importedBy": 0,
@@ -30378,7 +30378,7 @@
     "deadEnd": false,
     "deadEndScore": 0
   },
-  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx": {
+  "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
     "importedBy": 0,

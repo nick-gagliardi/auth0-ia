@@ -1974,8 +1974,8 @@
       "warnings": []
     },
     {
-      "id": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
-      "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx",
+      "id": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
+      "filePath": "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx",
       "warnings": []
     },
     {
@@ -2019,8 +2019,8 @@
       "warnings": []
     },
     {
-      "id": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
-      "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx",
+      "id": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
+      "filePath": "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx",
       "warnings": []
     },
     {
@@ -2039,8 +2039,8 @@
       "warnings": []
     },
     {
-      "id": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
-      "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx",
+      "id": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
+      "filePath": "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx",
       "warnings": []
     },
     {
@@ -14978,7 +14978,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "| `last_login` | date time | Timestamp indicating when the user last logged in. If a user is blocked and logs in, the blocked session updates `last_login`. If you are using this pr",
-          "line": 33
+          "line": 34
         }
       ]
     },
@@ -21440,7 +21440,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "| `last_login` | date time | Timestamp indicating when the user last logged in. If a user is blocked and logs in, the blocked session updates `last_login`. If you are using this pr",
-        "line": 33
+        "line": 34
       }
     ],
     "main/docs/manage-users/user-accounts/user-profiles/verified-email-usage.mdx": [],
@@ -27171,7 +27171,7 @@
     "main/docs/api/management/v2/users/delete-refresh-tokens-for-a-user.mdx": [],
     "main/docs/api/management/v2/users/delete-sessions-for-user.mdx": [],
     "main/docs/api/management/v2/users/deletes-a-tokenset-for-federated-connections-by-id.mdx": [],
-    "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-recovery-code.mdx": [],
+    "main/docs/api/management/v2/users/generate-new-multi-factor-authentication-mfa-recovery-code.mdx": [],
     "main/docs/api/management/v2/users/get-a-list-of-authentication-methods.mdx": [],
     "main/docs/api/management/v2/users/get-a-user.mdx": [],
     "main/docs/api/management/v2/users/get-a-users-connected-accounts.mdx": [],
@@ -27180,11 +27180,11 @@
     "main/docs/api/management/v2/users/get-an-authentication-method-by-id.mdx": [],
     "main/docs/api/management/v2/users/get-refresh-tokens-for-a-user.mdx": [],
     "main/docs/api/management/v2/users/get-sessions-for-user.mdx": [],
-    "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-enrollment.mdx": [],
+    "main/docs/api/management/v2/users/get-the-first-confirmed-multi-factor-authentication-mfa-enrollment.mdx": [],
     "main/docs/api/management/v2/users/get-tokensets-for-a-user.mdx": [],
     "main/docs/api/management/v2/users/get-users-groups.mdx": [],
     "main/docs/api/management/v2/users/get-users-log-events.mdx": [],
-    "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication.mdx": [],
+    "main/docs/api/management/v2/users/invalidate-all-remembered-browsers-for-multi-factor-authentication-mfa.mdx": [],
     "main/docs/api/management/v2/users/link-a-user-account.mdx": [],
     "main/docs/api/management/v2/users/list-or-search-users.mdx": [],
     "main/docs/api/management/v2/users/list-users-organizations.mdx": [],
