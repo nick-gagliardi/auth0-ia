@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     if (!docsRepoPath) {
       return NextResponse.json({
         ok: false,
-        error: 'MAINTENANCE_DOCS_REPO_PATH not configured',
+        error: 'MAINTENANCE_DOCS_REPO_PATH environment variable is not configured. Please add it in your Vercel project settings.',
       }, { status: 400 });
     }
 
