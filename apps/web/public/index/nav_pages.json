@@ -2126,6 +2126,42 @@
     "navLabel": "Migrate to Non-Verifiable Callback URI End-User Confirmation",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": {
+    "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot/group:integration-and-extensibility-issues",
+          "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot/group:integration-and-extensibility-issues/page:docs/troubleshoot/integration-extensibility-issues/troublesh"
+        ],
+        "labels": [
+          "Documentation",
+          "Troubleshoot",
+          "Troubleshoot",
+          "Integration and Extensibility Issues",
+          "Troubleshoot Actions Real-time Logs"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Troubleshoot Actions Real-time Logs",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Troubleshoot > Troubleshoot > Integration and Extensibility Issues",
+        "pathString": "Documentation > Troubleshoot > Troubleshoot > Integration and Extensibility Issues > Troubleshoot Actions Real-time Logs"
+      }
+    ],
+    "navLabel": "Troubleshoot Actions Real-time Logs",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx": {
     "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",
     "navDepth": 4,

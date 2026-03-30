@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-29T04:41:08.838Z",
+  "generatedAtUtc": "2026-03-30T04:49:07.491Z",
   "maxLen": 5,
   "minLen": 3,
   "startsPerRoot": 25,
@@ -1520,6 +1520,18 @@
     },
     {
       "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/actions-real-time-logs.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx"
+      ],
+      "score": 88.0111,
+      "support": 10,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/actions-overview.mdx",
         "main/docs/customize/actions/limitations.mdx",
@@ -1671,18 +1683,6 @@
         "main/docs/secure/multi-factor-authentication.mdx"
       ],
       "score": 87.6168,
-      "support": 10,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/actions-real-time-logs.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
-      ],
-      "score": 87.6056,
       "support": 10,
       "navRoot": "API Reference"
     },
@@ -1856,6 +1856,18 @@
     },
     {
       "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/extensions/authorization-extension.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/actions-real-time-logs.mdx"
+      ],
+      "score": 86.8314,
+      "support": 10,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
@@ -1959,18 +1971,6 @@
         "main/docs/secure/tokens/id-tokens.mdx"
       ],
       "score": 86.4265,
-      "support": 10,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/extensions/authorization-extension.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/actions-real-time-logs.mdx"
-      ],
-      "score": 86.4259,
       "support": 10,
       "navRoot": "API Reference"
     },
@@ -4272,6 +4272,18 @@
         },
         {
           "path": [
+            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/actions-overview.mdx",
+            "main/docs/customize/actions/actions-real-time-logs.mdx",
+            "main/docs/customize/actions/write-your-first-action.mdx"
+          ],
+          "score": 106.0111,
+          "support": 1,
+          "navRoot": "Customize"
+        },
+        {
+          "path": [
             "main/docs/customize/extensions/authorization-extension.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
@@ -4327,18 +4339,6 @@
             "main/docs/customize/actions/write-your-first-action.mdx"
           ],
           "score": 105.6371,
-          "support": 1,
-          "navRoot": "Customize"
-        },
-        {
-          "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/actions-overview.mdx",
-            "main/docs/customize/actions/actions-real-time-logs.mdx",
-            "main/docs/customize/actions/write-your-first-action.mdx"
-          ],
-          "score": 105.6056,
           "support": 1,
           "navRoot": "Customize"
         }

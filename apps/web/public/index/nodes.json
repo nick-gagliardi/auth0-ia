@@ -564,6 +564,15 @@
     ]
   },
   {
+    "id": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx",
+    "type": "page",
+    "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx",
+    "title": "Troubleshoot Actions Real-time Logs",
+    "navPaths": [
+      "Documentation > Troubleshoot > Troubleshoot > Integration and Extensibility Issues > Troubleshoot Actions Real-time Logs"
+    ]
+  },
+  {
     "id": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",
     "type": "page",
     "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",

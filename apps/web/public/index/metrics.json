@@ -889,6 +889,20 @@
     "deadEnd": false,
     "deadEndScore": 0.5
   },
+  "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": {
+    "inboundLinks": 1,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 4,
+    "orphanNav": false,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 1,
+    "deadEnd": false,
+    "deadEndScore": 1
+  },
   "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx": {
     "inboundLinks": 7,
     "outboundLinks": 13,
@@ -25666,7 +25680,7 @@
   },
   "main/docs/customize/actions/actions-real-time-logs.mdx": {
     "inboundLinks": 12,
-    "outboundLinks": 1,
+    "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -25676,7 +25690,7 @@
     "deepNav": false,
     "hubScore": 12,
     "deadEnd": false,
-    "deadEndScore": 12
+    "deadEndScore": 6
   },
   "main/docs/customize/actions/actions-templates.mdx": {
     "inboundLinks": 0,

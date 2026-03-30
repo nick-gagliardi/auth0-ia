@@ -1,5 +1,5 @@
 {
-  "pagesScanned": 2598,
+  "pagesScanned": 2599,
   "pagesWithWarnings": 558,
   "warningCount": 783,
   "byCode": {
@@ -18679,6 +18679,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx",
+      "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",
       "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",
       "warnings": []
@@ -19301,6 +19306,7 @@
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx": [],
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx": [],
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx": [],
+    "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": [],
     "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx": [],
     "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx": [
       {

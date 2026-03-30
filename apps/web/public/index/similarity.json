@@ -19474,8 +19474,8 @@
     },
     {
       "id": "main/docs/customize/actions/actions-real-time-logs.mdx",
-      "score": 0.0714,
-      "simOut": 0.0714,
+      "score": 0.0686,
+      "simOut": 0.0667,
       "simIn": 0.0714,
       "sharedOut": 1,
       "sharedIn": 3,
@@ -60324,8 +60324,8 @@
   "main/docs/customize/actions/actions-real-time-logs.mdx": [
     {
       "id": "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "score": 0.0714,
-      "simOut": 0.0714,
+      "score": 0.0686,
+      "simOut": 0.0667,
       "simIn": 0.0714,
       "sharedOut": 1,
       "sharedIn": 3,
@@ -60338,8 +60338,8 @@
     },
     {
       "id": "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-      "score": 0.0648,
-      "simOut": 0.0625,
+      "score": 0.0626,
+      "simOut": 0.0588,
       "simIn": 0.0682,
       "sharedOut": 1,
       "sharedIn": 3,

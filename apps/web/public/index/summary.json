@@ -1,11 +1,11 @@
 {
-  "generatedAtUtc": "2026-03-29T04:41:08.927Z",
+  "generatedAtUtc": "2026-03-30T04:49:07.582Z",
   "source": {
     "repoUrl": "https://github.com/auth0/docs-v2.git",
     "ref": "main",
-    "gitSha": "b18ee7e1002fc6341a5a0f339639a64a8af47047"
+    "gitSha": "56d2942b97992d25605ddcb29d71e32c427bf445"
   },
-  "nodes": 2807,
-  "pages": 2598,
+  "nodes": 2808,
+  "pages": 2599,
   "snippets": 209
 }

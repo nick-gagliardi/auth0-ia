@@ -2063,6 +2063,10 @@
     {
       "href": "/docs/customize/actions/write-your-first-action",
       "toId": "main/docs/customize/actions/write-your-first-action.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs",
+      "toId": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx"
     }
   ],
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx": [
@@ -4243,6 +4247,7 @@
       "toId": "main/docs/customize/login-pages/universal-login/customize-templates.mdx"
     }
   ],
+  "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": [],
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector.mdx": [
     {
       "href": "/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/configure-ad-ldap-connector-with-kerberos",

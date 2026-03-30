@@ -1121,7 +1121,8 @@
   },
   "main/docs/customize/actions/actions-real-time-logs.mdx": {
     "link": [
-      "main/docs/customize/actions/write-your-first-action.mdx"
+      "main/docs/customize/actions/write-your-first-action.mdx",
+      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx"
     ],
     "import": [],
     "redirect": []
@@ -2158,6 +2159,11 @@
       "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
       "main/docs/customize/login-pages/universal-login/customize-templates.mdx"
     ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },

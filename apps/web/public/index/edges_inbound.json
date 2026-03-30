@@ -3411,6 +3411,13 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": {
+    "link": [
+      "main/docs/customize/actions/actions-real-time-logs.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector.mdx": {
     "link": [
       "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",

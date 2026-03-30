@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-03-29T04:41:02.772Z",
+  "generatedAtUtc": "2026-03-30T04:49:02.504Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -10870,6 +10870,14 @@
                         "label": "docs/troubleshoot/integration-extensibility-issues/troubleshoot-the-deploy-cli-tool",
                         "route": "docs/troubleshoot/integration-extensibility-issues/troubleshoot-the-deploy-cli-tool",
                         "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-the-deploy-cli-tool.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:troubleshoot/group:troubleshoot/group:integration-and-extensibility-issues/page:docs/troubleshoot/integration-extensibility-issues/troublesh",
+                        "kind": "page",
+                        "label": "docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs",
+                        "route": "docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs",
+                        "filePath": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx",
                         "children": []
                       }
                     ]
