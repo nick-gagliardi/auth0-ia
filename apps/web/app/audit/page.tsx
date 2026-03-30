@@ -17,6 +17,7 @@ import {
   Trash2,
   ListPlus,
   Play,
+  RotateCcw,
 } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import { Button } from '@/components/ui/button';
@@ -496,6 +497,7 @@ export default function AuditPage() {
   const [acceptedAiSuggestions, setAcceptedAiSuggestions] = useState<Set<number>>(new Set());
   const [hasAnthropicKey, setHasAnthropicKey] = useState(false);
   const [showKeyPrompt, setShowKeyPrompt] = useState(false);
+  const [resetting, setResetting] = useState(false);
 
   // Check if user has Anthropic key configured
   useEffect(() => {
@@ -932,6 +934,42 @@ Focus on the most impactful suggestions. Limit to 10 suggestions maximum. Only i
     }
   };
 
+  const resetToMain = async () => {
+    setResetting(true);
+    try {
+      const res = await fetch('/api/git/reset-to-main', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        toast({
+          title: 'Reset Successful',
+          description: data.message,
+        });
+        // Clear any PR-related state since we've reset
+        setPrUrl(null);
+        setPrError(null);
+      } else {
+        toast({
+          title: 'Reset Failed',
+          description: data.error,
+          variant: 'destructive',
+        });
+      }
+    } catch (e: any) {
+      toast({
+        title: 'Error',
+        description: e?.message || 'Network error',
+        variant: 'destructive',
+      });
+    } finally {
+      setResetting(false);
+    }
+  };
+
   return (
     <AppLayout>
       <div className="max-w-4xl mx-auto space-y-6">
@@ -989,6 +1027,24 @@ Focus on the most impactful suggestions. Limit to 10 suggestions maximum. Only i
                   </>
                 ) : (
                   'Run Audit'
+                )}
+              </Button>
+              <Button
+                variant="outline"
+                onClick={resetToMain}
+                disabled={resetting}
+                title="Stash local changes and reset to main/origin"
+              >
+                {resetting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Resetting...
+                  </>
+                ) : (
+                  <>
+                    <RotateCcw className="w-4 h-4 mr-2" />
+                    Reset to Main
+                  </>
                 )}
               </Button>
             </div>
