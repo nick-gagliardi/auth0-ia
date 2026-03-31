@@ -9,6 +9,7 @@ export interface User {
   github_access_token_encrypted: string;
   github_token_expires_at?: Date | null;
   anthropic_api_key_encrypted?: string | null;
+  github_pat_encrypted?: string | null;
   created_at: Date;
   updated_at: Date;
 }
@@ -16,6 +17,7 @@ export interface User {
 export interface UserWithDecryptedCreds extends User {
   github_access_token_decrypted: string;
   anthropic_api_key_decrypted?: string | null;
+  github_pat_decrypted?: string | null;
 }
 
 export interface Session {
@@ -147,6 +149,19 @@ export async function updateUserAnthropicKey(
   `;
 }
 
+export async function updateUserGithubPat(
+  userId: string,
+  encryptedPat: string | null
+): Promise<void> {
+  await sql`
+    UPDATE users
+    SET
+      github_pat_encrypted = ${encryptedPat},
+      updated_at = NOW()
+    WHERE id = ${userId}
+  `;
+}
+
 export async function getUserWithDecryptedCreds(
   userId: string,
   includeAnthropicKey = false
@@ -159,6 +174,9 @@ export async function getUserWithDecryptedCreds(
     github_access_token_decrypted: decrypt(user.github_access_token_encrypted),
     anthropic_api_key_decrypted: user.anthropic_api_key_encrypted
       ? decrypt(user.anthropic_api_key_encrypted)
+      : null,
+    github_pat_decrypted: user.github_pat_encrypted
+      ? decrypt(user.github_pat_encrypted)
       : null,
   };
 

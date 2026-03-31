@@ -32,7 +32,9 @@ export async function POST(req: Request) {
   try {
     // Get authenticated user and their GitHub token
     const { user } = await requireSession();
-    const githubToken = user.github_access_token_decrypted;
+
+    // Prefer GitHub PAT over OAuth token (PAT bypasses OAuth app restrictions)
+    const githubToken = user.github_pat_decrypted || user.github_access_token_decrypted;
 
     const body = BodySchema.parse(await req.json());
     const { filePath, validatedOn, prTitle, prBody, suggestions } = body;
@@ -40,7 +42,7 @@ export async function POST(req: Request) {
     if (!githubToken) {
       return NextResponse.json({
         ok: false,
-        error: 'GitHub authentication required. Please connect your GitHub account.',
+        error: 'GitHub authentication required. Please connect your GitHub account or configure a Personal Access Token in settings.',
       }, { status: 401 });
     }
 

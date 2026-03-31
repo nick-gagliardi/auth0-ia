@@ -15,6 +15,7 @@ import { RefreshCw } from 'lucide-react';
 type SettingsData = {
   githubUsername: string;
   hasAnthropicKey: boolean;
+  hasGithubPat: boolean;
 };
 
 export default function SettingsPage() {
@@ -24,9 +25,12 @@ export default function SettingsPage() {
 
   const [settings, setSettings] = useState<SettingsData | null>(null);
   const [anthropicKey, setAnthropicKey] = useState('');
+  const [githubPat, setGithubPat] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isSavingPat, setIsSavingPat] = useState(false);
+  const [isDeletingPat, setIsDeletingPat] = useState(false);
   const [isReindexing, setIsReindexing] = useState(false);
 
   // Redirect to login if not authenticated
@@ -147,6 +151,86 @@ export default function SettingsPage() {
     }
   };
 
+  const handleSaveGithubPat = async () => {
+    if (!githubPat.trim()) {
+      toast({
+        title: 'Error',
+        description: 'Please enter a GitHub Personal Access Token',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsSavingPat(true);
+    try {
+      const response = await fetch('/api/settings/github-pat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ githubPat }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: 'Success',
+          description: 'GitHub PAT saved successfully',
+        });
+        setGithubPat('');
+        await fetchSettings();
+      } else {
+        toast({
+          title: 'Error',
+          description: result.error || 'Failed to save GitHub PAT',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to save GitHub PAT',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSavingPat(false);
+    }
+  };
+
+  const handleDeleteGithubPat = async () => {
+    if (!confirm('Are you sure you want to delete your GitHub PAT? PR creation will fall back to using your OAuth token.')) {
+      return;
+    }
+
+    setIsDeletingPat(true);
+    try {
+      const response = await fetch('/api/settings/github-pat', {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Success',
+          description: 'GitHub PAT deleted',
+        });
+        await fetchSettings();
+      } else {
+        toast({
+          title: 'Error',
+          description: 'Failed to delete GitHub PAT',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to delete GitHub PAT',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsDeletingPat(false);
+    }
+  };
+
   const handleReindex = async () => {
     if (!confirm('This will trigger a full reindex of the Auth0 docs. This may take several minutes. Continue?')) {
       return;
@@ -232,8 +316,92 @@ export default function SettingsPage() {
           </CardContent>
         </Card>
 
+        {/* GitHub Personal Access Token */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle>GitHub Personal Access Token (Optional)</CardTitle>
+            <CardDescription>
+              For organizations with OAuth app restrictions, provide a personal access token
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {/* Current Status */}
+              <Alert>
+                <AlertDescription>
+                  {settings?.hasGithubPat ? (
+                    <span className="text-green-600 dark:text-green-400 font-medium">
+                      ✓ Personal Access Token configured
+                    </span>
+                  ) : (
+                    <span className="text-muted-foreground">
+                      No PAT configured. Using OAuth token for PR operations.
+                    </span>
+                  )}
+                </AlertDescription>
+              </Alert>
+
+              {/* Info Alert */}
+              <Alert>
+                <AlertDescription className="text-xs">
+                  <strong>Why use a PAT?</strong> Some organizations (like auth0) have OAuth app restrictions.
+                  If you get "OAuth app access restricted" errors when creating PRs, configure a PAT here.
+                  Your PAT will be used instead of the OAuth token for PR operations.
+                </AlertDescription>
+              </Alert>
+
+              {/* Input Section */}
+              <div className="space-y-2">
+                <Label htmlFor="github-pat">
+                  {settings?.hasGithubPat ? 'Update Personal Access Token' : 'Enter Personal Access Token'}
+                </Label>
+                <Input
+                  id="github-pat"
+                  type="password"
+                  placeholder="ghp_... or github_pat_..."
+                  value={githubPat}
+                  onChange={(e) => setGithubPat(e.target.value)}
+                  disabled={isSavingPat}
+                />
+                <p className="text-sm text-muted-foreground">
+                  Create a token at{' '}
+                  <a
+                    href="https://github.com/settings/tokens"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-primary"
+                  >
+                    github.com/settings/tokens
+                  </a>
+                  {' '}with <code className="bg-muted px-1 py-0.5 rounded">repo</code> scope
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  onClick={handleSaveGithubPat}
+                  disabled={!githubPat.trim() || isSavingPat}
+                >
+                  {isSavingPat ? 'Saving...' : settings?.hasGithubPat ? 'Update PAT' : 'Save PAT'}
+                </Button>
+
+                {settings?.hasGithubPat && (
+                  <Button
+                    variant="destructive"
+                    onClick={handleDeleteGithubPat}
+                    disabled={isDeletingPat}
+                  >
+                    {isDeletingPat ? 'Deleting...' : 'Delete PAT'}
+                  </Button>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Anthropic API Key */}
-        <Card>
+        <Card className="mb-6">
           <CardHeader>
             <CardTitle>Anthropic API Key</CardTitle>
             <CardDescription>

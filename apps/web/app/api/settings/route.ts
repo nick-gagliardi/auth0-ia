@@ -20,7 +20,8 @@ export async function GET() {
       ok: true,
       githubUsername: user.github_username,
       hasAnthropicKey: !!user.anthropic_api_key_decrypted,
-      // Never return the actual key
+      hasGithubPat: !!user.github_pat_decrypted,
+      // Never return the actual keys
     });
   } catch (err: any) {
     return NextResponse.json(
