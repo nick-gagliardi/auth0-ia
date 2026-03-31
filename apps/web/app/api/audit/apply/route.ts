@@ -3,7 +3,7 @@ import { z } from 'zod';
 import * as path from 'path';
 import type { AuditSuggestion } from '@/types';
 import { requireSession } from '@/lib/session';
-import { fetchFile, getBranchSha, createBranch, updateFile, createPullRequest } from '../lib/github';
+import { fetchFile, getBranchSha, createBranch, updateFile, createPullRequest } from '../../lib/github';
 
 // Escape special regex characters in a string
 function escapeRegex(str: string): string {
