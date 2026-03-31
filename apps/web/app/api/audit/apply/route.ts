@@ -3,7 +3,7 @@ import { z } from 'zod';
 import * as path from 'path';
 import type { AuditSuggestion } from '@/types';
 import { requireSession } from '@/lib/session';
-import { fetchFile, getBranchSha, createBranch, updateFile, createPullRequest } from '../../lib/github';
+import { fetchFile, getBranchSha, createBranch, updateFile } from '../../lib/github';
 
 // Escape special regex characters in a string
 function escapeRegex(str: string): string {
@@ -144,22 +144,14 @@ Co-Authored-By: ${user.github_username} (via Auth0 IA)`;
       file.sha
     );
 
-    // Create pull request
-    const pr = await createPullRequest(
-      githubToken,
-      targetRepo,
-      prTitle,
-      prBody || '',
-      branchName,
-      baseBranch
-    );
+    // Build GitHub compare URL (user will manually create PR from this page)
+    const compareUrl = `https://github.com/${targetRepo}/compare/${baseBranch}...${branchName}?expand=1&title=${encodeURIComponent(prTitle)}${prBody ? `&body=${encodeURIComponent(prBody)}` : ''}`;
 
     return NextResponse.json({
       ok: true,
       appliedCount,
       branchName,
-      compareUrl: pr.url,
-      prNumber: pr.number,
+      compareUrl,
     });
 
   } catch (err: any) {

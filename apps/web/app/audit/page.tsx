@@ -1121,7 +1121,7 @@ Focus on the most impactful suggestions. Limit to 10 suggestions maximum. Only i
                             ) : (
                               <>
                                 <GitPullRequest className="w-4 h-4 mr-2" />
-                                Create PR{(acceptedSuggestions.size + acceptedAiSuggestions.size) > 0 ? ` (${acceptedSuggestions.size + acceptedAiSuggestions.size} fix${(acceptedSuggestions.size + acceptedAiSuggestions.size) === 1 ? '' : 'es'})` : ''}
+                                Stage PR{(acceptedSuggestions.size + acceptedAiSuggestions.size) > 0 ? ` (${acceptedSuggestions.size + acceptedAiSuggestions.size} fix${(acceptedSuggestions.size + acceptedAiSuggestions.size) === 1 ? '' : 'es'})` : ''}
                               </>
                             )}
                           </Button>
