@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { execFileSync } from 'child_process';
-import * as fs from 'fs';
 import * as path from 'path';
 import type { AuditSuggestion } from '@/types';
 import { requireSession } from '@/lib/session';
+import { fetchFile, getBranchSha, createBranch, updateFile, createPullRequest } from '../lib/github';
 
 // Escape special regex characters in a string
 function escapeRegex(str: string): string {
@@ -29,38 +28,6 @@ const BodySchema = z.object({
   suggestions: z.array(SuggestionSchema),
 });
 
-function run(cmd: string, args: string[], options?: { cwd?: string; githubToken?: string }): string {
-  try {
-    const execOptions: any = {
-      cwd: options?.cwd,
-      encoding: 'utf-8',
-      maxBuffer: 50 * 1024 * 1024,
-    };
-
-    // If GitHub token is provided and we're running git commands, inject authentication
-    if (options?.githubToken && cmd === 'git') {
-      // Use git credential helper to provide token for GitHub operations
-      // Priority: user's token → global env var (for 30-day transition)
-      const token = options.githubToken || process.env.MAINTENANCE_GH_TOKEN;
-      if (token) {
-        execOptions.env = {
-          ...process.env,
-          GIT_TERMINAL_PROMPT: '0', // Disable interactive prompts
-          GH_TOKEN: token, // For GitHub CLI if used
-        };
-
-        // Inject git config to use token for authentication via extraheader
-        const authHeader = `Authorization: Basic ${Buffer.from(`x-access-token:${token}`).toString('base64')}`;
-        args = ['-c', `http.https://github.com/.extraheader=${authHeader}`, ...args];
-      }
-    }
-
-    return execFileSync(cmd, args, execOptions);
-  } catch (e: any) {
-    throw new Error(e?.stderr || e?.message || String(e));
-  }
-}
-
 export async function POST(req: Request) {
   try {
     // Get authenticated user and their GitHub token
@@ -70,27 +37,19 @@ export async function POST(req: Request) {
     const body = BodySchema.parse(await req.json());
     const { filePath, validatedOn, prTitle, prBody, suggestions } = body;
 
-    const docsRepoPath = process.env.MAINTENANCE_DOCS_REPO_PATH;
-    if (!docsRepoPath) {
+    if (!githubToken) {
       return NextResponse.json({
         ok: false,
-        error: 'MAINTENANCE_DOCS_REPO_PATH not configured',
-      }, { status: 400 });
+        error: 'GitHub authentication required. Please connect your GitHub account.',
+      }, { status: 401 });
     }
 
     const targetRepo = process.env.MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2';
     const baseBranch = process.env.MAINTENANCE_BASE_BRANCH || 'main';
 
-    const abs = path.resolve(docsRepoPath, filePath);
-    if (!fs.existsSync(abs)) {
-      return NextResponse.json({
-        ok: false,
-        error: `File not found: ${filePath}`,
-      }, { status: 400 });
-    }
-
-    // Read the current file content
-    let content = fs.readFileSync(abs, 'utf-8');
+    // Fetch file from GitHub API
+    const file = await fetchFile(githubToken, targetRepo, filePath, baseBranch);
+    let content = file.content;
 
     // Apply suggestions (sort by line number descending to avoid offset issues)
     const sortedSuggestions = [...suggestions].sort((a, b) => (b.line || 0) - (a.line || 0));
@@ -149,10 +108,7 @@ export async function POST(req: Request) {
       content = frontmatterMatch[1] + frontmatter + frontmatterMatch[3] + content.slice(frontmatterMatch[0].length);
     }
 
-    // Write the updated content
-    fs.writeFileSync(abs, content, 'utf-8');
-
-    // Create branch and commit
+    // Generate branch name
     const fileName = path.basename(filePath, path.extname(filePath))
       .replace(/[^a-zA-Z0-9-]/g, '-')
       .slice(0, 20);
@@ -160,16 +116,13 @@ export async function POST(req: Request) {
     const uniq = String(Date.now()).slice(-6);
     const branchName = `maint/${fileName}-${shortDate}-${uniq}`;
 
-    // Ensure we're on the base branch and up to date
-    run('git', ['checkout', baseBranch], { cwd: docsRepoPath, githubToken });
-    run('git', ['pull', 'origin', baseBranch], { cwd: docsRepoPath, githubToken });
+    // Get the current SHA of the base branch
+    const baseSha = await getBranchSha(githubToken, targetRepo, baseBranch);
 
-    // Create and checkout new branch
-    run('git', ['checkout', '-b', branchName], { cwd: docsRepoPath, githubToken });
+    // Create a new branch from base
+    await createBranch(githubToken, targetRepo, branchName, baseSha);
 
-    // Stage and commit
-    run('git', ['add', filePath], { cwd: docsRepoPath, githubToken });
-
+    // Commit message
     const commitMsg = `chore(docs): content maintenance (${validatedOn})
 
 Applied ${appliedCount} suggestion(s):
@@ -178,19 +131,33 @@ ${suggestions.length > 5 ? `... and ${suggestions.length - 5} more` : ''}
 
 Co-Authored-By: ${user.github_username} (via Auth0 IA)`;
 
-    run('git', ['commit', '-m', commitMsg], { cwd: docsRepoPath, githubToken });
+    // Update the file on the new branch
+    await updateFile(
+      githubToken,
+      targetRepo,
+      filePath,
+      content,
+      commitMsg,
+      branchName,
+      file.sha
+    );
 
-    // Push branch
-    run('git', ['push', '-u', 'origin', branchName], { cwd: docsRepoPath, githubToken });
-
-    // Return compare URL
-    const compareUrl = `https://github.com/${targetRepo}/compare/${baseBranch}...${branchName}?expand=1&title=${encodeURIComponent(prTitle)}${prBody ? `&body=${encodeURIComponent(prBody)}` : ''}`;
+    // Create pull request
+    const pr = await createPullRequest(
+      githubToken,
+      targetRepo,
+      prTitle,
+      prBody || '',
+      branchName,
+      baseBranch
+    );
 
     return NextResponse.json({
       ok: true,
       appliedCount,
       branchName,
-      compareUrl,
+      compareUrl: pr.url,
+      prNumber: pr.number,
     });
 
   } catch (err: any) {
