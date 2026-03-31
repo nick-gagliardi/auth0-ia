@@ -288,9 +288,11 @@ If no violations, return {"violations": []}. Return ONLY the JSON.`
 
 export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResult>> {
   try {
-    // Get authenticated user and their GitHub token
-    const { user } = await requireSession();
-    const githubToken = user.github_access_token_decrypted;
+    // Get authenticated user, GitHub token, and Anthropic key (for style guide check)
+    const { user } = await requireSession(true);
+
+    // Prefer GitHub PAT over OAuth token (PAT bypasses OAuth app restrictions)
+    const githubToken = user.github_pat_decrypted || user.github_access_token_decrypted;
 
     const { prUrl } = await req.json();
 
