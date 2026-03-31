@@ -345,7 +345,7 @@ export default function SettingsPage() {
               <Alert>
                 <AlertDescription className="text-xs">
                   <strong>Why use a PAT?</strong> Some organizations (like auth0) have OAuth app restrictions.
-                  If you get "OAuth app access restricted" errors when creating PRs, configure a PAT here.
+                  If you get &quot;OAuth app access restricted&quot; errors when creating PRs, configure a PAT here.
                   Your PAT will be used instead of the OAuth token for PR operations.
                 </AlertDescription>
               </Alert>
