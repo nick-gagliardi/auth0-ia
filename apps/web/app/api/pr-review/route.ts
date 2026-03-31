@@ -183,6 +183,109 @@ function getLineNumber(content: string, index: number): number {
   return before.split('\n').length;
 }
 
+// Check content against Auth0 style guide
+async function checkStyleGuide(mdxContent: string, pageTitle: string, userApiKey?: string): Promise<{violations: Array<{category: string; issue: string; location: string}>} | null> {
+  const apiKey = userApiKey || process.env.ANTHROPIC_API_KEY;
+  if (!apiKey || !mdxContent) return null;
+
+  try {
+    const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+    };
+
+    if (isLiteLLMProxy) {
+      headers['Authorization'] = `Bearer ${apiKey}`;
+    } else {
+      headers['x-api-key'] = apiKey;
+      headers['anthropic-version'] = '2023-06-01';
+    }
+
+    const styleGuideRules = `
+Auth0 Documentation Style Guide (Focus on writing style, ignore IA/nav):
+
+Language & Style:
+- Use second person ("you") for instructions
+- Use active voice over passive voice
+- Present tense for current states
+- Avoid unnecessary jargon
+- Keep sentences concise
+- Use parallel structure in lists
+
+Content Organization:
+- Lead with most important information
+- Break complex procedures into steps
+- Include prerequisites before instructions
+- Use descriptive headings
+
+Component Usage:
+- Use <Callout> for plan restrictions (NOT <Warning>)
+- Use <Warning> ONLY for Early Access features requiring legal agreement
+- Use <Steps> for sequential instructions
+- Use <Tabs> for different implementations of SAME action
+- Use bullet lists for different approaches/solutions
+- Wrap images in <Frame> components
+- Use <CodeGroup> for multi-language examples
+
+Placeholders:
+- Use YOUR_SOMETHING for config values (e.g., YOUR_TENANT)
+- Use <something> for IDs from commands (e.g., <client_id>)
+- DO NOT use {{VAR}} syntax
+`;
+
+    const response = await fetch(`${baseUrl}/v1/messages`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        model,
+        max_tokens: 2048,
+        messages: [{
+          role: 'user',
+          content: `Analyze this Auth0 documentation page for style guide violations. Focus ONLY on writing style and component usage. Ignore navigation/IA structure.
+
+Page: ${pageTitle}
+
+Style Guide:
+${styleGuideRules}
+
+Content:
+${mdxContent.slice(0, 15000)}
+
+Return a JSON array of violations (max 10 most important):
+{
+  "violations": [
+    {
+      "category": "Language|Organization|Components|Placeholders",
+      "issue": "Brief description of violation",
+      "location": "Specific text or component where it occurs"
+    }
+  ]
+}
+
+If no violations, return {"violations": []}. Return ONLY the JSON.`
+        }]
+      })
+    });
+
+    if (!response.ok) return null;
+
+    const result = await response.json();
+    const content = result.content?.[0]?.text;
+    if (!content) return null;
+
+    const jsonMatch = content.match(/\{[\s\S]*"violations"[\s\S]*\}/);
+    if (!jsonMatch) return null;
+
+    return JSON.parse(jsonMatch[0]);
+  } catch (err) {
+    console.error('[checkStyleGuide] Error:', err);
+    return null;
+  }
+}
+
 export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResult>> {
   try {
     // Get authenticated user and their GitHub token
@@ -444,6 +547,23 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
               suggestion: suggestionLine,
               evidence: { originalText: originalLine },
             });
+          }
+        }
+
+        // Style guide adherence check (only if user has API key)
+        if (user?.anthropic_api_key_decrypted) {
+          const styleCheck = await checkStyleGuide(content, file.path, user.anthropic_api_key_decrypted);
+          if (styleCheck?.violations && styleCheck.violations.length > 0) {
+            for (const violation of styleCheck.violations) {
+              issues.push({
+                file: file.path,
+                check: 'style-guide',
+                status: 'WARN',
+                message: `[${violation.category}] ${violation.issue}`,
+                suggestion: violation.location,
+                evidence: { category: violation.category, location: violation.location },
+              });
+            }
           }
         }
 
