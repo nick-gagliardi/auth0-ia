@@ -1,8 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { execSync } from 'child_process';
-import * as fs from 'fs';
-import * as os from 'os';
-import * as path from 'path';
 import { requireSession } from '@/lib/session';
 
 type ReviewComment = {
@@ -19,60 +15,52 @@ type PublishResult = {
   reviewUrl?: string;
 };
 
-function run(cmd: string, args: string[], options?: { cwd?: string; githubToken?: string }): string {
-  const fullCmd = [cmd, ...args].join(' ');
-  try {
-    const execOptions: any = {
-      cwd: options?.cwd,
-      encoding: 'utf-8',
-      maxBuffer: 50 * 1024 * 1024,
-    };
+// Make GitHub API calls directly instead of using gh CLI
+async function githubApi(endpoint: string, token: string, options?: RequestInit): Promise<any> {
+  const url = endpoint.startsWith('http') ? endpoint : `https://api.github.com${endpoint}`;
 
-    // If GitHub token is provided, inject it via environment variable
-    // Priority: user's token → global env var (for 30-day transition)
-    if (options?.githubToken) {
-      const token = options.githubToken || process.env.MAINTENANCE_GH_TOKEN;
-      if (token) {
-        execOptions.env = {
-          ...process.env,
-          GH_TOKEN: token,
-          GITHUB_TOKEN: token,
-        };
-      }
-    }
-
-    return execSync(fullCmd, execOptions);
-  } catch (e: any) {
-    throw new Error(e?.stderr || e?.message || String(e));
-  }
-}
-
-// Helper to run shell commands with GitHub token
-function runWithToken(cmd: string, githubToken?: string): string {
-  const token = githubToken || process.env.MAINTENANCE_GH_TOKEN;
-  const env = token ? {
-    ...process.env,
-    GH_TOKEN: token,
-    GITHUB_TOKEN: token,
-  } : process.env;
-
-  return execSync(cmd, {
-    encoding: 'utf-8',
-    maxBuffer: 50 * 1024 * 1024,
-    env,
+  const response = await fetch(url, {
+    ...options,
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...options?.headers,
+    },
   });
+
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`GitHub API error (${response.status}): ${error}`);
+  }
+
+  // Some endpoints return no content (204)
+  if (response.status === 204) {
+    return null;
+  }
+
+  return response.json();
 }
 
 export async function POST(req: NextRequest): Promise<NextResponse<PublishResult>> {
   try {
     // Get authenticated user and their GitHub token
     const { user } = await requireSession();
-    const githubToken = user.github_access_token_decrypted;
+
+    // Prefer GitHub PAT over OAuth token (PAT bypasses OAuth app restrictions)
+    const githubToken = user.github_pat_decrypted || user.github_access_token_decrypted;
 
     const { prUrl, comments, summary } = await req.json();
 
     if (!prUrl || typeof prUrl !== 'string') {
       return NextResponse.json({ ok: false, error: 'Missing prUrl' }, { status: 400 });
+    }
+
+    if (!githubToken) {
+      return NextResponse.json({
+        ok: false,
+        error: 'GitHub authentication required. Please connect your GitHub account or configure a Personal Access Token in settings.',
+      }, { status: 401 });
     }
 
     // Parse PR URL
@@ -84,20 +72,24 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
     const [, owner, repo, prNumber] = match;
     const fullRepo = `${owner}/${repo}`;
 
-    // Get PR details including the head commit SHA
-    const prDetailsRaw = run('gh', [
-      'pr', 'view', prNumber,
-      '--repo', fullRepo,
-      '--json', 'headRefOid',
-    ], { githubToken });
-    const prDetails = JSON.parse(prDetailsRaw);
-    const commitId = prDetails.headRefOid;
+    // Get PR details including the head commit SHA via GitHub API
+    const prDetails = await githubApi(`/repos/${fullRepo}/pulls/${prNumber}`, githubToken);
+    const commitId = prDetails.head.sha;
 
-    // Get the diff to find line positions
-    const diffRaw = run('gh', [
-      'pr', 'diff', prNumber,
-      '--repo', fullRepo,
-    ], { githubToken });
+    // Get the diff via GitHub API to find line positions
+    // Use the diff media type to get unified diff format
+    const diffResponse = await fetch(`https://api.github.com/repos/${fullRepo}/pulls/${prNumber}`, {
+      headers: {
+        'Authorization': `Bearer ${githubToken}`,
+        'Accept': 'application/vnd.github.v3.diff',
+      },
+    });
+
+    if (!diffResponse.ok) {
+      throw new Error(`Failed to fetch diff: ${diffResponse.status}`);
+    }
+
+    const diffRaw = await diffResponse.text();
 
     // Parse diff to build a map of file -> line -> can comment
     // GitHub allows comments on any line visible in the diff (added, context, or removed)
@@ -222,17 +214,15 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
 
     // First, delete any pending reviews from the current user
     try {
-      const pendingReviewsRaw = runWithToken(
-        `gh api /repos/${fullRepo}/pulls/${prNumber}/reviews --jq '[.[] | select(.state == "PENDING")] | .[0].id' 2>/dev/null || echo ""`,
-        githubToken
-      ).trim();
+      const reviews = await githubApi(`/repos/${fullRepo}/pulls/${prNumber}/reviews`, githubToken);
+      const pendingReviews = reviews.filter((r: any) => r.state === 'PENDING');
 
-      if (pendingReviewsRaw && pendingReviewsRaw !== 'null') {
-        console.log(`Found pending review ${pendingReviewsRaw}, deleting...`);
-        runWithToken(
-          `gh api --method DELETE /repos/${fullRepo}/pulls/${prNumber}/reviews/${pendingReviewsRaw} 2>&1 || true`,
-          githubToken
-        );
+      if (pendingReviews.length > 0) {
+        const reviewId = pendingReviews[0].id;
+        console.log(`Found pending review ${reviewId}, deleting...`);
+        await githubApi(`/repos/${fullRepo}/pulls/${prNumber}/reviews/${reviewId}`, githubToken, {
+          method: 'DELETE',
+        });
         console.log('Deleted pending review');
       }
     } catch (e) {
@@ -253,70 +243,55 @@ export async function POST(req: NextRequest): Promise<NextResponse<PublishResult
         })),
       };
 
-      const tmpFile = path.join(os.tmpdir(), `pr-review-${Date.now()}.json`);
-      const payloadStr = JSON.stringify(reviewPayload, null, 2);
-      fs.writeFileSync(tmpFile, payloadStr, 'utf8');
-
       // Debug: log payload for troubleshooting
-      console.log('Review payload:', payloadStr.slice(0, 500) + '...');
+      console.log('Review payload:', JSON.stringify(reviewPayload, null, 2).slice(0, 500) + '...');
       console.log('Comment count:', reviewPayload.comments.length);
-      console.log('Inline comments:', JSON.stringify(reviewPayload.comments, null, 2));
 
       try {
-        // Use -i to include headers and capture the full response
-        const result = runWithToken(
-          `gh api --method POST /repos/${fullRepo}/pulls/${prNumber}/reviews --input ${tmpFile} 2>&1 || true`,
-          githubToken
-        );
-        console.log('GitHub API response:', result);
-
-        if (result.includes('Unprocessable Entity') || result.includes('422')) {
-          throw new Error(result);
-        }
+        // Post review via GitHub API
+        await githubApi(`/repos/${fullRepo}/pulls/${prNumber}/reviews`, githubToken, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(reviewPayload),
+        });
         console.log('Review created successfully with inline comments!');
       } catch (reviewErr: any) {
         console.error('Review API error:', reviewErr?.message);
         // If review API fails, fall back to posting as regular comment
-        const fallbackBody = reviewBody;
-        if (inlineComments.length > 0) {
-          const byFileInline = new Map<string, typeof inlineComments>();
-          for (const c of inlineComments) {
-            if (!byFileInline.has(c.path)) byFileInline.set(c.path, []);
-            byFileInline.get(c.path)!.push(c);
-          }
-          let inlineSection = '\n\n---\n\n### Issues on Changed Lines\n\n_(Could not add inline - API error. Please apply manually.)_\n\n';
-          for (const [fp, cmts] of byFileInline) {
-            inlineSection += `\n#### 📄 \`${fp}\`\n\n`;
-            for (const c of cmts) {
-              inlineSection += `- **Line ${c.line}:** ${c.body}\n\n`;
-            }
-          }
-          const combinedBody = fallbackBody + inlineSection;
-          const fallbackFile = path.join(os.tmpdir(), `pr-review-fallback-${Date.now()}.md`);
-          fs.writeFileSync(fallbackFile, combinedBody, 'utf8');
-          try {
-            run('gh', ['pr', 'comment', prNumber, '--repo', fullRepo, '--body-file', fallbackFile], { githubToken });
-          } finally {
-            try { fs.unlinkSync(fallbackFile); } catch {}
+        const byFileInline = new Map<string, typeof inlineComments>();
+        for (const c of inlineComments) {
+          if (!byFileInline.has(c.path)) byFileInline.set(c.path, []);
+          byFileInline.get(c.path)!.push(c);
+        }
+        let inlineSection = '\n\n---\n\n### Issues on Changed Lines\n\n_(Could not add inline - API error. Please apply manually.)_\n\n';
+        for (const [fp, cmts] of byFileInline) {
+          inlineSection += `\n#### 📄 \`${fp}\`\n\n`;
+          for (const c of cmts) {
+            inlineSection += `- **Line ${c.line}:** ${c.body}\n\n`;
           }
         }
-      } finally {
-        try { fs.unlinkSync(tmpFile); } catch {}
+        const combinedBody = reviewBody + inlineSection;
+
+        // Post as regular comment
+        await githubApi(`/repos/${fullRepo}/issues/${prNumber}/comments`, githubToken, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ body: combinedBody }),
+        });
       }
     } else if (generalComments.length > 0 || reviewBody) {
-      // No inline comments, just post the general review
-      const tmpFile = path.join(os.tmpdir(), `pr-review-${Date.now()}.md`);
-      fs.writeFileSync(tmpFile, reviewBody, 'utf8');
-
-      try {
-        run('gh', [
-          'pr', 'comment', prNumber,
-          '--repo', fullRepo,
-          '--body-file', tmpFile,
-        ], { githubToken });
-      } finally {
-        try { fs.unlinkSync(tmpFile); } catch {}
-      }
+      // No inline comments, just post the general review as a comment
+      await githubApi(`/repos/${fullRepo}/issues/${prNumber}/comments`, githubToken, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ body: reviewBody }),
+      });
     }
 
     return NextResponse.json({
