@@ -5506,7 +5506,8 @@
       "main/docs/customize/email/smtp-email-providers/sendgrid.mdx",
       "main/docs/customize/email/smtp-email-providers/sparkpost.mdx",
       "main/docs/customize/email/smtp-email-providers/mailgun.mdx",
-      "main/docs/customize/email/smtp-email-providers/custom.mdx"
+      "main/docs/customize/email/smtp-email-providers/custom.mdx",
+      "main/docs/customize/email/smtp-email-providers/smtp-server.mdx"
     ],
     "import": [],
     "redirect": []
@@ -7996,65 +7997,9 @@
       "main/docs/quickstart/native/net-android-ios/interactive.mdx"
     ]
   },
-  "main/docs/quickstart/native/wpf-winforms/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs.mdx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs2.mdx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs3.mdx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs4.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs2.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs3.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs4.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/native/wpf-winforms/index.mdx": {
-    "link": [
-      "main/docs/get-started/auth0-overview.mdx",
-      "main/docs/get-started/architecture-scenarios/mobile-api.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-      "main/docs/authenticate/identity-providers.mdx",
-      "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "main/docs/secure/multi-factor-authentication.mdx",
-      "main/docs/secure/attack-protection.mdx",
-      "main/docs/customize/rules.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/quickstart/native/wpf-winforms/interactive.mdx": {
     "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs.mdx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs2.mdx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs3.mdx",
-      "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs4.mdx",
-      "main/snippets/QuickstartButtons.jsx"
-    ],
+    "import": [],
     "redirect": []
   },
   "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx": {
@@ -10114,6 +10059,11 @@
       "main/docs/customize/custom-domains.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
+      "main/docs/customize/login-pages/universal-login.mdx",
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
+      "main/docs/customize/actions/actions-overview.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-dynamic-variables-to-internationalize-custom-form-elements.mdx"
     ],
     "import": [],
@@ -15589,7 +15539,9 @@
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/customize/login-pages/advanced-customizations/configure.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -16086,6 +16038,14 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/SocialConnection.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/login-pages/advanced-customizations/configure.mdx": {
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -19341,13 +19301,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/login-pages/advanced-customizations/configure.mdx": {
-    "link": [
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/customize/login-pages/advanced-customizations/development-workflow.mdx": {
     "link": [],
     "import": [],
@@ -20371,19 +20324,19 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/email/smtp-email-providers/smtp-server.mdx": {
+    "link": [
+      "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx": {
     "link": [
       "main/docs/customize/actions/manage-versions.mdx",
       "main/docs/customize/actions/limitations.mdx",
       "main/docs/customize/actions/actions-overview.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/email/smtp-email-providers/smtp-server.mdx": {
-    "link": [
-      "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21761,7 +21714,16 @@
     "redirect": []
   },
   "main/docs/api/myorganization/index.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
+      "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+      "main/docs/get-started/auth0-overview/create-applications.mdx",
+      "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
+      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -25453,6 +25415,26 @@
     "redirect": []
   },
   "main/snippets/quickstart/spa/angular/user-profile.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs2.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs3.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs4.mdx": {
     "link": [],
     "import": [],
     "redirect": []

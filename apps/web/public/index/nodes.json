@@ -3289,23 +3289,9 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-    "title": "Add Login to Your WPF or WinForms Application",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/quickstart/native/wpf-winforms/index.mdx",
     "type": "page",
     "filePath": "main/docs/quickstart/native/wpf-winforms/index.mdx",
-    "title": "WPF / Winforms",
-    "navPaths": []
-  },
-  {
-    "id": "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
-    "type": "page",
-    "filePath": "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
     "title": "Add Login to Your WPF or WinForms Application",
     "navPaths": []
   },

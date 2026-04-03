@@ -1,10 +1,10 @@
 {
-  "pagesScanned": 2599,
-  "pagesWithWarnings": 558,
-  "warningCount": 783,
+  "pagesScanned": 2597,
+  "pagesWithWarnings": 559,
+  "warningCount": 784,
   "byCode": {
     "missing_pkce_mention": 125,
-    "missing_state_mention": 126,
+    "missing_state_mention": 127,
     "missing_nonce_mention": 268,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
@@ -2284,7 +2284,22 @@
     {
       "id": "main/docs/api/myorganization/index.mdx",
       "filePath": "main/docs/api/myorganization/index.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "### Authorization Code Flow example",
+          "line": 85
+        },
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "The My Organization API utilizes [Connection Profiles](/docs/authenticate/enterprise-connections/connection-profile) and [User Attribute Profiles](/docs/authenticate/enterprise-con",
+          "line": 130
+        }
+      ]
     },
     {
       "id": "main/docs/api/myorganization/org-details/get-organization-details.mdx",
@@ -15751,11 +15766,6 @@
       ]
     },
     {
-      "id": "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "filePath": "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "filePath": "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "warnings": [
@@ -15764,21 +15774,9 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-          "line": 133
-        },
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
-          "line": 194
+          "line": 382
         }
       ]
-    },
-    {
-      "id": "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
-      "filePath": "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
-      "warnings": []
     },
     {
       "id": "main/docs/quickstart/native/xamarin.mdx",
@@ -20885,24 +20883,15 @@
       }
     ],
     "main/docs/quickstart/native/xamarin/interactive.mdx": [],
-    "main/docs/quickstart/native/wpf-winforms/_index.mdx": [],
     "main/docs/quickstart/native/wpf-winforms/index.mdx": [
       {
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "Debug.WriteLine($\"id_token: {loginResult.IdentityToken}\");",
-        "line": 133
-      },
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
-        "line": 194
+        "line": 382
       }
     ],
-    "main/docs/quickstart/native/wpf-winforms/interactive.mdx": [],
     "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -27109,7 +27098,22 @@
       }
     ],
     "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx": [],
-    "main/docs/api/myorganization/index.mdx": [],
+    "main/docs/api/myorganization/index.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "### Authorization Code Flow example",
+        "line": 85
+      },
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "The My Organization API utilizes [Connection Profiles](/docs/authenticate/enterprise-connections/connection-profile) and [User Attribute Profiles](/docs/authenticate/enterprise-con",
+        "line": 130
+      }
+    ],
     "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx": [],
     "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx": [],
     "main/docs/api/myorganization/org-domain-management/get-a-domain.mdx": [],

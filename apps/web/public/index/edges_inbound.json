@@ -137,7 +137,8 @@
       "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx",
       "main/docs/authenticate/custom-token-exchange/cte-attack-protection.mdx",
       "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx",
-      "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx"
+      "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -306,7 +307,6 @@
       "main/docs/quickstart/spa/angular/index.mdx",
       "main/docs/quickstart/native/xamarin.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -1657,7 +1657,6 @@
       "main/docs/secure/security-guidance/data-security/token-storage.mdx",
       "main/docs/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
@@ -1692,7 +1691,8 @@
       "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-auth-code-flow.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-implicit-flow.mdx",
       "main/docs/authenticate/identity-providers/calling-an-external-idp-api.mdx",
-      "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx"
+      "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -1769,6 +1769,7 @@
       "main/docs/manage-users/sessions/session-metadata/add-organization-information.mdx",
       "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
       "main/docs/customize/rules/use-cases.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
       "main/docs/customize/integrations/marketplace-partners/redirect-actions-for-partners.mdx",
@@ -1945,7 +1946,6 @@
       "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock.mdx",
       "main/docs/secure/attack-protection/bot-detection.mdx",
       "main/docs/secure/attack-protection/bot-detection/bot-detection-native-apps.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/manage-users/user-accounts/verify-emails.mdx",
@@ -2024,7 +2024,6 @@
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -3020,7 +3019,8 @@
       "main/docs/authenticate/single-sign-on/native-to-web.mdx",
       "main/docs/authenticate/protocols/oauth.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-auth-code-flow.mdx",
-      "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-sso.mdx"
+      "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-sso.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4021,7 +4021,6 @@
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
       "main/docs/quickstart/native/xamarin.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -4422,6 +4421,7 @@
       "main/docs/customize/rules/use-management-api.mdx",
       "main/docs/customize/rules/user-object-in-rules.mdx",
       "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/hooks/create-hooks.mdx",
       "main/docs/customize/hooks/delete-hooks.mdx",
       "main/docs/customize/hooks/enable-disable-hooks.mdx",
@@ -5330,7 +5330,6 @@
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
       "main/docs/quickstart/native/xamarin.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -7264,7 +7263,6 @@
     "link": [
       "main/docs/secure/security-guidance/data-security/user-data-storage.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
@@ -8474,7 +8472,8 @@
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx",
-      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx"
+      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8557,7 +8556,8 @@
       "main/docs/manage-users/my-account-api.mdx",
       "main/docs/get-started/authentication-and-authorization-flow.mdx",
       "main/docs/get-started/apis/api-access-policies-for-applications.mdx",
-      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx"
+      "main/docs/get-started/apis/configure-rich-authorization-requests.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8762,6 +8762,7 @@
     "link": [
       "main/docs/secure/attack-protection/playbooks/signup-attack-playbook.mdx",
       "main/docs/customize/rules/use-cases.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
       "main/docs/customize/actions/test-actions.mdx",
@@ -8846,8 +8847,6 @@
       "main/docs/quickstart/spa/svelte/index.mdx",
       "main/docs/quickstart/spa/react/index.mdx",
       "main/docs/quickstart/spa/angular/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/interactive.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx",
@@ -8891,8 +8890,6 @@
       "main/docs/quickstart/webapp/golang/interactive.mdx",
       "main/docs/quickstart/webapp/django/_index.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
-      "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/interactive.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx",
@@ -8972,7 +8969,6 @@
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
@@ -9033,7 +9029,6 @@
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
       "main/docs/quickstart/native/xamarin.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/index.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
       "main/docs/quickstart/native/ionic-vue/index.mdx",
       "main/docs/quickstart/native/ionic-react/index.mdx",
@@ -9098,7 +9093,6 @@
       "main/docs/quickstart/webapp/golang/interactive.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/interactive.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
       "main/docs/quickstart/native/windows-uwp-csharp/interactive.mdx",
       "main/docs/quickstart/native/net-android-ios/interactive.mdx",
       "main/docs/quickstart/native/ionic-vue/interactive.mdx",
@@ -9687,49 +9681,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/quickstart/native/wpf-winforms/_index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs2.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs3.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs4.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-      "main/docs/quickstart/native/wpf-winforms/interactive.mdx"
-    ],
-    "redirect": []
-  },
   "main/docs/quickstart/native/wpf-winforms/index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/quickstart/native/wpf-winforms/interactive.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -11906,7 +11858,9 @@
     "redirect": []
   },
   "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/api/myorganization/index.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -17282,7 +17236,8 @@
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx": {
     "link": [
       "main/docs/libraries/acul/js-sdk/Types/index.mdx",
-      "main/docs/libraries/acul/js-sdk/Screens/index.mdx"
+      "main/docs/libraries/acul/js-sdk/Screens/index.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure.mdx"
     ],
     "import": [],
     "redirect": []
@@ -17955,6 +17910,14 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/SocialConnection.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/login-pages/advanced-customizations/configure.mdx": {
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx",
+      "main/docs/customize/login-pages/advanced-customizations.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -20034,6 +19997,7 @@
   "main/docs/customize/login-pages/universal-login.mdx": {
     "link": [
       "main/docs/customize/login-pages.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/email/send-email-invitations-for-application-signup.mdx"
     ],
     "import": [],
@@ -20186,6 +20150,7 @@
   },
   "main/docs/customize/login-pages/advanced-customizations.mdx": {
     "link": [
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/migrate-classic-universal-login.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
       "main/docs/authenticate/login/universal-vs-embedded-login.mdx"
@@ -20201,13 +20166,6 @@
     "redirect": []
   },
   "main/docs/customize/login-pages/advanced-customizations/acul-use-cases.mdx": {
-    "link": [
-      "main/docs/customize/login-pages/advanced-customizations.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/login-pages/advanced-customizations/configure.mdx": {
     "link": [
       "main/docs/customize/login-pages/advanced-customizations.mdx"
     ],
@@ -21098,15 +21056,17 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx": {
+  "main/docs/customize/email/smtp-email-providers/smtp-server.mdx": {
     "link": [
-      "main/docs/customize/email/smtp-email-providers/custom.mdx"
+      "main/docs/customize/email/smtp-email-providers.mdx"
     ],
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/email/smtp-email-providers/smtp-server.mdx": {
-    "link": [],
+  "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx": {
+    "link": [
+      "main/docs/customize/email/smtp-email-providers/custom.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -22132,7 +22092,8 @@
   },
   "main/docs/authenticate/enterprise-connections/connection-profile.mdx": {
     "link": [
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22140,7 +22101,8 @@
   "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx": {
     "link": [
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx",
+      "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -25552,6 +25514,26 @@
     "redirect": []
   },
   "main/snippets/quickstart/spa/angular/user-profile.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs2.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs3.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/native/wpf-winforms/MainWindow.xaml.cs4.mdx": {
     "link": [],
     "import": [],
     "redirect": []

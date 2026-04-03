@@ -12178,16 +12178,8 @@
     "filePath": "main/docs/quickstart/native/xamarin/interactive.mdx",
     "navNodePaths": []
   },
-  "main/docs/quickstart/native/wpf-winforms/_index.mdx": {
-    "filePath": "main/docs/quickstart/native/wpf-winforms/_index.mdx",
-    "navNodePaths": []
-  },
   "main/docs/quickstart/native/wpf-winforms/index.mdx": {
     "filePath": "main/docs/quickstart/native/wpf-winforms/index.mdx",
-    "navNodePaths": []
-  },
-  "main/docs/quickstart/native/wpf-winforms/interactive.mdx": {
-    "filePath": "main/docs/quickstart/native/wpf-winforms/interactive.mdx",
     "navNodePaths": []
   },
   "main/docs/quickstart/native/windows-uwp-csharp/_index.mdx": {
