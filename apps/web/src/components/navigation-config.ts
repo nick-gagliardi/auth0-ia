@@ -16,6 +16,7 @@ import {
   Settings,
   History,
   HeartPulse,
+  BarChart3,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -46,6 +47,7 @@ export const navigationGroups: NavGroup[] = [
       { label: 'Audit', href: '/audit', icon: ClipboardCheck },
       { label: 'PR Review', href: '/pr-review', icon: GitPullRequest },
       { label: 'Broken Links', href: '/broken-links', icon: LinkIcon },
+      { label: 'Analytics', href: '/analytics', icon: BarChart3 },
     ],
   },
   {

@@ -21,6 +21,8 @@ export async function GET() {
       githubUsername: user.github_username,
       hasAnthropicKey: !!user.anthropic_api_key_decrypted,
       hasGithubPat: !!user.github_pat_decrypted,
+      hasMintlifyKey: !!user.mintlify_api_key_decrypted,
+      hasMintlifyProjectId: !!user.mintlify_project_id_decrypted,
       // Never return the actual keys
     });
   } catch (err: any) {

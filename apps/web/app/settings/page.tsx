@@ -16,6 +16,8 @@ type SettingsData = {
   githubUsername: string;
   hasAnthropicKey: boolean;
   hasGithubPat: boolean;
+  hasMintlifyKey: boolean;
+  hasMintlifyProjectId: boolean;
 };
 
 export default function SettingsPage() {
@@ -26,11 +28,15 @@ export default function SettingsPage() {
   const [settings, setSettings] = useState<SettingsData | null>(null);
   const [anthropicKey, setAnthropicKey] = useState('');
   const [githubPat, setGithubPat] = useState('');
+  const [mintlifyApiKey, setMintlifyApiKey] = useState('');
+  const [mintlifyProjectId, setMintlifyProjectId] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isSavingPat, setIsSavingPat] = useState(false);
   const [isDeletingPat, setIsDeletingPat] = useState(false);
+  const [isSavingMintlify, setIsSavingMintlify] = useState(false);
+  const [isDeletingMintlify, setIsDeletingMintlify] = useState(false);
   const [isReindexing, setIsReindexing] = useState(false);
 
   // Redirect to login if not authenticated
@@ -228,6 +234,90 @@ export default function SettingsPage() {
       });
     } finally {
       setIsDeletingPat(false);
+    }
+  };
+
+  const handleSaveMintlify = async () => {
+    if (!mintlifyApiKey.trim() || !mintlifyProjectId.trim()) {
+      toast({
+        title: 'Error',
+        description: 'Please enter both Mintlify API key and project ID',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsSavingMintlify(true);
+    try {
+      const response = await fetch('/api/settings/mintlify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          mintlifyApiKey,
+          mintlifyProjectId
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: 'Success',
+          description: 'Mintlify credentials saved successfully',
+        });
+        setMintlifyApiKey('');
+        setMintlifyProjectId('');
+        await fetchSettings();
+      } else {
+        toast({
+          title: 'Error',
+          description: result.error || 'Failed to save Mintlify credentials',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to save Mintlify credentials',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSavingMintlify(false);
+    }
+  };
+
+  const handleDeleteMintlify = async () => {
+    if (!confirm('Are you sure you want to delete your Mintlify credentials? Analytics features will fall back to environment variables.')) {
+      return;
+    }
+
+    setIsDeletingMintlify(true);
+    try {
+      const response = await fetch('/api/settings/mintlify', {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Success',
+          description: 'Mintlify credentials deleted',
+        });
+        await fetchSettings();
+      } else {
+        toast({
+          title: 'Error',
+          description: 'Failed to delete Mintlify credentials',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to delete Mintlify credentials',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsDeletingMintlify(false);
     }
   };
 
@@ -474,6 +564,104 @@ export default function SettingsPage() {
               <Alert>
                 <AlertDescription className="text-xs">
                   Your API key is encrypted and stored securely. It is never logged or shared.
+                </AlertDescription>
+              </Alert>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Mintlify Analytics */}
+        <Card className="mb-6">
+          <CardHeader>
+            <CardTitle>Mintlify Analytics</CardTitle>
+            <CardDescription>
+              Your personal Mintlify credentials for viewing documentation analytics
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {/* Current Status */}
+              <Alert>
+                <AlertDescription>
+                  {settings?.hasMintlifyKey && settings?.hasMintlifyProjectId ? (
+                    <span className="text-green-600 dark:text-green-400 font-medium">
+                      ✓ Mintlify credentials configured
+                    </span>
+                  ) : (
+                    <span className="text-yellow-600 dark:text-yellow-400 font-medium">
+                      ⚠ No credentials configured. Analytics will use environment variables if available.
+                    </span>
+                  )}
+                </AlertDescription>
+              </Alert>
+
+              {/* API Key Input */}
+              <div className="space-y-2">
+                <Label htmlFor="mintlify-key">
+                  {settings?.hasMintlifyKey ? 'Update API Key' : 'Enter API Key'}
+                </Label>
+                <Input
+                  id="mintlify-key"
+                  type="password"
+                  placeholder="mint_..."
+                  value={mintlifyApiKey}
+                  onChange={(e) => setMintlifyApiKey(e.target.value)}
+                  disabled={isSavingMintlify}
+                />
+                <p className="text-sm text-muted-foreground">
+                  Get your API key from{' '}
+                  <a
+                    href="https://dashboard.mintlify.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-primary"
+                  >
+                    Mintlify Dashboard → Settings → API Keys
+                  </a>
+                </p>
+              </div>
+
+              {/* Project ID Input */}
+              <div className="space-y-2">
+                <Label htmlFor="mintlify-project">
+                  {settings?.hasMintlifyProjectId ? 'Update Project ID' : 'Enter Project ID'}
+                </Label>
+                <Input
+                  id="mintlify-project"
+                  type="text"
+                  placeholder="689a6fa9ed79cfbe19624b79"
+                  value={mintlifyProjectId}
+                  onChange={(e) => setMintlifyProjectId(e.target.value)}
+                  disabled={isSavingMintlify}
+                />
+                <p className="text-sm text-muted-foreground">
+                  Find your project ID in your Mintlify dashboard settings
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  onClick={handleSaveMintlify}
+                  disabled={(!mintlifyApiKey.trim() || !mintlifyProjectId.trim()) || isSavingMintlify}
+                >
+                  {isSavingMintlify ? 'Validating and saving...' : settings?.hasMintlifyKey ? 'Update Credentials' : 'Save Credentials'}
+                </Button>
+
+                {settings?.hasMintlifyKey && settings?.hasMintlifyProjectId && (
+                  <Button
+                    variant="destructive"
+                    onClick={handleDeleteMintlify}
+                    disabled={isSavingMintlify || isDeletingMintlify}
+                  >
+                    {isDeletingMintlify ? 'Deleting...' : 'Delete Credentials'}
+                  </Button>
+                )}
+              </div>
+
+              <Alert>
+                <AlertDescription className="text-xs">
+                  Your credentials are encrypted and stored securely. They are never logged or shared.
                 </AlertDescription>
               </Alert>
             </div>

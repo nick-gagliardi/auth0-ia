@@ -10,6 +10,8 @@ export interface User {
   github_token_expires_at?: Date | null;
   anthropic_api_key_encrypted?: string | null;
   github_pat_encrypted?: string | null;
+  mintlify_api_key_encrypted?: string | null;
+  mintlify_project_id_encrypted?: string | null;
   created_at: Date;
   updated_at: Date;
 }
@@ -18,6 +20,8 @@ export interface UserWithDecryptedCreds extends User {
   github_access_token_decrypted: string;
   anthropic_api_key_decrypted?: string | null;
   github_pat_decrypted?: string | null;
+  mintlify_api_key_decrypted?: string | null;
+  mintlify_project_id_decrypted?: string | null;
 }
 
 export interface Session {
@@ -162,6 +166,21 @@ export async function updateUserGithubPat(
   `;
 }
 
+export async function updateUserMintlifyCredentials(
+  userId: string,
+  encryptedApiKey: string | null,
+  encryptedProjectId: string | null
+): Promise<void> {
+  await sql`
+    UPDATE users
+    SET
+      mintlify_api_key_encrypted = ${encryptedApiKey},
+      mintlify_project_id_encrypted = ${encryptedProjectId},
+      updated_at = NOW()
+    WHERE id = ${userId}
+  `;
+}
+
 export async function getUserWithDecryptedCreds(
   userId: string,
   includeAnthropicKey = false
@@ -177,6 +196,12 @@ export async function getUserWithDecryptedCreds(
       : null,
     github_pat_decrypted: user.github_pat_encrypted
       ? decrypt(user.github_pat_encrypted)
+      : null,
+    mintlify_api_key_decrypted: user.mintlify_api_key_encrypted
+      ? decrypt(user.mintlify_api_key_encrypted)
+      : null,
+    mintlify_project_id_decrypted: user.mintlify_project_id_encrypted
+      ? decrypt(user.mintlify_project_id_encrypted)
       : null,
   };
 
