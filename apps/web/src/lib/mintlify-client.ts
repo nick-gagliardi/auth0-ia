@@ -43,6 +43,50 @@ export interface FeedbackFilters {
   cursor?: string;
 }
 
+export interface PageView {
+  page: string;
+  views: number;
+  date?: string;
+}
+
+export interface PageViewsResponse {
+  views: PageView[];
+  total: number;
+  dateFrom?: string;
+  dateTo?: string;
+}
+
+export interface SearchQuery {
+  query: string;
+  count: number;
+  avgClickPosition?: number;
+  date?: string;
+}
+
+export interface SearchQueriesResponse {
+  queries: SearchQuery[];
+  total: number;
+  dateFrom?: string;
+  dateTo?: string;
+}
+
+export interface UniqueVisitor {
+  date: string;
+  count: number;
+}
+
+export interface UniqueVisitorsResponse {
+  visitors: UniqueVisitor[];
+  total: number;
+  dateFrom?: string;
+  dateTo?: string;
+}
+
+export interface AnalyticsFilters {
+  dateFrom?: string; // ISO 8601 or YYYY-MM-DD
+  dateTo?: string;
+}
+
 export class MintlifyClient {
   private config: MintlifyConfig;
 
@@ -160,6 +204,51 @@ export class MintlifyClient {
     });
 
     return stats;
+  }
+
+  /**
+   * Get page view analytics
+   */
+  async getPageViews(filters?: AnalyticsFilters): Promise<PageViewsResponse> {
+    const params: Record<string, string> = {};
+
+    if (filters?.dateFrom) params.dateFrom = filters.dateFrom;
+    if (filters?.dateTo) params.dateTo = filters.dateTo;
+
+    return this.fetch<PageViewsResponse>(
+      `/analytics/${this.config.projectId}/page-views`,
+      params
+    );
+  }
+
+  /**
+   * Get search queries analytics
+   */
+  async getSearchQueries(filters?: AnalyticsFilters): Promise<SearchQueriesResponse> {
+    const params: Record<string, string> = {};
+
+    if (filters?.dateFrom) params.dateFrom = filters.dateFrom;
+    if (filters?.dateTo) params.dateTo = filters.dateTo;
+
+    return this.fetch<SearchQueriesResponse>(
+      `/analytics/${this.config.projectId}/search-queries`,
+      params
+    );
+  }
+
+  /**
+   * Get unique visitors analytics
+   */
+  async getUniqueVisitors(filters?: AnalyticsFilters): Promise<UniqueVisitorsResponse> {
+    const params: Record<string, string> = {};
+
+    if (filters?.dateFrom) params.dateFrom = filters.dateFrom;
+    if (filters?.dateTo) params.dateTo = filters.dateTo;
+
+    return this.fetch<UniqueVisitorsResponse>(
+      `/analytics/${this.config.projectId}/unique-visitors`,
+      params
+    );
   }
 }
 

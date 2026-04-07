@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle } from 'lucide-react';
+import { ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle, Eye, Search, Users } from 'lucide-react';
 
 interface FeedbackItem {
   id: string;
@@ -20,6 +20,24 @@ interface FeedbackItem {
   code?: string;
   filename?: string;
   lang?: string;
+}
+
+interface PageView {
+  page: string;
+  views: number;
+  date?: string;
+}
+
+interface SearchQuery {
+  query: string;
+  count: number;
+  avgClickPosition?: number;
+  date?: string;
+}
+
+interface VisitorData {
+  date: string;
+  count: number;
 }
 
 interface FeedbackStats {
@@ -41,6 +59,12 @@ export default function AnalyticsPage() {
   const [stats, setStats] = useState<FeedbackStats | null>(null);
   const [insights, setInsights] = useState<FeedbackInsights | null>(null);
   const [feedback, setFeedback] = useState<FeedbackItem[]>([]);
+  const [pageViews, setPageViews] = useState<PageView[]>([]);
+  const [totalPageViews, setTotalPageViews] = useState(0);
+  const [searchQueries, setSearchQueries] = useState<SearchQuery[]>([]);
+  const [totalSearches, setTotalSearches] = useState(0);
+  const [visitors, setVisitors] = useState<VisitorData[]>([]);
+  const [totalVisitors, setTotalVisitors] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [dateFilter, setDateFilter] = useState('7'); // days
@@ -62,19 +86,28 @@ export default function AnalyticsPage() {
         .toISOString()
         .split('T')[0];
 
-      // Build query params
-      const params = new URLSearchParams({
+      // Build query params for feedback (with filters)
+      const feedbackParams = new URLSearchParams({
         dateFrom,
         dateTo,
       });
 
-      if (sourceFilter !== 'all') params.append('source', sourceFilter);
-      if (statusFilter !== 'all') params.append('status', statusFilter);
+      if (sourceFilter !== 'all') feedbackParams.append('source', sourceFilter);
+      if (statusFilter !== 'all') feedbackParams.append('status', statusFilter);
 
-      // Fetch stats and feedback in parallel
-      const [statsRes, feedbackRes] = await Promise.all([
-        fetch(`/api/analytics/stats?${params}`),
-        fetch(`/api/analytics/feedback?${params}`),
+      // Build query params for traffic data (no filters)
+      const trafficParams = new URLSearchParams({
+        dateFrom,
+        dateTo,
+      });
+
+      // Fetch all analytics data in parallel
+      const [statsRes, feedbackRes, pageViewsRes, searchQueriesRes, visitorsRes] = await Promise.all([
+        fetch(`/api/analytics/stats?${feedbackParams}`),
+        fetch(`/api/analytics/feedback?${feedbackParams}`),
+        fetch(`/api/analytics/page-views?${trafficParams}`),
+        fetch(`/api/analytics/search-queries?${trafficParams}`),
+        fetch(`/api/analytics/visitors?${trafficParams}`),
       ]);
 
       if (!statsRes.ok || !feedbackRes.ok) {
@@ -87,6 +120,25 @@ export default function AnalyticsPage() {
       setStats(statsData.stats);
       setInsights(statsData.insights);
       setFeedback(feedbackData.feedback);
+
+      // Handle traffic data (may fail if endpoints don't exist yet)
+      if (pageViewsRes.ok) {
+        const pageViewsData = await pageViewsRes.json();
+        setPageViews(pageViewsData.topPages || pageViewsData.views || []);
+        setTotalPageViews(pageViewsData.total || 0);
+      }
+
+      if (searchQueriesRes.ok) {
+        const searchData = await searchQueriesRes.json();
+        setSearchQueries(searchData.topQueries || searchData.queries || []);
+        setTotalSearches(searchData.total || 0);
+      }
+
+      if (visitorsRes.ok) {
+        const visitorsData = await visitorsRes.json();
+        setVisitors(visitorsData.visitors || []);
+        setTotalVisitors(visitorsData.total || 0);
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error');
     } finally {
@@ -169,7 +221,43 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Page Views</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center gap-2">
+              <Eye className="h-4 w-4 text-blue-600" />
+              <div className="text-2xl font-bold">{totalPageViews.toLocaleString()}</div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Unique Visitors</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center gap-2">
+              <Users className="h-4 w-4 text-purple-600" />
+              <div className="text-2xl font-bold">{totalVisitors.toLocaleString()}</div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-sm font-medium">Searches</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center gap-2">
+              <Search className="h-4 w-4 text-orange-600" />
+              <div className="text-2xl font-bold">{totalSearches.toLocaleString()}</div>
+            </div>
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader className="pb-3">
             <CardTitle className="text-sm font-medium">Total Feedback</CardTitle>
@@ -214,11 +302,96 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Main Content Tabs */}
-      <Tabs defaultValue="feedback" className="space-y-4">
+      <Tabs defaultValue="traffic" className="space-y-4">
         <TabsList>
+          <TabsTrigger value="traffic">Traffic & Search</TabsTrigger>
           <TabsTrigger value="feedback">Recent Feedback</TabsTrigger>
           <TabsTrigger value="insights">Insights</TabsTrigger>
         </TabsList>
+
+        <TabsContent value="traffic" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Top Pages by Views</CardTitle>
+                <CardDescription>Most viewed documentation pages</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {pageViews.length === 0 ? (
+                  <div className="text-center py-8 text-muted-foreground">
+                    No page view data available
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    {pageViews.slice(0, 20).map((page, i) => (
+                      <div key={page.page} className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 flex-1 min-w-0">
+                          <span className="text-xs text-muted-foreground w-5">{i + 1}</span>
+                          <code className="text-xs truncate">{page.page}</code>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Eye className="h-3 w-3 text-muted-foreground" />
+                          <Badge variant="secondary">{page.views.toLocaleString()}</Badge>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Top Search Queries</CardTitle>
+                <CardDescription>Most popular search terms</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {searchQueries.length === 0 ? (
+                  <div className="text-center py-8 text-muted-foreground">
+                    No search query data available
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    {searchQueries.slice(0, 20).map((query, i) => (
+                      <div key={query.query} className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 flex-1 min-w-0">
+                          <span className="text-xs text-muted-foreground w-5">{i + 1}</span>
+                          <span className="text-sm truncate">{query.query}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Search className="h-3 w-3 text-muted-foreground" />
+                          <Badge variant="secondary">{query.count.toLocaleString()}</Badge>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+
+          {visitors.length > 0 && (
+            <Card>
+              <CardHeader>
+                <CardTitle>Unique Visitors Over Time</CardTitle>
+                <CardDescription>Daily unique visitor count</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  {visitors.slice(-14).reverse().map((visitor) => (
+                    <div key={visitor.date} className="flex items-center justify-between">
+                      <span className="text-sm">{new Date(visitor.date).toLocaleDateString()}</span>
+                      <div className="flex items-center gap-1">
+                        <Users className="h-3 w-3 text-muted-foreground" />
+                        <Badge variant="secondary">{visitor.count.toLocaleString()}</Badge>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
+        </TabsContent>
 
         <TabsContent value="feedback" className="space-y-4">
           <Card>
