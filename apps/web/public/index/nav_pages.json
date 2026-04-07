@@ -55835,6 +55835,42 @@
     "navLabel": "get a refresh token",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx": {
+    "filePath": "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/refresh-tokens/get-refresh-tokens",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:refresh-tokens",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:refresh-tokens/page:docs/api/management/v2/refresh-tokens/get-refresh-tokens:doc"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Refresh Tokens",
+          "get refresh tokens"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get refresh tokens",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Refresh Tokens",
+        "pathString": "API Reference > Management API >   > Refresh Tokens > get refresh tokens"
+      }
+    ],
+    "navLabel": "get refresh tokens",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": {
     "filePath": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
     "navDepth": 4,
@@ -63575,6 +63611,78 @@
     "navLabel": "get enabled connections for a client",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx": {
+    "filePath": "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients/page:docs/api/management/v2/clients/preview-and-validate-client-i"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Clients",
+          "preview and validate client id metadata document"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "preview and validate client id metadata document",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Clients",
+        "pathString": "API Reference > Management API >   > Clients > preview and validate client id metadata document"
+      }
+    ],
+    "navLabel": "preview and validate client id metadata document",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx": {
+    "filePath": "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients/page:docs/api/management/v2/clients/register-or-update-a-cimd-cli"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Clients",
+          "register or update a cimd client via metadata uri"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "register or update a cimd client via metadata uri",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Clients",
+        "pathString": "API Reference > Management API >   > Clients > register or update a cimd client via metadata uri"
+      }
+    ],
+    "navLabel": "register or update a cimd client via metadata uri",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx": {
     "filePath": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
     "navDepth": 4,
@@ -66021,6 +66129,1152 @@
       }
     ],
     "navLabel": "update trigger bindings",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/index.mdx": {
+    "filePath": "main/docs/api/authentication/index.mdx",
+    "navDepth": 2,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/index",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/page:docs/api/authentication/index:docs/api/authentication/index"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          "Authentication API Reference"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "page"
+        ],
+        "leafLabel": "Authentication API Reference",
+        "leafLabelSource": "frontmatter",
+        "containerString": "API Reference > Authentication API",
+        "pathString": "API Reference > Authentication API > Authentication API Reference"
+      }
+    ],
+    "navLabel": "Authentication API Reference",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx": {
+    "filePath": "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/ws-federation/accept-ws-federation-request",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation/page:docs/api/authentication/ws-federation/accept-ws-federation-r"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Ws Federation",
+          "accept ws federation request"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "accept ws federation request",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Ws Federation",
+        "pathString": "API Reference > Authentication API >   > Ws Federation > accept ws federation request"
+      }
+    ],
+    "navLabel": "accept ws federation request",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx": {
+    "filePath": "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/ws-federation/get-ws-federation-metadata",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation/page:docs/api/authentication/ws-federation/get-ws-federation-meta"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Ws Federation",
+          "get ws federation metadata"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get ws federation metadata",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Ws Federation",
+        "pathString": "API Reference > Authentication API >   > Ws Federation > get ws federation metadata"
+      }
+    ],
+    "navLabel": "get ws federation metadata",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx": {
+    "filePath": "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/user-profile-legacy/get-token-info-legacy",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile-legacy",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile-legacy/page:docs/api/authentication/user-profile-legacy/get-token-info-l"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "User Profile Legacy",
+          "get token info legacy"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get token info legacy",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > User Profile Legacy",
+        "pathString": "API Reference > Authentication API >   > User Profile Legacy > get token info legacy"
+      }
+    ],
+    "navLabel": "get token info legacy",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/user-profile/get-user-info.mdx": {
+    "filePath": "main/docs/api/authentication/user-profile/get-user-info.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/user-profile/get-user-info",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile/page:docs/api/authentication/user-profile/get-user-info:docs/api/"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "User Profile",
+          "get user info"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get user info",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > User Profile",
+        "pathString": "API Reference > Authentication API >   > User Profile > get user info"
+      }
+    ],
+    "navLabel": "get user info",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/token-management/revoke-refresh-token.mdx": {
+    "filePath": "main/docs/api/authentication/token-management/revoke-refresh-token.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/token-management/revoke-refresh-token",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-management",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-management/page:docs/api/authentication/token-management/revoke-refresh-toke"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Token Management",
+          "revoke refresh token"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "revoke refresh token",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Token Management",
+        "pathString": "API Reference > Authentication API >   > Token Management > revoke refresh token"
+      }
+    ],
+    "navLabel": "revoke refresh token",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/token-exchange/token-endpoint.mdx": {
+    "filePath": "main/docs/api/authentication/token-exchange/token-endpoint.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/token-exchange/token-endpoint",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-exchange",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-exchange/page:docs/api/authentication/token-exchange/token-endpoint:docs/a"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Token Exchange",
+          "token endpoint"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "token endpoint",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Token Exchange",
+        "pathString": "API Reference > Authentication API >   > Token Exchange > token endpoint"
+      }
+    ],
+    "navLabel": "token endpoint",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/saml/accept-request.mdx": {
+    "filePath": "main/docs/api/authentication/saml/accept-request.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/saml/accept-request",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml/page:docs/api/authentication/saml/accept-request:docs/api/authent"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Saml",
+          "accept request"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "accept request",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Saml",
+        "pathString": "API Reference > Authentication API >   > Saml > accept request"
+      }
+    ],
+    "navLabel": "accept request",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/saml/get-metadata.mdx": {
+    "filePath": "main/docs/api/authentication/saml/get-metadata.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/saml/get-metadata",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml/page:docs/api/authentication/saml/get-metadata:docs/api/authentic"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Saml",
+          "get metadata"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get metadata",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Saml",
+        "pathString": "API Reference > Authentication API >   > Saml > get metadata"
+      }
+    ],
+    "navLabel": "get metadata",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx": {
+    "filePath": "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml/page:docs/api/authentication/saml/id-p-initiated-single-sign-on-s"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Saml",
+          "id p initiated single sign on sso flow"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "id p initiated single sign on sso flow",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Saml",
+        "pathString": "API Reference > Authentication API >   > Saml > id p initiated single sign on sso flow"
+      }
+    ],
+    "navLabel": "id p initiated single sign on sso flow",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx": {
+    "filePath": "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/resource-owner-legacy/resource-owner-legacy",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:resource-owner-legacy",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:resource-owner-legacy/page:docs/api/authentication/resource-owner-legacy/resource-owner"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Resource Owner Legacy",
+          "resource owner legacy"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "resource owner legacy",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Resource Owner Legacy",
+        "pathString": "API Reference > Authentication API >   > Resource Owner Legacy > resource owner legacy"
+      }
+    ],
+    "navLabel": "resource owner legacy",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx": {
+    "filePath": "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:pushed-authorization-requests",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:pushed-authorization-requests/page:docs/api/authentication/pushed-authorization-requests/pushed"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Pushed Authorization Requests",
+          "pushed authorization request par"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "pushed authorization request par",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Pushed Authorization Requests",
+        "pathString": "API Reference > Authentication API >   > Pushed Authorization Requests > pushed authorization request par"
+      }
+    ],
+    "navLabel": "pushed authorization request par",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx": {
+    "filePath": "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/passwordless/start-passwordless-authentication",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless/page:docs/api/authentication/passwordless/start-passwordless-auth"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Passwordless",
+          "start passwordless authentication"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "start passwordless authentication",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Passwordless",
+        "pathString": "API Reference > Authentication API >   > Passwordless > start passwordless authentication"
+      }
+    ],
+    "navLabel": "start passwordless authentication",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/passwordless/verify.mdx": {
+    "filePath": "main/docs/api/authentication/passwordless/verify.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/passwordless/verify",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless/page:docs/api/authentication/passwordless/verify:docs/api/authent"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Passwordless",
+          "verify"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "verify",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Passwordless",
+        "pathString": "API Reference > Authentication API >   > Passwordless > verify"
+      }
+    ],
+    "navLabel": "verify",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx": {
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/associat"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Multi Factor Authentication",
+          "associate mfa authenticator"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "associate mfa authenticator",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Multi Factor Authentication",
+        "pathString": "API Reference > Authentication API >   > Multi Factor Authentication > associate mfa authenticator"
+      }
+    ],
+    "navLabel": "associate mfa authenticator",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx": {
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/delete-m"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Multi Factor Authentication",
+          "delete mfa authenticator"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete mfa authenticator",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Multi Factor Authentication",
+        "pathString": "API Reference > Authentication API >   > Multi Factor Authentication > delete mfa authenticator"
+      }
+    ],
+    "navLabel": "delete mfa authenticator",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx": {
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/multi-factor-authentication/list-mfa-authenticators",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/list-mfa"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Multi Factor Authentication",
+          "list mfa authenticators"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "list mfa authenticators",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Multi Factor Authentication",
+        "pathString": "API Reference > Authentication API >   > Multi Factor Authentication > list mfa authenticators"
+      }
+    ],
+    "navLabel": "list mfa authenticators",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx": {
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/multi-factor-authentication/request-mfa-challenge",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/request-"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Multi Factor Authentication",
+          "request mfa challenge"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "request mfa challenge",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Multi Factor Authentication",
+        "pathString": "API Reference > Authentication API >   > Multi Factor Authentication > request mfa challenge"
+      }
+    ],
+    "navLabel": "request mfa challenge",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/logout/global-token-revocation.mdx": {
+    "filePath": "main/docs/api/authentication/logout/global-token-revocation.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/logout/global-token-revocation",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/global-token-revocation:docs/"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Logout",
+          "global token revocation"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "global token revocation",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Logout",
+        "pathString": "API Reference > Authentication API >   > Logout > global token revocation"
+      }
+    ],
+    "navLabel": "global token revocation",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/logout/logout.mdx": {
+    "filePath": "main/docs/api/authentication/logout/logout.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/logout/logout",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/logout:docs/api/authenticatio"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Logout",
+          "logout"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "logout",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Logout",
+        "pathString": "API Reference > Authentication API >   > Logout > logout"
+      }
+    ],
+    "navLabel": "logout",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx": {
+    "filePath": "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/logout/oidc-rp-initiated-logout",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/oidc-rp-initiated-logout:docs"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Logout",
+          "oidc rp initiated logout"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "oidc rp initiated logout",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Logout",
+        "pathString": "API Reference > Authentication API >   > Logout > oidc rp initiated logout"
+      }
+    ],
+    "navLabel": "oidc rp initiated logout",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/logout/saml-logout.mdx": {
+    "filePath": "main/docs/api/authentication/logout/saml-logout.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/logout/saml-logout",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/saml-logout:docs/api/authenti"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Logout",
+          "saml logout"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "saml logout",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Logout",
+        "pathString": "API Reference > Authentication API >   > Logout > saml logout"
+      }
+    ],
+    "navLabel": "saml logout",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx": {
+    "filePath": "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/login-legacy/social-with-providers-access-token",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:login-legacy",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:login-legacy/page:docs/api/authentication/login-legacy/social-with-providers-a"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Login Legacy",
+          "social with providers access token"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "social with providers access token",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Login Legacy",
+        "pathString": "API Reference > Authentication API >   > Login Legacy > social with providers access token"
+      }
+    ],
+    "navLabel": "social with providers access token",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx": {
+    "filePath": "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:impersonation-legacy",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:impersonation-legacy/page:docs/api/authentication/impersonation-legacy/impersonate-a-u"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Impersonation Legacy",
+          "impersonate a user legacy"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "impersonate a user legacy",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Impersonation Legacy",
+        "pathString": "API Reference > Authentication API >   > Impersonation Legacy > impersonate a user legacy"
+      }
+    ],
+    "navLabel": "impersonate a user legacy",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx": {
+    "filePath": "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/dynamic-client-registration/dynamic-application-registration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:dynamic-client-registration",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:dynamic-client-registration/page:docs/api/authentication/dynamic-client-registration/dynamic-"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Dynamic Client Registration",
+          "dynamic application registration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "dynamic application registration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Dynamic Client Registration",
+        "pathString": "API Reference > Authentication API >   > Dynamic Client Registration > dynamic application registration"
+      }
+    ],
+    "navLabel": "dynamic application registration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/device-authorization/request-device-code.mdx": {
+    "filePath": "main/docs/api/authentication/device-authorization/request-device-code.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/device-authorization/request-device-code",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:device-authorization",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:device-authorization/page:docs/api/authentication/device-authorization/request-device-"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Device Authorization",
+          "request device code"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "request device code",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Device Authorization",
+        "pathString": "API Reference > Authentication API >   > Device Authorization > request device code"
+      }
+    ],
+    "navLabel": "request device code",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx": {
+    "filePath": "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/delegation-legacy/get-delegation-token-legacy",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:delegation-legacy",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:delegation-legacy/page:docs/api/authentication/delegation-legacy/get-delegation-tok"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Delegation Legacy",
+          "get delegation token legacy"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get delegation token legacy",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Delegation Legacy",
+        "pathString": "API Reference > Authentication API >   > Delegation Legacy > get delegation token legacy"
+      }
+    ],
+    "navLabel": "get delegation token legacy",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/database-connections/request-password-change.mdx": {
+    "filePath": "main/docs/api/authentication/database-connections/request-password-change.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/database-connections/request-password-change",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections/page:docs/api/authentication/database-connections/request-passwor"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Database Connections",
+          "request password change"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "request password change",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Database Connections",
+        "pathString": "API Reference > Authentication API >   > Database Connections > request password change"
+      }
+    ],
+    "navLabel": "request password change",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/database-connections/sign-up-user.mdx": {
+    "filePath": "main/docs/api/authentication/database-connections/sign-up-user.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/database-connections/sign-up-user",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections/page:docs/api/authentication/database-connections/sign-up-user:do"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Database Connections",
+          "sign up user"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "sign up user",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Database Connections",
+        "pathString": "API Reference > Authentication API >   > Database Connections > sign up user"
+      }
+    ],
+    "navLabel": "sign up user",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/authorization/authorization-endpoint.mdx": {
+    "filePath": "main/docs/api/authentication/authorization/authorization-endpoint.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/authorization/authorization-endpoint",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization/page:docs/api/authentication/authorization/authorization-endpoint"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Authorization",
+          "authorization endpoint"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "authorization endpoint",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Authorization",
+        "pathString": "API Reference > Authentication API >   > Authorization > authorization endpoint"
+      }
+    ],
+    "navLabel": "authorization endpoint",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/authorization/back-channel-login.mdx": {
+    "filePath": "main/docs/api/authentication/authorization/back-channel-login.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/authorization/back-channel-login",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization/page:docs/api/authentication/authorization/back-channel-login:doc"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Authorization",
+          "back channel login"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "back channel login",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Authorization",
+        "pathString": "API Reference > Authentication API >   > Authorization > back channel login"
+      }
+    ],
+    "navLabel": "back channel login",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/authentication/account-linking-legacy/unlink.mdx": {
+    "filePath": "main/docs/api/authentication/account-linking-legacy/unlink.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/authentication/account-linking-legacy/unlink",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:authentication-api",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:account-linking-legacy",
+          "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:account-linking-legacy/page:docs/api/authentication/account-linking-legacy/unlink:docs/a"
+        ],
+        "labels": [
+          "API Reference",
+          "Authentication API",
+          " ",
+          "Account Linking Legacy",
+          "unlink"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "unlink",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Authentication API >   > Account Linking Legacy",
+        "pathString": "API Reference > Authentication API >   > Account Linking Legacy > unlink"
+      }
+    ],
+    "navLabel": "unlink",
     "navLabelSource": "fallback"
   }
 }

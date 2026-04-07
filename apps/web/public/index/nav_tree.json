@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-06T04:48:25.521Z",
+  "generatedAtUtc": "2026-04-07T04:37:12.343Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -12316,6 +12316,22 @@
                         "children": []
                       },
                       {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients/page:docs/api/management/v2/clients/preview-and-validate-client-i",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document",
+                        "route": "docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document",
+                        "filePath": "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients/page:docs/api/management/v2/clients/register-or-update-a-cimd-cli",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri",
+                        "route": "docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri",
+                        "filePath": "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx",
+                        "children": []
+                      },
+                      {
                         "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:clients/page:docs/api/management/v2/clients/get-client-credentials:docs/a",
                         "kind": "page",
                         "label": "docs/api/management/v2/clients/get-client-credentials",
@@ -14197,6 +14213,14 @@
                     "label": "Refresh Tokens",
                     "children": [
                       {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:refresh-tokens/page:docs/api/management/v2/refresh-tokens/get-refresh-tokens:doc",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/refresh-tokens/get-refresh-tokens",
+                        "route": "docs/api/management/v2/refresh-tokens/get-refresh-tokens",
+                        "filePath": "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+                        "children": []
+                      },
+                      {
                         "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:refresh-tokens/page:docs/api/management/v2/refresh-tokens/get-a-refresh-token:do",
                         "kind": "page",
                         "label": "docs/api/management/v2/refresh-tokens/get-a-refresh-token",
@@ -15193,6 +15217,409 @@
                         "label": "docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id",
                         "route": "docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id",
                         "filePath": "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "root/tab:api-reference/dropdown:authentication-api",
+            "kind": "dropdown",
+            "label": "Authentication API",
+            "children": [
+              {
+                "id": "root/tab:api-reference/dropdown:authentication-api/page:docs/api/authentication/index:docs/api/authentication/index",
+                "kind": "page",
+                "label": "docs/api/authentication/index",
+                "route": "docs/api/authentication/index",
+                "filePath": "main/docs/api/authentication/index.mdx",
+                "children": []
+              },
+              {
+                "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed",
+                "kind": "group",
+                "label": " ",
+                "children": [
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization",
+                    "kind": "group",
+                    "label": "Authorization",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization/page:docs/api/authentication/authorization/authorization-endpoint",
+                        "kind": "page",
+                        "label": "docs/api/authentication/authorization/authorization-endpoint",
+                        "route": "docs/api/authentication/authorization/authorization-endpoint",
+                        "filePath": "main/docs/api/authentication/authorization/authorization-endpoint.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:authorization/page:docs/api/authentication/authorization/back-channel-login:doc",
+                        "kind": "page",
+                        "label": "docs/api/authentication/authorization/back-channel-login",
+                        "route": "docs/api/authentication/authorization/back-channel-login",
+                        "filePath": "main/docs/api/authentication/authorization/back-channel-login.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-exchange",
+                    "kind": "group",
+                    "label": "Token Exchange",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-exchange/page:docs/api/authentication/token-exchange/token-endpoint:docs/a",
+                        "kind": "page",
+                        "label": "docs/api/authentication/token-exchange/token-endpoint",
+                        "route": "docs/api/authentication/token-exchange/token-endpoint",
+                        "filePath": "main/docs/api/authentication/token-exchange/token-endpoint.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication",
+                    "kind": "group",
+                    "label": "Multi Factor Authentication",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/request-",
+                        "kind": "page",
+                        "label": "docs/api/authentication/multi-factor-authentication/request-mfa-challenge",
+                        "route": "docs/api/authentication/multi-factor-authentication/request-mfa-challenge",
+                        "filePath": "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/associat",
+                        "kind": "page",
+                        "label": "docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator",
+                        "route": "docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator",
+                        "filePath": "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/list-mfa",
+                        "kind": "page",
+                        "label": "docs/api/authentication/multi-factor-authentication/list-mfa-authenticators",
+                        "route": "docs/api/authentication/multi-factor-authentication/list-mfa-authenticators",
+                        "filePath": "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:multi-factor-authentication/page:docs/api/authentication/multi-factor-authentication/delete-m",
+                        "kind": "page",
+                        "label": "docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator",
+                        "route": "docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator",
+                        "filePath": "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless",
+                    "kind": "group",
+                    "label": "Passwordless",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless/page:docs/api/authentication/passwordless/start-passwordless-auth",
+                        "kind": "page",
+                        "label": "docs/api/authentication/passwordless/start-passwordless-authentication",
+                        "route": "docs/api/authentication/passwordless/start-passwordless-authentication",
+                        "filePath": "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:passwordless/page:docs/api/authentication/passwordless/verify:docs/api/authent",
+                        "kind": "page",
+                        "label": "docs/api/authentication/passwordless/verify",
+                        "route": "docs/api/authentication/passwordless/verify",
+                        "filePath": "main/docs/api/authentication/passwordless/verify.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:device-authorization",
+                    "kind": "group",
+                    "label": "Device Authorization",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:device-authorization/page:docs/api/authentication/device-authorization/request-device-",
+                        "kind": "page",
+                        "label": "docs/api/authentication/device-authorization/request-device-code",
+                        "route": "docs/api/authentication/device-authorization/request-device-code",
+                        "filePath": "main/docs/api/authentication/device-authorization/request-device-code.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-management",
+                    "kind": "group",
+                    "label": "Token Management",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:token-management/page:docs/api/authentication/token-management/revoke-refresh-toke",
+                        "kind": "page",
+                        "label": "docs/api/authentication/token-management/revoke-refresh-token",
+                        "route": "docs/api/authentication/token-management/revoke-refresh-token",
+                        "filePath": "main/docs/api/authentication/token-management/revoke-refresh-token.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:pushed-authorization-requests",
+                    "kind": "group",
+                    "label": "Pushed Authorization Requests",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:pushed-authorization-requests/page:docs/api/authentication/pushed-authorization-requests/pushed",
+                        "kind": "page",
+                        "label": "docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par",
+                        "route": "docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par",
+                        "filePath": "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile",
+                    "kind": "group",
+                    "label": "User Profile",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile/page:docs/api/authentication/user-profile/get-user-info:docs/api/",
+                        "kind": "page",
+                        "label": "docs/api/authentication/user-profile/get-user-info",
+                        "route": "docs/api/authentication/user-profile/get-user-info",
+                        "filePath": "main/docs/api/authentication/user-profile/get-user-info.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout",
+                    "kind": "group",
+                    "label": "Logout",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/logout:docs/api/authenticatio",
+                        "kind": "page",
+                        "label": "docs/api/authentication/logout/logout",
+                        "route": "docs/api/authentication/logout/logout",
+                        "filePath": "main/docs/api/authentication/logout/logout.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/oidc-rp-initiated-logout:docs",
+                        "kind": "page",
+                        "label": "docs/api/authentication/logout/oidc-rp-initiated-logout",
+                        "route": "docs/api/authentication/logout/oidc-rp-initiated-logout",
+                        "filePath": "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/saml-logout:docs/api/authenti",
+                        "kind": "page",
+                        "label": "docs/api/authentication/logout/saml-logout",
+                        "route": "docs/api/authentication/logout/saml-logout",
+                        "filePath": "main/docs/api/authentication/logout/saml-logout.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:logout/page:docs/api/authentication/logout/global-token-revocation:docs/",
+                        "kind": "page",
+                        "label": "docs/api/authentication/logout/global-token-revocation",
+                        "route": "docs/api/authentication/logout/global-token-revocation",
+                        "filePath": "main/docs/api/authentication/logout/global-token-revocation.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections",
+                    "kind": "group",
+                    "label": "Database Connections",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections/page:docs/api/authentication/database-connections/sign-up-user:do",
+                        "kind": "page",
+                        "label": "docs/api/authentication/database-connections/sign-up-user",
+                        "route": "docs/api/authentication/database-connections/sign-up-user",
+                        "filePath": "main/docs/api/authentication/database-connections/sign-up-user.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:database-connections/page:docs/api/authentication/database-connections/request-passwor",
+                        "kind": "page",
+                        "label": "docs/api/authentication/database-connections/request-password-change",
+                        "route": "docs/api/authentication/database-connections/request-password-change",
+                        "filePath": "main/docs/api/authentication/database-connections/request-password-change.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:login-legacy",
+                    "kind": "group",
+                    "label": "Login Legacy",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:login-legacy/page:docs/api/authentication/login-legacy/social-with-providers-a",
+                        "kind": "page",
+                        "label": "docs/api/authentication/login-legacy/social-with-providers-access-token",
+                        "route": "docs/api/authentication/login-legacy/social-with-providers-access-token",
+                        "filePath": "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:resource-owner-legacy",
+                    "kind": "group",
+                    "label": "Resource Owner Legacy",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:resource-owner-legacy/page:docs/api/authentication/resource-owner-legacy/resource-owner",
+                        "kind": "page",
+                        "label": "docs/api/authentication/resource-owner-legacy/resource-owner-legacy",
+                        "route": "docs/api/authentication/resource-owner-legacy/resource-owner-legacy",
+                        "filePath": "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile-legacy",
+                    "kind": "group",
+                    "label": "User Profile Legacy",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:user-profile-legacy/page:docs/api/authentication/user-profile-legacy/get-token-info-l",
+                        "kind": "page",
+                        "label": "docs/api/authentication/user-profile-legacy/get-token-info-legacy",
+                        "route": "docs/api/authentication/user-profile-legacy/get-token-info-legacy",
+                        "filePath": "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:delegation-legacy",
+                    "kind": "group",
+                    "label": "Delegation Legacy",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:delegation-legacy/page:docs/api/authentication/delegation-legacy/get-delegation-tok",
+                        "kind": "page",
+                        "label": "docs/api/authentication/delegation-legacy/get-delegation-token-legacy",
+                        "route": "docs/api/authentication/delegation-legacy/get-delegation-token-legacy",
+                        "filePath": "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:impersonation-legacy",
+                    "kind": "group",
+                    "label": "Impersonation Legacy",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:impersonation-legacy/page:docs/api/authentication/impersonation-legacy/impersonate-a-u",
+                        "kind": "page",
+                        "label": "docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy",
+                        "route": "docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy",
+                        "filePath": "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:dynamic-client-registration",
+                    "kind": "group",
+                    "label": "Dynamic Client Registration",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:dynamic-client-registration/page:docs/api/authentication/dynamic-client-registration/dynamic-",
+                        "kind": "page",
+                        "label": "docs/api/authentication/dynamic-client-registration/dynamic-application-registration",
+                        "route": "docs/api/authentication/dynamic-client-registration/dynamic-application-registration",
+                        "filePath": "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml",
+                    "kind": "group",
+                    "label": "Saml",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml/page:docs/api/authentication/saml/accept-request:docs/api/authent",
+                        "kind": "page",
+                        "label": "docs/api/authentication/saml/accept-request",
+                        "route": "docs/api/authentication/saml/accept-request",
+                        "filePath": "main/docs/api/authentication/saml/accept-request.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml/page:docs/api/authentication/saml/get-metadata:docs/api/authentic",
+                        "kind": "page",
+                        "label": "docs/api/authentication/saml/get-metadata",
+                        "route": "docs/api/authentication/saml/get-metadata",
+                        "filePath": "main/docs/api/authentication/saml/get-metadata.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:saml/page:docs/api/authentication/saml/id-p-initiated-single-sign-on-s",
+                        "kind": "page",
+                        "label": "docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow",
+                        "route": "docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow",
+                        "filePath": "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation",
+                    "kind": "group",
+                    "label": "Ws Federation",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation/page:docs/api/authentication/ws-federation/accept-ws-federation-r",
+                        "kind": "page",
+                        "label": "docs/api/authentication/ws-federation/accept-ws-federation-request",
+                        "route": "docs/api/authentication/ws-federation/accept-ws-federation-request",
+                        "filePath": "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:ws-federation/page:docs/api/authentication/ws-federation/get-ws-federation-meta",
+                        "kind": "page",
+                        "label": "docs/api/authentication/ws-federation/get-ws-federation-metadata",
+                        "route": "docs/api/authentication/ws-federation/get-ws-federation-metadata",
+                        "filePath": "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:account-linking-legacy",
+                    "kind": "group",
+                    "label": "Account Linking Legacy",
+                    "children": [
+                      {
+                        "id": "root/tab:api-reference/dropdown:authentication-api/group:unnamed/group:account-linking-legacy/page:docs/api/authentication/account-linking-legacy/unlink:docs/a",
+                        "kind": "page",
+                        "label": "docs/api/authentication/account-linking-legacy/unlink",
+                        "route": "docs/api/authentication/account-linking-legacy/unlink",
+                        "filePath": "main/docs/api/authentication/account-linking-legacy/unlink.mdx",
                         "children": []
                       }
                     ]

@@ -1,10 +1,10 @@
 {
-  "pagesScanned": 2597,
-  "pagesWithWarnings": 559,
-  "warningCount": 784,
+  "pagesScanned": 2632,
+  "pagesWithWarnings": 560,
+  "warningCount": 786,
   "byCode": {
-    "missing_pkce_mention": 125,
-    "missing_state_mention": 127,
+    "missing_pkce_mention": 126,
+    "missing_state_mention": 128,
     "missing_nonce_mention": 268,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
@@ -15,6 +15,181 @@
     {
       "id": "main/docs/api.mdx",
       "filePath": "main/docs/api.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/account-linking-legacy/unlink.mdx",
+      "filePath": "main/docs/api/authentication/account-linking-legacy/unlink.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/authorization/authorization-endpoint.mdx",
+      "filePath": "main/docs/api/authentication/authorization/authorization-endpoint.mdx",
+      "warnings": [
+        {
+          "code": "missing_pkce_mention",
+          "severity": "warn",
+          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
+          "evidence": "openapi: authentication-api-oas get /authorize",
+          "line": 2
+        },
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "openapi: authentication-api-oas get /authorize",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "main/docs/api/authentication/authorization/back-channel-login.mdx",
+      "filePath": "main/docs/api/authentication/authorization/back-channel-login.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/database-connections/request-password-change.mdx",
+      "filePath": "main/docs/api/authentication/database-connections/request-password-change.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/database-connections/sign-up-user.mdx",
+      "filePath": "main/docs/api/authentication/database-connections/sign-up-user.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx",
+      "filePath": "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/device-authorization/request-device-code.mdx",
+      "filePath": "main/docs/api/authentication/device-authorization/request-device-code.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx",
+      "filePath": "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx",
+      "filePath": "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/index.mdx",
+      "filePath": "main/docs/api/authentication/index.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx",
+      "filePath": "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/logout/global-token-revocation.mdx",
+      "filePath": "main/docs/api/authentication/logout/global-token-revocation.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/logout/logout.mdx",
+      "filePath": "main/docs/api/authentication/logout/logout.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx",
+      "filePath": "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/logout/saml-logout.mdx",
+      "filePath": "main/docs/api/authentication/logout/saml-logout.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx",
+      "filePath": "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx",
+      "filePath": "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx",
+      "filePath": "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx",
+      "filePath": "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx",
+      "filePath": "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/passwordless/verify.mdx",
+      "filePath": "main/docs/api/authentication/passwordless/verify.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx",
+      "filePath": "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx",
+      "filePath": "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/saml/accept-request.mdx",
+      "filePath": "main/docs/api/authentication/saml/accept-request.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/saml/get-metadata.mdx",
+      "filePath": "main/docs/api/authentication/saml/get-metadata.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx",
+      "filePath": "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/token-exchange/token-endpoint.mdx",
+      "filePath": "main/docs/api/authentication/token-exchange/token-endpoint.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/token-management/revoke-refresh-token.mdx",
+      "filePath": "main/docs/api/authentication/token-management/revoke-refresh-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx",
+      "filePath": "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/user-profile/get-user-info.mdx",
+      "filePath": "main/docs/api/authentication/user-profile/get-user-info.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx",
+      "filePath": "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx",
+      "filePath": "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx",
       "warnings": []
     },
     {
@@ -385,6 +560,16 @@
     {
       "id": "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx",
       "filePath": "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx",
+      "filePath": "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx",
+      "filePath": "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx",
       "warnings": []
     },
     {
@@ -1512,6 +1697,11 @@
     {
       "id": "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
       "filePath": "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+      "filePath": "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
       "warnings": []
     },
     {
@@ -27335,6 +27525,7 @@
     "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx": [],
     "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx": [],
     "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx": [],
+    "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx": [],
     "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": [],
     "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx": [],
     "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx": [],
@@ -27622,6 +27813,8 @@
     "main/docs/api/management/v2/clients/get-client-credentials.mdx": [],
     "main/docs/api/management/v2/clients/get-clients.mdx": [],
     "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx": [],
+    "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx": [],
+    "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx": [],
     "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx": [],
     "main/docs/api/management/v2/clients/update-a-client-credential.mdx": [],
     "main/docs/api/management/v2/clients/update-a-client.mdx": [],
@@ -27689,6 +27882,53 @@
     "main/docs/api/management/v2/actions/test-an-action.mdx": [],
     "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx": [],
     "main/docs/api/management/v2/actions/update-an-action.mdx": [],
-    "main/docs/api/management/v2/actions/update-trigger-bindings.mdx": []
+    "main/docs/api/management/v2/actions/update-trigger-bindings.mdx": [],
+    "main/docs/api/authentication/index.mdx": [],
+    "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx": [],
+    "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx": [],
+    "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx": [],
+    "main/docs/api/authentication/user-profile/get-user-info.mdx": [],
+    "main/docs/api/authentication/token-management/revoke-refresh-token.mdx": [],
+    "main/docs/api/authentication/token-exchange/token-endpoint.mdx": [],
+    "main/docs/api/authentication/saml/accept-request.mdx": [],
+    "main/docs/api/authentication/saml/get-metadata.mdx": [],
+    "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx": [],
+    "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx": [],
+    "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx": [],
+    "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx": [],
+    "main/docs/api/authentication/passwordless/verify.mdx": [],
+    "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx": [],
+    "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx": [],
+    "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx": [],
+    "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx": [],
+    "main/docs/api/authentication/logout/global-token-revocation.mdx": [],
+    "main/docs/api/authentication/logout/logout.mdx": [],
+    "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx": [],
+    "main/docs/api/authentication/logout/saml-logout.mdx": [],
+    "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx": [],
+    "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx": [],
+    "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx": [],
+    "main/docs/api/authentication/device-authorization/request-device-code.mdx": [],
+    "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx": [],
+    "main/docs/api/authentication/database-connections/request-password-change.mdx": [],
+    "main/docs/api/authentication/database-connections/sign-up-user.mdx": [],
+    "main/docs/api/authentication/authorization/authorization-endpoint.mdx": [
+      {
+        "code": "missing_pkce_mention",
+        "severity": "warn",
+        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
+        "evidence": "openapi: authentication-api-oas get /authorize",
+        "line": 2
+      },
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "openapi: authentication-api-oas get /authorize",
+        "line": 2
+      }
+    ],
+    "main/docs/api/authentication/authorization/back-channel-login.mdx": [],
+    "main/docs/api/authentication/account-linking-legacy/unlink.mdx": []
   }
 }

@@ -4829,6 +4829,7 @@
   "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx": {
     "link": [
       "main/docs/authenticate/protocols/openid-connect-protocol.mdx",
+      "main/docs/api/authentication/user-profile/get-user-info.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
       "main/docs/secure/tokens/id-tokens/id-token-structure.mdx",
@@ -18467,6 +18468,14 @@
     ],
     "redirect": []
   },
+  "main/docs/api/authentication/user-profile/get-user-info.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/deploy-monitor/auth0-cli.mdx": {
     "link": [
       "main/docs/deploy-monitor/deploy-cli-tool.mdx"
@@ -22915,6 +22924,14 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": {
     "link": [],
     "import": [
@@ -24635,6 +24652,22 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx": {
     "link": [],
     "import": [
@@ -25172,6 +25205,251 @@
     "redirect": []
   },
   "main/docs/api/management/v2/actions/update-trigger-bindings.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/token-management/revoke-refresh-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/token-exchange/token-endpoint.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/saml/accept-request.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/saml/get-metadata.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/passwordless/verify.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/logout/global-token-revocation.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/logout/logout.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/logout/saml-logout.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/device-authorization/request-device-code.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/database-connections/request-password-change.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/database-connections/sign-up-user.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/authorization/authorization-endpoint.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/authorization/back-channel-login.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/authentication/account-linking-legacy/unlink.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",

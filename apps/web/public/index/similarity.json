@@ -33448,21 +33448,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx",
-      "score": 0.2147,
-      "simOut": 0.2727,
-      "simIn": 0.1277,
-      "sharedOut": 3,
-      "sharedIn": 6,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/get-started/apis/scopes.mdx",
       "score": 0.2129,
       "simOut": 0.2,
@@ -33470,6 +33455,21 @@
       "sharedOut": 2,
       "sharedIn": 13,
       "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx",
+      "score": 0.2011,
+      "simOut": 0.25,
+      "simIn": 0.1277,
+      "sharedOut": 3,
+      "sharedIn": 6,
+      "reasons": [
+        "shared_outbound",
         "shared_inbound"
       ],
       "isCrossNav": true,
@@ -34426,8 +34426,8 @@
   "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx": [
     {
       "id": "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx",
-      "score": 0.2147,
-      "simOut": 0.2727,
+      "score": 0.2011,
+      "simOut": 0.25,
       "simIn": 0.1277,
       "sharedOut": 3,
       "sharedIn": 6,
@@ -34441,8 +34441,8 @@
     },
     {
       "id": "main/docs/get-started/apis/scopes/api-scopes.mdx",
-      "score": 0.1846,
-      "simOut": 0.1538,
+      "score": 0.178,
+      "simOut": 0.1429,
       "simIn": 0.2308,
       "sharedOut": 2,
       "sharedIn": 6,
@@ -34455,8 +34455,8 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/client-credentials-exchange.mdx",
-      "score": 0.1636,
-      "simOut": 0.2727,
+      "score": 0.15,
+      "simOut": 0.25,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -34469,8 +34469,8 @@
     },
     {
       "id": "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
-      "score": 0.1459,
-      "simOut": 0.0526,
+      "score": 0.1443,
+      "simOut": 0.05,
       "simIn": 0.2857,
       "sharedOut": 1,
       "sharedIn": 6,
@@ -34482,23 +34482,9 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/organizations/using-tokens.mdx",
-      "score": 0.1385,
-      "simOut": 0.2308,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow.mdx",
-      "score": 0.1364,
-      "simOut": 0.2273,
+      "score": 0.1304,
+      "simOut": 0.2174,
       "simIn": 0,
       "sharedOut": 5,
       "sharedIn": 0,
@@ -34510,9 +34496,23 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/manage-users/organizations/using-tokens.mdx",
+      "score": 0.1286,
+      "simOut": 0.2143,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/add-login-auth-code-flow.mdx",
-      "score": 0.1325,
-      "simOut": 0.1905,
+      "score": 0.1273,
+      "simOut": 0.1818,
       "simIn": 0.0455,
       "sharedOut": 4,
       "sharedIn": 1,
@@ -34525,8 +34525,8 @@
     },
     {
       "id": "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
-      "score": 0.1207,
-      "simOut": 0.125,
+      "score": 0.1163,
+      "simOut": 0.1176,
       "simIn": 0.1143,
       "sharedOut": 2,
       "sharedIn": 4,
@@ -34539,8 +34539,8 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/add-login-using-the-implicit-flow-with-form-post.mdx",
-      "score": 0.12,
-      "simOut": 0.2,
+      "score": 0.1143,
+      "simOut": 0.1905,
       "simIn": 0,
       "sharedOut": 4,
       "sharedIn": 0,
@@ -34553,8 +34553,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.114,
-      "simOut": 0.0714,
+      "score": 0.1111,
+      "simOut": 0.0667,
       "simIn": 0.1778,
       "sharedOut": 1,
       "sharedIn": 8,
@@ -34583,8 +34583,8 @@
     },
     {
       "id": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx",
-      "score": 0.1459,
-      "simOut": 0.0526,
+      "score": 0.1443,
+      "simOut": 0.05,
       "simIn": 0.2857,
       "sharedOut": 1,
       "sharedIn": 6,
@@ -47192,8 +47192,8 @@
     },
     {
       "id": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx",
-      "score": 0.1846,
-      "simOut": 0.1538,
+      "score": 0.178,
+      "simOut": 0.1429,
       "simIn": 0.2308,
       "sharedOut": 2,
       "sharedIn": 6,

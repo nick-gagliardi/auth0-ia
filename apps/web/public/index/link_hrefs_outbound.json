@@ -10155,6 +10155,10 @@
       "toId": "main/docs/authenticate/protocols/openid-connect-protocol.mdx"
     },
     {
+      "href": "/docs/api/authentication/user-profile/get-user-info",
+      "toId": "main/docs/api/authentication/user-profile/get-user-info.mdx"
+    },
+    {
       "href": "/docs/customize/actions/actions-overview",
       "toId": "main/docs/customize/actions/actions-overview.mdx"
     },
@@ -30583,6 +30587,7 @@
       "toId": "main/docs/secure/security-guidance/security-bulletins/2019-09-05-scopes.mdx"
     }
   ],
+  "main/docs/api/authentication/user-profile/get-user-info.mdx": [],
   "main/docs/deploy-monitor/auth0-cli.mdx": [
     {
       "href": "/docs/deploy-monitor/deploy-cli-tool",
@@ -36123,6 +36128,7 @@
   "main/docs/api/management/v2/resource-servers/update-a-resource-server.mdx": [],
   "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx": [],
   "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx": [],
+  "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx": [],
   "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": [],
   "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx": [],
   "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx": [],
@@ -36338,6 +36344,8 @@
   "main/docs/api/management/v2/clients/get-client-credentials.mdx": [],
   "main/docs/api/management/v2/clients/get-clients.mdx": [],
   "main/docs/api/management/v2/clients/get-enabled-connections-for-a-client.mdx": [],
+  "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx": [],
+  "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx": [],
   "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx": [],
   "main/docs/api/management/v2/clients/update-a-client-credential.mdx": [],
   "main/docs/api/management/v2/clients/update-a-client.mdx": [],
@@ -36406,6 +36414,37 @@
   "main/docs/api/management/v2/actions/update-a-specific-actions-module.mdx": [],
   "main/docs/api/management/v2/actions/update-an-action.mdx": [],
   "main/docs/api/management/v2/actions/update-trigger-bindings.mdx": [],
+  "main/docs/api/authentication/index.mdx": [],
+  "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx": [],
+  "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx": [],
+  "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx": [],
+  "main/docs/api/authentication/token-management/revoke-refresh-token.mdx": [],
+  "main/docs/api/authentication/token-exchange/token-endpoint.mdx": [],
+  "main/docs/api/authentication/saml/accept-request.mdx": [],
+  "main/docs/api/authentication/saml/get-metadata.mdx": [],
+  "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx": [],
+  "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx": [],
+  "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx": [],
+  "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx": [],
+  "main/docs/api/authentication/passwordless/verify.mdx": [],
+  "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx": [],
+  "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx": [],
+  "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx": [],
+  "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx": [],
+  "main/docs/api/authentication/logout/global-token-revocation.mdx": [],
+  "main/docs/api/authentication/logout/logout.mdx": [],
+  "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx": [],
+  "main/docs/api/authentication/logout/saml-logout.mdx": [],
+  "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx": [],
+  "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx": [],
+  "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx": [],
+  "main/docs/api/authentication/device-authorization/request-device-code.mdx": [],
+  "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx": [],
+  "main/docs/api/authentication/database-connections/request-password-change.mdx": [],
+  "main/docs/api/authentication/database-connections/sign-up-user.mdx": [],
+  "main/docs/api/authentication/authorization/authorization-endpoint.mdx": [],
+  "main/docs/api/authentication/authorization/back-channel-login.mdx": [],
+  "main/docs/api/authentication/account-linking-legacy/unlink.mdx": [],
   "main/snippets/RelatedPages.mdx": [],
   "main/snippets/api-fr.jsx": [],
   "main/snippets/api-jp.jsx": [],

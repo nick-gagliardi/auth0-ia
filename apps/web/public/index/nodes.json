@@ -18777,6 +18777,14 @@
     ]
   },
   {
+    "id": "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Refresh Tokens > get refresh tokens"
+    ]
+  },
+  {
     "id": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
     "type": "page",
     "filePath": "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
@@ -20497,6 +20505,22 @@
     ]
   },
   {
+    "id": "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/preview-and-validate-client-id-metadata-document.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > preview and validate client id metadata document"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/clients/register-or-update-a-cimd-client-via-metadata-uri.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Clients > register or update a cimd client via metadata uri"
+    ]
+  },
+  {
     "id": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
     "type": "page",
     "filePath": "main/docs/api/management/v2/clients/rotate-a-client-secret.mdx",
@@ -21038,6 +21062,263 @@
     "filePath": "main/docs/api/management/v2/actions/update-trigger-bindings.mdx",
     "navPaths": [
       "API Reference > Management API >   > Actions > update trigger bindings"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/index.mdx",
+    "title": "Authentication API Reference",
+    "navPaths": [
+      "API Reference > Authentication API > Authentication API Reference"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/ws-federation/accept-ws-federation-request.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Ws Federation > accept ws federation request"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/ws-federation/get-ws-federation-metadata.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Ws Federation > get ws federation metadata"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/user-profile-legacy/get-token-info-legacy.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > User Profile Legacy > get token info legacy"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/user-profile/get-user-info.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/user-profile/get-user-info.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > User Profile > get user info"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/token-management/revoke-refresh-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/token-management/revoke-refresh-token.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Token Management > revoke refresh token"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/token-exchange/token-endpoint.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/token-exchange/token-endpoint.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Token Exchange > token endpoint"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/saml/accept-request.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/saml/accept-request.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Saml > accept request"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/saml/get-metadata.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/saml/get-metadata.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Saml > get metadata"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/saml/id-p-initiated-single-sign-on-sso-flow.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Saml > id p initiated single sign on sso flow"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/resource-owner-legacy/resource-owner-legacy.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Resource Owner Legacy > resource owner legacy"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/pushed-authorization-requests/pushed-authorization-request-par.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Pushed Authorization Requests > pushed authorization request par"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/passwordless/start-passwordless-authentication.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Passwordless > start passwordless authentication"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/passwordless/verify.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/passwordless/verify.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Passwordless > verify"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/associate-mfa-authenticator.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Multi Factor Authentication > associate mfa authenticator"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/delete-mfa-authenticator.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Multi Factor Authentication > delete mfa authenticator"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/list-mfa-authenticators.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Multi Factor Authentication > list mfa authenticators"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/multi-factor-authentication/request-mfa-challenge.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Multi Factor Authentication > request mfa challenge"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/logout/global-token-revocation.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/logout/global-token-revocation.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Logout > global token revocation"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/logout/logout.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/logout/logout.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Logout > logout"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/logout/oidc-rp-initiated-logout.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Logout > oidc rp initiated logout"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/logout/saml-logout.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/logout/saml-logout.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Logout > saml logout"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/login-legacy/social-with-providers-access-token.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Login Legacy > social with providers access token"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/impersonation-legacy/impersonate-a-user-legacy.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Impersonation Legacy > impersonate a user legacy"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/dynamic-client-registration/dynamic-application-registration.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Dynamic Client Registration > dynamic application registration"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/device-authorization/request-device-code.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/device-authorization/request-device-code.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Device Authorization > request device code"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/delegation-legacy/get-delegation-token-legacy.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Delegation Legacy > get delegation token legacy"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/database-connections/request-password-change.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/database-connections/request-password-change.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Database Connections > request password change"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/database-connections/sign-up-user.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/database-connections/sign-up-user.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Database Connections > sign up user"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/authorization/authorization-endpoint.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/authorization/authorization-endpoint.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Authorization > authorization endpoint"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/authorization/back-channel-login.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/authorization/back-channel-login.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Authorization > back channel login"
+    ]
+  },
+  {
+    "id": "main/docs/api/authentication/account-linking-legacy/unlink.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/authentication/account-linking-legacy/unlink.mdx",
+    "navPaths": [
+      "API Reference > Authentication API >   > Account Linking Legacy > unlink"
     ]
   },
   {
