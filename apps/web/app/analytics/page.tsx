@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle, Eye, Search, Users } from 'lucide-react';
+import AppLayout from '@/components/AppLayout';
 
 interface FeedbackItem {
   id: string;
@@ -148,39 +149,44 @@ export default function AnalyticsPage() {
 
   if (loading) {
     return (
-      <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-6">Analytics</h1>
-        <div className="text-muted-foreground">Loading analytics data...</div>
-      </div>
+      <AppLayout>
+        <div className="container mx-auto p-6">
+          <h1 className="text-3xl font-bold mb-6">Analytics</h1>
+          <div className="text-muted-foreground">Loading analytics data...</div>
+        </div>
+      </AppLayout>
     );
   }
 
   if (error) {
     return (
-      <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-6">Analytics</h1>
-        <Card className="border-destructive">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-destructive">
-              <AlertCircle className="h-5 w-5" />
-              Error Loading Analytics
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">{error}</p>
-            <Button onClick={fetchAnalytics} className="mt-4">
-              Retry
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
+      <AppLayout>
+        <div className="container mx-auto p-6">
+          <h1 className="text-3xl font-bold mb-6">Analytics</h1>
+          <Card className="border-destructive">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-destructive">
+                <AlertCircle className="h-5 w-5" />
+                Error Loading Analytics
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">{error}</p>
+              <Button onClick={fetchAnalytics} className="mt-4">
+                Retry
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </AppLayout>
     );
   }
 
   return (
-    <div className="container mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold">Analytics</h1>
+    <AppLayout>
+      <div className="container mx-auto p-6 space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-3xl font-bold">Analytics</h1>
         <div className="flex gap-2">
           <Select value={dateFilter} onValueChange={setDateFilter}>
             <SelectTrigger className="w-[140px]">
@@ -532,6 +538,7 @@ export default function AnalyticsPage() {
           </div>
         </TabsContent>
       </Tabs>
-    </div>
+      </div>
+    </AppLayout>
   );
 }
