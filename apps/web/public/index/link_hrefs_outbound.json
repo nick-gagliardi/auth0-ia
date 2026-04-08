@@ -5429,8 +5429,8 @@
       "toId": "main/docs/authenticate/database-connections/custom-db/templates.mdx"
     },
     {
-      "href": "/docs/customize/actions/explore-triggers",
-      "toId": "main/docs/customize/actions/explore-triggers.mdx"
+      "href": "/docs/customize/actions/actions-overview",
+      "toId": "main/docs/customize/actions/actions-overview.mdx"
     },
     {
       "href": "/docs/manage-users/user-migration",
@@ -12613,8 +12613,8 @@
       "toId": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx"
     },
     {
-      "href": "/docs/customize/phone-messages/customize-phone-templates",
-      "toId": "main/docs/customize/phone-messages/customize-phone-templates.mdx"
+      "href": "/docs/customize/phone-messages/phone-templates/customize",
+      "toId": "main/docs/customize/phone-messages/phone-templates/customize.mdx"
     },
     {
       "href": "/docs/secure/multi-factor-authentication/auth0-guardian",
@@ -14977,6 +14977,10 @@
     {
       "href": "/docs/authenticate/login/logout",
       "toId": "main/docs/authenticate/login/logout.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/logout/redirect-users-after-logout",
+      "toId": "main/docs/authenticate/login/logout/redirect-users-after-logout.mdx"
     },
     {
       "href": "/docs/authenticate/identity-providers",
@@ -25010,6 +25014,10 @@
     {
       "href": "/docs/libraries",
       "toId": "main/docs/libraries.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-accounts/metadata",
+      "toId": "main/docs/manage-users/user-accounts/metadata.mdx"
     }
   ],
   "main/docs/get-started/applications/remove-applications.mdx": [
@@ -27210,6 +27218,10 @@
       "toId": "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx"
     },
     {
+      "href": "/docs/authenticate/login/native-login",
+      "toId": "main/docs/authenticate/login/native-login.mdx"
+    },
+    {
       "href": "/docs/get-started/applications/application-grant-types",
       "toId": "main/docs/get-started/applications/application-grant-types.mdx"
     },
@@ -27840,6 +27852,10 @@
     {
       "href": "/docs/authenticate/database-connections",
       "toId": "main/docs/authenticate/database-connections.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/native-login",
+      "toId": "main/docs/authenticate/login/native-login.mdx"
     },
     {
       "href": "/docs/get-started/applications/application-grant-types",
@@ -30588,6 +30604,29 @@
     }
   ],
   "main/docs/api/authentication/user-profile/get-user-info.mdx": [],
+  "main/docs/events/index.mdx": [],
+  "main/docs/events/user/user.created.mdx": [],
+  "main/docs/events/user/user.deleted.mdx": [],
+  "main/docs/events/user/user.updated.mdx": [],
+  "main/docs/events/organization/organization.connection.added.mdx": [],
+  "main/docs/events/organization/organization.connection.removed.mdx": [],
+  "main/docs/events/organization/organization.connection.updated.mdx": [],
+  "main/docs/events/organization/organization.created.mdx": [],
+  "main/docs/events/organization/organization.deleted.mdx": [],
+  "main/docs/events/organization/organization.group.role.assigned.mdx": [],
+  "main/docs/events/organization/organization.group.role.deleted.mdx": [],
+  "main/docs/events/organization/organization.member.added.mdx": [],
+  "main/docs/events/organization/organization.member.deleted.mdx": [],
+  "main/docs/events/organization/organization.member.role.assigned.mdx": [],
+  "main/docs/events/organization/organization.member.role.deleted.mdx": [],
+  "main/docs/events/organization/organization.updated.mdx": [],
+  "main/docs/events/group/group.created.mdx": [],
+  "main/docs/events/group/group.deleted.mdx": [],
+  "main/docs/events/group/group.member.added.mdx": [],
+  "main/docs/events/group/group.member.deleted.mdx": [],
+  "main/docs/events/group/group.role.assigned.mdx": [],
+  "main/docs/events/group/group.role.deleted.mdx": [],
+  "main/docs/events/group/group.updated.mdx": [],
   "main/docs/deploy-monitor/auth0-cli.mdx": [
     {
       "href": "/docs/deploy-monitor/deploy-cli-tool",
@@ -30809,6 +30848,10 @@
     {
       "href": "/docs/authenticate/identity-providers/social-identity-providers/devkeys",
       "toId": "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22",
+      "toId": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx"
     },
     {
       "href": "/docs/customize/custom-domains/configure-features-to-use-custom-domains",
@@ -31670,8 +31713,8 @@
       "toId": "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx"
     },
     {
-      "href": "/docs/customize/phone-messages/customize-phone-templates",
-      "toId": "main/docs/customize/phone-messages/customize-phone-templates.mdx"
+      "href": "/docs/customize/phone-messages/phone-templates",
+      "toId": "main/docs/customize/phone-messages/phone-templates.mdx"
     }
   ],
   "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx": [
@@ -31692,16 +31735,7 @@
       "toId": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx"
     }
   ],
-  "main/docs/customize/phone-messages/customize-phone-templates.mdx": [
-    {
-      "href": "/docs/customize/phone-messages/configure-phone-messaging-providers",
-      "toId": "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx"
-    },
-    {
-      "href": "/docs/customize/email/email-templates",
-      "toId": "main/docs/customize/email/email-templates.mdx"
-    }
-  ],
+  "main/docs/customize/phone-messages/phone-templates.mdx": [],
   "main/docs/customize/rules/cache-resources.mdx": [
     {
       "href": "/docs/customize/actions/actions-overview",
@@ -31854,8 +31888,8 @@
       "toId": "main/docs/troubleshoot/customer-support.mdx"
     },
     {
-      "href": "/docs/customize/phone-messages/customize-phone-templates",
-      "toId": "main/docs/customize/phone-messages/customize-phone-templates.mdx"
+      "href": "/docs/customize/phone-messages/phone-templates/customize",
+      "toId": "main/docs/customize/phone-messages/phone-templates/customize.mdx"
     }
   ],
   "main/docs/authenticate/passwordless/authentication-methods/use-sms-gateway-passwordless.mdx": [
@@ -31876,7 +31910,14 @@
       "toId": "main/docs/secure/tokens/json-web-tokens.mdx"
     }
   ],
+  "main/docs/customize/phone-messages/phone-templates/customize.mdx": [],
   "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object.mdx": [],
+  "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx": [
+    {
+      "href": "/docs/manage-users/organizations/organizations-overview",
+      "toId": "main/docs/manage-users/organizations/organizations-overview.mdx"
+    }
+  ],
   "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/configure-a-custom-phone-provider-with-twilio-verify.mdx": [],
   "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/action-triggers-custom-phone-provider-api-object.mdx": [],
   "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/configure-a-custom-phone-provider-with-terraform.mdx": [
@@ -36297,8 +36338,10 @@
   "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx": [],
   "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx": [],
   "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx": [],
+  "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx": [],
   "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": [],
   "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx": [],
+  "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx": [],
   "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx": [],
   "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx": [],
   "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx": [],

@@ -12664,6 +12664,213 @@
     ]
   },
   {
+    "id": "main/docs/events/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/index.mdx",
+    "title": "Events Catalog",
+    "navPaths": [
+      "Events Catalog > Events Catalog"
+    ]
+  },
+  {
+    "id": "main/docs/events/user/user.created.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/user/user.created.mdx",
+    "title": "user.created",
+    "navPaths": [
+      "Events Catalog >   > User > user.created"
+    ]
+  },
+  {
+    "id": "main/docs/events/user/user.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/user/user.deleted.mdx",
+    "title": "user.deleted",
+    "navPaths": [
+      "Events Catalog >   > User > user.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/user/user.updated.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/user/user.updated.mdx",
+    "title": "user.updated",
+    "navPaths": [
+      "Events Catalog >   > User > user.updated"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.connection.added.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.connection.added.mdx",
+    "title": "organization.connection.added",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.connection.added"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.connection.removed.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.connection.removed.mdx",
+    "title": "organization.connection.removed",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.connection.removed"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.connection.updated.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.connection.updated.mdx",
+    "title": "organization.connection.updated",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.connection.updated"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.created.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.created.mdx",
+    "title": "organization.created",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.created"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.deleted.mdx",
+    "title": "organization.deleted",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.group.role.assigned.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
+    "title": "organization.group.role.assigned",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.group.role.assigned"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.group.role.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
+    "title": "organization.group.role.deleted",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.group.role.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.member.added.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.member.added.mdx",
+    "title": "organization.member.added",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.member.added"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.member.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.member.deleted.mdx",
+    "title": "organization.member.deleted",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.member.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.member.role.assigned.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.member.role.assigned.mdx",
+    "title": "organization.member.role.assigned",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.member.role.assigned"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.member.role.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.member.role.deleted.mdx",
+    "title": "organization.member.role.deleted",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.member.role.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/organization/organization.updated.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/organization/organization.updated.mdx",
+    "title": "organization.updated",
+    "navPaths": [
+      "Events Catalog >   > Organization > organization.updated"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.created.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.created.mdx",
+    "title": "group.created",
+    "navPaths": [
+      "Events Catalog >   > Group > group.created"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.deleted.mdx",
+    "title": "group.deleted",
+    "navPaths": [
+      "Events Catalog >   > Group > group.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.member.added.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.member.added.mdx",
+    "title": "group.member.added",
+    "navPaths": [
+      "Events Catalog >   > Group > group.member.added"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.member.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.member.deleted.mdx",
+    "title": "group.member.deleted",
+    "navPaths": [
+      "Events Catalog >   > Group > group.member.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.role.assigned.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.role.assigned.mdx",
+    "title": "group.role.assigned",
+    "navPaths": [
+      "Events Catalog >   > Group > group.role.assigned"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.role.deleted.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.role.deleted.mdx",
+    "title": "group.role.deleted",
+    "navPaths": [
+      "Events Catalog >   > Group > group.role.deleted"
+    ]
+  },
+  {
+    "id": "main/docs/events/group/group.updated.mdx",
+    "type": "page",
+    "filePath": "main/docs/events/group/group.updated.mdx",
+    "title": "group.updated",
+    "navPaths": [
+      "Events Catalog >   > Group > group.updated"
+    ]
+  },
+  {
     "id": "main/docs/deploy-monitor/auth0-cli.mdx",
     "type": "page",
     "filePath": "main/docs/deploy-monitor/auth0-cli.mdx",
@@ -13064,9 +13271,7 @@
     "type": "page",
     "filePath": "main/docs/customize/email.mdx",
     "title": "Customize Emails",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > Customize Emails"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/events.mdx",
@@ -13143,9 +13348,7 @@
     "type": "page",
     "filePath": "main/docs/customize/phone-messages.mdx",
     "title": "Customize Phone Messages",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Customize Phone Messages"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/rules.mdx",
@@ -13258,27 +13461,21 @@
     "type": "page",
     "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
     "title": "Configure Phone Messaging Providers",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure Phone Messaging Providers"
-    ]
+    "navPaths": []
   },
   {
-    "id": "main/docs/customize/phone-messages/customize-phone-templates.mdx",
+    "id": "main/docs/customize/phone-messages/phone-templates.mdx",
     "type": "page",
-    "filePath": "main/docs/customize/phone-messages/customize-phone-templates.mdx",
-    "title": "Customize Phone Templates",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Customize Phone Templates"
-    ]
+    "filePath": "main/docs/customize/phone-messages/phone-templates.mdx",
+    "title": "Phone Templates",
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/phone-messages/unified-phone.mdx",
     "type": "page",
     "filePath": "main/docs/customize/phone-messages/unified-phone.mdx",
     "title": "Auth0's Unified Phone Experience",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Auth0's Unified Phone Experience > Auth0's Unified Phone Experience"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx",
@@ -13308,13 +13505,29 @@
     ]
   },
   {
+    "id": "main/docs/customize/phone-messages/phone-templates/customize.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/phone-messages/phone-templates/customize.mdx",
+    "title": "Customize Phone Templates",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Customize Phone Messages > Phone Templates > Customize Phone Templates"
+    ]
+  },
+  {
+    "id": "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx",
+    "title": "Supported Liquid Syntax for Phone Templates",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Customize Phone Messages > Phone Templates > Supported Liquid Syntax for Phone Templates"
+    ]
+  },
+  {
     "id": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
     "type": "page",
     "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
     "title": "Configure a Custom Phone Provider",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Configure a Custom Phone Provider"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider.mdx",
@@ -14894,9 +15107,7 @@
     "type": "page",
     "filePath": "main/docs/customize/email/email-templates.mdx",
     "title": "Email Templates",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > Email Templates > Email Templates"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/email/manage-email-flow.mdx",
@@ -14921,9 +15132,7 @@
     "type": "page",
     "filePath": "main/docs/customize/email/smtp-email-providers.mdx",
     "title": "SMTP Email Provider Overview",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > SMTP Email Provider Overview"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/email/smtp-email-providers/amazon-ses.mdx",
@@ -14948,9 +15157,7 @@
     "type": "page",
     "filePath": "main/docs/customize/email/smtp-email-providers/custom.mdx",
     "title": "Custom Email Provider Configuration with Actions",
-    "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Custom Email Provider Configuration with Actions"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/customize/email/smtp-email-providers/mailgun.mdx",
@@ -15055,9 +15262,9 @@
     "id": "main/docs/customize/email/email-templates/supported-liquid-syntax.mdx",
     "type": "page",
     "filePath": "main/docs/customize/email/email-templates/supported-liquid-syntax.mdx",
-    "title": "Supported Liquid Syntax",
+    "title": "Supported Liquid Syntax for Email Templates",
     "navPaths": [
-      "Documentation > Customize > Brand Customization > Customize Emails > Email Templates > Supported Liquid Syntax"
+      "Documentation > Customize > Brand Customization > Customize Emails > Email Templates > Supported Liquid Syntax for Email Templates"
     ]
   },
   {
@@ -20129,6 +20336,14 @@
     ]
   },
   {
+    "id": "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > get the default domain"
+    ]
+  },
+  {
     "id": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
     "type": "page",
     "filePath": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
@@ -20142,6 +20357,14 @@
     "filePath": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
     "navPaths": [
       "API Reference > Management API >   > Custom Domains > update custom domain configuration"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Custom Domains > update the default custom domain for the tenant"
     ]
   },
   {

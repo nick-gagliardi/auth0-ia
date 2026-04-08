@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2632,
+  "pagesScanned": 2659,
   "pagesWithWarnings": 560,
-  "warningCount": 786,
+  "warningCount": 787,
   "byCode": {
-    "missing_pkce_mention": 126,
-    "missing_state_mention": 128,
+    "missing_pkce_mention": 127,
+    "missing_state_mention": 129,
     "missing_nonce_mention": 268,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 12,
-    "rules_vs_actions_language": 249
+    "rules_vs_actions_language": 248
   },
   "items": [
     {
@@ -783,6 +783,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
       "filePath": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
       "warnings": []
@@ -790,6 +795,11 @@
     {
       "id": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
       "filePath": "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx",
+      "filePath": "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx",
       "warnings": []
     },
     {
@@ -6386,15 +6396,32 @@
       "warnings": []
     },
     {
-      "id": "main/docs/customize/phone-messages/customize-phone-templates.mdx",
-      "filePath": "main/docs/customize/phone-messages/customize-phone-templates.mdx",
+      "id": "main/docs/customize/phone-messages/phone-templates.mdx",
+      "filePath": "main/docs/customize/phone-messages/phone-templates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/phone-messages/phone-templates/customize.mdx",
+      "filePath": "main/docs/customize/phone-messages/phone-templates/customize.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx",
+      "filePath": "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx",
       "warnings": [
         {
-          "code": "rules_vs_actions_language",
+          "code": "missing_pkce_mention",
           "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Auth0 exposes the same set of [contextual variables](/docs/customize/email/email-templates#common-variables) that you can access using Liquid syntax for phone templates as it does ",
-          "line": 33
+          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
+          "evidence": "* `locale`, which is based on the `ui_local` query parameter on `/authorize` requests",
+          "line": 64
+        },
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "* `locale`, which is based on the `ui_local` query parameter on `/authorize` requests",
+          "line": 64
         }
       ]
     },
@@ -6781,6 +6808,121 @@
           "line": 9
         }
       ]
+    },
+    {
+      "id": "main/docs/events/group/group.created.mdx",
+      "filePath": "main/docs/events/group/group.created.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/group/group.deleted.mdx",
+      "filePath": "main/docs/events/group/group.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/group/group.member.added.mdx",
+      "filePath": "main/docs/events/group/group.member.added.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/group/group.member.deleted.mdx",
+      "filePath": "main/docs/events/group/group.member.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/group/group.role.assigned.mdx",
+      "filePath": "main/docs/events/group/group.role.assigned.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/group/group.role.deleted.mdx",
+      "filePath": "main/docs/events/group/group.role.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/group/group.updated.mdx",
+      "filePath": "main/docs/events/group/group.updated.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/index.mdx",
+      "filePath": "main/docs/events/index.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.connection.added.mdx",
+      "filePath": "main/docs/events/organization/organization.connection.added.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.connection.removed.mdx",
+      "filePath": "main/docs/events/organization/organization.connection.removed.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.connection.updated.mdx",
+      "filePath": "main/docs/events/organization/organization.connection.updated.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.created.mdx",
+      "filePath": "main/docs/events/organization/organization.created.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.deleted.mdx",
+      "filePath": "main/docs/events/organization/organization.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.group.role.assigned.mdx",
+      "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.group.role.deleted.mdx",
+      "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.member.added.mdx",
+      "filePath": "main/docs/events/organization/organization.member.added.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.member.deleted.mdx",
+      "filePath": "main/docs/events/organization/organization.member.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.member.role.assigned.mdx",
+      "filePath": "main/docs/events/organization/organization.member.role.assigned.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.member.role.deleted.mdx",
+      "filePath": "main/docs/events/organization/organization.member.role.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/organization/organization.updated.mdx",
+      "filePath": "main/docs/events/organization/organization.updated.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/user/user.created.mdx",
+      "filePath": "main/docs/events/user/user.created.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/user/user.deleted.mdx",
+      "filePath": "main/docs/events/user/user.deleted.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/events/user/user.updated.mdx",
+      "filePath": "main/docs/events/user/user.updated.mdx",
+      "warnings": []
     },
     {
       "id": "main/docs/fine-grained-m2m-token-quotas.mdx",
@@ -25245,6 +25387,29 @@
         "line": 7
       }
     ],
+    "main/docs/events/index.mdx": [],
+    "main/docs/events/user/user.created.mdx": [],
+    "main/docs/events/user/user.deleted.mdx": [],
+    "main/docs/events/user/user.updated.mdx": [],
+    "main/docs/events/organization/organization.connection.added.mdx": [],
+    "main/docs/events/organization/organization.connection.removed.mdx": [],
+    "main/docs/events/organization/organization.connection.updated.mdx": [],
+    "main/docs/events/organization/organization.created.mdx": [],
+    "main/docs/events/organization/organization.deleted.mdx": [],
+    "main/docs/events/organization/organization.group.role.assigned.mdx": [],
+    "main/docs/events/organization/organization.group.role.deleted.mdx": [],
+    "main/docs/events/organization/organization.member.added.mdx": [],
+    "main/docs/events/organization/organization.member.deleted.mdx": [],
+    "main/docs/events/organization/organization.member.role.assigned.mdx": [],
+    "main/docs/events/organization/organization.member.role.deleted.mdx": [],
+    "main/docs/events/organization/organization.updated.mdx": [],
+    "main/docs/events/group/group.created.mdx": [],
+    "main/docs/events/group/group.deleted.mdx": [],
+    "main/docs/events/group/group.member.added.mdx": [],
+    "main/docs/events/group/group.member.deleted.mdx": [],
+    "main/docs/events/group/group.role.assigned.mdx": [],
+    "main/docs/events/group/group.role.deleted.mdx": [],
+    "main/docs/events/group/group.updated.mdx": [],
     "main/docs/deploy-monitor/auth0-cli.mdx": [],
     "main/docs/deploy-monitor/auth0-terraform-provider.mdx": [],
     "main/docs/deploy-monitor/deploy-checklist.mdx": [],
@@ -25436,19 +25601,28 @@
     "main/docs/customize/rules/use-management-api.mdx": [],
     "main/docs/customize/rules/user-object-in-rules.mdx": [],
     "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx": [],
-    "main/docs/customize/phone-messages/customize-phone-templates.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Auth0 exposes the same set of [contextual variables](/docs/customize/email/email-templates#common-variables) that you can access using Liquid syntax for phone templates as it does ",
-        "line": 33
-      }
-    ],
+    "main/docs/customize/phone-messages/phone-templates.mdx": [],
     "main/docs/customize/phone-messages/unified-phone.mdx": [],
     "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx": [],
     "main/docs/customize/phone-messages/unified-phone/unified-phone-experience-passwordless.mdx": [],
     "main/docs/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication.mdx": [],
+    "main/docs/customize/phone-messages/phone-templates/customize.mdx": [],
+    "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx": [
+      {
+        "code": "missing_pkce_mention",
+        "severity": "warn",
+        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
+        "evidence": "* `locale`, which is based on the `ui_local` query parameter on `/authorize` requests",
+        "line": 64
+      },
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "* `locale`, which is based on the `ui_local` query parameter on `/authorize` requests",
+        "line": 64
+      }
+    ],
     "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx": [],
     "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider.mdx": [],
     "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/action-triggers-custom-phone-provider-api-object.mdx": [],
@@ -27766,8 +27940,10 @@
     "main/docs/api/management/v2/custom-domains/delete-custom-domain-configuration.mdx": [],
     "main/docs/api/management/v2/custom-domains/get-custom-domain-configuration.mdx": [],
     "main/docs/api/management/v2/custom-domains/get-custom-domains-configurations.mdx": [],
+    "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx": [],
     "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": [],
     "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx": [],
+    "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx": [],
     "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx": [],
     "main/docs/api/management/v2/connections-scim-configurations/get-a-list-of-scim-configurations.mdx": [],
     "main/docs/api/management/v2/connections-directory-provisionings/get-a-list-of-directory-provisioning-configurations.mdx": [],

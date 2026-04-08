@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-07T04:37:12.343Z",
+  "generatedAtUtc": "2026-04-08T04:40:58.292Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -5761,26 +5761,10 @@
                     "label": "Customize Emails",
                     "children": [
                       {
-                        "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/page:docs/customize/email:docs/customize/email",
-                        "kind": "page",
-                        "label": "docs/customize/email",
-                        "route": "docs/customize/email",
-                        "filePath": "main/docs/customize/email.mdx",
-                        "children": []
-                      },
-                      {
                         "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers",
                         "kind": "group",
                         "label": "SMTP Email Providers",
                         "children": [
-                          {
-                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/page:docs/customize/email/smtp-email-providers:docs/customize/ema",
-                            "kind": "page",
-                            "label": "docs/customize/email/smtp-email-providers",
-                            "route": "docs/customize/email/smtp-email-providers",
-                            "filePath": "main/docs/customize/email/smtp-email-providers.mdx",
-                            "children": []
-                          },
                           {
                             "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/page:docs/customize/email/smtp-email-providers/amazon-ses:docs/cu",
                             "kind": "page",
@@ -5851,14 +5835,6 @@
                             "label": "Custom Configuration with Actions",
                             "children": [
                               {
-                                "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/group:custom-configuration-with-actions/page:docs/customize/email/smtp-email-providers/custom:docs/custom",
-                                "kind": "page",
-                                "label": "docs/customize/email/smtp-email-providers/custom",
-                                "route": "docs/customize/email/smtp-email-providers/custom",
-                                "filePath": "main/docs/customize/email/smtp-email-providers/custom.mdx",
-                                "children": []
-                              },
-                              {
                                 "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/group:custom-configuration-with-actions/page:docs/customize/email/smtp-email-providers/custom/configure-a",
                                 "kind": "page",
                                 "label": "docs/customize/email/smtp-email-providers/custom/configure-action",
@@ -5899,14 +5875,6 @@
                         "kind": "group",
                         "label": "Email Templates",
                         "children": [
-                          {
-                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:email-templates/page:docs/customize/email/email-templates:docs/customize/email/em",
-                            "kind": "page",
-                            "label": "docs/customize/email/email-templates",
-                            "route": "docs/customize/email/email-templates",
-                            "filePath": "main/docs/customize/email/email-templates.mdx",
-                            "children": []
-                          },
                           {
                             "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:email-templates/page:docs/customize/email/email-templates/customize-email-templat",
                             "kind": "page",
@@ -5949,26 +5917,10 @@
                     "label": "Customize Phone Messages",
                     "children": [
                       {
-                        "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/page:docs/customize/phone-messages:docs/customize/phone-messages",
-                        "kind": "page",
-                        "label": "docs/customize/phone-messages",
-                        "route": "docs/customize/phone-messages",
-                        "filePath": "main/docs/customize/phone-messages.mdx",
-                        "children": []
-                      },
-                      {
                         "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:auth0s-unified-phone-experience",
                         "kind": "group",
                         "label": "Auth0's Unified Phone Experience",
                         "children": [
-                          {
-                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:auth0s-unified-phone-experience/page:docs/customize/phone-messages/unified-phone:docs/customize/p",
-                            "kind": "page",
-                            "label": "docs/customize/phone-messages/unified-phone",
-                            "route": "docs/customize/phone-messages/unified-phone",
-                            "filePath": "main/docs/customize/phone-messages/unified-phone.mdx",
-                            "children": []
-                          },
                           {
                             "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:auth0s-unified-phone-experience/page:docs/customize/phone-messages/unified-phone/use-auth0s-unifi",
                             "kind": "page",
@@ -6003,14 +5955,6 @@
                           {
                             "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/page:docs/customize/phone-messages/configure-phone-messaging-prov",
                             "kind": "page",
-                            "label": "docs/customize/phone-messages/configure-phone-messaging-providers",
-                            "route": "docs/customize/phone-messages/configure-phone-messaging-providers",
-                            "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
-                            "children": []
-                          },
-                          {
-                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/page:docs/customize/phone-messages/configure-phone-messaging-prov",
-                            "kind": "page",
                             "label": "docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider",
                             "route": "docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider",
                             "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider.mdx",
@@ -6021,14 +5965,6 @@
                             "kind": "group",
                             "label": "Configure a Custom Phone Provider",
                             "children": [
-                              {
-                                "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/group:configure-a-custom-phone-provider/page:docs/customize/phone-messages/configure-phone-messaging-prov",
-                                "kind": "page",
-                                "label": "docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider",
-                                "route": "docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider",
-                                "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
-                                "children": []
-                              },
                               {
                                 "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/group:configure-a-custom-phone-provider/page:docs/customize/phone-messages/configure-phone-messaging-prov",
                                 "kind": "page",
@@ -6066,12 +6002,27 @@
                         ]
                       },
                       {
-                        "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/page:docs/customize/phone-messages/customize-phone-templates:docs",
-                        "kind": "page",
-                        "label": "docs/customize/phone-messages/customize-phone-templates",
-                        "route": "docs/customize/phone-messages/customize-phone-templates",
-                        "filePath": "main/docs/customize/phone-messages/customize-phone-templates.mdx",
-                        "children": []
+                        "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates",
+                        "kind": "group",
+                        "label": "Phone Templates",
+                        "children": [
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates/page:docs/customize/phone-messages/phone-templates/customize:docs",
+                            "kind": "page",
+                            "label": "docs/customize/phone-messages/phone-templates/customize",
+                            "route": "docs/customize/phone-messages/phone-templates/customize",
+                            "filePath": "main/docs/customize/phone-messages/phone-templates/customize.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates/page:docs/customize/phone-messages/phone-templates/supported-liqu",
+                            "kind": "page",
+                            "label": "docs/customize/phone-messages/phone-templates/supported-liquid-syntax",
+                            "route": "docs/customize/phone-messages/phone-templates/supported-liquid-syntax",
+                            "filePath": "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx",
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   },
@@ -12743,6 +12694,22 @@
                         "children": []
                       },
                       {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains/page:docs/api/management/v2/custom-domains/get-the-default-domain",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/custom-domains/get-the-default-domain",
+                        "route": "docs/api/management/v2/custom-domains/get-the-default-domain",
+                        "filePath": "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains/page:docs/api/management/v2/custom-domains/update-the-default-cus",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant",
+                        "route": "docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant",
+                        "filePath": "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx",
+                        "children": []
+                      },
+                      {
                         "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains/page:docs/api/management/v2/custom-domains/get-custom-domain-conf",
                         "kind": "page",
                         "label": "docs/api/management/v2/custom-domains/get-custom-domain-configuration",
@@ -15640,7 +15607,220 @@
         "id": "root/tab:events-catalog",
         "kind": "tab",
         "label": "Events Catalog",
-        "children": []
+        "children": [
+          {
+            "id": "root/tab:events-catalog/page:docs/events/index:docs/events/index",
+            "kind": "page",
+            "label": "docs/events/index",
+            "route": "docs/events/index",
+            "filePath": "main/docs/events/index.mdx",
+            "children": []
+          },
+          {
+            "id": "root/tab:events-catalog/group:unnamed",
+            "kind": "group",
+            "label": " ",
+            "children": [
+              {
+                "id": "root/tab:events-catalog/group:unnamed/group:group",
+                "kind": "group",
+                "label": "Group",
+                "children": [
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.created:docs/events/group/group.crea",
+                    "kind": "page",
+                    "label": "docs/events/group/group.created",
+                    "route": "docs/events/group/group.created",
+                    "filePath": "main/docs/events/group/group.created.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.deleted:docs/events/group/group.dele",
+                    "kind": "page",
+                    "label": "docs/events/group/group.deleted",
+                    "route": "docs/events/group/group.deleted",
+                    "filePath": "main/docs/events/group/group.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.member.added:docs/events/group/group",
+                    "kind": "page",
+                    "label": "docs/events/group/group.member.added",
+                    "route": "docs/events/group/group.member.added",
+                    "filePath": "main/docs/events/group/group.member.added.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.member.deleted:docs/events/group/gro",
+                    "kind": "page",
+                    "label": "docs/events/group/group.member.deleted",
+                    "route": "docs/events/group/group.member.deleted",
+                    "filePath": "main/docs/events/group/group.member.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.role.assigned:docs/events/group/grou",
+                    "kind": "page",
+                    "label": "docs/events/group/group.role.assigned",
+                    "route": "docs/events/group/group.role.assigned",
+                    "filePath": "main/docs/events/group/group.role.assigned.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.role.deleted:docs/events/group/group",
+                    "kind": "page",
+                    "label": "docs/events/group/group.role.deleted",
+                    "route": "docs/events/group/group.role.deleted",
+                    "filePath": "main/docs/events/group/group.role.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.updated:docs/events/group/group.upda",
+                    "kind": "page",
+                    "label": "docs/events/group/group.updated",
+                    "route": "docs/events/group/group.updated",
+                    "filePath": "main/docs/events/group/group.updated.mdx",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root/tab:events-catalog/group:unnamed/group:organization",
+                "kind": "group",
+                "label": "Organization",
+                "children": [
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.connection.added:docs/",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.connection.added",
+                    "route": "docs/events/organization/organization.connection.added",
+                    "filePath": "main/docs/events/organization/organization.connection.added.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.connection.removed:doc",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.connection.removed",
+                    "route": "docs/events/organization/organization.connection.removed",
+                    "filePath": "main/docs/events/organization/organization.connection.removed.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.connection.updated:doc",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.connection.updated",
+                    "route": "docs/events/organization/organization.connection.updated",
+                    "filePath": "main/docs/events/organization/organization.connection.updated.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.created:docs/events/or",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.created",
+                    "route": "docs/events/organization/organization.created",
+                    "filePath": "main/docs/events/organization/organization.created.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.deleted:docs/events/or",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.deleted",
+                    "route": "docs/events/organization/organization.deleted",
+                    "filePath": "main/docs/events/organization/organization.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.group.role.assigned:do",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.group.role.assigned",
+                    "route": "docs/events/organization/organization.group.role.assigned",
+                    "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.group.role.deleted:doc",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.group.role.deleted",
+                    "route": "docs/events/organization/organization.group.role.deleted",
+                    "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.added:docs/even",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.member.added",
+                    "route": "docs/events/organization/organization.member.added",
+                    "filePath": "main/docs/events/organization/organization.member.added.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.deleted:docs/ev",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.member.deleted",
+                    "route": "docs/events/organization/organization.member.deleted",
+                    "filePath": "main/docs/events/organization/organization.member.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.role.assigned:d",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.member.role.assigned",
+                    "route": "docs/events/organization/organization.member.role.assigned",
+                    "filePath": "main/docs/events/organization/organization.member.role.assigned.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.role.deleted:do",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.member.role.deleted",
+                    "route": "docs/events/organization/organization.member.role.deleted",
+                    "filePath": "main/docs/events/organization/organization.member.role.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.updated:docs/events/or",
+                    "kind": "page",
+                    "label": "docs/events/organization/organization.updated",
+                    "route": "docs/events/organization/organization.updated",
+                    "filePath": "main/docs/events/organization/organization.updated.mdx",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "root/tab:events-catalog/group:unnamed/group:user",
+                "kind": "group",
+                "label": "User",
+                "children": [
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:user/page:docs/events/user/user.created:docs/events/user/user.created",
+                    "kind": "page",
+                    "label": "docs/events/user/user.created",
+                    "route": "docs/events/user/user.created",
+                    "filePath": "main/docs/events/user/user.created.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:user/page:docs/events/user/user.deleted:docs/events/user/user.deleted",
+                    "kind": "page",
+                    "label": "docs/events/user/user.deleted",
+                    "route": "docs/events/user/user.deleted",
+                    "filePath": "main/docs/events/user/user.deleted.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:events-catalog/group:unnamed/group:user/page:docs/events/user/user.updated:docs/events/user/user.updated",
+                    "kind": "page",
+                    "label": "docs/events/user/user.updated",
+                    "route": "docs/events/user/user.updated",
+                    "filePath": "main/docs/events/user/user.updated.mdx",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -29326,6 +29326,759 @@
     "navLabel": "Sample Use Cases: Scopes and Claims",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/events/index.mdx": {
+    "filePath": "main/docs/events/index.mdx",
+    "navDepth": 1,
+    "navNodePaths": [
+      {
+        "route": "docs/events/index",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/page:docs/events/index:docs/events/index"
+        ],
+        "labels": [
+          "Events Catalog",
+          "Events Catalog"
+        ],
+        "kinds": [
+          "tab",
+          "page"
+        ],
+        "leafLabel": "Events Catalog",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog",
+        "pathString": "Events Catalog > Events Catalog"
+      }
+    ],
+    "navLabel": "Events Catalog",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/user/user.created.mdx": {
+    "filePath": "main/docs/events/user/user.created.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/user/user.created",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:user",
+          "root/tab:events-catalog/group:unnamed/group:user/page:docs/events/user/user.created:docs/events/user/user.created"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "User",
+          "user.created"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "user.created",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > User",
+        "pathString": "Events Catalog >   > User > user.created"
+      }
+    ],
+    "navLabel": "user.created",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/user/user.deleted.mdx": {
+    "filePath": "main/docs/events/user/user.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/user/user.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:user",
+          "root/tab:events-catalog/group:unnamed/group:user/page:docs/events/user/user.deleted:docs/events/user/user.deleted"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "User",
+          "user.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "user.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > User",
+        "pathString": "Events Catalog >   > User > user.deleted"
+      }
+    ],
+    "navLabel": "user.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/user/user.updated.mdx": {
+    "filePath": "main/docs/events/user/user.updated.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/user/user.updated",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:user",
+          "root/tab:events-catalog/group:unnamed/group:user/page:docs/events/user/user.updated:docs/events/user/user.updated"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "User",
+          "user.updated"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "user.updated",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > User",
+        "pathString": "Events Catalog >   > User > user.updated"
+      }
+    ],
+    "navLabel": "user.updated",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.connection.added.mdx": {
+    "filePath": "main/docs/events/organization/organization.connection.added.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.connection.added",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.connection.added:docs/"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.connection.added"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.connection.added",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.connection.added"
+      }
+    ],
+    "navLabel": "organization.connection.added",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.connection.removed.mdx": {
+    "filePath": "main/docs/events/organization/organization.connection.removed.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.connection.removed",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.connection.removed:doc"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.connection.removed"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.connection.removed",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.connection.removed"
+      }
+    ],
+    "navLabel": "organization.connection.removed",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.connection.updated.mdx": {
+    "filePath": "main/docs/events/organization/organization.connection.updated.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.connection.updated",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.connection.updated:doc"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.connection.updated"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.connection.updated",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.connection.updated"
+      }
+    ],
+    "navLabel": "organization.connection.updated",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.created.mdx": {
+    "filePath": "main/docs/events/organization/organization.created.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.created",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.created:docs/events/or"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.created"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.created",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.created"
+      }
+    ],
+    "navLabel": "organization.created",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.deleted.mdx": {
+    "filePath": "main/docs/events/organization/organization.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.deleted:docs/events/or"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.deleted"
+      }
+    ],
+    "navLabel": "organization.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.group.role.assigned.mdx": {
+    "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.group.role.assigned",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.group.role.assigned:do"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.group.role.assigned"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.group.role.assigned",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.group.role.assigned"
+      }
+    ],
+    "navLabel": "organization.group.role.assigned",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.group.role.deleted.mdx": {
+    "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.group.role.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.group.role.deleted:doc"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.group.role.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.group.role.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.group.role.deleted"
+      }
+    ],
+    "navLabel": "organization.group.role.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.member.added.mdx": {
+    "filePath": "main/docs/events/organization/organization.member.added.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.member.added",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.added:docs/even"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.member.added"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.member.added",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.member.added"
+      }
+    ],
+    "navLabel": "organization.member.added",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.member.deleted.mdx": {
+    "filePath": "main/docs/events/organization/organization.member.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.member.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.deleted:docs/ev"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.member.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.member.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.member.deleted"
+      }
+    ],
+    "navLabel": "organization.member.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.member.role.assigned.mdx": {
+    "filePath": "main/docs/events/organization/organization.member.role.assigned.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.member.role.assigned",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.role.assigned:d"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.member.role.assigned"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.member.role.assigned",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.member.role.assigned"
+      }
+    ],
+    "navLabel": "organization.member.role.assigned",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.member.role.deleted.mdx": {
+    "filePath": "main/docs/events/organization/organization.member.role.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.member.role.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.member.role.deleted:do"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.member.role.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.member.role.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.member.role.deleted"
+      }
+    ],
+    "navLabel": "organization.member.role.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/organization/organization.updated.mdx": {
+    "filePath": "main/docs/events/organization/organization.updated.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/organization/organization.updated",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:organization",
+          "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.updated:docs/events/or"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Organization",
+          "organization.updated"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "organization.updated",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Organization",
+        "pathString": "Events Catalog >   > Organization > organization.updated"
+      }
+    ],
+    "navLabel": "organization.updated",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.created.mdx": {
+    "filePath": "main/docs/events/group/group.created.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.created",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.created:docs/events/group/group.crea"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.created"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.created",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.created"
+      }
+    ],
+    "navLabel": "group.created",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.deleted.mdx": {
+    "filePath": "main/docs/events/group/group.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.deleted:docs/events/group/group.dele"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.deleted"
+      }
+    ],
+    "navLabel": "group.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.member.added.mdx": {
+    "filePath": "main/docs/events/group/group.member.added.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.member.added",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.member.added:docs/events/group/group"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.member.added"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.member.added",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.member.added"
+      }
+    ],
+    "navLabel": "group.member.added",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.member.deleted.mdx": {
+    "filePath": "main/docs/events/group/group.member.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.member.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.member.deleted:docs/events/group/gro"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.member.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.member.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.member.deleted"
+      }
+    ],
+    "navLabel": "group.member.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.role.assigned.mdx": {
+    "filePath": "main/docs/events/group/group.role.assigned.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.role.assigned",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.role.assigned:docs/events/group/grou"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.role.assigned"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.role.assigned",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.role.assigned"
+      }
+    ],
+    "navLabel": "group.role.assigned",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.role.deleted.mdx": {
+    "filePath": "main/docs/events/group/group.role.deleted.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.role.deleted",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.role.deleted:docs/events/group/group"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.role.deleted"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.role.deleted",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.role.deleted"
+      }
+    ],
+    "navLabel": "group.role.deleted",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/events/group/group.updated.mdx": {
+    "filePath": "main/docs/events/group/group.updated.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/events/group/group.updated",
+        "nodeIds": [
+          "root/tab:events-catalog",
+          "root/tab:events-catalog/group:unnamed",
+          "root/tab:events-catalog/group:unnamed/group:group",
+          "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.updated:docs/events/group/group.upda"
+        ],
+        "labels": [
+          "Events Catalog",
+          " ",
+          "Group",
+          "group.updated"
+        ],
+        "kinds": [
+          "tab",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "group.updated",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Events Catalog >   > Group",
+        "pathString": "Events Catalog >   > Group > group.updated"
+      }
+    ],
+    "navLabel": "group.updated",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/deploy-monitor/auth0-cli.mdx": {
     "filePath": "main/docs/deploy-monitor/auth0-cli.mdx",
     "navDepth": 3,
@@ -30888,39 +31641,7 @@
   },
   "main/docs/customize/email.mdx": {
     "filePath": "main/docs/customize/email.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/email",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/page:docs/customize/email:docs/customize/email"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Emails",
-          "Customize Emails"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Customize Emails",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Emails",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > Customize Emails"
-      }
-    ],
-    "navLabel": "Customize Emails",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/customize/events.mdx": {
     "filePath": "main/docs/customize/events.mdx",
@@ -31180,39 +31901,7 @@
   },
   "main/docs/customize/phone-messages.mdx": {
     "filePath": "main/docs/customize/phone-messages.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/phone-messages",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/page:docs/customize/phone-messages:docs/customize/phone-messages"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Phone Messages",
-          "Customize Phone Messages"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Customize Phone Messages",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Customize Phone Messages"
-      }
-    ],
-    "navLabel": "Customize Phone Messages",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/customize/rules.mdx": {
     "filePath": "main/docs/customize/rules.mdx",
@@ -31616,117 +32305,15 @@
   },
   "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx": {
     "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/phone-messages/configure-phone-messaging-providers",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/page:docs/customize/phone-messages/configure-phone-messaging-prov"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Phone Messages",
-          "Configure Phone Messaging Providers",
-          "Configure Phone Messaging Providers"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Configure Phone Messaging Providers",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure Phone Messaging Providers"
-      }
-    ],
-    "navLabel": "Configure Phone Messaging Providers",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
-  "main/docs/customize/phone-messages/customize-phone-templates.mdx": {
-    "filePath": "main/docs/customize/phone-messages/customize-phone-templates.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/phone-messages/customize-phone-templates",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/page:docs/customize/phone-messages/customize-phone-templates:docs"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Phone Messages",
-          "Customize Phone Templates"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Customize Phone Templates",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Customize Phone Templates"
-      }
-    ],
-    "navLabel": "Customize Phone Templates",
-    "navLabelSource": "frontmatter"
+  "main/docs/customize/phone-messages/phone-templates.mdx": {
+    "filePath": "main/docs/customize/phone-messages/phone-templates.mdx",
+    "navNodePaths": []
   },
   "main/docs/customize/phone-messages/unified-phone.mdx": {
     "filePath": "main/docs/customize/phone-messages/unified-phone.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/phone-messages/unified-phone",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:auth0s-unified-phone-experience",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:auth0s-unified-phone-experience/page:docs/customize/phone-messages/unified-phone:docs/customize/p"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Phone Messages",
-          "Auth0's Unified Phone Experience",
-          "Auth0's Unified Phone Experience"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Auth0's Unified Phone Experience",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Auth0's Unified Phone Experience",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Auth0's Unified Phone Experience > Auth0's Unified Phone Experience"
-      }
-    ],
-    "navLabel": "Auth0's Unified Phone Experience",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx": {
     "filePath": "main/docs/customize/phone-messages/unified-phone/configure-unified-phone.mdx",
@@ -31845,29 +32432,27 @@
     "navLabel": "Use Auth0's Unified Phone Experience for Multi-Factor Authentication",
     "navLabelSource": "frontmatter"
   },
-  "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx": {
-    "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
-    "navDepth": 6,
+  "main/docs/customize/phone-messages/phone-templates/customize.mdx": {
+    "filePath": "main/docs/customize/phone-messages/phone-templates/customize.mdx",
+    "navDepth": 5,
     "navNodePaths": [
       {
-        "route": "docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider",
+        "route": "docs/customize/phone-messages/phone-templates/customize",
         "nodeIds": [
           "root/tab:documentation",
           "root/tab:documentation/dropdown:customize",
           "root/tab:documentation/dropdown:customize/group:brand-customization",
           "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/group:configure-a-custom-phone-provider",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:configure-phone-messaging-providers/group:configure-a-custom-phone-provider/page:docs/customize/phone-messages/configure-phone-messaging-prov"
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates/page:docs/customize/phone-messages/phone-templates/customize:docs"
         ],
         "labels": [
           "Documentation",
           "Customize",
           "Brand Customization",
           "Customize Phone Messages",
-          "Configure Phone Messaging Providers",
-          "Configure a Custom Phone Provider",
-          "Configure a Custom Phone Provider"
+          "Phone Templates",
+          "Customize Phone Templates"
         ],
         "kinds": [
           "tab",
@@ -31875,17 +32460,59 @@
           "group",
           "group",
           "group",
+          "page"
+        ],
+        "leafLabel": "Customize Phone Templates",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Phone Templates",
+        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Phone Templates > Customize Phone Templates"
+      }
+    ],
+    "navLabel": "Customize Phone Templates",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx": {
+    "filePath": "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/phone-messages/phone-templates/supported-liquid-syntax",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:brand-customization",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-phone-messages/group:phone-templates/page:docs/customize/phone-messages/phone-templates/supported-liqu"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Brand Customization",
+          "Customize Phone Messages",
+          "Phone Templates",
+          "Supported Liquid Syntax for Phone Templates"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
           "group",
           "page"
         ],
-        "leafLabel": "Configure a Custom Phone Provider",
+        "leafLabel": "Supported Liquid Syntax for Phone Templates",
         "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Configure Phone Messaging Providers > Configure a Custom Phone Provider > Configure a Custom Phone Provider"
+        "containerString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Phone Templates",
+        "pathString": "Documentation > Customize > Brand Customization > Customize Phone Messages > Phone Templates > Supported Liquid Syntax for Phone Templates"
       }
     ],
-    "navLabel": "Configure a Custom Phone Provider",
+    "navLabel": "Supported Liquid Syntax for Phone Templates",
     "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx": {
+    "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
+    "navNodePaths": []
   },
   "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider.mdx": {
     "filePath": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider.mdx",
@@ -38664,42 +39291,7 @@
   },
   "main/docs/customize/email/email-templates.mdx": {
     "filePath": "main/docs/customize/email/email-templates.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/email/email-templates",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:email-templates",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:email-templates/page:docs/customize/email/email-templates:docs/customize/email/em"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Emails",
-          "Email Templates",
-          "Email Templates"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Email Templates",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Emails > Email Templates",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > Email Templates > Email Templates"
-      }
-    ],
-    "navLabel": "Email Templates",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/customize/email/manage-email-flow.mdx": {
     "filePath": "main/docs/customize/email/manage-email-flow.mdx",
@@ -38775,42 +39367,7 @@
   },
   "main/docs/customize/email/smtp-email-providers.mdx": {
     "filePath": "main/docs/customize/email/smtp-email-providers.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/email/smtp-email-providers",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/page:docs/customize/email/smtp-email-providers:docs/customize/ema"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Emails",
-          "SMTP Email Providers",
-          "SMTP Email Provider Overview"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "SMTP Email Provider Overview",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > SMTP Email Provider Overview"
-      }
-    ],
-    "navLabel": "SMTP Email Provider Overview",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/customize/email/smtp-email-providers/amazon-ses.mdx": {
     "filePath": "main/docs/customize/email/smtp-email-providers/amazon-ses.mdx",
@@ -38892,45 +39449,7 @@
   },
   "main/docs/customize/email/smtp-email-providers/custom.mdx": {
     "filePath": "main/docs/customize/email/smtp-email-providers/custom.mdx",
-    "navDepth": 6,
-    "navNodePaths": [
-      {
-        "route": "docs/customize/email/smtp-email-providers/custom",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:customize",
-          "root/tab:documentation/dropdown:customize/group:brand-customization",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/group:custom-configuration-with-actions",
-          "root/tab:documentation/dropdown:customize/group:brand-customization/group:customize-emails/group:smtp-email-providers/group:custom-configuration-with-actions/page:docs/customize/email/smtp-email-providers/custom:docs/custom"
-        ],
-        "labels": [
-          "Documentation",
-          "Customize",
-          "Brand Customization",
-          "Customize Emails",
-          "SMTP Email Providers",
-          "Custom Configuration with Actions",
-          "Custom Email Provider Configuration with Actions"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Custom Email Provider Configuration with Actions",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > SMTP Email Providers > Custom Configuration with Actions > Custom Email Provider Configuration with Actions"
-      }
-    ],
-    "navLabel": "Custom Email Provider Configuration with Actions",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/customize/email/smtp-email-providers/mailgun.mdx": {
     "filePath": "main/docs/customize/email/smtp-email-providers/mailgun.mdx",
@@ -39390,7 +39909,7 @@
           "Brand Customization",
           "Customize Emails",
           "Email Templates",
-          "Supported Liquid Syntax"
+          "Supported Liquid Syntax for Email Templates"
         ],
         "kinds": [
           "tab",
@@ -39400,13 +39919,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Supported Liquid Syntax",
+        "leafLabel": "Supported Liquid Syntax for Email Templates",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Customize > Brand Customization > Customize Emails > Email Templates",
-        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > Email Templates > Supported Liquid Syntax"
+        "pathString": "Documentation > Customize > Brand Customization > Customize Emails > Email Templates > Supported Liquid Syntax for Email Templates"
       }
     ],
-    "navLabel": "Supported Liquid Syntax",
+    "navLabel": "Supported Liquid Syntax for Email Templates",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/custom-domains/auth0-managed-certificates.mdx": {
@@ -61919,6 +62438,42 @@
     "navLabel": "get custom domains configurations",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx": {
+    "filePath": "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/custom-domains/get-the-default-domain",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains/page:docs/api/management/v2/custom-domains/get-the-default-domain"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Custom Domains",
+          "get the default domain"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get the default domain",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Custom Domains",
+        "pathString": "API Reference > Management API >   > Custom Domains > get the default domain"
+      }
+    ],
+    "navLabel": "get the default domain",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": {
     "filePath": "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx",
     "navDepth": 4,
@@ -61989,6 +62544,42 @@
       }
     ],
     "navLabel": "update custom domain configuration",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx": {
+    "filePath": "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:custom-domains/page:docs/api/management/v2/custom-domains/update-the-default-cus"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Custom Domains",
+          "update the default custom domain for the tenant"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "update the default custom domain for the tenant",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Custom Domains",
+        "pathString": "API Reference > Management API >   > Custom Domains > update the default custom domain for the tenant"
+      }
+    ],
+    "navLabel": "update the default custom domain for the tenant",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/custom-domains/verify-a-custom-domain.mdx": {

@@ -862,7 +862,7 @@
     "deadEndScore": 0.125
   },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx": {
-    "inboundLinks": 1,
+    "inboundLinks": 2,
     "outboundLinks": 2,
     "importedBy": 0,
     "navDepth": 5,
@@ -871,9 +871,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 1,
+    "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 0.5
+    "deadEndScore": 1
   },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx": {
     "inboundLinks": 1,
@@ -4905,7 +4905,7 @@
   },
   "main/docs/quickstart/webapp/golang/index.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 9,
+    "outboundLinks": 10,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -6574,7 +6574,7 @@
     "deadEndScore": 0.4545
   },
   "main/docs/manage-users/user-accounts/metadata.mdx": {
-    "inboundLinks": 31,
+    "inboundLinks": 32,
     "outboundLinks": 15,
     "importedBy": 0,
     "navDepth": 5,
@@ -6583,9 +6583,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 31,
+    "hubScore": 32,
     "deadEnd": false,
-    "deadEndScore": 2.0667
+    "deadEndScore": 2.1333
   },
   "main/docs/manage-users/user-accounts/resend-verification-emails.mdx": {
     "inboundLinks": 0,
@@ -7229,7 +7229,7 @@
     "deadEndScore": 0.4286
   },
   "main/docs/manage-users/organizations/organizations-overview.mdx": {
-    "inboundLinks": 41,
+    "inboundLinks": 42,
     "outboundLinks": 13,
     "importedBy": 0,
     "navDepth": 4,
@@ -7238,9 +7238,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 41,
+    "hubScore": 42,
     "deadEnd": false,
-    "deadEndScore": 3.1538
+    "deadEndScore": 3.2308
   },
   "main/docs/manage-users/organizations/using-tokens.mdx": {
     "inboundLinks": 8,
@@ -19654,7 +19654,7 @@
   },
   "main/docs/get-started/auth0-overview/create-tenants/multi-tenant-apps-best-practices.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 7,
+    "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -19664,7 +19664,7 @@
     "deepNav": true,
     "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 0.5714
+    "deadEndScore": 0.5
   },
   "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx": {
     "inboundLinks": 20,
@@ -20424,7 +20424,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 30,
+    "outboundLinks": 31,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20434,7 +20434,7 @@
     "deepNav": true,
     "hubScore": 3,
     "deadEnd": false,
-    "deadEndScore": 0.1
+    "deadEndScore": 0.0968
   },
   "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx": {
     "inboundLinks": 4,
@@ -20662,7 +20662,7 @@
   },
   "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx": {
     "inboundLinks": 4,
-    "outboundLinks": 37,
+    "outboundLinks": 38,
     "importedBy": 0,
     "navDepth": 5,
     "orphanNav": false,
@@ -20672,7 +20672,7 @@
     "deepNav": true,
     "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 0.1081
+    "deadEndScore": 0.1053
   },
   "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx": {
     "inboundLinks": 4,
@@ -21693,6 +21693,328 @@
     "deadEnd": false,
     "deadEndScore": 0.9231
   },
+  "main/docs/events/index.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 1,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/user/user.created.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/user/user.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/user/user.updated.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.connection.added.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.connection.removed.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.connection.updated.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.created.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.group.role.assigned.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.group.role.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.member.added.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.member.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.member.role.assigned.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.member.role.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/organization/organization.updated.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.created.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.member.added.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.member.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.role.assigned.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.role.deleted.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/events/group/group.updated.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/deploy-monitor/auth0-cli.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 1,
@@ -21905,7 +22227,7 @@
   },
   "main/docs/deploy-monitor/pre-deployment-checks/production-check-required-fixes.mdx": {
     "inboundLinks": 3,
-    "outboundLinks": 18,
+    "outboundLinks": 19,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -21915,7 +22237,7 @@
     "deepNav": false,
     "hubScore": 3,
     "deadEnd": false,
-    "deadEndScore": 0.1667
+    "deadEndScore": 0.1579
   },
   "main/docs/deploy-monitor/pre-deployment-checks/production-checks-best-practices.mdx": {
     "inboundLinks": 5,
@@ -22313,8 +22635,7 @@
     "inboundLinks": 8,
     "outboundLinks": 6,
     "importedBy": 0,
-    "navDepth": 4,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
@@ -22438,11 +22759,10 @@
     "inboundLinks": 0,
     "outboundLinks": 2,
     "importedBy": 0,
-    "navDepth": 4,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": true,
-    "orphanTrue": false,
-    "orphanReference": true,
+    "orphanTrue": true,
+    "orphanReference": false,
     "deepNav": false,
     "hubScore": 0,
     "deadEnd": false,
@@ -22616,43 +22936,40 @@
     "deadEndScore": 0.7143
   },
   "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx": {
-    "inboundLinks": 3,
+    "inboundLinks": 2,
     "outboundLinks": 4,
     "importedBy": 0,
-    "navDepth": 5,
-    "orphanNav": false,
-    "orphanLinks": false,
-    "orphanTrue": false,
-    "orphanReference": false,
-    "deepNav": true,
-    "hubScore": 3,
-    "deadEnd": false,
-    "deadEndScore": 0.75
-  },
-  "main/docs/customize/phone-messages/customize-phone-templates.mdx": {
-    "inboundLinks": 3,
-    "outboundLinks": 2,
-    "importedBy": 0,
-    "navDepth": 4,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 3,
+    "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 1.5
+    "deadEndScore": 0.5
+  },
+  "main/docs/customize/phone-messages/phone-templates.mdx": {
+    "inboundLinks": 1,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 1,
+    "deadEnd": false,
+    "deadEndScore": 1
   },
   "main/docs/customize/phone-messages/unified-phone.mdx": {
     "inboundLinks": 1,
     "outboundLinks": 3,
     "importedBy": 0,
-    "navDepth": 5,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
-    "deepNav": true,
+    "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
     "deadEndScore": 0.3333
@@ -22699,16 +23016,43 @@
     "deadEnd": false,
     "deadEndScore": 0.2222
   },
-  "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx": {
-    "inboundLinks": 7,
-    "outboundLinks": 5,
+  "main/docs/customize/phone-messages/phone-templates/customize.mdx": {
+    "inboundLinks": 2,
+    "outboundLinks": 0,
     "importedBy": 0,
-    "navDepth": 6,
+    "navDepth": 5,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
+    "hubScore": 2,
+    "deadEnd": false,
+    "deadEndScore": 2
+  },
+  "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 1,
+    "importedBy": 0,
+    "navDepth": 5,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": true,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx": {
+    "inboundLinks": 7,
+    "outboundLinks": 5,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
     "hubScore": 7,
     "deadEnd": false,
     "deadEndScore": 1.4
@@ -25163,18 +25507,17 @@
     "deadEndScore": 1
   },
   "main/docs/customize/email/email-templates.mdx": {
-    "inboundLinks": 19,
+    "inboundLinks": 18,
     "outboundLinks": 4,
     "importedBy": 0,
-    "navDepth": 5,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
-    "deepNav": true,
-    "hubScore": 19,
+    "deepNav": false,
+    "hubScore": 18,
     "deadEnd": false,
-    "deadEndScore": 4.75
+    "deadEndScore": 4.5
   },
   "main/docs/customize/email/manage-email-flow.mdx": {
     "inboundLinks": 6,
@@ -25208,12 +25551,11 @@
     "inboundLinks": 11,
     "outboundLinks": 9,
     "importedBy": 0,
-    "navDepth": 5,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
-    "deepNav": true,
+    "deepNav": false,
     "hubScore": 11,
     "deadEnd": false,
     "deadEndScore": 1.2222
@@ -25250,12 +25592,11 @@
     "inboundLinks": 1,
     "outboundLinks": 1,
     "importedBy": 0,
-    "navDepth": 6,
-    "orphanNav": false,
+    "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
-    "deepNav": true,
+    "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
     "deadEndScore": 1
@@ -25639,7 +25980,7 @@
     "deadEndScore": 1
   },
   "main/docs/customize/actions/actions-overview.mdx": {
-    "inboundLinks": 41,
+    "inboundLinks": 42,
     "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
@@ -25648,9 +25989,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 41,
+    "hubScore": 42,
     "deadEnd": false,
-    "deadEndScore": 5.125
+    "deadEndScore": 5.25
   },
   "main/docs/customize/actions/actions-real-time-logs.mdx": {
     "inboundLinks": 12,
@@ -25695,7 +26036,7 @@
     "deadEndScore": 0
   },
   "main/docs/customize/actions/explore-triggers.mdx": {
-    "inboundLinks": 6,
+    "inboundLinks": 5,
     "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 5,
@@ -25704,9 +26045,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 6,
+    "hubScore": 5,
     "deadEnd": false,
-    "deadEndScore": 6
+    "deadEndScore": 5
   },
   "main/docs/customize/actions/limitations.mdx": {
     "inboundLinks": 12,
@@ -27680,7 +28021,7 @@
     "deadEndScore": 0.2857
   },
   "main/docs/authenticate/login/native-login.mdx": {
-    "inboundLinks": 2,
+    "inboundLinks": 4,
     "outboundLinks": 8,
     "importedBy": 0,
     "navDepth": 4,
@@ -27689,9 +28030,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 2,
+    "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 0.25
+    "deadEndScore": 0.5
   },
   "main/docs/authenticate/login/oidc-conformant-authentication.mdx": {
     "inboundLinks": 3,
@@ -27932,7 +28273,7 @@
     "deadEndScore": 0.6364
   },
   "main/docs/authenticate/login/logout/redirect-users-after-logout.mdx": {
-    "inboundLinks": 11,
+    "inboundLinks": 12,
     "outboundLinks": 6,
     "importedBy": 0,
     "navDepth": 5,
@@ -27941,9 +28282,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": true,
-    "hubScore": 11,
+    "hubScore": 12,
     "deadEnd": false,
-    "deadEndScore": 1.8333
+    "deadEndScore": 2
   },
   "main/docs/authenticate/login/logout/universal-logout.mdx": {
     "inboundLinks": 5,
@@ -33810,6 +34151,20 @@
     "deadEnd": false,
     "deadEndScore": 0
   },
+  "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 4,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
@@ -33825,6 +34180,20 @@
     "deadEndScore": 0
   },
   "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "navDepth": 4,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
     "importedBy": 0,
@@ -35899,8 +36268,8 @@
   "main/snippets/ApiReleaseLifecycle.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 464,
-    "impactPages": 464,
+    "importedBy": 466,
+    "impactPages": 466,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -35912,8 +36281,8 @@
   "main/snippets/ApiScopes.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 464,
-    "impactPages": 464,
+    "importedBy": 466,
+    "impactPages": 466,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,

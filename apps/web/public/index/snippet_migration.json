@@ -1,6 +1,6 @@
 {
-  "generatedAtUtc": "2026-04-07T04:37:17.733Z",
-  "pagesScanned": 2632,
+  "generatedAtUtc": "2026-04-08T04:41:02.575Z",
+  "pagesScanned": 2659,
   "blocksFound": 3113,
   "uniqueBlocks": 2554,
   "byLang": {
@@ -23234,9 +23234,9 @@
       "startLine": 529,
       "endLine": 548,
       "lang": null,
-      "code": "\n\n\n\n\n<Info>\nThe redirect URL needs to be in the list of Allowed Logout URLs in the settings section of the application, For more information, see [Redirect Users After Logout](/docs/authenticate/login/logout/guides/redirect-users-after-logout).\n</Info>\n\nCreate a file called `user.js` in the folder `web/static/js`, and add the code to remove the cookie from a logged-in\nuser.\n\n```js lines\n$(document).ready(function () {\n    $('.btn-logout').click(function (e) {\n        Cookies.remove('auth-session');\n    });\n});",
-      "hash": "d80b25ac01a7139c068c68c873d8b06689d56c41ae1fbb6615bee367305a3273",
-      "snippetId": "s_d80b25ac01",
+      "code": "\n\n\n\n\n<Info>\nThe redirect URL needs to be in the list of Allowed Logout URLs in the settings section of the application, For more information, see [Redirect Users After Logout](/docs/authenticate/login/logout/redirect-users-after-logout).\n</Info>\n\nCreate a file called `user.js` in the folder `web/static/js`, and add the code to remove the cookie from a logged-in\nuser.\n\n```js lines\n$(document).ready(function () {\n    $('.btn-logout').click(function (e) {\n        Cookies.remove('auth-session');\n    });\n});",
+      "hash": "12ad8e99f17399d64622a30505cccd9b81730fe7bb04e364067197705e6de50a",
+      "snippetId": "s_12ad8e99f1",
       "occurrences": 1,
       "preview": "<Info> The redirect URL needs to be in the list of Allowed Logout URLs in the settings section of the application, For more information, se…"
     },

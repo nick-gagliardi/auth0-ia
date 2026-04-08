@@ -2773,7 +2773,7 @@
     "link": [
       "main/docs/customize/extensions.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "main/docs/customize/actions/explore-triggers.mdx",
+      "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/manage-users/user-migration.mdx",
       "main/docs/authenticate/database-connections/custom-db/custom-database-connections-scripts.mdx",
       "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
@@ -6147,7 +6147,7 @@
       "main/docs/troubleshoot/customer-support.mdx",
       "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object.mdx",
       "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx",
-      "main/docs/customize/phone-messages/customize-phone-templates.mdx",
+      "main/docs/customize/phone-messages/phone-templates/customize.mdx",
       "main/docs/secure/multi-factor-authentication/auth0-guardian.mdx"
     ],
     "import": [],
@@ -7661,6 +7661,7 @@
       "main/docs/get-started/authentication-and-authorization-flow.mdx",
       "main/docs/manage-users/user-accounts/user-profiles.mdx",
       "main/docs/authenticate/login/logout.mdx",
+      "main/docs/authenticate/login/logout/redirect-users-after-logout.mdx",
       "main/docs/authenticate/identity-providers.mdx",
       "main/docs/secure/multi-factor-authentication.mdx",
       "main/docs/secure/attack-protection.mdx",
@@ -16069,7 +16070,8 @@
       "main/docs/manage-users/organizations/create-first-organization.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture.mdx",
       "main/docs/troubleshoot/customer-support/operational-policies/entity-limit-policy.mdx",
-      "main/docs/libraries.mdx"
+      "main/docs/libraries.mdx",
+      "main/docs/manage-users/user-accounts/metadata.mdx"
     ],
     "import": [],
     "redirect": []
@@ -17068,6 +17070,7 @@
       "main/docs/manage-users/organizations/organizations-overview.mdx",
       "main/docs/authenticate/database-connections.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
+      "main/docs/authenticate/login/native-login.mdx",
       "main/docs/get-started/applications/application-grant-types.mdx",
       "main/docs/authenticate/login/redirect-users-after-login.mdx",
       "main/docs/authenticate/login/configure-silent-authentication.mdx",
@@ -17281,6 +17284,7 @@
       "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/authenticate/single-sign-on.mdx",
       "main/docs/authenticate/database-connections.mdx",
+      "main/docs/authenticate/login/native-login.mdx",
       "main/docs/get-started/applications/application-grant-types.mdx",
       "main/docs/authenticate/login/redirect-users-after-login.mdx",
       "main/docs/authenticate/login/configure-silent-authentication.mdx",
@@ -18476,6 +18480,121 @@
     ],
     "redirect": []
   },
+  "main/docs/events/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/user/user.created.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/user/user.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/user/user.updated.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.connection.added.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.connection.removed.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.connection.updated.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.created.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.group.role.assigned.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.group.role.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.member.added.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.member.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.member.role.assigned.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.member.role.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/organization/organization.updated.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.created.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.member.added.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.member.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.role.assigned.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.role.deleted.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/events/group/group.updated.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/deploy-monitor/auth0-cli.mdx": {
     "link": [
       "main/docs/deploy-monitor/deploy-cli-tool.mdx"
@@ -18599,6 +18718,7 @@
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-from-legacy-auth-flows.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
+      "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx",
       "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
       "main/docs/deploy-monitor/pre-deployment-checks/production-check-recommended-fixes.mdx",
       "main/docs/deploy-monitor/pre-deployment-checks/production-checks-best-practices.mdx"
@@ -19125,7 +19245,7 @@
   "main/docs/customize/phone-messages.mdx": {
     "link": [
       "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
-      "main/docs/customize/phone-messages/customize-phone-templates.mdx"
+      "main/docs/customize/phone-messages/phone-templates.mdx"
     ],
     "import": [],
     "redirect": []
@@ -19140,11 +19260,8 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/phone-messages/customize-phone-templates.mdx": {
-    "link": [
-      "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
-      "main/docs/customize/email/email-templates.mdx"
-    ],
+  "main/docs/customize/phone-messages/phone-templates.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
@@ -19230,7 +19347,7 @@
       "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-twilio-as-a-phone-messaging-provider.mdx",
       "main/docs/authenticate/passwordless.mdx",
       "main/docs/troubleshoot/customer-support.mdx",
-      "main/docs/customize/phone-messages/customize-phone-templates.mdx"
+      "main/docs/customize/phone-messages/phone-templates/customize.mdx"
     ],
     "import": [],
     "redirect": []
@@ -19247,8 +19364,20 @@
     ],
     "redirect": []
   },
+  "main/docs/customize/phone-messages/phone-templates/customize.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/phone-messages/phone-templates/supported-liquid-syntax.mdx": {
+    "link": [
+      "main/docs/manage-users/organizations/organizations-overview.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -24276,6 +24405,14 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/custom-domains/get-the-default-domain.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/api/management/v2/custom-domains/test-a-custom-domain.mdx": {
     "link": [],
     "import": [
@@ -24285,6 +24422,14 @@
     "redirect": []
   },
   "main/docs/api/management/v2/custom-domains/update-custom-domain-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/custom-domains/update-the-default-custom-domain-for-the-tenant.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
