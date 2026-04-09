@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-08T04:41:03.085Z",
+  "generatedAtUtc": "2026-04-09T04:38:10.148Z",
   "hubCutoff": 50,
   "minIntersection": 3,
   "scoreThreshold": 0.4,
@@ -117,20 +117,6 @@
       "bFolder": "troubleshoot"
     },
     {
-      "a": "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
-      "b": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
-      "score": 0.44,
-      "simOut": 0.6,
-      "simIn": 0.2,
-      "sharedOut": 3,
-      "sharedIn": 3,
-      "convergenceType": "journey",
-      "aNav": "Customize",
-      "bNav": "Troubleshoot",
-      "aFolder": "customize",
-      "bFolder": "troubleshoot"
-    },
-    {
       "a": "main/docs/customize/extensions/authorization-extension/enable-api-access-to-authorization-extension.mdx",
       "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
       "score": 0.44,
@@ -139,6 +125,20 @@
       "sharedOut": 3,
       "sharedIn": 6,
       "convergenceType": "context",
+      "aNav": "Customize",
+      "bNav": "Troubleshoot",
+      "aFolder": "customize",
+      "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
+      "b": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
+      "score": 0.4306,
+      "simOut": 0.6,
+      "simIn": 0.1765,
+      "sharedOut": 3,
+      "sharedIn": 3,
+      "convergenceType": "journey",
       "aNav": "Customize",
       "bNav": "Troubleshoot",
       "aFolder": "customize",

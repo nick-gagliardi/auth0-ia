@@ -2828,9 +2828,9 @@
     "id": "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
     "type": "page",
     "filePath": "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
-    "title": "Use Akamai Supplemental Signals in Actions",
+    "title": "Use Akamai Supplmental Signals in Actions",
     "navPaths": [
-      "Documentation > Secure > Protect Your Application > Attack Protection > Use Akamai Supplemental Signals in Actions"
+      "Documentation > Secure > Protect Your Application > Attack Protection > Use Akamai Supplmental Signals in Actions"
     ]
   },
   {
@@ -14968,6 +14968,15 @@
     ]
   },
   {
+    "id": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
+    "title": "Delegated Administration: Custom Domain Hook",
+    "navPaths": [
+      "Documentation > Customize > Third-Party Customization > Extensions > Delegated Administration Extension > Delegated Administration Extension Hooks > Delegated Administration: Custom Domain Hook"
+    ]
+  },
+  {
     "id": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
     "type": "page",
     "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
@@ -15358,6 +15367,24 @@
     ]
   },
   {
+    "id": "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+    "title": "Actions Integration with Multiple Custom Domains",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Actions Integration with Multiple Custom Domains"
+    ]
+  },
+  {
+    "id": "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+    "title": "Default Custom Domain",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Default Custom Domain"
+    ]
+  },
+  {
     "id": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
     "type": "page",
     "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
@@ -15376,12 +15403,39 @@
     ]
   },
   {
+    "id": "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+    "title": "Migrate to Multiple Custom Domains",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Migrate to Multiple Custom Domains"
+    ]
+  },
+  {
+    "id": "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+    "title": "Passkeys with Multiple Custom Domains",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Passkeys with Multiple Custom Domains"
+    ]
+  },
+  {
     "id": "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
     "type": "page",
     "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
     "title": "SAML Migration for Custom Domains",
     "navPaths": [
       "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > SAML Migration for Custom Domains"
+    ]
+  },
+  {
+    "id": "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+    "title": "SDK Configuration for Multiple Custom Domains",
+    "navPaths": [
+      "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > SDK Configuration for Multiple Custom Domains"
     ]
   },
   {

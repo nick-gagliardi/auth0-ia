@@ -11533,7 +11533,7 @@
           "Secure",
           "Protect Your Application",
           "Attack Protection",
-          "Use Akamai Supplemental Signals in Actions"
+          "Use Akamai Supplmental Signals in Actions"
         ],
         "kinds": [
           "tab",
@@ -11542,13 +11542,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Use Akamai Supplemental Signals in Actions",
+        "leafLabel": "Use Akamai Supplmental Signals in Actions",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Secure > Protect Your Application > Attack Protection",
-        "pathString": "Documentation > Secure > Protect Your Application > Attack Protection > Use Akamai Supplemental Signals in Actions"
+        "pathString": "Documentation > Secure > Protect Your Application > Attack Protection > Use Akamai Supplmental Signals in Actions"
       }
     ],
-    "navLabel": "Use Akamai Supplemental Signals in Actions",
+    "navLabel": "Use Akamai Supplmental Signals in Actions",
     "navLabelSource": "frontmatter"
   },
   "main/docs/secure/attack-protection/view-attack-protection-events.mdx": {
@@ -38704,6 +38704,48 @@
     "navLabel": "Delegated Administration: Access Hook",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx": {
+    "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
+    "navDepth": 6,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:third-party-customization",
+          "root/tab:documentation/dropdown:customize/group:third-party-customization/group:extensions",
+          "root/tab:documentation/dropdown:customize/group:third-party-customization/group:extensions/group:delegated-administration-extension",
+          "root/tab:documentation/dropdown:customize/group:third-party-customization/group:extensions/group:delegated-administration-extension/group:delegated-administration-extension-hooks",
+          "root/tab:documentation/dropdown:customize/group:third-party-customization/group:extensions/group:delegated-administration-extension/group:delegated-administration-extension-hooks/page:docs/customize/extensions/delegated-administration-extension"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Third-Party Customization",
+          "Extensions",
+          "Delegated Administration Extension",
+          "Delegated Administration Extension Hooks",
+          "Delegated Administration: Custom Domain Hook"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Delegated Administration: Custom Domain Hook",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Third-Party Customization > Extensions > Delegated Administration Extension > Delegated Administration Extension Hooks",
+        "pathString": "Documentation > Customize > Third-Party Customization > Extensions > Delegated Administration Extension > Delegated Administration Extension Hooks > Delegated Administration: Custom Domain Hook"
+      }
+    ],
+    "navLabel": "Delegated Administration: Custom Domain Hook",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx": {
     "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
     "navDepth": 6,
@@ -40312,6 +40354,84 @@
     "navLabel": "TLS (SSL) Versions and Ciphers",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx": {
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/custom-domains/multiple-custom-domains/actions-integration",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:brand-customization",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/action"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Brand Customization",
+          "Custom Domains",
+          "Multiple Custom Domains",
+          "Actions Integration with Multiple Custom Domains"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Actions Integration with Multiple Custom Domains",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains",
+        "pathString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Actions Integration with Multiple Custom Domains"
+      }
+    ],
+    "navLabel": "Actions Integration with Multiple Custom Domains",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx": {
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/custom-domains/multiple-custom-domains/default-domain",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:brand-customization",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/defaul"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Brand Customization",
+          "Custom Domains",
+          "Multiple Custom Domains",
+          "Default Custom Domain"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Default Custom Domain",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains",
+        "pathString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Default Custom Domain"
+      }
+    ],
+    "navLabel": "Default Custom Domain",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx": {
     "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
     "navDepth": 5,
@@ -40390,6 +40510,84 @@
     "navLabel": "Multiple Custom Domain Use Cases",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx": {
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/custom-domains/multiple-custom-domains/migration-guide",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:brand-customization",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/migrat"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Brand Customization",
+          "Custom Domains",
+          "Multiple Custom Domains",
+          "Migrate to Multiple Custom Domains"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Migrate to Multiple Custom Domains",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains",
+        "pathString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Migrate to Multiple Custom Domains"
+      }
+    ],
+    "navLabel": "Migrate to Multiple Custom Domains",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx": {
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/custom-domains/multiple-custom-domains/passkeys",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:brand-customization",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/passke"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Brand Customization",
+          "Custom Domains",
+          "Multiple Custom Domains",
+          "Passkeys with Multiple Custom Domains"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Passkeys with Multiple Custom Domains",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains",
+        "pathString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > Passkeys with Multiple Custom Domains"
+      }
+    ],
+    "navLabel": "Passkeys with Multiple Custom Domains",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx": {
     "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
     "navDepth": 5,
@@ -40427,6 +40625,45 @@
       }
     ],
     "navLabel": "SAML Migration for Custom Domains",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx": {
+    "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/customize/custom-domains/multiple-custom-domains/sdk-configuration",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:customize",
+          "root/tab:documentation/dropdown:customize/group:brand-customization",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains",
+          "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/sdk-co"
+        ],
+        "labels": [
+          "Documentation",
+          "Customize",
+          "Brand Customization",
+          "Custom Domains",
+          "Multiple Custom Domains",
+          "SDK Configuration for Multiple Custom Domains"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "SDK Configuration for Multiple Custom Domains",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains",
+        "pathString": "Documentation > Customize > Brand Customization > Custom Domains > Multiple Custom Domains > SDK Configuration for Multiple Custom Domains"
+      }
+    ],
+    "navLabel": "SDK Configuration for Multiple Custom Domains",
     "navLabelSource": "frontmatter"
   },
   "main/docs/customize/actions/action-coding-guidelines.mdx": {

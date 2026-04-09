@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-08T04:40:58.292Z",
+  "generatedAtUtc": "2026-04-09T04:38:04.821Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -5728,11 +5728,43 @@
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/mcd-us",
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/defaul",
                             "kind": "page",
-                            "label": "docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases",
-                            "route": "docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases",
-                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases.mdx",
+                            "label": "docs/customize/custom-domains/multiple-custom-domains/default-domain",
+                            "route": "docs/customize/custom-domains/multiple-custom-domains/default-domain",
+                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/migrat",
+                            "kind": "page",
+                            "label": "docs/customize/custom-domains/multiple-custom-domains/migration-guide",
+                            "route": "docs/customize/custom-domains/multiple-custom-domains/migration-guide",
+                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/action",
+                            "kind": "page",
+                            "label": "docs/customize/custom-domains/multiple-custom-domains/actions-integration",
+                            "route": "docs/customize/custom-domains/multiple-custom-domains/actions-integration",
+                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/sdk-co",
+                            "kind": "page",
+                            "label": "docs/customize/custom-domains/multiple-custom-domains/sdk-configuration",
+                            "route": "docs/customize/custom-domains/multiple-custom-domains/sdk-configuration",
+                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/passke",
+                            "kind": "page",
+                            "label": "docs/customize/custom-domains/multiple-custom-domains/passkeys",
+                            "route": "docs/customize/custom-domains/multiple-custom-domains/passkeys",
+                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
                             "children": []
                           },
                           {
@@ -5741,6 +5773,14 @@
                             "label": "docs/customize/custom-domains/multiple-custom-domains/saml-migration",
                             "route": "docs/customize/custom-domains/multiple-custom-domains/saml-migration",
                             "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:customize/group:brand-customization/group:custom-domains/group:multiple-custom-domains/page:docs/customize/custom-domains/multiple-custom-domains/mcd-us",
+                            "kind": "page",
+                            "label": "docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases",
+                            "route": "docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases",
+                            "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases.mdx",
                             "children": []
                           },
                           {
@@ -7308,6 +7348,14 @@
                                 "label": "docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook",
                                 "route": "docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook",
                                 "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook.mdx",
+                                "children": []
+                              },
+                              {
+                                "id": "root/tab:documentation/dropdown:customize/group:third-party-customization/group:extensions/group:delegated-administration-extension/group:delegated-administration-extension-hooks/page:docs/customize/extensions/delegated-administration-extension",
+                                "kind": "page",
+                                "label": "docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook",
+                                "route": "docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook",
+                                "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
                                 "children": []
                               },
                               {

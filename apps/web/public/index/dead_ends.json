@@ -1,8 +1,8 @@
 {
-  "generatedAtUtc": "2026-04-08T04:41:03.114Z",
+  "generatedAtUtc": "2026-04-09T04:38:10.178Z",
   "minInbound": 20,
   "maxOutbound": 1,
-  "count": 3,
+  "count": 4,
   "items": [
     {
       "id": "main/docs/libraries.mdx",
@@ -26,6 +26,14 @@
       "deadEndScore": 23,
       "navRoot": "Get Started",
       "navDepth": 4
+    },
+    {
+      "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
+      "inboundLinks": 21,
+      "outboundLinks": 0,
+      "deadEndScore": 21,
+      "navRoot": "Customize",
+      "navDepth": 7
     }
   ]
 }

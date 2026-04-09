@@ -1923,8 +1923,10 @@
   },
   "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx": {
     "link": [
-      "main/docs/customize/email/email-templates.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
       "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
+      "main/docs/customize/email/email-templates.mdx",
       "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
       "main/docs/troubleshoot/basic-issues/check-error-messages.mdx",
       "main/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authenticator-factors-mfa-api.mdx"
@@ -4945,8 +4947,8 @@
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx",
       "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx",
       "main/docs/authenticate/login/cross-origin-authentication.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
@@ -6193,6 +6195,7 @@
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
       "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
       "main/docs/customize/email/email-templates.mdx",
+      "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
       "main/docs/manage-users/organizations.mdx",
       "main/docs/customize/actions/use-cases.mdx"
     ],
@@ -6231,6 +6234,7 @@
       "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
       "main/docs/customize/internationalization-and-localization/password-options-translation.mdx",
       "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-classic-login.mdx",
+      "main/docs/customize/login-pages/customize-consent-prompts.mdx",
       "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
       "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx"
     ],
@@ -6953,11 +6957,50 @@
   },
   "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx": {
     "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates/configure-akamai-for-use-as-reverse-proxy.mdx",
+      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
+      "main/docs/authenticate/database-connections.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/self-managed-certificates/configure-akamai-for-use-as-reverse-proxy.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates.mdx",
+      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/self-managed-certificates.mdx",
+      "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx",
+      "main/docs/manage-users/user-accounts/metadata/metadata-fields-data.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/database-connections.mdx": {
+    "link": [
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
+      "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
+      "main/docs/authenticate/database-connections/custom-db.mdx",
+      "main/docs/authenticate/database-connections/custom-db/templates.mdx",
+      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
+      "main/docs/manage-users.mdx"
     ],
     "import": [],
     "redirect": []
@@ -7058,12 +7101,13 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/customize/custom-domains/self-managed-certificates.mdx",
-      "main/docs/manage-users/user-accounts/metadata/metadata-fields-data.mdx"
-    ],
+  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
@@ -9733,22 +9777,6 @@
     ],
     "redirect": []
   },
-  "main/docs/authenticate/database-connections.mdx": {
-    "link": [
-      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
-      "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
-      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
-      "main/docs/authenticate/database-connections/custom-db.mdx",
-      "main/docs/authenticate/database-connections/custom-db/templates.mdx",
-      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx",
-      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "main/docs/manage-users.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/libraries/custom-signup.mdx": {
     "link": [
       "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx",
@@ -10356,6 +10384,7 @@
       "main/docs/authenticate/login/cross-origin-authentication.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx",
       "main/docs/authenticate/protocols/oauth.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
@@ -17851,7 +17880,10 @@
   },
   "main/docs/customize/email/email-templates/supported-liquid-syntax.mdx": {
     "link": [
-      "main/docs/manage-users/organizations/organizations-overview.mdx"
+      "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20254,6 +20286,7 @@
   "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks.mdx": {
     "link": [
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-memberships-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-settings-query-hook.mdx",
@@ -20335,6 +20368,17 @@
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-memberships-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-settings-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-write-hook.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-write-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-settings-query-hook.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20497,22 +20541,90 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/custom-domains/self-managed-certificates/configure-akamai-for-use-as-reverse-proxy.mdx": {
+  "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx": {
     "link": [
-      "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
-      "main/docs/customize/custom-domains/self-managed-certificates.mdx",
-      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx"
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
+      "main/docs/customize/custom-domains.mdx"
     ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx",
+      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
+      "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers.mdx",
+      "main/docs/customize/actions/limitations.mdx",
+      "main/docs/manage-users/organizations.mdx",
+      "main/docs/customize/email/smtp-email-providers/custom.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
   "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx": {
     "link": [
-      "main/docs/customize/login-pages/advanced-customizations.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/manage-users/organizations.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/branding.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/branding.mdx"
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/branding.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx"
     ],
     "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
+      "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
     "redirect": []
   },
   "main/docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases.mdx": {
@@ -20522,6 +20634,19 @@
   },
   "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx": {
     "link": [],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
+      "main/docs/troubleshoot/customer-support/product-support-matrix.mdx"
+    ],
     "import": [
       "main/snippets/AuthCodeBlock.jsx",
       "main/snippets/AuthCodeGroup.jsx"
@@ -20615,26 +20740,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-api-object.mdx": {
     "link": [],
     "import": [],
@@ -20675,11 +20780,6 @@
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx"
     ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx": {
-    "link": [],
     "import": [],
     "redirect": []
   },

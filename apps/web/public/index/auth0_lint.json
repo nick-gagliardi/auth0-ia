@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2659,
-  "pagesWithWarnings": 560,
-  "warningCount": 787,
+  "pagesScanned": 2665,
+  "pagesWithWarnings": 563,
+  "warningCount": 791,
   "byCode": {
     "missing_pkce_mention": 127,
     "missing_state_mention": 129,
-    "missing_nonce_mention": 268,
+    "missing_nonce_mention": 270,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 12,
-    "rules_vs_actions_language": 248
+    "rules_vs_actions_language": 250
   },
   "items": [
     {
@@ -3192,7 +3192,7 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "The [Okta Integration Network (OIN)](https://www.okta.com/integrations/) is a catalog of SaaS applications for which Okta provides an express setup experience for enabling single s",
+          "evidence": "The [Okta Integration Network (OIN)](https://www.okta.com/integrations/) is a catalog of SaaS applications for which Okta provides an express setup experience for enabling Single S",
           "line": 6
         },
         {
@@ -3200,14 +3200,14 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "5. Register an **Initiate Login URI Template**. This template implements an endpoint on your application to automatically redirect end-users to Auth0's `/authorize` endpoint for au",
-          "line": 81
+          "line": 82
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "5. Register an **Initiate Login URI Template**. This template implements an endpoint on your application to automatically redirect end-users to Auth0's `/authorize` endpoint for au",
-          "line": 81
+          "line": 82
         }
       ]
     },
@@ -3497,6 +3497,13 @@
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "The `login_url` should point to a route in the application that ends up redirecting to Auth0's `/authorize` endpoint, e.g. `https://mycompany.org/login`. Note that it requires `htt",
           "line": 441
+        },
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "To review the full list of validation rules and restrictions, read [Custom domain URL placeholders](/docs/get-started/applications/wildcards-for-subdomains#custom-domain-url-placeh",
+          "line": 458
         }
       ]
     },
@@ -4914,6 +4921,16 @@
       "warnings": []
     },
     {
+      "id": "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
       "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
       "warnings": []
@@ -4924,9 +4941,40 @@
       "warnings": []
     },
     {
+      "id": "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+      "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "api.idToken.setCustomClaim('passkey_enrolled', true);",
+          "line": 158
+        }
+      ]
+    },
+    {
       "id": "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
       "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
       "warnings": []
+    },
+    {
+      "id": "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+      "filePath": "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "scope: 'openid profile email'",
+          "line": 254
+        }
+      ]
     },
     {
       "id": "main/docs/customize/custom-domains/self-managed-certificates.mdx",
@@ -5263,6 +5311,19 @@
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "To learn more about the Filter Hook, read [Delegated Administration: Filter Hook](/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/deleg",
           "line": 7
+        }
+      ]
+    },
+    {
+      "id": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
+      "filePath": "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "* [Delegated Administration: Access Hook](/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook)",
+          "line": 102
         }
       ]
     },
@@ -6116,7 +6177,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "* The value of the `ui_locales` parameter sent to the [Authorization Request endpoint](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest), which can be used to cons",
-          "line": 100
+          "line": 102
         }
       ]
     },
@@ -7140,7 +7201,7 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "In the **ID Token** section, enter the **ID Token Expiration** (in seconds) which is the amount of time before the Auth0 `id_token` expires. The default value is 36000 seconds whic",
-          "line": 65
+          "line": 69
         },
         {
           "code": "missing_pkce_mention",
@@ -7161,7 +7222,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "Application metadata are custom string keys and values (each of which has a character maximum of 255), set on a per-application basis. Metadata is exposed in the application object",
-          "line": 95
+          "line": 99
         }
       ]
     },
@@ -25033,7 +25094,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "In the **ID Token** section, enter the **ID Token Expiration** (in seconds) which is the amount of time before the Auth0 `id_token` expires. The default value is 36000 seconds whic",
-        "line": 65
+        "line": 69
       },
       {
         "code": "missing_pkce_mention",
@@ -25054,7 +25115,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "Application metadata are custom string keys and values (each of which has a character maximum of 255), set on a per-application basis. Metadata is exposed in the application object",
-        "line": 95
+        "line": 99
       }
     ],
     "main/docs/get-started/applications/change-application-signing-algorithms.mdx": [],
@@ -25728,7 +25789,7 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "* The value of the `ui_locales` parameter sent to the [Authorization Request endpoint](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest), which can be used to cons",
-        "line": 100
+        "line": 102
       }
     ],
     "main/docs/customize/integrations/apigee.mdx": [],
@@ -26080,6 +26141,15 @@
         "line": 7
       }
     ],
+    "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "* [Delegated Administration: Access Hook](/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook)",
+        "line": 102
+      }
+    ],
     "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx": [
       {
         "code": "rules_vs_actions_language",
@@ -26225,9 +26295,30 @@
       }
     ],
     "main/docs/customize/custom-domains/self-managed-certificates/tls-ssl.mdx": [],
+    "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx": [],
+    "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx": [],
     "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx": [],
     "main/docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases.mdx": [],
+    "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx": [],
+    "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "api.idToken.setCustomClaim('passkey_enrolled', true);",
+        "line": 158
+      }
+    ],
     "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx": [],
+    "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "scope: 'openid profile email'",
+        "line": 254
+      }
+    ],
     "main/docs/customize/actions/action-coding-guidelines.mdx": [],
     "main/docs/customize/actions/actions-npm.mdx": [],
     "main/docs/customize/actions/actions-overview.mdx": [],
@@ -26903,6 +26994,13 @@
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "The `login_url` should point to a route in the application that ends up redirecting to Auth0's `/authorize` endpoint, e.g. `https://mycompany.org/login`. Note that it requires `htt",
         "line": 441
+      },
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "To review the full list of validation rules and restrictions, read [Custom domain URL placeholders](/docs/get-started/applications/wildcards-for-subdomains#custom-domain-url-placeh",
+        "line": 458
       }
     ],
     "main/docs/authenticate/login/auth0-universal-login/error-pages.mdx": [],
@@ -27235,7 +27333,7 @@
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "The [Okta Integration Network (OIN)](https://www.okta.com/integrations/) is a catalog of SaaS applications for which Okta provides an express setup experience for enabling single s",
+        "evidence": "The [Okta Integration Network (OIN)](https://www.okta.com/integrations/) is a catalog of SaaS applications for which Okta provides an express setup experience for enabling Single S",
         "line": 6
       },
       {
@@ -27243,14 +27341,14 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "5. Register an **Initiate Login URI Template**. This template implements an endpoint on your application to automatically redirect end-users to Auth0's `/authorize` endpoint for au",
-        "line": 81
+        "line": 82
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "5. Register an **Initiate Login URI Template**. This template implements an endpoint on your application to automatically redirect end-users to Auth0's `/authorize` endpoint for au",
-        "line": 81
+        "line": 82
       }
     ],
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx": [

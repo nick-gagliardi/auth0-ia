@@ -104,8 +104,6 @@
       "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx",
       "main/docs/secure/call-apis-on-users-behalf/xaa/test-xaa-flow.mdx",
       "main/docs/secure/call-apis-on-users-behalf/token-vault/privileged-worker-token-exchange-with-token-vault.mdx",
-      "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx",
-      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/manage-users/my-account-api.mdx",
       "main/docs/manage-users/organizations/create-first-organization.mdx",
       "main/docs/manage-users/organizations/configure-organizations/create-org-domains.mdx",
@@ -458,7 +456,12 @@
       "main/docs/customize/hooks/hook-secrets/view-hook-secrets.mdx",
       "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
       "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-litmos.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-mobile-to-web-payment-flows.mdx",
@@ -1108,7 +1111,8 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/operations-readiness.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/support-readiness.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/testing.mdx",
-      "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx"
+      "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx"
     ],
     "import": [],
     "redirect": []
@@ -1440,6 +1444,8 @@
       "main/docs/customize/custom-domains/self-managed-certificates/configure-cloudflare-for-use-as-reverse-proxy.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates/tls-ssl.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
       "main/docs/authenticate/login/universal-vs-embedded-login.mdx"
     ],
     "import": [],
@@ -2745,7 +2751,10 @@
       "main/docs/customize/hooks/hook-secrets/view-hook-secrets.mdx",
       "main/docs/customize/email/manage-email-flow.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
       "main/docs/customize/actions/modules/write-your-first-action-module.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
@@ -2852,6 +2861,7 @@
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-nodejs-16-to-nodejs-18.mdx",
       "main/docs/troubleshoot/product-lifecycle/past-migrations/migrate-to-nodejs-16.mdx",
       "main/docs/customize/email/smtp-email-providers/custom/configure-action.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/customize/actions/transaction-metadata.mdx",
       "main/docs/customize/actions/modules/actions-modules-overview.mdx",
@@ -3119,6 +3129,7 @@
       "main/docs/manage-users/organizations/configure-organizations/send-membership-invitations.mdx",
       "main/docs/get-started/tenant-settings.mdx",
       "main/docs/get-started/applications/application-settings.mdx",
+      "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
       "main/docs/customize/login-pages/custom-error-pages.mdx",
       "main/docs/customize/email/send-email-invitations-for-application-signup.mdx",
       "main/docs/customize/email/email-templates/customize-email-templates.mdx",
@@ -3537,6 +3548,8 @@
       "main/docs/customize/integrations/cms/wordpress-plugin/configure-login-by-auth0.mdx",
       "main/docs/customize/forms/custom-field-components.mdx",
       "main/docs/customize/extensions/single-sign-on-dashboard-extension/install-sso-dashboard-extension.mdx",
+      "main/docs/customize/email/email-templates/supported-liquid-syntax.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
       "main/docs/customize/actions/action-coding-guidelines.mdx",
       "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
       "main/docs/authenticate/passwordless/passwordless-connection-limitations.mdx",
@@ -3619,6 +3632,9 @@
       "main/docs/customize/custom-domains/self-managed-certificates/configure-azure-cdn-for-use-as-reverse-proxy.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates/configure-cloudflare-for-use-as-reverse-proxy.mdx",
       "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
       "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx"
     ],
     "import": [],
@@ -6210,11 +6226,13 @@
       "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
       "main/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa.mdx",
       "main/docs/secure/highly-regulated-identity/transactional-authorization-with-authorization-code-flow.mdx",
+      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
       "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-rar.mdx",
       "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
       "main/docs/customize/forms/render.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/transaction-metadata.mdx",
       "main/docs/customize/actions/migrate/actions-migration-limitations.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -7915,7 +7933,16 @@
       "main/docs/manage-users/user-accounts/view-user-details.mdx",
       "main/docs/manage-users/organizations/configure-organizations/send-membership-invitations.mdx",
       "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
-      "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx"
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
+      "main/docs/customize/email/email-templates/supported-liquid-syntax.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
+      "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8040,6 +8067,8 @@
       "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
       "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
@@ -8658,7 +8687,60 @@
     "redirect": []
   },
   "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/self-managed-certificates/configure-akamai-for-use-as-reverse-proxy.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx",
+      "main/docs/customize/custom-domains/self-managed-certificates.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/database-connections.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/configure-akamai-supplemental-signals.mdx",
+      "main/docs/manage-users/user-accounts/metadata.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/root-attributes.mdx",
+      "main/docs/manage-users/user-accounts/user-profiles/update-user-profiles-using-your-database.mdx",
+      "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps/part-2.mdx",
+      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
+      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/branding.mdx",
+      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/branding.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/logout.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
+      "main/docs/get-started/apis/set-logical-api.mdx",
+      "main/docs/customize/hooks.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/connection-switching.mdx",
+      "main/docs/customize/email/send-email-invitations-for-application-signup.mdx",
+      "main/docs/authenticate/passwordless.mdx",
+      "main/docs/authenticate/protocols/scim.mdx",
+      "main/docs/authenticate/login/max-age-reauthentication.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx",
+      "main/docs/authenticate/database-connections/passkeys.mdx",
+      "main/docs/authenticate/database-connections/password-change.mdx",
+      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
+      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -8709,8 +8791,23 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx": {
-    "link": [],
+  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx": {
+    "link": [
+      "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -11111,41 +11208,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/database-connections.mdx": {
-    "link": [
-      "main/docs/manage-users/user-accounts/metadata.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/root-attributes.mdx",
-      "main/docs/manage-users/user-accounts/user-profiles/update-user-profiles-using-your-database.mdx",
-      "main/docs/manage-users/organizations/organizations-overview.mdx",
-      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps/part-2.mdx",
-      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
-      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/branding.mdx",
-      "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/provisioning.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/authentication.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/branding.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/logout.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
-      "main/docs/get-started/apis/set-logical-api.mdx",
-      "main/docs/customize/hooks.mdx",
-      "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/connection-switching.mdx",
-      "main/docs/customize/email/send-email-invitations-for-application-signup.mdx",
-      "main/docs/authenticate/passwordless.mdx",
-      "main/docs/authenticate/protocols/scim.mdx",
-      "main/docs/authenticate/login/max-age-reauthentication.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx",
-      "main/docs/authenticate/database-connections/passkeys.mdx",
-      "main/docs/authenticate/database-connections/password-change.mdx",
-      "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
-      "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/libraries/custom-signup.mdx": {
     "link": [
       "main/docs/manage-users/user-accounts/metadata.mdx",
@@ -11662,8 +11724,10 @@
       "main/docs/get-started/applications/application-grant-types.mdx",
       "main/docs/get-started/applications/application-settings.mdx",
       "main/docs/get-started/applications/set-up-cors.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
       "main/docs/authenticate/login/logout/log-users-out-of-auth0.mdx",
-      "main/docs/authenticate/login/logout/redirect-users-after-logout.mdx"
+      "main/docs/authenticate/login/logout/redirect-users-after-logout.mdx",
+      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx"
     ],
     "import": [],
     "redirect": []
@@ -19480,6 +19544,7 @@
       "main/docs/get-started/apis/scopes/api-scopes.mdx",
       "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
       "main/docs/customize/login-pages.mdx",
+      "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
     ],
     "import": [],
@@ -19981,6 +20046,7 @@
       "main/docs/customize/hooks.mdx",
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
       "main/docs/customize/hooks/create-hooks.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/customize/actions/write-your-first-action.mdx"
     ],
@@ -20203,7 +20269,8 @@
     "link": [
       "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
       "main/docs/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication.mdx",
-      "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx"
+      "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20289,7 +20356,6 @@
     "link": [
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/migrate-classic-universal-login.mdx",
-      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
       "main/docs/authenticate/login/universal-vs-embedded-login.mdx"
     ],
     "import": [],
@@ -21069,10 +21135,18 @@
     "link": [
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-manage-users.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-memberships-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-settings-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-write-hook.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx": {
+    "link": [
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21082,6 +21156,7 @@
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-manage-users.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-memberships-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-settings-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-write-hook.mdx"
@@ -21104,6 +21179,7 @@
     "link": [
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-memberships-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-write-hook.mdx"
@@ -21115,6 +21191,7 @@
     "link": [
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-access-hook.mdx",
+      "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-custom-domain-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-filter-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-memberships-query-hook.mdx",
       "main/docs/customize/extensions/delegated-administration-extension/delegated-administration-hooks/delegated-administration-settings-query-hook.mdx"
@@ -21188,7 +21265,8 @@
   },
   "main/docs/customize/email/smtp-email-providers/custom.mdx": {
     "link": [
-      "main/docs/customize/email/smtp-email-providers.mdx"
+      "main/docs/customize/email/smtp-email-providers.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21218,13 +21296,53 @@
     "redirect": []
   },
   "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx"
+    ],
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/custom-domains/self-managed-certificates/configure-akamai-for-use-as-reverse-proxy.mdx": {
+  "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx": {
     "link": [
-      "main/docs/customize/custom-domains/self-managed-certificates.mdx"
+      "main/docs/customize/email/email-templates/supported-liquid-syntax.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/default-domain.mdx",
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21234,12 +21352,31 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/migration-guide.mdx": {
+    "link": [
+      "main/docs/customize/custom-domains/multiple-custom-domains/mcd-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/customize/custom-domains/multiple-custom-domains/mcd-use-cases.mdx": {
     "link": [],
     "import": [],
     "redirect": []
   },
   "main/docs/customize/custom-domains/multiple-custom-domains/saml-migration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -21310,38 +21447,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx": {
-    "link": [
-      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx": {
-    "link": [
-      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger/post-user-registration-event-object.mdx": {
-    "link": [
-      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx": {
-    "link": [
-      "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-api-object.mdx": {
     "link": [
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
@@ -21380,14 +21485,6 @@
     "link": [
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx": {
-    "link": [
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx"
     ],
     "import": [],
     "redirect": []
