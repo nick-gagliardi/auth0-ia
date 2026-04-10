@@ -313,20 +313,112 @@ Rules:
     }
   }, [toast]);
 
-  // PR creation handler — only sends accepted suggestions
+  // PR creation handler — applies changes client-side with Claude, then commits via API
   const handleCreatePr = useCallback(async () => {
     if (!suggestingItem || acceptedSuggestions.size === 0) return;
     setCreatingPr(true);
     try {
+      // 1. Get user's API key
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) throw new Error('Anthropic API key not configured.');
+      const { apiKey } = await keyRes.json();
+      if (!apiKey) throw new Error('Anthropic API key not configured.');
+
+      // 2. Fetch the raw MDX from GitHub via our suggest route (which can do this)
+      //    Actually, fetch it from the public docs site won't work for MDX.
+      //    Use a lightweight fetch endpoint instead.
+      const fileRes = await fetch('/api/rules-deprecation/fetch-file', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ filePath: suggestingItem.filePath }),
+      });
+      const fileJson = await fileRes.json();
+      if (!fileJson.ok) throw new Error(fileJson.error || 'Failed to fetch MDX file');
+      const mdxContent = fileJson.content;
+
+      // 3. Ask Claude to apply the changes (client-side, no timeout issues)
       const selectedSuggestions = suggestions
         .filter((_, idx) => acceptedSuggestions.has(idx))
         .map((s) => ({ before: s.before, after: s.after }));
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+      const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        aiHeaders['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        aiHeaders['x-api-key'] = apiKey;
+        aiHeaders['anthropic-version'] = '2023-06-01';
+      }
+
+      const changesBlock = selectedSuggestions.map((s, i) =>
+        `### Change ${i + 1}\nWhat to find (approximate): ${JSON.stringify(s.before)}\nReplace with: ${JSON.stringify(s.after)}`
+      ).join('\n\n');
+
+      const aiResponse = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers: aiHeaders,
+        body: JSON.stringify({
+          model,
+          max_tokens: 16384,
+          messages: [{
+            role: 'user',
+            content: `You are given an MDX documentation file and a set of changes to apply. Each change has an approximate "before" text and the intended replacement.
+
+Apply ALL the changes to the file and return the COMPLETE modified file.
+
+<mdx-file-content>
+${mdxContent}
+</mdx-file-content>
+
+## Changes to apply
+${changesBlock}
+
+## Instructions
+1. For each change, find the corresponding text in the MDX file
+2. Replace it with the specified replacement text
+3. Preserve all other content EXACTLY as-is
+4. Return the COMPLETE modified file
+
+Return your response in this exact format:
+<applied-count>N</applied-count>
+<modified-file>
+...the complete modified MDX file...
+</modified-file>
+
+Critical rules:
+- Output the ENTIRE file, not just changed sections
+- Do NOT add, remove, or modify anything not covered by the changes
+- Preserve exact whitespace, newlines, and formatting of unchanged content`,
+          }],
+        }),
+      });
+
+      if (!aiResponse.ok) throw new Error(`AI error: ${aiResponse.status}`);
+
+      const aiData = await aiResponse.json();
+      const aiText = aiData.content?.[0]?.text || '';
+
+      const countMatch = aiText.match(/<applied-count>(\d+)<\/applied-count>/);
+      const changesApplied = countMatch ? parseInt(countMatch[1], 10) : 0;
+
+      const fileMatch = aiText.match(/<modified-file>\n?([\s\S]*?)\n?<\/modified-file>/);
+      if (!fileMatch) throw new Error('AI did not return a modified file. Try again.');
+
+      const modifiedContent = fileMatch[1];
+      if (changesApplied === 0) throw new Error('AI reported 0 changes applied. Try selecting different suggestions.');
+
+      // 4. Send modified content to the API to commit + open PR
       const res = await fetch('/api/rules-deprecation/open-pr', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           filePath: suggestingItem.filePath,
-          suggestions: selectedSuggestions,
+          modifiedContent,
+          changesApplied,
+          totalSuggestions: selectedSuggestions.length,
         }),
       });
       const json = await res.json();
@@ -340,7 +432,7 @@ Rules:
     } finally {
       setCreatingPr(false);
     }
-  }, [suggestingItem, suggestions, toast, queryClient]);
+  }, [suggestingItem, suggestions, acceptedSuggestions, toast, queryClient]);
 
   if (isLoading) {
     return (
