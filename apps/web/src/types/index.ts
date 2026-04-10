@@ -255,6 +255,40 @@ export type SnippetMigrationIndex = {
   items: SnippetMigrationItem[];
 };
 
+// Rules deprecation types
+export type RulesDeprecationCategory =
+  | 'has_rules_code'
+  | 'links_to_rules'
+  | 'suggests_rules'
+  | 'mentions_rules'
+  | 'is_rules_api'
+  | 'is_hooks_page';
+
+export type RulesDeprecationEvidence = {
+  line: number;
+  snippet: string;
+  category: RulesDeprecationCategory;
+};
+
+export type RulesDeprecationItem = {
+  id: string;
+  filePath: string;
+  categories: RulesDeprecationCategory[];
+  evidenceCount: number;
+  evidence: RulesDeprecationEvidence[];
+  severity: 'critical' | 'high' | 'medium' | 'low';
+};
+
+export type RulesDeprecationIndex = {
+  generatedAtUtc: string;
+  pagesScanned: number;
+  pagesWithRules: number;
+  totalEvidenceCount: number;
+  byCriticality: Record<'critical' | 'high' | 'medium' | 'low', number>;
+  byCategory: Record<RulesDeprecationCategory, number>;
+  items: RulesDeprecationItem[];
+};
+
 // Curl validation types
 export type CurlValidationResult = {
   id: string;
@@ -343,6 +377,7 @@ export type IndexBundle = {
   };
   auth0Lint?: Auth0LintIndex;
   snippetMigration?: SnippetMigrationIndex;
+  rulesDeprecation?: RulesDeprecationIndex;
   curlValidator?: CurlValidationIndex;
   similarity: SimilarityIndex;
   crossNavPairs: CrossNavPairs;

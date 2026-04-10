@@ -16,6 +16,7 @@ import type {
   NavPagesIndex,
   NavLabelCollisionsIndex,
   SnippetMigrationIndex,
+  RulesDeprecationIndex,
   CurlValidationIndex,
 } from '@/types';
 import { useIndexBundle } from '@/hooks/use-index-bundle';
@@ -155,6 +156,16 @@ export function useSnippetMigration() {
   return useQuery({
     queryKey: ['snippet_migration'],
     queryFn: async () => (b.data?.snippetMigration ?? fetchWithDemoFallback<SnippetMigrationIndex>('snippet_migration.json')),
+    enabled: b.isSuccess || !b.isLoading,
+    staleTime: Infinity,
+  });
+}
+
+export function useRulesDeprecation() {
+  const b = useIndexBundle();
+  return useQuery({
+    queryKey: ['rules_deprecation'],
+    queryFn: async () => (b.data?.rulesDeprecation ?? fetchWithDemoFallback<RulesDeprecationIndex>('rules_deprecation.json')),
     enabled: b.isSuccess || !b.isLoading,
     staleTime: Infinity,
   });

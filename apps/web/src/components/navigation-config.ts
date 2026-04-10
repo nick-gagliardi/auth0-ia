@@ -17,6 +17,7 @@ import {
   History,
   HeartPulse,
   BarChart3,
+  AlertTriangle,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -57,6 +58,7 @@ export const navigationGroups: NavGroup[] = [
       { label: 'Refactor', href: '/refactor', icon: GitBranch },
       { label: 'Verify', href: '/verify', icon: CheckCircle },
       { label: 'Snippet Migration', href: '/snippet-migration', icon: FileCode },
+      { label: 'Rules Deprecation', href: '/rules-deprecation', icon: AlertTriangle },
       { label: 'Curl Validator', href: '/curl-validator', icon: Terminal },
       { label: 'Doc Generator', href: '/doc-generator', icon: FileText },
     ],

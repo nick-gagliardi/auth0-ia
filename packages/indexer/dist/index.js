@@ -5,6 +5,7 @@ import { promisify } from 'node:util';
 import yaml from 'js-yaml';
 import { buildSnippetMigrationIndex } from './snippet-migration.js';
 import { lintAuth0MdxPages } from './auth0-lint.js';
+import { buildRulesDeprecationIndex } from './rules-deprecation.js';
 import { parseDocsJsonNav } from './nav.js';
 const exec = promisify(_exec);
 function uniq(arr) {
@@ -573,6 +574,9 @@ export async function buildIndex(opts) {
     // --- Snippet migration inventory (fenced blocks) ---
     const snippetMigration = await buildSnippetMigrationIndex(pagesForLint.map((p) => ({ filePath: p.filePath, mdx: p.mdx })));
     await fs.writeFile(path.join(opts.outDir, 'snippet_migration.json'), JSON.stringify(snippetMigration, null, 2));
+    // --- Rules deprecation tracker ---
+    const rulesDeprecation = buildRulesDeprecationIndex(pagesForLint);
+    await fs.writeFile(path.join(opts.outDir, 'rules_deprecation.json'), JSON.stringify(rulesDeprecation, null, 2));
     // --- Path Convergence (links-only) similarity index (pages ↔ pages) ---
     // Goals:
     // - use outbound/inbound *link* neighbors (no snippet imports)
@@ -1018,6 +1022,7 @@ export async function buildIndex(opts) {
         },
         auth0Lint,
         snippetMigration,
+        rulesDeprecation,
         similarity,
         crossNavPairs: crossNavPairsIndex,
         shadowHubs: shadowHubsIndex,
