@@ -32,6 +32,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { useRulesDeprecation } from '@/hooks/use-index-data';
 import type { RulesDeprecationItem, RulesDeprecationCategory } from '@/types';
@@ -122,6 +123,7 @@ export default function RulesDeprecationPage() {
   const [suggestingItem, setSuggestingItem] = useState<RulesDeprecationItem | null>(null);
   const [suggestions, setSuggestions] = useState<AiSuggestion[]>([]);
   const [suggestionsLoading, setSuggestionsLoading] = useState(false);
+  const [acceptedSuggestions, setAcceptedSuggestions] = useState<Set<number>>(new Set());
 
   // PR success modal
   const [prSuccess, setPrSuccess] = useState<{ open: boolean; prUrl: string; filePath: string }>({
@@ -153,6 +155,42 @@ export default function RulesDeprecationPage() {
   const inProgressCount = Object.values(statuses).filter((s) => s.status === 'in_progress').length;
   const totalItems = items.length;
   const progressPct = totalItems > 0 ? Math.round(((doneCount) / totalItems) * 100) : 0;
+
+  // Suggestion validation & selection helpers
+  const isValidSuggestion = (s: AiSuggestion): boolean => {
+    if (!s.before || !s.after) return false;
+    const instructionPatterns = [
+      /^(remove|delete|add|insert|replace|change|update|fix|correct|modify|consider|should|could|would|ensure|make sure)/i,
+      /^(the|this|that|a|an)\s+(section|paragraph|sentence|text|content|line)/i,
+    ];
+    for (const pattern of instructionPatterns) {
+      if (pattern.test(s.after.trim())) return false;
+    }
+    if (s.after.length > s.before.length * 3 && s.after.length > 200) return false;
+    return true;
+  };
+
+  const toggleSuggestion = (idx: number) => {
+    setAcceptedSuggestions((prev) => {
+      const next = new Set(prev);
+      if (next.has(idx)) { next.delete(idx); } else { next.add(idx); }
+      return next;
+    });
+  };
+
+  const toggleAllSuggestions = (accept: boolean) => {
+    if (accept) {
+      const applicable = suggestions
+        .map((s, idx) => isValidSuggestion(s) ? idx : -1)
+        .filter((idx) => idx !== -1);
+      setAcceptedSuggestions(new Set(applicable));
+    } else {
+      setAcceptedSuggestions(new Set());
+    }
+  };
+
+  const acceptedCount = acceptedSuggestions.size;
+  const applicableCount = suggestions.filter(isValidSuggestion).length;
 
   // Status mutation
   const statusMutation = useMutation({
@@ -260,7 +298,13 @@ Rules:
       const jsonMatch = text.match(/\{[\s\S]*\}/);
       if (!jsonMatch) throw new Error('Failed to parse AI response');
       const parsed = JSON.parse(jsonMatch[0]);
-      setSuggestions(parsed.suggestions || []);
+      const newSuggestions: AiSuggestion[] = parsed.suggestions || [];
+      setSuggestions(newSuggestions);
+      // Auto-accept all valid suggestions
+      const validIndices = newSuggestions
+        .map((s: AiSuggestion, idx: number) => isValidSuggestion(s) ? idx : -1)
+        .filter((idx: number) => idx !== -1);
+      setAcceptedSuggestions(new Set(validIndices));
     } catch (e: any) {
       toast({ title: 'AI Error', description: e?.message || String(e), variant: 'destructive' });
       setSuggestingItem(null);
@@ -269,17 +313,20 @@ Rules:
     }
   }, [toast]);
 
-  // PR creation handler
+  // PR creation handler — only sends accepted suggestions
   const handleCreatePr = useCallback(async () => {
-    if (!suggestingItem || suggestions.length === 0) return;
+    if (!suggestingItem || acceptedSuggestions.size === 0) return;
     setCreatingPr(true);
     try {
+      const selectedSuggestions = suggestions
+        .filter((_, idx) => acceptedSuggestions.has(idx))
+        .map((s) => ({ before: s.before, after: s.after }));
       const res = await fetch('/api/rules-deprecation/open-pr', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           filePath: suggestingItem.filePath,
-          suggestions: suggestions.map((s) => ({ before: s.before, after: s.after })),
+          suggestions: selectedSuggestions,
         }),
       });
       const json = await res.json();
@@ -483,34 +530,68 @@ Rules:
               <div className="text-sm text-muted-foreground py-8 text-center">No suggestions returned.</div>
             ) : (
               <div className="space-y-4">
-                {suggestions.map((s, i) => (
-                  <div key={i} className="rounded-lg border p-4 space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Badge variant="secondary">{s.category}</Badge>
-                      <Badge variant={s.confidence === 'high' ? 'default' : 'secondary'}>{s.confidence}</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{s.explanation}</p>
-                    {s.before && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
-                        <div className="rounded bg-red-50 dark:bg-red-900/20 p-3">
-                          <div className="text-xs text-red-600 dark:text-red-400 font-medium mb-1">Before</div>
-                          <pre className="text-xs whitespace-pre-wrap break-all">{s.before.slice(0, 300)}</pre>
-                        </div>
-                        <div className="rounded bg-green-50 dark:bg-green-900/20 p-3">
-                          <div className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">After</div>
-                          <pre className="text-xs whitespace-pre-wrap break-all">{(s.after || '(deleted)').slice(0, 300)}</pre>
+                {/* Accept/Decline all controls */}
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground">
+                    {acceptedCount} of {applicableCount} applicable suggestions selected
+                  </span>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="sm" onClick={() => toggleAllSuggestions(true)}>
+                      Accept All
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => toggleAllSuggestions(false)}>
+                      Decline All
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Suggestion list with checkboxes */}
+                {suggestions.map((s, i) => {
+                  const canApply = isValidSuggestion(s);
+                  const isAccepted = acceptedSuggestions.has(i);
+                  return (
+                    <div key={i} className={`rounded-lg border p-4 space-y-2 transition-opacity ${!isAccepted && canApply ? 'opacity-50 bg-muted/30' : ''}`}>
+                      <div className="flex items-start gap-3">
+                        {canApply ? (
+                          <Checkbox
+                            checked={isAccepted}
+                            onCheckedChange={() => toggleSuggestion(i)}
+                            className="mt-1"
+                          />
+                        ) : (
+                          <div className="w-4 h-4 mt-1" title="Cannot be auto-applied (no specific replacement text)" />
+                        )}
+                        <div className="flex-1 space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Badge variant="secondary">{s.category}</Badge>
+                            <Badge variant={s.confidence === 'high' ? 'default' : 'secondary'}>{s.confidence}</Badge>
+                            {!canApply && <Badge variant="outline" className="text-xs">Manual only</Badge>}
+                          </div>
+                          <p className="text-sm text-muted-foreground">{s.explanation}</p>
+                          {s.before && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                              <div className="rounded bg-red-50 dark:bg-red-900/20 p-3">
+                                <div className="text-xs text-red-600 dark:text-red-400 font-medium mb-1">Before</div>
+                                <pre className="text-xs whitespace-pre-wrap break-all">{s.before.slice(0, 300)}</pre>
+                              </div>
+                              <div className="rounded bg-green-50 dark:bg-green-900/20 p-3">
+                                <div className="text-xs text-green-600 dark:text-green-400 font-medium mb-1">After</div>
+                                <pre className="text-xs whitespace-pre-wrap break-all">{(s.after || '(deleted)').slice(0, 300)}</pre>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
-                    )}
-                  </div>
-                ))}
+                    </div>
+                  );
+                })}
 
                 <div className="flex gap-2 pt-2">
-                  <Button onClick={handleCreatePr} disabled={creatingPr} className="flex-1">
+                  <Button onClick={handleCreatePr} disabled={creatingPr || acceptedCount === 0} className="flex-1">
                     {creatingPr ? (
                       <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Creating PR...</>
                     ) : (
-                      <><GitPullRequest className="w-4 h-4 mr-2" /> Apply &amp; Create PR</>
+                      <><GitPullRequest className="w-4 h-4 mr-2" /> Apply &amp; Create PR ({acceptedCount} fix{acceptedCount !== 1 ? 'es' : ''})</>
                     )}
                   </Button>
                   <Button variant="outline" onClick={() => { setSuggestingItem(null); setSuggestions([]); }}>
