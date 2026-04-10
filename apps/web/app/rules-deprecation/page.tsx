@@ -169,24 +169,98 @@ export default function RulesDeprecationPage() {
     },
   });
 
-  // AI suggestions handler
+  // AI suggestions handler — calls Claude client-side (same pattern as audit page)
   const handleGetSuggestions = useCallback(async (item: RulesDeprecationItem) => {
     setSuggestingItem(item);
     setSuggestions([]);
     setSuggestionsLoading(true);
     try {
-      const res = await fetch('/api/rules-deprecation/suggest', {
+      // Get user's API key (same as audit page)
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) throw new Error('Anthropic API key not configured. Add one in Settings.');
+      const { apiKey } = await keyRes.json();
+      if (!apiKey) throw new Error('Anthropic API key not configured. Add one in Settings.');
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const evidenceBlock = item.evidence
+        .slice(0, 10)
+        .map((e) => `- Line ${e.line} (${e.category}): "${e.snippet}"`)
+        .join('\n');
+
+      const filePath = item.filePath;
+      const docsPath = filePath.replace(/^main\/docs\//, '').replace(/\.mdx$/, '').replace(/\/index$/, '');
+      const docsUrl = `https://auth0.com/docs/${docsPath}`;
+
+      const prompt = `You are an Auth0 documentation migration specialist. Auth0 Rules (the legacy JavaScript-based extensibility system using \`function(user, context, callback)\`) has reached end-of-life and must be migrated to Auth0 Actions (the new serverless function system using \`exports.onExecutePostLogin = async (event, api) =>\`).
+
+Analyze the following documentation page and provide specific rewrite suggestions to remove or update all Auth0 Rules references.
+
+File: ${filePath}
+Published URL: ${docsUrl}
+Categories detected: ${item.categories.join(', ')}
+
+Evidence of Rules references found:
+${evidenceBlock}
+
+For each Rules reference, provide a concrete suggestion. Handle these cases:
+1. **Code examples**: Rewrite \`function(user, context, callback)\` signatures to Actions format (\`exports.onExecutePostLogin\`). Map \`context.*\` to \`event.*\` / \`api.*\`. Remove \`callback()\` in favor of return values.
+2. **Links**: Replace \`/docs/customize/rules\` with \`/docs/customize/actions\` equivalents.
+3. **Prose**: Replace "Rules" product references with "Actions" where appropriate. Add deprecation notices where the page still needs to reference Rules for context.
+4. **Suggestions to use Rules**: Reframe guidance to recommend Actions instead.
+
+Return your response as JSON only:
+{
+  "suggestions": [
+    {
+      "before": "The exact original text from the document (verbatim, used for find-replace)",
+      "after": "The exact replacement text",
+      "explanation": "Brief explanation of why this change is needed",
+      "category": "code|link|prose|suggestion",
+      "confidence": "high|medium|low"
+    }
+  ]
+}
+
+Rules:
+- "before" must be EXACT text from the document (copy verbatim)
+- "after" must be the EXACT replacement (not instructions)
+- For deletions, set "after" to ""
+- Focus on the most impactful changes. Maximum 15 suggestions.
+- Only include suggestions where you're confident there's a real issue.
+- Return ONLY the JSON, no other text.`;
+
+      const response = await fetch(`${baseUrl}/v1/messages`, {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers,
         body: JSON.stringify({
-          filePath: item.filePath,
-          categories: item.categories,
-          evidence: item.evidence,
+          model,
+          max_tokens: 8192,
+          messages: [{ role: 'user', content: prompt }],
         }),
       });
-      const json = await res.json();
-      if (!json.ok) throw new Error(json.error || 'Failed to get suggestions');
-      setSuggestions(json.suggestions || []);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`AI API error ${response.status}: ${errorText.slice(0, 200)}`);
+      }
+
+      const data = await response.json();
+      const text = data.content?.[0]?.text || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('Failed to parse AI response');
+      const parsed = JSON.parse(jsonMatch[0]);
+      setSuggestions(parsed.suggestions || []);
     } catch (e: any) {
       toast({ title: 'AI Error', description: e?.message || String(e), variant: 'destructive' });
       setSuggestingItem(null);
