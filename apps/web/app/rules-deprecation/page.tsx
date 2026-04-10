@@ -250,9 +250,9 @@ export default function RulesDeprecationPage() {
 
       const filePath = item.filePath;
 
-      const prompt = `You are an Auth0 documentation migration specialist. Auth0 Rules (the legacy JavaScript-based extensibility system using \`function(user, context, callback)\`) has reached end-of-life and must be migrated to Auth0 Actions (the new serverless function system using \`exports.onExecutePostLogin = async (event, api) =>\`).
+      const prompt = `You are an Auth0 documentation migration specialist performing a THOROUGH audit. Auth0 Rules (the legacy JavaScript-based extensibility system using \`function(user, context, callback)\`) has reached end-of-life (EOL November 2026) and ALL references must be migrated to Auth0 Actions.
 
-Analyze the following documentation page and provide specific rewrite suggestions to remove or update all Auth0 Rules references.
+Analyze the following documentation page and find EVERY Auth0 Rules reference that needs to change. Be thorough — do not miss any.
 
 File: ${filePath}
 Categories detected: ${item.categories.join(', ')}
@@ -261,17 +261,25 @@ Evidence of Rules references found:
 ${evidenceBlock}
 ${mdxSection}
 
-For each Rules reference, provide a concrete suggestion. Handle these cases:
-1. **Code examples**: Rewrite \`function(user, context, callback)\` signatures to Actions format (\`exports.onExecutePostLogin\`). Map \`context.*\` to \`event.*\` / \`api.*\`. Remove \`callback()\` in favor of return values.
-2. **Links**: Replace \`/docs/customize/rules\` with \`/docs/customize/actions\` equivalents.
-3. **Prose**: Replace "Rules" product references with "Actions" where appropriate. Add deprecation notices where the page still needs to reference Rules for context.
-4. **Suggestions to use Rules**: Reframe guidance to recommend Actions instead.
+## What to look for (check ALL of these):
+
+1. **Rules code blocks**: Any fenced code block containing \`function(user, context, callback)\` or \`function (user, context, callback)\`. If the page already has an Actions equivalent nearby, REMOVE the Rules code block entirely and update surrounding prose. If no Actions equivalent exists, REWRITE the code to Actions format.
+
+2. **Rules-specific API patterns in code**: \`context.multifactor\`, \`context.redirect\`, \`context.accessToken\`, \`context.idToken\`, \`context.clientMetadata\`, \`callback(null, user, context)\`, \`callback(new UnauthorizedError(...))\`
+
+3. **Links to Rules docs**: Any link containing \`/docs/customize/rules\` — replace with Actions equivalent (\`/docs/customize/actions\`)
+
+4. **Prose mentioning "rules"**: Phrases like "the rule below", "create a rule", "using rules", "Auth0 Rules", "rules pipeline" — rewrite to reference Actions
+
+5. **Dashboard paths**: \`Auth Pipeline > Rules\` or \`manage.auth0.com/#/rules\` — update to Actions equivalents
+
+6. **Surrounding context**: If a code block is removed, also update the prose that introduces it (e.g., "The rule below will..." → "The post-login action below will...")
 
 Return your response as JSON only:
 {
   "suggestions": [
     {
-      "before": "The EXACT original text from the MDX file (verbatim, character-for-character, including newlines and formatting)",
+      "before": "The EXACT original text from the MDX file (verbatim, character-for-character)",
       "after": "The exact replacement text",
       "explanation": "Brief explanation of why this change is needed",
       "category": "code|link|prose|suggestion",
@@ -280,14 +288,15 @@ Return your response as JSON only:
   ]
 }
 
-Rules:
+Critical rules:
 - "before" MUST be copied character-for-character from the MDX file content above
 - "before" must be an exact substring that would match via string.includes()
 - "after" must be the EXACT replacement (not instructions)
-- For code blocks, include the full fenced block (opening \`\`\`, code, closing \`\`\`)
+- For removing a code block, include the FULL fenced block in "before" (the opening \`\`\`language line, all code lines, and the closing \`\`\`) and set "after" to ""
+- When a Rules code block AND its Actions equivalent both exist on the page, remove ONLY the Rules block and its introductory prose — keep the Actions block
 - For deletions, set "after" to ""
-- Focus on the most impactful changes. Maximum 15 suggestions.
-- Only include suggestions where you're confident there's a real issue.
+- Be THOROUGH — check every line of the file. Do not skip code blocks.
+- Maximum 15 suggestions.
 - Return ONLY the JSON, no other text.`;
 
       const response = await fetch(`${baseUrl}/v1/messages`, {
