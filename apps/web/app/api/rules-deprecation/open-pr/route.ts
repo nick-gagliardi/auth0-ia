@@ -65,10 +65,9 @@ async function refineSuggestionsWithAi(
 
 Your job: for each suggestion, find the EXACT text in the MDX file that corresponds to the approximate "before", and return the precise before/after pair that can be used for a literal string replacement.
 
-## MDX File Content
-\`\`\`mdx
+<mdx-file-content>
 ${mdxContent.slice(0, 25000)}
-\`\`\`
+</mdx-file-content>
 
 ## Approximate Suggestions
 ${suggestionsBlock}
