@@ -3771,6 +3771,15 @@
     ]
   },
   {
+    "id": "main/docs/manage-users/my-organization-api.mdx",
+    "type": "page",
+    "filePath": "main/docs/manage-users/my-organization-api.mdx",
+    "title": "My Organization API and Embeddable UI Components",
+    "navPaths": [
+      "Documentation > Manage Users > Manage Users > My Organization API and Embeddable UI Components"
+    ]
+  },
+  {
     "id": "main/docs/manage-users/organizations.mdx",
     "type": "page",
     "filePath": "main/docs/manage-users/organizations.mdx",
@@ -10730,6 +10739,87 @@
     ]
   },
   {
+    "id": "main/docs/get-started/universal-components/auth0-component-provider.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/auth0-component-provider.mdx",
+    "title": "Configure Auth0ComponentProvider",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > Configure Auth0ComponentProvider"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/universal-components-overview.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/universal-components-overview.mdx",
+    "title": "Auth0 Universal Components",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > Auth0 Universal Components"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/universal-components-style.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/universal-components-style.mdx",
+    "title": "Customize Style and Themes with Auth0 Universal Components",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > Customize Style and Themes with Auth0 Universal Components"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
+    "title": "Build a Delegated Admin Interface with My Organization API",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > My Organization > Build a Delegated Admin Interface with My Organization API"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
+    "title": "Organization Details Edit",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > My Organization > Organization Management > Organization Details Edit"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx",
+    "title": "SSO Provider Create",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > My Organization > IDP Management > SSO Provider Create"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
+    "title": "SSO Provider Edit",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > My Organization > IDP Management > SSO Provider Edit"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
+    "title": "SSO Provider Table",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > My Organization > IDP Management > SSO Provider Table"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
+    "title": "Configure Verified Organization Domain",
+    "navPaths": [
+      "Documentation > Get Started > Universal Components > My Organization > Domain Management > Configure Verified Organization Domain"
+    ]
+  },
+  {
     "id": "main/docs/get-started/tenant-settings/configure-device-user-code-settings.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/tenant-settings/configure-device-user-code-settings.mdx",
@@ -17484,6 +17574,15 @@
     ]
   },
   {
+    "id": "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
+    "type": "page",
+    "filePath": "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
+    "title": "Configure Enterprise Connections with Demonstrating Proof-of-Possession (DPoP)",
+    "navPaths": [
+      "Documentation > Authenticate > Provision Users > Enterprise Connections > Configure Enterprise Connections with Demonstrating Proof-of-Possession (DPoP)"
+    ]
+  },
+  {
     "id": "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
     "type": "page",
     "filePath": "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
@@ -19150,6 +19249,14 @@
     ]
   },
   {
+    "id": "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > adds a connection to an organization"
+    ]
+  },
+  {
     "id": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
     "type": "page",
     "filePath": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
@@ -19187,6 +19294,14 @@
     "filePath": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
     "navPaths": [
       "API Reference > Management API >   > Organizations > create invitations to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > delete a connection from an organization"
     ]
   },
   {
@@ -19238,6 +19353,14 @@
     ]
   },
   {
+    "id": "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get a specific connection associated with an organization"
+    ]
+  },
+  {
     "id": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
     "type": "page",
     "filePath": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
@@ -19259,6 +19382,14 @@
     "filePath": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
     "navPaths": [
       "API Reference > Management API >   > Organizations > get client grants associated to an organization"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > get connections associated with an organization"
     ]
   },
   {
@@ -19355,6 +19486,14 @@
     "filePath": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
     "navPaths": [
       "API Reference > Management API >   > Organizations > retrieve an organization discovery domain by id"
+    ]
+  },
+  {
+    "id": "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx",
+    "type": "page",
+    "filePath": "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx",
+    "navPaths": [
+      "API Reference > Management API >   > Organizations > update a connection for an organization"
     ]
   },
   {
@@ -21641,6 +21780,12 @@
     "navPaths": []
   },
   {
+    "id": "main/snippets/ComponentLoader.jsx",
+    "type": "snippet",
+    "filePath": "main/snippets/ComponentLoader.jsx",
+    "navPaths": []
+  },
+  {
     "id": "main/snippets/Footer.jsx",
     "type": "snippet",
     "filePath": "main/snippets/Footer.jsx",
@@ -21686,6 +21831,12 @@
     "id": "main/snippets/SectionsWithCards.jsx",
     "type": "snippet",
     "filePath": "main/snippets/SectionsWithCards.jsx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/Spinner.jsx",
+    "type": "snippet",
+    "filePath": "main/snippets/Spinner.jsx",
     "navPaths": []
   },
   {

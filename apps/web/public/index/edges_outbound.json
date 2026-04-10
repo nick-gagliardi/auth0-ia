@@ -7179,6 +7179,7 @@
   },
   "main/docs/customize/login-pages/classic-login/version-control.mdx": {
     "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
       "main/docs/authenticate/login/auth0-universal-login.mdx"
     ],
     "import": [],
@@ -9239,6 +9240,92 @@
     ],
     "redirect": []
   },
+  "main/docs/manage-users/my-organization-api.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/manage-users/organizations.mdx",
+      "main/docs/authenticate/identity-providers.mdx",
+      "main/docs/authenticate/protocols/scim.mdx",
+      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
+      "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+      "main/docs/customize/custom-domains.mdx",
+      "main/docs/get-started/auth0-overview/create-applications.mdx",
+      "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
+      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/secure/multi-factor-authentication/step-up-authentication.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+      "main/docs/libraries.mdx",
+      "main/docs/get-started/applications/set-up-cors.mdx",
+      "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
+      "main/docs/get-started/universal-components/universal-components-overview.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/protocols/scim.mdx": {
+    "link": [
+      "main/docs/authenticate/identity-providers.mdx",
+      "main/docs/authenticate/database-connections.mdx",
+      "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx": {
+    "link": [
+      "main/docs/manage-users/access-control/rbac.mdx",
+      "main/docs/secure/tokens/access-tokens/access-token-profiles.mdx",
+      "main/docs/secure/tokens/json-web-tokens.mdx",
+      "main/docs/manage-users/access-control/configure-core-rbac/rbac-users.mdx",
+      "main/docs/manage-users/access-control/configure-core-rbac/manage-permissions.mdx",
+      "main/docs/manage-users/access-control/sample-use-cases-role-based-access-control.mdx",
+      "main/docs/troubleshoot/authentication-issues/troubleshoot-rbac-authorization.mdx"
+    ],
+    "import": [
+      "main/snippets/AuthCodeBlock.jsx",
+      "main/snippets/AuthCodeGroup.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/authenticate/enterprise-connections/connection-profile.mdx": {
+    "link": [
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/authenticate/protocols/scim.mdx",
+      "main/docs/authenticate/protocols/saml.mdx",
+      "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx",
+      "main/docs/authenticate/protocols/saml/saml-configuration/saml-attribute-mapping-examples.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/universal-components-overview.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/libraries.mdx",
+      "main/docs/authenticate/single-sign-on.mdx",
+      "main/docs/authenticate/single-sign-on/outbound-single-sign-on.mdx",
+      "main/docs/manage-users/my-account-api.mdx",
+      "main/docs/api/myorganization/index.mdx",
+      "main/docs/get-started/auth0-overview/create-applications.mdx",
+      "main/docs/get-started/universal-components/universal-components-style.mdx",
+      "main/docs/get-started/universal-components/auth0-component-provider.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/manage-users/organizations/organizations-overview.mdx": {
     "link": [
       "main/docs/manage-users/organizations/create-first-organization.mdx",
@@ -10657,22 +10744,6 @@
     ],
     "redirect": []
   },
-  "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx": {
-    "link": [
-      "main/docs/manage-users/access-control/rbac.mdx",
-      "main/docs/secure/tokens/access-tokens/access-token-profiles.mdx",
-      "main/docs/secure/tokens/json-web-tokens.mdx",
-      "main/docs/manage-users/access-control/configure-core-rbac/rbac-users.mdx",
-      "main/docs/manage-users/access-control/configure-core-rbac/manage-permissions.mdx",
-      "main/docs/manage-users/access-control/sample-use-cases-role-based-access-control.mdx",
-      "main/docs/troubleshoot/authentication-issues/troubleshoot-rbac-authorization.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
   "main/docs/get-started/apis/delete-api-permissions.mdx": {
     "link": [
       "main/docs/customize/login-pages/customize-consent-prompts.mdx",
@@ -10929,6 +11000,7 @@
   },
   "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx": {
     "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
       "main/docs/customize/login-pages/classic-login/customization-classic.mdx",
       "main/docs/libraries/auth0js.mdx",
       "main/docs/libraries/lock.mdx",
@@ -11076,6 +11148,7 @@
   },
   "main/docs/customize/login-pages/classic-login/customize-lock-error-messages.mdx": {
     "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
       "main/docs/customize/rules.mdx",
       "main/docs/libraries/lock/lock-api-reference.mdx",
       "main/docs/libraries/lock.mdx"
@@ -16533,6 +16606,141 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/get-started/universal-components/auth0-component-provider.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/get-started/universal-components/universal-components-overview.mdx",
+      "main/docs/libraries.mdx",
+      "main/docs/manage-users/my-account-api.mdx",
+      "main/docs/get-started/universal-components/universal-components-style.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/universal-components-style.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/get-started/universal-components/auth0-component-provider.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/single-sign-on/outbound-single-sign-on.mdx": {
+    "link": [
+      "main/docs/customize/integrations/sso-integrations.mdx",
+      "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
+      "main/docs/get-started/applications/configure-applications-with-oidc-discovery.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/myorganization/index.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
+      "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
+      "main/docs/get-started/auth0-overview/create-applications.mdx",
+      "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
+      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx": {
+    "link": [
+      "main/docs/manage-users/organizations.mdx",
+      "main/docs/api/myorganization/index.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/api.mdx",
+      "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
+      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
+      "main/docs/authenticate/identity-providers.mdx",
+      "main/docs/get-started/universal-components/universal-components-overview.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx": {
+    "link": [
+      "main/docs/manage-users/organizations.mdx",
+      "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
+    ],
+    "import": [
+      "main/snippets/Spinner.jsx",
+      "main/snippets/ComponentLoader.jsx"
+    ],
+    "redirect": []
+  },
+  "main/snippets/Spinner.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/ComponentLoader.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx": {
+    "link": [
+      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
+    ],
+    "import": [
+      "main/snippets/Spinner.jsx",
+      "main/snippets/ComponentLoader.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx": {
+    "link": [
+      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
+    ],
+    "import": [
+      "main/snippets/Spinner.jsx",
+      "main/snippets/ComponentLoader.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx": {
+    "link": [
+      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
+    ],
+    "import": [
+      "main/snippets/Spinner.jsx",
+      "main/snippets/ComponentLoader.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx": {
+    "link": [
+      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx",
+      "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
+    ],
+    "import": [
+      "main/snippets/Spinner.jsx",
+      "main/snippets/ComponentLoader.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/authenticate/enterprise-connections.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
+      "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx",
+      "main/docs/get-started/applications/dynamic-client-registration.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/get-started/applications/enable-sso-for-applications.mdx": {
     "link": [
       "main/docs/get-started/tenant-settings/enable-sso-for-legacy-tenants.mdx",
@@ -17959,6 +18167,7 @@
   },
   "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx": {
     "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx",
       "main/docs/troubleshoot/customer-support/reset-account-passwords.mdx",
       "main/docs/customize/login-pages/classic-login/customization-classic.mdx",
@@ -18519,112 +18728,161 @@
   },
   "main/docs/events/user/user.created.mdx": {
     "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
+    "redirect": []
+  },
+  "main/snippets/ApiReleaseLifecycle.jsx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
   "main/docs/events/user/user.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/user/user.updated.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.connection.added.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.connection.removed.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.connection.updated.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.created.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.group.role.assigned.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.group.role.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.member.added.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.member.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.member.role.assigned.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.member.role.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/organization/organization.updated.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.created.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.member.added.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.member.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.role.assigned.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.role.deleted.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/events/group/group.updated.mdx": {
     "link": [],
-    "import": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx"
+    ],
     "redirect": []
   },
   "main/docs/deploy-monitor/auth0-cli.mdx": {
@@ -19263,6 +19521,7 @@
   },
   "main/docs/customize/login-pages/classic-login.mdx": {
     "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx",
       "main/docs/customize/login-pages/classic-login/customization-classic.mdx",
@@ -19488,6 +19747,7 @@
   },
   "main/docs/customize/login-pages/classic-login/customization-classic.mdx": {
     "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx",
       "main/docs/customize/login-pages/classic-login/version-control.mdx",
       "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
@@ -20975,15 +21235,6 @@
     ],
     "redirect": []
   },
-  "main/docs/authenticate/protocols/scim.mdx": {
-    "link": [
-      "main/docs/authenticate/identity-providers.mdx",
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/authenticate/single-sign-on/inbound-single-sign-on.mdx": {
     "link": [
       "main/docs/manage-users/sessions/session-layers.mdx",
@@ -21000,15 +21251,6 @@
       "main/docs/authenticate/single-sign-on/api-endpoints-for-single-sign-on.mdx",
       "main/docs/troubleshoot/authentication-issues/troubleshoot-saml-configurations.mdx",
       "main/docs/troubleshoot/authentication-issues/saml-errors.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/single-sign-on/outbound-single-sign-on.mdx": {
-    "link": [
-      "main/docs/customize/integrations/sso-integrations.mdx",
-      "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx",
-      "main/docs/get-started/applications/configure-applications-with-oidc-discovery.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21752,28 +21994,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/enterprise-connections/connection-profile.mdx": {
-    "link": [
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/authenticate/protocols/scim.mdx",
-      "main/docs/authenticate/protocols/saml.mdx",
-      "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx",
-      "main/docs/authenticate/protocols/saml/saml-configuration/saml-attribute-mapping-examples.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/configure-ad-ldap-connector-client-certificates.mdx": {
     "link": [],
     "import": [],
@@ -21797,24 +22017,27 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
+  "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx"
+      "main/docs/secure/sender-constraining.mdx",
+      "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx",
+      "main/docs/authenticate/enterprise-connections.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/token-vault/configure-token-vault.mdx",
+      "main/docs/get-started/applications/signing-algorithms.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/deploy-monitor/logs.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post.mdx",
+      "main/docs/get-started/applications/update-grant-types.mdx"
     ],
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": {
+  "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/authenticate/enterprise-connections.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
-      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
-      "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx",
-      "main/docs/get-started/applications/dynamic-client-registration.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx"
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21951,31 +22174,12 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/myorganization/index.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
-      "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
-      "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
-      "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
       "main/snippets/ApiScopes.jsx"
     ],
-    "redirect": []
-  },
-  "main/snippets/ApiReleaseLifecycle.jsx": {
-    "link": [],
-    "import": [],
     "redirect": []
   },
   "main/snippets/ApiScopes.jsx": {
@@ -23265,6 +23469,14 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx": {
     "link": [],
     "import": [
@@ -23298,6 +23510,14 @@
     "redirect": []
   },
   "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -23353,6 +23573,14 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx": {
     "link": [],
     "import": [
@@ -23370,6 +23598,14 @@
     "redirect": []
   },
   "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -23466,6 +23702,14 @@
     "redirect": []
   },
   "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",

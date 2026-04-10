@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-09T04:38:04.821Z",
+  "generatedAtUtc": "2026-04-10T04:50:42.169Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -2161,6 +2161,113 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "root/tab:documentation/dropdown:get-started/group:universal-components",
+                "kind": "group",
+                "label": "Universal Components",
+                "children": [
+                  {
+                    "id": "root/tab:documentation/dropdown:get-started/group:universal-components/page:docs/get-started/universal-components/universal-components-o",
+                    "kind": "page",
+                    "label": "docs/get-started/universal-components/universal-components-overview",
+                    "route": "docs/get-started/universal-components/universal-components-overview",
+                    "filePath": "main/docs/get-started/universal-components/universal-components-overview.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:get-started/group:universal-components/page:docs/get-started/universal-components/auth0-component-provid",
+                    "kind": "page",
+                    "label": "docs/get-started/universal-components/auth0-component-provider",
+                    "route": "docs/get-started/universal-components/auth0-component-provider",
+                    "filePath": "main/docs/get-started/universal-components/auth0-component-provider.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:get-started/group:universal-components/page:docs/get-started/universal-components/universal-components-s",
+                    "kind": "page",
+                    "label": "docs/get-started/universal-components/universal-components-style",
+                    "route": "docs/get-started/universal-components/universal-components-style",
+                    "filePath": "main/docs/get-started/universal-components/universal-components-style.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+                    "kind": "group",
+                    "label": "My Organization",
+                    "children": [
+                      {
+                        "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/page:docs/get-started/universal-components/my-organization/build-",
+                        "kind": "page",
+                        "label": "docs/get-started/universal-components/my-organization/build-delegated-admin",
+                        "route": "docs/get-started/universal-components/my-organization/build-delegated-admin",
+                        "filePath": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:domain-management",
+                        "kind": "group",
+                        "label": "Domain Management",
+                        "children": [
+                          {
+                            "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:domain-management/page:/docs/get-started/universal-components/my-organization/domai",
+                            "kind": "page",
+                            "label": "/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains",
+                            "route": "/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains",
+                            "filePath": "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management",
+                        "kind": "group",
+                        "label": "IDP Management",
+                        "children": [
+                          {
+                            "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management/page:docs/get-started/universal-components/my-organization/idp-ma",
+                            "kind": "page",
+                            "label": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-table",
+                            "route": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-table",
+                            "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management/page:docs/get-started/universal-components/my-organization/idp-ma",
+                            "kind": "page",
+                            "label": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-create",
+                            "route": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-create",
+                            "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management/page:docs/get-started/universal-components/my-organization/idp-ma",
+                            "kind": "page",
+                            "label": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit",
+                            "route": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit",
+                            "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:organization-management",
+                        "kind": "group",
+                        "label": "Organization Management",
+                        "children": [
+                          {
+                            "id": "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:organization-management/page:/docs/get-started/universal-components/my-organization/organ",
+                            "kind": "page",
+                            "label": "/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details",
+                            "route": "/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details",
+                            "filePath": "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -3797,6 +3904,14 @@
                         "route": "docs/authenticate/enterprise-connections/private-key-jwt-client-auth",
                         "filePath": "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
                         "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:enterprise-connections/page:docs/authenticate/enterprise-connections/enable-dpop-enterpr",
+                        "kind": "page",
+                        "label": "docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections",
+                        "route": "docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections",
+                        "filePath": "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
+                        "children": []
                       }
                     ]
                   },
@@ -4948,6 +5063,14 @@
                     "label": "docs/manage-users/my-account-api",
                     "route": "docs/manage-users/my-account-api",
                     "filePath": "main/docs/manage-users/my-account-api.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:manage-users/group:manage-users/page:docs/manage-users/my-organization-api:docs/manage-users/my-o",
+                    "kind": "page",
+                    "label": "docs/manage-users/my-organization-api",
+                    "route": "docs/manage-users/my-organization-api",
+                    "filePath": "main/docs/manage-users/my-organization-api.mdx",
                     "children": []
                   }
                 ]
@@ -13963,6 +14086,46 @@
                         "label": "docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization",
                         "route": "docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization",
                         "filePath": "main/docs/api/management/v2/organizations/remove-a-client-grant-from-an-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/get-connections-associa",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/organizations/get-connections-associated-with-an-organization",
+                        "route": "docs/api/management/v2/organizations/get-connections-associated-with-an-organization",
+                        "filePath": "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/adds-a-connection-to-an",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/organizations/adds-a-connection-to-an-organization",
+                        "route": "docs/api/management/v2/organizations/adds-a-connection-to-an-organization",
+                        "filePath": "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/get-a-specific-connecti",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization",
+                        "route": "docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization",
+                        "filePath": "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/delete-a-connection-fro",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/organizations/delete-a-connection-from-an-organization",
+                        "route": "docs/api/management/v2/organizations/delete-a-connection-from-an-organization",
+                        "filePath": "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/update-a-connection-for",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/organizations/update-a-connection-for-an-organization",
+                        "route": "docs/api/management/v2/organizations/update-a-connection-for-an-organization",
+                        "filePath": "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx",
                         "children": []
                       },
                       {

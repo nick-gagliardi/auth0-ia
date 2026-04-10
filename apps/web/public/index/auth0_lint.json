@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2665,
-  "pagesWithWarnings": 563,
-  "warningCount": 791,
+  "pagesScanned": 2681,
+  "pagesWithWarnings": 566,
+  "warningCount": 795,
   "byCode": {
     "missing_pkce_mention": 127,
-    "missing_state_mention": 129,
+    "missing_state_mention": 131,
     "missing_nonce_mention": 270,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 12,
-    "rules_vs_actions_language": 250
+    "rules_vs_actions_language": 252
   },
   "items": [
     {
@@ -1510,6 +1510,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
       "filePath": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
       "warnings": []
@@ -1532,6 +1537,11 @@
     {
       "id": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
       "filePath": "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx",
       "warnings": []
     },
     {
@@ -1565,6 +1575,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
       "filePath": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
       "warnings": []
@@ -1577,6 +1592,11 @@
     {
       "id": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
       "filePath": "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx",
       "warnings": []
     },
     {
@@ -1637,6 +1657,11 @@
     {
       "id": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
       "filePath": "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx",
+      "filePath": "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx",
       "warnings": []
     },
     {
@@ -2836,6 +2861,19 @@
       "id": "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
       "filePath": "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
       "warnings": []
+    },
+    {
+      "id": "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
+      "filePath": "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "* The connection should use Proof Key for Code Exchange (PKCE) [Authorization Code Flow + PKCE](docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-",
+          "line": 21
+        }
+      ]
     },
     {
       "id": "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
@@ -6334,7 +6372,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "## Custom errors in Rules",
-          "line": 44
+          "line": 48
         }
       ]
     },
@@ -9374,6 +9412,59 @@
     {
       "id": "main/docs/get-started/tenant-settings/signing-keys/view-signing-certificates.mdx",
       "filePath": "main/docs/get-started/tenant-settings/signing-keys/view-signing-certificates.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/auth0-component-provider.mdx",
+      "filePath": "main/docs/get-started/universal-components/auth0-component-provider.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
+      "filePath": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
+      "filePath": "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx",
+      "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Field validation rules.",
+          "line": 574
+        }
+      ]
+    },
+    {
+      "id": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
+      "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
+      "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
+      "filePath": "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/universal-components-overview.mdx",
+      "filePath": "main/docs/get-started/universal-components/universal-components-overview.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/universal-components/universal-components-style.mdx",
+      "filePath": "main/docs/get-started/universal-components/universal-components-style.mdx",
       "warnings": []
     },
     {
@@ -14650,6 +14741,26 @@
       ]
     },
     {
+      "id": "main/docs/manage-users/my-organization-api.mdx",
+      "filePath": "main/docs/manage-users/my-organization-api.mdx",
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "### Example with Authorization Code Flow",
+          "line": 151
+        },
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "The My Organization API utilizes [Connection Profiles](/docs/authenticate/enterprise-connections/connection-profile) and [User Attribute Profiles](/docs/authenticate/enterprise-con",
+          "line": 235
+        }
+      ]
+    },
+    {
       "id": "main/docs/manage-users/organizations.mdx",
       "filePath": "main/docs/manage-users/organizations.mdx",
       "warnings": [
@@ -15804,14 +15915,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": ".withScope(\"openid profile email offline_access\")",
-          "line": 163
+          "line": 183
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "* Add ProGuard rules for Auth0 SDK if using code obfuscation",
-          "line": 338
+          "line": 358
         }
       ]
     },
@@ -21551,14 +21662,14 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": ".withScope(\"openid profile email offline_access\")",
-        "line": 163
+        "line": 183
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "* Add ProGuard rules for Auth0 SDK if using code obfuscation",
-        "line": 338
+        "line": 358
       }
     ],
     "main/docs/quickstart/backend/webapi-owin/02-using.mdx": [],
@@ -21672,6 +21783,22 @@
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* [Call Your API Using the Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow)",
         "line": 74
+      }
+    ],
+    "main/docs/manage-users/my-organization-api.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "### Example with Authorization Code Flow",
+        "line": 151
+      },
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "The My Organization API utilizes [Connection Profiles](/docs/authenticate/enterprise-connections/connection-profile) and [User Attribute Profiles](/docs/authenticate/enterprise-con",
+        "line": 235
       }
     ],
     "main/docs/manage-users/organizations.mdx": [
@@ -24067,6 +24194,23 @@
         "line": 115
       }
     ],
+    "main/docs/get-started/universal-components/auth0-component-provider.mdx": [],
+    "main/docs/get-started/universal-components/universal-components-overview.mdx": [],
+    "main/docs/get-started/universal-components/universal-components-style.mdx": [],
+    "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx": [],
+    "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx": [],
+    "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Field validation rules.",
+        "line": 574
+      }
+    ],
+    "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx": [],
+    "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx": [],
+    "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx": [],
     "main/docs/get-started/tenant-settings/configure-device-user-code-settings.mdx": [],
     "main/docs/get-started/tenant-settings/enable-sso-for-legacy-tenants.mdx": [],
     "main/docs/get-started/tenant-settings/find-your-tenant-name-or-tenant-id.mdx": [],
@@ -25718,7 +25862,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "## Custom errors in Rules",
-        "line": 44
+        "line": 48
       }
     ],
     "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx": [],
@@ -27413,6 +27557,15 @@
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/map-ad-ldap-profile-attributes-to-auth0.mdx": [],
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/update-ad-ldap-connectors.mdx": [],
     "main/docs/authenticate/enterprise-connections/connection-profile.mdx": [],
+    "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "* The connection should use Proof Key for Code Exchange (PKCE) [Authorization Code Flow + PKCE](docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-",
+        "line": 21
+      }
+    ],
     "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -27811,20 +27964,24 @@
     "main/docs/api/management/v2/prompts/update-render-settings-for-multiple-screens.mdx": [],
     "main/docs/api/management/v2/organizations/add-connections-to-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/add-members-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx": [],
     "main/docs/api/management/v2/organizations/associate-a-client-grant-with-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/create-an-organization-discovery-domain.mdx": [],
     "main/docs/api/management/v2/organizations/create-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/create-invitations-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/delete-an-organization-discovery-domain.mdx": [],
     "main/docs/api/management/v2/organizations/delete-connections-from-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/delete-members-from-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/delete-organization.mdx": [],
     "main/docs/api/management/v2/organizations/delete-user-roles-from-an-organization-member.mdx": [],
+    "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/get-an-enabled-connection-for-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/get-client-grants-associated-to-an-organization.mdx": [],
+    "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/get-invitations-to-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/get-members-who-belong-to-an-organization.mdx": [],
@@ -27837,6 +27994,7 @@
     "main/docs/api/management/v2/organizations/retrieve-all-organization-discovery-domains.mdx": [],
     "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-domain-name.mdx": [],
     "main/docs/api/management/v2/organizations/retrieve-an-organization-discovery-domain-by-id.mdx": [],
+    "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx": [],
     "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx": [],
     "main/docs/api/management/v2/organizations/update-the-connection-of-an-organization.mdx": [],
     "main/docs/api/management/v2/network-acls/create-access-control-list.mdx": [],

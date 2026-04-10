@@ -12543,6 +12543,39 @@
     "navLabel": "My Account API",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/manage-users/my-organization-api.mdx": {
+    "filePath": "main/docs/manage-users/my-organization-api.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/manage-users/my-organization-api",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:manage-users",
+          "root/tab:documentation/dropdown:manage-users/group:manage-users",
+          "root/tab:documentation/dropdown:manage-users/group:manage-users/page:docs/manage-users/my-organization-api:docs/manage-users/my-o"
+        ],
+        "labels": [
+          "Documentation",
+          "Manage Users",
+          "Manage Users",
+          "My Organization API and Embeddable UI Components"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "My Organization API and Embeddable UI Components",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Manage Users > Manage Users",
+        "pathString": "Documentation > Manage Users > Manage Users > My Organization API and Embeddable UI Components"
+      }
+    ],
+    "navLabel": "My Organization API and Embeddable UI Components",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/manage-users/organizations.mdx": {
     "filePath": "main/docs/manage-users/organizations.mdx",
     "navDepth": 4,
@@ -21225,6 +21258,336 @@
       }
     ],
     "navLabel": "Tenant Settings",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/auth0-component-provider.mdx": {
+    "filePath": "main/docs/get-started/universal-components/auth0-component-provider.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/auth0-component-provider",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/page:docs/get-started/universal-components/auth0-component-provid"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "Configure Auth0ComponentProvider"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Configure Auth0ComponentProvider",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components",
+        "pathString": "Documentation > Get Started > Universal Components > Configure Auth0ComponentProvider"
+      }
+    ],
+    "navLabel": "Configure Auth0ComponentProvider",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/universal-components-overview.mdx": {
+    "filePath": "main/docs/get-started/universal-components/universal-components-overview.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/universal-components-overview",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/page:docs/get-started/universal-components/universal-components-o"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "Auth0 Universal Components"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Auth0 Universal Components",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components",
+        "pathString": "Documentation > Get Started > Universal Components > Auth0 Universal Components"
+      }
+    ],
+    "navLabel": "Auth0 Universal Components",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/universal-components-style.mdx": {
+    "filePath": "main/docs/get-started/universal-components/universal-components-style.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/universal-components-style",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/page:docs/get-started/universal-components/universal-components-s"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "Customize Style and Themes with Auth0 Universal Components"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Customize Style and Themes with Auth0 Universal Components",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components",
+        "pathString": "Documentation > Get Started > Universal Components > Customize Style and Themes with Auth0 Universal Components"
+      }
+    ],
+    "navLabel": "Customize Style and Themes with Auth0 Universal Components",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx": {
+    "filePath": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/my-organization/build-delegated-admin",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/page:docs/get-started/universal-components/my-organization/build-"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "My Organization",
+          "Build a Delegated Admin Interface with My Organization API"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Build a Delegated Admin Interface with My Organization API",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components > My Organization",
+        "pathString": "Documentation > Get Started > Universal Components > My Organization > Build a Delegated Admin Interface with My Organization API"
+      }
+    ],
+    "navLabel": "Build a Delegated Admin Interface with My Organization API",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx": {
+    "filePath": "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:organization-management",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:organization-management/page:/docs/get-started/universal-components/my-organization/organ"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "My Organization",
+          "Organization Management",
+          "Organization Details Edit"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Organization Details Edit",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components > My Organization > Organization Management",
+        "pathString": "Documentation > Get Started > Universal Components > My Organization > Organization Management > Organization Details Edit"
+      }
+    ],
+    "navLabel": "Organization Details Edit",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx": {
+    "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-create",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management/page:docs/get-started/universal-components/my-organization/idp-ma"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "My Organization",
+          "IDP Management",
+          "SSO Provider Create"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "SSO Provider Create",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components > My Organization > IDP Management",
+        "pathString": "Documentation > Get Started > Universal Components > My Organization > IDP Management > SSO Provider Create"
+      }
+    ],
+    "navLabel": "SSO Provider Create",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx": {
+    "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management/page:docs/get-started/universal-components/my-organization/idp-ma"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "My Organization",
+          "IDP Management",
+          "SSO Provider Edit"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "SSO Provider Edit",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components > My Organization > IDP Management",
+        "pathString": "Documentation > Get Started > Universal Components > My Organization > IDP Management > SSO Provider Edit"
+      }
+    ],
+    "navLabel": "SSO Provider Edit",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx": {
+    "filePath": "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/universal-components/my-organization/idp-management/sso-provider-table",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:idp-management/page:docs/get-started/universal-components/my-organization/idp-ma"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "My Organization",
+          "IDP Management",
+          "SSO Provider Table"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "SSO Provider Table",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components > My Organization > IDP Management",
+        "pathString": "Documentation > Get Started > Universal Components > My Organization > IDP Management > SSO Provider Table"
+      }
+    ],
+    "navLabel": "SSO Provider Table",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx": {
+    "filePath": "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:universal-components",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:domain-management",
+          "root/tab:documentation/dropdown:get-started/group:universal-components/group:my-organization/group:domain-management/page:/docs/get-started/universal-components/my-organization/domai"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Universal Components",
+          "My Organization",
+          "Domain Management",
+          "Configure Verified Organization Domain"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Configure Verified Organization Domain",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Universal Components > My Organization > Domain Management",
+        "pathString": "Documentation > Get Started > Universal Components > My Organization > Domain Management > Configure Verified Organization Domain"
+      }
+    ],
+    "navLabel": "Configure Verified Organization Domain",
     "navLabelSource": "frontmatter"
   },
   "main/docs/get-started/tenant-settings/configure-device-user-code-settings.mdx": {
@@ -49688,6 +50051,42 @@
     "navLabel": "Connection Profile",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx": {
+    "filePath": "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:enterprise-connections",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:enterprise-connections/page:docs/authenticate/enterprise-connections/enable-dpop-enterpr"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "Provision Users",
+          "Enterprise Connections",
+          "Configure Enterprise Connections with Demonstrating Proof-of-Possession (DPoP)"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Configure Enterprise Connections with Demonstrating Proof-of-Possession (DPoP)",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Authenticate > Provision Users > Enterprise Connections",
+        "pathString": "Documentation > Authenticate > Provision Users > Enterprise Connections > Configure Enterprise Connections with Demonstrating Proof-of-Possession (DPoP)"
+      }
+    ],
+    "navLabel": "Configure Enterprise Connections with Demonstrating Proof-of-Possession (DPoP)",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
     "filePath": "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
     "navDepth": 4,
@@ -57095,6 +57494,42 @@
     "navLabel": "add members to an organization",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx": {
+    "filePath": "main/docs/api/management/v2/organizations/adds-a-connection-to-an-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/organizations/adds-a-connection-to-an-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/adds-a-connection-to-an"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Organizations",
+          "adds a connection to an organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "adds a connection to an organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Organizations",
+        "pathString": "API Reference > Management API >   > Organizations > adds a connection to an organization"
+      }
+    ],
+    "navLabel": "adds a connection to an organization",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx": {
     "filePath": "main/docs/api/management/v2/organizations/assign-user-roles-to-an-organization-member.mdx",
     "navDepth": 4,
@@ -57273,6 +57708,42 @@
       }
     ],
     "navLabel": "create invitations to an organization",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx": {
+    "filePath": "main/docs/api/management/v2/organizations/delete-a-connection-from-an-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/organizations/delete-a-connection-from-an-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/delete-a-connection-fro"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Organizations",
+          "delete a connection from an organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "delete a connection from an organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Organizations",
+        "pathString": "API Reference > Management API >   > Organizations > delete a connection from an organization"
+      }
+    ],
+    "navLabel": "delete a connection from an organization",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/organizations/delete-an-invitation-to-an-organization.mdx": {
@@ -57491,6 +57962,42 @@
     "navLabel": "delete user roles from an organization member",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx": {
+    "filePath": "main/docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/organizations/get-a-specific-connection-associated-with-an-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/get-a-specific-connecti"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Organizations",
+          "get a specific connection associated with an organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get a specific connection associated with an organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Organizations",
+        "pathString": "API Reference > Management API >   > Organizations > get a specific connection associated with an organization"
+      }
+    ],
+    "navLabel": "get a specific connection associated with an organization",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx": {
     "filePath": "main/docs/api/management/v2/organizations/get-a-specific-invitation-to-an-organization.mdx",
     "navDepth": 4,
@@ -57597,6 +58104,42 @@
       }
     ],
     "navLabel": "get client grants associated to an organization",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx": {
+    "filePath": "main/docs/api/management/v2/organizations/get-connections-associated-with-an-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/organizations/get-connections-associated-with-an-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/get-connections-associa"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Organizations",
+          "get connections associated with an organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get connections associated with an organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Organizations",
+        "pathString": "API Reference > Management API >   > Organizations > get connections associated with an organization"
+      }
+    ],
+    "navLabel": "get connections associated with an organization",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/organizations/get-connections-enabled-for-an-organization.mdx": {
@@ -58029,6 +58572,42 @@
       }
     ],
     "navLabel": "retrieve an organization discovery domain by id",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx": {
+    "filePath": "main/docs/api/management/v2/organizations/update-a-connection-for-an-organization.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/organizations/update-a-connection-for-an-organization",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:organizations/page:docs/api/management/v2/organizations/update-a-connection-for"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Organizations",
+          "update a connection for an organization"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "update a connection for an organization",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Organizations",
+        "pathString": "API Reference > Management API >   > Organizations > update a connection for an organization"
+      }
+    ],
+    "navLabel": "update a connection for an organization",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/organizations/update-an-organization-discovery-domain.mdx": {

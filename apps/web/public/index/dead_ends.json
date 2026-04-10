@@ -1,14 +1,14 @@
 {
-  "generatedAtUtc": "2026-04-09T04:38:10.178Z",
+  "generatedAtUtc": "2026-04-10T04:50:47.824Z",
   "minInbound": 20,
   "maxOutbound": 1,
   "count": 4,
   "items": [
     {
       "id": "main/docs/libraries.mdx",
-      "inboundLinks": 27,
+      "inboundLinks": 30,
       "outboundLinks": 0,
-      "deadEndScore": 27,
+      "deadEndScore": 30,
       "navRoot": null
     },
     {
@@ -21,9 +21,9 @@
     },
     {
       "id": "main/docs/get-started/applications/update-grant-types.mdx",
-      "inboundLinks": 23,
+      "inboundLinks": 24,
       "outboundLinks": 1,
-      "deadEndScore": 23,
+      "deadEndScore": 24,
       "navRoot": "Get Started",
       "navDepth": 4
     },
