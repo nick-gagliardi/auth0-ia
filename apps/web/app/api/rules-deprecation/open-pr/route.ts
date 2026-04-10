@@ -46,9 +46,11 @@ async function applyWithAi(
   suggestions: Array<{ before: string; after: string }>,
   apiKey: string,
 ): Promise<{ modifiedContent: string; changesApplied: number } | null> {
-  const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+  // Use same env vars as client-side (NEXT_PUBLIC_*) with server-side fallbacks
+  const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
   const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-  const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+  const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+  console.log('[Rules Deprecation] AI config:', { baseUrl, model, hasApiKey: !!apiKey });
 
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };
   if (isLiteLLMProxy) {
@@ -102,12 +104,14 @@ Critical rules:
   });
 
   if (!response.ok) {
-    console.error('[Rules Deprecation] AI apply error:', response.status);
+    const errText = await response.text().catch(() => '');
+    console.error('[Rules Deprecation] AI apply error:', response.status, errText.slice(0, 500));
     return null;
   }
 
   const data = await response.json();
   const text = data.content?.[0]?.text || '';
+  console.log('[Rules Deprecation] AI response length:', text.length, 'first 200 chars:', text.slice(0, 200));
 
   // Extract applied count
   const countMatch = text.match(/<applied-count>(\d+)<\/applied-count>/);
@@ -115,7 +119,10 @@ Critical rules:
 
   // Extract modified file
   const fileMatch = text.match(/<modified-file>\n?([\s\S]*?)\n?<\/modified-file>/);
-  if (!fileMatch) return null;
+  if (!fileMatch) {
+    console.error('[Rules Deprecation] Could not find <modified-file> tags in AI response. Response preview:', text.slice(0, 500));
+    return null;
+  }
 
   const modifiedContent = fileMatch[1];
 
