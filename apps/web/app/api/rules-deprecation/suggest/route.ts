@@ -35,8 +35,11 @@ export async function POST(req: Request) {
     const { user } = await requireSession(true);
     const body = BodySchema.parse(await req.json());
 
-    // Fetch page content from GitHub
-    const ghToken = user.github_pat_decrypted || user.github_access_token_decrypted;
+    // Fetch page content from GitHub (use global maintenance token, already SSO-authorized)
+    const ghToken = process.env.MAINTENANCE_GH_TOKEN || user.github_pat_decrypted || user.github_access_token_decrypted;
+    if (!ghToken) {
+      return NextResponse.json({ ok: false, error: 'No GitHub token configured (MAINTENANCE_GH_TOKEN or user PAT).' }, { status: 400 });
+    }
     const targetRepo = process.env.MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2';
     const [owner, repo] = targetRepo.split('/');
     const baseBranch = process.env.MAINTENANCE_BASE_BRANCH || 'main';

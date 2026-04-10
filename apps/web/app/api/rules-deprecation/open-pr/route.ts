@@ -41,7 +41,8 @@ export async function POST(req: Request) {
     const { user } = await requireSession();
     const body = BodySchema.parse(await req.json());
 
-    const ghToken = user.github_pat_decrypted || user.github_access_token_decrypted;
+    const ghToken = process.env.MAINTENANCE_GH_TOKEN || user.github_pat_decrypted || user.github_access_token_decrypted;
+    if (!ghToken) throw new Error('No GitHub token configured (MAINTENANCE_GH_TOKEN or user PAT).');
     const defaultTarget = process.env.MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2';
     const targetRepo = (body.targetRepo || defaultTarget).trim();
     const [owner, repo] = targetRepo.split('/');
