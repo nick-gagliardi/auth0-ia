@@ -37,14 +37,15 @@ async function gh<T>(token: string, path: string, init?: RequestInit): Promise<T
 }
 
 /**
- * Ask Claude to refine the approximate suggestions against the real MDX source.
- * Returns exact before/after pairs that can be safely find-replaced.
+ * Ask Claude to apply the suggestions directly to the MDX source and return
+ * the complete modified file. This avoids the fragile find-replace approach
+ * where multiline code blocks and special characters cause match failures.
  */
-async function refineSuggestionsWithAi(
+async function applyWithAi(
   mdxContent: string,
-  approximateSuggestions: Array<{ before: string; after: string }>,
+  suggestions: Array<{ before: string; after: string }>,
   apiKey: string,
-): Promise<Array<{ before: string; after: string }>> {
+): Promise<{ modifiedContent: string; changesApplied: number } | null> {
   const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
   const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
   const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
@@ -57,70 +58,77 @@ async function refineSuggestionsWithAi(
     headers['anthropic-version'] = '2023-06-01';
   }
 
-  const suggestionsBlock = approximateSuggestions.map((s, i) =>
-    `### Suggestion ${i + 1}\nApproximate before: ${JSON.stringify(s.before)}\nIntended after: ${JSON.stringify(s.after)}`
+  const suggestionsBlock = suggestions.map((s, i) =>
+    `### Change ${i + 1}\nWhat to find (approximate): ${JSON.stringify(s.before)}\nReplace with: ${JSON.stringify(s.after)}`
   ).join('\n\n');
 
-  const prompt = `You are a precise text-replacement engine. You are given an MDX file and a set of approximate find-replace suggestions. The "before" text in each suggestion is APPROXIMATE — it was generated without access to the real file, so it may have whitespace, formatting, or minor wording differences.
+  const prompt = `You are given an MDX documentation file and a set of changes to apply. Each change has an approximate "before" text (which may not match the file exactly) and the intended replacement.
 
-Your job: for each suggestion, find the EXACT text in the MDX file that corresponds to the approximate "before", and return the precise before/after pair that can be used for a literal string replacement.
+Apply ALL the changes to the file and return the COMPLETE modified file.
 
 <mdx-file-content>
-${mdxContent.slice(0, 25000)}
+${mdxContent}
 </mdx-file-content>
 
-## Approximate Suggestions
+## Changes to apply
 ${suggestionsBlock}
 
 ## Instructions
-For each suggestion:
-1. Find the exact substring in the MDX that matches the intent of the approximate "before"
-2. Copy it VERBATIM (exact whitespace, newlines, markdown formatting, backticks, everything)
-3. Produce the "after" text that should replace it, maintaining the same formatting style
+1. For each change, find the corresponding text in the MDX file (it may differ slightly from the approximate "before")
+2. Replace it with the specified replacement text
+3. Preserve all other content EXACTLY as-is (frontmatter, formatting, components, links, whitespace)
+4. Return the COMPLETE modified file
 
-Return ONLY a JSON object:
-{
-  "refined": [
-    {
-      "before": "EXACT verbatim text from the MDX file (must be findable via string.includes())",
-      "after": "replacement text"
-    }
-  ]
-}
+Return your response in this exact format:
+<applied-count>N</applied-count>
+<modified-file>
+...the complete modified MDX file...
+</modified-file>
 
 Critical rules:
-- "before" MUST be an exact substring of the MDX file — copy it character-for-character
-- Include enough context in "before" to be unique (avoid matching multiple places)
-- Preserve MDX formatting (backticks, links, frontmatter, JSX components)
-- If you cannot find a match for a suggestion, omit it from the array
-- Return ONLY the JSON, no other text`;
+- Output the ENTIRE file, not just changed sections
+- Do NOT add, remove, or modify anything that isn't covered by the changes above
+- Preserve exact whitespace, newlines, and formatting of unchanged content
+- The applied-count should reflect how many of the changes you actually applied`;
 
   const response = await fetch(`${baseUrl}/v1/messages`, {
     method: 'POST',
     headers,
     body: JSON.stringify({
       model,
-      max_tokens: 8192,
+      max_tokens: 16384,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
 
   if (!response.ok) {
-    console.error('[Rules Deprecation] AI refinement error:', response.status);
-    return []; // Fall back to direct application
+    console.error('[Rules Deprecation] AI apply error:', response.status);
+    return null;
   }
 
   const data = await response.json();
   const text = data.content?.[0]?.text || '';
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) return [];
 
-  try {
-    const parsed = JSON.parse(jsonMatch[0]);
-    return parsed.refined || [];
-  } catch {
-    return [];
+  // Extract applied count
+  const countMatch = text.match(/<applied-count>(\d+)<\/applied-count>/);
+  const changesApplied = countMatch ? parseInt(countMatch[1], 10) : 0;
+
+  // Extract modified file
+  const fileMatch = text.match(/<modified-file>\n?([\s\S]*?)\n?<\/modified-file>/);
+  if (!fileMatch) return null;
+
+  const modifiedContent = fileMatch[1];
+
+  // Sanity check: modified file should be similar length (not truncated or wildly different)
+  if (modifiedContent.length < mdxContent.length * 0.5 || modifiedContent.length > mdxContent.length * 2) {
+    console.warn('[Rules Deprecation] AI output length suspicious, skipping', {
+      original: mdxContent.length,
+      modified: modifiedContent.length,
+    });
+    return null;
   }
+
+  return { modifiedContent, changesApplied };
 }
 
 export async function POST(req: Request) {
@@ -165,35 +173,30 @@ export async function POST(req: Request) {
     if (file.encoding !== 'base64') throw new Error(`Unexpected encoding: ${file.encoding}`);
     let content = Buffer.from(file.content.replace(/\n/g, ''), 'base64').toString('utf8');
 
-    // 4. Refine suggestions with Claude using the real MDX source
+    // 4. Have Claude apply the suggestions directly to the MDX source
     const apiKey = user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
 
-    let refinedSuggestions = body.suggestions;
+    let appliedCount = 0;
+
     if (apiKey) {
-      console.log('[Rules Deprecation] Refining suggestions with AI against real MDX source...');
-      const refined = await refineSuggestionsWithAi(content, body.suggestions, apiKey);
-      if (refined.length > 0) {
-        refinedSuggestions = refined;
-        console.log(`[Rules Deprecation] AI refined ${refined.length} suggestions from ${body.suggestions.length} originals`);
-      } else {
-        console.warn('[Rules Deprecation] AI refinement returned no results, falling back to direct match');
+      console.log('[Rules Deprecation] Asking AI to apply changes to real MDX source...');
+      const result = await applyWithAi(content, body.suggestions, apiKey);
+
+      if (result) {
+        content = result.modifiedContent;
+        appliedCount = result.changesApplied;
+        console.log(`[Rules Deprecation] AI applied ${appliedCount} of ${body.suggestions.length} changes`);
       }
     }
 
-    // 5. Apply refined suggestions
-    let appliedCount = 0;
-    const applied: string[] = [];
-    const skipped: string[] = [];
-
-    for (const suggestion of refinedSuggestions) {
-      if (!suggestion.before) { skipped.push('(empty before)'); continue; }
-
-      if (content.includes(suggestion.before)) {
-        content = content.replace(suggestion.before, suggestion.after);
-        appliedCount++;
-        applied.push(suggestion.before.slice(0, 80));
-      } else {
-        skipped.push(suggestion.before.slice(0, 80));
+    // Fallback: try direct string matching if AI didn't work
+    if (appliedCount === 0) {
+      console.log('[Rules Deprecation] Falling back to direct string matching...');
+      for (const suggestion of body.suggestions) {
+        if (suggestion.before && content.includes(suggestion.before)) {
+          content = content.replace(suggestion.before, suggestion.after);
+          appliedCount++;
+        }
       }
     }
 
@@ -206,8 +209,7 @@ export async function POST(req: Request) {
       return NextResponse.json(
         {
           ok: false,
-          error: `No suggestions could be applied even after AI refinement. The changes may require manual editing.`,
-          skipped,
+          error: 'No changes could be applied. The suggestions may require manual editing.',
         },
         { status: 400 }
       );
@@ -231,21 +233,18 @@ export async function POST(req: Request) {
       '',
       `Migrates Auth0 Rules references to Auth0 Actions in \`${body.filePath.replace('main/docs/', '')}\`.`,
       '',
-      `**Changes applied:** ${appliedCount} of ${refinedSuggestions.length} suggestions`,
+      `**Changes applied:** ${appliedCount} of ${body.suggestions.length} suggestions`,
       '',
-      '## Applied',
+      '## Requested changes',
       '',
-      ...applied.map((a, i) => `${i + 1}. \`${a.replace(/\n/g, ' ')}\``),
+      ...body.suggestions.slice(0, 10).map((s, i) => {
+        const preview = (s.before || '').slice(0, 80).replace(/\n/g, ' ');
+        return `${i + 1}. \`${preview}${(s.before || '').length > 80 ? '...' : ''}\``;
+      }),
       '',
-      ...(skipped.length > 0 ? [
-        '## Skipped (could not match in source)',
-        '',
-        ...skipped.map((s, i) => `${i + 1}. \`${s.replace(/\n/g, ' ')}\``),
-        '',
-      ] : []),
       '---',
       '',
-      'Generated by auth0-ia Rules Deprecation Tracker (AI-refined against MDX source)',
+      'Generated by auth0-ia Rules Deprecation Tracker (AI-applied to MDX source)',
     ];
 
     const pr = await gh<{ html_url: string; number: number }>(
@@ -287,7 +286,7 @@ export async function POST(req: Request) {
       console.warn('[Rules Deprecation] DB status update failed:', dbErr);
     }
 
-    return NextResponse.json({ ok: true, prUrl: pr.html_url, prNumber: pr.number, branchName, appliedCount, skippedCount: skipped.length, skipped });
+    return NextResponse.json({ ok: true, prUrl: pr.html_url, prNumber: pr.number, branchName, appliedCount, totalSuggestions: body.suggestions.length });
   } catch (err: any) {
     console.error('[Rules Deprecation] open-pr error:', err);
     return NextResponse.json(
