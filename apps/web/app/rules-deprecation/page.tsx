@@ -213,11 +213,23 @@ export default function RulesDeprecationPage() {
     setSuggestions([]);
     setSuggestionsLoading(true);
     try {
-      // Get user's API key (same as audit page)
+      // 1. Get user's API key
       const keyRes = await fetch('/api/settings/key');
       if (!keyRes.ok) throw new Error('Anthropic API key not configured. Add one in Settings.');
       const { apiKey } = await keyRes.json();
       if (!apiKey) throw new Error('Anthropic API key not configured. Add one in Settings.');
+
+      // 2. Fetch the real MDX source from GitHub
+      const fileRes = await fetch('/api/rules-deprecation/fetch-file', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ filePath: item.filePath }),
+      });
+      const fileJson = await fileRes.json();
+      let mdxSection = '';
+      if (fileJson.ok && fileJson.content) {
+        mdxSection = `\n<mdx-file-content>\n${fileJson.content}\n</mdx-file-content>`;
+      }
 
       const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
       const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
@@ -237,19 +249,17 @@ export default function RulesDeprecationPage() {
         .join('\n');
 
       const filePath = item.filePath;
-      const docsPath = filePath.replace(/^main\/docs\//, '').replace(/\.mdx$/, '').replace(/\/index$/, '');
-      const docsUrl = `https://auth0.com/docs/${docsPath}`;
 
       const prompt = `You are an Auth0 documentation migration specialist. Auth0 Rules (the legacy JavaScript-based extensibility system using \`function(user, context, callback)\`) has reached end-of-life and must be migrated to Auth0 Actions (the new serverless function system using \`exports.onExecutePostLogin = async (event, api) =>\`).
 
 Analyze the following documentation page and provide specific rewrite suggestions to remove or update all Auth0 Rules references.
 
 File: ${filePath}
-Published URL: ${docsUrl}
 Categories detected: ${item.categories.join(', ')}
 
 Evidence of Rules references found:
 ${evidenceBlock}
+${mdxSection}
 
 For each Rules reference, provide a concrete suggestion. Handle these cases:
 1. **Code examples**: Rewrite \`function(user, context, callback)\` signatures to Actions format (\`exports.onExecutePostLogin\`). Map \`context.*\` to \`event.*\` / \`api.*\`. Remove \`callback()\` in favor of return values.
@@ -261,7 +271,7 @@ Return your response as JSON only:
 {
   "suggestions": [
     {
-      "before": "The exact original text from the document (verbatim, used for find-replace)",
+      "before": "The EXACT original text from the MDX file (verbatim, character-for-character, including newlines and formatting)",
       "after": "The exact replacement text",
       "explanation": "Brief explanation of why this change is needed",
       "category": "code|link|prose|suggestion",
@@ -271,8 +281,10 @@ Return your response as JSON only:
 }
 
 Rules:
-- "before" must be EXACT text from the document (copy verbatim)
+- "before" MUST be copied character-for-character from the MDX file content above
+- "before" must be an exact substring that would match via string.includes()
 - "after" must be the EXACT replacement (not instructions)
+- For code blocks, include the full fenced block (opening \`\`\`, code, closing \`\`\`)
 - For deletions, set "after" to ""
 - Focus on the most impactful changes. Maximum 15 suggestions.
 - Only include suggestions where you're confident there's a real issue.
