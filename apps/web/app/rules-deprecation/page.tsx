@@ -158,15 +158,19 @@ export default function RulesDeprecationPage() {
 
   // Suggestion validation & selection helpers
   const isValidSuggestion = (s: AiSuggestion): boolean => {
-    if (!s.before || !s.after) return false;
-    const instructionPatterns = [
-      /^(remove|delete|add|insert|replace|change|update|fix|correct|modify|consider|should|could|would|ensure|make sure)/i,
-      /^(the|this|that|a|an)\s+(section|paragraph|sentence|text|content|line)/i,
-    ];
-    for (const pattern of instructionPatterns) {
-      if (pattern.test(s.after.trim())) return false;
+    if (!s.before) return false;
+    // Allow empty "after" for deletions (s.after === "" is valid)
+    if (s.after === undefined || s.after === null) return false;
+    if (s.after) {
+      const instructionPatterns = [
+        /^(remove|delete|add|insert|replace|change|update|fix|correct|modify|consider|should|could|would|ensure|make sure)/i,
+        /^(the|this|that|a|an)\s+(section|paragraph|sentence|text|content|line)/i,
+      ];
+      for (const pattern of instructionPatterns) {
+        if (pattern.test(s.after.trim())) return false;
+      }
+      if (s.after.length > s.before.length * 3 && s.after.length > 200) return false;
     }
-    if (s.after.length > s.before.length * 3 && s.after.length > 200) return false;
     return true;
   };
 
@@ -319,7 +323,32 @@ Critical rules:
       const jsonMatch = text.match(/\{[\s\S]*\}/);
       if (!jsonMatch) throw new Error('Failed to parse AI response');
       const parsed = JSON.parse(jsonMatch[0]);
-      const newSuggestions: AiSuggestion[] = parsed.suggestions || [];
+      const aiSuggestions: AiSuggestion[] = parsed.suggestions || [];
+
+      // Programmatically detect Rules code blocks in the MDX (AI can't reliably put these in JSON)
+      const codeBlockSuggestions: AiSuggestion[] = [];
+      if (fileJson.ok && fileJson.content) {
+        const mdx = fileJson.content as string;
+        // Match fenced code blocks containing Rules signatures
+        const codeBlockRe = /```[^\n]*\n(?:(?!```)[\s\S])*?function\s*\(\s*user\s*,\s*context\s*,\s*callback\s*\)[\s\S]*?```/g;
+        let match;
+        while ((match = codeBlockRe.exec(mdx)) !== null) {
+          const block = match[0];
+          // Check if this is already covered by an AI suggestion
+          const alreadyCovered = aiSuggestions.some((s) => s.before && block.includes(s.before.slice(0, 50)));
+          if (!alreadyCovered) {
+            codeBlockSuggestions.push({
+              before: block,
+              after: '',
+              explanation: 'Remove legacy Rules code block (function(user, context, callback) pattern). If no Actions equivalent exists nearby, one should be added manually.',
+              category: 'code',
+              confidence: 'high',
+            });
+          }
+        }
+      }
+
+      const newSuggestions = [...codeBlockSuggestions, ...aiSuggestions];
       setSuggestions(newSuggestions);
       // Auto-accept all valid suggestions
       const validIndices = newSuggestions
