@@ -12,22 +12,42 @@ const BodySchema = z.object({
   })),
 });
 
-async function gh<T>(token: string, path: string, init?: RequestInit): Promise<T> {
-  const res = await fetch(`https://api.github.com${path}`, {
-    ...init,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-      ...(init?.headers || {}),
-    },
-    cache: 'no-store',
-  });
-  if (!res.ok) {
-    const text = await res.text().catch(() => '');
-    throw new Error(`GitHub API error ${res.status}: ${text}`);
+// Convert filePath like "main/docs/customize/rules.mdx" to public URL
+function filePathToDocsUrl(filePath: string): string {
+  let p = filePath.replace(/^main\/docs\//, '').replace(/\.mdx$/, '').replace(/\/index$/, '');
+  return `https://auth0.com/docs/${p}`;
+}
+
+// Attempt to fetch page content from the public docs site (no auth needed)
+async function fetchPublicPageContent(filePath: string): Promise<string | null> {
+  const url = filePathToDocsUrl(filePath);
+  try {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'auth0-ia-docs-tool/1.0' },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+    // Strip HTML to rough text for context (good enough for Claude to understand the page)
+    const text = html
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
+      .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '')
+      .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/\s+/g, ' ')
+      .trim();
+    return text.slice(0, 20000);
+  } catch {
+    return null;
   }
-  return (await res.json()) as T;
 }
 
 export async function POST(req: Request) {
@@ -35,22 +55,8 @@ export async function POST(req: Request) {
     const { user } = await requireSession(true);
     const body = BodySchema.parse(await req.json());
 
-    // Fetch page content from GitHub (use global maintenance token, already SSO-authorized)
-    const ghToken = process.env.MAINTENANCE_GH_TOKEN || user.github_pat_decrypted || user.github_access_token_decrypted;
-    if (!ghToken) {
-      return NextResponse.json({ ok: false, error: 'No GitHub token configured (MAINTENANCE_GH_TOKEN or user PAT).' }, { status: 400 });
-    }
-    const targetRepo = process.env.MAINTENANCE_UPSTREAM_REPO || 'auth0/docs-v2';
-    const [owner, repo] = targetRepo.split('/');
-    const baseBranch = process.env.MAINTENANCE_BASE_BRANCH || 'main';
-
-    const file = await gh<{ content: string; encoding: string }>(
-      ghToken,
-      `/repos/${owner}/${repo}/contents/${encodeURIComponent(body.filePath)}?ref=${encodeURIComponent(baseBranch)}`
-    );
-
-    if (file.encoding !== 'base64') throw new Error(`Unexpected encoding: ${file.encoding}`);
-    const content = Buffer.from(file.content.replace(/\n/g, ''), 'base64').toString('utf8');
+    // Try to get page content from public docs site (no GitHub auth needed)
+    const pageContent = await fetchPublicPageContent(body.filePath);
 
     // Call Claude for suggestions
     const apiKey = user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
@@ -74,18 +80,21 @@ export async function POST(req: Request) {
       .map((e) => `- Line ${e.line} (${e.category}): "${e.snippet}"`)
       .join('\n');
 
+    const contentSection = pageContent
+      ? `\nPage content (from published docs):\n${pageContent}`
+      : '\nNote: Full page content was not available. Base your suggestions on the evidence snippets above.';
+
     const prompt = `You are an Auth0 documentation migration specialist. Auth0 Rules (the legacy JavaScript-based extensibility system using \`function(user, context, callback)\`) has reached end-of-life and must be migrated to Auth0 Actions (the new serverless function system using \`exports.onExecutePostLogin = async (event, api) =>\`).
 
 Analyze the following documentation page and provide specific rewrite suggestions to remove or update all Auth0 Rules references.
 
 File: ${body.filePath}
+Published URL: ${filePathToDocsUrl(body.filePath)}
 Categories detected: ${body.categories.join(', ')}
 
 Evidence of Rules references found:
 ${evidenceBlock}
-
-Page content:
-${content.slice(0, 20000)}
+${contentSection}
 
 For each Rules reference, provide a concrete suggestion. Handle these cases:
 1. **Code examples**: Rewrite \`function(user, context, callback)\` signatures to Actions format (\`exports.onExecutePostLogin\`). Map \`context.*\` to \`event.*\` / \`api.*\`. Remove \`callback()\` in favor of return values.
