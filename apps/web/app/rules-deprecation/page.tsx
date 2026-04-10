@@ -325,120 +325,60 @@ Rules:
     }
   }, [toast]);
 
-  // PR creation handler — applies changes client-side with Claude, then commits via API
+  // PR creation handler — uses the same /api/audit/apply endpoint that the audit page uses
   const handleCreatePr = useCallback(async () => {
     if (!suggestingItem || acceptedSuggestions.size === 0) return;
     setCreatingPr(true);
     try {
-      // 1. Get user's API key
-      const keyRes = await fetch('/api/settings/key');
-      if (!keyRes.ok) throw new Error('Anthropic API key not configured.');
-      const { apiKey } = await keyRes.json();
-      if (!apiKey) throw new Error('Anthropic API key not configured.');
-
-      // 2. Fetch the raw MDX from GitHub via our suggest route (which can do this)
-      //    Actually, fetch it from the public docs site won't work for MDX.
-      //    Use a lightweight fetch endpoint instead.
-      const fileRes = await fetch('/api/rules-deprecation/fetch-file', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ filePath: suggestingItem.filePath }),
-      });
-      const fileJson = await fileRes.json();
-      if (!fileJson.ok) throw new Error(fileJson.error || 'Failed to fetch MDX file');
-      const mdxContent = fileJson.content;
-
-      // 3. Ask Claude to apply the changes (client-side, no timeout issues)
-      const selectedSuggestions = suggestions
+      // Format suggestions in the same schema that /api/audit/apply expects
+      const auditSuggestions = suggestions
         .filter((_, idx) => acceptedSuggestions.has(idx))
-        .map((s) => ({ before: s.before, after: s.after }));
+        .map((s, i) => ({
+          id: `rules-dep-${i}`,
+          type: `rules-deprecation-${s.category}`,
+          description: s.explanation,
+          line: null,
+          original: s.before,
+          suggestion: s.after,
+          context: null,
+        }));
 
-      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+      const today = new Date().toISOString().slice(0, 10);
+      const shortPath = suggestingItem.filePath.replace('main/docs/', '');
 
-      const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (isLiteLLMProxy) {
-        aiHeaders['Authorization'] = `Bearer ${apiKey}`;
-      } else {
-        aiHeaders['x-api-key'] = apiKey;
-        aiHeaders['anthropic-version'] = '2023-06-01';
-      }
-
-      const changesBlock = selectedSuggestions.map((s, i) =>
-        `### Change ${i + 1}\nWhat to find (approximate): ${JSON.stringify(s.before)}\nReplace with: ${JSON.stringify(s.after)}`
-      ).join('\n\n');
-
-      const aiResponse = await fetch(`${baseUrl}/v1/messages`, {
-        method: 'POST',
-        headers: aiHeaders,
-        body: JSON.stringify({
-          model,
-          max_tokens: 16384,
-          messages: [{
-            role: 'user',
-            content: `You are given an MDX documentation file and a set of changes to apply. Each change has an approximate "before" text and the intended replacement.
-
-Apply ALL the changes to the file and return the COMPLETE modified file.
-
-<mdx-file-content>
-${mdxContent}
-</mdx-file-content>
-
-## Changes to apply
-${changesBlock}
-
-## Instructions
-1. For each change, find the corresponding text in the MDX file
-2. Replace it with the specified replacement text
-3. Preserve all other content EXACTLY as-is
-4. Return the COMPLETE modified file
-
-Return your response in this exact format:
-<applied-count>N</applied-count>
-<modified-file>
-...the complete modified MDX file...
-</modified-file>
-
-Critical rules:
-- Output the ENTIRE file, not just changed sections
-- Do NOT add, remove, or modify anything not covered by the changes
-- Preserve exact whitespace, newlines, and formatting of unchanged content`,
-          }],
-        }),
-      });
-
-      if (!aiResponse.ok) throw new Error(`AI error: ${aiResponse.status}`);
-
-      const aiData = await aiResponse.json();
-      const aiText = aiData.content?.[0]?.text || '';
-
-      const countMatch = aiText.match(/<applied-count>(\d+)<\/applied-count>/);
-      const changesApplied = countMatch ? parseInt(countMatch[1], 10) : 0;
-
-      const fileMatch = aiText.match(/<modified-file>\n?([\s\S]*?)\n?<\/modified-file>/);
-      if (!fileMatch) throw new Error('AI did not return a modified file. Try again.');
-
-      const modifiedContent = fileMatch[1];
-      if (changesApplied === 0) throw new Error('AI reported 0 changes applied. Try selecting different suggestions.');
-
-      // 4. Send modified content to the API to commit + open PR
-      const res = await fetch('/api/rules-deprecation/open-pr', {
+      const res = await fetch('/api/audit/apply', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
           filePath: suggestingItem.filePath,
-          modifiedContent,
-          changesApplied,
-          totalSuggestions: selectedSuggestions.length,
+          validatedOn: today,
+          prTitle: `docs: migrate Rules to Actions in ${shortPath}`,
+          prBody: `## Summary\n\nMigrates Auth0 Rules references to Auth0 Actions in \`${shortPath}\`.\n\n---\n\nGenerated by auth0-ia Rules Deprecation Tracker`,
+          suggestions: auditSuggestions,
         }),
       });
       const json = await res.json();
       if (!json.ok) throw new Error(json.error || 'Failed to create PR');
+
+      // audit/apply returns a compareUrl (GitHub compare page) instead of a direct PR
+      const prUrl = json.compareUrl || json.prUrl || '';
       setSuggestingItem(null);
       setSuggestions([]);
-      setPrSuccess({ open: true, prUrl: json.prUrl, filePath: suggestingItem.filePath });
-      queryClient.invalidateQueries({ queryKey: ['rules_deprecation_status'] });
+      setPrSuccess({ open: true, prUrl, filePath: suggestingItem.filePath });
+
+      // Update DB status
+      try {
+        await fetch('/api/rules-deprecation/status', {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            filePath: suggestingItem.filePath,
+            status: 'in_progress',
+            prUrl,
+          }),
+        });
+        queryClient.invalidateQueries({ queryKey: ['rules_deprecation_status'] });
+      } catch { /* non-fatal */ }
     } catch (e: any) {
       toast({ title: 'PR Error', description: e?.message || String(e), variant: 'destructive' });
     } finally {
