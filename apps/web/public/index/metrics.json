@@ -2593,7 +2593,7 @@
     "deadEndScore": 0.5
   },
   "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx": {
-    "inboundLinks": 24,
+    "inboundLinks": 25,
     "outboundLinks": 6,
     "importedBy": 0,
     "orphanNav": true,
@@ -2601,9 +2601,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 24,
+    "hubScore": 25,
     "deadEnd": false,
-    "deadEndScore": 4
+    "deadEndScore": 4.1667
   },
   "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-testing.mdx": {
     "inboundLinks": 6,
@@ -2675,7 +2675,7 @@
   },
   "main/docs/secure/tenant-access-control-list/use-cases.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,
@@ -36602,8 +36602,8 @@
   "main/snippets/AuthCodeBlock.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 240,
-    "impactPages": 240,
+    "importedBy": 239,
+    "impactPages": 239,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,
@@ -36615,8 +36615,8 @@
   "main/snippets/AuthCodeGroup.jsx": {
     "inboundLinks": 0,
     "outboundLinks": 0,
-    "importedBy": 191,
-    "impactPages": 191,
+    "importedBy": 190,
+    "impactPages": 190,
     "orphanNav": false,
     "orphanLinks": false,
     "orphanTrue": false,

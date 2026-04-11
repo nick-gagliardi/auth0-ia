@@ -15915,14 +15915,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": ".withScope(\"openid profile email offline_access\")",
-          "line": 183
+          "line": 187
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "* Add ProGuard rules for Auth0 SDK if using code obfuscation",
-          "line": 358
+          "line": 461
         }
       ]
     },
@@ -21662,14 +21662,14 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": ".withScope(\"openid profile email offline_access\")",
-        "line": 183
+        "line": 187
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "* Add ProGuard rules for Auth0 SDK if using code obfuscation",
-        "line": 358
+        "line": 461
       }
     ],
     "main/docs/quickstart/backend/webapi-owin/02-using.mdx": [],

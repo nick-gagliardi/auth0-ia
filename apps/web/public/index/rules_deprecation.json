@@ -1,8 +1,8 @@
 {
-  "generatedAtUtc": "2026-04-10T15:31:29.583Z",
+  "generatedAtUtc": "2026-04-11T04:25:55.000Z",
   "pagesScanned": 2681,
   "pagesWithRules": 207,
-  "totalEvidenceCount": 860,
+  "totalEvidenceCount": 856,
   "byCriticality": {
     "critical": 40,
     "high": 101,
@@ -5877,31 +5877,11 @@
       "categories": [
         "suggests_rules"
       ],
-      "evidenceCount": 5,
+      "evidenceCount": 1,
       "evidence": [
         {
-          "line": 618,
-          "snippet": "Here is an example of a Tenant ACL rule that blocks incoming traffic from a specific geolocation country code.",
-          "category": "suggests_rules"
-        },
-        {
-          "line": 637,
-          "snippet": "Here is an example of a Tenant ACL rule that allows traffic only from a specific geolocation country code.",
-          "category": "suggests_rules"
-        },
-        {
-          "line": 652,
-          "snippet": "Here is an example of a Tenant ACL rule that redirects all traffic from a specific geolocation country code.",
-          "category": "suggests_rules"
-        },
-        {
-          "line": 667,
+          "line": 460,
           "snippet": "You can combine the `match` and `not_match` operators in a single Tenant ACL rule to enforce fine-grained access policies.",
-          "category": "suggests_rules"
-        },
-        {
-          "line": 669,
-          "snippet": "Here is an example of a Tenant ACL rule that evaluates the `geo_country_code` and `geo_subdivision_code` signals to block all traffic from a given cou",
           "category": "suggests_rules"
         }
       ],

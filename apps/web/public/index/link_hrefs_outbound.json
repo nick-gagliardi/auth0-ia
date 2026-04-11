@@ -10952,7 +10952,12 @@
       "toId": "main/docs/secure/tenant-access-control-list/reference.mdx"
     }
   ],
-  "main/docs/secure/tenant-access-control-list/use-cases.mdx": [],
+  "main/docs/secure/tenant-access-control-list/use-cases.mdx": [
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+    }
+  ],
   "main/docs/secure/security-guidance/data-security/denylist.mdx": [
     {
       "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",

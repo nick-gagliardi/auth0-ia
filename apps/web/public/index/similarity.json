@@ -15913,9 +15913,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.0693,
+      "score": 0.0682,
       "simOut": 0.0435,
-      "simIn": 0.1081,
+      "simIn": 0.1053,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -22528,9 +22528,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.1065,
+      "score": 0.1062,
       "simOut": 0.1429,
-      "simIn": 0.0519,
+      "simIn": 0.0513,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -23665,9 +23665,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.0522,
+      "score": 0.05,
       "simOut": 0,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -48861,20 +48861,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.0333,
-      "simOut": 0,
-      "simIn": 0.0833,
-      "sharedOut": 0,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
       "score": 0.0333,
       "simOut": 0,
@@ -48885,6 +48871,20 @@
         "shared_inbound"
       ],
       "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+      "score": 0.0324,
+      "simOut": 0,
+      "simIn": 0.0811,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -52604,9 +52604,9 @@
   "main/docs/get-started/apis/create-m2m-app-test.mdx": [
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.241,
+      "score": 0.2404,
       "simOut": 0.375,
-      "simIn": 0.04,
+      "simIn": 0.0385,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -52662,9 +52662,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.216,
+      "score": 0.2154,
       "simOut": 0.3333,
-      "simIn": 0.04,
+      "simIn": 0.0385,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -53742,9 +53742,9 @@
   "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx": [
     {
       "id": "main/docs/get-started/apis/create-m2m-app-test.mdx",
-      "score": 0.241,
+      "score": 0.2404,
       "simOut": 0.375,
-      "simIn": 0.04,
+      "simIn": 0.0385,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -53756,9 +53756,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-tokens-for-single-page-applications.mdx",
-      "score": 0.216,
+      "score": 0.2154,
       "simOut": 0.3333,
-      "simIn": 0.04,
+      "simIn": 0.0385,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -53770,9 +53770,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-testing.mdx",
-      "score": 0.1417,
+      "score": 0.139,
       "simOut": 0.125,
-      "simIn": 0.1667,
+      "simIn": 0.16,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -53784,9 +53784,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "score": 0.1065,
+      "score": 0.1062,
       "simOut": 0.1429,
-      "simIn": 0.0519,
+      "simIn": 0.0513,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -53798,9 +53798,9 @@
     },
     {
       "id": "main/docs/get-started/applications.mdx",
-      "score": 0.0693,
+      "score": 0.0682,
       "simOut": 0.0435,
-      "simIn": 0.1081,
+      "simIn": 0.1053,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -53812,9 +53812,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/pre-deployment-checks/production-check-required-fixes.mdx",
-      "score": 0.0522,
+      "score": 0.05,
       "simOut": 0,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -53826,9 +53826,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains/self-managed-certificates.mdx",
-      "score": 0.0333,
+      "score": 0.0324,
       "simOut": 0,
-      "simIn": 0.0833,
+      "simIn": 0.0811,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -53840,9 +53840,9 @@
     },
     {
       "id": "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
-      "score": 0.0316,
+      "score": 0.0308,
       "simOut": 0,
-      "simIn": 0.0789,
+      "simIn": 0.0769,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -53854,9 +53854,9 @@
     },
     {
       "id": "main/docs/get-started/tenant-settings.mdx",
-      "score": 0.0273,
+      "score": 0.0267,
       "simOut": 0,
-      "simIn": 0.0682,
+      "simIn": 0.0667,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -53868,9 +53868,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
-      "score": 0.0231,
+      "score": 0.0226,
       "simOut": 0,
-      "simIn": 0.0577,
+      "simIn": 0.0566,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -53884,9 +53884,9 @@
   "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-testing.mdx": [
     {
       "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "score": 0.1417,
+      "score": 0.139,
       "simOut": 0.125,
-      "simIn": 0.1667,
+      "simIn": 0.16,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
