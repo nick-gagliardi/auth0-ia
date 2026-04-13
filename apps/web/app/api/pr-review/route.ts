@@ -185,8 +185,17 @@ function getLineNumber(content: string, index: number): number {
 
 // Check content against Auth0 style guide
 async function checkStyleGuide(mdxContent: string, pageTitle: string, userApiKey?: string): Promise<{violations: Array<{category: string; issue: string; location: string}>} | null> {
+  console.log('[checkStyleGuide] Called for:', pageTitle, 'content length:', mdxContent.length);
   const apiKey = userApiKey || process.env.ANTHROPIC_API_KEY;
-  if (!apiKey || !mdxContent) return null;
+
+  if (!apiKey) {
+    console.log('[checkStyleGuide] No API key available');
+    return null;
+  }
+  if (!mdxContent) {
+    console.log('[checkStyleGuide] No MDX content provided');
+    return null;
+  }
 
   try {
     const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
@@ -553,9 +562,16 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
         }
 
         // Style guide adherence check (only if user has API key)
+        console.log('[PR Review] Checking style guide for:', file.path);
+        console.log('[PR Review] Has Anthropic key:', !!user?.anthropic_api_key_decrypted);
+
         if (user?.anthropic_api_key_decrypted) {
+          console.log('[PR Review] Running style guide check...');
           const styleCheck = await checkStyleGuide(content, file.path, user.anthropic_api_key_decrypted);
+          console.log('[PR Review] Style check result:', styleCheck);
+
           if (styleCheck?.violations && styleCheck.violations.length > 0) {
+            console.log('[PR Review] Found', styleCheck.violations.length, 'style violations');
             for (const violation of styleCheck.violations) {
               issues.push({
                 file: file.path,
@@ -566,7 +582,11 @@ export async function POST(req: NextRequest): Promise<NextResponse<PRReviewResul
                 evidence: { category: violation.category, location: violation.location },
               });
             }
+          } else {
+            console.log('[PR Review] No style violations found or null result');
           }
+        } else {
+          console.log('[PR Review] Skipping style guide check - no API key');
         }
 
       } catch (e: any) {

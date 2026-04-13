@@ -53,8 +53,10 @@ export async function GET(request: NextRequest) {
       dateTo,
     });
 
+    const sortedVisitors = visitorsData.visitors.sort((a, b) => b.total - a.total);
+
     return NextResponse.json({
-      visitors: visitorsData.visitors.map((v) => ({ path: v.path, count: v.total, human: v.human, ai: v.ai })),
+      visitors: sortedVisitors.map((v) => ({ path: v.path, count: v.total, human: v.human, ai: v.ai })),
       total: visitorsData.totals.total,
       filters: {
         dateFrom,

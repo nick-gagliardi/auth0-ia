@@ -1,15 +1,12 @@
 {
-  "generatedAtUtc": "2026-04-13T05:19:27.559Z",
+  "generatedAtUtc": "2026-04-10T15:31:28.852Z",
   "pagesScanned": 2681,
-  "blocksFound": 3390,
-  "uniqueBlocks": 2748,
+  "blocksFound": 3373,
+  "uniqueBlocks": 2734,
   "byLang": {
-    "(none)": 2863,
+    "(none)": 2855,
     "bash": 134,
     "json": 45,
-    "js": 7,
-    "terraform": 4,
-    "yaml": 8,
     "curl": 19,
     "javascript": 67,
     "python": 10,
@@ -19,6 +16,7 @@
     "shellscript": 2,
     "swift": 6,
     "typescript": 13,
+    "yaml": 4,
     "go": 14,
     "nginx": 1,
     "txt": 1,
@@ -32,7 +30,8 @@
     "liquid": 3,
     "jsx": 1,
     "kotlin": 2,
-    "dart": 1
+    "dart": 1,
+    "js": 6
   },
   "items": [
     {
@@ -1915,39 +1914,6 @@
       "snippetId": "s_116b7fad49",
       "occurrences": 2,
       "preview": "</AuthCodeGroup> If the call was successful, you'll receive a response in the format below, containing the access token: ```json lines { \"i…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 380,
-      "endLine": 404,
-      "lang": null,
-      "code": "</Tab>\n\n<Tab title=\"Node SDK\">\n```js\nconst createNetworkAclPayload: Management.CreateNetworkAclRequestContent = {\n  description: \"Example of a complex comparison\",\n  active: true,\n  priority: 1,\n  rule: {\n    action: {\n      block: true,\n    },\n    match: {\n      geo_country_codes: [\"{geoCountryCode}\"],\n    },\n    not_match: {\n      geo_subdivision_codes: [\"{geoSubdivisionCode}\"],\n    },\n    scope: \"authentication\",\n  },\n};\n\nconst createNetworkAcl = await client.networkAcls.create(createNetworkAclPayload);",
-      "hash": "04b018fa60b9d7011aeaec1f6f377bcc98f774b08280ee63b56c949ed778d24b",
-      "snippetId": "s_04b018fa60",
-      "occurrences": 2,
-      "preview": "</Tab> <Tab title=\"Node SDK\"> ```js const createNetworkAclPayload: Management.CreateNetworkAclRequestContent = { description: \"Example of a…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 408,
-      "endLine": 426,
-      "lang": "terraform",
-      "code": "resource \"auth0_network_acl\" \"example_complex_comparison_acl\" {\n    description = \"Example of a complex comparison\"\n    active = true\n    priority = 1\n    rule {\n        action {\n            block = true\n        }\n        match {\n            geo_country_codes = [\"{geoCountryCode}\"]\n        }\n        not_match {\n            geo_subdivision_codes = [\"{geoSubdivisionCode}\"]\n        }\n        scope = \"authentication\"\n    }\n}",
-      "hash": "38ac151b5ea465f7474112c8f20697f909be38917278048e970da47050a9e560",
-      "snippetId": "s_38ac151b5e",
-      "occurrences": 2,
-      "preview": "resource \"auth0_network_acl\" \"example_complex_comparison_acl\" { description = \"Example of a complex comparison\" active = true priority = 1 …"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 429,
-      "endLine": 444,
-      "lang": "yaml",
-      "code": "networkACLs:\n  - description: Example of a complex comparison\n    active: true\n    priority: 1\n    rule:\n      action:\n        block: true\n      match:\n        geo_country_codes:\n          - {geoCountryCode}\n      not_match:\n        geo_subdivision_codes:\n          - {geoSubdivisionCode}\n      scope: authentication",
-      "hash": "7c53cc734bdba4abcc00ae1a7abe75cd7fb9c471e3af96699df9466c2aa91ece",
-      "snippetId": "s_7c53cc734b",
-      "occurrences": 2,
-      "preview": "networkACLs: - description: Example of a complex comparison active: true priority: 1 rule: action: block: true match: geo_country_codes: - …"
     },
     {
       "filePath": "main/docs/api/management/v2/index.mdx",
@@ -29129,127 +29095,6 @@
       "snippetId": "s_9d33b08f14",
       "occurrences": 1,
       "preview": "In the mTLS certificate-bound access token example, `x5t#S256` indicates that the access token is bound to an mTLS client certificate with …"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 51,
-      "endLine": 93,
-      "lang": null,
-      "code": "</Tab>\n\n<Tab title=\"Go SDK\">\n```go expandable\npackage main\n\nimport (\n\t\"context\"\n\t\"log\"\n\n\t\"github.com/auth0/go-auth0\"\n\t\"github.com/auth0/go-auth0/management\"\n)\n\nfunc main() {\n\tmgmt, err := management.New(\"{yourDomain}\", management.WithClientCredentials(\"{yourClientId}\", \"{yourClientSecret}\"))\n\tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\n\tnetworkACL := &management.NetworkACL{\n\t\tDescription: auth0.String(\"Example of blocking a request\"),\n\t\tActive:      auth0.Bool(true),\n\t\tPriority:    auth0.Int(2),\n\t\tRule: &management.NetworkACLRule{\n\t\t\tAction: &management.NetworkACLRuleAction{\n\t\t\t\tBlock: auth0.Bool(true),\n\t\t\t},\n\t\t\tMatch: &management.NetworkACLRuleMatch{\n\t\t\t\tGeoCountryCodes: &[]string{\"{geoCountryCode}\"},\n\t\t\t},\n\t\t\tScope: auth0.String(\"authentication\"),\n\t\t},\n\t}\n\n\terr = mgmt.NetworkACL.Create(context.Background(), networkACL)\n\tif err != nil {\n\t\tlog.Fatal(err)\n\t}\n\tlog.Println(\"Network ACL has been created\")\n}",
-      "hash": "79712f5608447f6fc61c90f7e90dbd578400f98d4eb4a9e3ee111f955bbfa1e8",
-      "snippetId": "s_79712f5608",
-      "occurrences": 1,
-      "preview": "</Tab> <Tab title=\"Go SDK\"> ```go expandable package main import ( \"context\" \"log\" \"github.com/auth0/go-auth0\" \"github.com/auth0/go-auth0/m…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 97,
-      "endLine": 114,
-      "lang": "js",
-      "code": "const createNetworkAclPayload: Management.CreateNetworkAclRequestContent = {\n  description: \"Example of blocking a request\",\n  active: true,\n  priority: 2,\n  rule: {\n    action: {\n      block: true,\n    },\n    match: {\n      geo_country_codes: [\"{geoCountryCode}\"],\n    },\n    scope: \"authentication\",\n  },\n};\n\nconst createNetworkAcl = await client.networkAcls.create(createNetworkAclPayload);",
-      "hash": "3d3f9ad3017920ac36f9152543d8d713f800e6eb78494164aa488f4a8e45283e",
-      "snippetId": "s_3d3f9ad301",
-      "occurrences": 1,
-      "preview": "const createNetworkAclPayload: Management.CreateNetworkAclRequestContent = { description: \"Example of blocking a request\", active: true, pr…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 118,
-      "endLine": 133,
-      "lang": "terraform",
-      "code": "resource \"auth0_network_acl\" \"example_blocking_request_acl\" {\n    description = \"Example of blocking a request\"\n    active = true\n    priority = 2\n    rule {\n        action {\n            block = true\n        }\n        match {\n            geo_country_codes = [\"{geoCountryCode}\"]\n        }\n        scope = \"authentication\"\n    }\n}",
-      "hash": "bbe00319a16dfa0d1784cb043caba3904c790f601654e1a610305e507856714d",
-      "snippetId": "s_bbe00319a1",
-      "occurrences": 1,
-      "preview": "resource \"auth0_network_acl\" \"example_blocking_request_acl\" { description = \"Example of blocking a request\" active = true priority = 2 rule…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 136,
-      "endLine": 148,
-      "lang": "yaml",
-      "code": "networkACLs:\n  - description: Example of blocking a request\n    active: true\n    priority: 2\n    rule:\n      action:\n        block: true\n      match:\n        geo_country_codes:\n          - {geoCountryCode}\n      scope: authentication",
-      "hash": "a631335e7d5534e68c17801b37f6884ec7e5ab5478be319f9135a245e0db91ed",
-      "snippetId": "s_a631335e7d",
-      "occurrences": 1,
-      "preview": "networkACLs: - description: Example of blocking a request active: true priority: 2 rule: action: block: true match: geo_country_codes: - {g…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 157,
-      "endLine": 195,
-      "lang": null,
-      "code": "</Tab>\n</Tabs>\n\nThis is an example of a block page:\n\n![An example of a block page](/docs/images/tenants/block-page-example.png)\n\n## Allow a request\n\nThis Tenant ACL rule example allows traffic only from a specific geolocation country code.\n\n<Tabs>\n\n<Tab title=\"Management API\">\nTo create this Tenant ACL rule with the Management API:\n\n1. [Get a Management API access token](/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production) with the `create:network_acls` scope.\n\n2. Call the Management API [Create access control list endpoint](https://auth0.com/docs/api/management/v2/network-acls/post-network-acls) with the following body:\n\n```json\n{\n  \"description\": \"Example of allowing a request\",\n  \"active\": true,\n  \"priority\": 2,\n  \"rule\": {\n    \"action\": {\n      \"allow\": true\n    },\n    \"match\": {\n      \"geo_country_codes\": [\n        \"{geoCountryCode}\"\n      ]\n    },\n    \"scope\": \"authentication\"\n  }\n}",
-      "hash": "798377c01e153c602085f04383541b894700aa5518649c55f44de64d2ad08f07",
-      "snippetId": "s_798377c01e",
-      "occurrences": 1,
-      "preview": "</Tab> </Tabs> This is an example of a block page: ![An example of a block page](/docs/images/tenants/block-page-example.png) ## Allow a re…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 237,
-      "endLine": 258,
-      "lang": null,
-      "code": "</Tab>\n\n<Tab title=\"Node SDK\">\n```js\nconst createNetworkAclPayload: Management.CreateNetworkAclRequestContent = {\n  description: \"Example of allowing a request\",\n  active: true,\n  priority: 2,\n  rule: {\n    action: {\n      allow: true,\n    },\n    match: {\n      geo_country_codes: [\"{geoCountryCode}\"],\n    },\n    scope: \"authentication\",\n  },\n};\n\nconst createNetworkAcl = await client.networkAcls.create(createNetworkAclPayload);",
-      "hash": "0dc727043c623a7638181b472de005c59872f92e9416d16a1e6ce9f8989eae5d",
-      "snippetId": "s_0dc727043c",
-      "occurrences": 1,
-      "preview": "</Tab> <Tab title=\"Node SDK\"> ```js const createNetworkAclPayload: Management.CreateNetworkAclRequestContent = { description: \"Example of a…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 262,
-      "endLine": 277,
-      "lang": "terraform",
-      "code": "resource \"auth0_network_acl\" \"example_allowing_request_acl\" {\n    description = \"Example of allowing a request\"\n    active = true\n    priority = 2\n    rule {\n        action {\n            allow = true\n        }\n        match {\n            geo_country_codes = [\"{geoCountryCode}\"]\n        }\n        scope = \"authentication\"\n    }\n}",
-      "hash": "55d50caf570403c676a609988b26a591481cb1f6f1d65e60462ef3057fd8971e",
-      "snippetId": "s_55d50caf57",
-      "occurrences": 1,
-      "preview": "resource \"auth0_network_acl\" \"example_allowing_request_acl\" { description = \"Example of allowing a request\" active = true priority = 2 rule…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 280,
-      "endLine": 292,
-      "lang": "yaml",
-      "code": "networkACLs:\n  - description: Example of allowing a request\n    active: true\n    priority: 2\n    rule:\n      action:\n        allow: true\n      match:\n        geo_country_codes:\n          - {geoCountryCode}\n      scope: authentication",
-      "hash": "af1d311a9973522bd1679b1f5423facbb999875be259252b27f69060773bef54",
-      "snippetId": "s_af1d311a99",
-      "occurrences": 1,
-      "preview": "networkACLs: - description: Example of allowing a request active: true priority: 2 rule: action: allow: true match: geo_country_codes: - {g…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 301,
-      "endLine": 337,
-      "lang": null,
-      "code": "</Tab>\n\n</Tabs>\n\n## Redirect a request\n\nThis Tenant ACL rule example redirects all traffic from a specific geolocation country code.\n\n<Tabs>\n\n<Tab title=\"Management API\">\nTo create this Tenant ACL rule with the Management API:\n\n1. [Get a Management API access token](/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production) with the `create:network_acls` scope.\n\n2. Call the Management API [Create access control list endpoint](https://auth0.com/docs/api/management/v2/network-acls/post-network-acls) with the following body:\n\n```json\n{\n  \"description\": \"Example of redirecting a request\",\n  \"active\": true,\n  \"priority\": 2,\n  \"rule\": {\n    \"action\": {\n      \"redirect\": true,\n      \"redirect_uri\": \"REDIRECT_URI\"\n    },\n    \"match\": {\n      \"geo_country_codes\": [\n        \"{geoCountryCode}\"\n      ]\n    },\n    \"scope\": \"authentication\"\n  }\n}",
-      "hash": "6fad37b7267b2978d2f02fa3017a902b4c4e2c583b0c51346770fe33f3e25271",
-      "snippetId": "s_6fad37b726",
-      "occurrences": 1,
-      "preview": "</Tab> </Tabs> ## Redirect a request This Tenant ACL rule example redirects all traffic from a specific geolocation country code. <Tabs> <T…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 453,
-      "endLine": 495,
-      "lang": null,
-      "code": "</Tab>\n\n</Tabs>\n\n## Complex comparisons\n\nYou can combine the `match` and `not_match` operators in a single Tenant ACL rule to enforce fine-grained access policies.\n\nThis Tenant ACL rule example evaluates the `geo_country_code` and `geo_subdivision_code` signals to block all traffic from a given country except for a specific state, region, or province within that country.\n\n<Tabs>\n\n<Tab title=\"Management API\">\nTo create this Tenant ACL rule with the Management API:\n\n1. [Get a Management API access token](/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production) with the `create:network_acls` scope.\n\n2. Call the Management API [Create access control list endpoint](https://auth0.com/docs/api/management/v2/network-acls/post-network-acls) with the following body:\n\n```json\n{\n  \"description\": \"Example of a complex comparison\",\n  \"active\": true,\n  \"priority\": 1,\n  \"rule\": {\n    \"action\": {\n      \"block\": true\n    },\n    \"match\": {\n      \"geo_country_codes\": [\n        \"{geoCountryCode}\"\n      ]\n    },\n    \"not_match\": {\n      \"geo_subdivision_codes\": [\n        \"{geoSubdivisionCode}\"\n      ]\n    },\n    \"scope\": \"authentication\"\n  }\n}",
-      "hash": "7ec813d800d68a84ec631b453df10295e7a03e6b6f8e8ac7e6a3f695d65b8465",
-      "snippetId": "s_7ec813d800",
-      "occurrences": 1,
-      "preview": "</Tab> </Tabs> ## Complex comparisons You can combine the `match` and `not_match` operators in a single Tenant ACL rule to enforce fine-gra…"
-    },
-    {
-      "filePath": "main/docs/secure/tenant-access-control-list/use-cases.mdx",
-      "startLine": 613,
-      "endLine": 657,
-      "lang": null,
-      "code": "</Tab>\n\n</Tabs>\n\n## Enforce traffic through specific infrastructure\n\nYou can combine the `hostnames` and `connecting_ipv4_cidrs` signals to route requests to your tenant exclusively through your authorized infrastructure, such as a reverse proxy or VPN.\n\nThis Tenant ACL rule example blocks access to your canonical and custom domains unless the request originates from a specific set of IP addresses that connect directly to the Auth0 edge. This prevents users from bypassing your security controls by accessing your tenant hostnames directly from the public internet.\n\n<Tabs>\n\n<Tab title=\"Management API\">\nTo create this Tenant ACL rule with the Management API:\n\n1. [Get a Management API access token](/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production) with the `create:network_acls` scope.\n\n2. Call the Management API [Create access control list endpoint](https://auth0.com/docs/api/management/v2/network-acls/post-network-acls) with the following body:\n\n```json\n{\n  \"description\": \"Restrict access to specific proxy IPs for custom and canonical domains\",\n  \"active\": true,\n  \"priority\": 10,\n  \"rule\": {\n    \"action\": {\n      \"block\": true\n    },\n    \"match\": {\n      \"any\": [\n        { \"hostnames\": [\"auth.example.com\"] },\n        { \"hostnames\": [\"my-tenant.us.auth0.com\"] }\n      ]\n    },\n    \"not_match\": {\n      \"connecting_ipv4_cidrs\": [\n        \"192.0.2.0/24\",\n        \"203.0.113.5/32\"\n      ]\n    },\n    \"scope\": \"tenant\"\n  }\n}",
-      "hash": "a180f2c1e3dfa5b8bd6cf2b54ab81a1e605f5154ceeeff38eef3d4bfbcfdb904",
-      "snippetId": "s_a180f2c1e3",
-      "occurrences": 1,
-      "preview": "</Tab> </Tabs> ## Enforce traffic through specific infrastructure You can combine the `hostnames` and `connecting_ipv4_cidrs` signals to ro…"
     },
     {
       "filePath": "main/docs/secure/tokens/access-tokens/access-token-profiles.mdx",

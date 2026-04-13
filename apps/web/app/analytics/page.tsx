@@ -37,8 +37,10 @@ interface SearchQuery {
 }
 
 interface VisitorData {
-  date: string;
+  path: string;
   count: number;
+  human?: number;
+  ai?: number;
 }
 
 interface FeedbackStats {
@@ -379,17 +381,22 @@ export default function AnalyticsPage() {
           {visitors.length > 0 && (
             <Card>
               <CardHeader>
-                <CardTitle>Unique Visitors Over Time</CardTitle>
-                <CardDescription>Daily unique visitor count</CardDescription>
+                <CardTitle>Top Pages by Unique Visitors</CardTitle>
+                <CardDescription>Pages with the most unique visitors</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {visitors.slice(-14).reverse().map((visitor) => (
-                    <div key={visitor.date} className="flex items-center justify-between">
-                      <span className="text-sm">{new Date(visitor.date).toLocaleDateString()}</span>
-                      <div className="flex items-center gap-1">
+                  {visitors.slice(0, 20).map((visitor) => (
+                    <div key={visitor.path} className="flex items-center justify-between gap-4">
+                      <span className="text-sm font-mono truncate flex-1">{visitor.path}</span>
+                      <div className="flex items-center gap-2 shrink-0">
                         <Users className="h-3 w-3 text-muted-foreground" />
                         <Badge variant="secondary">{visitor.count.toLocaleString()}</Badge>
+                        {visitor.human != null && visitor.ai != null && (
+                          <span className="text-xs text-muted-foreground">
+                            ({visitor.human.toLocaleString()} human, {visitor.ai.toLocaleString()} AI)
+                          </span>
+                        )}
                       </div>
                     </div>
                   ))}
