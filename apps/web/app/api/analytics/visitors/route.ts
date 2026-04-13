@@ -54,8 +54,8 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      visitors: visitorsData.visitors,
-      total: visitorsData.total,
+      visitors: visitorsData.visitors.map((v) => ({ path: v.path, count: v.total, human: v.human, ai: v.ai })),
+      total: visitorsData.totals.total,
       filters: {
         dateFrom,
         dateTo,

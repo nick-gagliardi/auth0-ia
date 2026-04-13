@@ -53,13 +53,13 @@ export async function GET(request: NextRequest) {
       dateTo,
     });
 
-    // Sort by count descending
-    const sortedQueries = searchData.queries.sort((a, b) => b.count - a.count);
+    // Sort by hits descending
+    const sortedQueries = searchData.searches.sort((a, b) => b.hits - a.hits);
 
     return NextResponse.json({
-      queries: sortedQueries,
-      total: searchData.total,
-      topQueries: sortedQueries.slice(0, 20),
+      queries: sortedQueries.map((q) => ({ query: q.searchQuery, count: q.hits, ctr: q.ctr, topClickedPage: q.topClickedPage })),
+      total: searchData.totalSearches,
+      topQueries: sortedQueries.slice(0, 20).map((q) => ({ query: q.searchQuery, count: q.hits, ctr: q.ctr, topClickedPage: q.topClickedPage })),
       filters: {
         dateFrom,
         dateTo,

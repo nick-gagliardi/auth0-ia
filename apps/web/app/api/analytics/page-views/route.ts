@@ -53,13 +53,13 @@ export async function GET(request: NextRequest) {
       dateTo,
     });
 
-    // Sort by views descending
-    const sortedViews = pageViewsData.views.sort((a, b) => b.views - a.views);
+    // Sort by total views descending
+    const sortedViews = pageViewsData.views.sort((a, b) => b.total - a.total);
 
     return NextResponse.json({
-      views: sortedViews,
-      total: pageViewsData.total,
-      topPages: sortedViews.slice(0, 20),
+      views: sortedViews.map((v) => ({ page: v.path, views: v.total, human: v.human, ai: v.ai })),
+      total: pageViewsData.totals.total,
+      topPages: sortedViews.slice(0, 20).map((v) => ({ page: v.path, views: v.total, human: v.human, ai: v.ai })),
       filters: {
         dateFrom,
         dateTo,

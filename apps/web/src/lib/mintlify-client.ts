@@ -43,43 +43,45 @@ export interface FeedbackFilters {
   cursor?: string;
 }
 
+// Mintlify actual response shapes (from API docs)
 export interface PageView {
-  page: string;
-  views: number;
-  date?: string;
+  path: string;
+  human: number;
+  ai: number;
+  total: number;
 }
 
 export interface PageViewsResponse {
+  totals: { human: number; ai: number; total: number };
   views: PageView[];
-  total: number;
-  dateFrom?: string;
-  dateTo?: string;
+  hasMore: boolean;
 }
 
 export interface SearchQuery {
-  query: string;
-  count: number;
-  avgClickPosition?: number;
-  date?: string;
+  searchQuery: string;
+  hits: number;
+  ctr: number;
+  topClickedPage: string | null;
+  lastSearchedAt: string;
 }
 
 export interface SearchQueriesResponse {
-  queries: SearchQuery[];
-  total: number;
-  dateFrom?: string;
-  dateTo?: string;
+  searches: SearchQuery[];
+  totalSearches: number;
+  nextCursor: string | null;
 }
 
 export interface UniqueVisitor {
-  date: string;
-  count: number;
+  path: string;
+  human: number;
+  ai: number;
+  total: number;
 }
 
 export interface UniqueVisitorsResponse {
+  totals: { human: number; ai: number; total: number };
   visitors: UniqueVisitor[];
-  total: number;
-  dateFrom?: string;
-  dateTo?: string;
+  hasMore: boolean;
 }
 
 export interface AnalyticsFilters {
@@ -216,7 +218,7 @@ export class MintlifyClient {
     if (filters?.dateTo) params.dateTo = filters.dateTo;
 
     return this.fetch<PageViewsResponse>(
-      `/analytics/${this.config.projectId}/page-views`,
+      `/analytics/${this.config.projectId}/views`,
       params
     );
   }
@@ -231,7 +233,7 @@ export class MintlifyClient {
     if (filters?.dateTo) params.dateTo = filters.dateTo;
 
     return this.fetch<SearchQueriesResponse>(
-      `/analytics/${this.config.projectId}/search-queries`,
+      `/analytics/${this.config.projectId}/searches`,
       params
     );
   }
@@ -246,7 +248,7 @@ export class MintlifyClient {
     if (filters?.dateTo) params.dateTo = filters.dateTo;
 
     return this.fetch<UniqueVisitorsResponse>(
-      `/analytics/${this.config.projectId}/unique-visitors`,
+      `/analytics/${this.config.projectId}/visitors`,
       params
     );
   }
