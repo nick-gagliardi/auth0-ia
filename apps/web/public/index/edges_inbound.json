@@ -5566,8 +5566,7 @@
       "main/docs/secure/sender-constraining.mdx",
       "main/docs/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault.mdx",
       "main/docs/secure/call-apis-on-users-behalf/token-vault/refresh-token-exchange-with-token-vault.mdx",
-      "main/docs/get-started/applications/configure-sender-constraining.mdx",
-      "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx"
+      "main/docs/get-started/applications/configure-sender-constraining.mdx"
     ],
     "import": [],
     "redirect": []

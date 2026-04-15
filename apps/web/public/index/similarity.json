@@ -16357,8 +16357,8 @@
   "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx": [
     {
       "id": "main/docs/get-started/applications/application-grant-types.mdx",
-      "score": 0.0857,
-      "simOut": 0.1429,
+      "score": 0.09,
+      "simOut": 0.15,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16371,8 +16371,8 @@
     },
     {
       "id": "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-implicit-flow.mdx",
-      "score": 0.0857,
-      "simOut": 0.1429,
+      "score": 0.09,
+      "simOut": 0.15,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16385,8 +16385,8 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/add-login-using-the-implicit-flow-with-form-post.mdx",
-      "score": 0.0783,
-      "simOut": 0.1304,
+      "score": 0.0818,
+      "simOut": 0.1364,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -16399,8 +16399,8 @@
     },
     {
       "id": "main/docs/get-started/onboarding/self-service-m2m.mdx",
-      "score": 0.0375,
-      "simOut": 0.0625,
+      "score": 0.0383,
+      "simOut": 0.0638,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -59596,9 +59596,9 @@
   "main/docs/secure/sender-constraining/configure-sender-constraining.mdx": [
     {
       "id": "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx",
-      "score": 0.2833,
+      "score": 0.3,
       "simOut": 0.25,
-      "simIn": 0.3333,
+      "simIn": 0.375,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -59612,9 +59612,9 @@
   "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx": [
     {
       "id": "main/docs/secure/sender-constraining/configure-sender-constraining.mdx",
-      "score": 0.2833,
+      "score": 0.3,
       "simOut": 0.25,
-      "simIn": 0.3333,
+      "simIn": 0.375,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [

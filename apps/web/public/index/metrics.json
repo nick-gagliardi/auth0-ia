@@ -2702,7 +2702,7 @@
     "deadEndScore": 7
   },
   "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx": {
-    "inboundLinks": 5,
+    "inboundLinks": 4,
     "outboundLinks": 4,
     "importedBy": 0,
     "navDepth": 4,
@@ -2711,9 +2711,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 5,
+    "hubScore": 4,
     "deadEnd": false,
-    "deadEndScore": 1.25
+    "deadEndScore": 1
   },
   "main/docs/secure/sender-constraining/mtls-sender-constraining.mdx": {
     "inboundLinks": 3,
@@ -29365,7 +29365,7 @@
   },
   "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 11,
+    "outboundLinks": 10,
     "importedBy": 0,
     "navDepth": 4,
     "orphanNav": false,

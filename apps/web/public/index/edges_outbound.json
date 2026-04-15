@@ -22020,7 +22020,6 @@
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/secure/sender-constraining.mdx",
-      "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx",
       "main/docs/authenticate/enterprise-connections.mdx",
       "main/docs/secure/call-apis-on-users-behalf/token-vault/configure-token-vault.mdx",
       "main/docs/get-started/applications/signing-algorithms.mdx",

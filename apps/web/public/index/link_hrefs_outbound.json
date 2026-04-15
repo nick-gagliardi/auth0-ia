@@ -36206,10 +36206,6 @@
       "toId": "main/docs/secure/sender-constraining.mdx"
     },
     {
-      "href": "/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop",
-      "toId": "main/docs/secure/sender-constraining/demonstrating-proof-of-possession-dpop.mdx"
-    },
-    {
       "href": "/docs/authenticate/enterprise-connections",
       "toId": "main/docs/authenticate/enterprise-connections.mdx"
     },

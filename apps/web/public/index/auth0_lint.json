@@ -2871,7 +2871,7 @@
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "* The connection should use Proof Key for Code Exchange (PKCE) [Authorization Code Flow + PKCE](docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-",
-          "line": 21
+          "line": 19
         }
       ]
     },
@@ -27563,7 +27563,7 @@
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* The connection should use Proof Key for Code Exchange (PKCE) [Authorization Code Flow + PKCE](docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-",
-        "line": 21
+        "line": 19
       }
     ],
     "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": [
