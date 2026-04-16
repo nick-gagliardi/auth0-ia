@@ -13873,6 +13873,14 @@
   ],
   "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx": [
     {
+      "href": "/docs/manage-users/my-organization-api",
+      "toId": "main/docs/manage-users/my-organization-api.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
       "href": "/docs/manage-users/organizations/organizations-overview",
       "toId": "main/docs/manage-users/organizations/organizations-overview.mdx"
     },
@@ -13889,12 +13897,20 @@
       "toId": "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx"
     },
     {
+      "href": "/docs/authenticate/enterprise-connections/connection-profile",
+      "toId": "main/docs/authenticate/enterprise-connections/connection-profile.mdx"
+    },
+    {
       "href": "/docs/authenticate/login/auth0-universal-login/identifier-first",
       "toId": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx"
     },
     {
       "href": "/docs/manage-users/organizations/login-flows-for-organizations",
       "toId": "main/docs/manage-users/organizations/login-flows-for-organizations.mdx"
+    },
+    {
+      "href": "/docs/customize/custom-domains",
+      "toId": "main/docs/customize/custom-domains.mdx"
     },
     {
       "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
@@ -18663,6 +18679,14 @@
   ],
   "main/docs/manage-users/organizations/configure-organizations/disable-connections.mdx": [
     {
+      "href": "/docs/manage-users/my-organization-api",
+      "toId": "main/docs/manage-users/my-organization-api.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
       "href": "/docs/manage-users/organizations/organizations-overview",
       "toId": "main/docs/manage-users/organizations/organizations-overview.mdx"
     },
@@ -18819,8 +18843,20 @@
   ],
   "main/docs/manage-users/organizations/configure-organizations/retrieve-connections.mdx": [
     {
+      "href": "/docs/manage-users/my-organization-api",
+      "toId": "main/docs/manage-users/my-organization-api.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
       "href": "/docs/manage-users/organizations/organizations-overview",
       "toId": "main/docs/manage-users/organizations/organizations-overview.mdx"
+    },
+    {
+      "href": "/docs/customize/custom-domains",
+      "toId": "main/docs/customize/custom-domains.mdx"
     },
     {
       "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
@@ -19044,6 +19080,14 @@
     }
   ],
   "main/docs/manage-users/organizations/login-flows-for-organizations.mdx": [
+    {
+      "href": "/docs/manage-users/my-organization-api",
+      "toId": "main/docs/manage-users/my-organization-api.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
     {
       "href": "/docs/manage-users/organizations",
       "toId": "main/docs/manage-users/organizations.mdx"
@@ -31063,7 +31107,86 @@
     }
   ],
   "main/docs/api/authentication/user-profile/get-user-info.mdx": [],
-  "main/docs/events/index.mdx": [],
+  "main/docs/events/index.mdx": [
+    {
+      "href": "/docs/customize/events/create-an-event-stream",
+      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/events-best-practices",
+      "toId": "main/docs/customize/events/events-best-practices.mdx"
+    }
+  ],
+  "main/docs/customize/events/create-an-event-stream.mdx": [
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+    },
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-types",
+      "toId": "main/docs/customize/events/event-types.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/events-best-practices",
+      "toId": "main/docs/customize/events/events-best-practices.mdx"
+    }
+  ],
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-types",
+      "toId": "main/docs/customize/events/event-types.mdx"
+    },
+    {
+      "href": "/docs/customize/events/create-an-event-stream",
+      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
+    },
+    {
+      "href": "/docs/customize/events/events-best-practices",
+      "toId": "main/docs/customize/events/events-best-practices.mdx"
+    }
+  ],
+  "main/docs/customize/events/events-best-practices.mdx": [
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
+      "href": "/docs/customize/events/create-an-event-stream",
+      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-types",
+      "toId": "main/docs/customize/events/event-types.mdx"
+    }
+  ],
   "main/docs/events/user/user.created.mdx": [],
   "main/snippets/ApiReleaseLifecycle.jsx": [],
   "main/docs/events/user/user.deleted.mdx": [],
@@ -31639,72 +31762,6 @@
     {
       "href": "/docs/customize/events/events-best-practices",
       "toId": "main/docs/customize/events/events-best-practices.mdx"
-    }
-  ],
-  "main/docs/customize/events/create-an-event-stream.mdx": [
-    {
-      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
-      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-types",
-      "toId": "main/docs/customize/events/event-types.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
-      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
-    },
-    {
-      "href": "/docs/customize/events/events-best-practices",
-      "toId": "main/docs/customize/events/events-best-practices.mdx"
-    }
-  ],
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [
-    {
-      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
-      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
-      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-types",
-      "toId": "main/docs/customize/events/event-types.mdx"
-    },
-    {
-      "href": "/docs/customize/events/create-an-event-stream",
-      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
-    },
-    {
-      "href": "/docs/customize/events/events-best-practices",
-      "toId": "main/docs/customize/events/events-best-practices.mdx"
-    }
-  ],
-  "main/docs/customize/events/events-best-practices.mdx": [
-    {
-      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
-      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-    },
-    {
-      "href": "/docs/customize/events/create-an-event-stream",
-      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
-      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-types",
-      "toId": "main/docs/customize/events/event-types.mdx"
     }
   ],
   "main/docs/customize/extensions/single-sign-on-dashboard-extension.mdx": [

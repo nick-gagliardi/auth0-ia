@@ -29701,19 +29701,19 @@
         ],
         "labels": [
           "Events Catalog",
-          "Events Catalog"
+          "Events Catalog Overview"
         ],
         "kinds": [
           "tab",
           "page"
         ],
-        "leafLabel": "Events Catalog",
+        "leafLabel": "Events Catalog Overview",
         "leafLabelSource": "frontmatter",
         "containerString": "Events Catalog",
-        "pathString": "Events Catalog > Events Catalog"
+        "pathString": "Events Catalog > Events Catalog Overview"
       }
     ],
-    "navLabel": "Events Catalog",
+    "navLabel": "Events Catalog Overview",
     "navLabelSource": "frontmatter"
   },
   "main/docs/events/user/user.created.mdx": {

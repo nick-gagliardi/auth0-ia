@@ -108,8 +108,12 @@
       "main/docs/manage-users/my-account-api.mdx",
       "main/docs/manage-users/my-organization-api.mdx",
       "main/docs/manage-users/organizations/create-first-organization.mdx",
+      "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
       "main/docs/manage-users/organizations/configure-organizations/create-org-domains.mdx",
       "main/docs/manage-users/organizations/configure-organizations/delete-org-domains.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/disable-connections.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/retrieve-connections.mdx",
       "main/docs/get-started/auth0-guide.mdx",
       "main/docs/get-started/universal-components/auth0-component-provider.mdx",
       "main/docs/get-started/universal-components/universal-components-overview.mdx",
@@ -298,6 +302,7 @@
       "main/docs/quickstart/webapp/php/index.mdx",
       "main/docs/quickstart/webapp/nginx-plus/index.mdx",
       "main/docs/quickstart/webapp/nextjs/index.mdx",
+      "main/docs/quickstart/webapp/laravel/interactive.mdx",
       "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/fastify/index.mdx",
@@ -3518,6 +3523,8 @@
       "main/docs/manage-users/sessions/configure-keep-me-signed-in-sessions.mdx",
       "main/docs/manage-users/organizations/configure-organizations/create-org-domains.mdx",
       "main/docs/manage-users/organizations/configure-organizations/delete-org-domains.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/retrieve-connections.mdx",
       "main/docs/manage-users/cookies/authentication-api-cookies.mdx",
       "main/docs/libraries/auth0-swift.mdx",
       "main/docs/libraries/auth0js.mdx",
@@ -9020,7 +9027,6 @@
       "main/docs/quickstart/webapp/nginx-plus/_index.mdx",
       "main/docs/quickstart/webapp/nginx-plus/interactive.mdx",
       "main/docs/quickstart/webapp/laravel/_index.mdx",
-      "main/docs/quickstart/webapp/laravel/interactive.mdx",
       "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
       "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
@@ -9382,24 +9388,21 @@
   "main/snippets/quickstart/webapp/laravel/web.php.mdx": {
     "link": [],
     "import": [
-      "main/docs/quickstart/webapp/laravel/_index.mdx",
-      "main/docs/quickstart/webapp/laravel/interactive.mdx"
+      "main/docs/quickstart/webapp/laravel/_index.mdx"
     ],
     "redirect": []
   },
   "main/snippets/quickstart/webapp/laravel/web.php2.mdx": {
     "link": [],
     "import": [
-      "main/docs/quickstart/webapp/laravel/_index.mdx",
-      "main/docs/quickstart/webapp/laravel/interactive.mdx"
+      "main/docs/quickstart/webapp/laravel/_index.mdx"
     ],
     "redirect": []
   },
   "main/snippets/quickstart/webapp/laravel/web.php3.mdx": {
     "link": [],
     "import": [
-      "main/docs/quickstart/webapp/laravel/_index.mdx",
-      "main/docs/quickstart/webapp/laravel/interactive.mdx"
+      "main/docs/quickstart/webapp/laravel/_index.mdx"
     ],
     "redirect": []
   },
@@ -10756,7 +10759,12 @@
     "redirect": []
   },
   "main/docs/manage-users/my-organization-api.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/disable-connections.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/retrieve-connections.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -10781,6 +10789,7 @@
   "main/docs/authenticate/enterprise-connections/connection-profile.mdx": {
     "link": [
       "main/docs/manage-users/my-organization-api.mdx",
+      "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
       "main/docs/api/myorganization/index.mdx"
@@ -19748,6 +19757,41 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/events/create-an-event-stream.mdx": {
+    "link": [
+      "main/docs/events/index.mdx",
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/events-best-practices.mdx",
+      "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
+    "link": [
+      "main/docs/events/index.mdx",
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/events-best-practices.mdx": {
+    "link": [
+      "main/docs/events/index.mdx",
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/events/user/user.created.mdx": {
     "link": [],
     "import": [],
@@ -20587,38 +20631,6 @@
       "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
       "main/docs/customize/events/events-best-practices.mdx",
       "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/create-an-event-stream.mdx": {
-    "link": [
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx",
-      "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
-    "link": [
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/events-best-practices.mdx": {
-    "link": [
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx"
     ],
     "import": [],
     "redirect": []

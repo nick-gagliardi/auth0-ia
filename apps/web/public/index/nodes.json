@@ -12757,9 +12757,9 @@
     "id": "main/docs/events/index.mdx",
     "type": "page",
     "filePath": "main/docs/events/index.mdx",
-    "title": "Events Catalog",
+    "title": "Events Catalog Overview",
     "navPaths": [
-      "Events Catalog > Events Catalog"
+      "Events Catalog > Events Catalog Overview"
     ]
   },
   {
@@ -22011,24 +22011,6 @@
     "id": "main/snippets/quickstart/webapp/nextjs/create-the-auth0-sdk-client.mdx",
     "type": "snippet",
     "filePath": "main/snippets/quickstart/webapp/nextjs/create-the-auth0-sdk-client.mdx",
-    "navPaths": []
-  },
-  {
-    "id": "main/snippets/quickstart/webapp/laravel/web.php.mdx",
-    "type": "snippet",
-    "filePath": "main/snippets/quickstart/webapp/laravel/web.php.mdx",
-    "navPaths": []
-  },
-  {
-    "id": "main/snippets/quickstart/webapp/laravel/web.php2.mdx",
-    "type": "snippet",
-    "filePath": "main/snippets/quickstart/webapp/laravel/web.php2.mdx",
-    "navPaths": []
-  },
-  {
-    "id": "main/snippets/quickstart/webapp/laravel/web.php3.mdx",
-    "type": "snippet",
-    "filePath": "main/snippets/quickstart/webapp/laravel/web.php3.mdx",
     "navPaths": []
   },
   {

@@ -3020,9 +3020,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.1263,
+      "score": 0.126,
       "simOut": 0.1875,
-      "simIn": 0.0345,
+      "simIn": 0.0337,
       "sharedOut": 3,
       "sharedIn": 3,
       "reasons": [
@@ -3178,9 +3178,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.1176,
+      "score": 0.1174,
       "simOut": 0.1875,
-      "simIn": 0.0127,
+      "simIn": 0.0123,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -5138,9 +5138,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0922,
+      "score": 0.0919,
       "simOut": 0.1304,
-      "simIn": 0.0349,
+      "simIn": 0.0341,
       "sharedOut": 3,
       "sharedIn": 3,
       "reasons": [
@@ -12319,9 +12319,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.02,
+      "score": 0.0188,
       "simOut": 0,
-      "simIn": 0.05,
+      "simIn": 0.0469,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -15657,10 +15657,24 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx": [
     {
       "id": "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
-      "score": 0.1257,
-      "simOut": 0.1143,
+      "score": 0.1238,
+      "simOut": 0.1111,
       "simIn": 0.1429,
       "sharedOut": 4,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "score": 0.1,
+      "simOut": 0.0833,
+      "simIn": 0.125,
+      "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
@@ -15778,20 +15792,6 @@
         "shared_outbound"
       ],
       "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/auth0-overview/create-applications.mdx",
-      "score": 0.0474,
-      "simOut": 0.0789,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     }
@@ -16341,9 +16341,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0146,
+      "score": 0.0143,
       "simOut": 0,
-      "simIn": 0.0366,
+      "simIn": 0.0357,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -17543,20 +17543,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.1093,
-      "simOut": 0.0769,
-      "simIn": 0.1579,
-      "sharedOut": 1,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/manage-users/organizations/configure-organizations.mdx",
       "score": 0.1087,
       "simOut": 0.1071,
@@ -17577,6 +17563,20 @@
       "simIn": 0.2692,
       "sharedOut": 0,
       "sharedIn": 7,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/protocols/oauth.mdx",
+      "score": 0.1066,
+      "simOut": 0.0526,
+      "simIn": 0.1875,
+      "sharedOut": 1,
+      "sharedIn": 6,
       "reasons": [
         "shared_inbound"
       ],
@@ -18161,8 +18161,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.1286,
-      "simOut": 0.2143,
+      "score": 0.1125,
+      "simOut": 0.1875,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -19819,9 +19819,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0308,
+      "score": 0.03,
       "simOut": 0,
-      "simIn": 0.0769,
+      "simIn": 0.075,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -20359,9 +20359,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0193,
+      "score": 0.0188,
       "simOut": 0,
-      "simIn": 0.0482,
+      "simIn": 0.0471,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -20531,9 +20531,9 @@
   "main/docs/customize/custom-domains.mdx": [
     {
       "id": "main/docs/customize/custom-domains/self-managed-certificates.mdx",
-      "score": 0.1855,
+      "score": 0.1853,
       "simOut": 0.2941,
-      "simIn": 0.0225,
+      "simIn": 0.022,
       "sharedOut": 5,
       "sharedIn": 2,
       "reasons": [
@@ -20545,9 +20545,9 @@
     },
     {
       "id": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-custom-domains.mdx",
-      "score": 0.1263,
+      "score": 0.126,
       "simOut": 0.1875,
-      "simIn": 0.0345,
+      "simIn": 0.0337,
       "sharedOut": 3,
       "sharedIn": 3,
       "reasons": [
@@ -20574,9 +20574,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains/auth0-managed-certificates.mdx",
-      "score": 0.1176,
+      "score": 0.1174,
       "simOut": 0.1875,
-      "simIn": 0.0127,
+      "simIn": 0.0123,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -20630,9 +20630,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
-      "score": 0.0947,
+      "score": 0.0945,
       "simOut": 0.1429,
-      "simIn": 0.0225,
+      "simIn": 0.022,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -20644,9 +20644,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
-      "score": 0.0922,
+      "score": 0.0919,
       "simOut": 0.1304,
-      "simIn": 0.0349,
+      "simIn": 0.0341,
       "sharedOut": 3,
       "sharedIn": 3,
       "reasons": [
@@ -20658,12 +20658,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "score": 0.0515,
+      "id": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
+      "score": 0.0533,
       "simOut": 0,
-      "simIn": 0.1288,
+      "simIn": 0.1333,
       "sharedOut": 0,
-      "sharedIn": 17,
+      "sharedIn": 12,
       "reasons": [
         "shared_inbound"
       ],
@@ -20846,9 +20846,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0413,
+      "score": 0.0408,
       "simOut": 0.037,
-      "simIn": 0.0476,
+      "simIn": 0.0465,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -22846,20 +22846,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.1295,
-      "simOut": 0.1875,
-      "simIn": 0.0426,
-      "sharedOut": 3,
-      "sharedIn": 2,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/manage-users/organizations/custom-development.mdx",
       "score": 0.1174,
       "simOut": 0.1364,
@@ -22869,6 +22855,20 @@
       "reasons": [
         "shared_outbound",
         "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
+      "score": 0.117,
+      "simOut": 0.1667,
+      "simIn": 0.0426,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -23481,9 +23481,9 @@
   "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx": [
     {
       "id": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object.mdx",
-      "score": 0.0698,
+      "score": 0.0657,
       "simOut": 0,
-      "simIn": 0.1746,
+      "simIn": 0.1642,
       "sharedOut": 0,
       "sharedIn": 11,
       "reasons": [
@@ -23495,9 +23495,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-      "score": 0.0518,
+      "score": 0.0507,
       "simOut": 0.0556,
-      "simIn": 0.0462,
+      "simIn": 0.0435,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -23509,9 +23509,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/authenticate-using-ropg-flow-with-mfa.mdx",
-      "score": 0.0375,
+      "score": 0.0353,
       "simOut": 0,
-      "simIn": 0.0938,
+      "simIn": 0.0882,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -23522,10 +23522,24 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/events/create-an-event-stream.mdx",
-      "score": 0.0345,
+      "id": "main/docs/customize/events/event-types.mdx",
+      "score": 0.0323,
       "simOut": 0,
-      "simIn": 0.0862,
+      "simIn": 0.0806,
+      "sharedOut": 0,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/create-an-event-stream.mdx",
+      "score": 0.0317,
+      "simOut": 0,
+      "simIn": 0.0794,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -23537,23 +23551,9 @@
     },
     {
       "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "score": 0.0345,
+      "score": 0.0317,
       "simOut": 0,
-      "simIn": 0.0862,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/event-types.mdx",
-      "score": 0.0345,
-      "simOut": 0,
-      "simIn": 0.0862,
+      "simIn": 0.0794,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -23565,9 +23565,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authenticator-factors-mfa-api.mdx",
-      "score": 0.0313,
+      "score": 0.0294,
       "simOut": 0,
-      "simIn": 0.0781,
+      "simIn": 0.0735,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -23579,9 +23579,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/mfa-api.mdx",
-      "score": 0.0313,
+      "score": 0.0294,
       "simOut": 0,
-      "simIn": 0.0781,
+      "simIn": 0.0735,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -23592,30 +23592,30 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/events/events-best-practices.mdx",
-      "score": 0.0276,
+      "id": "main/docs/customize/custom-domains.mdx",
+      "score": 0.0277,
       "simOut": 0,
-      "simIn": 0.069,
+      "simIn": 0.0692,
+      "sharedOut": 0,
+      "sharedIn": 9,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/my-organization-api.mdx",
+      "score": 0.0258,
+      "simOut": 0,
+      "simIn": 0.0645,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
       "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/auth0-overview/create-applications.mdx",
-      "score": 0.0267,
-      "simOut": 0,
-      "simIn": 0.0667,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     }
@@ -24936,6 +24936,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "score": 0.0279,
+      "simOut": 0,
+      "simIn": 0.0698,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     }
   ],
@@ -27120,9 +27134,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0145,
+      "score": 0.0141,
       "simOut": 0,
-      "simIn": 0.0361,
+      "simIn": 0.0353,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -27965,6 +27979,20 @@
       ],
       "isCrossNav": null,
       "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/custom-domains.mdx",
+      "score": 0.014,
+      "simOut": 0,
+      "simIn": 0.0349,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -43719,9 +43747,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0205,
+      "score": 0.02,
       "simOut": 0,
-      "simIn": 0.0513,
+      "simIn": 0.05,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -44537,9 +44565,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0141,
+      "score": 0.0138,
       "simOut": 0,
-      "simIn": 0.0353,
+      "simIn": 0.0345,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -47901,8 +47929,8 @@
   "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx": [
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/create-organizations.mdx",
-      "score": 0.3,
-      "simOut": 0.1667,
+      "score": 0.275,
+      "simOut": 0.125,
       "simIn": 0.5,
       "sharedOut": 1,
       "sharedIn": 5,
@@ -47915,8 +47943,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/define-organization-behavior.mdx",
-      "score": 0.2778,
-      "simOut": 0.1667,
+      "score": 0.2528,
+      "simOut": 0.125,
       "simIn": 0.4444,
       "sharedOut": 1,
       "sharedIn": 4,
@@ -47929,8 +47957,8 @@
     },
     {
       "id": "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
-      "score": 0.2,
-      "simOut": 0.3333,
+      "score": 0.1714,
+      "simOut": 0.2857,
       "simIn": 0,
       "sharedOut": 4,
       "sharedIn": 0,
@@ -47943,8 +47971,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/add-member-roles.mdx",
-      "score": 0.1857,
-      "simOut": 0.1429,
+      "score": 0.1667,
+      "simOut": 0.1111,
       "simIn": 0.25,
       "sharedOut": 1,
       "sharedIn": 3,
@@ -47957,8 +47985,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/organizations-overview.mdx",
-      "score": 0.1295,
-      "simOut": 0.1875,
+      "score": 0.117,
+      "simOut": 0.1667,
       "simIn": 0.0426,
       "sharedOut": 3,
       "sharedIn": 2,
@@ -47971,8 +47999,8 @@
     },
     {
       "id": "main/docs/authenticate/database-connections/password-change.mdx",
-      "score": 0.1286,
-      "simOut": 0.2143,
+      "score": 0.1125,
+      "simOut": 0.1875,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -47985,8 +48013,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
-      "score": 0.1093,
-      "simOut": 0.0769,
+      "score": 0.1032,
+      "simOut": 0.0667,
       "simIn": 0.1579,
       "sharedOut": 1,
       "sharedIn": 3,
@@ -47998,9 +48026,23 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
+      "score": 0.1,
+      "simOut": 0.0833,
+      "simIn": 0.125,
+      "sharedOut": 3,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
-      "score": 0.0811,
-      "simOut": 0.1351,
+      "score": 0.0769,
+      "simOut": 0.1282,
       "simIn": 0,
       "sharedOut": 5,
       "sharedIn": 0,
@@ -48720,9 +48762,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0947,
+      "score": 0.0945,
       "simOut": 0.1429,
-      "simIn": 0.0225,
+      "simIn": 0.022,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -48792,9 +48834,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.1855,
+      "score": 0.1853,
       "simOut": 0.2941,
-      "simIn": 0.0225,
+      "simIn": 0.022,
       "sharedOut": 5,
       "sharedIn": 2,
       "reasons": [
@@ -49288,9 +49330,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0148,
+      "score": 0.0145,
       "simOut": 0,
-      "simIn": 0.037,
+      "simIn": 0.0361,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -49990,9 +50032,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0178,
+      "score": 0.0174,
       "simOut": 0,
-      "simIn": 0.0444,
+      "simIn": 0.0435,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -51366,9 +51408,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0156,
+      "score": 0.0152,
       "simOut": 0,
-      "simIn": 0.039,
+      "simIn": 0.038,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -52225,8 +52267,8 @@
   "main/docs/manage-users/organizations/login-flows-for-organizations.mdx": [
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.1257,
-      "simOut": 0.1143,
+      "score": 0.1238,
+      "simOut": 0.1111,
       "simIn": 0.1429,
       "sharedOut": 4,
       "sharedIn": 1,
@@ -52253,8 +52295,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations.mdx",
-      "score": 0.0643,
-      "simOut": 0.1071,
+      "score": 0.0621,
+      "simOut": 0.1034,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -52281,11 +52323,11 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0197,
+      "score": 0.025,
       "simOut": 0,
-      "simIn": 0.0492,
+      "simIn": 0.0625,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -52311,8 +52353,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.2,
-      "simOut": 0.3333,
+      "score": 0.1714,
+      "simOut": 0.2857,
       "simIn": 0,
       "sharedOut": 4,
       "sharedIn": 0,
@@ -54192,9 +54234,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0145,
+      "score": 0.0141,
       "simOut": 0,
-      "simIn": 0.0361,
+      "simIn": 0.0353,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -55951,9 +55993,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0388,
+      "score": 0.0385,
       "simOut": 0.04,
-      "simIn": 0.037,
+      "simIn": 0.0361,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -58051,9 +58093,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0258,
+      "score": 0.0242,
       "simOut": 0,
-      "simIn": 0.0645,
+      "simIn": 0.0606,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -58199,9 +58241,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0262,
+      "score": 0.0246,
       "simOut": 0,
-      "simIn": 0.0656,
+      "simIn": 0.0615,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -58347,9 +58389,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0262,
+      "score": 0.0246,
       "simOut": 0,
-      "simIn": 0.0656,
+      "simIn": 0.0615,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -58495,9 +58537,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0258,
+      "score": 0.0242,
       "simOut": 0,
-      "simIn": 0.0645,
+      "simIn": 0.0606,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -59389,12 +59431,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
-      "score": 0.0545,
+      "id": "main/docs/get-started/applications/application-settings.mdx",
+      "score": 0.0526,
       "simOut": 0,
-      "simIn": 0.1364,
+      "simIn": 0.1316,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 5,
       "reasons": [
         "shared_inbound"
       ],
@@ -60792,12 +60834,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "id": "main/docs/authenticate/login/auth0-universal-login.mdx",
       "score": 0.0267,
       "simOut": 0,
       "simIn": 0.0667,
       "sharedOut": 0,
-      "sharedIn": 4,
+      "sharedIn": 5,
       "reasons": [
         "shared_inbound"
       ],
@@ -60806,12 +60848,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "score": 0.0267,
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.025,
       "simOut": 0,
-      "simIn": 0.0667,
+      "simIn": 0.0625,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -62220,12 +62262,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0404,
+      "id": "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
+      "score": 0.04,
       "simOut": 0,
-      "simIn": 0.1011,
+      "simIn": 0.1,
       "sharedOut": 0,
-      "sharedIn": 9,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -62234,12 +62276,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
-      "score": 0.04,
+      "id": "main/docs/customize/custom-domains.mdx",
+      "score": 0.0396,
       "simOut": 0,
-      "simIn": 0.1,
+      "simIn": 0.0989,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 9,
       "reasons": [
         "shared_inbound"
       ],
@@ -62451,9 +62493,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0312,
+      "score": 0.0304,
       "simOut": 0,
-      "simIn": 0.0779,
+      "simIn": 0.0759,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -64248,9 +64290,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0156,
+      "score": 0.0152,
       "simOut": 0,
-      "simIn": 0.039,
+      "simIn": 0.038,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -64439,11 +64481,11 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0494,
+      "score": 0.0533,
       "simOut": 0,
-      "simIn": 0.1236,
+      "simIn": 0.1333,
       "sharedOut": 0,
-      "sharedIn": 11,
+      "sharedIn": 12,
       "reasons": [
         "shared_inbound"
       ],
@@ -65333,8 +65375,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.1857,
-      "simOut": 0.1429,
+      "score": 0.1667,
+      "simOut": 0.1111,
       "simIn": 0.25,
       "sharedOut": 1,
       "sharedIn": 3,
@@ -65447,8 +65489,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.3,
-      "simOut": 0.1667,
+      "score": 0.275,
+      "simOut": 0.125,
       "simIn": 0.5,
       "sharedOut": 1,
       "sharedIn": 5,
@@ -65777,8 +65819,8 @@
     },
     {
       "id": "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
-      "score": 0.2778,
-      "simOut": 0.1667,
+      "score": 0.2528,
+      "simOut": 0.125,
       "simIn": 0.4444,
       "sharedOut": 1,
       "sharedIn": 4,
@@ -66885,6 +66927,444 @@
       "highValueConvergence": false
     }
   ],
+  "main/docs/customize/events.mdx": [
+    {
+      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "score": 0.6,
+      "simOut": 1,
+      "simIn": 0,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/events/index.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": true
+    },
+    {
+      "id": "main/docs/customize/events/event-types.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/events-best-practices.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/create-an-event-stream.mdx",
+      "score": 0.36,
+      "simOut": 0.6,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    }
+  ],
+  "main/docs/events/index.mdx": [
+    {
+      "id": "main/docs/customize/events/event-types.mdx",
+      "score": 0.6,
+      "simOut": 1,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": true
+    },
+    {
+      "id": "main/docs/customize/events.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": true
+    },
+    {
+      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": true
+    }
+  ],
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [
+    {
+      "id": "main/docs/customize/events/events-best-practices.mdx",
+      "score": 0.7833,
+      "simOut": 0.75,
+      "simIn": 0.8333,
+      "sharedOut": 3,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/event-types.mdx",
+      "score": 0.6786,
+      "simOut": 0.75,
+      "simIn": 0.5714,
+      "sharedOut": 3,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/create-an-event-stream.mdx",
+      "score": 0.6457,
+      "simOut": 0.6,
+      "simIn": 0.7143,
+      "sharedOut": 3,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events.mdx",
+      "score": 0.6,
+      "simOut": 1,
+      "simIn": 0,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/events/index.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": true
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.0317,
+      "simOut": 0,
+      "simIn": 0.0794,
+      "sharedOut": 0,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
+  "main/docs/customize/events/event-types.mdx": [
+    {
+      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "score": 0.6786,
+      "simOut": 0.75,
+      "simIn": 0.5714,
+      "sharedOut": 3,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/events/index.mdx",
+      "score": 0.6,
+      "simOut": 1,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": true
+    },
+    {
+      "id": "main/docs/customize/events/events-best-practices.mdx",
+      "score": 0.4714,
+      "simOut": 0.5,
+      "simIn": 0.4286,
+      "sharedOut": 2,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/create-an-event-stream.mdx",
+      "score": 0.4686,
+      "simOut": 0.4,
+      "simIn": 0.5714,
+      "sharedOut": 2,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.0323,
+      "simOut": 0,
+      "simIn": 0.0806,
+      "sharedOut": 0,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
+  "main/docs/customize/events/events-best-practices.mdx": [
+    {
+      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "score": 0.7833,
+      "simOut": 0.75,
+      "simIn": 0.8333,
+      "sharedOut": 3,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/event-types.mdx",
+      "score": 0.4714,
+      "simOut": 0.5,
+      "simIn": 0.4286,
+      "sharedOut": 2,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/create-an-event-stream.mdx",
+      "score": 0.4686,
+      "simOut": 0.4,
+      "simIn": 0.5714,
+      "sharedOut": 2,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.0254,
+      "simOut": 0,
+      "simIn": 0.0635,
+      "sharedOut": 0,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
+  "main/docs/customize/events/create-an-event-stream.mdx": [
+    {
+      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "score": 0.6457,
+      "simOut": 0.6,
+      "simIn": 0.7143,
+      "sharedOut": 3,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/event-types.mdx",
+      "score": 0.4686,
+      "simOut": 0.4,
+      "simIn": 0.5714,
+      "sharedOut": 2,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events/events-best-practices.mdx",
+      "score": 0.4686,
+      "simOut": 0.4,
+      "simIn": 0.5714,
+      "sharedOut": 2,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/events.mdx",
+      "score": 0.36,
+      "simOut": 0.6,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.0317,
+      "simOut": 0,
+      "simIn": 0.0794,
+      "sharedOut": 0,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
   "main/docs/authenticate/passwordless/authentication-methods.mdx": [
     {
       "id": "main/docs/authenticate/passwordless/passwordless-with-universal-login.mdx",
@@ -66928,358 +67408,6 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/customize/events.mdx": [
-    {
-      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "score": 0.6,
-      "simOut": 1,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/events-best-practices.mdx",
-      "score": 0.45,
-      "simOut": 0.75,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/event-types.mdx",
-      "score": 0.45,
-      "simOut": 0.75,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/create-an-event-stream.mdx",
-      "score": 0.36,
-      "simOut": 0.6,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/customize/events/create-an-event-stream.mdx": [
-    {
-      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "score": 0.6267,
-      "simOut": 0.6,
-      "simIn": 0.6667,
-      "sharedOut": 3,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/event-types.mdx",
-      "score": 0.5067,
-      "simOut": 0.4,
-      "simIn": 0.6667,
-      "sharedOut": 2,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/events-best-practices.mdx",
-      "score": 0.44,
-      "simOut": 0.4,
-      "simIn": 0.5,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events.mdx",
-      "score": 0.36,
-      "simOut": 0.6,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0345,
-      "simOut": 0,
-      "simIn": 0.0862,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [
-    {
-      "id": "main/docs/customize/events/events-best-practices.mdx",
-      "score": 0.77,
-      "simOut": 0.75,
-      "simIn": 0.8,
-      "sharedOut": 3,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/event-types.mdx",
-      "score": 0.7167,
-      "simOut": 0.75,
-      "simIn": 0.6667,
-      "sharedOut": 3,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/create-an-event-stream.mdx",
-      "score": 0.6267,
-      "simOut": 0.6,
-      "simIn": 0.6667,
-      "sharedOut": 3,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events.mdx",
-      "score": 0.6,
-      "simOut": 1,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0345,
-      "simOut": 0,
-      "simIn": 0.0862,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/customize/events/events-best-practices.mdx": [
-    {
-      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "score": 0.77,
-      "simOut": 0.75,
-      "simIn": 0.8,
-      "sharedOut": 3,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/event-types.mdx",
-      "score": 0.5,
-      "simOut": 0.5,
-      "simIn": 0.5,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events.mdx",
-      "score": 0.45,
-      "simOut": 0.75,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/create-an-event-stream.mdx",
-      "score": 0.44,
-      "simOut": 0.4,
-      "simIn": 0.5,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0276,
-      "simOut": 0,
-      "simIn": 0.069,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/customize/events/event-types.mdx": [
-    {
-      "id": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "score": 0.7167,
-      "simOut": 0.75,
-      "simIn": 0.6667,
-      "sharedOut": 3,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/create-an-event-stream.mdx",
-      "score": 0.5067,
-      "simOut": 0.4,
-      "simIn": 0.6667,
-      "sharedOut": 2,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events/events-best-practices.mdx",
-      "score": 0.5,
-      "simOut": 0.5,
-      "simIn": 0.5,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/events.mdx",
-      "score": 0.45,
-      "simOut": 0.75,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0345,
-      "simOut": 0,
-      "simIn": 0.0862,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -67472,9 +67600,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0203,
+      "score": 0.0198,
       "simOut": 0,
-      "simIn": 0.0506,
+      "simIn": 0.0494,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -68849,11 +68977,11 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.019,
+      "score": 0.0242,
       "simOut": 0,
-      "simIn": 0.0476,
+      "simIn": 0.0606,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -69405,9 +69533,9 @@
   "main/docs/authenticate/enterprise-connections/connection-profile.mdx": [
     {
       "id": "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
-      "score": 0.32,
+      "score": 0.2667,
       "simOut": 0,
-      "simIn": 0.8,
+      "simIn": 0.6667,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -69419,9 +69547,37 @@
     },
     {
       "id": "main/docs/manage-users/organizations.mdx",
-      "score": 0.0545,
+      "score": 0.0522,
       "simOut": 0,
-      "simIn": 0.1364,
+      "simIn": 0.1304,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "score": 0.02,
+      "simOut": 0,
+      "simIn": 0.05,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.0188,
+      "simOut": 0,
+      "simIn": 0.0469,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -69435,9 +69591,9 @@
   "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx": [
     {
       "id": "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
-      "score": 0.32,
+      "score": 0.2667,
       "simOut": 0,
-      "simIn": 0.8,
+      "simIn": 0.6667,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -69463,9 +69619,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.02,
+      "score": 0.0188,
       "simOut": 0,
-      "simIn": 0.05,
+      "simIn": 0.0469,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -69793,9 +69949,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0148,
+      "score": 0.0145,
       "simOut": 0,
-      "simIn": 0.037,
+      "simIn": 0.0361,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -70311,9 +70467,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0156,
+      "score": 0.0152,
       "simOut": 0,
-      "simIn": 0.039,
+      "simIn": 0.038,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -70513,9 +70669,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0194,
+      "score": 0.0182,
       "simOut": 0,
-      "simIn": 0.0484,
+      "simIn": 0.0455,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -70545,9 +70701,9 @@
   "main/docs/get-started/applications/set-up-cors.mdx": [
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0213,
+      "score": 0.0208,
       "simOut": 0,
-      "simIn": 0.0533,
+      "simIn": 0.0519,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -70993,9 +71149,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0208,
+      "score": 0.0203,
       "simOut": 0,
-      "simIn": 0.0519,
+      "simIn": 0.0506,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -71121,9 +71277,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0211,
+      "score": 0.0205,
       "simOut": 0,
-      "simIn": 0.0526,
+      "simIn": 0.0513,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -72652,20 +72808,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0698,
-      "simOut": 0,
-      "simIn": 0.1746,
-      "sharedOut": 0,
-      "sharedIn": 11,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/mfa-api.mdx",
       "score": 0.0696,
       "simOut": 0,
@@ -72686,6 +72828,20 @@
       "simIn": 0.1667,
       "sharedOut": 0,
       "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "score": 0.0657,
+      "simOut": 0,
+      "simIn": 0.1642,
+      "sharedOut": 0,
+      "sharedIn": 11,
       "reasons": [
         "shared_inbound"
       ],
@@ -72725,9 +72881,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0258,
+      "score": 0.0242,
       "simOut": 0,
-      "simIn": 0.0645,
+      "simIn": 0.0606,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -72829,9 +72985,9 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0262,
+      "score": 0.0246,
       "simOut": 0,
-      "simIn": 0.0656,
+      "simIn": 0.0615,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -74107,9 +74263,9 @@
     },
     {
       "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0211,
+      "score": 0.0205,
       "simOut": 0,
-      "simIn": 0.0526,
+      "simIn": 0.0513,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [

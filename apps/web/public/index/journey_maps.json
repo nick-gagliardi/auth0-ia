@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-15T04:49:13.431Z",
+  "generatedAtUtc": "2026-04-16T04:54:35.452Z",
   "maxLen": 5,
   "minLen": 3,
   "startsPerRoot": 25,
@@ -38,7 +38,19 @@
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/customize/custom-domains.mdx"
       ],
-      "score": 96.7962,
+      "score": 96.9261,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx"
+      ],
+      "score": 96.5824,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -51,18 +63,6 @@
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
       ],
       "score": 96.4798,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/customize/custom-domains.mdx"
-      ],
-      "score": 96.4525,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -92,6 +92,18 @@
     },
     {
       "path": [
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      ],
+      "score": 95.8555,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -99,18 +111,6 @@
         "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
       ],
       "score": 95.7954,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-      ],
-      "score": 95.7256,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -446,7 +446,7 @@
         "main/docs/secure/tokens/json-web-tokens.mdx",
         "main/docs/secure/tokens/id-tokens.mdx"
       ],
-      "score": 93.1995,
+      "score": 93.2514,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -524,6 +524,18 @@
     },
     {
       "path": [
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+        "main/docs/customize/rules.mdx"
+      ],
+      "score": 92.7745,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
@@ -543,18 +555,6 @@
         "main/docs/customize/actions/actions-overview.mdx"
       ],
       "score": 92.6926,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-        "main/docs/customize/rules.mdx"
-      ],
-      "score": 92.6446,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -620,25 +620,37 @@
     },
     {
       "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx",
-        "main/docs/secure/tokens/token-best-practices.mdx"
-      ],
-      "score": 92.0058,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/actions-overview.mdx",
         "main/docs/customize/actions/write-your-first-action.mdx",
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/customize/custom-domains.mdx"
       ],
-      "score": 91.9306,
+      "score": 92.0605,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx",
+        "main/docs/secure/tokens/token-best-practices.mdx"
+      ],
+      "score": 92.0578,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx"
+      ],
+      "score": 92.0022,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -651,18 +663,6 @@
         "main/docs/secure/attack-protection.mdx"
       ],
       "score": 91.8896,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/customize/custom-domains.mdx"
-      ],
-      "score": 91.8724,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -698,7 +698,19 @@
         "main/docs/authenticate/protocols/oauth.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
       ],
-      "score": 91.5814,
+      "score": 91.6333,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx"
+      ],
+      "score": 91.5421,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -723,18 +735,6 @@
         "main/docs/customize/actions/write-your-first-action.mdx"
       ],
       "score": 91.4585,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/customize/custom-domains.mdx"
-      ],
-      "score": 91.4122,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -782,7 +782,7 @@
         "main/docs/secure/tokens/json-web-tokens.mdx",
         "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx"
       ],
-      "score": 91.2637,
+      "score": 91.3157,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -854,7 +854,7 @@
         "main/docs/secure/tokens/json-web-tokens.mdx",
         "main/docs/secure/tokens/id-tokens.mdx"
       ],
-      "score": 91.0756,
+      "score": 91.1275,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -867,6 +867,18 @@
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx"
       ],
       "score": 91.0403,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/secure/multi-factor-authentication.mdx",
+        "main/docs/secure/multi-factor-authentication/auth0-guardian.mdx",
+        "main/docs/get-started/tenant-settings.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      ],
+      "score": 91.0355,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -927,18 +939,6 @@
         "main/docs/secure/attack-protection/view-attack-protection-events.mdx"
       ],
       "score": 90.9088,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/secure/multi-factor-authentication.mdx",
-        "main/docs/secure/multi-factor-authentication/auth0-guardian.mdx",
-        "main/docs/get-started/tenant-settings.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-      ],
-      "score": 90.9056,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1088,6 +1088,18 @@
     },
     {
       "path": [
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/authenticate/login/auth0-universal-login.mdx",
+        "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+        "main/docs/secure/multi-factor-authentication.mdx"
+      ],
+      "score": 90.3179,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
@@ -1100,6 +1112,18 @@
     },
     {
       "path": [
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/authenticate/login/auth0-universal-login.mdx",
+        "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+        "main/docs/manage-users/organizations/organizations-overview.mdx"
+      ],
+      "score": 90.257,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
@@ -1107,18 +1131,6 @@
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx"
       ],
       "score": 90.2017,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-        "main/docs/secure/multi-factor-authentication.mdx"
-      ],
-      "score": 90.1868,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1155,18 +1167,6 @@
         "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
       ],
       "score": 90.128,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-        "main/docs/manage-users/organizations/organizations-overview.mdx"
-      ],
-      "score": 90.1258,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1220,6 +1220,30 @@
     },
     {
       "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/get-started/applications.mdx",
+        "main/docs/deploy-monitor/logs.mdx"
+      ],
+      "score": 89.9359,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx",
+        "main/docs/secure/tokens/token-best-practices.mdx"
+      ],
+      "score": 89.9339,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
@@ -1247,34 +1271,10 @@
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-        "main/docs/get-started/applications.mdx",
-        "main/docs/deploy-monitor/logs.mdx"
-      ],
-      "score": 89.884,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx",
-        "main/docs/secure/tokens/token-best-practices.mdx"
-      ],
-      "score": 89.8819,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
         "main/docs/authenticate/protocols/oauth.mdx",
         "main/docs/get-started/authentication-and-authorization-flow.mdx"
       ],
-      "score": 89.7439,
+      "score": 89.7958,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1382,7 +1382,7 @@
         "main/docs/secure/tokens/refresh-tokens.mdx",
         "main/docs/secure/tokens/token-best-practices.mdx"
       ],
-      "score": 89.3195,
+      "score": 89.3715,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1400,6 +1400,18 @@
     },
     {
       "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx",
+        "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx"
+      ],
+      "score": 89.1918,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
         "main/docs/secure/tokens/json-web-tokens.mdx",
@@ -1407,18 +1419,6 @@
         "main/docs/secure/tokens/token-best-practices.mdx"
       ],
       "score": 89.1785,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx",
-        "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx"
-      ],
-      "score": 89.1398,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1436,6 +1436,18 @@
     },
     {
       "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens.mdx",
+        "main/docs/secure/tokens/token-best-practices.mdx"
+      ],
+      "score": 89.0963,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
         "main/docs/customize/actions/write-your-first-action.mdx",
@@ -1443,18 +1455,6 @@
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
       "score": 89.0794,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens.mdx",
-        "main/docs/secure/tokens/token-best-practices.mdx"
-      ],
-      "score": 89.0443,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1478,7 +1478,19 @@
         "main/docs/secure/tokens/access-tokens.mdx",
         "main/docs/secure/tokens/access-tokens/validate-access-tokens.mdx"
       ],
-      "score": 88.9261,
+      "score": 88.9781,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx"
+      ],
+      "score": 88.9321,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1491,18 +1503,6 @@
         "main/docs/secure/tokens/refresh-tokens.mdx"
       ],
       "score": 88.9123,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx"
-      ],
-      "score": 88.8009,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1616,6 +1616,18 @@
     },
     {
       "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens.mdx",
+        "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx"
+      ],
+      "score": 88.3542,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/actions-overview.mdx",
         "main/docs/customize/actions/limitations.mdx",
@@ -1623,18 +1635,6 @@
         "main/docs/secure/multi-factor-authentication.mdx"
       ],
       "score": 88.3494,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens.mdx",
-        "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx"
-      ],
-      "score": 88.3022,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1826,7 +1826,7 @@
         "main/docs/get-started/applications.mdx",
         "main/docs/get-started/applications/application-settings.mdx"
       ],
-      "score": 87.5663,
+      "score": 87.6182,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1851,6 +1851,18 @@
         "main/docs/customize/actions/limitations.mdx"
       ],
       "score": 87.525,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+      ],
+      "score": 87.4307,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1904,18 +1916,6 @@
     },
     {
       "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
-      ],
-      "score": 87.2996,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/actions-overview.mdx",
         "main/docs/customize/actions/limitations.mdx",
@@ -1934,7 +1934,7 @@
         "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
         "main/docs/get-started/applications/application-settings.mdx"
       ],
-      "score": 87.1868,
+      "score": 87.2387,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -1976,6 +1976,30 @@
     },
     {
       "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
+        "main/docs/get-started/auth0-overview/set-up-apis.mdx"
+      ],
+      "score": 87.0771,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/refresh-tokens.mdx",
+        "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx"
+      ],
+      "score": 87.0669,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
         "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
         "main/docs/secure/tokens/json-web-tokens.mdx",
@@ -2000,30 +2024,6 @@
     },
     {
       "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-        "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
-        "main/docs/get-started/auth0-overview/set-up-apis.mdx"
-      ],
-      "score": 87.0252,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/secure/tokens/refresh-tokens.mdx",
-        "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx"
-      ],
-      "score": 87.015,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/extensions/authorization-extension.mdx",
         "main/docs/customize/rules.mdx",
@@ -2043,6 +2043,18 @@
         "main/docs/secure/tokens/refresh-tokens.mdx"
       ],
       "score": 86.7884,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
+      ],
+      "score": 86.7463,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2079,18 +2091,6 @@
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
       ],
       "score": 86.6611,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
-      ],
-      "score": 86.6151,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2145,24 +2145,24 @@
     {
       "path": [
         "main/docs/authenticate/identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/calling-an-external-idp-api.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
+        "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
+        "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
       ],
-      "score": 86.201,
+      "score": 86.3094,
       "support": 11,
       "navRoot": "API Reference"
     },
     {
       "path": [
         "main/docs/authenticate/identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+        "main/docs/authenticate/identity-providers/calling-an-external-idp-api.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
       ],
-      "score": 86.1795,
+      "score": 86.201,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2240,6 +2240,18 @@
     },
     {
       "path": [
+        "main/docs/authenticate/identity-providers.mdx",
+        "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
+        "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      ],
+      "score": 85.7826,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
         "main/docs/customize/actions/limitations.mdx",
@@ -2247,6 +2259,18 @@
         "main/docs/customize/actions/write-your-first-action.mdx"
       ],
       "score": 85.7677,
+      "support": 11,
+      "navRoot": "API Reference"
+    },
+    {
+      "path": [
+        "main/docs/authenticate/identity-providers.mdx",
+        "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
+        "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      ],
+      "score": 85.7235,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2277,36 +2301,12 @@
     {
       "path": [
         "main/docs/authenticate/identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-      ],
-      "score": 85.6527,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/authenticate/identity-providers.mdx",
         "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
         "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
       "score": 85.5984,
-      "support": 11,
-      "navRoot": "API Reference"
-    },
-    {
-      "path": [
-        "main/docs/authenticate/identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
-        "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-      ],
-      "score": 85.5937,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2366,7 +2366,7 @@
         "main/docs/secure/security-guidance/data-security/allowlist.mdx",
         "main/docs/customize/hooks.mdx"
       ],
-      "score": 85.2509,
+      "score": 85.3807,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2378,7 +2378,7 @@
         "main/docs/secure/security-guidance/data-security/allowlist.mdx",
         "main/docs/customize/log-streams.mdx"
       ],
-      "score": 85.2023,
+      "score": 85.3322,
       "support": 11,
       "navRoot": "API Reference"
     },
@@ -2396,11 +2396,11 @@
     },
     {
       "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/limitations.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits.mdx"
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
       "score": 85.0913,
       "support": 11,
@@ -2454,7 +2454,7 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.4382,
+          "score": 95.5681,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2466,7 +2466,19 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.0945,
+          "score": 95.2244,
+          "support": 1,
+          "navRoot": "API Reference"
+        },
+        {
+          "path": [
+            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 95.1079,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2484,13 +2496,13 @@
         },
         {
           "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 94.978,
+          "score": 94.7642,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2503,18 +2515,6 @@
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
           "score": 94.6616,
-          "support": 1,
-          "navRoot": "API Reference"
-        },
-        {
-          "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 94.6343,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2538,7 +2538,7 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.3676,
+          "score": 94.4974,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2562,7 +2562,7 @@
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 94.2534,
+          "score": 94.3054,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2580,6 +2580,18 @@
         },
         {
           "path": [
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+          ],
+          "score": 94.0373,
+          "support": 1,
+          "navRoot": "API Reference"
+        },
+        {
+          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -2587,18 +2599,6 @@
             "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
           ],
           "score": 93.9772,
-          "support": 1,
-          "navRoot": "API Reference"
-        },
-        {
-          "path": [
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-          ],
-          "score": 93.9074,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2622,7 +2622,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 93.6681,
+          "score": 93.72,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2718,7 +2718,7 @@
             "main/docs/customize/actions/actions-overview.mdx",
             "main/docs/deploy-monitor/logs.mdx"
           ],
-          "score": 93.2438,
+          "score": 93.2958,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2802,7 +2802,7 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 92.8167,
+          "score": 92.9466,
           "support": 1,
           "navRoot": "API Reference"
         },
@@ -2886,7 +2886,7 @@
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 92.4183,
+          "score": 92.4703,
           "support": 1,
           "navRoot": "API Reference"
         }
@@ -2902,7 +2902,7 @@
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 96.3009,
+          "score": 96.4308,
           "support": 1,
           "navRoot": null
         },
@@ -2920,6 +2920,18 @@
         },
         {
           "path": [
+            "main/docs/libraries/lock.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+          ],
+          "score": 95.9282,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -2927,18 +2939,6 @@
             "main/docs/secure/attack-protection.mdx"
           ],
           "score": 95.8193,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/libraries/lock.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-          ],
-          "score": 95.7983,
           "support": 1,
           "navRoot": null
         },
@@ -2962,7 +2962,19 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.4382,
+          "score": 95.5681,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/libraries/auth0js.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/actions-overview.mdx"
+          ],
+          "score": 95.2799,
           "support": 1,
           "navRoot": null
         },
@@ -2980,13 +2992,25 @@
         },
         {
           "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 95.2244,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
             "main/docs/libraries/auth0js.mdx",
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/security-guidance/data-security/allowlist.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/actions-overview.mdx"
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
           ],
-          "score": 95.15,
+          "score": 95.2216,
           "support": 1,
           "navRoot": null
         },
@@ -3004,25 +3028,13 @@
         },
         {
           "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+            "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.0945,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
-          ],
-          "score": 95.0918,
+          "score": 95.1079,
           "support": 1,
           "navRoot": null
         },
@@ -3040,13 +3052,49 @@
         },
         {
           "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/libraries/lock.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/actions-overview.mdx"
+          ],
+          "score": 94.7773,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 94.978,
+          "score": 94.7642,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/libraries/auth0js.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
+          ],
+          "score": 94.7615,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/libraries/lock.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
+          ],
+          "score": 94.719,
           "support": 1,
           "navRoot": null
         },
@@ -3064,49 +3112,13 @@
         },
         {
           "path": [
-            "main/docs/libraries/lock.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/libraries/auth0js.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/actions-overview.mdx"
-          ],
-          "score": 94.6474,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 94.6343,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
-          ],
-          "score": 94.6316,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/libraries/lock.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
-          ],
-          "score": 94.5891,
+          "score": 94.649,
           "support": 1,
           "navRoot": null
         },
@@ -3136,25 +3148,25 @@
         },
         {
           "path": [
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 94.5191,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.3676,
+          "score": 94.4974,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/libraries/auth0js.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+            "main/docs/secure/tokens/json-web-tokens.mdx"
+          ],
+          "score": 94.4431,
           "support": 1,
           "navRoot": null
         },
@@ -3172,13 +3184,13 @@
         },
         {
           "path": [
-            "main/docs/libraries/auth0js.mdx",
             "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-            "main/docs/secure/tokens/json-web-tokens.mdx"
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 94.3133,
+          "score": 94.3054,
           "support": 1,
           "navRoot": null
         },
@@ -3196,25 +3208,37 @@
         },
         {
           "path": [
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-          ],
-          "score": 94.2534,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
             "main/docs/libraries/lock.mdx",
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/security-guidance/data-security/allowlist.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
           ],
-          "score": 94.129,
+          "score": 94.2588,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/libraries/lock/lock-configuration.mdx",
+            "main/docs/authenticate/single-sign-on.mdx",
+            "main/docs/libraries/auth0js.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+          ],
+          "score": 94.2282,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/libraries/auth0js.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 94.1888,
           "support": 1,
           "navRoot": null
         },
@@ -3232,18 +3256,6 @@
         },
         {
           "path": [
-            "main/docs/libraries/lock/lock-configuration.mdx",
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-          ],
-          "score": 94.0983,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
@@ -3256,13 +3268,13 @@
         },
         {
           "path": [
-            "main/docs/libraries/auth0js.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.0589,
+          "score": 94.0373,
           "support": 1,
           "navRoot": null
         },
@@ -3280,25 +3292,13 @@
         },
         {
           "path": [
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-          ],
-          "score": 93.9074,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
             "main/docs/libraries/lock.mdx",
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
             "main/docs/secure/tokens/json-web-tokens.mdx"
           ],
-          "score": 93.8106,
+          "score": 93.9405,
           "support": 1,
           "navRoot": null
         },
@@ -3346,7 +3346,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 93.6681,
+          "score": 93.72,
           "support": 1,
           "navRoot": null
         },
@@ -3428,6 +3428,18 @@
         },
         {
           "path": [
+            "main/docs/authenticate/protocols/openid-connect-protocol.mdx",
+            "main/docs/authenticate/single-sign-on.mdx",
+            "main/docs/authenticate/login/auth0-universal-login.mdx",
+            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 107.1508,
+          "support": 1,
+          "navRoot": "Authenticate"
+        },
+        {
+          "path": [
             "main/docs/authenticate/single-sign-on.mdx",
             "main/docs/authenticate/login/auth0-universal-login.mdx",
             "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
@@ -3447,18 +3459,6 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
           "score": 107.1132,
-          "support": 1,
-          "navRoot": "Authenticate"
-        },
-        {
-          "path": [
-            "main/docs/authenticate/protocols/openid-connect-protocol.mdx",
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/authenticate/login/auth0-universal-login.mdx",
-            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 107.0209,
           "support": 1,
           "navRoot": "Authenticate"
         },
@@ -3716,6 +3716,18 @@
         },
         {
           "path": [
+            "main/docs/authenticate/single-sign-on.mdx",
+            "main/docs/authenticate/login/auth0-universal-login.mdx",
+            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+          ],
+          "score": 105.0043,
+          "support": 1,
+          "navRoot": "Authenticate"
+        },
+        {
+          "path": [
             "main/docs/authenticate/login/cross-origin-authentication.mdx",
             "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
             "main/docs/authenticate/login/auth0-universal-login.mdx",
@@ -3728,18 +3740,6 @@
         },
         {
           "path": [
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/authenticate/login/auth0-universal-login.mdx",
-            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-          ],
-          "score": 104.8744,
-          "support": 1,
-          "navRoot": "Authenticate"
-        },
-        {
-          "path": [
             "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx",
             "main/docs/libraries/auth0js.mdx",
             "main/docs/authenticate/single-sign-on.mdx",
@@ -3747,6 +3747,18 @@
             "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
           ],
           "score": 104.8447,
+          "support": 1,
+          "navRoot": "Authenticate"
+        },
+        {
+          "path": [
+            "main/docs/authenticate/database-connections/password-change.mdx",
+            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+            "main/docs/authenticate/login/auth0-universal-login.mdx",
+            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 104.8133,
           "support": 1,
           "navRoot": "Authenticate"
         },
@@ -3771,18 +3783,6 @@
             "main/docs/authenticate/database-connections.mdx"
           ],
           "score": 104.7675,
-          "support": 1,
-          "navRoot": "Authenticate"
-        },
-        {
-          "path": [
-            "main/docs/authenticate/database-connections/password-change.mdx",
-            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-            "main/docs/authenticate/login/auth0-universal-login.mdx",
-            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 104.6834,
           "support": 1,
           "navRoot": "Authenticate"
         },
@@ -3836,13 +3836,13 @@
         },
         {
           "path": [
-            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/authenticate/login/auth0-universal-login.mdx",
             "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx"
+            "main/docs/authenticate/login/auth0-universal-login.mdx",
+            "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 104.193,
+          "score": 104.3077,
           "support": 1,
           "navRoot": "Authenticate"
         },
@@ -3851,8 +3851,8 @@
             "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
             "main/docs/authenticate/single-sign-on.mdx",
             "main/docs/authenticate/login/auth0-universal-login.mdx",
-            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx",
-            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
+            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+            "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx"
           ],
           "score": 104.193,
           "support": 1,
@@ -3966,7 +3966,7 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 109.978,
+          "score": 110.1079,
           "support": 1,
           "navRoot": "Customize"
         },
@@ -3996,6 +3996,18 @@
         },
         {
           "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 109.7642,
+          "support": 1,
+          "navRoot": "Customize"
+        },
+        {
+          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/extensions/authorization-extension.mdx",
             "main/docs/customize/rules.mdx",
@@ -4008,18 +4020,6 @@
         },
         {
           "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 109.6343,
-          "support": 1,
-          "navRoot": "Customize"
-        },
-        {
-          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/extensions/authorization-extension.mdx",
             "main/docs/customize/rules.mdx",
@@ -4027,6 +4027,18 @@
             "main/docs/customize/actions/write-your-first-action.mdx"
           ],
           "score": 109.582,
+          "support": 1,
+          "navRoot": "Customize"
+        },
+        {
+          "path": [
+            "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/actions-overview.mdx"
+          ],
+          "score": 109.469,
           "support": 1,
           "navRoot": "Customize"
         },
@@ -4048,9 +4060,9 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/security-guidance/data-security/allowlist.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/actions-overview.mdx"
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
           ],
-          "score": 109.3391,
+          "score": 109.4107,
           "support": 1,
           "navRoot": "Customize"
         },
@@ -4063,18 +4075,6 @@
             "main/docs/customize/actions/actions-overview.mdx"
           ],
           "score": 109.3335,
-          "support": 1,
-          "navRoot": "Customize"
-        },
-        {
-          "path": [
-            "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
-          ],
-          "score": 109.2808,
           "support": 1,
           "navRoot": "Customize"
         },
@@ -4140,6 +4140,18 @@
         },
         {
           "path": [
+            "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
+          ],
+          "score": 108.9505,
+          "support": 1,
+          "navRoot": "Customize"
+        },
+        {
+          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -4147,18 +4159,6 @@
             "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
           ],
           "score": 108.9072,
-          "support": 1,
-          "navRoot": "Customize"
-        },
-        {
-          "path": [
-            "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
-          ],
-          "score": 108.8207,
           "support": 1,
           "navRoot": "Customize"
         },
@@ -4237,6 +4237,18 @@
         {
           "path": [
             "main/docs/customize/extensions/authorization-extension.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 108.0132,
+          "support": 1,
+          "navRoot": "Customize"
+        },
+        {
+          "path": [
+            "main/docs/customize/extensions/authorization-extension.mdx",
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/actions-overview.mdx",
@@ -4262,18 +4274,6 @@
           "path": [
             "main/docs/customize/extensions/authorization-extension.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 107.8834,
-          "support": 1,
-          "navRoot": "Customize"
-        },
-        {
-          "path": [
-            "main/docs/customize/extensions/authorization-extension.mdx",
-            "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/customize/actions/limitations.mdx",
             "main/docs/customize/actions/actions-overview.mdx"
@@ -4290,7 +4290,7 @@
             "main/docs/libraries/auth0js.mdx",
             "main/docs/customize/rules.mdx"
           ],
-          "score": 107.4457,
+          "score": 107.5756,
           "support": 1,
           "navRoot": "Customize"
         },
@@ -4456,6 +4456,18 @@
         },
         {
           "path": [
+            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+            "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 98.7672,
+          "support": 1,
+          "navRoot": "Deploy and Monitor"
+        },
+        {
+          "path": [
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
@@ -4463,18 +4475,6 @@
             "main/docs/secure/attack-protection.mdx"
           ],
           "score": 98.7326,
-          "support": 1,
-          "navRoot": "Deploy and Monitor"
-        },
-        {
-          "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-            "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 98.6373,
           "support": 1,
           "navRoot": "Deploy and Monitor"
         },
@@ -4499,6 +4499,18 @@
             "main/docs/customize/rules.mdx"
           ],
           "score": 98.471,
+          "support": 1,
+          "navRoot": "Deploy and Monitor"
+        },
+        {
+          "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+            "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 98.4235,
           "support": 1,
           "navRoot": "Deploy and Monitor"
         },
@@ -4540,25 +4552,13 @@
         },
         {
           "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-            "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 98.2936,
-          "support": 1,
-          "navRoot": "Deploy and Monitor"
-        },
-        {
-          "path": [
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/security-guidance/data-security/allowlist.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/actions-overview.mdx",
             "main/docs/deploy-monitor/logs.mdx"
           ],
-          "score": 98.2438,
+          "score": 98.2958,
           "support": 1,
           "navRoot": "Deploy and Monitor"
         },
@@ -4612,6 +4612,18 @@
         },
         {
           "path": [
+            "main/docs/customize/rules.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+            "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+          ],
+          "score": 97.6966,
+          "support": 1,
+          "navRoot": "Deploy and Monitor"
+        },
+        {
+          "path": [
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/actions-overview.mdx",
@@ -4624,13 +4636,13 @@
         },
         {
           "path": [
-            "main/docs/customize/rules.mdx",
+            "main/docs/deploy-monitor/logs.mdx",
+            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+            "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 97.5667,
+          "score": 97.3965,
           "support": 1,
           "navRoot": "Deploy and Monitor"
         },
@@ -4648,13 +4660,13 @@
         },
         {
           "path": [
-            "main/docs/deploy-monitor/logs.mdx",
-            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-            "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
-            "main/docs/customize/custom-domains.mdx"
+            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
-          "score": 97.2666,
+          "score": 97.2187,
           "support": 1,
           "navRoot": "Deploy and Monitor"
         },
@@ -4679,18 +4691,6 @@
             "main/docs/deploy-monitor/logs.mdx"
           ],
           "score": 97.1703,
-          "support": 1,
-          "navRoot": "Deploy and Monitor"
-        },
-        {
-          "path": [
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
-          ],
-          "score": 97.1667,
           "support": 1,
           "navRoot": "Deploy and Monitor"
         },
@@ -5358,7 +5358,7 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.4382,
+          "score": 95.5681,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5370,7 +5370,19 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.0945,
+          "score": 95.2244,
+          "support": 1,
+          "navRoot": "Home"
+        },
+        {
+          "path": [
+            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 95.1079,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5388,13 +5400,13 @@
         },
         {
           "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 94.978,
+          "score": 94.7642,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5407,18 +5419,6 @@
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
           "score": 94.6616,
-          "support": 1,
-          "navRoot": "Home"
-        },
-        {
-          "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 94.6343,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5442,7 +5442,7 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.3676,
+          "score": 94.4974,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5466,7 +5466,7 @@
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 94.2534,
+          "score": 94.3054,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5484,6 +5484,18 @@
         },
         {
           "path": [
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+          ],
+          "score": 94.0373,
+          "support": 1,
+          "navRoot": "Home"
+        },
+        {
+          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -5491,18 +5503,6 @@
             "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
           ],
           "score": 93.9772,
-          "support": 1,
-          "navRoot": "Home"
-        },
-        {
-          "path": [
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-          ],
-          "score": 93.9074,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5526,7 +5526,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 93.6681,
+          "score": 93.72,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5622,7 +5622,7 @@
             "main/docs/customize/actions/actions-overview.mdx",
             "main/docs/deploy-monitor/logs.mdx"
           ],
-          "score": 93.2438,
+          "score": 93.2958,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5706,7 +5706,7 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 92.8167,
+          "score": 92.9466,
           "support": 1,
           "navRoot": "Home"
         },
@@ -5790,7 +5790,7 @@
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 92.4183,
+          "score": 92.4703,
           "support": 1,
           "navRoot": "Home"
         }
@@ -6398,7 +6398,7 @@
             "main/docs/secure/tokens/json-web-tokens.mdx",
             "main/docs/secure/tokens/id-tokens.mdx"
           ],
-          "score": 109.2574,
+          "score": 109.3094,
           "support": 1,
           "navRoot": "Secure"
         },
@@ -6728,25 +6728,13 @@
         },
         {
           "path": [
-            "main/docs/secure/tokens.mdx",
-            "main/docs/secure/tokens/access-tokens.mdx",
-            "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+            "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
             "main/docs/secure/tokens/json-web-tokens.mdx",
-            "main/docs/secure/tokens/id-tokens.mdx"
+            "main/docs/secure/tokens/token-best-practices.mdx"
           ],
-          "score": 108.0979,
-          "support": 1,
-          "navRoot": "Secure"
-        },
-        {
-          "path": [
-            "main/docs/secure/tokens.mdx",
-            "main/docs/secure/tokens/access-tokens.mdx",
-            "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
-            "main/docs/secure/tokens/id-tokens.mdx",
-            "main/docs/secure/tokens/json-web-tokens.mdx"
-          ],
-          "score": 108.0979,
+          "score": 108.1157,
           "support": 1,
           "navRoot": "Secure"
         },
@@ -6755,10 +6743,22 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
             "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-            "main/docs/secure/tokens/json-web-tokens.mdx",
-            "main/docs/secure/tokens/token-best-practices.mdx"
+            "main/docs/secure/tokens/token-best-practices.mdx",
+            "main/docs/secure/tokens/json-web-tokens.mdx"
           ],
-          "score": 108.0638,
+          "score": 108.1157,
+          "support": 1,
+          "navRoot": "Secure"
+        },
+        {
+          "path": [
+            "main/docs/secure/tokens.mdx",
+            "main/docs/secure/tokens/access-tokens.mdx",
+            "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
+            "main/docs/secure/tokens/json-web-tokens.mdx",
+            "main/docs/secure/tokens/id-tokens.mdx"
+          ],
+          "score": 108.0979,
           "support": 1,
           "navRoot": "Secure"
         }
@@ -6774,7 +6774,7 @@
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 102.2914,
+          "score": 102.4226,
           "support": 1,
           "navRoot": "Troubleshoot"
         },
@@ -6918,7 +6918,7 @@
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 99.2534,
+          "score": 99.3054,
           "support": 1,
           "navRoot": "Troubleshoot"
         },
@@ -6960,6 +6960,18 @@
         },
         {
           "path": [
+            "main/docs/troubleshoot/basic-issues/verify-domain.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+          ],
+          "score": 98.8689,
+          "support": 1,
+          "navRoot": "Troubleshoot"
+        },
+        {
+          "path": [
             "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
@@ -6967,18 +6979,6 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
           "score": 98.852,
-          "support": 1,
-          "navRoot": "Troubleshoot"
-        },
-        {
-          "path": [
-            "main/docs/troubleshoot/basic-issues/verify-domain.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-          ],
-          "score": 98.739,
           "support": 1,
           "navRoot": "Troubleshoot"
         },
@@ -7002,7 +7002,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 98.6681,
+          "score": 98.72,
           "support": 1,
           "navRoot": "Troubleshoot"
         },
@@ -7044,6 +7044,18 @@
         },
         {
           "path": [
+            "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+          ],
+          "score": 98.4226,
+          "support": 1,
+          "navRoot": "Troubleshoot"
+        },
+        {
+          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
@@ -7063,18 +7075,6 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
           "score": 98.3885,
-          "support": 1,
-          "navRoot": "Troubleshoot"
-        },
-        {
-          "path": [
-            "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-          ],
-          "score": 98.2928,
           "support": 1,
           "navRoot": "Troubleshoot"
         },
@@ -7294,7 +7294,7 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.4382,
+          "score": 95.5681,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7306,7 +7306,19 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.0945,
+          "score": 95.2244,
+          "support": 1,
+          "navRoot": "Events Catalog"
+        },
+        {
+          "path": [
+            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 95.1079,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7324,13 +7336,13 @@
         },
         {
           "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 94.978,
+          "score": 94.7642,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7343,18 +7355,6 @@
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
           "score": 94.6616,
-          "support": 1,
-          "navRoot": "Events Catalog"
-        },
-        {
-          "path": [
-            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
-          ],
-          "score": 94.6343,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7378,7 +7378,7 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.3676,
+          "score": 94.4974,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7402,7 +7402,7 @@
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 94.2534,
+          "score": 94.3054,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7420,6 +7420,18 @@
         },
         {
           "path": [
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+          ],
+          "score": 94.0373,
+          "support": 1,
+          "navRoot": "Events Catalog"
+        },
+        {
+          "path": [
             "main/docs/manage-users/access-control/rbac.mdx",
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -7427,18 +7439,6 @@
             "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
           ],
           "score": 93.9772,
-          "support": 1,
-          "navRoot": "Events Catalog"
-        },
-        {
-          "path": [
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-          ],
-          "score": 93.9074,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7462,7 +7462,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 93.6681,
+          "score": 93.72,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7558,7 +7558,7 @@
             "main/docs/customize/actions/actions-overview.mdx",
             "main/docs/deploy-monitor/logs.mdx"
           ],
-          "score": 93.2438,
+          "score": 93.2958,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7642,7 +7642,7 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 92.8167,
+          "score": 92.9466,
           "support": 1,
           "navRoot": "Events Catalog"
         },
@@ -7726,7 +7726,7 @@
             "main/docs/customize/rules.mdx",
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
           ],
-          "score": 92.4183,
+          "score": 92.4703,
           "support": 1,
           "navRoot": "Events Catalog"
         }

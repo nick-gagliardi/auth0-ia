@@ -6761,12 +6761,16 @@
   },
   "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx": {
     "link": [
+      "main/docs/manage-users/my-organization-api.mdx",
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/manage-users/organizations/organizations-overview.mdx",
       "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers.mdx",
+      "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
       "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
       "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
+      "main/docs/customize/custom-domains.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     ],
     "import": [
@@ -7530,11 +7534,8 @@
   "main/docs/quickstart/webapp/laravel/interactive.mdx": {
     "link": [],
     "import": [
+      "main/snippets/AuthCodeBlock.jsx",
       "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/laravel/web.php.mdx",
-      "main/snippets/quickstart/webapp/laravel/web.php2.mdx",
-      "main/snippets/quickstart/webapp/laravel/web.php3.mdx",
       "main/snippets/QuickstartButtons.jsx"
     ],
     "redirect": []
@@ -10313,6 +10314,8 @@
   },
   "main/docs/manage-users/organizations/configure-organizations/disable-connections.mdx": {
     "link": [
+      "main/docs/manage-users/my-organization-api.mdx",
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/manage-users/organizations/organizations-overview.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     ],
@@ -10423,7 +10426,10 @@
   },
   "main/docs/manage-users/organizations/configure-organizations/retrieve-connections.mdx": {
     "link": [
+      "main/docs/manage-users/my-organization-api.mdx",
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "main/docs/customize/custom-domains.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     ],
     "import": [
@@ -10535,6 +10541,8 @@
   },
   "main/docs/manage-users/organizations/login-flows-for-organizations.mdx": {
     "link": [
+      "main/docs/manage-users/my-organization-api.mdx",
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/manage-users/organizations.mdx",
       "main/docs/manage-users/organizations/configure-organizations/define-organization-behavior.mdx",
       "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
@@ -18721,7 +18729,44 @@
     "redirect": []
   },
   "main/docs/events/index.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/create-an-event-stream.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/events-best-practices.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -19181,39 +19226,6 @@
       "main/docs/customize/events/create-an-event-stream.mdx",
       "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
       "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/create-an-event-stream.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/events-best-practices.mdx": {
-    "link": [
-      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx"
     ],
     "import": [],
     "redirect": []

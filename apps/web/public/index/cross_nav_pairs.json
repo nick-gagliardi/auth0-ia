@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-15T04:49:13.048Z",
+  "generatedAtUtc": "2026-04-16T04:54:35.066Z",
   "hubCutoff": 50,
   "minIntersection": 3,
   "scoreThreshold": 0.4,
@@ -61,6 +61,20 @@
       "bFolder": "manage-users"
     },
     {
+      "a": "main/docs/customize/events/event-types.mdx",
+      "b": "main/docs/events/index.mdx",
+      "score": 0.6,
+      "simOut": 1,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "convergenceType": "journey",
+      "aNav": "Customize",
+      "bNav": "Events Catalog",
+      "aFolder": "customize",
+      "bFolder": "events"
+    },
+    {
       "a": "main/docs/customize/extensions/authorization-extension/set-up-authorization-extension-users.mdx",
       "b": "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
       "score": 0.495,
@@ -101,6 +115,34 @@
       "bNav": "Troubleshoot",
       "aFolder": "customize",
       "bFolder": "troubleshoot"
+    },
+    {
+      "a": "main/docs/customize/events.mdx",
+      "b": "main/docs/events/index.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "convergenceType": "journey",
+      "aNav": "Customize",
+      "bNav": "Events Catalog",
+      "aFolder": "customize",
+      "bFolder": "events"
+    },
+    {
+      "a": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "b": "main/docs/events/index.mdx",
+      "score": 0.45,
+      "simOut": 0.75,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "convergenceType": "journey",
+      "aNav": "Customize",
+      "bNav": "Events Catalog",
+      "aFolder": "customize",
+      "bFolder": "events"
     },
     {
       "a": "main/docs/customize/extensions/authorization-extension/import-and-export-authorization-extension-data.mdx",
