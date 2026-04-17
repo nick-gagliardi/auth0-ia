@@ -4282,7 +4282,12 @@
       "toId": "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx"
     }
   ],
-  "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx": [],
+  "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx": [
+    {
+      "href": "/docs/secure/attack-protection/brute-force-protection",
+      "toId": "main/docs/secure/attack-protection/brute-force-protection.mdx"
+    }
+  ],
   "main/docs/troubleshoot/customer-support/manage-subscriptions/monitor-subscription-usage.mdx": [
     {
       "href": "/docs/authenticate/enterprise-connections",
@@ -7476,10 +7481,6 @@
       "toId": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx"
     },
     {
-      "href": "/docs/secure/tokens/refresh-tokens",
-      "toId": "main/docs/secure/tokens/refresh-tokens.mdx"
-    },
-    {
       "href": "/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa",
       "toId": "main/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa.mdx"
     },
@@ -8532,10 +8533,6 @@
       "toId": "main/docs/secure/tokens/id-tokens/get-id-tokens.mdx"
     },
     {
-      "href": "/docs/secure/tokens/revoke-tokens",
-      "toId": "main/docs/secure/tokens/revoke-tokens.mdx"
-    },
-    {
       "href": "/docs/secure/tokens/id-tokens/id-token-structure",
       "toId": "main/docs/secure/tokens/id-tokens/id-token-structure.mdx"
     }
@@ -8955,20 +8952,6 @@
       "toId": "main/docs/secure/tokens/token-best-practices.mdx"
     }
   ],
-  "main/docs/secure/tokens/revoke-tokens.mdx": [
-    {
-      "href": "/docs/secure/tokens/refresh-tokens",
-      "toId": "main/docs/secure/tokens/refresh-tokens.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens",
-      "toId": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/token-best-practices",
-      "toId": "main/docs/secure/tokens/token-best-practices.mdx"
-    }
-  ],
   "main/docs/secure/tokens/id-tokens/id-token-structure.mdx": [
     {
       "href": "/docs/secure/tokens/json-web-tokens",
@@ -9101,8 +9084,8 @@
       "toId": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
+      "href": "/docs/get-started/applications/credentials",
+      "toId": "main/docs/get-started/applications/credentials.mdx"
     },
     {
       "href": "/docs/get-started/authentication-and-authorization-flow/device-authorization-flow",
@@ -9113,16 +9096,8 @@
       "toId": "main/docs/manage-users/user-accounts/unlink-devices-from-users.mdx"
     },
     {
-      "href": "/docs/secure/tokens/refresh-tokens/get-refresh-tokens",
-      "toId": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/refresh-tokens/use-refresh-tokens",
-      "toId": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration",
-      "toId": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx"
+      "href": "/docs/secure/tokens/refresh-tokens",
+      "toId": "main/docs/secure/tokens/refresh-tokens.mdx"
     }
   ],
   "main/docs/manage-users/sessions/manage-user-sessions-with-auth0-management-api.mdx": [
@@ -36930,6 +36905,7 @@
   "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx": [],
   "main/docs/api/management/v2/connections/create-a-scim-token.mdx": [],
   "main/docs/api/management/v2/connections/create-connection-keys.mdx": [],
+  "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx": [],
   "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": [],
   "main/docs/api/management/v2/connections/delete-a-connection.mdx": [],
   "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx": [],
@@ -36944,6 +36920,7 @@
   "main/docs/api/management/v2/connections/get-all-connections.mdx": [],
   "main/docs/api/management/v2/connections/get-connection-keys.mdx": [],
   "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx": [],
+  "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx": [],
   "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx": [],
   "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx": [],
   "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx": [],

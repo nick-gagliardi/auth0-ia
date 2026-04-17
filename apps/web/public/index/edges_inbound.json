@@ -1846,6 +1846,7 @@
       "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow/avoid-common-issues-with-resource-owner-password-flow-and-attack-protection.mdx",
       "main/docs/get-started/auth0-teams/quarterly-snapshot.mdx",
       "main/docs/authenticate/passwordless/best-practices.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx",
       "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx"
     ],
     "import": [],
@@ -2413,10 +2414,9 @@
       "main/docs/troubleshoot/product-lifecycle/past-migrations/custom-claims-migration.mdx",
       "main/docs/secure/tokens.mdx",
       "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx",
-      "main/docs/secure/tokens/revoke-tokens.mdx",
-      "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
       "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx",
+      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
       "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
@@ -4952,7 +4952,6 @@
   "main/docs/get-started/applications/confidential-and-public-applications.mdx": {
     "link": [
       "main/docs/secure/application-credentials.mdx",
-      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/secure/multi-factor-authentication/manage-mfa-auth0-apis/manage-authentication-methods-with-management-api.mdx",
       "main/docs/manage-users/organizations/configure-organizations/send-membership-invitations.mdx",
       "main/docs/get-started/applications.mdx",
@@ -5094,6 +5093,7 @@
   "main/docs/get-started/applications/credentials.mdx": {
     "link": [
       "main/docs/secure/application-credentials.mdx",
+      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/get-started/applications/configure-client-initiated-backchannel-authentication.mdx",
       "main/docs/get-started/applications/configure-private-key-jwt.mdx",
       "main/docs/get-started/applications/rotate-credentials.mdx"
@@ -5821,7 +5821,6 @@
       "main/docs/secure/tokens/id-tokens.mdx",
       "main/docs/secure/tokens/json-web-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens.mdx",
-      "main/docs/secure/tokens/revoke-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
       "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx",
       "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx",
@@ -5977,13 +5976,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/secure/tokens/revoke-tokens.mdx": {
-    "link": [
-      "main/docs/secure/tokens/id-tokens.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/secure/tokens/id-tokens/id-token-structure.mdx": {
     "link": [
       "main/docs/secure/tokens/id-tokens.mdx",
@@ -6053,14 +6045,15 @@
     "link": [
       "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx",
       "main/docs/secure/tokens/refresh-tokens.mdx",
-      "main/docs/secure/tokens/revoke-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
       "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx"
+    ]
   },
   "main/docs/manage-users/sessions/manage-user-sessions-with-auth0-management-api.mdx": {
     "link": [
@@ -6077,7 +6070,6 @@
       "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx",
-      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
       "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx",
       "main/docs/get-started/applications/application-grant-types.mdx"
@@ -6107,7 +6099,6 @@
       "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
       "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
       "main/docs/secure/tokens/id-tokens/update-id-token-lifetime.mdx",
       "main/docs/get-started/applications/application-settings.mdx"
@@ -6135,7 +6126,6 @@
     "link": [
       "main/docs/secure/tokens/refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
       "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx",
       "main/docs/get-started/identity-fundamentals/introduction-to-auth0.mdx",
@@ -20156,6 +20146,7 @@
       "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx",
       "main/docs/api/management/v2/connections/create-a-scim-token.mdx",
       "main/docs/api/management/v2/connections/create-connection-keys.mdx",
+      "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx",
       "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
       "main/docs/api/management/v2/connections/delete-a-connection.mdx",
       "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx",
@@ -20170,6 +20161,7 @@
       "main/docs/api/management/v2/connections/get-all-connections.mdx",
       "main/docs/api/management/v2/connections/get-connection-keys.mdx",
       "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+      "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx",
       "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx",
       "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx",
       "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
@@ -23488,6 +23480,7 @@
       "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx",
       "main/docs/api/management/v2/connections/create-a-scim-token.mdx",
       "main/docs/api/management/v2/connections/create-connection-keys.mdx",
+      "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx",
       "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
       "main/docs/api/management/v2/connections/delete-a-connection.mdx",
       "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx",
@@ -23502,6 +23495,7 @@
       "main/docs/api/management/v2/connections/get-all-connections.mdx",
       "main/docs/api/management/v2/connections/get-connection-keys.mdx",
       "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+      "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx",
       "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx",
       "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx",
       "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
@@ -25298,6 +25292,11 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": {
     "link": [],
     "import": [],
@@ -25364,6 +25363,11 @@
     "redirect": []
   },
   "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx": {
     "link": [],
     "import": [],
     "redirect": []

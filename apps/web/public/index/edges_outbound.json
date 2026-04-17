@@ -2182,7 +2182,9 @@
     "redirect": []
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/brute-force-protection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -3608,7 +3610,6 @@
       "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
       "main/docs/deploy-monitor/logs.mdx",
       "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "main/docs/secure/tokens/refresh-tokens.mdx",
       "main/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa.mdx",
       "main/docs/get-started/applications/configure-application-metadata.mdx",
       "main/docs/manage-users/user-accounts/metadata.mdx"
@@ -4092,7 +4093,6 @@
       "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
       "main/docs/secure/tokens/id-tokens/update-id-token-lifetime.mdx",
       "main/docs/secure/tokens/id-tokens/get-id-tokens.mdx",
-      "main/docs/secure/tokens/revoke-tokens.mdx",
       "main/docs/secure/tokens/id-tokens/id-token-structure.mdx"
     ],
     "import": [],
@@ -4278,15 +4278,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/secure/tokens/revoke-tokens.mdx": {
-    "link": [
-      "main/docs/secure/tokens/refresh-tokens.mdx",
-      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "main/docs/secure/tokens/token-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/secure/tokens/id-tokens/id-token-structure.mdx": {
     "link": [
       "main/docs/secure/tokens/json-web-tokens.mdx",
@@ -4344,17 +4335,17 @@
       "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx"
     ],
     "import": [],
-    "redirect": []
+    "redirect": [
+      "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx"
+    ]
   },
   "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx": {
     "link": [
       "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications.mdx",
+      "main/docs/get-started/applications/credentials.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx",
       "main/docs/manage-users/user-accounts/unlink-devices-from-users.mdx",
-      "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
-      "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx"
+      "main/docs/secure/tokens/refresh-tokens.mdx"
     ],
     "import": [
       "main/snippets/AuthCodeBlock.jsx",
@@ -24863,6 +24854,14 @@
     ],
     "redirect": []
   },
+  "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
   "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": {
     "link": [],
     "import": [
@@ -24968,6 +24967,14 @@
     "redirect": []
   },
   "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx": {
+    "link": [],
+    "import": [
+      "main/snippets/ApiReleaseLifecycle.jsx",
+      "main/snippets/ApiScopes.jsx"
+    ],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",

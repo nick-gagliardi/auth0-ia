@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-16T04:54:28.023Z",
+  "generatedAtUtc": "2026-04-17T04:52:34.697Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -9574,14 +9574,6 @@
                         "label": "Refresh Tokens",
                         "children": [
                           {
-                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens:docs/secure/tokens/refresh",
-                            "kind": "page",
-                            "label": "docs/secure/tokens/refresh-tokens",
-                            "route": "docs/secure/tokens/refresh-tokens",
-                            "filePath": "main/docs/secure/tokens/refresh-tokens.mdx",
-                            "children": []
-                          },
-                          {
                             "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/get-refresh-tokens:docs/se",
                             "kind": "page",
                             "label": "docs/secure/tokens/refresh-tokens/get-refresh-tokens",
@@ -9606,38 +9598,6 @@
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/refresh-token-rotation:doc",
-                            "kind": "page",
-                            "label": "docs/secure/tokens/refresh-tokens/refresh-token-rotation",
-                            "route": "docs/secure/tokens/refresh-tokens/refresh-token-rotation",
-                            "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-                            "children": []
-                          },
-                          {
-                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/configure-refresh-token-ro",
-                            "kind": "page",
-                            "label": "docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation",
-                            "route": "docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation",
-                            "filePath": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation.mdx",
-                            "children": []
-                          },
-                          {
-                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
-                            "kind": "page",
-                            "label": "docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
-                            "route": "docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
-                            "filePath": "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx",
-                            "children": []
-                          },
-                          {
-                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/disable-refresh-token-rota",
-                            "kind": "page",
-                            "label": "docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation",
-                            "route": "docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation",
-                            "filePath": "main/docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation.mdx",
-                            "children": []
-                          },
-                          {
                             "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/revoke-refresh-tokens:docs",
                             "kind": "page",
                             "label": "docs/secure/tokens/refresh-tokens/revoke-refresh-tokens",
@@ -9646,26 +9606,41 @@
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/manage-refresh-tokens-acti",
-                            "kind": "page",
-                            "label": "docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions",
-                            "route": "docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions",
-                            "filePath": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-                            "children": []
+                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation",
+                            "kind": "group",
+                            "label": "Refresh Token Rotation",
+                            "children": [
+                              {
+                                "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation/page:docs/secure/tokens/refresh-tokens/configure-refresh-token-ro",
+                                "kind": "page",
+                                "label": "docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation",
+                                "route": "docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation",
+                                "filePath": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation.mdx",
+                                "children": []
+                              },
+                              {
+                                "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation/page:docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
+                                "kind": "page",
+                                "label": "docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
+                                "route": "docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
+                                "filePath": "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx",
+                                "children": []
+                              },
+                              {
+                                "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation/page:docs/secure/tokens/refresh-tokens/disable-refresh-token-rota",
+                                "kind": "page",
+                                "label": "docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation",
+                                "route": "docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation",
+                                "filePath": "main/docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation.mdx",
+                                "children": []
+                              }
+                            ]
                           },
                           {
                             "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-metadata",
                             "kind": "group",
                             "label": "Refresh Token Metadata",
                             "children": [
-                              {
-                                "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-metadata/page:docs/secure/tokens/refresh-tokens/refresh-token-metadata:doc",
-                                "kind": "page",
-                                "label": "docs/secure/tokens/refresh-tokens/refresh-token-metadata",
-                                "route": "docs/secure/tokens/refresh-tokens/refresh-token-metadata",
-                                "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx",
-                                "children": []
-                              },
                               {
                                 "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-metadata/page:docs/secure/tokens/refresh-tokens/refresh-token-metadata/con",
                                 "kind": "page",
@@ -9706,24 +9681,16 @@
                                 "children": []
                               }
                             ]
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/manage-refresh-tokens-acti",
+                            "kind": "page",
+                            "label": "docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions",
+                            "route": "docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions",
+                            "filePath": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
+                            "children": []
                           }
                         ]
-                      },
-                      {
-                        "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/page:docs/secure/tokens/revoke-tokens:docs/secure/tokens/revoke-t",
-                        "kind": "page",
-                        "label": "docs/secure/tokens/revoke-tokens",
-                        "route": "docs/secure/tokens/revoke-tokens",
-                        "filePath": "main/docs/secure/tokens/revoke-tokens.mdx",
-                        "children": []
-                      },
-                      {
-                        "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/page:docs/secure/tokens/manage-refresh-tokens-with-auth0-manageme",
-                        "kind": "page",
-                        "label": "docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api",
-                        "route": "docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api",
-                        "filePath": "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx",
-                        "children": []
                       },
                       {
                         "id": "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/page:docs/secure/tokens/token-best-practices:docs/secure/tokens/t",
@@ -12705,6 +12672,22 @@
                         "label": "docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory",
                         "route": "docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory",
                         "filePath": "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:connections/page:docs/api/management/v2/connections/get-synchronized-groups-f",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration",
+                        "route": "docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration",
+                        "filePath": "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:api-reference/dropdown:management-api/group:unnamed/group:connections/page:docs/api/management/v2/connections/create-or-replace-synchro",
+                        "kind": "page",
+                        "label": "docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration",
+                        "route": "docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration",
+                        "filePath": "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx",
                         "children": []
                       },
                       {

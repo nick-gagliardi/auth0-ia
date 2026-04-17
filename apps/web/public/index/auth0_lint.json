@@ -1,14 +1,14 @@
 {
-  "pagesScanned": 2681,
-  "pagesWithWarnings": 566,
-  "warningCount": 795,
+  "pagesScanned": 2682,
+  "pagesWithWarnings": 564,
+  "warningCount": 792,
   "byCode": {
-    "missing_pkce_mention": 127,
-    "missing_state_mention": 131,
+    "missing_pkce_mention": 126,
+    "missing_state_mention": 130,
     "missing_nonce_mention": 270,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
-    "token_storage_cookie": 12,
+    "token_storage_cookie": 11,
     "rules_vs_actions_language": 252
   },
   "items": [
@@ -663,6 +663,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
       "filePath": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
       "warnings": []
@@ -730,6 +735,11 @@
     {
       "id": "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
       "filePath": "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx",
+      "filePath": "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx",
       "warnings": []
     },
     {
@@ -2989,15 +2999,7 @@
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx",
       "filePath": "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx",
-      "warnings": [
-        {
-          "code": "token_storage_cookie",
-          "severity": "info",
-          "message": "This page mentions cookies alongside tokens. Consider explicitly noting secure cookie attributes (HttpOnly/Secure/SameSite) where appropriate.",
-          "evidence": "| `SESSION_SECRET` | The session secret used to encrypt the session cookie. |   |",
-          "line": 38
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-requirements.mdx",
@@ -18547,22 +18549,7 @@
     {
       "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
       "filePath": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "warnings": [
-        {
-          "code": "missing_pkce_mention",
-          "severity": "warn",
-          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-          "evidence": "\"device_name\": \"my-device\" // the value of 'device' provided in the /authorize call when creating the token",
-          "line": 297
-        },
-        {
-          "code": "missing_state_mention",
-          "severity": "warn",
-          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "\"device_name\": \"my-device\" // the value of 'device' provided in the /authorize call when creating the token",
-          "line": 297
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx",
@@ -18589,11 +18576,6 @@
           "line": 438
         }
       ]
-    },
-    {
-      "id": "main/docs/secure/tokens/revoke-tokens.mdx",
-      "filePath": "main/docs/secure/tokens/revoke-tokens.mdx",
-      "warnings": []
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
@@ -20183,7 +20165,6 @@
         "line": 31
       }
     ],
-    "main/docs/secure/tokens/revoke-tokens.mdx": [],
     "main/docs/secure/tokens/token-best-practices.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -20254,22 +20235,7 @@
       }
     ],
     "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx": [],
-    "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx": [
-      {
-        "code": "missing_pkce_mention",
-        "severity": "warn",
-        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-        "evidence": "\"device_name\": \"my-device\" // the value of 'device' provided in the /authorize call when creating the token",
-        "line": 297
-      },
-      {
-        "code": "missing_state_mention",
-        "severity": "warn",
-        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "\"device_name\": \"my-device\" // the value of 'device' provided in the /authorize call when creating the token",
-        "line": 297
-      }
-    ],
+    "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx": [],
     "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx": [
       {
         "code": "token_storage_localstorage",
@@ -27505,15 +27471,7 @@
       }
     ],
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector.mdx": [],
-    "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx": [
-      {
-        "code": "token_storage_cookie",
-        "severity": "info",
-        "message": "This page mentions cookies alongside tokens. Consider explicitly noting secure cookie attributes (HttpOnly/Secure/SameSite) where appropriate.",
-        "evidence": "| `SESSION_SECRET` | The session secret used to encrypt the session cookie. |   |",
-        "line": 38
-      }
-    ],
+    "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-config-file-schema.mdx": [],
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-requirements.mdx": [],
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-scom.mdx": [],
     "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap/ad-ldap-connector/ad-ldap-connector-test-environment.mdx": [
@@ -28209,6 +28167,7 @@
     "main/docs/api/management/v2/connections/create-a-scim-configuration.mdx": [],
     "main/docs/api/management/v2/connections/create-a-scim-token.mdx": [],
     "main/docs/api/management/v2/connections/create-connection-keys.mdx": [],
+    "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx": [],
     "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": [],
     "main/docs/api/management/v2/connections/delete-a-connection.mdx": [],
     "main/docs/api/management/v2/connections/delete-a-connections-scim-configuration.mdx": [],
@@ -28223,6 +28182,7 @@
     "main/docs/api/management/v2/connections/get-all-connections.mdx": [],
     "main/docs/api/management/v2/connections/get-connection-keys.mdx": [],
     "main/docs/api/management/v2/connections/get-enabled-clients-for-a-connection.mdx": [],
+    "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx": [],
     "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx": [],
     "main/docs/api/management/v2/connections/patch-a-directory-provisioning-configuration.mdx": [],
     "main/docs/api/management/v2/connections/request-an-on-demand-synchronization-of-the-directory.mdx": [],

@@ -999,24 +999,10 @@
   ],
   "main/docs/get-started/applications/confidential-and-public-applications.mdx": [
     {
-      "id": "main/docs/get-started/applications/application-grant-types.mdx",
-      "score": 0.2202,
-      "simOut": 0.3158,
-      "simIn": 0.0769,
-      "sharedOut": 6,
-      "sharedIn": 2,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
-      "score": 0.2185,
+      "score": 0.2218,
       "simOut": 0.2308,
-      "simIn": 0.2,
+      "simIn": 0.2083,
       "sharedOut": 3,
       "sharedIn": 5,
       "reasons": [
@@ -1028,10 +1014,24 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/get-started/applications/application-grant-types.mdx",
+      "score": 0.2215,
+      "simOut": 0.3158,
+      "simIn": 0.08,
+      "sharedOut": 6,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx",
-      "score": 0.1986,
+      "score": 0.1989,
       "simOut": 0.3125,
-      "simIn": 0.0278,
+      "simIn": 0.0286,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -1043,9 +1043,9 @@
     },
     {
       "id": "main/docs/authenticate/protocols/oauth.mdx",
-      "score": 0.1981,
+      "score": 0.1987,
       "simOut": 0.2941,
-      "simIn": 0.0541,
+      "simIn": 0.0556,
       "sharedOut": 5,
       "sharedIn": 2,
       "reasons": [
@@ -1057,9 +1057,9 @@
     },
     {
       "id": "main/docs/get-started/applications/dynamic-client-registration.mdx",
-      "score": 0.1634,
+      "score": 0.1649,
       "simOut": 0.2143,
-      "simIn": 0.087,
+      "simIn": 0.0909,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -1071,38 +1071,24 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "score": 0.1499,
+      "score": 0.1361,
       "simOut": 0.1579,
-      "simIn": 0.1379,
+      "simIn": 0.1034,
       "sharedOut": 3,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.1473,
-      "simOut": 0.1875,
-      "simIn": 0.087,
-      "sharedOut": 3,
-      "sharedIn": 2,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
-      "score": 0.1322,
+      "score": 0.1345,
       "simOut": 0.1333,
-      "simIn": 0.1304,
+      "simIn": 0.1364,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -1113,10 +1099,24 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
+      "score": 0.1307,
+      "simOut": 0.1875,
+      "simIn": 0.0455,
+      "sharedOut": 3,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-client-credentials-flow.mdx",
-      "score": 0.1251,
+      "score": 0.1277,
       "simOut": 0.1176,
-      "simIn": 0.1364,
+      "simIn": 0.1429,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -1128,9 +1128,9 @@
     },
     {
       "id": "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-auth-code-flow.mdx",
-      "score": 0.1177,
+      "score": 0.1203,
       "simOut": 0.1053,
-      "simIn": 0.1364,
+      "simIn": 0.1429,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -1144,9 +1144,9 @@
   "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx": [
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1986,
+      "score": 0.1989,
       "simOut": 0.3125,
-      "simIn": 0.0278,
+      "simIn": 0.0286,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -1200,9 +1200,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.1311,
+      "score": 0.1338,
       "simOut": 0.0476,
-      "simIn": 0.2564,
+      "simIn": 0.2632,
       "sharedOut": 1,
       "sharedIn": 10,
       "reasons": [
@@ -1264,7 +1264,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -1286,9 +1286,9 @@
   "main/docs/get-started/applications/application-grant-types.mdx": [
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.2202,
+      "score": 0.2215,
       "simOut": 0.3158,
-      "simIn": 0.0769,
+      "simIn": 0.08,
       "sharedOut": 6,
       "sharedIn": 2,
       "reasons": [
@@ -1570,9 +1570,9 @@
   "main/docs/authenticate/protocols/oauth.mdx": [
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1981,
+      "score": 0.1987,
       "simOut": 0.2941,
-      "simIn": 0.0541,
+      "simIn": 0.0556,
       "sharedOut": 5,
       "sharedIn": 2,
       "reasons": [
@@ -1844,9 +1844,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1251,
+      "score": 0.1277,
       "simOut": 0.1176,
-      "simIn": 0.1364,
+      "simIn": 0.1429,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -2335,9 +2335,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.092,
+      "score": 0.0946,
       "simOut": 0.0625,
-      "simIn": 0.1364,
+      "simIn": 0.1429,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -4364,9 +4364,9 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.1017,
+      "score": 0.1024,
       "simOut": 0.1429,
-      "simIn": 0.04,
+      "simIn": 0.0417,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -4678,14 +4678,14 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/manage-users/user-accounts/manage-users-using-the-management-api.mdx",
-      "score": 0.0818,
-      "simOut": 0.1364,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
+      "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
+      "score": 0.0857,
+      "simOut": 0,
+      "simIn": 0.2143,
+      "sharedOut": 0,
+      "sharedIn": 3,
       "reasons": [
-        "shared_outbound"
+        "shared_inbound"
       ],
       "isCrossNav": true,
       "diffFolder": true,
@@ -7219,8 +7219,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.0723,
-      "simOut": 0.0476,
+      "score": 0.0738,
+      "simOut": 0.05,
       "simIn": 0.1094,
       "sharedOut": 1,
       "sharedIn": 7,
@@ -9202,9 +9202,9 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.1171,
+      "score": 0.1177,
       "simOut": 0.1429,
-      "simIn": 0.0784,
+      "simIn": 0.08,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -9257,10 +9257,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/protocols/oauth.mdx",
-      "score": 0.0686,
-      "simOut": 0.0556,
-      "simIn": 0.0882,
+      "id": "main/docs/secure/tokens/id-tokens.mdx",
+      "score": 0.0706,
+      "simOut": 0.0769,
+      "simIn": 0.0612,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -11532,9 +11532,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0522,
+      "score": 0.05,
       "simOut": 0,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -11675,9 +11675,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.06,
+      "score": 0.0571,
       "simOut": 0,
-      "simIn": 0.15,
+      "simIn": 0.1429,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -13605,7 +13605,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -13641,16 +13641,16 @@
   "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx": [
     {
       "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.2602,
+      "score": 0.242,
       "simOut": 0.3125,
-      "simIn": 0.1818,
+      "simIn": 0.1364,
       "sharedOut": 5,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -13664,7 +13664,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -13685,45 +13685,31 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1499,
+      "score": 0.1361,
       "simOut": 0.1579,
-      "simIn": 0.1379,
+      "simIn": 0.1034,
       "sharedOut": 3,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "score": 0.1306,
-      "simOut": 0.1176,
-      "simIn": 0.15,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.129,
+      "score": 0.13,
       "simOut": 0.15,
-      "simIn": 0.0976,
+      "simIn": 0.1,
       "sharedOut": 3,
       "sharedIn": 4,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -13737,21 +13723,7 @@
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
-      "score": 0.1171,
-      "simOut": 0.1,
-      "simIn": 0.1429,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -13765,7 +13737,7 @@
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -13779,7 +13751,35 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/my-organization-api.mdx",
+      "score": 0.1091,
+      "simOut": 0.1818,
+      "simIn": 0,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/authenticate/protocols/oauth.mdx",
+      "score": 0.1068,
+      "simOut": 0.1429,
+      "simIn": 0.0526,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     }
@@ -14571,9 +14571,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0778,
+      "score": 0.0757,
       "simOut": 0,
-      "simIn": 0.1944,
+      "simIn": 0.1892,
       "sharedOut": 0,
       "sharedIn": 7,
       "reasons": [
@@ -15072,6 +15072,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
+      "score": 0.12,
+      "simOut": 0.2,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
       "score": 0.12,
       "simOut": 0.2,
@@ -15083,20 +15097,6 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.1125,
-      "simOut": 0.1875,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -15158,25 +15158,11 @@
   ],
   "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx": [
     {
-      "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx",
-      "score": 0.2533,
-      "simOut": 0.2,
-      "simIn": 0.3333,
-      "sharedOut": 3,
-      "sharedIn": 1,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
-      "score": 0.2446,
-      "simOut": 0.3125,
+      "score": 0.2071,
+      "simOut": 0.25,
       "simIn": 0.1429,
-      "sharedOut": 5,
+      "sharedOut": 4,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
@@ -15187,8 +15173,8 @@
     },
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "score": 0.1183,
-      "simOut": 0.1579,
+      "score": 0.1235,
+      "simOut": 0.1667,
       "simIn": 0.0588,
       "sharedOut": 3,
       "sharedIn": 2,
@@ -15201,8 +15187,22 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login.mdx",
-      "score": 0.1125,
-      "simOut": 0.1875,
+      "score": 0.12,
+      "simOut": 0.2,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
+      "score": 0.0857,
+      "simOut": 0.1429,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -15215,34 +15215,6 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
-      "score": 0.1091,
-      "simOut": 0.1818,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
-      "score": 0.09,
-      "simOut": 0.15,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
       "score": 0.0818,
       "simOut": 0.1364,
       "simIn": 0,
@@ -15253,20 +15225,6 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "score": 0.0462,
-      "simOut": 0.0769,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -15370,6 +15328,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
+      "score": 0.0857,
+      "simOut": 0.1429,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
       "score": 0.0857,
       "simOut": 0.1429,
@@ -15396,29 +15368,15 @@
       "isCrossNav": false,
       "diffFolder": false,
       "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.0818,
-      "simOut": 0.1364,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
     }
   ],
   "main/docs/manage-users/sessions/manage-sessions-actions.mdx": [
     {
       "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.2446,
-      "simOut": 0.3125,
+      "score": 0.2071,
+      "simOut": 0.25,
       "simIn": 0.1429,
-      "sharedOut": 5,
+      "sharedOut": 4,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
@@ -15503,148 +15461,6 @@
       "simOut": 0.1364,
       "simIn": 0,
       "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    }
-  ],
-  "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx": [
-    {
-      "id": "main/docs/secure/security-guidance/data-security/token-storage.mdx",
-      "score": 0.1412,
-      "simOut": 0.2353,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx",
-      "score": 0.1125,
-      "simOut": 0.1875,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens.mdx",
-      "score": 0.1,
-      "simOut": 0.1667,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/native/device/index.mdx",
-      "score": 0.0968,
-      "simOut": 0.1613,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
-      "score": 0.0947,
-      "simOut": 0.1579,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx",
-      "score": 0.0909,
-      "simOut": 0.1515,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.09,
-      "simOut": 0.15,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/architecture-scenarios/mobile-api/part-1.mdx",
-      "score": 0.09,
-      "simOut": 0.15,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce.mdx",
-      "score": 0.0828,
-      "simOut": 0.1379,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce.mdx",
-      "score": 0.08,
-      "simOut": 0.1333,
-      "simIn": 0,
-      "sharedOut": 4,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -15785,6 +15601,148 @@
       "id": "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
       "score": 0.0474,
       "simOut": 0.0789,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    }
+  ],
+  "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx": [
+    {
+      "id": "main/docs/secure/security-guidance/data-security/token-storage.mdx",
+      "score": 0.1412,
+      "simOut": 0.2353,
+      "simIn": 0,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx",
+      "score": 0.1125,
+      "simOut": 0.1875,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens.mdx",
+      "score": 0.1,
+      "simOut": 0.1667,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/device/index.mdx",
+      "score": 0.0968,
+      "simOut": 0.1613,
+      "simIn": 0,
+      "sharedOut": 5,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
+      "score": 0.0947,
+      "simOut": 0.1579,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow/call-your-api-using-the-device-authorization-flow.mdx",
+      "score": 0.0909,
+      "simOut": 0.1515,
+      "simIn": 0,
+      "sharedOut": 5,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/architecture-scenarios/mobile-api/part-1.mdx",
+      "score": 0.09,
+      "simOut": 0.15,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce.mdx",
+      "score": 0.0828,
+      "simOut": 0.1379,
+      "simIn": 0,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce.mdx",
+      "score": 0.08,
+      "simOut": 0.1333,
+      "simIn": 0,
+      "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
+      "score": 0.0783,
+      "simOut": 0.1304,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -17215,9 +17173,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.2545,
+      "score": 0.244,
       "simOut": 0.0909,
-      "simIn": 0.5,
+      "simIn": 0.4737,
       "sharedOut": 1,
       "sharedIn": 9,
       "reasons": [
@@ -17777,9 +17735,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.05,
+      "score": 0.0522,
       "simOut": 0,
-      "simIn": 0.125,
+      "simIn": 0.1304,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -20945,7 +20903,7 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
+      "id": "main/docs/authenticate/login/cross-origin-authentication.mdx",
       "score": 0.0462,
       "simOut": 0,
       "simIn": 0.1154,
@@ -20959,10 +20917,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/login/cross-origin-authentication.mdx",
-      "score": 0.0462,
+      "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
+      "score": 0.0444,
       "simOut": 0,
-      "simIn": 0.1154,
+      "simIn": 0.1111,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -22612,23 +22570,23 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.0502,
+      "score": 0.0504,
       "simOut": 0.0556,
-      "simIn": 0.0421,
+      "simIn": 0.0426,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.0495,
+      "score": 0.0498,
       "simOut": 0.05,
-      "simIn": 0.0488,
+      "simIn": 0.0494,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -22642,9 +22600,9 @@
   "main/docs/secure/tokens/token-best-practices.mdx": [
     {
       "id": "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
-      "score": 0.1601,
+      "score": 0.1613,
       "simOut": 0.1875,
-      "simIn": 0.119,
+      "simIn": 0.122,
       "sharedOut": 3,
       "sharedIn": 5,
       "reasons": [
@@ -22657,9 +22615,9 @@
     },
     {
       "id": "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
-      "score": 0.1469,
+      "score": 0.1481,
       "simOut": 0.1579,
-      "simIn": 0.1304,
+      "simIn": 0.1333,
       "sharedOut": 3,
       "sharedIn": 6,
       "reasons": [
@@ -22672,9 +22630,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx",
-      "score": 0.1311,
+      "score": 0.1338,
       "simOut": 0.0476,
-      "simIn": 0.2564,
+      "simIn": 0.2632,
       "sharedOut": 1,
       "sharedIn": 10,
       "reasons": [
@@ -22686,24 +22644,24 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "score": 0.129,
+      "score": 0.13,
       "simOut": 0.15,
-      "simIn": 0.0976,
+      "simIn": 0.1,
       "sharedOut": 3,
       "sharedIn": 4,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens.mdx",
-      "score": 0.1238,
+      "score": 0.125,
       "simOut": 0.1111,
-      "simIn": 0.1429,
+      "simIn": 0.1458,
       "sharedOut": 2,
       "sharedIn": 7,
       "reasons": [
@@ -22715,9 +22673,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-      "score": 0.1095,
+      "score": 0.1101,
       "simOut": 0.125,
-      "simIn": 0.0862,
+      "simIn": 0.0877,
       "sharedOut": 2,
       "sharedIn": 5,
       "reasons": [
@@ -22729,9 +22687,9 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.102,
+      "score": 0.1042,
       "simOut": 0.1111,
-      "simIn": 0.0882,
+      "simIn": 0.0938,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -22743,9 +22701,9 @@
     },
     {
       "id": "main/docs/secure/tokens/json-web-tokens.mdx",
-      "score": 0.0957,
+      "score": 0.0961,
       "simOut": 0.1111,
-      "simIn": 0.0725,
+      "simIn": 0.0735,
       "sharedOut": 2,
       "sharedIn": 5,
       "reasons": [
@@ -22771,9 +22729,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens/use-access-tokens.mdx",
-      "score": 0.0814,
+      "score": 0.0829,
       "simOut": 0.0667,
-      "simIn": 0.1034,
+      "simIn": 0.1071,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -22976,8 +22934,8 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.1183,
-      "simOut": 0.1579,
+      "score": 0.1235,
+      "simOut": 0.1667,
       "simIn": 0.0588,
       "sharedOut": 3,
       "sharedIn": 2,
@@ -24094,28 +24052,27 @@
   "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx": [
     {
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "score": 0.2602,
+      "score": 0.242,
       "simOut": 0.3125,
-      "simIn": 0.1818,
+      "simIn": 0.1364,
       "sharedOut": 5,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "score": 0.2385,
-      "simOut": 0.2308,
-      "simIn": 0.25,
-      "sharedOut": 3,
+      "score": 0.22,
+      "simOut": 0.1667,
+      "simIn": 0.3,
+      "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
-        "shared_outbound",
         "shared_inbound"
       ],
       "isCrossNav": false,
@@ -24124,11 +24081,11 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "score": 0.2066,
+      "score": 0.1846,
       "simOut": 0.1538,
-      "simIn": 0.2857,
+      "simIn": 0.2308,
       "sharedOut": 2,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -24138,14 +24095,13 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
-      "score": 0.2048,
+      "score": 0.1792,
       "simOut": 0.1875,
-      "simIn": 0.2308,
+      "simIn": 0.1667,
       "sharedOut": 3,
-      "sharedIn": 3,
+      "sharedIn": 2,
       "reasons": [
-        "shared_outbound",
-        "shared_inbound"
+        "shared_outbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -24153,9 +24109,9 @@
     },
     {
       "id": "main/docs/secure/security-guidance/data-security/token-storage.mdx",
-      "score": 0.1533,
+      "score": 0.1564,
       "simOut": 0.2,
-      "simIn": 0.0833,
+      "simIn": 0.0909,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -24163,20 +24119,6 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1473,
-      "simOut": 0.1875,
-      "simIn": 0.087,
-      "sharedOut": 3,
-      "sharedIn": 2,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -24194,17 +24136,17 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.1282,
-      "simOut": 0.2,
-      "simIn": 0.0204,
+      "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
+      "score": 0.1307,
+      "simOut": 0.1875,
+      "simIn": 0.0455,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
-      "diffFolder": false,
+      "isCrossNav": true,
+      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -24219,6 +24161,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
+      "score": 0.12,
+      "simOut": 0.2,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -24317,7 +24273,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -24572,9 +24528,9 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.1533,
+      "score": 0.1564,
       "simOut": 0.2,
-      "simIn": 0.0833,
+      "simIn": 0.0909,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -24850,7 +24806,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -25006,7 +24962,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -26235,9 +26191,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1177,
+      "score": 0.1203,
       "simOut": 0.1053,
-      "simIn": 0.1364,
+      "simIn": 0.1429,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -27509,9 +27465,9 @@
   "main/docs/secure/application-credentials.mdx": [
     {
       "id": "main/docs/get-started/applications/credentials.mdx",
-      "score": 0.2522,
+      "score": 0.25,
       "simOut": 0.3333,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 5,
       "sharedIn": 3,
       "reasons": [
@@ -27668,9 +27624,9 @@
   "main/docs/get-started/applications/configure-private-key-jwt.mdx": [
     {
       "id": "main/docs/get-started/applications/credentials.mdx",
-      "score": 0.28,
+      "score": 0.2727,
       "simOut": 0.3333,
-      "simIn": 0.2,
+      "simIn": 0.1818,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -27712,9 +27668,9 @@
   "main/docs/get-started/applications/credentials.mdx": [
     {
       "id": "main/docs/get-started/applications/configure-private-key-jwt.mdx",
-      "score": 0.28,
+      "score": 0.2727,
       "simOut": 0.3333,
-      "simIn": 0.2,
+      "simIn": 0.1818,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -27726,9 +27682,9 @@
     },
     {
       "id": "main/docs/secure/application-credentials.mdx",
-      "score": 0.2522,
+      "score": 0.25,
       "simOut": 0.3333,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 5,
       "sharedIn": 3,
       "reasons": [
@@ -28549,7 +28505,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -28563,26 +28519,12 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     }
   ],
   "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/configure-refresh-token-metadata.mdx": [
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.2533,
-      "simOut": 0.2,
-      "simIn": 0.3333,
-      "sharedOut": 3,
-      "sharedIn": 1,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
     {
       "id": "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
       "score": 0.24,
@@ -28621,7 +28563,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -28721,7 +28663,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -28751,20 +28693,6 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
-      "score": 0.1091,
-      "simOut": 0.1818,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -28835,6 +28763,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/manage-refresh-tokens-actions.mdx",
+      "score": 0.0818,
+      "simOut": 0.1364,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     }
   ],
@@ -29727,9 +29669,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.2011,
+      "score": 0.194,
       "simOut": 0.0625,
-      "simIn": 0.4091,
+      "simIn": 0.3913,
       "sharedOut": 1,
       "sharedIn": 9,
       "reasons": [
@@ -29800,9 +29742,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.3317,
+      "score": 0.3267,
       "simOut": 0.3,
-      "simIn": 0.3793,
+      "simIn": 0.3667,
       "sharedOut": 3,
       "sharedIn": 11,
       "reasons": [
@@ -30188,9 +30130,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.087,
+      "score": 0.0833,
       "simOut": 0,
-      "simIn": 0.2174,
+      "simIn": 0.2083,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -33059,15 +33001,15 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.1144,
+      "score": 0.1151,
       "simOut": 0.1053,
-      "simIn": 0.1282,
+      "simIn": 0.1299,
       "sharedOut": 2,
       "sharedIn": 10,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -33200,15 +33142,15 @@
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.1095,
+      "score": 0.1101,
       "simOut": 0.125,
-      "simIn": 0.0862,
+      "simIn": 0.0877,
       "sharedOut": 2,
       "sharedIn": 5,
       "reasons": [
@@ -33707,8 +33649,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1917,
-      "simOut": 0.2143,
+      "score": 0.2016,
+      "simOut": 0.2308,
       "simIn": 0.1579,
       "sharedOut": 3,
       "sharedIn": 9,
@@ -33955,8 +33897,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1412,
-      "simOut": 0.0714,
+      "score": 0.1445,
+      "simOut": 0.0769,
       "simIn": 0.2459,
       "sharedOut": 1,
       "sharedIn": 15,
@@ -34101,9 +34043,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.1469,
+      "score": 0.1481,
       "simOut": 0.1579,
-      "simIn": 0.1304,
+      "simIn": 0.1333,
       "sharedOut": 3,
       "sharedIn": 6,
       "reasons": [
@@ -34972,8 +34914,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1111,
-      "simOut": 0.0667,
+      "score": 0.114,
+      "simOut": 0.0714,
       "simIn": 0.1778,
       "sharedOut": 1,
       "sharedIn": 8,
@@ -36158,8 +36100,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1708,
-      "simOut": 0.0625,
+      "score": 0.1733,
+      "simOut": 0.0667,
       "simIn": 0.3333,
       "sharedOut": 1,
       "sharedIn": 19,
@@ -36214,15 +36156,15 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.145,
+      "score": 0.1468,
       "simOut": 0.0588,
-      "simIn": 0.2742,
+      "simIn": 0.2787,
       "sharedOut": 1,
       "sharedIn": 17,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -36578,8 +36520,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1273,
-      "simOut": 0.1667,
+      "score": 0.1364,
+      "simOut": 0.1818,
       "simIn": 0.0682,
       "sharedOut": 2,
       "sharedIn": 3,
@@ -36850,9 +36792,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.0691,
+      "score": 0.0699,
       "simOut": 0.0625,
-      "simIn": 0.0789,
+      "simIn": 0.0811,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -36921,12 +36863,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-      "score": 0.1895,
-      "simOut": 0.3158,
-      "simIn": 0,
-      "sharedOut": 6,
-      "sharedIn": 0,
+      "id": "main/docs/secure/tokens/id-tokens.mdx",
+      "score": 0.1914,
+      "simOut": 0.2857,
+      "simIn": 0.05,
+      "sharedOut": 4,
+      "sharedIn": 2,
       "reasons": [
         "shared_outbound"
       ],
@@ -36935,12 +36877,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.18,
-      "simOut": 0.2667,
-      "simIn": 0.05,
-      "sharedOut": 4,
-      "sharedIn": 2,
+      "id": "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+      "score": 0.1895,
+      "simOut": 0.3158,
+      "simIn": 0,
+      "sharedOut": 6,
+      "sharedIn": 0,
       "reasons": [
         "shared_outbound"
       ],
@@ -37049,10 +36991,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
-      "score": 0.2356,
-      "simOut": 0.3636,
-      "simIn": 0.0435,
+      "id": "main/docs/secure/tokens/id-tokens.mdx",
+      "score": 0.2495,
+      "simOut": 0.4,
+      "simIn": 0.0238,
       "sharedOut": 4,
       "sharedIn": 1,
       "reasons": [
@@ -37063,10 +37005,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.2277,
+      "id": "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
+      "score": 0.2356,
       "simOut": 0.3636,
-      "simIn": 0.0238,
+      "simIn": 0.0435,
       "sharedOut": 4,
       "sharedIn": 1,
       "reasons": [
@@ -37107,36 +37049,6 @@
   ],
   "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx": [
     {
-      "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "score": 0.2486,
-      "simOut": 0.2143,
-      "simIn": 0.3,
-      "sharedOut": 3,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "score": 0.2308,
-      "simOut": 0.2308,
-      "simIn": 0.2308,
-      "sharedOut": 3,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
       "score": 0.2143,
       "simOut": 0.3571,
@@ -37146,20 +37058,47 @@
       "reasons": [
         "shared_outbound"
       ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
+      "score": 0.2051,
+      "simOut": 0.2308,
+      "simIn": 0.1667,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
+      "score": 0.1929,
+      "simOut": 0.0714,
+      "simIn": 0.375,
+      "sharedOut": 1,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
       "isCrossNav": false,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.2048,
+      "score": 0.1792,
       "simOut": 0.1875,
-      "simIn": 0.2308,
+      "simIn": 0.1667,
       "sharedOut": 3,
-      "sharedIn": 3,
+      "sharedIn": 2,
       "reasons": [
-        "shared_outbound",
-        "shared_inbound"
+        "shared_outbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -37174,20 +37113,6 @@
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "score": 0.1171,
-      "simOut": 0.1,
-      "simIn": 0.1429,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -38731,9 +38656,9 @@
   "main/docs/get-started/applications/dynamic-client-registration.mdx": [
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1634,
+      "score": 0.1649,
       "simOut": 0.2143,
-      "simIn": 0.087,
+      "simIn": 0.0909,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -39789,9 +39714,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.0533,
+      "score": 0.0552,
       "simOut": 0,
-      "simIn": 0.1333,
+      "simIn": 0.1379,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -42015,8 +41940,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.0708,
-      "simOut": 0.0714,
+      "score": 0.0741,
+      "simOut": 0.0769,
       "simIn": 0.0698,
       "sharedOut": 1,
       "sharedIn": 3,
@@ -42934,9 +42859,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.0814,
+      "score": 0.0829,
       "simOut": 0.0667,
-      "simIn": 0.1034,
+      "simIn": 0.1071,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -43093,8 +43018,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1214,
-      "simOut": 0.0714,
+      "score": 0.1247,
+      "simOut": 0.0769,
       "simIn": 0.1964,
       "sharedOut": 1,
       "sharedIn": 11,
@@ -44697,15 +44622,15 @@
   "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx": [
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.1482,
+      "score": 0.1485,
       "simOut": 0.2308,
-      "simIn": 0.0244,
+      "simIn": 0.025,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -44726,9 +44651,9 @@
   ],
   "main/docs/secure/multi-factor-authentication/step-up-authentication/configure-step-up-authentication-for-web-apps.mdx": [
     {
-      "id": "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
-      "score": 0.12,
-      "simOut": 0.2,
+      "id": "main/docs/secure/tokens/id-tokens.mdx",
+      "score": 0.1286,
+      "simOut": 0.2143,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -44740,7 +44665,7 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/id-tokens.mdx",
+      "id": "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
       "score": 0.12,
       "simOut": 0.2,
       "simIn": 0,
@@ -45115,20 +45040,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "score": 0.1,
-      "simOut": 0.1667,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "score": 0.0979,
       "simOut": 0.0606,
@@ -45186,8 +45097,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.0659,
-      "simOut": 0.0357,
+      "score": 0.0667,
+      "simOut": 0.037,
       "simIn": 0.1111,
       "sharedOut": 1,
       "sharedIn": 6,
@@ -45196,6 +45107,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/applications/dynamic-client-registration.mdx",
+      "score": 0.0651,
+      "simOut": 0.037,
+      "simIn": 0.1071,
+      "sharedOut": 1,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     }
   ],
@@ -45287,9 +45212,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.0898,
+      "score": 0.0924,
       "simOut": 0.0588,
-      "simIn": 0.1364,
+      "simIn": 0.1429,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -45502,29 +45427,13 @@
   ],
   "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx": [
     {
-      "id": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
-      "score": 0.2486,
-      "simOut": 0.2143,
-      "simIn": 0.3,
-      "sharedOut": 3,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_outbound",
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.2385,
-      "simOut": 0.2308,
-      "simIn": 0.25,
-      "sharedOut": 3,
+      "score": 0.22,
+      "simOut": 0.1667,
+      "simIn": 0.3,
+      "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
-        "shared_outbound",
         "shared_inbound"
       ],
       "isCrossNav": false,
@@ -45532,14 +45441,14 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.2178,
-      "simOut": 0.3333,
-      "simIn": 0.0444,
-      "sharedOut": 4,
-      "sharedIn": 2,
+      "id": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
+      "score": 0.1929,
+      "simOut": 0.0714,
+      "simIn": 0.375,
+      "sharedOut": 1,
+      "sharedIn": 3,
       "reasons": [
-        "shared_outbound"
+        "shared_inbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -45547,10 +45456,10 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "score": 0.2091,
-      "simOut": 0.1818,
-      "simIn": 0.25,
-      "sharedOut": 2,
+      "score": 0.12,
+      "simOut": 0,
+      "simIn": 0.3,
+      "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
         "shared_inbound"
@@ -45561,44 +45470,16 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "score": 0.1306,
-      "simOut": 0.1176,
-      "simIn": 0.15,
-      "sharedOut": 2,
+      "score": 0.1007,
+      "simOut": 0.0625,
+      "simIn": 0.1579,
+      "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/applications/application-settings.mdx",
-      "score": 0.1,
-      "simOut": 0.1667,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/applications/application-grant-types.mdx",
-      "score": 0.0947,
-      "simOut": 0.1579,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -51773,15 +51654,15 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.0273,
+      "score": 0.0279,
       "simOut": 0,
-      "simIn": 0.0682,
+      "simIn": 0.0698,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -51889,9 +51770,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.1322,
+      "score": 0.1345,
       "simOut": 0.1333,
-      "simIn": 0.1304,
+      "simIn": 0.1364,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -53597,30 +53478,16 @@
   "main/docs/secure/tokens/refresh-tokens.mdx": [
     {
       "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "score": 0.253,
+      "score": 0.2448,
       "simOut": 0.3636,
-      "simIn": 0.087,
+      "simIn": 0.0667,
       "sharedOut": 4,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
       ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "score": 0.2178,
-      "simOut": 0.3333,
-      "simIn": 0.0444,
-      "sharedOut": 4,
-      "sharedIn": 2,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -53634,85 +53501,85 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx",
-      "score": 0.1482,
+      "score": 0.1485,
       "simOut": 0.2308,
-      "simIn": 0.0244,
+      "simIn": 0.025,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/access-tokens.mdx",
-      "score": 0.145,
+      "score": 0.1468,
       "simOut": 0.0588,
-      "simIn": 0.2742,
+      "simIn": 0.2787,
       "sharedOut": 1,
       "sharedIn": 17,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/security-guidance/data-security/token-storage.mdx",
-      "score": 0.1291,
+      "score": 0.1293,
       "simOut": 0.2,
-      "simIn": 0.0227,
+      "simIn": 0.0233,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.1282,
-      "simOut": 0.2,
-      "simIn": 0.0204,
-      "sharedOut": 3,
-      "sharedIn": 1,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.1237,
-      "simOut": 0.0625,
-      "simIn": 0.2154,
+      "score": 0.1275,
+      "simOut": 0.0667,
+      "simIn": 0.2188,
       "sharedOut": 1,
       "sharedIn": 14,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
+      "score": 0.12,
+      "simOut": 0.2,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
       "id": "main/docs/libraries/auth0-single-page-app-sdk.mdx",
-      "score": 0.1171,
+      "score": 0.1177,
       "simOut": 0.1429,
-      "simIn": 0.0784,
+      "simIn": 0.08,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -53724,16 +53591,30 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-      "score": 0.1144,
+      "score": 0.1151,
       "simOut": 0.1053,
-      "simIn": 0.1282,
+      "simIn": 0.1299,
       "sharedOut": 2,
       "sharedIn": 10,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx",
+      "score": 0.1127,
+      "simOut": 0.0667,
+      "simIn": 0.1818,
+      "sharedOut": 1,
+      "sharedIn": 12,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
       "highValueConvergence": false
     }
   ],
@@ -53748,7 +53629,7 @@
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     },
@@ -53768,9 +53649,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.0516,
+      "score": 0.0533,
       "simOut": 0,
-      "simIn": 0.129,
+      "simIn": 0.1333,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -54559,20 +54440,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0889,
-      "simOut": 0,
-      "simIn": 0.2222,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/customize/custom-domains/self-managed-certificates/tls-ssl.mdx",
       "score": 0.0857,
       "simOut": 0,
@@ -54584,6 +54451,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
+      "score": 0.0842,
+      "simOut": 0,
+      "simIn": 0.2105,
+      "sharedOut": 0,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -54618,9 +54499,9 @@
   "main/docs/secure/attack-protection/brute-force-protection.mdx": [
     {
       "id": "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
-      "score": 0.3317,
+      "score": 0.3267,
       "simOut": 0.3,
-      "simIn": 0.3793,
+      "simIn": 0.3667,
       "sharedOut": 3,
       "sharedIn": 11,
       "reasons": [
@@ -54633,9 +54514,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/breached-password-detection.mdx",
-      "score": 0.2545,
+      "score": 0.244,
       "simOut": 0.0909,
-      "simIn": 0.5,
+      "simIn": 0.4737,
       "sharedOut": 1,
       "sharedIn": 9,
       "reasons": [
@@ -54647,9 +54528,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/bot-detection.mdx",
-      "score": 0.2011,
+      "score": 0.194,
       "simOut": 0.0625,
-      "simIn": 0.4091,
+      "simIn": 0.3913,
       "sharedOut": 1,
       "sharedIn": 9,
       "reasons": [
@@ -54661,9 +54542,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0992,
+      "score": 0.0985,
       "simOut": 0.1,
-      "simIn": 0.098,
+      "simIn": 0.0962,
       "sharedOut": 1,
       "sharedIn": 5,
       "reasons": [
@@ -54675,9 +54556,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/bot-detection/configure-captcha.mdx",
-      "score": 0.0889,
+      "score": 0.0842,
       "simOut": 0,
-      "simIn": 0.2222,
+      "simIn": 0.2105,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -54689,9 +54570,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/view-attack-protection-events.mdx",
-      "score": 0.087,
+      "score": 0.0833,
       "simOut": 0,
-      "simIn": 0.2174,
+      "simIn": 0.2083,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -54703,9 +54584,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
-      "score": 0.0778,
+      "score": 0.0757,
       "simOut": 0,
-      "simIn": 0.1944,
+      "simIn": 0.1892,
       "sharedOut": 0,
       "sharedIn": 7,
       "reasons": [
@@ -54717,9 +54598,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-use-cases.mdx",
-      "score": 0.0667,
+      "score": 0.0632,
       "simOut": 0,
-      "simIn": 0.1667,
+      "simIn": 0.1579,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -54731,9 +54612,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx",
-      "score": 0.0667,
+      "score": 0.0632,
       "simOut": 0,
-      "simIn": 0.1667,
+      "simIn": 0.1579,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -54745,9 +54626,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx",
-      "score": 0.0632,
+      "score": 0.06,
       "simOut": 0,
-      "simIn": 0.1579,
+      "simIn": 0.15,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -56052,8 +55933,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.2957,
-      "simOut": 0.3333,
+      "score": 0.3138,
+      "simOut": 0.3636,
       "simIn": 0.2391,
       "sharedOut": 4,
       "sharedIn": 11,
@@ -56124,9 +56005,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.1601,
+      "score": 0.1613,
       "simOut": 0.1875,
-      "simIn": 0.119,
+      "simIn": 0.122,
       "sharedOut": 3,
       "sharedIn": 5,
       "reasons": [
@@ -56339,9 +56220,9 @@
     },
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.2185,
+      "score": 0.2218,
       "simOut": 0.2308,
-      "simIn": 0.2,
+      "simIn": 0.2083,
       "sharedOut": 3,
       "sharedIn": 5,
       "reasons": [
@@ -56468,8 +56349,8 @@
   "main/docs/secure/tokens/id-tokens.mdx": [
     {
       "id": "main/docs/secure/tokens/id-tokens/validate-id-tokens.mdx",
-      "score": 0.2957,
-      "simOut": 0.3333,
+      "score": 0.3138,
+      "simOut": 0.3636,
       "simIn": 0.2391,
       "sharedOut": 4,
       "sharedIn": 11,
@@ -56483,8 +56364,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens/id-token-structure.mdx",
-      "score": 0.2277,
-      "simOut": 0.3636,
+      "score": 0.2495,
+      "simOut": 0.4,
       "simIn": 0.0238,
       "sharedOut": 4,
       "sharedIn": 1,
@@ -56497,8 +56378,8 @@
     },
     {
       "id": "main/docs/secure/tokens.mdx",
-      "score": 0.1917,
-      "simOut": 0.2143,
+      "score": 0.2016,
+      "simOut": 0.2308,
       "simIn": 0.1579,
       "sharedOut": 3,
       "sharedIn": 9,
@@ -56512,8 +56393,8 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens/get-id-tokens.mdx",
-      "score": 0.18,
-      "simOut": 0.2667,
+      "score": 0.1914,
+      "simOut": 0.2857,
       "simIn": 0.05,
       "sharedOut": 4,
       "sharedIn": 2,
@@ -56526,8 +56407,8 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens.mdx",
-      "score": 0.1708,
-      "simOut": 0.0625,
+      "score": 0.1733,
+      "simOut": 0.0667,
       "simIn": 0.3333,
       "sharedOut": 1,
       "sharedIn": 19,
@@ -56540,8 +56421,8 @@
     },
     {
       "id": "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx",
-      "score": 0.1412,
-      "simOut": 0.0714,
+      "score": 0.1445,
+      "simOut": 0.0769,
       "simIn": 0.2459,
       "sharedOut": 1,
       "sharedIn": 15,
@@ -56554,8 +56435,8 @@
     },
     {
       "id": "main/docs/secure/tokens/json-web-tokens/validate-json-web-tokens.mdx",
-      "score": 0.1273,
-      "simOut": 0.1667,
+      "score": 0.1364,
+      "simOut": 0.1818,
       "simIn": 0.0682,
       "sharedOut": 2,
       "sharedIn": 3,
@@ -56567,42 +56448,42 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.1237,
-      "simOut": 0.0625,
-      "simIn": 0.2154,
-      "sharedOut": 1,
-      "sharedIn": 14,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/access-tokens/validate-access-tokens.mdx",
-      "score": 0.1214,
-      "simOut": 0.0714,
-      "simIn": 0.1964,
-      "sharedOut": 1,
-      "sharedIn": 11,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/secure/multi-factor-authentication/step-up-authentication/configure-step-up-authentication-for-web-apps.mdx",
-      "score": 0.12,
-      "simOut": 0.2,
+      "score": 0.1286,
+      "simOut": 0.2143,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
+      "score": 0.1275,
+      "simOut": 0.0667,
+      "simIn": 0.2188,
+      "sharedOut": 1,
+      "sharedIn": 14,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/access-tokens/validate-access-tokens.mdx",
+      "score": 0.1247,
+      "simOut": 0.0769,
+      "simIn": 0.1964,
+      "sharedOut": 1,
+      "sharedIn": 11,
+      "reasons": [
+        "shared_inbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -56743,9 +56624,9 @@
     },
     {
       "id": "main/docs/secure/tokens/token-best-practices.mdx",
-      "score": 0.0598,
+      "score": 0.0603,
       "simOut": 0.0588,
-      "simIn": 0.0612,
+      "simIn": 0.0625,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -56887,15 +56768,15 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.1108,
+      "score": 0.1111,
       "simOut": 0.1538,
-      "simIn": 0.0462,
+      "simIn": 0.0469,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -57039,7 +56920,7 @@
       "reasons": [
         "shared_outbound"
       ],
-      "isCrossNav": false,
+      "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
     }
@@ -57172,16 +57053,16 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/access-tokens/validate-access-tokens.mdx",
-      "score": 0.0387,
+      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
+      "score": 0.039,
       "simOut": 0,
-      "simIn": 0.0968,
+      "simIn": 0.0976,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     }
@@ -57745,28 +57626,41 @@
   "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx": [
     {
       "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.253,
+      "score": 0.2448,
       "simOut": 0.3636,
-      "simIn": 0.087,
+      "simIn": 0.0667,
       "sharedOut": 4,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
+      "score": 0.2051,
+      "simOut": 0.2308,
+      "simIn": 0.1667,
+      "sharedOut": 3,
+      "sharedIn": 2,
+      "reasons": [
+        "shared_outbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens/get-refresh-tokens.mdx",
-      "score": 0.2308,
-      "simOut": 0.2308,
+      "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
+      "score": 0.1846,
+      "simOut": 0.1538,
       "simIn": 0.2308,
-      "sharedOut": 3,
+      "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
-        "shared_outbound",
         "shared_inbound"
       ],
       "isCrossNav": false,
@@ -57775,38 +57669,10 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
-      "score": 0.2091,
-      "simOut": 0.1818,
-      "simIn": 0.25,
-      "sharedOut": 2,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-expiration.mdx",
-      "score": 0.2066,
-      "simOut": 0.1538,
-      "simIn": 0.2857,
-      "sharedOut": 2,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-      "score": 0.0875,
-      "simOut": 0.0588,
-      "simIn": 0.1304,
-      "sharedOut": 1,
+      "score": 0.12,
+      "simOut": 0,
+      "simIn": 0.3,
+      "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
         "shared_inbound"
@@ -57817,9 +57683,9 @@
     },
     {
       "id": "main/docs/get-started/apis/api-settings.mdx",
-      "score": 0.08,
+      "score": 0.0857,
       "simOut": 0,
-      "simIn": 0.2,
+      "simIn": 0.2143,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -57831,9 +57697,9 @@
     },
     {
       "id": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
-      "score": 0.0444,
+      "score": 0.0462,
       "simOut": 0,
-      "simIn": 0.1111,
+      "simIn": 0.1154,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -57845,9 +57711,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-      "score": 0.0293,
+      "score": 0.03,
       "simOut": 0,
-      "simIn": 0.0732,
+      "simIn": 0.075,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -59260,6 +59126,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
+      "score": 0.083,
+      "simOut": 0,
+      "simIn": 0.2075,
+      "sharedOut": 0,
+      "sharedIn": 11,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/enable-enterprise-connections.mdx",
       "score": 0.0828,
       "simOut": 0,
@@ -59280,20 +59160,6 @@
       "simIn": 0.2069,
       "sharedOut": 0,
       "sharedIn": 6,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.0815,
-      "simOut": 0,
-      "simIn": 0.2037,
-      "sharedOut": 0,
-      "sharedIn": 11,
       "reasons": [
         "shared_inbound"
       ],
@@ -60300,9 +60166,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0387,
+      "score": 0.0375,
       "simOut": 0,
-      "simIn": 0.0968,
+      "simIn": 0.0938,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -70007,9 +69873,9 @@
     },
     {
       "id": "main/docs/secure/tokens/refresh-tokens/use-refresh-tokens.mdx",
-      "score": 0.0444,
+      "score": 0.0462,
       "simOut": 0,
-      "simIn": 0.1111,
+      "simIn": 0.1154,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -70076,7 +69942,7 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
+      "id": "main/docs/deploy-monitor/logs.mdx",
       "score": 0.0351,
       "simOut": 0,
       "simIn": 0.0877,
@@ -70090,12 +69956,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0351,
+      "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+      "score": 0.0308,
       "simOut": 0,
-      "simIn": 0.0877,
+      "simIn": 0.0769,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -70162,20 +70028,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
-      "score": 0.0308,
-      "simOut": 0,
-      "simIn": 0.0769,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/deploy-monitor/logs.mdx",
       "score": 0.0308,
       "simOut": 0,
@@ -70200,6 +70052,20 @@
         "shared_inbound"
       ],
       "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/refresh-tokens.mdx",
+      "score": 0.0231,
+      "simOut": 0,
+      "simIn": 0.0577,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     }
@@ -73393,9 +73259,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0522,
+      "score": 0.05,
       "simOut": 0,
-      "simIn": 0.1304,
+      "simIn": 0.125,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -73521,9 +73387,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0632,
+      "score": 0.06,
       "simOut": 0,
-      "simIn": 0.1579,
+      "simIn": 0.15,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -73649,9 +73515,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0667,
+      "score": 0.0632,
       "simOut": 0,
-      "simIn": 0.1667,
+      "simIn": 0.1579,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -73864,20 +73730,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
-      "score": 0.0632,
-      "simOut": 0,
-      "simIn": 0.1579,
-      "sharedOut": 0,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/authenticate/login/cross-origin-authentication.mdx",
       "score": 0.0632,
       "simOut": 0,
@@ -73889,6 +73741,20 @@
       ],
       "isCrossNav": true,
       "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/attack-protection/brute-force-protection.mdx",
+      "score": 0.06,
+      "simOut": 0,
+      "simIn": 0.15,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -74471,9 +74337,9 @@
   "main/docs/get-started/applications/rotate-client-secret.mdx": [
     {
       "id": "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "score": 0.0667,
+      "score": 0.0706,
       "simOut": 0,
-      "simIn": 0.1667,
+      "simIn": 0.1765,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [

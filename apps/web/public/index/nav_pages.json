@@ -5180,114 +5180,11 @@
   },
   "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx": {
     "filePath": "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:secure",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/page:docs/secure/tokens/manage-refresh-tokens-with-auth0-manageme"
-        ],
-        "labels": [
-          "Documentation",
-          "Secure",
-          "Protect Your Application",
-          "Tokens",
-          "Manage Refresh Tokens with Auth0 Management API"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Manage Refresh Tokens with Auth0 Management API",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Manage Refresh Tokens with Auth0 Management API"
-      }
-    ],
-    "navLabel": "Manage Refresh Tokens with Auth0 Management API",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/secure/tokens/refresh-tokens.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/secure/tokens/refresh-tokens",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:secure",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens:docs/secure/tokens/refresh"
-        ],
-        "labels": [
-          "Documentation",
-          "Secure",
-          "Protect Your Application",
-          "Tokens",
-          "Refresh Tokens",
-          "Refresh Tokens"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Refresh Tokens",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Tokens"
-      }
-    ],
-    "navLabel": "Refresh Tokens",
-    "navLabelSource": "frontmatter"
-  },
-  "main/docs/secure/tokens/revoke-tokens.mdx": {
-    "filePath": "main/docs/secure/tokens/revoke-tokens.mdx",
-    "navDepth": 4,
-    "navNodePaths": [
-      {
-        "route": "docs/secure/tokens/revoke-tokens",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:secure",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/page:docs/secure/tokens/revoke-tokens:docs/secure/tokens/revoke-t"
-        ],
-        "labels": [
-          "Documentation",
-          "Secure",
-          "Protect Your Application",
-          "Tokens",
-          "Revoke Tokens"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Revoke Tokens",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Revoke Tokens"
-      }
-    ],
-    "navLabel": "Revoke Tokens",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/secure/tokens/token-best-practices.mdx": {
     "filePath": "main/docs/secure/tokens/token-best-practices.mdx",
@@ -5366,7 +5263,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation.mdx",
-    "navDepth": 5,
+    "navDepth": 6,
     "navNodePaths": [
       {
         "route": "docs/secure/tokens/refresh-tokens/configure-refresh-token-rotation",
@@ -5376,7 +5273,8 @@
           "root/tab:documentation/dropdown:secure/group:protect-your-application",
           "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
           "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/configure-refresh-token-ro"
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation/page:docs/secure/tokens/refresh-tokens/configure-refresh-token-ro"
         ],
         "labels": [
           "Documentation",
@@ -5384,6 +5282,7 @@
           "Protect Your Application",
           "Tokens",
           "Refresh Tokens",
+          "Refresh Token Rotation",
           "Configure Refresh Token Rotation"
         ],
         "kinds": [
@@ -5392,12 +5291,13 @@
           "group",
           "group",
           "group",
+          "group",
           "page"
         ],
         "leafLabel": "Configure Refresh Token Rotation",
         "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Configure Refresh Token Rotation"
+        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation",
+        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation > Configure Refresh Token Rotation"
       }
     ],
     "navLabel": "Configure Refresh Token Rotation",
@@ -5405,7 +5305,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation.mdx",
-    "navDepth": 5,
+    "navDepth": 6,
     "navNodePaths": [
       {
         "route": "docs/secure/tokens/refresh-tokens/disable-refresh-token-rotation",
@@ -5415,7 +5315,8 @@
           "root/tab:documentation/dropdown:secure/group:protect-your-application",
           "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
           "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/disable-refresh-token-rota"
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation/page:docs/secure/tokens/refresh-tokens/disable-refresh-token-rota"
         ],
         "labels": [
           "Documentation",
@@ -5423,6 +5324,7 @@
           "Protect Your Application",
           "Tokens",
           "Refresh Tokens",
+          "Refresh Token Rotation",
           "Disable Refresh Token Rotation"
         ],
         "kinds": [
@@ -5431,12 +5333,13 @@
           "group",
           "group",
           "group",
+          "group",
           "page"
         ],
         "leafLabel": "Disable Refresh Token Rotation",
         "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Disable Refresh Token Rotation"
+        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation",
+        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation > Disable Refresh Token Rotation"
       }
     ],
     "navLabel": "Disable Refresh Token Rotation",
@@ -5501,7 +5404,7 @@
           "Protect Your Application",
           "Tokens",
           "Refresh Tokens",
-          "Refresh Tokens with Actions"
+          "Manage Refresh Tokens with Actions"
         ],
         "kinds": [
           "tab",
@@ -5511,13 +5414,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Refresh Tokens with Actions",
+        "leafLabel": "Manage Refresh Tokens with Actions",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Tokens with Actions"
+        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Manage Refresh Tokens with Actions"
       }
     ],
-    "navLabel": "Refresh Tokens with Actions",
+    "navLabel": "Manage Refresh Tokens with Actions",
     "navLabelSource": "frontmatter"
   },
   "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx": {
@@ -5564,84 +5467,11 @@
   },
   "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata.mdx",
-    "navDepth": 6,
-    "navNodePaths": [
-      {
-        "route": "docs/secure/tokens/refresh-tokens/refresh-token-metadata",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:secure",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-metadata",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-metadata/page:docs/secure/tokens/refresh-tokens/refresh-token-metadata:doc"
-        ],
-        "labels": [
-          "Documentation",
-          "Secure",
-          "Protect Your Application",
-          "Tokens",
-          "Refresh Tokens",
-          "Refresh Token Metadata",
-          "Refresh Token Metadata"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Refresh Token Metadata",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Metadata",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Metadata > Refresh Token Metadata"
-      }
-    ],
-    "navLabel": "Refresh Token Metadata",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/secure/tokens/refresh-tokens/refresh-token-rotation",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:secure",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/refresh-token-rotation:doc"
-        ],
-        "labels": [
-          "Documentation",
-          "Secure",
-          "Protect Your Application",
-          "Tokens",
-          "Refresh Tokens",
-          "Refresh Token Rotation"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Refresh Token Rotation",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation"
-      }
-    ],
-    "navLabel": "Refresh Token Rotation",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens.mdx",
@@ -5684,7 +5514,7 @@
   },
   "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx": {
     "filePath": "main/docs/secure/tokens/refresh-tokens/use-refresh-token-rotation.mdx",
-    "navDepth": 5,
+    "navDepth": 6,
     "navNodePaths": [
       {
         "route": "docs/secure/tokens/refresh-tokens/use-refresh-token-rotation",
@@ -5694,7 +5524,8 @@
           "root/tab:documentation/dropdown:secure/group:protect-your-application",
           "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens",
           "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens",
-          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/page:docs/secure/tokens/refresh-tokens/use-refresh-token-rotation"
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation",
+          "root/tab:documentation/dropdown:secure/group:protect-your-application/group:tokens/group:refresh-tokens/group:refresh-token-rotation/page:docs/secure/tokens/refresh-tokens/use-refresh-token-rotation"
         ],
         "labels": [
           "Documentation",
@@ -5702,6 +5533,7 @@
           "Protect Your Application",
           "Tokens",
           "Refresh Tokens",
+          "Refresh Token Rotation",
           "Use Refresh Token Rotation"
         ],
         "kinds": [
@@ -5710,12 +5542,13 @@
           "group",
           "group",
           "group",
+          "group",
           "page"
         ],
         "leafLabel": "Use Refresh Token Rotation",
         "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens",
-        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Use Refresh Token Rotation"
+        "containerString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation",
+        "pathString": "Documentation > Secure > Protect Your Application > Tokens > Refresh Tokens > Refresh Token Rotation > Use Refresh Token Rotation"
       }
     ],
     "navLabel": "Use Refresh Token Rotation",
@@ -63722,6 +63555,42 @@
     "navLabel": "create connection keys",
     "navLabelSource": "fallback"
   },
+  "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx": {
+    "filePath": "main/docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/connections/create-or-replace-synchronized-group-selections-for-a-directory-provisioning-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:connections",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:connections/page:docs/api/management/v2/connections/create-or-replace-synchro"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Connections",
+          "create or replace synchronized group selections for a directory provisioning configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "create or replace synchronized group selections for a directory provisioning configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Connections",
+        "pathString": "API Reference > Management API >   > Connections > create or replace synchronized group selections for a directory provisioning configuration"
+      }
+    ],
+    "navLabel": "create or replace synchronized group selections for a directory provisioning configuration",
+    "navLabelSource": "fallback"
+  },
   "main/docs/api/management/v2/connections/delete-a-connection-user.mdx": {
     "filePath": "main/docs/api/management/v2/connections/delete-a-connection-user.mdx",
     "navDepth": 4,
@@ -64224,6 +64093,42 @@
       }
     ],
     "navLabel": "get enabled clients for a connection",
+    "navLabelSource": "fallback"
+  },
+  "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx": {
+    "filePath": "main/docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/api/management/v2/connections/get-synchronized-groups-for-a-directory-provisioning-configuration",
+        "nodeIds": [
+          "root/tab:api-reference",
+          "root/tab:api-reference/dropdown:management-api",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:connections",
+          "root/tab:api-reference/dropdown:management-api/group:unnamed/group:connections/page:docs/api/management/v2/connections/get-synchronized-groups-f"
+        ],
+        "labels": [
+          "API Reference",
+          "Management API",
+          " ",
+          "Connections",
+          "get synchronized groups for a directory provisioning configuration"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "get synchronized groups for a directory provisioning configuration",
+        "leafLabelSource": "fallback",
+        "containerString": "API Reference > Management API >   > Connections",
+        "pathString": "API Reference > Management API >   > Connections > get synchronized groups for a directory provisioning configuration"
+      }
+    ],
+    "navLabel": "get synchronized groups for a directory provisioning configuration",
     "navLabelSource": "fallback"
   },
   "main/docs/api/management/v2/connections/patch-a-connections-scim-configuration.mdx": {

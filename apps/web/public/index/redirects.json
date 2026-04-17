@@ -1,6 +1,10 @@
 {
   "redirects": [
     {
+      "source": "/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api",
+      "destination": "/docs/secure/tokens/refresh-tokens/revoke-refresh-tokens"
+    },
+    {
       "source": "/docs/customize/phone-messages/customize-phone-templates",
       "destination": "/docs/customize/phone-messages/phone-templates"
     },
@@ -3813,16 +3817,20 @@
       "destination": "/docs/secure/tokens/delegation-tokens"
     },
     {
+      "source": "/docs/secure/tokens/revoke-tokens",
+      "destination": "/docs/secure/tokens"
+    },
+    {
       "source": "/docs/security/tokens/revoke-tokens",
-      "destination": "/docs/secure/tokens/revoke-tokens"
+      "destination": "/docs/secure/tokens"
     },
     {
       "source": "/docs/tokens/guides/revoke-tokens",
-      "destination": "/docs/secure/tokens/revoke-tokens"
+      "destination": "/docs/secure/tokens"
     },
     {
       "source": "/docs/tokens/revoke-tokens",
-      "destination": "/docs/secure/tokens/revoke-tokens"
+      "destination": "/docs/secure/tokens"
     },
     {
       "source": "/docs/security/tokens/refresh-tokens/revoke-refresh-tokens",
@@ -23890,16 +23898,20 @@
         "destination": "/docs/secure/tokens/delegation-tokens"
       },
       {
+        "source": "/docs/secure/tokens/revoke-tokens",
+        "destination": "/docs/secure/tokens"
+      },
+      {
         "source": "/docs/security/tokens/revoke-tokens",
-        "destination": "/docs/secure/tokens/revoke-tokens"
+        "destination": "/docs/secure/tokens"
       },
       {
         "source": "/docs/tokens/guides/revoke-tokens",
-        "destination": "/docs/secure/tokens/revoke-tokens"
+        "destination": "/docs/secure/tokens"
       },
       {
         "source": "/docs/tokens/revoke-tokens",
-        "destination": "/docs/secure/tokens/revoke-tokens"
+        "destination": "/docs/secure/tokens"
       },
       {
         "source": "/docs/security/tokens/refresh-tokens/revoke-refresh-tokens",
