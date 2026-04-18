@@ -1,11 +1,11 @@
 {
-  "generatedAtUtc": "2026-04-17T04:52:40.148Z",
+  "generatedAtUtc": "2026-04-18T04:35:49.565Z",
   "pagesScanned": 2682,
-  "blocksFound": 3387,
-  "uniqueBlocks": 2745,
+  "blocksFound": 3389,
+  "uniqueBlocks": 2747,
   "byLang": {
     "(none)": 2860,
-    "bash": 134,
+    "bash": 135,
     "json": 45,
     "js": 7,
     "terraform": 4,
@@ -13,7 +13,7 @@
     "curl": 19,
     "javascript": 67,
     "python": 10,
-    "text": 12,
+    "text": 13,
     "java": 5,
     "powershell": 1,
     "shellscript": 2,
@@ -24476,6 +24476,28 @@
       "snippetId": "s_178b8e947a",
       "occurrences": 1,
       "preview": "### Iterate Through All Claims To see all available user information: ```cs UserClaims.cs lines if (!loginResult.IsError) { foreach (var cl…"
+    },
+    {
+      "filePath": "main/docs/quickstart/native/react-native-expo/index.mdx",
+      "startLine": 23,
+      "endLine": 25,
+      "lang": "bash",
+      "code": "npx skills add auth0/agent-skills --skill auth0-quickstart --skill auth0-expo",
+      "hash": "446489b91bb2145f4383995fc8a0e0f2d6830d8e730435291d03601946d1768b",
+      "snippetId": "s_446489b91b",
+      "occurrences": 1,
+      "preview": "npx skills add auth0/agent-skills --skill auth0-quickstart --skill auth0-expo"
+    },
+    {
+      "filePath": "main/docs/quickstart/native/react-native-expo/index.mdx",
+      "startLine": 29,
+      "endLine": 31,
+      "lang": "text",
+      "code": "Add Auth0 authentication to my Expo app",
+      "hash": "b5beb44df959df1c59511cad31447488c34c3c9306fa21fe7bc34ca589e81f33",
+      "snippetId": "s_b5beb44df9",
+      "occurrences": 1,
+      "preview": "Add Auth0 authentication to my Expo app"
     },
     {
       "filePath": "main/docs/quickstart/native/react-native/index.mdx",

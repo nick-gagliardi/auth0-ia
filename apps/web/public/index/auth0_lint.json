@@ -16194,14 +16194,14 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "await authorize({customScheme: 'auth0sample', scope: 'openid profile email'});",
-          "line": 158
+          "line": 178
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "<Tab title=\"Hooks-based (with Provider)\">",
-          "line": 138
+          "line": 158
         }
       ]
     },
@@ -21402,14 +21402,14 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "await authorize({customScheme: 'auth0sample', scope: 'openid profile email'});",
-        "line": 158
+        "line": 178
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "<Tab title=\"Hooks-based (with Provider)\">",
-        "line": 138
+        "line": 158
       }
     ],
     "main/docs/quickstart/native/react-native/index.mdx": [
