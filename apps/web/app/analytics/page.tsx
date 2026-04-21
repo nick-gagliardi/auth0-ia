@@ -7,15 +7,17 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Progress } from '@/components/ui/progress';
 import {
   ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle, Eye, Search, Users,
   Lightbulb, Sparkles, ChevronDown, ChevronRight, Loader2, Wand2, Brain,
-  ArrowRight, ExternalLink, GitBranch,
+  ArrowRight, ExternalLink, GitBranch, TrendingUp, TrendingDown, BarChart3,
 } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import type { FeedbackSuggestion, AnalyticsInsight } from '@/types';
 import { SiteGraphHeatmap } from '@/components/analytics/site-graph-heatmap';
 import { InsightsDashboard } from '@/components/analytics/insights-dashboard';
+import { FeedbackDashboard } from '@/components/analytics/feedback-dashboard';
 import { categoryColor } from '@/lib/insight-colors';
 import { useNodes, useMetrics, useEdgesOutbound } from '@/hooks/use-index-data';
 
@@ -731,175 +733,18 @@ export default function AnalyticsPage() {
         </TabsContent>
 
         <TabsContent value="feedback" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>Recent Feedback</CardTitle>
-              <CardDescription>
-                {feedback.length} items from the selected period
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {feedback.length === 0 ? (
-                <div className="text-center py-8 text-muted-foreground">
-                  No feedback found for the selected filters
-                </div>
-              ) : (
-                feedback.slice(0, 50).map((item) => (
-                  <div
-                    key={item.id}
-                    className="border rounded-lg p-4 space-y-2 hover:bg-accent/50 transition-colors"
-                  >
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex-1 space-y-1">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <code className="text-xs bg-muted px-2 py-1 rounded">
-                            {item.path}
-                          </code>
-                          <Badge variant={item.helpful === true ? 'default' : item.helpful === false ? 'destructive' : 'secondary'}>
-                            {item.helpful === true ? (
-                              <><ThumbsUp className="h-3 w-3 mr-1" /> Helpful</>
-                            ) : item.helpful === false ? (
-                              <><ThumbsDown className="h-3 w-3 mr-1" /> Unhelpful</>
-                            ) : (
-                              'No rating'
-                            )}
-                          </Badge>
-                          <Badge variant="outline">
-                            {item.source === 'contextual' && <><MessageSquare className="h-3 w-3 mr-1" /> Contextual</>}
-                            {item.source === 'code_snippet' && <><Code className="h-3 w-3 mr-1" /> Code</>}
-                            {item.source === 'thumbs_only' && <><FileText className="h-3 w-3 mr-1" /> Quick</>}
-                          </Badge>
-                          <Badge variant="outline">{item.status}</Badge>
-                        </div>
-                        {item.comment && (
-                          <p className="text-sm text-muted-foreground">{item.comment}</p>
-                        )}
-                        {item.code && (
-                          <pre className="text-xs bg-muted p-2 rounded overflow-x-auto mt-2">
-                            <code>{item.code}</code>
-                          </pre>
-                        )}
-                      </div>
-                      <div className="flex flex-col items-end gap-2">
-                        <div className="text-xs text-muted-foreground whitespace-nowrap">
-                          {new Date(item.createdAt).toLocaleDateString()}
-                        </div>
-                        {item.comment && (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() =>
-                              suggestionsMap[item.id]
-                                ? toggleSuggestions(item.id)
-                                : handleGetSuggestions(item)
-                            }
-                            disabled={suggestingId === item.id}
-                          >
-                            {suggestingId === item.id ? (
-                              <><Loader2 className="h-3 w-3 mr-1 animate-spin" /> Analyzing...</>
-                            ) : suggestionsMap[item.id] ? (
-                              <>{expandedSuggestions.has(item.id) ? <ChevronDown className="h-3 w-3 mr-1" /> : <ChevronRight className="h-3 w-3 mr-1" />} Suggestions ({suggestionsMap[item.id].length})</>
-                            ) : (
-                              <><Wand2 className="h-3 w-3 mr-1" /> Get Suggestions</>
-                            )}
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Suggestion error */}
-                    {suggestError[item.id] && (
-                      <div className="text-sm text-destructive flex items-center gap-1 mt-2">
-                        <AlertCircle className="h-3 w-3" />
-                        {suggestError[item.id]}
-                      </div>
-                    )}
-
-                    {/* Suggestion loading skeleton */}
-                    {suggestingId === item.id && (
-                      <div className="mt-3 space-y-2">
-                        <Skeleton className="h-20 w-full" />
-                        <Skeleton className="h-20 w-full" />
-                      </div>
-                    )}
-
-                    {/* Suggestion cards */}
-                    {suggestionsMap[item.id] && expandedSuggestions.has(item.id) && (
-                      <div className="mt-3 space-y-2 pl-4 border-l-2 border-primary/20">
-                        {suggestionsMap[item.id].map((s, idx) => {
-                          const prKey = `${item.id}:${idx}`;
-                          const prResult = prResults[prKey];
-                          const isCreatingPr = creatingPrFor === prKey;
-
-                          return (
-                            <div
-                              key={idx}
-                              className="bg-muted/50 rounded-lg p-3 space-y-2"
-                            >
-                              <div className="flex items-center gap-2 flex-wrap">
-                                <span className="font-medium text-sm">{s.title}</span>
-                                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor(s.category)}`}>
-                                  {s.category}
-                                </span>
-                                <Badge variant={s.confidence === 'high' ? 'default' : s.confidence === 'medium' ? 'secondary' : 'outline'}>
-                                  {s.confidence}
-                                </Badge>
-                              </div>
-                              <p className="text-sm text-muted-foreground">{s.description}</p>
-                              <div className="flex items-start gap-1 text-sm">
-                                <ArrowRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
-                                <span>{s.suggestedAction}</span>
-                              </div>
-
-                              {/* PR creation button and result */}
-                              <div className="flex items-center gap-2 pt-1">
-                                {!prResult?.url && (
-                                  <Button
-                                    variant="outline"
-                                    size="sm"
-                                    className="h-7 text-xs gap-1.5"
-                                    disabled={isCreatingPr || !!creatingPrFor}
-                                    onClick={() => handleOpenPrForSuggestion(item.id, idx, item.path, s)}
-                                  >
-                                    {isCreatingPr ? (
-                                      <>
-                                        <Loader2 className="h-3 w-3 animate-spin" />
-                                        Creating PR…
-                                      </>
-                                    ) : (
-                                      <>
-                                        <GitBranch className="h-3 w-3" />
-                                        Open PR
-                                      </>
-                                    )}
-                                  </Button>
-                                )}
-                                {prResult?.url && (
-                                  <a
-                                    href={prResult.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline"
-                                  >
-                                    <GitBranch className="h-3 w-3" />
-                                    PR branch created
-                                    <ExternalLink className="h-3 w-3" />
-                                  </a>
-                                )}
-                                {prResult?.error && (
-                                  <span className="text-xs text-destructive">{prResult.error}</span>
-                                )}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
-                ))
-              )}
-            </CardContent>
-          </Card>
+          <FeedbackDashboard
+            feedback={feedback}
+            suggestionsMap={suggestionsMap}
+            expandedSuggestions={expandedSuggestions}
+            suggestingId={suggestingId}
+            suggestError={suggestError}
+            creatingPrFor={creatingPrFor}
+            prResults={prResults}
+            onGetSuggestions={handleGetSuggestions}
+            onToggleSuggestions={toggleSuggestions}
+            onOpenPr={handleOpenPrForSuggestion}
+          />
         </TabsContent>
 
         <TabsContent value="insights" className="space-y-4">
@@ -970,82 +815,141 @@ export default function AnalyticsPage() {
             mode={insightsMode}
           />
 
-          {/* Existing feedback stats — always shown below insights */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Top Pages by Feedback Volume</CardTitle>
-                <CardDescription>Pages receiving the most feedback</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {insights?.topPages.slice(0, 10).map((page, i) => (
-                    <div key={page.path} className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 flex-1 min-w-0">
-                        <span className="text-xs text-muted-foreground w-5">{i + 1}</span>
-                        <code className="text-xs truncate">{page.path}</code>
-                      </div>
-                      <Badge variant="secondary">{page.count}</Badge>
+          {/* Feedback intelligence dashboard */}
+          {insights && stats && (
+            <>
+              {/* Breakdowns row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Card>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium flex items-center gap-2">
+                      <BarChart3 className="h-4 w-4 text-muted-foreground" />
+                      Feedback by Source
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      {(() => {
+                        const entries = Object.entries(stats.bySource);
+                        const maxCount = Math.max(...entries.map(([, c]) => c), 1);
+                        return entries.map(([source, count]) => (
+                          <div key={source} className="space-y-1">
+                            <div className="flex items-center justify-between text-sm">
+                              <span className="capitalize flex items-center gap-1.5">
+                                {source === 'contextual' && <MessageSquare className="h-3 w-3 text-blue-500" />}
+                                {source === 'code_snippet' && <Code className="h-3 w-3 text-purple-500" />}
+                                {source === 'thumbs_only' && <ThumbsUp className="h-3 w-3 text-green-500" />}
+                                {source.replace(/_/g, ' ')}
+                              </span>
+                              <span className="text-muted-foreground font-mono text-xs">{count}</span>
+                            </div>
+                            <Progress value={(count / maxCount) * 100} className="h-2" />
+                          </div>
+                        ));
+                      })()}
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Pages Needing Attention</CardTitle>
-                <CardDescription>Pages with most unhelpful feedback</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {insights?.unhelpfulPages.slice(0, 10).map((page, i) => (
-                    <div key={page.path} className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 flex-1 min-w-0">
-                        <span className="text-xs text-muted-foreground w-5">{i + 1}</span>
-                        <code className="text-xs truncate">{page.path}</code>
-                      </div>
-                      <Badge variant="destructive">{page.count}</Badge>
+                <Card>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium flex items-center gap-2">
+                      <BarChart3 className="h-4 w-4 text-muted-foreground" />
+                      Feedback by Status
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      {(() => {
+                        const entries = Object.entries(stats.byStatus);
+                        const maxCount = Math.max(...entries.map(([, c]) => c), 1);
+                        const statusColors: Record<string, string> = {
+                          pending: 'text-yellow-500',
+                          in_progress: 'text-blue-500',
+                          resolved: 'text-green-500',
+                          dismissed: 'text-muted-foreground',
+                        };
+                        return entries.map(([status, count]) => (
+                          <div key={status} className="space-y-1">
+                            <div className="flex items-center justify-between text-sm">
+                              <span className={`capitalize ${statusColors[status] ?? ''}`}>
+                                {status.replace(/_/g, ' ')}
+                              </span>
+                              <span className="text-muted-foreground font-mono text-xs">{count}</span>
+                            </div>
+                            <Progress value={(count / maxCount) * 100} className="h-2" />
+                          </div>
+                        ));
+                      })()}
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Feedback by Source</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {stats && Object.entries(stats.bySource).map(([source, count]) => (
-                    <div key={source} className="flex items-center justify-between">
-                      <span className="text-sm capitalize">{source.replace('_', ' ')}</span>
-                      <Badge variant="secondary">{count}</Badge>
+              {/* Top pages row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Card>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium flex items-center gap-2">
+                      <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                      Top Pages by Feedback Volume
+                    </CardTitle>
+                    <CardDescription>Pages receiving the most feedback</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      {(() => {
+                        const pages = insights.topPages.slice(0, 10);
+                        const maxCount = Math.max(...pages.map((p) => p.count), 1);
+                        return pages.map((page, i) => (
+                          <div key={page.path} className="space-y-1">
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs text-muted-foreground w-5 shrink-0 font-mono">{i + 1}</span>
+                              <code className="text-xs truncate flex-1 min-w-0">{page.path}</code>
+                              <Badge variant="secondary" className="shrink-0 font-mono">{page.count}</Badge>
+                            </div>
+                            <div className="pl-7">
+                              <Progress value={(page.count / maxCount) * 100} className="h-1.5" />
+                            </div>
+                          </div>
+                        ));
+                      })()}
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Feedback by Status</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {stats && Object.entries(stats.byStatus).map(([status, count]) => (
-                    <div key={status} className="flex items-center justify-between">
-                      <span className="text-sm capitalize">{status.replace('_', ' ')}</span>
-                      <Badge variant="secondary">{count}</Badge>
+                <Card>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium flex items-center gap-2">
+                      <TrendingDown className="h-4 w-4 text-destructive" />
+                      Pages Needing Attention
+                    </CardTitle>
+                    <CardDescription>Pages with most unhelpful feedback</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      {(() => {
+                        const pages = insights.unhelpfulPages.slice(0, 10);
+                        const maxCount = Math.max(...pages.map((p) => p.count), 1);
+                        return pages.map((page, i) => (
+                          <div key={page.path} className="space-y-1">
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs text-muted-foreground w-5 shrink-0 font-mono">{i + 1}</span>
+                              <code className="text-xs truncate flex-1 min-w-0">{page.path}</code>
+                              <Badge variant="destructive" className="shrink-0 font-mono">{page.count}</Badge>
+                            </div>
+                            <div className="pl-7">
+                              <Progress value={(page.count / maxCount) * 100} className="h-1.5" />
+                            </div>
+                          </div>
+                        ));
+                      })()}
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </>
+          )}
         </TabsContent>
 
         <TabsContent value="graph" className="space-y-4">
