@@ -320,57 +320,17 @@ export default function AnalyticsPage() {
       }
 
       if (insightsMode === 'ai') {
-        // AI mode: server prepares prompt, client calls Anthropic directly
-        // Step 1: Get prepared prompt + algorithmic insights from server
+        // AI mode: server runs correlation + calls Claude, returns parsed insights
         const res = await fetch('/api/analytics/insights/ai-analyze', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ topPages, unhelpfulPages, searchQueries: searchQueriesPayload }),
         });
         const data = await res.json();
-        if (!data.ok) throw new Error(data.error || 'Failed to prepare insights analysis');
+        if (!data.ok) throw new Error(data.error || 'Failed to generate AI insights');
 
-        // Step 2: Fetch API key for client-side Anthropic call
-        const keyRes = await fetch('/api/settings/key');
-        if (!keyRes.ok) throw new Error('API key not configured. Add one in Settings.');
-        const { apiKey } = await keyRes.json();
-
-        // Step 3: Call Anthropic directly from browser (bypasses Vercel IP restrictions)
-        const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-        const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-        const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-
-        const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
-        if (isLiteLLMProxy) {
-          aiHeaders['Authorization'] = `Bearer ${apiKey}`;
-        } else {
-          aiHeaders['x-api-key'] = apiKey;
-          aiHeaders['anthropic-version'] = '2023-06-01';
-        }
-
-        const aiRes = await fetch(`${baseUrl}/v1/messages`, {
-          method: 'POST',
-          headers: aiHeaders,
-          body: JSON.stringify({
-            model,
-            max_tokens: 8192,
-            messages: [{ role: 'user', content: data.prompt }],
-          }),
-        });
-
-        if (!aiRes.ok) {
-          const errText = await aiRes.text().catch(() => '');
-          throw new Error(`AI request failed (${aiRes.status}): ${errText.slice(0, 200)}`);
-        }
-
-        const aiData = await aiRes.json();
-        const text: string = aiData.content?.[0]?.text || '';
-        const jsonMatch = text.match(/\{[\s\S]*\}/);
-        if (!jsonMatch) throw new Error('Failed to parse AI response');
-
-        const parsed = JSON.parse(jsonMatch[0]);
-        setAnalyticsInsights(parsed.insights || []);
-        setInsightsSummary(parsed.summary || '');
+        setAnalyticsInsights(data.insights || []);
+        setInsightsSummary(data.summary || '');
         setInsightsGenerated(true);
       } else {
         // Algorithmic mode: fully server-side, no Anthropic call needed
