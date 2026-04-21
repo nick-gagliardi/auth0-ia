@@ -75,12 +75,14 @@ export async function POST(req: Request) {
     }
 
     const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      'anthropic-version': '2023-06-01',
+    };
     if (isLiteLLMProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
     }
 
     // Topology summary

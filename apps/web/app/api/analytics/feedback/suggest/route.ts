@@ -33,12 +33,14 @@ export async function POST(req: Request) {
     }
 
     const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      'anthropic-version': '2023-06-01',
+    };
     if (isLiteLLMProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
     }
 
     const contentSection = pageContent
@@ -86,7 +88,9 @@ Rules:
 - Return ONLY the JSON, no other text.`;
 
     const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
-    const response = await fetch(`${baseUrl}/v1/messages`, {
+    const url = `${baseUrl}/v1/messages`;
+    console.log('[Feedback Suggest] calling', url, 'model:', model, 'proxy:', isLiteLLMProxy, 'keySource:', user.anthropic_api_key_decrypted ? 'user' : process.env.ANTHROPIC_API_KEY ? 'ANTHROPIC_API_KEY' : 'ANTHROPIC_AUTH_TOKEN');
+    const response = await fetch(url, {
       method: 'POST',
       headers,
       body: JSON.stringify({
