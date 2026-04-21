@@ -250,7 +250,7 @@ Generate the complete structured JSON response with feature summary, IA proposal
     const useProxy = isLiteLLMProxy && !!proxyToken;
     const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
     const finalKey = useProxy ? proxyToken : anthropicKey;
-    const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
     console.log('[DocGenerator] Using API:', { baseUrl, model, useProxy });
 

@@ -78,7 +78,7 @@ Rules:
     return NextResponse.json({
       ok: true,
       prompt,
-      model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet',
+      model: process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514',
     });
   } catch (err: any) {
     console.error('[Feedback Apply Changes] error:', err);

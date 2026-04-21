@@ -54,7 +54,7 @@ async function applyWithAi(
   const useProxy = isLiteLLMProxy && !!proxyToken;
   const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
   const finalKey = useProxy ? proxyToken : apiKey;
-  const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+  const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
   console.log('[Rules Deprecation] AI config:', { baseUrl, model, useProxy });
 
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };

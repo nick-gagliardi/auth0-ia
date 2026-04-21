@@ -206,7 +206,7 @@ async function checkStyleGuide(mdxContent: string, pageTitle: string, userApiKey
   }
 
   try {
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',

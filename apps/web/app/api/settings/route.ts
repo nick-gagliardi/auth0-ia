@@ -109,7 +109,7 @@ async function testAnthropicKey(apiKey: string): Promise<{ ok: boolean; error?: 
   try {
     const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
     // Use model name compatible with Okta LiteLLM proxy
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
     // Okta LiteLLM uses OpenAI-compatible format with Bearer token
     const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');

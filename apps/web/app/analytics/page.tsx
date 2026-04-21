@@ -215,7 +215,7 @@ export default function AnalyticsPage() {
       // Step 3: Call Anthropic directly from browser (bypasses Vercel IP restrictions)
       const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
       const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (isLiteLLMProxy) {
@@ -300,7 +300,7 @@ export default function AnalyticsPage() {
       // Step 3: Call Anthropic directly from browser
       const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
       const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
       const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
       if (isLiteLLMProxy) {
@@ -416,7 +416,7 @@ export default function AnalyticsPage() {
         // Step 3: Call Anthropic directly from browser (bypasses Vercel IP restrictions)
         const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
         const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-        const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+        const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
         const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
         if (isLiteLLMProxy) {

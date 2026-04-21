@@ -39,7 +39,7 @@ async function getAiSuggestions(content: string, pageTitle: string, pageUrl: str
 
     const endpoint = `${baseUrl}/v1/messages`;
     // Use model name compatible with Okta LiteLLM proxy
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
     console.log('[Anthropic] Request config:', { endpoint, model, baseUrl });
 
@@ -346,7 +346,7 @@ async function checkStyleGuide(mdxContent: string, pageTitle: string, userApiKey
   if (!apiKey) return null;
 
   try {
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',

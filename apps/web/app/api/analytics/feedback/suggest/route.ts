@@ -68,7 +68,7 @@ Rules:
 - Set confidence to "high" only when the feedback clearly maps to a specific page issue.
 - Return ONLY the JSON, no other text.`;
 
-    return NextResponse.json({ ok: true, prompt, model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet' });
+    return NextResponse.json({ ok: true, prompt, model: process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514' });
   } catch (err: any) {
     console.error('[Feedback Suggest] error:', err);
     return NextResponse.json(

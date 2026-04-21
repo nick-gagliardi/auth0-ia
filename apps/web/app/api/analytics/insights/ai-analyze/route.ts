@@ -125,7 +125,7 @@ Rules:
     return NextResponse.json({
       ok: true,
       prompt,
-      model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet',
+      model: process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514',
       algoInsights,
     });
   } catch (err: any) {

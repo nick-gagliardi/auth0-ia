@@ -237,7 +237,7 @@ export default function RulesDeprecationPage() {
 
       const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
       const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (isLiteLLMProxy) {

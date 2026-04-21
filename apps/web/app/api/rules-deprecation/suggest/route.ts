@@ -130,7 +130,7 @@ Rules:
 - Only include suggestions where you're confident there's a real issue.
 - Return ONLY the JSON, no other text.`;
 
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
     const response = await fetch(`${baseUrl}/v1/messages`, {
       method: 'POST',
       headers,
