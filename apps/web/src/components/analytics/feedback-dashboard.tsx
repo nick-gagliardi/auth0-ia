@@ -11,9 +11,10 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import {
   ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle,
   ChevronDown, ChevronRight, Loader2, Wand2, ArrowRight,
-  ExternalLink, GitBranch, BarChart3, ChevronLeft,
+  ExternalLink, GitBranch, BarChart3, ChevronLeft, Globe, Github,
+  AlertTriangle, Unlink, Network,
 } from 'lucide-react';
-import type { FeedbackSuggestion } from '@/types';
+import type { FeedbackSuggestion, DocNode, Metrics } from '@/types';
 import { categoryColor } from '@/lib/insight-colors';
 
 interface FeedbackItem {
@@ -38,6 +39,8 @@ interface FeedbackDashboardProps {
   suggestError: Record<string, string>;
   creatingPrFor: string | null;
   prResults: Record<string, { url?: string; error?: string }>;
+  indexNodes?: DocNode[];
+  indexMetrics?: Metrics;
   onGetSuggestions: (item: FeedbackItem) => void;
   onToggleSuggestions: (id: string) => void;
   onOpenPr: (feedbackId: string, idx: number, path: string, suggestion: FeedbackSuggestion) => void;
@@ -71,6 +74,8 @@ export function FeedbackDashboard({
   suggestError,
   creatingPrFor,
   prResults,
+  indexNodes,
+  indexMetrics,
   onGetSuggestions,
   onToggleSuggestions,
   onOpenPr,
@@ -78,6 +83,16 @@ export function FeedbackDashboard({
   const [page, setPage] = useState(0);
   const [viewMode, setViewMode] = useState<'grouped' | 'list'>('grouped');
   const [collapsedPages, setCollapsedPages] = useState<Set<string>>(new Set());
+
+  // ── Path lookup maps ───────────────────────────────────
+  const nodeByPath = useMemo(() => {
+    if (!indexNodes) return new Map<string, DocNode>();
+    const map = new Map<string, DocNode>();
+    for (const node of indexNodes) {
+      if (node.permalink) map.set(node.permalink, node);
+    }
+    return map;
+  }, [indexNodes]);
 
   // ── Computed data ──────────────────────────────────────
   const grouped = useMemo(() => {
@@ -128,6 +143,62 @@ export function FeedbackDashboard({
     [feedback, page],
   );
   const totalPages = Math.ceil(feedback.length / PAGE_SIZE);
+
+  // ── Helper: build URLs from path ───────────────────────
+  const getGithubUrl = (feedbackPath: string) => {
+    const stripped = feedbackPath.replace(/^\/docs\//, '').replace(/^\//, '');
+    return `https://github.com/auth0/docs-v2/blob/main/articles/${stripped}.mdx`;
+  };
+  const getProductionUrl = (feedbackPath: string) => `https://auth0.com${feedbackPath}`;
+
+  // ── Helper: page context bar for a path ────────────────
+  const renderPageContext = (feedbackPath: string) => {
+    const node = nodeByPath.get(feedbackPath);
+    const m = node ? indexMetrics?.[node.id] : undefined;
+
+    return (
+      <div className="flex items-center gap-2 flex-wrap text-xs text-muted-foreground">
+        {node?.title && (
+          <span className="font-medium text-foreground truncate max-w-[300px]" title={node.title}>
+            {node.title}
+          </span>
+        )}
+        {m?.orphanTrue && (
+          <Badge variant="outline" className="text-xs gap-1 text-amber-600 border-amber-300">
+            <Unlink className="h-3 w-3" /> Orphan
+          </Badge>
+        )}
+        {m?.deadEnd && (
+          <Badge variant="outline" className="text-xs gap-1 text-red-600 border-red-300">
+            <AlertTriangle className="h-3 w-3" /> Dead End
+          </Badge>
+        )}
+        {(m?.hubScore ?? 0) > 5 && (
+          <Badge variant="outline" className="text-xs gap-1 text-blue-600 border-blue-300">
+            <Network className="h-3 w-3" /> Hub
+          </Badge>
+        )}
+        <a
+          href={getProductionUrl(feedbackPath)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Globe className="h-3 w-3" /> View page
+        </a>
+        <a
+          href={getGithubUrl(feedbackPath)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Github className="h-3 w-3" /> Source
+        </a>
+      </div>
+    );
+  };
 
   if (feedback.length === 0) {
     return (
@@ -302,6 +373,10 @@ export function FeedbackDashboard({
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <div className="ml-7 mt-1 mb-3 space-y-2">
+                        {/* Page context: title, health badges, links */}
+                        <div className="px-3 py-1.5">
+                          {renderPageContext(path)}
+                        </div>
                         {group.items.map((item) => (
                           <FeedbackItemCard
                             key={item.id}
@@ -341,6 +416,7 @@ export function FeedbackDashboard({
                   onGetSuggestions={onGetSuggestions}
                   onToggleSuggestions={onToggleSuggestions}
                   onOpenPr={onOpenPr}
+                  renderPageContext={renderPageContext}
                 />
               ))}
               {/* Pagination */}
@@ -390,6 +466,7 @@ function FeedbackItemCard({
   onGetSuggestions,
   onToggleSuggestions,
   onOpenPr,
+  renderPageContext,
 }: {
   item: FeedbackItem;
   compact: boolean;
@@ -402,6 +479,7 @@ function FeedbackItemCard({
   onGetSuggestions: (item: FeedbackItem) => void;
   onToggleSuggestions: (id: string) => void;
   onOpenPr: (feedbackId: string, idx: number, path: string, suggestion: FeedbackSuggestion) => void;
+  renderPageContext?: (path: string) => React.ReactNode;
 }) {
   return (
     <div className="border rounded-lg p-3 space-y-2 hover:bg-accent/50 transition-colors">
@@ -430,6 +508,9 @@ function FeedbackItemCard({
               {item.status.replace('_', ' ')}
             </Badge>
           </div>
+          {!compact && renderPageContext && (
+            <div className="mt-0.5">{renderPageContext(item.path)}</div>
+          )}
           {item.comment && (
             <p className="text-sm text-muted-foreground">{item.comment}</p>
           )}

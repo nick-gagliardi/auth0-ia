@@ -740,6 +740,8 @@ export default function AnalyticsPage() {
             suggestError={suggestError}
             creatingPrFor={creatingPrFor}
             prResults={prResults}
+            indexNodes={indexNodes}
+            indexMetrics={indexMetrics}
             onGetSuggestions={handleGetSuggestions}
             onToggleSuggestions={toggleSuggestions}
             onOpenPr={handleOpenPrForSuggestion}
