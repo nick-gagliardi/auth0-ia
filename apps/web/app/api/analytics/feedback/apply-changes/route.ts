@@ -16,12 +16,13 @@ const BodySchema = z.object({
 /**
  * POST /api/analytics/feedback/apply-changes
  *
- * Calls Claude server-side to produce structured before/after diffs
- * suitable for opening a PR via /api/audit/apply.
+ * Builds the Claude prompt server-side (fetches page content, etc.) and
+ * returns it so the client can call Claude directly from the browser.
+ * This avoids Vercel IP restrictions on the LiteLLM proxy.
  */
 export async function POST(req: Request) {
   try {
-    const { user } = await requireSession(true);
+    await requireSession(true);
     const body = BodySchema.parse(await req.json());
 
     const pageContent = await fetchPublicPageContent(body.path);
@@ -72,56 +73,7 @@ Rules:
 - Maximum 3 replacements. Quality over quantity.
 - Return ONLY the JSON, no other text.`;
 
-    // Call Claude server-side
-    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
-    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-    const userKey = user.anthropic_api_key_decrypted;
-
-    // Use whichever key is available: env var first, then user's stored key.
-    // Both work against the proxy; only a real Anthropic key works against api.anthropic.com.
-    const apiKey = proxyToken || userKey;
-    const baseUrl = isLiteLLMProxy ? configuredBaseUrl : 'https://api.anthropic.com';
-
-    if (!apiKey) {
-      return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
-    }
-
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (isLiteLLMProxy) {
-      headers['Authorization'] = `Bearer ${apiKey}`;
-    } else {
-      headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
-    }
-
-    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-    const response = await fetch(`${baseUrl}/v1/messages`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model,
-        max_tokens: 4096,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('[Feedback Apply Changes] AI error:', response.status, errorText);
-      return NextResponse.json({ ok: false, error: `AI API error: ${response.status} – ${errorText.slice(0, 300)}` }, { status: 502 });
-    }
-
-    const data = await response.json();
-    const text = data.content?.[0]?.text || '';
-
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      return NextResponse.json({ ok: false, error: 'Failed to parse AI response for diffs' }, { status: 502 });
-    }
-
-    const parsed = JSON.parse(jsonMatch[0]);
-    return NextResponse.json({ ok: true, ...parsed });
+    return NextResponse.json({ ok: true, prompt, maxTokens: 4096 });
   } catch (err: any) {
     console.error('[Feedback Apply Changes] error:', err);
     return NextResponse.json(

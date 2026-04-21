@@ -31,7 +31,7 @@ async function loadJson<T>(filename: string): Promise<T | null> {
  */
 export async function POST(req: Request) {
   try {
-    const { user } = await requireSession(true);
+    await requireSession(true);
     const body = BodySchema.parse(await req.json());
 
     // Load index data
@@ -122,58 +122,12 @@ Rules:
 - Maximum 12 insights total. Quality over quantity.
 - Return ONLY the JSON, no other text.`;
 
-    // Call Claude server-side
-    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
-    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-    const userKey = user.anthropic_api_key_decrypted;
-
-    // Use whichever key is available: env var first, then user's stored key.
-    // Both work against the proxy; only a real Anthropic key works against api.anthropic.com.
-    const apiKey = proxyToken || userKey;
-    const baseUrl = isLiteLLMProxy ? configuredBaseUrl : 'https://api.anthropic.com';
-
-    if (!apiKey) {
-      return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
-    }
-
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (isLiteLLMProxy) {
-      headers['Authorization'] = `Bearer ${apiKey}`;
-    } else {
-      headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
-    }
-
-    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-    const response = await fetch(`${baseUrl}/v1/messages`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model,
-        max_tokens: 8192,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('[AI Insights] AI error:', response.status, errorText);
-      return NextResponse.json({ ok: false, error: `AI API error: ${response.status} – ${errorText.slice(0, 300)}` }, { status: 502 });
-    }
-
-    const aiData = await response.json();
-    const text: string = aiData.content?.[0]?.text || '';
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      return NextResponse.json({ ok: false, error: 'Failed to parse AI response' }, { status: 502 });
-    }
-
-    const parsed = JSON.parse(jsonMatch[0]);
+    // Return prompt + algorithmic insights so client can call Claude directly
+    // from the browser (avoids Vercel IP restrictions on LiteLLM proxy).
     return NextResponse.json({
       ok: true,
-      insights: parsed.insights || [],
-      summary: parsed.summary || '',
+      prompt,
+      maxTokens: 8192,
       algoInsights,
     });
   } catch (err: any) {

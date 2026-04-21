@@ -191,7 +191,7 @@ export default function AnalyticsPage() {
     setSuggestError((prev) => ({ ...prev, [item.id]: '' }));
 
     try {
-      // Server handles Claude call and returns parsed suggestions directly
+      // Step 1: Server builds prompt (fetches page content, etc.)
       const res = await fetch('/api/analytics/feedback/suggest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -205,9 +205,48 @@ export default function AnalyticsPage() {
       });
 
       const data = await res.json();
-      if (!data.ok) throw new Error(data.error || 'Failed to get suggestions');
+      if (!data.ok) throw new Error(data.error || 'Failed to build prompt');
 
-      setSuggestionsMap((prev) => ({ ...prev, [item.id]: data.suggestions || [] }));
+      // Step 2: Get API key and call Claude from the browser
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) throw new Error('Anthropic API key not configured. Add one in Settings.');
+      const { apiKey } = await keyRes.json();
+      if (!apiKey) throw new Error('Anthropic API key not configured. Add one in Settings.');
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model,
+          max_tokens: data.maxTokens || 4096,
+          messages: [{ role: 'user', content: data.prompt }],
+        }),
+      });
+
+      if (!aiRes.ok) {
+        const errorText = await aiRes.text();
+        throw new Error(`AI error: ${aiRes.status} – ${errorText.slice(0, 200)}`);
+      }
+
+      const aiData = await aiRes.json();
+      const text = aiData.content?.[0]?.text || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('Failed to parse AI response');
+      const parsed = JSON.parse(jsonMatch[0]);
+
+      setSuggestionsMap((prev) => ({ ...prev, [item.id]: parsed.suggestions || [] }));
       setExpandedSuggestions((prev) => new Set(prev).add(item.id));
     } catch (err) {
       setSuggestError((prev) => ({
@@ -236,7 +275,7 @@ export default function AnalyticsPage() {
     setPrResults((prev) => ({ ...prev, [key]: {} }));
 
     try {
-      // Step 1: Server calls Claude and returns structured diffs directly
+      // Step 1: Server builds prompt (fetches page content, etc.)
       const res = await fetch('/api/analytics/feedback/apply-changes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -251,15 +290,54 @@ export default function AnalyticsPage() {
         }),
       });
       const data = await res.json();
-      if (!data.ok) throw new Error(data.error || 'Failed to generate changes');
+      if (!data.ok) throw new Error(data.error || 'Failed to build prompt');
 
-      const { filePath: targetFile, replacements, summary: diffSummary } = data;
+      // Step 2: Get API key and call Claude from the browser
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) throw new Error('Anthropic API key not configured. Add one in Settings.');
+      const { apiKey } = await keyRes.json();
+      if (!apiKey) throw new Error('Anthropic API key not configured. Add one in Settings.');
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model,
+          max_tokens: data.maxTokens || 4096,
+          messages: [{ role: 'user', content: data.prompt }],
+        }),
+      });
+
+      if (!aiRes.ok) {
+        const errorText = await aiRes.text();
+        throw new Error(`AI error: ${aiRes.status} – ${errorText.slice(0, 200)}`);
+      }
+
+      const aiData = await aiRes.json();
+      const text = aiData.content?.[0]?.text || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('Failed to parse AI response for diffs');
+      const parsed = JSON.parse(jsonMatch[0]);
+
+      const { filePath: targetFile, replacements, summary: diffSummary } = parsed;
 
       if (!targetFile || !replacements?.length) {
         throw new Error('AI did not produce valid replacements');
       }
 
-      // Step 2: POST to /api/audit/apply to create the PR branch
+      // Step 3: POST to /api/audit/apply to create the PR branch
       const applyRes = await fetch('/api/audit/apply', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -320,17 +398,56 @@ export default function AnalyticsPage() {
       }
 
       if (insightsMode === 'ai') {
-        // AI mode: server runs correlation + calls Claude, returns parsed insights
+        // AI mode: server runs correlation + builds prompt, client calls Claude
         const res = await fetch('/api/analytics/insights/ai-analyze', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ topPages, unhelpfulPages, searchQueries: searchQueriesPayload }),
         });
         const data = await res.json();
-        if (!data.ok) throw new Error(data.error || 'Failed to generate AI insights');
+        if (!data.ok) throw new Error(data.error || 'Failed to build AI insights prompt');
 
-        setAnalyticsInsights(data.insights || []);
-        setInsightsSummary(data.summary || '');
+        // Get API key and call Claude from the browser
+        const keyRes = await fetch('/api/settings/key');
+        if (!keyRes.ok) throw new Error('Anthropic API key not configured. Add one in Settings.');
+        const { apiKey } = await keyRes.json();
+        if (!apiKey) throw new Error('Anthropic API key not configured. Add one in Settings.');
+
+        const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+        const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+        const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+
+        const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
+        if (isLiteLLMProxy) {
+          aiHeaders['Authorization'] = `Bearer ${apiKey}`;
+        } else {
+          aiHeaders['x-api-key'] = apiKey;
+          aiHeaders['anthropic-version'] = '2023-06-01';
+        }
+
+        const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+          method: 'POST',
+          headers: aiHeaders,
+          body: JSON.stringify({
+            model,
+            max_tokens: data.maxTokens || 8192,
+            messages: [{ role: 'user', content: data.prompt }],
+          }),
+        });
+
+        if (!aiRes.ok) {
+          const errorText = await aiRes.text();
+          throw new Error(`AI error: ${aiRes.status} – ${errorText.slice(0, 200)}`);
+        }
+
+        const aiData = await aiRes.json();
+        const text = aiData.content?.[0]?.text || '';
+        const jsonMatch = text.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) throw new Error('Failed to parse AI response');
+        const parsed = JSON.parse(jsonMatch[0]);
+
+        setAnalyticsInsights(parsed.insights || []);
+        setInsightsSummary(parsed.summary || '');
         setInsightsGenerated(true);
       } else {
         // Algorithmic mode: fully server-side, no Anthropic call needed
