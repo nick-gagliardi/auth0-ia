@@ -458,3 +458,51 @@ export type AuditResult = {
     manual: number;
   };
 };
+
+// ---------------------------------------------------------------------------
+// Analytics Intelligence types
+// ---------------------------------------------------------------------------
+
+/** AI-generated actionable suggestion for a feedback item */
+export interface FeedbackSuggestion {
+  title: string;
+  description: string;
+  category: 'content-gap' | 'clarity' | 'accuracy' | 'navigation' | 'code-example' | 'structure';
+  confidence: 'high' | 'medium' | 'low';
+  suggestedAction: string;
+}
+
+/** Insight type identifiers produced by the algorithmic correlation engine */
+export type InsightType =
+  | 'orphan-traffic'
+  | 'high-traffic-low-helpfulness'
+  | 'dead-end-traffic'
+  | 'convergence-point'
+  | 'content-gap'
+  | 'unlinked-high-search'
+  | 'shadow-hub-traffic'
+  | 'cross-nav-friction';
+
+/** Shared shape for both algorithmic and AI-generated insights */
+export interface AnalyticsInsight {
+  type: InsightType;
+  severity: 'high' | 'medium' | 'low';
+  title: string;
+  description: string;
+  affectedPages: string[];
+  recommendation: string;
+  evidence: Record<string, unknown>;
+}
+
+/** Node representation for the site-graph heatmap visualisation */
+export interface GraphHeatmapNode {
+  id: string;
+  title: string;
+  path: string;
+  views: number;
+  helpfulnessRatio: number | null;
+  hubScore: number;
+  deadEnd: boolean;
+  orphan: boolean;
+  navDepth: number;
+}

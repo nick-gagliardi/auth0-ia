@@ -1,13 +1,22 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle, Eye, Search, Users } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Skeleton } from '@/components/ui/skeleton';
+import {
+  ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle, Eye, Search, Users,
+  Lightbulb, Sparkles, ChevronDown, ChevronRight, Loader2, Wand2, Brain,
+  AlertTriangle, Info, ArrowRight, ExternalLink,
+} from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
+import type { FeedbackSuggestion, AnalyticsInsight } from '@/types';
+import { SiteGraphHeatmap } from '@/components/analytics/site-graph-heatmap';
+import { useNodes, useMetrics, useEdgesOutbound } from '@/hooks/use-index-data';
 
 interface FeedbackItem {
   id: string;
@@ -73,6 +82,25 @@ export default function AnalyticsPage() {
   const [dateFilter, setDateFilter] = useState('7'); // days
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+
+  // Feedback suggestion state
+  const [suggestionsMap, setSuggestionsMap] = useState<Record<string, FeedbackSuggestion[]>>({});
+  const [suggestingId, setSuggestingId] = useState<string | null>(null);
+  const [suggestError, setSuggestError] = useState<Record<string, string>>({});
+  const [expandedSuggestions, setExpandedSuggestions] = useState<Set<string>>(new Set());
+
+  // Insights state
+  const [insightsMode, setInsightsMode] = useState<'algorithmic' | 'ai'>('algorithmic');
+  const [analyticsInsights, setAnalyticsInsights] = useState<AnalyticsInsight[]>([]);
+  const [insightsSummary, setInsightsSummary] = useState<string>('');
+  const [insightsLoading, setInsightsLoading] = useState(false);
+  const [insightsError, setInsightsError] = useState<string | null>(null);
+  const [insightsGenerated, setInsightsGenerated] = useState(false);
+
+  // Index data for site graph
+  const { data: indexNodes } = useNodes();
+  const { data: indexMetrics } = useMetrics();
+  const { data: indexEdgesOutbound } = useEdgesOutbound();
 
   useEffect(() => {
     fetchAnalytics();
@@ -148,6 +176,129 @@ export default function AnalyticsPage() {
       setLoading(false);
     }
   }
+
+  // ── Feedback suggestion handler ────────────────────────────────────────────
+
+  const handleGetSuggestions = useCallback(async (item: FeedbackItem) => {
+    setSuggestingId(item.id);
+    setSuggestError((prev) => ({ ...prev, [item.id]: '' }));
+
+    try {
+      const res = await fetch('/api/analytics/feedback/suggest', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          feedbackId: item.id,
+          path: item.path,
+          comment: item.comment || '(no comment)',
+          helpful: item.helpful,
+          source: item.source,
+        }),
+      });
+
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'Failed to get suggestions');
+
+      setSuggestionsMap((prev) => ({ ...prev, [item.id]: data.suggestions }));
+      setExpandedSuggestions((prev) => new Set(prev).add(item.id));
+    } catch (err) {
+      setSuggestError((prev) => ({
+        ...prev,
+        [item.id]: err instanceof Error ? err.message : 'Unknown error',
+      }));
+    } finally {
+      setSuggestingId(null);
+    }
+  }, []);
+
+  const toggleSuggestions = useCallback((id: string) => {
+    setExpandedSuggestions((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
+
+  // ── Insights handler ──────────────────────────────────────────────────────
+
+  const handleGenerateInsights = useCallback(async () => {
+    setInsightsLoading(true);
+    setInsightsError(null);
+
+    try {
+      // Build the payload from current analytics data
+      const topPages = pageViews.slice(0, 50).map((p) => ({ path: p.page, views: p.views }));
+      const unhelpfulPages = (insights?.unhelpfulPages || []).map((p) => ({
+        path: p.path,
+        unhelpful: p.count,
+        total: p.count, // best approximation from available data
+      }));
+      const searchQueriesPayload = searchQueries.slice(0, 50).map((q) => ({
+        query: q.query,
+        count: q.count,
+      }));
+
+      if (topPages.length === 0) {
+        setInsightsError('No page view data available yet. Try loading analytics with a wider date range.');
+        setInsightsLoading(false);
+        return;
+      }
+
+      const endpoint = insightsMode === 'ai'
+        ? '/api/analytics/insights/ai-analyze'
+        : '/api/analytics/insights/correlate';
+
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topPages, unhelpfulPages, searchQueries: searchQueriesPayload }),
+      });
+
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'Failed to generate insights');
+
+      setAnalyticsInsights(data.insights || []);
+      setInsightsSummary(data.summary || '');
+      setInsightsGenerated(true);
+    } catch (err) {
+      setInsightsError(err instanceof Error ? err.message : 'Unknown error');
+    } finally {
+      setInsightsLoading(false);
+    }
+  }, [insightsMode, pageViews, insights, searchQueries]);
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+
+  const severityColor = (s: string) => {
+    switch (s) {
+      case 'high': return 'destructive';
+      case 'medium': return 'default';
+      case 'low': return 'secondary';
+      default: return 'outline';
+    }
+  };
+
+  const severityIcon = (s: string) => {
+    switch (s) {
+      case 'high': return <AlertCircle className="h-4 w-4" />;
+      case 'medium': return <AlertTriangle className="h-4 w-4" />;
+      case 'low': return <Info className="h-4 w-4" />;
+      default: return null;
+    }
+  };
+
+  const categoryColor = (c: string) => {
+    switch (c) {
+      case 'content-gap': return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200';
+      case 'clarity': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
+      case 'accuracy': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
+      case 'navigation': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
+      case 'code-example': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
+      case 'structure': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
+      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
+    }
+  };
 
   if (loading) {
     return (
@@ -315,6 +466,7 @@ export default function AnalyticsPage() {
           <TabsTrigger value="traffic">Traffic & Search</TabsTrigger>
           <TabsTrigger value="feedback">Recent Feedback</TabsTrigger>
           <TabsTrigger value="insights">Insights</TabsTrigger>
+          <TabsTrigger value="graph">Site Graph</TabsTrigger>
         </TabsList>
 
         <TabsContent value="traffic" className="space-y-4">
@@ -456,10 +608,75 @@ export default function AnalyticsPage() {
                           </pre>
                         )}
                       </div>
-                      <div className="text-xs text-muted-foreground whitespace-nowrap">
-                        {new Date(item.createdAt).toLocaleDateString()}
+                      <div className="flex flex-col items-end gap-2">
+                        <div className="text-xs text-muted-foreground whitespace-nowrap">
+                          {new Date(item.createdAt).toLocaleDateString()}
+                        </div>
+                        {item.comment && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() =>
+                              suggestionsMap[item.id]
+                                ? toggleSuggestions(item.id)
+                                : handleGetSuggestions(item)
+                            }
+                            disabled={suggestingId === item.id}
+                          >
+                            {suggestingId === item.id ? (
+                              <><Loader2 className="h-3 w-3 mr-1 animate-spin" /> Analyzing...</>
+                            ) : suggestionsMap[item.id] ? (
+                              <>{expandedSuggestions.has(item.id) ? <ChevronDown className="h-3 w-3 mr-1" /> : <ChevronRight className="h-3 w-3 mr-1" />} Suggestions ({suggestionsMap[item.id].length})</>
+                            ) : (
+                              <><Wand2 className="h-3 w-3 mr-1" /> Get Suggestions</>
+                            )}
+                          </Button>
+                        )}
                       </div>
                     </div>
+
+                    {/* Suggestion error */}
+                    {suggestError[item.id] && (
+                      <div className="text-sm text-destructive flex items-center gap-1 mt-2">
+                        <AlertCircle className="h-3 w-3" />
+                        {suggestError[item.id]}
+                      </div>
+                    )}
+
+                    {/* Suggestion loading skeleton */}
+                    {suggestingId === item.id && (
+                      <div className="mt-3 space-y-2">
+                        <Skeleton className="h-20 w-full" />
+                        <Skeleton className="h-20 w-full" />
+                      </div>
+                    )}
+
+                    {/* Suggestion cards */}
+                    {suggestionsMap[item.id] && expandedSuggestions.has(item.id) && (
+                      <div className="mt-3 space-y-2 pl-4 border-l-2 border-primary/20">
+                        {suggestionsMap[item.id].map((s, idx) => (
+                          <div
+                            key={idx}
+                            className="bg-muted/50 rounded-lg p-3 space-y-2"
+                          >
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="font-medium text-sm">{s.title}</span>
+                              <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor(s.category)}`}>
+                                {s.category}
+                              </span>
+                              <Badge variant={s.confidence === 'high' ? 'default' : s.confidence === 'medium' ? 'secondary' : 'outline'}>
+                                {s.confidence}
+                              </Badge>
+                            </div>
+                            <p className="text-sm text-muted-foreground">{s.description}</p>
+                            <div className="flex items-start gap-1 text-sm">
+                              <ArrowRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
+                              <span>{s.suggestedAction}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))
               )}
@@ -468,6 +685,183 @@ export default function AnalyticsPage() {
         </TabsContent>
 
         <TabsContent value="insights" className="space-y-4">
+          {/* Insights generation controls */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <CardTitle className="flex items-center gap-2">
+                    <Lightbulb className="h-5 w-5" />
+                    Documentation Insights
+                  </CardTitle>
+                  <CardDescription className="mt-1">
+                    Correlate analytics data with site structure to surface actionable insights
+                  </CardDescription>
+                </div>
+                <div className="flex items-center gap-2">
+                  {/* Mode toggle */}
+                  <div className="flex rounded-lg border p-1 gap-1">
+                    <Button
+                      variant={insightsMode === 'algorithmic' ? 'default' : 'ghost'}
+                      size="sm"
+                      onClick={() => setInsightsMode('algorithmic')}
+                      className="gap-1"
+                    >
+                      <Brain className="h-3.5 w-3.5" />
+                      Algorithmic
+                    </Button>
+                    <Button
+                      variant={insightsMode === 'ai' ? 'default' : 'ghost'}
+                      size="sm"
+                      onClick={() => setInsightsMode('ai')}
+                      className="gap-1"
+                    >
+                      <Sparkles className="h-3.5 w-3.5" />
+                      AI-Powered
+                    </Button>
+                  </div>
+                  <Button
+                    onClick={handleGenerateInsights}
+                    disabled={insightsLoading || pageViews.length === 0}
+                  >
+                    {insightsLoading ? (
+                      <><Loader2 className="h-4 w-4 mr-2 animate-spin" /> Analyzing...</>
+                    ) : (
+                      <><Lightbulb className="h-4 w-4 mr-2" /> Generate Insights</>
+                    )}
+                  </Button>
+                </div>
+              </div>
+            </CardHeader>
+            {pageViews.length === 0 && (
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  Load analytics data first (select a date range above) to generate insights.
+                </p>
+              </CardContent>
+            )}
+          </Card>
+
+          {/* Insights error */}
+          {insightsError && (
+            <Card className="border-destructive">
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-2 text-destructive">
+                  <AlertCircle className="h-4 w-4" />
+                  <span className="text-sm">{insightsError}</span>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Loading skeleton */}
+          {insightsLoading && (
+            <div className="space-y-3">
+              {[1, 2, 3, 4].map((i) => (
+                <Card key={i}>
+                  <CardContent className="pt-6">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <Skeleton className="h-5 w-16" />
+                        <Skeleton className="h-5 w-24" />
+                        <Skeleton className="h-5 w-48" />
+                      </div>
+                      <Skeleton className="h-4 w-full" />
+                      <Skeleton className="h-4 w-3/4" />
+                      <Skeleton className="h-4 w-1/2" />
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
+
+          {/* AI Summary (only in AI mode) */}
+          {insightsGenerated && insightsSummary && insightsMode === 'ai' && (
+            <Card className="border-primary/30 bg-primary/5">
+              <CardContent className="pt-6">
+                <div className="flex items-start gap-3">
+                  <Sparkles className="h-5 w-5 mt-0.5 text-primary shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-sm mb-1">Executive Summary</h3>
+                    <p className="text-sm text-muted-foreground">{insightsSummary}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Insight cards grouped by severity */}
+          {insightsGenerated && !insightsLoading && analyticsInsights.length > 0 && (
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-muted-foreground">
+                  {analyticsInsights.length} insight{analyticsInsights.length !== 1 ? 's' : ''} found
+                  {insightsMode === 'ai' ? ' (AI-enhanced)' : ' (algorithmic)'}
+                </p>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span className="flex items-center gap-1"><AlertCircle className="h-3 w-3 text-destructive" /> High</span>
+                  <span className="flex items-center gap-1"><AlertTriangle className="h-3 w-3" /> Medium</span>
+                  <span className="flex items-center gap-1"><Info className="h-3 w-3 text-muted-foreground" /> Low</span>
+                </div>
+              </div>
+
+              {analyticsInsights.map((insight, idx) => (
+                <Card key={idx} className={
+                  insight.severity === 'high' ? 'border-destructive/40' :
+                  insight.severity === 'medium' ? 'border-orange-300/40' : ''
+                }>
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {severityIcon(insight.severity)}
+                        <Badge variant={severityColor(insight.severity) as 'destructive' | 'default' | 'secondary' | 'outline'}>
+                          {insight.severity}
+                        </Badge>
+                        <Badge variant="outline" className="font-mono text-xs">
+                          {insight.type}
+                        </Badge>
+                        <span className="font-semibold text-sm">{insight.title}</span>
+                      </div>
+                    </div>
+
+                    <p className="text-sm text-muted-foreground">{insight.description}</p>
+
+                    {insight.affectedPages.length > 0 && (
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-xs text-muted-foreground">Affected:</span>
+                        {insight.affectedPages.map((page) => (
+                          <code key={page} className="text-xs bg-muted px-2 py-0.5 rounded">
+                            {page}
+                          </code>
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex items-start gap-1.5 text-sm bg-muted/50 rounded-lg p-3">
+                      <ArrowRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
+                      <span>{insight.recommendation}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
+
+          {/* Empty state */}
+          {insightsGenerated && !insightsLoading && analyticsInsights.length === 0 && (
+            <Card>
+              <CardContent className="pt-6 text-center py-12">
+                <Lightbulb className="h-8 w-8 mx-auto text-muted-foreground mb-3" />
+                <p className="text-sm text-muted-foreground">
+                  No insights generated. This may mean your documentation structure is in good shape,
+                  or there isn&apos;t enough analytics data to correlate.
+                </p>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Existing feedback stats — always shown below insights */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Card>
               <CardHeader>
@@ -543,6 +937,33 @@ export default function AnalyticsPage() {
               </CardContent>
             </Card>
           </div>
+        </TabsContent>
+
+        <TabsContent value="graph" className="space-y-4">
+          {indexNodes && indexMetrics && indexEdgesOutbound ? (
+            <SiteGraphHeatmap
+              nodes={indexNodes}
+              metrics={indexMetrics}
+              edgesOutbound={indexEdgesOutbound}
+              pageViews={pageViews.map((p) => ({ path: p.page, views: p.views }))}
+              unhelpfulPages={
+                (insights?.unhelpfulPages ?? []).map((p) => ({
+                  path: p.path,
+                  unhelpful: p.count,
+                  total: p.count,
+                }))
+              }
+            />
+          ) : (
+            <Card>
+              <CardContent className="pt-6">
+                <div className="flex flex-col items-center justify-center h-[400px] text-muted-foreground space-y-2">
+                  <Loader2 className="h-8 w-8 animate-spin" />
+                  <p className="text-sm">Loading index data...</p>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </TabsContent>
       </Tabs>
       </div>
