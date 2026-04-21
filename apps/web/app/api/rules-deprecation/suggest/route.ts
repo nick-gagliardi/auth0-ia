@@ -59,20 +59,24 @@ export async function POST(req: Request) {
     const pageContent = await fetchPublicPageContent(body.filePath);
 
     // Call Claude for suggestions
-    const apiKey = user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
     const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+
+    // When using the LiteLLM proxy, prefer the env-var proxy token.
+    // The user's stored key is a direct Anthropic key and won't authenticate against the proxy.
+    const apiKey = isLiteLLMProxy
+      ? (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN || user.anthropic_api_key_decrypted)
+      : (user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
 
     if (!apiKey) {
       return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
     }
 
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    const headers: Record<string, string> = { 'Content-Type': 'application/json', 'anthropic-version': '2023-06-01' };
     if (isLiteLLMProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
     }
 
     const evidenceBlock = body.evidence

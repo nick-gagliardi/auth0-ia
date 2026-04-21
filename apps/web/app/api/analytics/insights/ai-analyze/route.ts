@@ -61,11 +61,14 @@ export async function POST(req: Request) {
     );
 
     // Step 2: Build AI prompt with algorithmic context
-    const apiKey =
-      user.anthropic_api_key_decrypted ||
-      process.env.ANTHROPIC_API_KEY ||
-      process.env.ANTHROPIC_AUTH_TOKEN;
     const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+
+    // When using the LiteLLM proxy, prefer the env-var proxy token.
+    // The user's stored key is a direct Anthropic key and won't authenticate against the proxy.
+    const apiKey = isLiteLLMProxy
+      ? (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN || user.anthropic_api_key_decrypted)
+      : (user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
 
     if (!apiKey) {
       return NextResponse.json(
@@ -74,7 +77,6 @@ export async function POST(req: Request) {
       );
     }
 
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
       'anthropic-version': '2023-06-01',

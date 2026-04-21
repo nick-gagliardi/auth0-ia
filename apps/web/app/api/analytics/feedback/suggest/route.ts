@@ -19,11 +19,14 @@ export async function POST(req: Request) {
 
     const pageContent = await fetchPublicPageContent(body.path);
 
-    const apiKey =
-      user.anthropic_api_key_decrypted ||
-      process.env.ANTHROPIC_API_KEY ||
-      process.env.ANTHROPIC_AUTH_TOKEN;
     const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+
+    // When using the LiteLLM proxy, prefer the env-var proxy token.
+    // The user's stored key is a direct Anthropic key and won't authenticate against the proxy.
+    const apiKey = isLiteLLMProxy
+      ? (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN || user.anthropic_api_key_decrypted)
+      : (user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
 
     if (!apiKey) {
       return NextResponse.json(
@@ -32,7 +35,6 @@ export async function POST(req: Request) {
       );
     }
 
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
       'anthropic-version': '2023-06-01',
@@ -88,9 +90,7 @@ Rules:
 - Return ONLY the JSON, no other text.`;
 
     const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
-    const url = `${baseUrl}/v1/messages`;
-    console.log('[Feedback Suggest] calling', url, 'model:', model, 'proxy:', isLiteLLMProxy, 'keySource:', user.anthropic_api_key_decrypted ? 'user' : process.env.ANTHROPIC_API_KEY ? 'ANTHROPIC_API_KEY' : 'ANTHROPIC_AUTH_TOKEN');
-    const response = await fetch(url, {
+    const response = await fetch(`${baseUrl}/v1/messages`, {
       method: 'POST',
       headers,
       body: JSON.stringify({
