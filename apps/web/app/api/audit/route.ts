@@ -10,10 +10,15 @@ const BodySchema = z.object({
 
 // Call Claude API for content analysis
 async function getAiSuggestions(content: string, pageTitle: string, pageUrl: string, userApiKey?: string): Promise<AiSuggestion[]> {
-  // Support both standard Anthropic API and custom proxy (Okta)
-  // Priority: user's API key → global env var (for 30-day transition)
-  const apiKey = userApiKey || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-  const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+  const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+  const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+  const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+
+  // If the proxy URL is configured but no proxy token exists, bypass the proxy
+  // and call Anthropic directly with the user's stored key.
+  const useProxy = isLiteLLMProxy && !!proxyToken;
+  const apiKey = useProxy ? proxyToken : (userApiKey || proxyToken);
+  const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
   if (!apiKey) {
     console.warn('No Anthropic API key available (user or global), skipping AI suggestions');
@@ -21,15 +26,11 @@ async function getAiSuggestions(content: string, pageTitle: string, pageUrl: str
   }
 
   try {
-    // Okta LiteLLM uses OpenAI-compatible format with Bearer token
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
 
-    // Use Bearer token format for LiteLLM, x-api-key for standard Anthropic
-    if (isLiteLLMProxy) {
+    if (useProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
@@ -332,19 +333,26 @@ function createCheck(id: string, label: string, status: AuditCheckStatus, detail
 
 // Check content against Auth0 style guide
 async function checkStyleGuide(mdxContent: string, pageTitle: string, userApiKey?: string): Promise<{violations: Array<{category: string; issue: string; location: string}>} | null> {
-  const apiKey = userApiKey || process.env.ANTHROPIC_API_KEY;
-  if (!apiKey || !mdxContent) return null;
+  if (!mdxContent) return null;
+
+  const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+  const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+  const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+
+  const useProxy = isLiteLLMProxy && !!proxyToken;
+  const apiKey = useProxy ? proxyToken : (userApiKey || proxyToken);
+  const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+
+  if (!apiKey) return null;
 
   try {
-    const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
     const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
 
-    if (isLiteLLMProxy) {
+    if (useProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;

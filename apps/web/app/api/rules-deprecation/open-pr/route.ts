@@ -45,17 +45,23 @@ async function applyWithAi(
   suggestions: Array<{ before: string; after: string }>,
   apiKey: string,
 ): Promise<{ modifiedContent: string; changesApplied: number } | null> {
-  // Use same env vars as client-side (NEXT_PUBLIC_*) with server-side fallbacks
-  const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-  const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+  // If the proxy URL is configured but no proxy token exists, bypass the proxy
+  // and call Anthropic directly with the user's stored key.
+  const configuredBaseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+  const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+  const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+
+  const useProxy = isLiteLLMProxy && !!proxyToken;
+  const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+  const finalKey = useProxy ? proxyToken : apiKey;
   const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
-  console.log('[Rules Deprecation] AI config:', { baseUrl, model, hasApiKey: !!apiKey });
+  console.log('[Rules Deprecation] AI config:', { baseUrl, model, useProxy });
 
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (isLiteLLMProxy) {
-    headers['Authorization'] = `Bearer ${apiKey}`;
+  if (useProxy) {
+    headers['Authorization'] = `Bearer ${finalKey}`;
   } else {
-    headers['x-api-key'] = apiKey;
+    headers['x-api-key'] = finalKey;
     headers['anthropic-version'] = '2023-06-01';
   }
 

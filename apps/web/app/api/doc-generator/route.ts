@@ -241,20 +241,27 @@ ${docsJson.slice(0, 5000)}
 Generate the complete structured JSON response with feature summary, IA proposal, documentation files, and navigation updates.`;
 
     // Call Claude API
-    const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-    const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+    const configuredBaseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
 
-    console.log('[DocGenerator] Using API:', { baseUrl, model, isLiteLLMProxy });
+    // If the proxy URL is configured but no proxy token exists, bypass the proxy
+    // and call Anthropic directly with the user's stored key.
+    const useProxy = isLiteLLMProxy && !!proxyToken;
+    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+    const finalKey = useProxy ? proxyToken : anthropicKey;
+    const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+    console.log('[DocGenerator] Using API:', { baseUrl, model, useProxy });
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
 
-    if (isLiteLLMProxy) {
-      headers['Authorization'] = `Bearer ${anthropicKey}`;
+    if (useProxy) {
+      headers['Authorization'] = `Bearer ${finalKey}`;
     } else {
-      headers['x-api-key'] = anthropicKey;
+      headers['x-api-key'] = finalKey;
       headers['anthropic-version'] = '2023-06-01';
     }
 

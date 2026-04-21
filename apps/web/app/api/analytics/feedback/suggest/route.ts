@@ -19,14 +19,16 @@ export async function POST(req: Request) {
 
     const pageContent = await fetchPublicPageContent(body.path);
 
-    const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+    const userKey = user.anthropic_api_key_decrypted;
 
-    // When using the LiteLLM proxy, prefer the env-var proxy token.
-    // The user's stored key is a direct Anthropic key and won't authenticate against the proxy.
-    const apiKey = isLiteLLMProxy
-      ? (process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN || user.anthropic_api_key_decrypted)
-      : (user.anthropic_api_key_decrypted || process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
+    // If the proxy URL is configured but no proxy token exists, bypass the proxy
+    // and call Anthropic directly with the user's stored key.
+    const useProxy = isLiteLLMProxy && !!proxyToken;
+    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
+    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
     if (!apiKey) {
       return NextResponse.json(
@@ -37,12 +39,12 @@ export async function POST(req: Request) {
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
-      'anthropic-version': '2023-06-01',
     };
-    if (isLiteLLMProxy) {
+    if (useProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
+      headers['anthropic-version'] = '2023-06-01';
     }
 
     const contentSection = pageContent

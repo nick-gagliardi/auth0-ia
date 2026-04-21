@@ -186,27 +186,33 @@ function getLineNumber(content: string, index: number): number {
 // Check content against Auth0 style guide
 async function checkStyleGuide(mdxContent: string, pageTitle: string, userApiKey?: string): Promise<{violations: Array<{category: string; issue: string; location: string}>} | null> {
   console.log('[checkStyleGuide] Called for:', pageTitle, 'content length:', mdxContent.length);
-  const apiKey = userApiKey || process.env.ANTHROPIC_API_KEY;
 
-  if (!apiKey) {
-    console.log('[checkStyleGuide] No API key available');
-    return null;
-  }
   if (!mdxContent) {
     console.log('[checkStyleGuide] No MDX content provided');
     return null;
   }
 
+  const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+  const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+  const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+
+  const useProxy = isLiteLLMProxy && !!proxyToken;
+  const apiKey = useProxy ? proxyToken : (userApiKey || proxyToken);
+  const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+
+  if (!apiKey) {
+    console.log('[checkStyleGuide] No API key available');
+    return null;
+  }
+
   try {
-    const baseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
     const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
 
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
 
-    if (isLiteLLMProxy) {
+    if (useProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
