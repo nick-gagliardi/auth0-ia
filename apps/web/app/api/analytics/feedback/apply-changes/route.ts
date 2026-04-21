@@ -72,22 +72,23 @@ Rules:
 - Maximum 3 replacements. Quality over quantity.
 - Return ONLY the JSON, no other text.`;
 
-    // Call Claude server-side (same pattern as rules-deprecation/suggest)
+    // Call Claude server-side
     const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
     const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
     const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
     const userKey = user.anthropic_api_key_decrypted;
 
-    const useProxy = isLiteLLMProxy && !!proxyToken;
-    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
-    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+    // When the proxy URL is configured, always use it — even if only the user's
+    // stored key is available (the key works against the proxy too).
+    const apiKey = proxyToken || userKey;
+    const baseUrl = isLiteLLMProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
     if (!apiKey) {
       return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
     }
 
     const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (useProxy) {
+    if (isLiteLLMProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
