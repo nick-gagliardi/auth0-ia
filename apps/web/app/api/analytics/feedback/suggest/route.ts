@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { requireSession } from '@/lib/session';
 import { fetchPublicPageContent, docsPathToUrl } from '@/lib/fetch-page-content';
-import type { FeedbackSuggestion } from '@/types';
 
 const BodySchema = z.object({
   feedbackId: z.string(),
@@ -12,40 +11,18 @@ const BodySchema = z.object({
   source: z.string().optional(),
 });
 
+/**
+ * POST /api/analytics/feedback/suggest
+ *
+ * Returns the prepared prompt and page context for the client to call Anthropic
+ * directly (bypassing Vercel IP restrictions on the Anthropic API).
+ */
 export async function POST(req: Request) {
   try {
-    const { user } = await requireSession(true);
+    await requireSession();
     const body = BodySchema.parse(await req.json());
 
     const pageContent = await fetchPublicPageContent(body.path);
-
-    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
-    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-    const userKey = user.anthropic_api_key_decrypted;
-
-    // If the proxy URL is configured but no proxy token exists, bypass the proxy
-    // and call Anthropic directly with the user's stored key.
-    const useProxy = isLiteLLMProxy && !!proxyToken;
-    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
-    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
-
-    if (!apiKey) {
-      return NextResponse.json(
-        { ok: false, error: 'No Anthropic API key configured. Add one in Settings.' },
-        { status: 400 },
-      );
-    }
-
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-    if (useProxy) {
-      headers['Authorization'] = `Bearer ${apiKey}`;
-    } else {
-      headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
-    }
 
     const contentSection = pageContent
       ? `\nPublished page content:\n${pageContent}`
@@ -91,50 +68,7 @@ Rules:
 - Set confidence to "high" only when the feedback clearly maps to a specific page issue.
 - Return ONLY the JSON, no other text.`;
 
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
-    const response = await fetch(`${baseUrl}/v1/messages`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model,
-        max_tokens: 4096,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('[Feedback Suggest] AI error:', response.status, errorText);
-      return NextResponse.json(
-        { ok: false, error: `AI API error: ${response.status}` },
-        { status: 502 },
-      );
-    }
-
-    const data = await response.json();
-    const text: string = data.content?.[0]?.text || '';
-
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      return NextResponse.json(
-        { ok: false, error: 'Failed to parse AI response — no JSON found in model output.' },
-        { status: 502 },
-      );
-    }
-
-    let parsed: { suggestions?: FeedbackSuggestion[] };
-    try {
-      parsed = JSON.parse(jsonMatch[0]);
-    } catch (parseErr) {
-      console.error('[Feedback Suggest] JSON parse error:', parseErr, '\nRaw text:', text.slice(0, 500));
-      return NextResponse.json(
-        { ok: false, error: 'AI returned malformed JSON. Try again.' },
-        { status: 502 },
-      );
-    }
-    const suggestions: FeedbackSuggestion[] = parsed.suggestions || [];
-
-    return NextResponse.json({ ok: true, suggestions });
+    return NextResponse.json({ ok: true, prompt, model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet' });
   } catch (err: any) {
     console.error('[Feedback Suggest] error:', err);
     return NextResponse.json(

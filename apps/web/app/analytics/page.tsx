@@ -184,6 +184,7 @@ export default function AnalyticsPage() {
     setSuggestError((prev) => ({ ...prev, [item.id]: '' }));
 
     try {
+      // Step 1: Get prepared prompt from server (fetches page content server-side)
       const res = await fetch('/api/analytics/feedback/suggest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -197,9 +198,48 @@ export default function AnalyticsPage() {
       });
 
       const data = await res.json();
-      if (!data.ok) throw new Error(data.error || 'Failed to get suggestions');
+      if (!data.ok) throw new Error(data.error || 'Failed to prepare suggestions');
 
-      setSuggestionsMap((prev) => ({ ...prev, [item.id]: data.suggestions }));
+      // Step 2: Fetch API key for client-side Anthropic call
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) throw new Error('API key not configured. Add one in Settings.');
+      const { apiKey } = await keyRes.json();
+
+      // Step 3: Call Anthropic directly from browser (bypasses Vercel IP restrictions)
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model,
+          max_tokens: 4096,
+          messages: [{ role: 'user', content: data.prompt }],
+        }),
+      });
+
+      if (!aiRes.ok) {
+        const errText = await aiRes.text().catch(() => '');
+        throw new Error(`AI API error (${aiRes.status}): ${errText.slice(0, 200)}`);
+      }
+
+      const aiData = await aiRes.json();
+      const text: string = aiData.content?.[0]?.text || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('Failed to parse AI response');
+
+      const parsed = JSON.parse(jsonMatch[0]);
+      setSuggestionsMap((prev) => ({ ...prev, [item.id]: parsed.suggestions || [] }));
       setExpandedSuggestions((prev) => new Set(prev).add(item.id));
     } catch (err) {
       setSuggestError((prev) => ({
@@ -245,22 +285,74 @@ export default function AnalyticsPage() {
         return;
       }
 
-      const endpoint = insightsMode === 'ai'
-        ? '/api/analytics/insights/ai-analyze'
-        : '/api/analytics/insights/correlate';
+      if (insightsMode === 'ai') {
+        // AI mode: server prepares prompt, client calls Anthropic directly
+        // Step 1: Get prepared prompt + algorithmic insights from server
+        const res = await fetch('/api/analytics/insights/ai-analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topPages, unhelpfulPages, searchQueries: searchQueriesPayload }),
+        });
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || 'Failed to prepare insights analysis');
 
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topPages, unhelpfulPages, searchQueries: searchQueriesPayload }),
-      });
+        // Step 2: Fetch API key for client-side Anthropic call
+        const keyRes = await fetch('/api/settings/key');
+        if (!keyRes.ok) throw new Error('API key not configured. Add one in Settings.');
+        const { apiKey } = await keyRes.json();
 
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error || 'Failed to generate insights');
+        // Step 3: Call Anthropic directly from browser (bypasses Vercel IP restrictions)
+        const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+        const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+        const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
 
-      setAnalyticsInsights(data.insights || []);
-      setInsightsSummary(data.summary || '');
-      setInsightsGenerated(true);
+        const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
+        if (isLiteLLMProxy) {
+          aiHeaders['Authorization'] = `Bearer ${apiKey}`;
+        } else {
+          aiHeaders['x-api-key'] = apiKey;
+          aiHeaders['anthropic-version'] = '2023-06-01';
+        }
+
+        const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+          method: 'POST',
+          headers: aiHeaders,
+          body: JSON.stringify({
+            model,
+            max_tokens: 8192,
+            messages: [{ role: 'user', content: data.prompt }],
+          }),
+        });
+
+        if (!aiRes.ok) {
+          const errText = await aiRes.text().catch(() => '');
+          throw new Error(`AI request failed (${aiRes.status}): ${errText.slice(0, 200)}`);
+        }
+
+        const aiData = await aiRes.json();
+        const text: string = aiData.content?.[0]?.text || '';
+        const jsonMatch = text.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) throw new Error('Failed to parse AI response');
+
+        const parsed = JSON.parse(jsonMatch[0]);
+        setAnalyticsInsights(parsed.insights || []);
+        setInsightsSummary(parsed.summary || '');
+        setInsightsGenerated(true);
+      } else {
+        // Algorithmic mode: fully server-side, no Anthropic call needed
+        const res = await fetch('/api/analytics/insights/correlate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topPages, unhelpfulPages, searchQueries: searchQueriesPayload }),
+        });
+
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || 'Failed to generate insights');
+
+        setAnalyticsInsights(data.insights || []);
+        setInsightsSummary(data.summary || '');
+        setInsightsGenerated(true);
+      }
     } catch (err) {
       setInsightsError(err instanceof Error ? err.message : 'Unknown error');
     } finally {

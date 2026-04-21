@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { requireSession } from '@/lib/session';
 import { correlate } from '@/lib/insights-engine';
-import type { AnalyticsInsight, DocNode, Metrics, DeadEndsIndex, JourneyMapsIndex, ShadowHubs, CrossNavPairs } from '@/types';
+import type { DocNode, Metrics, DeadEndsIndex, JourneyMapsIndex, ShadowHubs, CrossNavPairs } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -23,9 +23,15 @@ async function loadJson<T>(filename: string): Promise<T | null> {
   }
 }
 
+/**
+ * POST /api/analytics/insights/ai-analyze
+ *
+ * Runs algorithmic correlation on index data and returns the prepared prompt
+ * for the client to call Anthropic directly (bypassing Vercel IP restrictions).
+ */
 export async function POST(req: Request) {
   try {
-    const { user } = await requireSession(true);
+    await requireSession();
     const body = BodySchema.parse(await req.json());
 
     // Load index data
@@ -60,36 +66,7 @@ export async function POST(req: Request) {
       indexData,
     );
 
-    // Step 2: Build AI prompt with algorithmic context
-    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
-    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-    const userKey = user.anthropic_api_key_decrypted;
-
-    // If the proxy URL is configured but no proxy token exists, bypass the proxy
-    // and call Anthropic directly with the user's stored key.
-    const useProxy = isLiteLLMProxy && !!proxyToken;
-    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
-    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
-
-    if (!apiKey) {
-      return NextResponse.json(
-        { ok: false, error: 'No Anthropic API key configured. Add one in Settings.' },
-        { status: 400 },
-      );
-    }
-
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-    if (useProxy) {
-      headers['Authorization'] = `Bearer ${apiKey}`;
-    } else {
-      headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
-    }
-
-    // Topology summary
+    // Step 2: Build prompt with algorithmic context
     const orphanCount = Object.values(metrics).filter((m) => m.orphanTrue).length;
     const deadEndCount = deadEnds?.count ?? 0;
     const hubCount = Object.values(metrics).filter((m) => (m.hubScore ?? 0) > 5).length;
@@ -145,51 +122,12 @@ Rules:
 - Maximum 12 insights total. Quality over quantity.
 - Return ONLY the JSON, no other text.`;
 
-    const model = process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet';
-    const response = await fetch(`${baseUrl}/v1/messages`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model,
-        max_tokens: 8192,
-        messages: [{ role: 'user', content: prompt }],
-      }),
+    return NextResponse.json({
+      ok: true,
+      prompt,
+      model: process.env.ANTHROPIC_MODEL || 'claude-4-5-sonnet',
+      algoInsights,
     });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('[AI Insights] AI error:', response.status, errorText);
-      return NextResponse.json(
-        { ok: false, error: `AI API error: ${response.status}` },
-        { status: 502 },
-      );
-    }
-
-    const data = await response.json();
-    const text: string = data.content?.[0]?.text || '';
-
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      return NextResponse.json(
-        { ok: false, error: 'Failed to parse AI response — no JSON found in model output.' },
-        { status: 502 },
-      );
-    }
-
-    let parsed: { insights?: AnalyticsInsight[]; summary?: string };
-    try {
-      parsed = JSON.parse(jsonMatch[0]);
-    } catch (parseErr) {
-      console.error('[AI Insights] JSON parse error:', parseErr, '\nRaw text:', text.slice(0, 500));
-      return NextResponse.json(
-        { ok: false, error: 'AI returned malformed JSON. Try again.' },
-        { status: 502 },
-      );
-    }
-    const insights: AnalyticsInsight[] = parsed.insights || [];
-    const summary: string = parsed.summary || '';
-
-    return NextResponse.json({ ok: true, insights, summary, mode: 'ai' as const });
   } catch (err: any) {
     console.error('[AI Insights] error:', err);
     return NextResponse.json(
