@@ -74,18 +74,17 @@ Rules:
     const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
     const userKey = user.anthropic_api_key_decrypted;
 
-    // If the proxy URL is configured but no proxy token exists, bypass the proxy
-    // and call Anthropic directly with the user's stored key.
-    const useProxy = isLiteLLMProxy && !!proxyToken;
-    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
-    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+    // Use whichever key is available: env var first, then user's stored key.
+    // Both work against the proxy; only a real Anthropic key works against api.anthropic.com.
+    const apiKey = proxyToken || userKey;
+    const baseUrl = isLiteLLMProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
     if (!apiKey) {
       return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
     }
 
     const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (useProxy) {
+    if (isLiteLLMProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
