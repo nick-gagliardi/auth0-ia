@@ -191,7 +191,7 @@ export default function AnalyticsPage() {
     setSuggestError((prev) => ({ ...prev, [item.id]: '' }));
 
     try {
-      // Step 1: Get prepared prompt from server (fetches page content server-side)
+      // Server handles Claude call and returns parsed suggestions directly
       const res = await fetch('/api/analytics/feedback/suggest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -205,48 +205,9 @@ export default function AnalyticsPage() {
       });
 
       const data = await res.json();
-      if (!data.ok) throw new Error(data.error || 'Failed to prepare suggestions');
+      if (!data.ok) throw new Error(data.error || 'Failed to get suggestions');
 
-      // Step 2: Fetch API key for client-side Anthropic call
-      const keyRes = await fetch('/api/settings/key');
-      if (!keyRes.ok) throw new Error('API key not configured. Add one in Settings.');
-      const { apiKey } = await keyRes.json();
-
-      // Step 3: Call Anthropic directly from browser (bypasses Vercel IP restrictions)
-      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (isLiteLLMProxy) {
-        headers['Authorization'] = `Bearer ${apiKey}`;
-      } else {
-        headers['x-api-key'] = apiKey;
-        headers['anthropic-version'] = '2023-06-01';
-      }
-
-      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
-        method: 'POST',
-        headers,
-        body: JSON.stringify({
-          model,
-          max_tokens: 4096,
-          messages: [{ role: 'user', content: data.prompt }],
-        }),
-      });
-
-      if (!aiRes.ok) {
-        const errText = await aiRes.text().catch(() => '');
-        throw new Error(`AI API error (${aiRes.status}): ${errText.slice(0, 200)}`);
-      }
-
-      const aiData = await aiRes.json();
-      const text: string = aiData.content?.[0]?.text || '';
-      const jsonMatch = text.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) throw new Error('Failed to parse AI response');
-
-      const parsed = JSON.parse(jsonMatch[0]);
-      setSuggestionsMap((prev) => ({ ...prev, [item.id]: parsed.suggestions || [] }));
+      setSuggestionsMap((prev) => ({ ...prev, [item.id]: data.suggestions || [] }));
       setExpandedSuggestions((prev) => new Set(prev).add(item.id));
     } catch (err) {
       setSuggestError((prev) => ({
@@ -275,7 +236,7 @@ export default function AnalyticsPage() {
     setPrResults((prev) => ({ ...prev, [key]: {} }));
 
     try {
-      // Step 1: Get structured diff prompt from server
+      // Step 1: Server calls Claude and returns structured diffs directly
       const res = await fetch('/api/analytics/feedback/apply-changes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -290,54 +251,15 @@ export default function AnalyticsPage() {
         }),
       });
       const data = await res.json();
-      if (!data.ok) throw new Error(data.error || 'Failed to prepare changes');
+      if (!data.ok) throw new Error(data.error || 'Failed to generate changes');
 
-      // Step 2: Fetch API key for client-side Anthropic call
-      const keyRes = await fetch('/api/settings/key');
-      if (!keyRes.ok) throw new Error('API key not configured. Add one in Settings.');
-      const { apiKey } = await keyRes.json();
-
-      // Step 3: Call Anthropic directly from browser
-      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
-      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-
-      const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (isLiteLLMProxy) {
-        aiHeaders['Authorization'] = `Bearer ${apiKey}`;
-      } else {
-        aiHeaders['x-api-key'] = apiKey;
-        aiHeaders['anthropic-version'] = '2023-06-01';
-      }
-
-      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
-        method: 'POST',
-        headers: aiHeaders,
-        body: JSON.stringify({
-          model,
-          max_tokens: 4096,
-          messages: [{ role: 'user', content: data.prompt }],
-        }),
-      });
-
-      if (!aiRes.ok) {
-        const errText = await aiRes.text().catch(() => '');
-        throw new Error(`AI API error (${aiRes.status}): ${errText.slice(0, 200)}`);
-      }
-
-      const aiData = await aiRes.json();
-      const text: string = aiData.content?.[0]?.text || '';
-      const jsonMatch = text.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) throw new Error('Failed to parse AI response for diffs');
-
-      const parsed = JSON.parse(jsonMatch[0]);
-      const { filePath: targetFile, replacements, summary: diffSummary } = parsed;
+      const { filePath: targetFile, replacements, summary: diffSummary } = data;
 
       if (!targetFile || !replacements?.length) {
         throw new Error('AI did not produce valid replacements');
       }
 
-      // Step 4: POST to /api/audit/apply to create the PR branch
+      // Step 2: POST to /api/audit/apply to create the PR branch
       const applyRes = await fetch('/api/audit/apply', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

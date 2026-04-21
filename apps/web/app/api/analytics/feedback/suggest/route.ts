@@ -14,12 +14,12 @@ const BodySchema = z.object({
 /**
  * POST /api/analytics/feedback/suggest
  *
- * Returns the prepared prompt and page context for the client to call Anthropic
- * directly (bypassing Vercel IP restrictions on the Anthropic API).
+ * Calls Claude server-side (same pattern as rules-deprecation/suggest) and
+ * returns the parsed suggestions directly.
  */
 export async function POST(req: Request) {
   try {
-    await requireSession();
+    const { user } = await requireSession(true);
     const body = BodySchema.parse(await req.json());
 
     const pageContent = await fetchPublicPageContent(body.path);
@@ -68,7 +68,55 @@ Rules:
 - Set confidence to "high" only when the feedback clearly maps to a specific page issue.
 - Return ONLY the JSON, no other text.`;
 
-    return NextResponse.json({ ok: true, prompt, model: process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514' });
+    // Call Claude server-side (same pattern as rules-deprecation/suggest)
+    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+    const userKey = user.anthropic_api_key_decrypted;
+
+    const useProxy = isLiteLLMProxy && !!proxyToken;
+    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
+    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+
+    if (!apiKey) {
+      return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
+    }
+
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (useProxy) {
+      headers['Authorization'] = `Bearer ${apiKey}`;
+    } else {
+      headers['x-api-key'] = apiKey;
+      headers['anthropic-version'] = '2023-06-01';
+    }
+
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+    const response = await fetch(`${baseUrl}/v1/messages`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        model,
+        max_tokens: 4096,
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('[Feedback Suggest] AI error:', response.status, errorText);
+      return NextResponse.json({ ok: false, error: `AI API error: ${response.status}` }, { status: 502 });
+    }
+
+    const data = await response.json();
+    const text = data.content?.[0]?.text || '';
+
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      return NextResponse.json({ ok: false, error: 'Failed to parse AI response' }, { status: 502 });
+    }
+
+    const parsed = JSON.parse(jsonMatch[0]);
+    return NextResponse.json({ ok: true, suggestions: parsed.suggestions || [] });
   } catch (err: any) {
     console.error('[Feedback Suggest] error:', err);
     return NextResponse.json(
