@@ -1,18 +1,18 @@
 {
-  "generatedAtUtc": "2026-04-20T05:17:16.059Z",
-  "pagesScanned": 2682,
-  "pagesWithRules": 207,
-  "totalEvidenceCount": 856,
+  "generatedAtUtc": "2026-04-21T04:51:49.887Z",
+  "pagesScanned": 2680,
+  "pagesWithRules": 206,
+  "totalEvidenceCount": 854,
   "byCriticality": {
     "critical": 40,
-    "high": 101,
+    "high": 100,
     "medium": 62,
     "low": 4
   },
   "byCategory": {
     "has_rules_code": 40,
-    "links_to_rules": 124,
-    "suggests_rules": 122,
+    "links_to_rules": 123,
+    "suggests_rules": 121,
     "mentions_rules": 86,
     "is_rules_api": 11,
     "is_hooks_page": 48
@@ -3924,28 +3924,6 @@
         },
         {
           "line": 612,
-          "snippet": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
-          "category": "suggests_rules"
-        }
-      ],
-      "severity": "high"
-    },
-    {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "filePath": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "categories": [
-        "links_to_rules",
-        "suggests_rules"
-      ],
-      "evidenceCount": 2,
-      "evidence": [
-        {
-          "line": 403,
-          "snippet": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
-          "category": "links_to_rules"
-        },
-        {
-          "line": 403,
           "snippet": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
           "category": "suggests_rules"
         }

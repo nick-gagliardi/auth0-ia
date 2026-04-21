@@ -142,20 +142,8 @@
   "main/docs/index.mdx": {
     "link": [],
     "import": [
-      "main/snippets/home.jsx",
-      "main/snippets/BgImage.jsx",
       "main/snippets/Footer.jsx"
     ],
-    "redirect": []
-  },
-  "main/snippets/home.jsx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/BgImage.jsx": {
-    "link": [],
-    "import": [],
     "redirect": []
   },
   "main/snippets/Footer.jsx": {
@@ -7531,71 +7519,9 @@
     ],
     "redirect": []
   },
-  "main/docs/quickstart/webapp/java-spring-boot/_index.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/java-spring-boot/application.yml.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfig.java.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/index.html.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/HomeController.java.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfigWithLogout.java.mdx",
-      "main/snippets/AuthCodeGroup.jsx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/application.yml.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfig.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/index.html.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/HomeController.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfigWithLogout.java.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/quickstart/webapp/java-spring-boot/index.mdx": {
-    "link": [
-      "main/docs/get-started/auth0-overview.mdx",
-      "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx",
-      "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "main/docs/authenticate/identity-providers.mdx",
-      "main/docs/secure/multi-factor-authentication.mdx",
-      "main/docs/secure/attack-protection.mdx",
-      "main/docs/customize/rules.mdx"
-    ],
-    "import": [
-      "main/snippets/AuthCodeBlock.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx": {
     "link": [],
     "import": [
-      "main/snippets/recipe.jsx",
-      "main/snippets/Login.jsx",
-      "main/snippets/quickstart/webapp/java-spring-boot/application.yml.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfig.java.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/index.html.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/HomeController.java.mdx",
-      "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfigWithLogout.java.mdx",
-      "main/snippets/QuickstartButtons.jsx",
       "main/snippets/AuthCodeGroup.jsx"
     ],
     "redirect": []
@@ -21575,9 +21501,8 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx": {
     "link": [
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "main/docs/authenticate/enterprise-connections.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx",
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/deploy-monitor/logs.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21874,10 +21799,9 @@
       "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/enable-enterprise-connections.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx",
       "main/docs/secure/tokens/access-tokens/identity-provider-access-tokens.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx",
-      "main/docs/libraries.mdx",
       "main/docs/get-started/authentication-and-authorization-flow.mdx",
       "main/docs/authenticate/identity-providers/pass-parameters-to-idps.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/reprompt-permissions.mdx"
@@ -25963,6 +25887,16 @@
     ],
     "redirect": []
   },
+  "main/snippets/ApiSectionTitle.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/BgImage.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/snippets/RelatedPages.mdx": {
     "link": [],
     "import": [],
@@ -25979,6 +25913,11 @@
     "redirect": []
   },
   "main/snippets/cards.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/home.jsx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -26019,6 +25958,31 @@
     "redirect": []
   },
   "main/snippets/quickstart/webapp/nextjs/create-the-auth0-sdk-client.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/HomeController.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfig.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfigWithLogout.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/application.yml.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/index.html.mdx": {
     "link": [],
     "import": [],
     "redirect": []

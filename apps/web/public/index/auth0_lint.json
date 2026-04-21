@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2682,
+  "pagesScanned": 2680,
   "pagesWithWarnings": 564,
   "warningCount": 792,
   "byCode": {
     "missing_pkce_mention": 126,
     "missing_state_mention": 130,
-    "missing_nonce_mention": 270,
+    "missing_nonce_mention": 271,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
-    "rules_vs_actions_language": 252
+    "rules_vs_actions_language": 251
   },
   "items": [
     {
@@ -16708,27 +16708,17 @@
       ]
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "filePath": "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "filePath": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "warnings": [
         {
-          "code": "rules_vs_actions_language",
+          "code": "missing_nonce_mention",
           "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
-          "line": 403
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "api.idToken.setCustomClaim(`${namespace}/roles`, event.authorization.roles);",
+          "line": 453
         }
       ]
-    },
-    {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
-      "filePath": "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
-      "warnings": []
     },
     {
       "id": "main/docs/quickstart/webapp/java/index.mdx",
@@ -21038,17 +21028,15 @@
     "main/docs/quickstart/webapp/laravel/_index.mdx": [],
     "main/docs/quickstart/webapp/laravel/index.mdx": [],
     "main/docs/quickstart/webapp/laravel/interactive.mdx": [],
-    "main/docs/quickstart/webapp/java-spring-boot/_index.mdx": [],
     "main/docs/quickstart/webapp/java-spring-boot/index.mdx": [
       {
-        "code": "rules_vs_actions_language",
+        "code": "missing_nonce_mention",
         "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "| [Learn about attack protection](/docs/secure/attack-protection) | [Learn about rules](/docs/customize/rules) |",
-        "line": 403
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "api.idToken.setCustomClaim(`${namespace}/roles`, event.authorization.roles);",
+        "line": 453
       }
     ],
-    "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx": [],
     "main/docs/quickstart/webapp/java-ee/index.mdx": [
       {
         "code": "missing_nonce_mention",

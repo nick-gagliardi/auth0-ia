@@ -303,7 +303,6 @@
       "main/docs/quickstart/webapp/nginx-plus/index.mdx",
       "main/docs/quickstart/webapp/nextjs/index.mdx",
       "main/docs/quickstart/webapp/laravel/interactive.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/fastify/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
@@ -534,20 +533,6 @@
     "import": [],
     "redirect": []
   },
-  "main/snippets/home.jsx": {
-    "link": [],
-    "import": [
-      "main/docs/index.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/BgImage.jsx": {
-    "link": [],
-    "import": [
-      "main/docs/index.mdx"
-    ],
-    "redirect": []
-  },
   "main/snippets/Footer.jsx": {
     "link": [],
     "import": [
@@ -585,7 +570,6 @@
       "main/docs/authenticate/login/logout/log-users-out-of-auth0.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory-native.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx"
     ],
     "import": [],
@@ -1342,6 +1326,7 @@
       "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
       "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx",
@@ -2042,7 +2027,6 @@
       "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-conditions-for-consent.mdx",
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
@@ -2383,7 +2367,6 @@
       "main/docs/secure/multi-factor-authentication/adaptive-mfa.mdx",
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/backend/webapi-owin/index.mdx",
@@ -2628,8 +2611,7 @@
       "main/docs/quickstart/webapp/nginx-plus/_index.mdx",
       "main/docs/quickstart/webapp/nginx-plus/interactive.mdx",
       "main/docs/quickstart/webapp/nextjs/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
+      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/java-ee/index.mdx",
       "main/docs/quickstart/webapp/java/index.mdx",
       "main/docs/quickstart/webapp/hono/index.mdx",
@@ -4051,7 +4033,6 @@
       "main/docs/secure/attack-protection/bot-detection.mdx",
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
@@ -4338,7 +4319,6 @@
       "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
       "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
       "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
@@ -5368,7 +5348,6 @@
       "main/docs/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/create-custom-enrollment-tickets.mdx",
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
@@ -8964,8 +8943,6 @@
       "main/docs/quickstart/webapp/nextjs/index.mdx",
       "main/docs/quickstart/webapp/laravel/_index.mdx",
       "main/docs/quickstart/webapp/laravel/interactive.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
       "main/docs/quickstart/webapp/fastify/index.mdx",
@@ -9017,8 +8994,6 @@
       "main/docs/quickstart/webapp/nginx-plus/_index.mdx",
       "main/docs/quickstart/webapp/nginx-plus/interactive.mdx",
       "main/docs/quickstart/webapp/laravel/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
       "main/docs/quickstart/webapp/golang/_index.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
       "main/docs/quickstart/webapp/django/_index.mdx",
@@ -9098,7 +9073,6 @@
     "link": [
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/native/xamarin/index.mdx",
@@ -9123,7 +9097,6 @@
     "link": [
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/get-started/architecture-scenarios.mdx",
@@ -9157,7 +9130,6 @@
     "link": [
       "main/docs/quickstart/webapp/rails/index.mdx",
       "main/docs/quickstart/webapp/php/index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "main/docs/quickstart/webapp/golang/index.mdx",
       "main/docs/quickstart/webapp/django/index.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/index.mdx",
@@ -9225,7 +9197,6 @@
       "main/docs/quickstart/webapp/rails/interactive.mdx",
       "main/docs/quickstart/webapp/php/interactive.mdx",
       "main/docs/quickstart/webapp/laravel/interactive.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
       "main/docs/quickstart/webapp/golang/interactive.mdx",
       "main/docs/quickstart/webapp/django/interactive.mdx",
       "main/docs/quickstart/webapp/aspnet-owin/interactive.mdx",
@@ -9406,57 +9377,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/quickstart/webapp/java-spring-boot/_index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/application.yml.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfig.java.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/index.html.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/HomeController.java.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx"
-    ],
-    "redirect": []
-  },
-  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfigWithLogout.java.mdx": {
-    "link": [],
-    "import": [
-      "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-      "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx"
-    ],
-    "redirect": []
-  },
   "main/docs/quickstart/webapp/java-spring-boot/index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -22712,8 +22633,7 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx": {
     "link": [
       "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx"
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx"
     ],
     "import": [],
     "redirect": []
@@ -25987,6 +25907,16 @@
     "import": [],
     "redirect": []
   },
+  "main/snippets/ApiSectionTitle.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/BgImage.jsx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/snippets/RelatedPages.mdx": {
     "link": [],
     "import": [],
@@ -26003,6 +25933,11 @@
     "redirect": []
   },
   "main/snippets/cards.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/home.jsx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -26043,6 +25978,31 @@
     "redirect": []
   },
   "main/snippets/quickstart/webapp/nextjs/create-the-auth0-sdk-client.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/HomeController.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfig.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/SecurityConfigWithLogout.java.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/application.yml.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/snippets/quickstart/webapp/java-spring-boot/index.html.mdx": {
     "link": [],
     "import": [],
     "redirect": []

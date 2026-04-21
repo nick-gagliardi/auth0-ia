@@ -11875,16 +11875,8 @@
     "filePath": "main/docs/quickstart/webapp/laravel/interactive.mdx",
     "navNodePaths": []
   },
-  "main/docs/quickstart/webapp/java-spring-boot/_index.mdx": {
-    "filePath": "main/docs/quickstart/webapp/java-spring-boot/_index.mdx",
-    "navNodePaths": []
-  },
   "main/docs/quickstart/webapp/java-spring-boot/index.mdx": {
     "filePath": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-    "navNodePaths": []
-  },
-  "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx": {
-    "filePath": "main/docs/quickstart/webapp/java-spring-boot/interactive.mdx",
     "navNodePaths": []
   },
   "main/docs/quickstart/webapp/java-ee/index.mdx": {
@@ -48916,7 +48908,7 @@
           "Identity Providers",
           "Enterprise Identity Providers",
           "Use Auth0 with Google",
-          "Connect Your App to Google Workspace"
+          "How to Connect Auth0 Apps to Google Workspace using Enterprise Connections"
         ],
         "kinds": [
           "tab",
@@ -48927,13 +48919,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Connect Your App to Google Workspace",
+        "leafLabel": "How to Connect Auth0 Apps to Google Workspace using Enterprise Connections",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Authenticate > Provision Users > Identity Providers > Enterprise Identity Providers > Use Auth0 with Google",
-        "pathString": "Documentation > Authenticate > Provision Users > Identity Providers > Enterprise Identity Providers > Use Auth0 with Google > Connect Your App to Google Workspace"
+        "pathString": "Documentation > Authenticate > Provision Users > Identity Providers > Enterprise Identity Providers > Use Auth0 with Google > How to Connect Auth0 Apps to Google Workspace using Enterprise Connections"
       }
     ],
-    "navLabel": "Connect Your App to Google Workspace",
+    "navLabel": "How to Connect Auth0 Apps to Google Workspace using Enterprise Connections",
     "navLabelSource": "frontmatter"
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx": {
@@ -48958,7 +48950,7 @@
           "Identity Providers",
           "Enterprise Identity Providers",
           "Use Auth0 with Google",
-          "Sync Google Workspace Users to Auth0 with Directory Sync"
+          "How to Sync Google Workspace Users and Groups to Auth0 with Directory Sync"
         ],
         "kinds": [
           "tab",
@@ -48969,13 +48961,13 @@
           "group",
           "page"
         ],
-        "leafLabel": "Sync Google Workspace Users to Auth0 with Directory Sync",
+        "leafLabel": "How to Sync Google Workspace Users and Groups to Auth0 with Directory Sync",
         "leafLabelSource": "frontmatter",
         "containerString": "Documentation > Authenticate > Provision Users > Identity Providers > Enterprise Identity Providers > Use Auth0 with Google",
-        "pathString": "Documentation > Authenticate > Provision Users > Identity Providers > Enterprise Identity Providers > Use Auth0 with Google > Sync Google Workspace Users to Auth0 with Directory Sync"
+        "pathString": "Documentation > Authenticate > Provision Users > Identity Providers > Enterprise Identity Providers > Use Auth0 with Google > How to Sync Google Workspace Users and Groups to Auth0 with Directory Sync"
       }
     ],
-    "navLabel": "Sync Google Workspace Users to Auth0 with Directory Sync",
+    "navLabel": "How to Sync Google Workspace Users and Groups to Auth0 with Directory Sync",
     "navLabelSource": "frontmatter"
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx": {

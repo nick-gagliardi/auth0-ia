@@ -1,14 +1,14 @@
 {
-  "generatedAtUtc": "2026-04-20T05:17:16.478Z",
+  "generatedAtUtc": "2026-04-21T04:51:50.395Z",
   "minInbound": 20,
   "maxOutbound": 1,
   "count": 4,
   "items": [
     {
       "id": "main/docs/libraries.mdx",
-      "inboundLinks": 30,
+      "inboundLinks": 29,
       "outboundLinks": 0,
-      "deadEndScore": 30,
+      "deadEndScore": 29,
       "navRoot": null
     },
     {

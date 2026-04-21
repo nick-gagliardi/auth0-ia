@@ -2,11 +2,11 @@
   "main/docs/get-started/authentication-and-authorization-flow.mdx": [
     {
       "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.1558,
+      "score": 0.148,
       "simOut": 0.0244,
-      "simIn": 0.3529,
+      "simIn": 0.3333,
       "sharedOut": 1,
-      "sharedIn": 12,
+      "sharedIn": 11,
       "reasons": [
         "shared_inbound"
       ],
@@ -16,9 +16,9 @@
     },
     {
       "id": "main/docs/get-started/applications/application-grant-types.mdx",
-      "score": 0.1336,
+      "score": 0.1339,
       "simOut": 0.2051,
-      "simIn": 0.0263,
+      "simIn": 0.027,
       "sharedOut": 8,
       "sharedIn": 1,
       "reasons": [
@@ -30,9 +30,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx",
-      "score": 0.1252,
+      "score": 0.1254,
       "simOut": 0.1944,
-      "simIn": 0.0213,
+      "simIn": 0.0217,
       "sharedOut": 7,
       "sharedIn": 1,
       "reasons": [
@@ -86,9 +86,9 @@
     },
     {
       "id": "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
-      "score": 0.0922,
+      "score": 0.0924,
       "simOut": 0.1389,
-      "simIn": 0.0222,
+      "simIn": 0.0227,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -100,9 +100,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post.mdx",
-      "score": 0.0904,
+      "score": 0.091,
       "simOut": 0.1081,
-      "simIn": 0.0638,
+      "simIn": 0.0652,
       "sharedOut": 4,
       "sharedIn": 3,
       "reasons": [
@@ -187,9 +187,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0922,
+      "score": 0.0924,
       "simOut": 0.1389,
-      "simIn": 0.0222,
+      "simIn": 0.0227,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -1214,9 +1214,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.1252,
+      "score": 0.1254,
       "simOut": 0.1944,
-      "simIn": 0.0213,
+      "simIn": 0.0217,
       "sharedOut": 7,
       "sharedIn": 1,
       "reasons": [
@@ -1370,9 +1370,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.1336,
+      "score": 0.1339,
       "simOut": 0.2051,
-      "simIn": 0.0263,
+      "simIn": 0.027,
       "sharedOut": 8,
       "sharedIn": 1,
       "reasons": [
@@ -2493,9 +2493,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.1111,
+      "score": 0.1114,
       "simOut": 0.1538,
-      "simIn": 0.0471,
+      "simIn": 0.0476,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -4392,9 +4392,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.089,
+      "score": 0.0894,
       "simOut": 0.1053,
-      "simIn": 0.0645,
+      "simIn": 0.0656,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -4994,9 +4994,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0188,
+      "score": 0.019,
       "simOut": 0,
-      "simIn": 0.0469,
+      "simIn": 0.0476,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -6461,9 +6461,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0235,
+      "score": 0.0238,
       "simOut": 0,
-      "simIn": 0.0588,
+      "simIn": 0.0595,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -6830,9 +6830,9 @@
   "main/docs/secure/multi-factor-authentication.mdx": [
     {
       "id": "main/docs/secure/multi-factor-authentication/multi-factor-authentication-developer-resources/mfa-api.mdx",
-      "score": 0.2068,
+      "score": 0.2069,
       "simOut": 0.3333,
-      "simIn": 0.0169,
+      "simIn": 0.0172,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -6844,11 +6844,11 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.15,
+      "score": 0.146,
       "simOut": 0,
-      "simIn": 0.375,
+      "simIn": 0.3651,
       "sharedOut": 0,
-      "sharedIn": 24,
+      "sharedIn": 23,
       "reasons": [
         "shared_inbound"
       ],
@@ -6858,9 +6858,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/customize-mfa.mdx",
-      "score": 0.1274,
+      "score": 0.1275,
       "simOut": 0.2,
-      "simIn": 0.0185,
+      "simIn": 0.0189,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -6872,25 +6872,11 @@
     },
     {
       "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.1132,
+      "score": 0.1077,
       "simOut": 0,
-      "simIn": 0.283,
+      "simIn": 0.2692,
       "sharedOut": 0,
-      "sharedIn": 15,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0952,
-      "simOut": 0,
-      "simIn": 0.2381,
-      "sharedOut": 0,
-      "sharedIn": 20,
+      "sharedIn": 14,
       "reasons": [
         "shared_inbound"
       ],
@@ -6900,9 +6886,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication/multi-factor-authentication-factors.mdx",
-      "score": 0.092,
+      "score": 0.0924,
       "simOut": 0.1176,
-      "simIn": 0.0536,
+      "simIn": 0.0545,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -6913,10 +6899,24 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/identity-providers.mdx",
+      "score": 0.0916,
+      "simOut": 0,
+      "simIn": 0.2289,
+      "sharedOut": 0,
+      "sharedIn": 19,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/authenticate/login/configure-silent-authentication.mdx",
-      "score": 0.089,
+      "score": 0.0894,
       "simOut": 0.1053,
-      "simIn": 0.0645,
+      "simIn": 0.0656,
       "sharedOut": 2,
       "sharedIn": 4,
       "reasons": [
@@ -6928,25 +6928,11 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0748,
+      "score": 0.0717,
       "simOut": 0,
-      "simIn": 0.1869,
+      "simIn": 0.1792,
       "sharedOut": 0,
-      "sharedIn": 20,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0606,
-      "simOut": 0,
-      "simIn": 0.1515,
-      "sharedOut": 0,
-      "sharedIn": 10,
+      "sharedIn": 19,
       "reasons": [
         "shared_inbound"
       ],
@@ -6956,11 +6942,25 @@
     },
     {
       "id": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-      "score": 0.059,
+      "score": 0.0593,
       "simOut": 0.069,
-      "simIn": 0.0441,
+      "simIn": 0.0448,
       "sharedOut": 2,
       "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
+      "score": 0.0554,
+      "simOut": 0,
+      "simIn": 0.1385,
+      "sharedOut": 0,
+      "sharedIn": 9,
       "reasons": [
         "shared_inbound"
       ],
@@ -7247,9 +7247,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0593,
+      "score": 0.0604,
       "simOut": 0,
-      "simIn": 0.1481,
+      "simIn": 0.1509,
       "sharedOut": 0,
       "sharedIn": 8,
       "reasons": [
@@ -8373,9 +8373,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0315,
+      "score": 0.0318,
       "simOut": 0,
-      "simIn": 0.0787,
+      "simIn": 0.0795,
       "sharedOut": 0,
       "sharedIn": 7,
       "reasons": [
@@ -8641,9 +8641,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0146,
+      "score": 0.0148,
       "simOut": 0,
-      "simIn": 0.0366,
+      "simIn": 0.037,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -8775,9 +8775,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0145,
+      "score": 0.0146,
       "simOut": 0,
-      "simIn": 0.0361,
+      "simIn": 0.0366,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -11029,9 +11029,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0435,
+      "score": 0.0426,
       "simOut": 0,
-      "simIn": 0.1087,
+      "simIn": 0.1064,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -11560,9 +11560,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0267,
+      "score": 0.0273,
       "simOut": 0,
-      "simIn": 0.0667,
+      "simIn": 0.0682,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -11703,9 +11703,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0286,
+      "score": 0.0293,
       "simOut": 0,
-      "simIn": 0.0714,
+      "simIn": 0.0732,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -13167,9 +13167,9 @@
   "main/docs/customize/rules.mdx": [
     {
       "id": "main/docs/manage-users/user-accounts/metadata/manage-metadata-rules.mdx",
-      "score": 0.2193,
+      "score": 0.2195,
       "simOut": 0.3333,
-      "simIn": 0.0482,
+      "simIn": 0.0488,
       "sharedOut": 5,
       "sharedIn": 4,
       "reasons": [
@@ -13196,9 +13196,9 @@
     },
     {
       "id": "main/docs/customize/rules/context-object.mdx",
-      "score": 0.1685,
+      "score": 0.1686,
       "simOut": 0.2727,
-      "simIn": 0.0122,
+      "simIn": 0.0123,
       "sharedOut": 6,
       "sharedIn": 1,
       "reasons": [
@@ -13224,9 +13224,9 @@
     },
     {
       "id": "main/docs/customize/rules/user-object-in-rules.mdx",
-      "score": 0.1549,
+      "score": 0.155,
       "simOut": 0.25,
-      "simIn": 0.0123,
+      "simIn": 0.0125,
       "sharedOut": 4,
       "sharedIn": 1,
       "reasons": [
@@ -13240,7 +13240,7 @@
       "id": "main/docs/customize/rules/configuration.mdx",
       "score": 0.1431,
       "simOut": 0.2308,
-      "simIn": 0.0115,
+      "simIn": 0.0116,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -13252,11 +13252,26 @@
     },
     {
       "id": "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-      "score": 0.1391,
+      "score": 0.1396,
       "simOut": 0.16,
-      "simIn": 0.1078,
+      "simIn": 0.1089,
       "sharedOut": 4,
       "sharedIn": 11,
+      "reasons": [
+        "shared_outbound",
+        "shared_inbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/customize/hooks.mdx",
+      "score": 0.1392,
+      "simOut": 0.125,
+      "simIn": 0.1605,
+      "sharedOut": 3,
+      "sharedIn": 13,
       "reasons": [
         "shared_outbound",
         "shared_inbound"
@@ -13281,20 +13296,6 @@
     },
     {
       "id": "main/docs/customize/hooks/delete-hooks.mdx",
-      "score": 0.1385,
-      "simOut": 0.2308,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/customize/hooks/enable-disable-hooks.mdx",
       "score": 0.1385,
       "simOut": 0.2308,
       "simIn": 0,
@@ -13339,9 +13340,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.1685,
+      "score": 0.1686,
       "simOut": 0.2727,
-      "simIn": 0.0122,
+      "simIn": 0.0123,
       "sharedOut": 6,
       "sharedIn": 1,
       "reasons": [
@@ -13787,9 +13788,9 @@
   "main/docs/deploy-monitor/logs.mdx": [
     {
       "id": "main/docs/deploy-monitor/logs/log-event-filters.mdx",
-      "score": 0.3087,
+      "score": 0.3085,
       "simOut": 0.5,
-      "simIn": 0.0217,
+      "simIn": 0.0213,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -13801,9 +13802,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
-      "score": 0.2754,
+      "score": 0.275,
       "simOut": 0.4167,
-      "simIn": 0.0635,
+      "simIn": 0.0625,
       "sharedOut": 5,
       "sharedIn": 4,
       "reasons": [
@@ -13816,9 +13817,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs/retrieve-log-events-using-mgmt-api.mdx",
-      "score": 0.1889,
+      "score": 0.1887,
       "simOut": 0.3,
-      "simIn": 0.0222,
+      "simIn": 0.0217,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -13844,9 +13845,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs/log-search-query-syntax.mdx",
-      "score": 0.18,
+      "score": 0.1796,
       "simOut": 0.2727,
-      "simIn": 0.0408,
+      "simIn": 0.04,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -13872,9 +13873,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs/log-data-retention.mdx",
-      "score": 0.1026,
+      "score": 0.1017,
       "simOut": 0.1,
-      "simIn": 0.1064,
+      "simIn": 0.1042,
       "sharedOut": 1,
       "sharedIn": 5,
       "reasons": [
@@ -13886,9 +13887,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/monitor.mdx",
-      "score": 0.089,
+      "score": 0.088,
       "simOut": 0.0667,
-      "simIn": 0.1224,
+      "simIn": 0.12,
       "sharedOut": 1,
       "sharedIn": 6,
       "reasons": [
@@ -13900,9 +13901,9 @@
     },
     {
       "id": "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-      "score": 0.0651,
+      "score": 0.0646,
       "simOut": 0.0625,
-      "simIn": 0.069,
+      "simIn": 0.0678,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -13914,9 +13915,9 @@
     },
     {
       "id": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-      "score": 0.0598,
+      "score": 0.0595,
       "simOut": 0.0526,
-      "simIn": 0.0706,
+      "simIn": 0.0698,
       "sharedOut": 1,
       "sharedIn": 6,
       "reasons": [
@@ -14042,9 +14043,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0651,
+      "score": 0.0646,
       "simOut": 0.0625,
-      "simIn": 0.069,
+      "simIn": 0.0678,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -14184,9 +14185,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.1026,
+      "score": 0.1017,
       "simOut": 0.1,
-      "simIn": 0.1064,
+      "simIn": 0.1042,
       "sharedOut": 1,
       "sharedIn": 5,
       "reasons": [
@@ -14371,9 +14372,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.3087,
+      "score": 0.3085,
       "simOut": 0.5,
-      "simIn": 0.0217,
+      "simIn": 0.0213,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -14458,9 +14459,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.2754,
+      "score": 0.275,
       "simOut": 0.4167,
-      "simIn": 0.0635,
+      "simIn": 0.0625,
       "sharedOut": 5,
       "sharedIn": 4,
       "reasons": [
@@ -16285,9 +16286,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0262,
+      "score": 0.0267,
       "simOut": 0,
-      "simIn": 0.0656,
+      "simIn": 0.0667,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -17129,9 +17130,9 @@
   "main/docs/secure/attack-protection/breached-password-detection.mdx": [
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.3599,
+      "score": 0.3602,
       "simOut": 0.5714,
-      "simIn": 0.0426,
+      "simIn": 0.0435,
       "sharedOut": 4,
       "sharedIn": 2,
       "reasons": [
@@ -18376,9 +18377,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.1391,
+      "score": 0.1396,
       "simOut": 0.16,
-      "simIn": 0.1078,
+      "simIn": 0.1089,
       "sharedOut": 4,
       "sharedIn": 11,
       "reasons": [
@@ -19649,9 +19650,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0627,
+      "score": 0.0631,
       "simOut": 0.0385,
-      "simIn": 0.099,
+      "simIn": 0.1,
       "sharedOut": 1,
       "sharedIn": 10,
       "reasons": [
@@ -19791,9 +19792,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0267,
+      "score": 0.0271,
       "simOut": 0,
-      "simIn": 0.0667,
+      "simIn": 0.0678,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -20316,12 +20317,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/custom-domains.mdx",
-      "score": 0.0188,
+      "id": "main/docs/authenticate/identity-providers.mdx",
+      "score": 0.019,
       "simOut": 0,
-      "simIn": 0.0471,
+      "simIn": 0.0476,
       "sharedOut": 0,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -20330,12 +20331,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers.mdx",
+      "id": "main/docs/customize/custom-domains.mdx",
       "score": 0.0188,
       "simOut": 0,
-      "simIn": 0.0469,
+      "simIn": 0.0471,
       "sharedOut": 0,
-      "sharedIn": 3,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -22293,9 +22294,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0267,
+      "score": 0.0273,
       "simOut": 0,
-      "simIn": 0.0667,
+      "simIn": 0.0682,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -23379,9 +23380,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0513,
+      "score": 0.0507,
       "simOut": 0.04,
-      "simIn": 0.0682,
+      "simIn": 0.0667,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -24036,9 +24037,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.034,
+      "score": 0.0333,
       "simOut": 0,
-      "simIn": 0.0851,
+      "simIn": 0.0833,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -26362,20 +26363,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.2571,
-      "simOut": 0.4286,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.2571,
       "simOut": 0.4286,
@@ -26405,6 +26392,20 @@
     },
     {
       "id": "main/docs/quickstart/backend/webapi-owin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/backend/php/index.mdx",
       "score": 0.225,
       "simOut": 0.375,
       "simIn": 0,
@@ -26504,20 +26505,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.2571,
-      "simOut": 0.4286,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.2571,
       "simOut": 0.4286,
@@ -26547,6 +26534,20 @@
     },
     {
       "id": "main/docs/quickstart/backend/webapi-owin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/backend/php/index.mdx",
       "score": 0.225,
       "simOut": 0.375,
       "simIn": 0,
@@ -26646,20 +26647,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.2571,
-      "simOut": 0.4286,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.2571,
       "simOut": 0.4286,
@@ -26689,6 +26676,20 @@
     },
     {
       "id": "main/docs/quickstart/backend/webapi-owin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/backend/php/index.mdx",
       "score": 0.225,
       "simOut": 0.375,
       "simIn": 0,
@@ -26788,20 +26789,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.2571,
-      "simOut": 0.4286,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.2571,
       "simOut": 0.4286,
@@ -26831,6 +26818,20 @@
     },
     {
       "id": "main/docs/quickstart/backend/webapi-owin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/backend/php/index.mdx",
       "score": 0.225,
       "simOut": 0.375,
       "simIn": 0,
@@ -26930,20 +26931,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.2571,
-      "simOut": 0.4286,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.2571,
       "simOut": 0.4286,
@@ -26973,6 +26960,20 @@
     },
     {
       "id": "main/docs/quickstart/backend/webapi-owin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/backend/php/index.mdx",
       "score": 0.225,
       "simOut": 0.375,
       "simIn": 0,
@@ -27449,9 +27450,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0145,
+      "score": 0.0146,
       "simOut": 0,
-      "simIn": 0.0361,
+      "simIn": 0.0366,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -27938,7 +27939,7 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/custom-domains.mdx",
+      "id": "main/docs/customize/rules.mdx",
       "score": 0.014,
       "simOut": 0,
       "simIn": 0.0349,
@@ -27952,10 +27953,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/rules.mdx",
-      "score": 0.0138,
+      "id": "main/docs/customize/custom-domains.mdx",
+      "score": 0.014,
       "simOut": 0,
-      "simIn": 0.0345,
+      "simIn": 0.0349,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -29439,9 +29440,9 @@
   "main/docs/secure/attack-protection.mdx": [
     {
       "id": "main/docs/secure/attack-protection/breached-password-detection.mdx",
-      "score": 0.3599,
+      "score": 0.3602,
       "simOut": 0.5714,
-      "simIn": 0.0426,
+      "simIn": 0.0435,
       "sharedOut": 4,
       "sharedIn": 2,
       "reasons": [
@@ -29467,9 +29468,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
-      "score": 0.3351,
+      "score": 0.3357,
       "simOut": 0.5,
-      "simIn": 0.0877,
+      "simIn": 0.0893,
       "sharedOut": 4,
       "sharedIn": 5,
       "reasons": [
@@ -29482,9 +29483,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/bot-detection.mdx",
-      "score": 0.2804,
+      "score": 0.2806,
       "simOut": 0.4545,
-      "simIn": 0.0192,
+      "simIn": 0.0196,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -29496,9 +29497,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/view-attack-protection-events.mdx",
-      "score": 0.2738,
+      "score": 0.2742,
       "simOut": 0.4286,
-      "simIn": 0.0417,
+      "simIn": 0.0426,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -29538,30 +29539,16 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.15,
+      "score": 0.146,
       "simOut": 0,
-      "simIn": 0.375,
+      "simIn": 0.3651,
       "sharedOut": 0,
-      "sharedIn": 24,
+      "sharedIn": 23,
       "reasons": [
         "shared_inbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.1395,
-      "simOut": 0,
-      "simIn": 0.3488,
-      "sharedOut": 0,
-      "sharedIn": 15,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -29576,6 +29563,20 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/auth0-overview.mdx",
+      "score": 0.1333,
+      "simOut": 0,
+      "simIn": 0.3333,
+      "sharedOut": 0,
+      "sharedIn": 14,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -29612,9 +29613,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.2804,
+      "score": 0.2806,
       "simOut": 0.4545,
-      "simIn": 0.0192,
+      "simIn": 0.0196,
       "sharedOut": 5,
       "sharedIn": 1,
       "reasons": [
@@ -29727,9 +29728,9 @@
   "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx": [
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.3351,
+      "score": 0.3357,
       "simOut": 0.5,
-      "simIn": 0.0877,
+      "simIn": 0.0893,
       "sharedOut": 4,
       "sharedIn": 5,
       "reasons": [
@@ -30002,9 +30003,9 @@
   "main/docs/secure/attack-protection/view-attack-protection-events.mdx": [
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.2738,
+      "score": 0.2742,
       "simOut": 0.4286,
-      "simIn": 0.0417,
+      "simIn": 0.0426,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -30645,9 +30646,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.1384,
+      "score": 0.1392,
       "simOut": 0.125,
-      "simIn": 0.1585,
+      "simIn": 0.1605,
       "sharedOut": 3,
       "sharedIn": 13,
       "reasons": [
@@ -33602,9 +33603,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0724,
+      "score": 0.0729,
       "simOut": 0.0789,
-      "simIn": 0.0625,
+      "simIn": 0.0638,
       "sharedOut": 3,
       "sharedIn": 3,
       "reasons": [
@@ -35681,10 +35682,10 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.5429,
-      "simOut": 0.5714,
+      "score": 0.5,
+      "simOut": 0.5,
       "simIn": 0.5,
-      "sharedOut": 8,
+      "sharedOut": 7,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
@@ -35794,12 +35795,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.34,
-      "simOut": 0.5,
-      "simIn": 0.1,
-      "sharedOut": 7,
-      "sharedIn": 1,
+      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx",
+      "score": 0.3238,
+      "simOut": 0.4286,
+      "simIn": 0.1667,
+      "sharedOut": 6,
+      "sharedIn": 2,
       "reasons": [
         "shared_outbound"
       ],
@@ -35808,12 +35809,12 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx",
-      "score": 0.3238,
+      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
+      "score": 0.2971,
       "simOut": 0.4286,
-      "simIn": 0.1667,
+      "simIn": 0.1,
       "sharedOut": 6,
-      "sharedIn": 2,
+      "sharedIn": 1,
       "reasons": [
         "shared_outbound"
       ],
@@ -37163,20 +37164,6 @@
   ],
   "main/docs/quickstart/webapp/php/index.mdx": [
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.6,
-      "simOut": 1,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.6,
       "simOut": 1,
@@ -37301,15 +37288,13 @@
       "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
-    }
-  ],
-  "main/docs/quickstart/webapp/rails/index.mdx": [
+    },
     {
-      "id": "main/docs/quickstart/webapp/php/index.mdx",
-      "score": 0.5,
-      "simOut": 0.8333,
+      "id": "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
+      "score": 0.2571,
+      "simOut": 0.4286,
       "simIn": 0,
-      "sharedOut": 5,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -37317,9 +37302,11 @@
       "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
-    },
+    }
+  ],
+  "main/docs/quickstart/webapp/rails/index.mdx": [
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
+      "id": "main/docs/quickstart/webapp/php/index.mdx",
       "score": 0.5,
       "simOut": 0.8333,
       "simIn": 0,
@@ -37443,139 +37430,11 @@
       "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
-    }
-  ],
-  "main/docs/quickstart/webapp/java-spring-boot/index.mdx": [
-    {
-      "id": "main/docs/quickstart/webapp/php/index.mdx",
-      "score": 0.6,
-      "simOut": 1,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/django/index.mdx",
-      "score": 0.6,
-      "simOut": 1,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/webapp/rails/index.mdx",
-      "score": 0.5,
-      "simOut": 0.8333,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/webapp/golang/index.mdx",
-      "score": 0.375,
-      "simOut": 0.625,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/backend/webapi-owin/index.mdx",
-      "score": 0.3429,
-      "simOut": 0.5714,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/backend/php/index.mdx",
-      "score": 0.3429,
-      "simOut": 0.5714,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/backend/django/index.mdx",
-      "score": 0.3429,
-      "simOut": 0.5714,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/backend/rails/index.mdx",
-      "score": 0.3,
-      "simOut": 0.5,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/backend/nodejs/index.mdx",
-      "score": 0.3,
-      "simOut": 0.5,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/native/xamarin/index.mdx",
-      "score": 0.2571,
-      "simOut": 0.4286,
+      "id": "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
       "simIn": 0,
       "sharedOut": 3,
       "sharedIn": 0,
@@ -37604,20 +37463,6 @@
     },
     {
       "id": "main/docs/quickstart/webapp/php/index.mdx",
-      "score": 0.375,
-      "simOut": 0.625,
-      "simIn": 0,
-      "sharedOut": 5,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
       "score": 0.375,
       "simOut": 0.625,
       "simIn": 0,
@@ -37727,15 +37572,13 @@
       "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
-    }
-  ],
-  "main/docs/quickstart/webapp/django/index.mdx": [
+    },
     {
-      "id": "main/docs/quickstart/webapp/php/index.mdx",
-      "score": 0.6,
-      "simOut": 1,
+      "id": "main/docs/quickstart/native/xamarin/index.mdx",
+      "score": 0.18,
+      "simOut": 0.3,
       "simIn": 0,
-      "sharedOut": 5,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -37743,9 +37586,11 @@
       "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
-    },
+    }
+  ],
+  "main/docs/quickstart/webapp/django/index.mdx": [
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
+      "id": "main/docs/quickstart/webapp/php/index.mdx",
       "score": 0.6,
       "simOut": 1,
       "simIn": 0,
@@ -37869,6 +37714,20 @@
       "isCrossNav": null,
       "diffFolder": false,
       "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/windows-uwp-csharp/index.mdx",
+      "score": 0.2571,
+      "simOut": 0.4286,
+      "simIn": 0,
+      "sharedOut": 3,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
     }
   ],
   "main/docs/quickstart/backend/webapi-owin/index.mdx": [
@@ -37957,20 +37816,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.3429,
-      "simOut": 0.5714,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.3429,
       "simOut": 0.5714,
@@ -38004,6 +37849,20 @@
       "simOut": 0.4,
       "simIn": 0,
       "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/xamarin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38099,20 +37958,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.3,
-      "simOut": 0.5,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.3,
       "simOut": 0.5,
@@ -38146,6 +37991,20 @@
       "simOut": 0.3636,
       "simIn": 0,
       "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/xamarin/index.mdx",
+      "score": 0.2,
+      "simOut": 0.3333,
+      "simIn": 0,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38241,20 +38100,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.3429,
-      "simOut": 0.5714,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.3429,
       "simOut": 0.5714,
@@ -38288,6 +38133,20 @@
       "simOut": 0.4,
       "simIn": 0,
       "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/xamarin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38383,20 +38242,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.3,
-      "simOut": 0.5,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.3,
       "simOut": 0.5,
@@ -38430,6 +38275,20 @@
       "simOut": 0.3636,
       "simIn": 0,
       "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/xamarin/index.mdx",
+      "score": 0.2,
+      "simOut": 0.3333,
+      "simIn": 0,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38525,20 +38384,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/quickstart/webapp/java-spring-boot/index.mdx",
-      "score": 0.3429,
-      "simOut": 0.5714,
-      "simIn": 0,
-      "sharedOut": 4,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/quickstart/webapp/django/index.mdx",
       "score": 0.3429,
       "simOut": 0.5714,
@@ -38572,6 +38417,20 @@
       "simOut": 0.4,
       "simIn": 0,
       "sharedOut": 4,
+      "sharedIn": 0,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/quickstart/native/xamarin/index.mdx",
+      "score": 0.225,
+      "simOut": 0.375,
+      "simIn": 0,
+      "sharedOut": 3,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38812,10 +38671,10 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.3867,
-      "simOut": 0.5333,
+      "score": 0.3467,
+      "simOut": 0.4667,
       "simIn": 0.1667,
-      "sharedOut": 8,
+      "sharedOut": 7,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
@@ -38911,11 +38770,11 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx",
-      "score": 0.25,
-      "simOut": 0.4167,
+      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
+      "score": 0.2571,
+      "simOut": 0.4286,
       "simIn": 0,
-      "sharedOut": 5,
+      "sharedOut": 6,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38925,11 +38784,11 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.24,
-      "simOut": 0.4,
+      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx",
+      "score": 0.25,
+      "simOut": 0.4167,
       "simIn": 0,
-      "sharedOut": 6,
+      "sharedOut": 5,
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
@@ -38998,10 +38857,10 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx": [
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory-native.mdx",
-      "score": 0.5429,
-      "simOut": 0.5714,
+      "score": 0.5,
+      "simOut": 0.5,
       "simIn": 0.5,
-      "sharedOut": 8,
+      "sharedOut": 7,
       "sharedIn": 1,
       "reasons": [
         "shared_outbound"
@@ -39012,8 +38871,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate.mdx",
-      "score": 0.4308,
-      "simOut": 0.3846,
+      "score": 0.45,
+      "simOut": 0.4167,
       "simIn": 0.5,
       "sharedOut": 5,
       "sharedIn": 1,
@@ -39026,23 +38885,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/active-directory-ldap.mdx",
-      "score": 0.3867,
-      "simOut": 0.5333,
+      "score": 0.3467,
+      "simOut": 0.4667,
       "simIn": 0.1667,
-      "sharedOut": 8,
-      "sharedIn": 1,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx",
-      "score": 0.34,
-      "simOut": 0.5,
-      "simIn": 0.1,
       "sharedOut": 7,
       "sharedIn": 1,
       "reasons": [
@@ -39053,9 +38898,23 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/azure-active-directory/v2.mdx",
+      "score": 0.2971,
+      "simOut": 0.4286,
+      "simIn": 0.1,
+      "sharedOut": 6,
+      "sharedIn": 1,
+      "reasons": [
+        "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx",
-      "score": 0.2444,
-      "simOut": 0.3333,
+      "score": 0.2587,
+      "simOut": 0.3571,
       "simIn": 0.1111,
       "sharedOut": 5,
       "sharedIn": 1,
@@ -39068,8 +38927,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/okta.mdx",
-      "score": 0.24,
-      "simOut": 0.4,
+      "score": 0.2571,
+      "simOut": 0.4286,
       "simIn": 0,
       "sharedOut": 6,
       "sharedIn": 0,
@@ -39082,8 +38941,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx",
-      "score": 0.2333,
-      "simOut": 0.3333,
+      "score": 0.2476,
+      "simOut": 0.3571,
       "simIn": 0.0833,
       "sharedOut": 5,
       "sharedIn": 1,
@@ -39092,20 +38951,6 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
-      "score": 0.04,
-      "simOut": 0.0667,
-      "simIn": 0,
-      "sharedOut": 3,
-      "sharedIn": 0,
-      "reasons": [
-        "shared_outbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
       "highValueConvergence": false
     }
   ],
@@ -40601,9 +40446,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0143,
+      "score": 0.0145,
       "simOut": 0,
-      "simIn": 0.0357,
+      "simIn": 0.0361,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -41105,9 +40950,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0432,
+      "score": 0.0434,
       "simOut": 0.0476,
-      "simIn": 0.0366,
+      "simIn": 0.037,
       "sharedOut": 1,
       "sharedIn": 3,
       "reasons": [
@@ -43963,9 +43808,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0367,
+      "score": 0.037,
       "simOut": 0,
-      "simIn": 0.0917,
+      "simIn": 0.0926,
       "sharedOut": 0,
       "sharedIn": 10,
       "reasons": [
@@ -44035,11 +43880,11 @@
   "main/docs/get-started/auth0-overview.mdx": [
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.1558,
+      "score": 0.148,
       "simOut": 0.0244,
-      "simIn": 0.3529,
+      "simIn": 0.3333,
       "sharedOut": 1,
-      "sharedIn": 12,
+      "sharedIn": 11,
       "reasons": [
         "shared_inbound"
       ],
@@ -44049,11 +43894,11 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.1395,
+      "score": 0.1333,
       "simOut": 0,
-      "simIn": 0.3488,
+      "simIn": 0.3333,
       "sharedOut": 0,
-      "sharedIn": 15,
+      "sharedIn": 14,
       "reasons": [
         "shared_inbound"
       ],
@@ -44063,11 +43908,11 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.1132,
+      "score": 0.1077,
       "simOut": 0,
-      "simIn": 0.283,
+      "simIn": 0.2692,
       "sharedOut": 0,
-      "sharedIn": 15,
+      "sharedIn": 14,
       "reasons": [
         "shared_inbound"
       ],
@@ -44076,17 +43921,17 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.1017,
+      "id": "main/docs/get-started/architecture-scenarios/mobile-api.mdx",
+      "score": 0.1043,
       "simOut": 0,
-      "simIn": 0.2542,
+      "simIn": 0.2609,
       "sharedOut": 0,
-      "sharedIn": 15,
+      "sharedIn": 6,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": true,
-      "diffFolder": true,
+      "isCrossNav": false,
+      "diffFolder": false,
       "highValueConvergence": false
     },
     {
@@ -44104,17 +43949,31 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/get-started/architecture-scenarios/mobile-api.mdx",
-      "score": 0.1,
+      "id": "main/docs/authenticate/identity-providers.mdx",
+      "score": 0.0966,
       "simOut": 0,
-      "simIn": 0.25,
+      "simIn": 0.2414,
+      "sharedOut": 0,
+      "sharedIn": 14,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/secure/tokens/json-web-tokens/json-web-key-sets.mdx",
+      "score": 0.0923,
+      "simOut": 0,
+      "simIn": 0.2308,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
         "shared_inbound"
       ],
-      "isCrossNav": false,
-      "diffFolder": false,
+      "isCrossNav": true,
+      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -44132,34 +43991,6 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/secure/tokens/json-web-tokens/json-web-key-sets.mdx",
-      "score": 0.0889,
-      "simOut": 0,
-      "simIn": 0.2222,
-      "sharedOut": 0,
-      "sharedIn": 6,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx",
-      "score": 0.0833,
-      "simOut": 0,
-      "simIn": 0.2083,
-      "sharedOut": 0,
-      "sharedIn": 5,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": false,
-      "diffFolder": false,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/get-started/identity-fundamentals/introduction-to-auth0.mdx",
       "score": 0.08,
       "simOut": 0.1333,
@@ -44168,6 +43999,20 @@
       "sharedIn": 0,
       "reasons": [
         "shared_outbound"
+      ],
+      "isCrossNav": false,
+      "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx",
+      "score": 0.0696,
+      "simOut": 0,
+      "simIn": 0.1739,
+      "sharedOut": 0,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
       ],
       "isCrossNav": false,
       "diffFolder": false,
@@ -44261,9 +44106,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0211,
+      "score": 0.0214,
       "simOut": 0,
-      "simIn": 0.0526,
+      "simIn": 0.0536,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -46865,9 +46710,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.04,
+      "score": 0.0414,
       "simOut": 0,
-      "simIn": 0.1,
+      "simIn": 0.1034,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -47027,9 +46872,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0143,
+      "score": 0.0145,
       "simOut": 0,
-      "simIn": 0.0357,
+      "simIn": 0.0361,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -47952,11 +47797,11 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.1081,
+      "score": 0.1041,
       "simOut": 0,
-      "simIn": 0.2703,
+      "simIn": 0.2603,
       "sharedOut": 0,
-      "sharedIn": 20,
+      "sharedIn": 19,
       "reasons": [
         "shared_inbound"
       ],
@@ -47966,11 +47811,11 @@
     },
     {
       "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.1017,
+      "score": 0.0966,
       "simOut": 0,
-      "simIn": 0.2542,
+      "simIn": 0.2414,
       "sharedOut": 0,
-      "sharedIn": 15,
+      "sharedIn": 14,
       "reasons": [
         "shared_inbound"
       ],
@@ -47980,11 +47825,11 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.0952,
+      "score": 0.0916,
       "simOut": 0,
-      "simIn": 0.2381,
+      "simIn": 0.2289,
       "sharedOut": 0,
-      "sharedIn": 20,
+      "sharedIn": 19,
       "reasons": [
         "shared_inbound"
       ],
@@ -47994,9 +47839,9 @@
     },
     {
       "id": "main/docs/get-started/applications/update-application-connections.mdx",
-      "score": 0.0817,
+      "score": 0.0821,
       "simOut": 0.0909,
-      "simIn": 0.0678,
+      "simIn": 0.069,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -48007,24 +47852,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/customize/rules.mdx",
-      "score": 0.0793,
-      "simOut": 0,
-      "simIn": 0.1982,
-      "sharedOut": 0,
-      "sharedIn": 22,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/manage-users/organizations/organizations-overview.mdx",
-      "score": 0.0789,
+      "score": 0.0791,
       "simOut": 0.0952,
-      "simIn": 0.0543,
+      "simIn": 0.0549,
       "sharedOut": 2,
       "sharedIn": 5,
       "reasons": [
@@ -48035,12 +47866,26 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.062,
+      "id": "main/docs/customize/rules.mdx",
+      "score": 0.0764,
       "simOut": 0,
-      "simIn": 0.1549,
+      "simIn": 0.1909,
       "sharedOut": 0,
-      "sharedIn": 11,
+      "sharedIn": 21,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": true,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
+      "score": 0.0571,
+      "simOut": 0,
+      "simIn": 0.1429,
+      "sharedOut": 0,
+      "sharedIn": 10,
       "reasons": [
         "shared_inbound"
       ],
@@ -48050,9 +47895,9 @@
     },
     {
       "id": "main/docs/authenticate/login/auth0-universal-login.mdx",
-      "score": 0.0481,
+      "score": 0.0482,
       "simOut": 0.0476,
-      "simIn": 0.0488,
+      "simIn": 0.0492,
       "sharedOut": 1,
       "sharedIn": 6,
       "reasons": [
@@ -48064,9 +47909,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-      "score": 0.0435,
+      "score": 0.044,
       "simOut": 0,
-      "simIn": 0.1087,
+      "simIn": 0.1099,
       "sharedOut": 0,
       "sharedIn": 10,
       "reasons": [
@@ -49181,9 +49026,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0148,
+      "score": 0.015,
       "simOut": 0,
-      "simIn": 0.037,
+      "simIn": 0.0375,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -49671,9 +49516,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.1889,
+      "score": 0.1887,
       "simOut": 0.3,
-      "simIn": 0.0222,
+      "simIn": 0.0217,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -51393,9 +51238,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.18,
+      "score": 0.1796,
       "simOut": 0.2727,
-      "simIn": 0.0408,
+      "simIn": 0.04,
       "sharedOut": 3,
       "sharedIn": 2,
       "reasons": [
@@ -51525,9 +51370,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0387,
+      "score": 0.04,
       "simOut": 0,
-      "simIn": 0.0968,
+      "simIn": 0.1,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -51668,9 +51513,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.0231,
+      "score": 0.0235,
       "simOut": 0,
-      "simIn": 0.0577,
+      "simIn": 0.0588,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -52162,9 +52007,9 @@
     },
     {
       "id": "main/docs/authenticate/enterprise-connections.mdx",
-      "score": 0.1091,
+      "score": 0.12,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.3,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -52511,9 +52356,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0203,
+      "score": 0.0207,
       "simOut": 0,
-      "simIn": 0.0508,
+      "simIn": 0.0517,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -54542,9 +54387,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0985,
+      "score": 0.0992,
       "simOut": 0.1,
-      "simIn": 0.0962,
+      "simIn": 0.098,
       "sharedOut": 1,
       "sharedIn": 5,
       "reasons": [
@@ -54922,9 +54767,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.1274,
+      "score": 0.1275,
       "simOut": 0.2,
-      "simIn": 0.0185,
+      "simIn": 0.0189,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -55201,9 +55046,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.092,
+      "score": 0.0924,
       "simOut": 0.1176,
-      "simIn": 0.0536,
+      "simIn": 0.0545,
       "sharedOut": 2,
       "sharedIn": 3,
       "reasons": [
@@ -55315,9 +55160,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.2068,
+      "score": 0.2069,
       "simOut": 0.3333,
-      "simIn": 0.0169,
+      "simIn": 0.0172,
       "sharedOut": 3,
       "sharedIn": 1,
       "reasons": [
@@ -55558,9 +55403,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.024,
+      "score": 0.0235,
       "simOut": 0,
-      "simIn": 0.06,
+      "simIn": 0.0588,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -57185,9 +57030,9 @@
     },
     {
       "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.0889,
+      "score": 0.0923,
       "simOut": 0,
-      "simIn": 0.2222,
+      "simIn": 0.2308,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -57213,9 +57058,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0686,
+      "score": 0.0706,
       "simOut": 0,
-      "simIn": 0.1714,
+      "simIn": 0.1765,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -59634,9 +59479,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0152,
+      "score": 0.0154,
       "simOut": 0,
-      "simIn": 0.038,
+      "simIn": 0.0385,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -59733,6 +59578,20 @@
       "highValueConvergence": false
     },
     {
+      "id": "main/docs/libraries.mdx",
+      "score": 0.0324,
+      "simOut": 0,
+      "simIn": 0.0811,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
       "id": "main/docs/manage-users/organizations/organizations-overview.mdx",
       "score": 0.032,
       "simOut": 0,
@@ -59743,20 +59602,6 @@
         "shared_inbound"
       ],
       "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/libraries.mdx",
-      "score": 0.0316,
-      "simOut": 0,
-      "simIn": 0.0789,
-      "sharedOut": 0,
-      "sharedIn": 3,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -60357,9 +60202,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0476,
+      "score": 0.0488,
       "simOut": 0,
-      "simIn": 0.119,
+      "simIn": 0.122,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -60947,9 +60792,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.024,
+      "score": 0.0235,
       "simOut": 0,
-      "simIn": 0.06,
+      "simIn": 0.0588,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -61714,8 +61559,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.2444,
-      "simOut": 0.3333,
+      "score": 0.2587,
+      "simOut": 0.3571,
       "simIn": 0.1111,
       "sharedOut": 5,
       "sharedIn": 1,
@@ -61829,8 +61674,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.4308,
-      "simOut": 0.3846,
+      "score": 0.45,
+      "simOut": 0.4167,
       "simIn": 0.5,
       "sharedOut": 5,
       "sharedIn": 1,
@@ -61958,8 +61803,8 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
-      "score": 0.2333,
-      "simOut": 0.3333,
+      "score": 0.2476,
+      "simOut": 0.3571,
       "simIn": 0.0833,
       "sharedOut": 5,
       "sharedIn": 1,
@@ -64112,9 +63957,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0211,
+      "score": 0.0214,
       "simOut": 0,
-      "simIn": 0.0526,
+      "simIn": 0.0536,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -65613,9 +65458,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0387,
+      "score": 0.04,
       "simOut": 0,
-      "simIn": 0.0968,
+      "simIn": 0.1,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -65627,9 +65472,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.015,
+      "score": 0.0152,
       "simOut": 0,
-      "simIn": 0.0375,
+      "simIn": 0.038,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -65813,9 +65658,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.041,
+      "score": 0.0421,
       "simOut": 0,
-      "simIn": 0.1026,
+      "simIn": 0.1053,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -66550,9 +66395,9 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0343,
+      "score": 0.0353,
       "simOut": 0,
-      "simIn": 0.0857,
+      "simIn": 0.0882,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -66682,9 +66527,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0817,
+      "score": 0.0821,
       "simOut": 0.0909,
-      "simIn": 0.0678,
+      "simIn": 0.069,
       "sharedOut": 1,
       "sharedIn": 4,
       "reasons": [
@@ -68013,9 +67858,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0207,
+      "score": 0.0211,
       "simOut": 0,
-      "simIn": 0.0517,
+      "simIn": 0.0526,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -68815,9 +68660,9 @@
     },
     {
       "id": "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
-      "score": 0.1091,
+      "score": 0.12,
       "simOut": 0,
-      "simIn": 0.2727,
+      "simIn": 0.3,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -68829,9 +68674,9 @@
     },
     {
       "id": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
-      "score": 0.04,
+      "score": 0.0414,
       "simOut": 0,
-      "simIn": 0.1,
+      "simIn": 0.1034,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -68843,25 +68688,11 @@
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-      "score": 0.0242,
+      "score": 0.0246,
       "simOut": 0,
-      "simIn": 0.0606,
+      "simIn": 0.0615,
       "sharedOut": 0,
       "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "score": 0.019,
-      "simOut": 0,
-      "simIn": 0.0476,
-      "sharedOut": 0,
-      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -69369,9 +69200,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0262,
+      "score": 0.0267,
       "simOut": 0,
-      "simIn": 0.0656,
+      "simIn": 0.0667,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -69643,11 +69474,11 @@
   "main/docs/get-started/architecture-scenarios/sso-for-regular-web-apps.mdx": [
     {
       "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.0833,
+      "score": 0.0696,
       "simOut": 0,
-      "simIn": 0.2083,
+      "simIn": 0.1739,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -69657,11 +69488,11 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0625,
+      "score": 0.0516,
       "simOut": 0,
-      "simIn": 0.1563,
+      "simIn": 0.129,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -69671,11 +69502,11 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0455,
+      "score": 0.0372,
       "simOut": 0,
-      "simIn": 0.1136,
+      "simIn": 0.093,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -69685,11 +69516,11 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0407,
+      "score": 0.0345,
       "simOut": 0,
-      "simIn": 0.1017,
+      "simIn": 0.0862,
       "sharedOut": 0,
-      "sharedIn": 6,
+      "sharedIn": 5,
       "reasons": [
         "shared_inbound"
       ],
@@ -69699,11 +69530,11 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.037,
+      "score": 0.0302,
       "simOut": 0,
-      "simIn": 0.0926,
+      "simIn": 0.0755,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -69713,11 +69544,11 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0241,
+      "score": 0.0195,
       "simOut": 0,
-      "simIn": 0.0602,
+      "simIn": 0.0488,
       "sharedOut": 0,
-      "sharedIn": 5,
+      "sharedIn": 4,
       "reasons": [
         "shared_inbound"
       ],
@@ -69943,9 +69774,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0351,
+      "score": 0.0345,
       "simOut": 0,
-      "simIn": 0.0877,
+      "simIn": 0.0862,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -70029,9 +69860,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0308,
+      "score": 0.0302,
       "simOut": 0,
-      "simIn": 0.0769,
+      "simIn": 0.0755,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -70348,24 +70179,10 @@
   ],
   "main/docs/libraries.mdx": [
     {
-      "id": "main/docs/get-started/applications/update-grant-types.mdx",
-      "score": 0.0609,
-      "simOut": 0,
-      "simIn": 0.1522,
-      "sharedOut": 0,
-      "sharedIn": 7,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/authenticate/single-sign-on.mdx",
-      "score": 0.0593,
+      "score": 0.0604,
       "simOut": 0,
-      "simIn": 0.1481,
+      "simIn": 0.1509,
       "sharedOut": 0,
       "sharedIn": 8,
       "reasons": [
@@ -70376,10 +70193,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/get-started/auth0-overview/create-applications.mdx",
-      "score": 0.0533,
+      "id": "main/docs/get-started/applications/update-grant-types.mdx",
+      "score": 0.0522,
       "simOut": 0,
-      "simIn": 0.1333,
+      "simIn": 0.1304,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -70390,38 +70207,10 @@
       "highValueConvergence": false
     },
     {
-      "id": "main/docs/authenticate/identity-providers/social-identity-providers/reprompt-permissions.mdx",
-      "score": 0.0533,
-      "simOut": 0,
-      "simIn": 0.1333,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/authenticate/identity-providers/pass-parameters-to-idps.mdx",
-      "score": 0.0516,
-      "simOut": 0,
-      "simIn": 0.129,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
       "id": "main/docs/customize/email/email-templates.mdx",
-      "score": 0.0476,
+      "score": 0.0488,
       "simOut": 0,
-      "simIn": 0.119,
+      "simIn": 0.122,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -70433,9 +70222,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection/state-parameters.mdx",
-      "score": 0.0476,
+      "score": 0.0488,
       "simOut": 0,
-      "simIn": 0.119,
+      "simIn": 0.122,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -70447,9 +70236,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-      "score": 0.0471,
+      "score": 0.0478,
       "simOut": 0,
-      "simIn": 0.1176,
+      "simIn": 0.1194,
       "sharedOut": 0,
       "sharedIn": 8,
       "reasons": [
@@ -70461,9 +70250,9 @@
     },
     {
       "id": "main/docs/secure/tokens/access-tokens.mdx",
-      "score": 0.0467,
+      "score": 0.0475,
       "simOut": 0,
-      "simIn": 0.1167,
+      "simIn": 0.1186,
       "sharedOut": 0,
       "sharedIn": 7,
       "reasons": [
@@ -70475,11 +70264,53 @@
     },
     {
       "id": "main/docs/secure/tokens/id-tokens.mdx",
-      "score": 0.0467,
+      "score": 0.0475,
       "simOut": 0,
-      "simIn": 0.1167,
+      "simIn": 0.1186,
       "sharedOut": 0,
       "sharedIn": 7,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/auth0-overview/create-applications.mdx",
+      "score": 0.0444,
+      "simOut": 0,
+      "simIn": 0.1111,
+      "sharedOut": 0,
+      "sharedIn": 5,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/architecture-scenarios/multiple-organization-architecture.mdx",
+      "score": 0.0421,
+      "simOut": 0,
+      "simIn": 0.1053,
+      "sharedOut": 0,
+      "sharedIn": 4,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
+      "score": 0.0414,
+      "simOut": 0,
+      "simIn": 0.1034,
+      "sharedOut": 0,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -70491,9 +70322,9 @@
   "main/docs/secure/data-privacy-and-compliance.mdx": [
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0387,
+      "score": 0.04,
       "simOut": 0,
-      "simIn": 0.0968,
+      "simIn": 0.1,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -70583,9 +70414,9 @@
   "main/docs/get-started/architecture-scenarios/mobile-api.mdx": [
     {
       "id": "main/docs/get-started/auth0-overview.mdx",
-      "score": 0.1,
+      "score": 0.1043,
       "simOut": 0,
-      "simIn": 0.25,
+      "simIn": 0.2609,
       "sharedOut": 0,
       "sharedIn": 6,
       "reasons": [
@@ -70611,9 +70442,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0444,
+      "score": 0.0455,
       "simOut": 0,
-      "simIn": 0.1111,
+      "simIn": 0.1136,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -70625,9 +70456,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.0364,
+      "score": 0.037,
       "simOut": 0,
-      "simIn": 0.0909,
+      "simIn": 0.0926,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -70639,9 +70470,9 @@
     },
     {
       "id": "main/docs/customize/rules.mdx",
-      "score": 0.0341,
+      "score": 0.0346,
       "simOut": 0,
-      "simIn": 0.0854,
+      "simIn": 0.0864,
       "sharedOut": 0,
       "sharedIn": 7,
       "reasons": [
@@ -70653,9 +70484,9 @@
     },
     {
       "id": "main/docs/authenticate/identity-providers.mdx",
-      "score": 0.0328,
+      "score": 0.0333,
       "simOut": 0,
-      "simIn": 0.082,
+      "simIn": 0.0833,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -70945,29 +70776,15 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0714,
+      "score": 0.0741,
       "simOut": 0,
-      "simIn": 0.1786,
+      "simIn": 0.1852,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
         "shared_inbound"
       ],
       "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/libraries.mdx",
-      "score": 0.0516,
-      "simOut": 0,
-      "simIn": 0.129,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -71011,6 +70828,20 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/libraries.mdx",
+      "score": 0.0387,
+      "simOut": 0,
+      "simIn": 0.0968,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -71073,29 +70904,15 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0741,
+      "score": 0.0769,
       "simOut": 0,
-      "simIn": 0.1852,
+      "simIn": 0.1923,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
         "shared_inbound"
       ],
       "isCrossNav": true,
-      "diffFolder": true,
-      "highValueConvergence": false
-    },
-    {
-      "id": "main/docs/libraries.mdx",
-      "score": 0.0533,
-      "simOut": 0,
-      "simIn": 0.1333,
-      "sharedOut": 0,
-      "sharedIn": 4,
-      "reasons": [
-        "shared_inbound"
-      ],
-      "isCrossNav": null,
       "diffFolder": true,
       "highValueConvergence": false
     },
@@ -71139,6 +70956,20 @@
       ],
       "isCrossNav": false,
       "diffFolder": false,
+      "highValueConvergence": false
+    },
+    {
+      "id": "main/docs/libraries.mdx",
+      "score": 0.04,
+      "simOut": 0,
+      "simIn": 0.1,
+      "sharedOut": 0,
+      "sharedIn": 3,
+      "reasons": [
+        "shared_inbound"
+      ],
+      "isCrossNav": null,
+      "diffFolder": true,
       "highValueConvergence": false
     },
     {
@@ -71271,9 +71102,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0606,
+      "score": 0.0625,
       "simOut": 0,
-      "simIn": 0.1515,
+      "simIn": 0.1563,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -71285,11 +71116,11 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0444,
+      "score": 0.0333,
       "simOut": 0,
-      "simIn": 0.1111,
+      "simIn": 0.0833,
       "sharedOut": 0,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -71413,9 +71244,9 @@
     },
     {
       "id": "main/docs/get-started/authentication-and-authorization-flow.mdx",
-      "score": 0.0606,
+      "score": 0.0625,
       "simOut": 0,
-      "simIn": 0.1515,
+      "simIn": 0.1563,
       "sharedOut": 0,
       "sharedIn": 5,
       "reasons": [
@@ -71427,11 +71258,11 @@
     },
     {
       "id": "main/docs/libraries.mdx",
-      "score": 0.0444,
+      "score": 0.0333,
       "simOut": 0,
-      "simIn": 0.1111,
+      "simIn": 0.0833,
       "sharedOut": 0,
-      "sharedIn": 4,
+      "sharedIn": 3,
       "reasons": [
         "shared_inbound"
       ],
@@ -71499,9 +71330,9 @@
     },
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.0281,
+      "score": 0.0286,
       "simOut": 0,
-      "simIn": 0.0702,
+      "simIn": 0.0714,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -71515,9 +71346,9 @@
   "main/docs/authenticate/database-connections/passkeys.mdx": [
     {
       "id": "main/docs/secure/multi-factor-authentication.mdx",
-      "score": 0.0308,
+      "score": 0.0314,
       "simOut": 0,
-      "simIn": 0.0769,
+      "simIn": 0.0784,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -71671,9 +71502,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0356,
+      "score": 0.0348,
       "simOut": 0,
-      "simIn": 0.0889,
+      "simIn": 0.087,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -71813,9 +71644,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0372,
+      "score": 0.0364,
       "simOut": 0,
-      "simIn": 0.093,
+      "simIn": 0.0909,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -72045,9 +71876,9 @@
   "main/docs/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli.mdx": [
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0348,
+      "score": 0.034,
       "simOut": 0,
-      "simIn": 0.087,
+      "simIn": 0.0851,
       "sharedOut": 0,
       "sharedIn": 4,
       "reasons": [
@@ -72197,9 +72028,9 @@
     },
     {
       "id": "main/docs/deploy-monitor/logs.mdx",
-      "score": 0.0267,
+      "score": 0.0261,
       "simOut": 0,
-      "simIn": 0.0667,
+      "simIn": 0.0652,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -73301,9 +73132,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0267,
+      "score": 0.0273,
       "simOut": 0,
-      "simIn": 0.0667,
+      "simIn": 0.0682,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -73429,9 +73260,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.0293,
+      "score": 0.03,
       "simOut": 0,
-      "simIn": 0.0732,
+      "simIn": 0.075,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [
@@ -73557,9 +73388,9 @@
     },
     {
       "id": "main/docs/secure/attack-protection.mdx",
-      "score": 0.03,
+      "score": 0.0308,
       "simOut": 0,
-      "simIn": 0.075,
+      "simIn": 0.0769,
       "sharedOut": 0,
       "sharedIn": 3,
       "reasons": [

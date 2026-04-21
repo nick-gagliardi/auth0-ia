@@ -17633,6 +17633,10 @@
       "destination": "/docs/quickstart/webapp/java-spring-boot"
     },
     {
+      "source": "/docs/quickstart/webapp/java-spring-mvc/interactive",
+      "destination": "/docs/quickstart/webapp/java-spring-boot"
+    },
+    {
       "source": "/docs/quickstart/webapp/java-spring-mvc/getting-started",
       "destination": "/docs/quickstart/webapp/java-spring-boot"
     },
@@ -37703,6 +37707,10 @@
       },
       {
         "source": "/docs/quickstart/webapp/java-spring-mvc",
+        "destination": "/docs/quickstart/webapp/java-spring-boot"
+      },
+      {
+        "source": "/docs/quickstart/webapp/java-spring-mvc/interactive",
         "destination": "/docs/quickstart/webapp/java-spring-boot"
       },
       {
