@@ -82,7 +82,7 @@ export function FeedbackDashboard({
 }: FeedbackDashboardProps) {
   const [page, setPage] = useState(0);
   const [viewMode, setViewMode] = useState<'grouped' | 'list'>('grouped');
-  const [collapsedPages, setCollapsedPages] = useState<Set<string>>(new Set());
+  const [expandedPages, setExpandedPages] = useState<Set<string>>(new Set());
 
   // ── Path lookup maps ───────────────────────────────────
   const nodeByPath = useMemo(() => {
@@ -129,7 +129,7 @@ export function FeedbackDashboard({
   const withComments = useMemo(() => feedback.filter((f) => f.comment).length, [feedback]);
 
   const togglePage = useCallback((path: string) => {
-    setCollapsedPages((prev) => {
+    setExpandedPages((prev) => {
       const next = new Set(prev);
       if (next.has(path)) next.delete(path);
       else next.add(path);
@@ -335,7 +335,7 @@ export function FeedbackDashboard({
           {viewMode === 'grouped' ? (
             <div className="space-y-1">
               {grouped.map(([path, group]) => {
-                const isOpen = !collapsedPages.has(path);
+                const isOpen = expandedPages.has(path);
                 const total = group.items.length;
                 const unhelpfulPct = total > 0 ? (group.unhelpful / total) * 100 : 0;
 
