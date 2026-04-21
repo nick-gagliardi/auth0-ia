@@ -6,16 +6,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Skeleton } from '@/components/ui/skeleton';
 import {
   ThumbsUp, ThumbsDown, MessageSquare, Code, FileText, AlertCircle, Eye, Search, Users,
   Lightbulb, Sparkles, ChevronDown, ChevronRight, Loader2, Wand2, Brain,
-  AlertTriangle, Info, ArrowRight, ExternalLink,
+  ArrowRight, ExternalLink, GitBranch,
 } from 'lucide-react';
 import AppLayout from '@/components/AppLayout';
 import type { FeedbackSuggestion, AnalyticsInsight } from '@/types';
 import { SiteGraphHeatmap } from '@/components/analytics/site-graph-heatmap';
+import { InsightsDashboard } from '@/components/analytics/insights-dashboard';
+import { categoryColor } from '@/lib/insight-colors';
 import { useNodes, useMetrics, useEdgesOutbound } from '@/hooks/use-index-data';
 
 interface FeedbackItem {
@@ -88,6 +89,10 @@ export default function AnalyticsPage() {
   const [suggestingId, setSuggestingId] = useState<string | null>(null);
   const [suggestError, setSuggestError] = useState<Record<string, string>>({});
   const [expandedSuggestions, setExpandedSuggestions] = useState<Set<string>>(new Set());
+
+  // PR creation state
+  const [creatingPrFor, setCreatingPrFor] = useState<string | null>(null); // "feedbackId:idx"
+  const [prResults, setPrResults] = useState<Record<string, { url?: string; error?: string }>>({});
 
   // Insights state
   const [insightsMode, setInsightsMode] = useState<'algorithmic' | 'ai'>('algorithmic');
@@ -260,6 +265,111 @@ export default function AnalyticsPage() {
     });
   }, []);
 
+  // ── PR creation handler ─────────────────────────────────────────────────────
+
+  const handleOpenPrForSuggestion = useCallback(async (feedbackId: string, idx: number, path: string, suggestion: FeedbackSuggestion) => {
+    const key = `${feedbackId}:${idx}`;
+    setCreatingPrFor(key);
+    setPrResults((prev) => ({ ...prev, [key]: {} }));
+
+    try {
+      // Step 1: Get structured diff prompt from server
+      const res = await fetch('/api/analytics/feedback/apply-changes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          path,
+          suggestion: {
+            title: suggestion.title,
+            description: suggestion.description,
+            category: suggestion.category,
+            suggestedAction: suggestion.suggestedAction,
+          },
+        }),
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'Failed to prepare changes');
+
+      // Step 2: Fetch API key for client-side Anthropic call
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) throw new Error('API key not configured. Add one in Settings.');
+      const { apiKey } = await keyRes.json();
+
+      // Step 3: Call Anthropic directly from browser
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = data.model || process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-4-5-sonnet';
+
+      const aiHeaders: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        aiHeaders['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        aiHeaders['x-api-key'] = apiKey;
+        aiHeaders['anthropic-version'] = '2023-06-01';
+      }
+
+      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers: aiHeaders,
+        body: JSON.stringify({
+          model,
+          max_tokens: 4096,
+          messages: [{ role: 'user', content: data.prompt }],
+        }),
+      });
+
+      if (!aiRes.ok) {
+        const errText = await aiRes.text().catch(() => '');
+        throw new Error(`AI API error (${aiRes.status}): ${errText.slice(0, 200)}`);
+      }
+
+      const aiData = await aiRes.json();
+      const text: string = aiData.content?.[0]?.text || '';
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('Failed to parse AI response for diffs');
+
+      const parsed = JSON.parse(jsonMatch[0]);
+      const { filePath: targetFile, replacements, summary: diffSummary } = parsed;
+
+      if (!targetFile || !replacements?.length) {
+        throw new Error('AI did not produce valid replacements');
+      }
+
+      // Step 4: POST to /api/audit/apply to create the PR branch
+      const applyRes = await fetch('/api/audit/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          filePath: targetFile,
+          validatedOn: new Date().toISOString(),
+          prTitle: `docs: ${suggestion.title}`,
+          prBody: `## Context\n\nGenerated from reader feedback on \`${path}\`.\n\n**Suggestion:** ${suggestion.suggestedAction}\n\n## Changes\n\n${diffSummary || 'Applied AI-generated content improvements.'}`,
+          suggestions: replacements.map((r: { before: string; after: string }, i: number) => ({
+            id: `feedback-${feedbackId}-${idx}-${i}`,
+            type: suggestion.category,
+            description: suggestion.title,
+            line: null,
+            original: r.before,
+            suggestion: r.after,
+            context: null,
+          })),
+        }),
+      });
+
+      const applyData = await applyRes.json();
+      if (!applyData.ok) throw new Error(applyData.error || 'Failed to create PR branch');
+
+      setPrResults((prev) => ({ ...prev, [key]: { url: applyData.compareUrl } }));
+    } catch (err) {
+      setPrResults((prev) => ({
+        ...prev,
+        [key]: { error: err instanceof Error ? err.message : 'Unknown error' },
+      }));
+    } finally {
+      setCreatingPrFor(null);
+    }
+  }, []);
+
   // ── Insights handler ──────────────────────────────────────────────────────
 
   const handleGenerateInsights = useCallback(async () => {
@@ -361,36 +471,6 @@ export default function AnalyticsPage() {
   }, [insightsMode, pageViews, insights, searchQueries]);
 
   // ── Helpers ────────────────────────────────────────────────────────────────
-
-  const severityColor = (s: string) => {
-    switch (s) {
-      case 'high': return 'destructive';
-      case 'medium': return 'default';
-      case 'low': return 'secondary';
-      default: return 'outline';
-    }
-  };
-
-  const severityIcon = (s: string) => {
-    switch (s) {
-      case 'high': return <AlertCircle className="h-4 w-4" />;
-      case 'medium': return <AlertTriangle className="h-4 w-4" />;
-      case 'low': return <Info className="h-4 w-4" />;
-      default: return null;
-    }
-  };
-
-  const categoryColor = (c: string) => {
-    switch (c) {
-      case 'content-gap': return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200';
-      case 'clarity': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
-      case 'accuracy': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
-      case 'navigation': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
-      case 'code-example': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
-      case 'structure': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
-      default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
-    }
-  };
 
   if (loading) {
     return (
@@ -746,27 +826,73 @@ export default function AnalyticsPage() {
                     {/* Suggestion cards */}
                     {suggestionsMap[item.id] && expandedSuggestions.has(item.id) && (
                       <div className="mt-3 space-y-2 pl-4 border-l-2 border-primary/20">
-                        {suggestionsMap[item.id].map((s, idx) => (
-                          <div
-                            key={idx}
-                            className="bg-muted/50 rounded-lg p-3 space-y-2"
-                          >
-                            <div className="flex items-center gap-2 flex-wrap">
-                              <span className="font-medium text-sm">{s.title}</span>
-                              <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor(s.category)}`}>
-                                {s.category}
-                              </span>
-                              <Badge variant={s.confidence === 'high' ? 'default' : s.confidence === 'medium' ? 'secondary' : 'outline'}>
-                                {s.confidence}
-                              </Badge>
+                        {suggestionsMap[item.id].map((s, idx) => {
+                          const prKey = `${item.id}:${idx}`;
+                          const prResult = prResults[prKey];
+                          const isCreatingPr = creatingPrFor === prKey;
+
+                          return (
+                            <div
+                              key={idx}
+                              className="bg-muted/50 rounded-lg p-3 space-y-2"
+                            >
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="font-medium text-sm">{s.title}</span>
+                                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${categoryColor(s.category)}`}>
+                                  {s.category}
+                                </span>
+                                <Badge variant={s.confidence === 'high' ? 'default' : s.confidence === 'medium' ? 'secondary' : 'outline'}>
+                                  {s.confidence}
+                                </Badge>
+                              </div>
+                              <p className="text-sm text-muted-foreground">{s.description}</p>
+                              <div className="flex items-start gap-1 text-sm">
+                                <ArrowRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
+                                <span>{s.suggestedAction}</span>
+                              </div>
+
+                              {/* PR creation button and result */}
+                              <div className="flex items-center gap-2 pt-1">
+                                {!prResult?.url && (
+                                  <Button
+                                    variant="outline"
+                                    size="sm"
+                                    className="h-7 text-xs gap-1.5"
+                                    disabled={isCreatingPr || !!creatingPrFor}
+                                    onClick={() => handleOpenPrForSuggestion(item.id, idx, item.path, s)}
+                                  >
+                                    {isCreatingPr ? (
+                                      <>
+                                        <Loader2 className="h-3 w-3 animate-spin" />
+                                        Creating PR…
+                                      </>
+                                    ) : (
+                                      <>
+                                        <GitBranch className="h-3 w-3" />
+                                        Open PR
+                                      </>
+                                    )}
+                                  </Button>
+                                )}
+                                {prResult?.url && (
+                                  <a
+                                    href={prResult.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline"
+                                  >
+                                    <GitBranch className="h-3 w-3" />
+                                    PR branch created
+                                    <ExternalLink className="h-3 w-3" />
+                                  </a>
+                                )}
+                                {prResult?.error && (
+                                  <span className="text-xs text-destructive">{prResult.error}</span>
+                                )}
+                              </div>
                             </div>
-                            <p className="text-sm text-muted-foreground">{s.description}</p>
-                            <div className="flex items-start gap-1 text-sm">
-                              <ArrowRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
-                              <span>{s.suggestedAction}</span>
-                            </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     )}
                   </div>
@@ -834,124 +960,15 @@ export default function AnalyticsPage() {
             )}
           </Card>
 
-          {/* Insights error */}
-          {insightsError && (
-            <Card className="border-destructive">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-2 text-destructive">
-                  <AlertCircle className="h-4 w-4" />
-                  <span className="text-sm">{insightsError}</span>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-
-          {/* Loading skeleton */}
-          {insightsLoading && (
-            <div className="space-y-3">
-              {[1, 2, 3, 4].map((i) => (
-                <Card key={i}>
-                  <CardContent className="pt-6">
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-2">
-                        <Skeleton className="h-5 w-16" />
-                        <Skeleton className="h-5 w-24" />
-                        <Skeleton className="h-5 w-48" />
-                      </div>
-                      <Skeleton className="h-4 w-full" />
-                      <Skeleton className="h-4 w-3/4" />
-                      <Skeleton className="h-4 w-1/2" />
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-
-          {/* AI Summary (only in AI mode) */}
-          {insightsGenerated && insightsSummary && insightsMode === 'ai' && (
-            <Card className="border-primary/30 bg-primary/5">
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-3">
-                  <Sparkles className="h-5 w-5 mt-0.5 text-primary shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-sm mb-1">Executive Summary</h3>
-                    <p className="text-sm text-muted-foreground">{insightsSummary}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-
-          {/* Insight cards grouped by severity */}
-          {insightsGenerated && !insightsLoading && analyticsInsights.length > 0 && (
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <p className="text-sm text-muted-foreground">
-                  {analyticsInsights.length} insight{analyticsInsights.length !== 1 ? 's' : ''} found
-                  {insightsMode === 'ai' ? ' (AI-enhanced)' : ' (algorithmic)'}
-                </p>
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <span className="flex items-center gap-1"><AlertCircle className="h-3 w-3 text-destructive" /> High</span>
-                  <span className="flex items-center gap-1"><AlertTriangle className="h-3 w-3" /> Medium</span>
-                  <span className="flex items-center gap-1"><Info className="h-3 w-3 text-muted-foreground" /> Low</span>
-                </div>
-              </div>
-
-              {analyticsInsights.map((insight, idx) => (
-                <Card key={idx} className={
-                  insight.severity === 'high' ? 'border-destructive/40' :
-                  insight.severity === 'medium' ? 'border-orange-300/40' : ''
-                }>
-                  <CardContent className="pt-6 space-y-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        {severityIcon(insight.severity)}
-                        <Badge variant={severityColor(insight.severity) as 'destructive' | 'default' | 'secondary' | 'outline'}>
-                          {insight.severity}
-                        </Badge>
-                        <Badge variant="outline" className="font-mono text-xs">
-                          {insight.type}
-                        </Badge>
-                        <span className="font-semibold text-sm">{insight.title}</span>
-                      </div>
-                    </div>
-
-                    <p className="text-sm text-muted-foreground">{insight.description}</p>
-
-                    {insight.affectedPages.length > 0 && (
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-xs text-muted-foreground">Affected:</span>
-                        {insight.affectedPages.map((page) => (
-                          <code key={page} className="text-xs bg-muted px-2 py-0.5 rounded">
-                            {page}
-                          </code>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="flex items-start gap-1.5 text-sm bg-muted/50 rounded-lg p-3">
-                      <ArrowRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
-                      <span>{insight.recommendation}</span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-
-          {/* Empty state */}
-          {insightsGenerated && !insightsLoading && analyticsInsights.length === 0 && (
-            <Card>
-              <CardContent className="pt-6 text-center py-12">
-                <Lightbulb className="h-8 w-8 mx-auto text-muted-foreground mb-3" />
-                <p className="text-sm text-muted-foreground">
-                  No insights generated. This may mean your documentation structure is in good shape,
-                  or there isn&apos;t enough analytics data to correlate.
-                </p>
-              </CardContent>
-            </Card>
-          )}
+          {/* Insights Dashboard */}
+          <InsightsDashboard
+            insights={analyticsInsights}
+            summary={insightsSummary}
+            loading={insightsLoading}
+            error={insightsError}
+            generated={insightsGenerated}
+            mode={insightsMode}
+          />
 
           {/* Existing feedback stats — always shown below insights */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

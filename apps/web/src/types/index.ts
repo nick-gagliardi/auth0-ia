@@ -470,6 +470,10 @@ export interface FeedbackSuggestion {
   category: 'content-gap' | 'clarity' | 'accuracy' | 'navigation' | 'code-example' | 'structure';
   confidence: 'high' | 'medium' | 'low';
   suggestedAction: string;
+  /** Generated before/after content for PR creation (populated by second AI call) */
+  before?: string;
+  after?: string;
+  filePath?: string;
 }
 
 /** Insight type identifiers produced by the algorithmic correlation engine */
