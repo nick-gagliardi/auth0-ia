@@ -74,17 +74,18 @@ Rules:
     const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
     const userKey = user.anthropic_api_key_decrypted;
 
-    // When the proxy URL is configured, always use it — even if only the user's
-    // stored key is available (the key works against the proxy too).
-    const apiKey = proxyToken || userKey;
-    const baseUrl = isLiteLLMProxy ? configuredBaseUrl : 'https://api.anthropic.com';
+    // If the proxy URL is configured but no proxy token exists, bypass the proxy
+    // and call Anthropic directly with the user's stored key.
+    const useProxy = isLiteLLMProxy && !!proxyToken;
+    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
+    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
     if (!apiKey) {
       return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
     }
 
     const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (isLiteLLMProxy) {
+    if (useProxy) {
       headers['Authorization'] = `Bearer ${apiKey}`;
     } else {
       headers['x-api-key'] = apiKey;
@@ -105,7 +106,7 @@ Rules:
     if (!response.ok) {
       const errorText = await response.text();
       console.error('[Feedback Suggest] AI error:', response.status, errorText);
-      return NextResponse.json({ ok: false, error: `AI API error: ${response.status}` }, { status: 502 });
+      return NextResponse.json({ ok: false, error: `AI API error: ${response.status} – ${errorText.slice(0, 300)}` }, { status: 502 });
     }
 
     const data = await response.json();
