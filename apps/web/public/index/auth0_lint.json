@@ -1,5 +1,5 @@
 {
-  "pagesScanned": 2680,
+  "pagesScanned": 2681,
   "pagesWithWarnings": 564,
   "warningCount": 792,
   "byCode": {
@@ -8412,6 +8412,11 @@
           "line": 5
         }
       ]
+    },
+    {
+      "id": "main/docs/get-started/auth0-agent-experience.mdx",
+      "filePath": "main/docs/get-started/auth0-agent-experience.mdx",
+      "warnings": []
     },
     {
       "id": "main/docs/get-started/auth0-for-ai-agents.mdx",
@@ -18086,7 +18091,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "description: Tenant Access Control List (ACL) allows you to manage traffic to your Auth0 services with configurable rules.",
-          "line": 2
+          "line": 4
         }
       ]
     },
@@ -20092,7 +20097,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "description: Tenant Access Control List (ACL) allows you to manage traffic to your Auth0 services with configurable rules.",
-        "line": 2
+        "line": 4
       }
     ],
     "main/docs/secure/tokens.mdx": [
@@ -24091,6 +24096,7 @@
       }
     ],
     "main/docs/get-started/architecture-scenarios.mdx": [],
+    "main/docs/get-started/auth0-agent-experience.mdx": [],
     "main/docs/get-started/auth0-for-ai-agents.mdx": [
       {
         "code": "missing_nonce_mention",

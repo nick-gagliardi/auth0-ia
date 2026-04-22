@@ -10600,6 +10600,15 @@
     ]
   },
   {
+    "id": "main/docs/get-started/auth0-agent-experience.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/auth0-agent-experience.mdx",
+    "title": "Review Auth0 Agent Experience Score",
+    "navPaths": [
+      "Documentation > Get Started > Auth0 AI > Review Auth0 Agent Experience Score"
+    ]
+  },
+  {
     "id": "main/docs/get-started/auth0-for-ai-agents.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/auth0-for-ai-agents.mdx",

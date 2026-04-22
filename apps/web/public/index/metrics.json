@@ -4574,17 +4574,17 @@
     "deadEndScore": 6
   },
   "main/docs/quickstart/agent-skills.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0,
+    "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0
+    "deadEndScore": 1
   },
   "main/docs/quickstart/webapp/rails/02-troubleshooting.mdx": {
     "inboundLinks": 0,
@@ -18476,6 +18476,20 @@
     "deadEnd": false,
     "deadEndScore": 0.4
   },
+  "main/docs/get-started/auth0-agent-experience.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 2,
+    "importedBy": 0,
+    "navDepth": 3,
+    "orphanNav": false,
+    "orphanLinks": true,
+    "orphanTrue": false,
+    "orphanReference": true,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/get-started/auth0-for-ai-agents.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 3,
@@ -18561,18 +18575,18 @@
     "deadEndScore": 0.8125
   },
   "main/docs/get-started/build-with-ai-tools.mdx": {
-    "inboundLinks": 0,
+    "inboundLinks": 1,
     "outboundLinks": 0,
     "importedBy": 0,
     "navDepth": 3,
     "orphanNav": false,
-    "orphanLinks": true,
+    "orphanLinks": false,
     "orphanTrue": false,
-    "orphanReference": true,
+    "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0,
+    "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0
+    "deadEndScore": 1
   },
   "main/docs/get-started/dashboard-profile.mdx": {
     "inboundLinks": 0,

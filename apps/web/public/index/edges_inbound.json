@@ -8917,7 +8917,9 @@
     "redirect": []
   },
   "main/docs/quickstart/agent-skills.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/get-started/auth0-agent-experience.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -18119,6 +18121,18 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/get-started/auth0-agent-experience.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/build-with-ai-tools.mdx": {
+    "link": [
+      "main/docs/get-started/auth0-agent-experience.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/get-started/auth0-for-ai-agents.mdx": {
     "link": [],
     "import": [],
@@ -18198,11 +18212,6 @@
       "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx",
       "main/docs/authenticate/custom-token-exchange/cte-multi-factor-authentication.mdx"
     ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/build-with-ai-tools.mdx": {
-    "link": [],
     "import": [],
     "redirect": []
   },

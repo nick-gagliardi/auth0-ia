@@ -25595,6 +25595,17 @@
       "toId": "main/docs/secure/data-privacy-and-compliance.mdx"
     }
   ],
+  "main/docs/get-started/auth0-agent-experience.mdx": [
+    {
+      "href": "/docs/get-started/build-with-ai-tools",
+      "toId": "main/docs/get-started/build-with-ai-tools.mdx"
+    },
+    {
+      "href": "/docs/quickstart/agent-skills",
+      "toId": "main/docs/quickstart/agent-skills.mdx"
+    }
+  ],
+  "main/docs/get-started/build-with-ai-tools.mdx": [],
   "main/docs/get-started/auth0-for-ai-agents.mdx": [
     {
       "href": "/docs/authenticate/login/auth0-universal-login",
@@ -25808,7 +25819,6 @@
       "toId": "main/docs/customize/actions/write-your-first-action.mdx"
     }
   ],
-  "main/docs/get-started/build-with-ai-tools.mdx": [],
   "main/docs/get-started/dashboard-profile.mdx": [
     {
       "href": "/docs/get-started/dashboard-profile/light-and-dark-themes",

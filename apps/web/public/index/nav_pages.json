@@ -20665,6 +20665,39 @@
     "navLabel": "Architecture Scenarios",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/get-started/auth0-agent-experience.mdx": {
+    "filePath": "main/docs/get-started/auth0-agent-experience.mdx",
+    "navDepth": 3,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/auth0-agent-experience",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:auth0-ai",
+          "root/tab:documentation/dropdown:get-started/group:auth0-ai/page:docs/get-started/auth0-agent-experience:docs/get-started/aut"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Auth0 AI",
+          "Review Auth0 Agent Experience Score"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Review Auth0 Agent Experience Score",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Auth0 AI",
+        "pathString": "Documentation > Get Started > Auth0 AI > Review Auth0 Agent Experience Score"
+      }
+    ],
+    "navLabel": "Review Auth0 Agent Experience Score",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/get-started/auth0-for-ai-agents.mdx": {
     "filePath": "main/docs/get-started/auth0-for-ai-agents.mdx",
     "navDepth": 3,

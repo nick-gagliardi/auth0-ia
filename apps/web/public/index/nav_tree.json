@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-21T04:51:43.297Z",
+  "generatedAtUtc": "2026-04-22T04:49:37.111Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -2158,6 +2158,14 @@
                     "label": "docs/get-started/build-with-ai-tools",
                     "route": "docs/get-started/build-with-ai-tools",
                     "filePath": "main/docs/get-started/build-with-ai-tools.mdx",
+                    "children": []
+                  },
+                  {
+                    "id": "root/tab:documentation/dropdown:get-started/group:auth0-ai/page:docs/get-started/auth0-agent-experience:docs/get-started/aut",
+                    "kind": "page",
+                    "label": "docs/get-started/auth0-agent-experience",
+                    "route": "docs/get-started/auth0-agent-experience",
+                    "filePath": "main/docs/get-started/auth0-agent-experience.mdx",
                     "children": []
                   }
                 ]
