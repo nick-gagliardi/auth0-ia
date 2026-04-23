@@ -1686,6 +1686,10 @@
       "toId": "main/docs/troubleshoot/product-lifecycle/migration-process.mdx"
     },
     {
+      "href": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
+      "toId": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx"
+    },
+    {
       "href": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints",
       "toId": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx"
     },
@@ -1899,6 +1903,48 @@
     }
   ],
   "main/docs/troubleshoot/troubleshooting-tools/jwt.mdx": [],
+  "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/get-started/apis/api-access-policies-for-applications",
+      "toId": "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/customize/rules",
+      "toId": "main/docs/customize/rules.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/migrate/migrate-from-rules-to-actions",
+      "toId": "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/troubleshooting",
+      "toId": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
+      "toId": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
+    }
+  ],
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx": [
     {
       "href": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations",
@@ -4219,6 +4265,14 @@
       "toId": "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx"
     },
     {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/github",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/google",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx"
+    },
+    {
       "href": "/docs/authenticate/identity-providers/social-identity-providers/apple-native",
       "toId": "main/docs/authenticate/identity-providers/social-identity-providers/apple-native.mdx"
     },
@@ -4233,6 +4287,268 @@
     {
       "href": "/docs/authenticate/identity-providers/social-identity-providers/tiktok",
       "toId": "main/docs/authenticate/identity-providers/social-identity-providers/tiktok.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/third-party-applications.mdx": [
+    {
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/secure/call-apis-on-users-behalf/xaa",
+      "toId": "main/docs/secure/call-apis-on-users-behalf/xaa.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/troubleshooting",
+      "toId": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/dynamic-client-registration.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    },
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+    },
+    {
+      "href": "/docs/secure/tenant-access-control-list",
+      "toId": "main/docs/secure/tenant-access-control-list.mdx"
+    },
+    {
+      "href": "/docs/secure/tenant-access-control-list/reference",
+      "toId": "main/docs/secure/tenant-access-control-list/reference.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations",
+      "toId": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/permissive-mode",
+      "toId": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
+    }
+  ],
+  "main/docs/get-started/apis/api-access-policies-for-applications.mdx": [
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/client-credentials-flow",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/permissive-mode",
+      "toId": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx": [
+    {
+      "href": "/docs/get-started/apis/api-access-policies-for-applications",
+      "toId": "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
+    },
+    {
+      "href": "/docs/manage-users/access-control/rbac",
+      "toId": "main/docs/manage-users/access-control/rbac.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow.mdx"
+    },
+    {
+      "href": "/docs/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access",
+      "toId": "main/docs/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-grant-types",
+      "toId": "main/docs/get-started/applications/application-grant-types.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience",
+      "toId": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/auth0-universal-login",
+      "toId": "main/docs/authenticate/login/auth0-universal-login.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/third-party-applications/security-controls.mdx": [
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/apis/api-access-policies-for-applications",
+      "toId": "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/apis",
+      "toId": "main/docs/get-started/apis.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/permissive-mode",
+      "toId": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/auth0-universal-login",
+      "toId": "main/docs/authenticate/login/auth0-universal-login.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/troubleshooting",
+      "toId": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/first-party-and-third-party-applications.mdx": [
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/confidential-and-public-applications",
+      "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     }
   ],
   "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx": [
@@ -7085,6 +7401,10 @@
   ],
   "main/docs/get-started/applications/confidential-and-public-applications.mdx": [
     {
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
+    },
+    {
       "href": "/docs/get-started/applications/confidential-and-public-applications/view-application-type",
       "toId": "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx"
     },
@@ -7117,12 +7437,12 @@
       "toId": "main/docs/secure/tokens/id-tokens.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     }
   ],
   "main/docs/get-started/applications/rotate-client-secret.mdx": [
@@ -10357,6 +10677,18 @@
   ],
   "main/docs/get-started/applications/application-settings.mdx": [
     {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
+    },
+    {
       "href": "/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps",
       "toId": "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx"
     },
@@ -10431,10 +10763,6 @@
     {
       "href": "/docs/get-started/applications/confidential-and-public-applications",
       "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/troubleshoot/basic-issues/check-error-messages",
@@ -10611,16 +10939,20 @@
       "toId": "main/docs/secure/application-credentials.mdx"
     },
     {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
       "href": "/docs/get-started/applications/confidential-and-public-applications",
       "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/applications/wildcards-for-subdomains",
@@ -13764,20 +14096,6 @@
       "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
     }
   ],
-  "main/docs/get-started/apis/api-access-policies-for-applications.mdx": [
-    {
-      "href": "/docs/get-started/authentication-and-authorization-flow/client-credentials-flow",
-      "toId": "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx"
-    },
-    {
-      "href": "/docs/get-started/authentication-and-authorization-flow",
-      "toId": "main/docs/get-started/authentication-and-authorization-flow.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
-      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
-    }
-  ],
   "main/docs/get-started/auth0-overview/create-applications.mdx": [
     {
       "href": "/docs/get-started/applications/application-settings",
@@ -13994,32 +14312,6 @@
     {
       "href": "/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token",
       "toId": "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx"
-    }
-  ],
-  "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx": [
-    {
-      "href": "/docs/get-started/apis/api-access-policies-for-applications",
-      "toId": "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
-    },
-    {
-      "href": "/docs/manage-users/access-control/rbac",
-      "toId": "main/docs/manage-users/access-control/rbac.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/authentication-and-authorization-flow",
-      "toId": "main/docs/get-started/authentication-and-authorization-flow.mdx"
-    },
-    {
-      "href": "/docs/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access",
-      "toId": "main/docs/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/application-grant-types",
-      "toId": "main/docs/get-started/applications/application-grant-types.mdx"
     }
   ],
   "main/docs/secure/call-apis-on-users-behalf/token-vault/privileged-worker-token-exchange-with-token-vault.mdx": [
@@ -15633,6 +15925,14 @@
   ],
   "main/docs/get-started/applications/set-up-database-connections.mdx": [
     {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    },
+    {
       "href": "/docs/get-started/applications/test-database-connections",
       "toId": "main/docs/get-started/applications/test-database-connections.mdx"
     }
@@ -15667,40 +15967,6 @@
     {
       "href": "/docs/manage-users/user-accounts/unlink-devices-from-users",
       "toId": "main/docs/manage-users/user-accounts/unlink-devices-from-users.mdx"
-    }
-  ],
-  "main/docs/get-started/applications/dynamic-client-registration.mdx": [
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    },
-    {
-      "href": "/docs/get-started/authentication-and-authorization-flow",
-      "toId": "main/docs/get-started/authentication-and-authorization-flow.mdx"
-    },
-    {
-      "href": "/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post",
-      "toId": "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post.mdx"
-    },
-    {
-      "href": "/docs/get-started/apis/scopes/api-scopes",
-      "toId": "main/docs/get-started/apis/scopes/api-scopes.mdx"
-    },
-    {
-      "href": "/docs/secure/tenant-access-control-list",
-      "toId": "main/docs/secure/tenant-access-control-list.mdx"
-    },
-    {
-      "href": "/docs/secure/tenant-access-control-list/reference",
-      "toId": "main/docs/secure/tenant-access-control-list/reference.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
     }
   ],
   "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx": [
@@ -18098,12 +18364,12 @@
   ],
   "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx": [
     {
-      "href": "/docs/get-started/applications/dynamic-client-registration",
-      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
     }
   ],
   "main/docs/manage-users/user-accounts/user-profiles/progressive-profiling.mdx": [
@@ -18832,6 +19098,10 @@
   ],
   "main/docs/get-started/applications/wildcards-for-subdomains.mdx": [
     {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
       "href": "/docs/authenticate/login/cross-origin-authentication",
       "toId": "main/docs/authenticate/login/cross-origin-authentication.mdx"
     },
@@ -19059,6 +19329,14 @@
     }
   ],
   "main/docs/get-started/applications/update-application-connections.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    },
     {
       "href": "/docs/authenticate/identity-providers/view-connections",
       "toId": "main/docs/authenticate/identity-providers/view-connections.mdx"
@@ -25049,8 +25327,18 @@
   "main/docs/libraries/acul/js-sdk/Screens/classes/DeviceCodeActivationAllowed.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/DeviceCodeActivationDenied.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/DeviceCodeConfirmation.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/EmailIdentifierChallenge.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/EmailOTPChallenge.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/EmailIdentifierChallenge.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/EmailOTPChallenge.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    }
+  ],
   "main/docs/libraries/acul/js-sdk/Screens/classes/EmailVerificationResult.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/InterstitialCaptcha.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginEmailVerification.mdx": [],
@@ -25115,15 +25403,15 @@
   "main/docs/libraries/acul/js-sdk/Screens/classes/OrganizationSelection.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/PasskeyEnrollment.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/PasskeyEnrollmentLocal.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/PhoneIdentifierChallenge.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/PhoneIdentifierEnrollment.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/RedeemTicket.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPassword.mdx": [
+  "main/docs/libraries/acul/js-sdk/Screens/classes/PhoneIdentifierChallenge.mdx": [
     {
-      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordValidationResult",
-      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordValidationResult.mdx"
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
     }
   ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/PhoneIdentifierEnrollment.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/RedeemTicket.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPassword.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordEmail.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordError.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaEmailChallenge.mdx": [],
@@ -25131,17 +25419,23 @@
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaPhoneChallenge.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaPushChallengePush.mdx": [
     {
-      "href": "/docs/libraries/acul/js-sdk/Screens/type-aliases/MfaPollingOptions",
-      "toId": "main/docs/libraries/acul/js-sdk/Screens/type-aliases/MfaPollingOptions.mdx"
-    },
-    {
       "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushPollingControl",
       "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushPollingControl.mdx"
     }
   ],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaRecoveryCodeChallenge.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaSmsChallenge.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaVoiceChallenge.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaSmsChallenge.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaVoiceChallenge.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    }
+  ],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaWebAuthnPlatformChallenge.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordMfaWebAuthnRoamingChallenge.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/ResetPasswordRequest.mdx": [],
@@ -30675,6 +30969,40 @@
     }
   ],
   "main/docs/deploy-monitor/auth0-terraform-provider.mdx": [],
+  "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": [
+    {
+      "href": "/docs/get-started/apis",
+      "toId": "main/docs/get-started/apis.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers",
+      "toId": "main/docs/authenticate/identity-providers.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
+    }
+  ],
   "main/docs/get-started/applications/configure-fapi-compliance.mdx": [
     {
       "href": "/docs/get-started/applications/configure-mtls",
@@ -30709,6 +31037,32 @@
     {
       "href": "/docs/secure/tokens/json-web-tokens",
       "toId": "main/docs/secure/tokens/json-web-tokens.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/secure/security-guidance/measures-against-app-impersonation",
+      "toId": "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-grant-types",
+      "toId": "main/docs/get-started/applications/application-grant-types.mdx"
     }
   ],
   "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-client.mdx": [
@@ -30849,6 +31203,36 @@
     {
       "href": "/docs/customize/integrations/integrate-with-netlify",
       "toId": "main/docs/customize/integrations/integrate-with-netlify.mdx"
+    }
+  ],
+  "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx": [
+    {
+      "href": "/docs/get-started/apis/api-access-policies-for-applications",
+      "toId": "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
+    },
+    {
+      "href": "/docs/deploy-monitor/logs",
+      "toId": "main/docs/deploy-monitor/logs.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
+      "toId": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
     }
   ],
   "main/docs/authenticate/login/embedded-login.mdx": [
@@ -31136,6 +31520,7 @@
   ],
   "main/docs/events/user/user.created.mdx": [],
   "main/snippets/ApiReleaseLifecycle.jsx": [],
+  "main/snippets/ApiSectionTitle.jsx": [],
   "main/docs/events/user/user.deleted.mdx": [],
   "main/docs/events/user/user.updated.mdx": [],
   "main/docs/events/organization/organization.connection.added.mdx": [],
@@ -35978,6 +36363,34 @@
       "toId": "main/docs/libraries/lock/lock-authentication-parameters.mdx"
     }
   ],
+  "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx": [
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/google",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/devkeys",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/oauth2",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx"
+    }
+  ],
+  "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx": [
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/google-native",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/devkeys",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/social-identity-providers/oauth2",
+      "toId": "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx"
+    }
+  ],
   "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx": [
     {
       "href": "/docs/get-started/applications/enable-android-app-links-support",
@@ -37008,7 +37421,6 @@
   "main/docs/api/authentication/authorization/authorization-endpoint.mdx": [],
   "main/docs/api/authentication/authorization/back-channel-login.mdx": [],
   "main/docs/api/authentication/account-linking-legacy/unlink.mdx": [],
-  "main/snippets/ApiSectionTitle.jsx": [],
   "main/snippets/BgImage.jsx": [],
   "main/snippets/RelatedPages.mdx": [],
   "main/snippets/api-fr.jsx": [],

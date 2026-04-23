@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2681,
-  "pagesWithWarnings": 564,
-  "warningCount": 792,
+  "pagesScanned": 2691,
+  "pagesWithWarnings": 570,
+  "warningCount": 801,
   "byCode": {
-    "missing_pkce_mention": 126,
-    "missing_state_mention": 130,
-    "missing_nonce_mention": 271,
+    "missing_pkce_mention": 125,
+    "missing_state_mention": 133,
+    "missing_nonce_mention": 275,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
-    "rules_vs_actions_language": 251
+    "rules_vs_actions_language": 254
   },
   "items": [
     {
@@ -3392,8 +3392,18 @@
       ]
     },
     {
+      "id": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx",
+      "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx",
       "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx",
+      "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx",
       "warnings": []
     },
     {
@@ -7241,28 +7251,28 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "In the **ID Token** section, enter the **ID Token Expiration** (in seconds) which is the amount of time before the Auth0 `id_token` expires. The default value is 36000 seconds whic",
-          "line": 69
+          "line": 74
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "* **Application Login URI**: In some scenarios, Auth0 will need your application to redirect to your application's login page. This URI needs to point to a route in your applicatio",
-          "line": 39
+          "line": 44
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "* **Application Login URI**: In some scenarios, Auth0 will need your application to redirect to your application's login page. This URI needs to point to a route in your applicatio",
-          "line": 39
+          "line": 44
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "Application metadata are custom string keys and values (each of which has a character maximum of 255), set on a per-application basis. Metadata is exposed in the application object",
-          "line": 99
+          "line": 116
         }
       ]
     },
@@ -7280,7 +7290,7 @@
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "* A web application with a secure backend that uses the [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow), [Resource Owner ",
-          "line": 22
+          "line": 26
         }
       ]
     },
@@ -7543,11 +7553,25 @@
       "filePath": "main/docs/get-started/applications/dynamic-client-registration.mdx",
       "warnings": [
         {
-          "code": "missing_pkce_mention",
+          "code": "missing_nonce_mention",
           "severity": "warn",
-          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-          "evidence": "export const codeExample21 = `https://{yourDomain}/authorize?",
-          "line": 483
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "You can dynamically register third-party applications for your tenant. Dynamic Client Registration (DCR) is based on the [OpenID Connect Dynamic Client Registration specification](",
+          "line": 9
+        },
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "- Require PKCE for authorization code flows",
+          "line": 14
+        },
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Auth0 provides a [Tenant Access Control List (ACL)](/docs/secure/tenant-access-control-list) to manage traffic to the `/oidc/register` endpoint. You can restrict who can send DCR r",
+          "line": 114
         }
       ]
     },
@@ -7565,6 +7589,19 @@
       "id": "main/docs/get-started/applications/enable-universal-links-support-in-apple-xcode.mdx",
       "filePath": "main/docs/get-started/applications/enable-universal-links-support-in-apple-xcode.mdx",
       "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+      "filePath": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "| **Rules** | Executed | Not supported. Results in error. |",
+          "line": 44
+        }
+      ]
     },
     {
       "id": "main/docs/get-started/applications/remove-applications.mdx",
@@ -7607,6 +7644,68 @@
       "warnings": []
     },
     {
+      "id": "main/docs/get-started/applications/third-party-applications.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
+      "warnings": [
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "- Most grant types are available (authorization code, implicit, client credentials, device code)",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "id": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "| **Rules** | Not supported. Tenants with active Rules will receive an error when a strict third-party application triggers a login flow. |",
+          "line": 157
+        }
+      ]
+    },
+    {
+      "id": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "### `unsupported_response_type` for `id_token` or `token`",
+          "line": 48
+        }
+      ]
+    },
+    {
+      "id": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "Third-party applications with enhanced security controls do not support OIDC scopes (`openid`, `profile`, `email`) in this release. The consent dialog shows API scopes only. OIDC s",
+          "line": 38
+        }
+      ]
+    },
+    {
       "id": "main/docs/get-started/applications/update-application-connections.mdx",
       "filePath": "main/docs/get-started/applications/update-application-connections.mdx",
       "warnings": []
@@ -7639,7 +7738,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "You can use the star symbol (`*`) as a wildcard for subdomains, but it must be used in accordance with the following rules in order to properly function:",
-          "line": 31
+          "line": 35
         }
       ]
     },
@@ -19239,7 +19338,7 @@
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "Auth0 recommends the transition to HTTPS-based callbacks using [Android App Links](https://developer.android.com/training/app-links#android-app-link) and [Apple Universal Links](ht",
-          "line": 79
+          "line": 91
         }
       ]
     },
@@ -19277,6 +19376,26 @@
       "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx",
       "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx",
       "warnings": []
+    },
+    {
+      "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "* Do they require OIDC scopes (openid, profile, email) or ID tokens?",
+          "line": 41
+        },
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "* What grant types do they use? (authorization code, implicit, client credentials, etc.)",
+          "line": 40
+        }
+      ]
     },
     {
       "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx",
@@ -19647,7 +19766,7 @@
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "Auth0 recommends the transition to HTTPS-based callbacks using [Android App Links](https://developer.android.com/training/app-links#android-app-link) and [Apple Universal Links](ht",
-        "line": 79
+        "line": 91
       }
     ],
     "main/docs/troubleshoot/product-lifecycle/migration-process.mdx": [],
@@ -19784,6 +19903,22 @@
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-connection-options-scope.mdx": [],
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx": [],
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-nodejs-22.mdx": [],
+    "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "* Do they require OIDC scopes (openid, profile, email) or ID tokens?",
+        "line": 41
+      },
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "* What grant types do they use? (authorization code, implicit, client credentials, etc.)",
+        "line": 40
+      }
+    ],
     "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx": [],
     "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-actions-real-time-logs.mdx": [],
     "main/docs/troubleshoot/integration-extensibility-issues/troubleshoot-ad-ldap-connector.mdx": [],
@@ -25198,28 +25333,28 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "In the **ID Token** section, enter the **ID Token Expiration** (in seconds) which is the amount of time before the Auth0 `id_token` expires. The default value is 36000 seconds whic",
-        "line": 69
+        "line": 74
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "* **Application Login URI**: In some scenarios, Auth0 will need your application to redirect to your application's login page. This URI needs to point to a route in your applicatio",
-        "line": 39
+        "line": 44
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* **Application Login URI**: In some scenarios, Auth0 will need your application to redirect to your application's login page. This URI needs to point to a route in your applicatio",
-        "line": 39
+        "line": 44
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "Application metadata are custom string keys and values (each of which has a character maximum of 255), set on a per-application basis. Metadata is exposed in the application object",
-        "line": 99
+        "line": 116
       }
     ],
     "main/docs/get-started/applications/change-application-signing-algorithms.mdx": [],
@@ -25229,7 +25364,7 @@
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "* A web application with a secure backend that uses the [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow), [Resource Owner ",
-        "line": 22
+        "line": 26
       }
     ],
     "main/docs/get-started/applications/configure-application-metadata.mdx": [],
@@ -25329,16 +25464,39 @@
     "main/docs/get-started/applications/credentials.mdx": [],
     "main/docs/get-started/applications/dynamic-client-registration.mdx": [
       {
-        "code": "missing_pkce_mention",
+        "code": "missing_nonce_mention",
         "severity": "warn",
-        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
-        "evidence": "export const codeExample21 = `https://{yourDomain}/authorize?",
-        "line": 483
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "You can dynamically register third-party applications for your tenant. Dynamic Client Registration (DCR) is based on the [OpenID Connect Dynamic Client Registration specification](",
+        "line": 9
+      },
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "- Require PKCE for authorization code flows",
+        "line": 14
+      },
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Auth0 provides a [Tenant Access Control List (ACL)](/docs/secure/tenant-access-control-list) to manage traffic to the `/oidc/register` endpoint. You can restrict who can send DCR r",
+        "line": 114
       }
     ],
     "main/docs/get-started/applications/enable-android-app-links-support.mdx": [],
     "main/docs/get-started/applications/enable-sso-for-applications.mdx": [],
     "main/docs/get-started/applications/enable-universal-links-support-in-apple-xcode.mdx": [],
+    "main/docs/get-started/applications/first-party-and-third-party-applications.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "| **Rules** | Executed | Not supported. Results in error. |",
+        "line": 44
+      }
+    ],
     "main/docs/get-started/applications/remove-applications.mdx": [],
     "main/docs/get-started/applications/revoke-api-access.mdx": [],
     "main/docs/get-started/applications/rotate-client-secret.mdx": [],
@@ -25347,6 +25505,7 @@
     "main/docs/get-started/applications/set-up-database-connections.mdx": [],
     "main/docs/get-started/applications/signing-algorithms.mdx": [],
     "main/docs/get-started/applications/test-database-connections.mdx": [],
+    "main/docs/get-started/applications/third-party-applications.mdx": [],
     "main/docs/get-started/applications/update-application-connections.mdx": [],
     "main/docs/get-started/applications/update-grant-types.mdx": [],
     "main/docs/get-started/applications/wildcards-for-subdomains.mdx": [
@@ -25369,7 +25528,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "You can use the star symbol (`*`) as a wildcard for subdomains, but it must be used in accordance with the following rules in order to properly function:",
-        "line": 31
+        "line": 35
       }
     ],
     "main/docs/get-started/applications/work-with-auth0-locally.mdx": [
@@ -25393,6 +25552,43 @@
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "For a high-level overview of how to do this, see [Authorization Code Flow](/docs/get-started/authentication-and-authorization-flow/authorization-code-flow). For detailed implementa",
         "line": 22
+      }
+    ],
+    "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": [],
+    "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx": [
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "- Most grant types are available (authorization code, implicit, client credentials, device code)",
+        "line": 24
+      }
+    ],
+    "main/docs/get-started/applications/third-party-applications/security-controls.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "| **Rules** | Not supported. Tenants with active Rules will receive an error when a strict third-party application triggers a login flow. |",
+        "line": 157
+      }
+    ],
+    "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "### `unsupported_response_type` for `id_token` or `token`",
+        "line": 48
+      }
+    ],
+    "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "Third-party applications with enhanced security controls do not support OIDC scopes (`openid`, `profile`, `email`) in this release. The consent dialog shows API scopes only. OIDC s",
+        "line": 38
       }
     ],
     "main/docs/get-started/applications/configure-sender-constraining/configure-client-for-sender-constraining.mdx": [
@@ -27288,7 +27484,9 @@
         "line": 100
       }
     ],
+    "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx": [],
     "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx": [],
+    "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx": [],
     "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx": [
       {
         "code": "missing_nonce_mention",

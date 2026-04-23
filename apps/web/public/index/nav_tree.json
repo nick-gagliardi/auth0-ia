@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-22T04:49:37.111Z",
+  "generatedAtUtc": "2026-04-23T04:53:44.786Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -498,45 +498,68 @@
                             "route": "docs/get-started/applications/confidential-and-public-applications/view-application-type",
                             "filePath": "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx",
                             "children": []
-                          },
+                          }
+                        ]
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/page:docs/get-started/applications/first-party-and-third-party-ap",
+                        "kind": "page",
+                        "label": "docs/get-started/applications/first-party-and-third-party-applications",
+                        "route": "docs/get-started/applications/first-party-and-third-party-applications",
+                        "filePath": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+                        "kind": "group",
+                        "label": "Third-Party Applications",
+                        "children": [
                           {
-                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic",
+                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications:docs/",
                             "kind": "page",
-                            "label": "docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-                            "route": "docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-                            "filePath": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
+                            "label": "docs/get-started/applications/third-party-applications",
+                            "route": "docs/get-started/applications/third-party-applications",
+                            "filePath": "main/docs/get-started/applications/third-party-applications.mdx",
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic",
+                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/secur",
                             "kind": "page",
-                            "label": "docs/get-started/applications/confidential-and-public-applications/view-application-ownership",
-                            "route": "docs/get-started/applications/confidential-and-public-applications/view-application-ownership",
-                            "filePath": "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
+                            "label": "docs/get-started/applications/third-party-applications/security-controls",
+                            "route": "docs/get-started/applications/third-party-applications/security-controls",
+                            "filePath": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic",
+                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/user-",
                             "kind": "page",
-                            "label": "docs/get-started/applications/confidential-and-public-applications/update-application-ownership",
-                            "route": "docs/get-started/applications/confidential-and-public-applications/update-application-ownership",
-                            "filePath": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
+                            "label": "docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+                            "route": "docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+                            "filePath": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic",
+                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/confi",
                             "kind": "page",
-                            "label": "docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-                            "route": "docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-                            "filePath": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
+                            "label": "docs/get-started/applications/third-party-applications/configure-third-party-applications",
+                            "route": "docs/get-started/applications/third-party-applications/configure-third-party-applications",
+                            "filePath": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
                             "children": []
                           },
                           {
-                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic",
+                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/troub",
                             "kind": "page",
-                            "label": "docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-                            "route": "docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-                            "filePath": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
+                            "label": "docs/get-started/applications/third-party-applications/troubleshooting",
+                            "route": "docs/get-started/applications/third-party-applications/troubleshooting",
+                            "filePath": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/permi",
+                            "kind": "page",
+                            "label": "docs/get-started/applications/third-party-applications/permissive-mode",
+                            "route": "docs/get-started/applications/third-party-applications/permissive-mode",
+                            "filePath": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
                             "children": []
                           }
                         ]
@@ -3153,6 +3176,22 @@
                             "label": "docs/authenticate/identity-providers/social-identity-providers",
                             "route": "docs/authenticate/identity-providers/social-identity-providers",
                             "filePath": "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers/group:social-identity-providers/page:docs/authenticate/identity-providers/social-identity-provide",
+                            "kind": "page",
+                            "label": "docs/authenticate/identity-providers/social-identity-providers/github",
+                            "route": "docs/authenticate/identity-providers/social-identity-providers/github",
+                            "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers/group:social-identity-providers/page:docs/authenticate/identity-providers/social-identity-provide",
+                            "kind": "page",
+                            "label": "docs/authenticate/identity-providers/social-identity-providers/google",
+                            "route": "docs/authenticate/identity-providers/social-identity-providers/google",
+                            "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx",
                             "children": []
                           },
                           {
@@ -11120,6 +11159,14 @@
                             "label": "docs/troubleshoot/product-lifecycle/deprecations-and-migrations",
                             "route": "docs/troubleshoot/product-lifecycle/deprecations-and-migrations",
                             "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+                            "children": []
+                          },
+                          {
+                            "id": "root/tab:documentation/dropdown:troubleshoot/group:auth0-product-lifecycle/group:product-lifecycle/group:deprecations-and-migrations/page:docs/troubleshoot/product-lifecycle/deprecations-and-migrati",
+                            "kind": "page",
+                            "label": "docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
+                            "route": "docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
+                            "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
                             "children": []
                           },
                           {

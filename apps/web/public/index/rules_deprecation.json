@@ -1,19 +1,19 @@
 {
-  "generatedAtUtc": "2026-04-22T04:49:43.617Z",
-  "pagesScanned": 2681,
-  "pagesWithRules": 206,
-  "totalEvidenceCount": 854,
+  "generatedAtUtc": "2026-04-23T04:53:51.542Z",
+  "pagesScanned": 2691,
+  "pagesWithRules": 207,
+  "totalEvidenceCount": 857,
   "byCriticality": {
     "critical": 40,
-    "high": 100,
+    "high": 101,
     "medium": 62,
     "low": 4
   },
   "byCategory": {
     "has_rules_code": 40,
-    "links_to_rules": 123,
-    "suggests_rules": 121,
-    "mentions_rules": 86,
+    "links_to_rules": 124,
+    "suggests_rules": 122,
+    "mentions_rules": 87,
     "is_rules_api": 11,
     "is_hooks_page": 48
   },
@@ -742,7 +742,7 @@
       "evidenceCount": 1,
       "evidence": [
         {
-          "line": 99,
+          "line": 116,
           "snippet": "Application metadata are custom string keys and values (each of which has a character maximum of 255), set on a per-application basis. Metadata is exp",
           "category": "has_rules_code"
         }
@@ -4163,6 +4163,34 @@
       "severity": "high"
     },
     {
+      "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "categories": [
+        "links_to_rules",
+        "suggests_rules",
+        "mentions_rules"
+      ],
+      "evidenceCount": 3,
+      "evidence": [
+        {
+          "line": 125,
+          "snippet": "* Your tenant does not have active [Rules](/docs/customize/rules) that need to execute for third-party login flows. Rules are not supported for strict",
+          "category": "links_to_rules"
+        },
+        {
+          "line": 125,
+          "snippet": "* Your tenant does not have active [Rules](/docs/customize/rules) that need to execute for third-party login flows. Rules are not supported for strict",
+          "category": "suggests_rules"
+        },
+        {
+          "line": 125,
+          "snippet": "* Your tenant does not have active [Rules](/docs/customize/rules) that need to execute for third-party login flows. Rules are not supported for strict",
+          "category": "mentions_rules"
+        }
+      ],
+      "severity": "high"
+    },
+    {
       "id": "main/docs/troubleshoot/product-lifecycle/past-migrations.mdx",
       "filePath": "main/docs/troubleshoot/product-lifecycle/past-migrations.mdx",
       "categories": [
@@ -5530,16 +5558,16 @@
       "severity": "medium"
     },
     {
-      "id": "main/docs/get-started/applications/dynamic-client-registration.mdx",
-      "filePath": "main/docs/get-started/applications/dynamic-client-registration.mdx",
+      "id": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+      "filePath": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
       "categories": [
         "suggests_rules"
       ],
       "evidenceCount": 1,
       "evidence": [
         {
-          "line": 518,
-          "snippet": "Auth0 provides [Tenant Access Control List (ACL)](/docs/secure/tenant-access-control-list) to manage traffic. For the `/oidc/register` endpoint, you c",
+          "line": 157,
+          "snippet": "| **Rules** | Not supported. Tenants with active Rules will receive an error when a strict third-party application triggers a login flow. |",
           "category": "suggests_rules"
         }
       ],
@@ -5980,7 +6008,7 @@
       "evidenceCount": 1,
       "evidence": [
         {
-          "line": 255,
+          "line": 267,
           "snippet": "For more information, read [Migrate from Rules to Actions](/docs/customize/actions/migrate/migrate-from-rules-to-actions) and [Migrate from Hooks to A",
           "category": "suggests_rules"
         }

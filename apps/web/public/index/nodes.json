@@ -555,6 +555,15 @@
     ]
   },
   {
+    "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+    "type": "page",
+    "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+    "title": "Migrate to Enhanced Security for Third-Party Applications",
+    "navPaths": [
+      "Documentation > Troubleshoot > Auth0 Product Lifecycle > Product Lifecycle > Deprecations and Migrations > Migrate to Enhanced Security for Third-Party Applications"
+    ]
+  },
+  {
     "id": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx",
     "type": "page",
     "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx",
@@ -12394,6 +12403,15 @@
     ]
   },
   {
+    "id": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+    "title": "First-Party and Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > First-Party and Third-Party Applications"
+    ]
+  },
+  {
     "id": "main/docs/get-started/applications/remove-applications.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/applications/remove-applications.mdx",
@@ -12466,6 +12484,15 @@
     ]
   },
   {
+    "id": "main/docs/get-started/applications/third-party-applications.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/third-party-applications.mdx",
+    "title": "Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Third-Party Applications"
+    ]
+  },
+  {
     "id": "main/docs/get-started/applications/update-application-connections.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/applications/update-application-connections.mdx",
@@ -12499,6 +12526,51 @@
     "title": "Test Applications Locally",
     "navPaths": [
       "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Test Applications Locally"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
+    "title": "Configure Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Configure Third-Party Applications"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
+    "title": "Permissive Mode for Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Permissive Mode for Third-Party Applications"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+    "title": "Security Controls for Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Security Controls for Third-Party Applications"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+    "title": "Troubleshoot Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Troubleshoot Third-Party Applications"
+    ]
+  },
+  {
+    "id": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
+    "type": "page",
+    "filePath": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
+    "title": "User Consent and Third-Party Applications",
+    "navPaths": [
+      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > User Consent and Third-Party Applications"
     ]
   },
   {
@@ -12556,45 +12628,35 @@
     "type": "page",
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
     "title": "Enable Third-Party Applications",
-    "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > Enable Third-Party Applications"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
     "title": "First-Party and Third-Party Applications",
-    "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > First-Party and Third-Party Applications"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
     "title": "Update Application Ownership",
-    "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > Update Application Ownership"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
     "title": "User Consent and Third-Party Applications",
-    "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > User Consent and Third-Party Applications"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
     "type": "page",
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
     "title": "View Application Ownership",
-    "navPaths": [
-      "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > View Application Ownership"
-    ]
+    "navPaths": []
   },
   {
     "id": "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx",
@@ -17246,12 +17308,30 @@
     ]
   },
   {
+    "id": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx",
+    "type": "page",
+    "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx",
+    "title": "Add GitHub Login to Your App",
+    "navPaths": [
+      "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers > Add GitHub Login to Your App"
+    ]
+  },
+  {
     "id": "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx",
     "type": "page",
     "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx",
     "title": "Add Sign In with Google to Native Android Apps",
     "navPaths": [
       "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers > Add Sign In with Google to Native Android Apps"
+    ]
+  },
+  {
+    "id": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx",
+    "type": "page",
+    "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx",
+    "title": "Add Google Login to Your App",
+    "navPaths": [
+      "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers > Add Google Login to Your App"
     ]
   },
   {

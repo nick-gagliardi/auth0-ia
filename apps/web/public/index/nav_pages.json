@@ -2087,6 +2087,45 @@
     "navLabel": "Migrate from Node 18 to Node 22",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx": {
+    "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:troubleshoot",
+          "root/tab:documentation/dropdown:troubleshoot/group:auth0-product-lifecycle",
+          "root/tab:documentation/dropdown:troubleshoot/group:auth0-product-lifecycle/group:product-lifecycle",
+          "root/tab:documentation/dropdown:troubleshoot/group:auth0-product-lifecycle/group:product-lifecycle/group:deprecations-and-migrations",
+          "root/tab:documentation/dropdown:troubleshoot/group:auth0-product-lifecycle/group:product-lifecycle/group:deprecations-and-migrations/page:docs/troubleshoot/product-lifecycle/deprecations-and-migrati"
+        ],
+        "labels": [
+          "Documentation",
+          "Troubleshoot",
+          "Auth0 Product Lifecycle",
+          "Product Lifecycle",
+          "Deprecations and Migrations",
+          "Migrate to Enhanced Security for Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Migrate to Enhanced Security for Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Troubleshoot > Auth0 Product Lifecycle > Product Lifecycle > Deprecations and Migrations",
+        "pathString": "Documentation > Troubleshoot > Auth0 Product Lifecycle > Product Lifecycle > Deprecations and Migrations > Migrate to Enhanced Security for Third-Party Applications"
+      }
+    ],
+    "navLabel": "Migrate to Enhanced Security for Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx": {
     "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-non-verifiable-callback-uri-end-user-confirmation.mdx",
     "navDepth": 5,
@@ -28201,6 +28240,42 @@
     "navLabel": "Enable Universal Links Support in Apple Xcode",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/get-started/applications/first-party-and-third-party-applications.mdx": {
+    "filePath": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+    "navDepth": 4,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/first-party-and-third-party-applications",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/page:docs/get-started/applications/first-party-and-third-party-ap"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "First-Party and Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "First-Party and Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > First-Party and Third-Party Applications"
+      }
+    ],
+    "navLabel": "First-Party and Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/get-started/applications/remove-applications.mdx": {
     "filePath": "main/docs/get-started/applications/remove-applications.mdx",
     "navDepth": 4,
@@ -28489,6 +28564,45 @@
     "navLabel": "Test Database Connections",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/get-started/applications/third-party-applications.mdx": {
+    "filePath": "main/docs/get-started/applications/third-party-applications.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/third-party-applications",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications:docs/"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "Third-Party Applications",
+          "Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Third-Party Applications"
+      }
+    ],
+    "navLabel": "Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/get-started/applications/update-application-connections.mdx": {
     "filePath": "main/docs/get-started/applications/update-application-connections.mdx",
     "navDepth": 4,
@@ -28631,6 +28745,201 @@
       }
     ],
     "navLabel": "Test Applications Locally",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": {
+    "filePath": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/third-party-applications/configure-third-party-applications",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/confi"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "Third-Party Applications",
+          "Configure Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Configure Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Configure Third-Party Applications"
+      }
+    ],
+    "navLabel": "Configure Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx": {
+    "filePath": "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/third-party-applications/permissive-mode",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/permi"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "Third-Party Applications",
+          "Permissive Mode for Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Permissive Mode for Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Permissive Mode for Third-Party Applications"
+      }
+    ],
+    "navLabel": "Permissive Mode for Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/applications/third-party-applications/security-controls.mdx": {
+    "filePath": "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/third-party-applications/security-controls",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/secur"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "Third-Party Applications",
+          "Security Controls for Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Security Controls for Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Security Controls for Third-Party Applications"
+      }
+    ],
+    "navLabel": "Security Controls for Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx": {
+    "filePath": "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/third-party-applications/troubleshooting",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/troub"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "Third-Party Applications",
+          "Troubleshoot Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Troubleshoot Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > Troubleshoot Third-Party Applications"
+      }
+    ],
+    "navLabel": "Troubleshoot Third-Party Applications",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": {
+    "filePath": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:get-started",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications",
+          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:third-party-applications/page:docs/get-started/applications/third-party-applications/user-"
+        ],
+        "labels": [
+          "Documentation",
+          "Get Started",
+          "Configure Auth0",
+          "Applications in Auth0",
+          "Third-Party Applications",
+          "User Consent and Third-Party Applications"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "User Consent and Third-Party Applications",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications",
+        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Third-Party Applications > User Consent and Third-Party Applications"
+      }
+    ],
+    "navLabel": "User Consent and Third-Party Applications",
     "navLabelSource": "frontmatter"
   },
   "main/docs/get-started/applications/configure-sender-constraining/configure-client-for-sender-constraining.mdx": {
@@ -28799,198 +29108,23 @@
   },
   "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx": {
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:get-started",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic"
-        ],
-        "labels": [
-          "Documentation",
-          "Get Started",
-          "Configure Auth0",
-          "Applications in Auth0",
-          "Confidential and Public Applications",
-          "Enable Third-Party Applications"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Enable Third-Party Applications",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications",
-        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > Enable Third-Party Applications"
-      }
-    ],
-    "navLabel": "Enable Third-Party Applications",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx": {
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:get-started",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic"
-        ],
-        "labels": [
-          "Documentation",
-          "Get Started",
-          "Configure Auth0",
-          "Applications in Auth0",
-          "Confidential and Public Applications",
-          "First-Party and Third-Party Applications"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "First-Party and Third-Party Applications",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications",
-        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > First-Party and Third-Party Applications"
-      }
-    ],
-    "navLabel": "First-Party and Third-Party Applications",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx": {
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/get-started/applications/confidential-and-public-applications/update-application-ownership",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:get-started",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic"
-        ],
-        "labels": [
-          "Documentation",
-          "Get Started",
-          "Configure Auth0",
-          "Applications in Auth0",
-          "Confidential and Public Applications",
-          "Update Application Ownership"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "Update Application Ownership",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications",
-        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > Update Application Ownership"
-      }
-    ],
-    "navLabel": "Update Application Ownership",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx": {
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:get-started",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic"
-        ],
-        "labels": [
-          "Documentation",
-          "Get Started",
-          "Configure Auth0",
-          "Applications in Auth0",
-          "Confidential and Public Applications",
-          "User Consent and Third-Party Applications"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "User Consent and Third-Party Applications",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications",
-        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > User Consent and Third-Party Applications"
-      }
-    ],
-    "navLabel": "User Consent and Third-Party Applications",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx": {
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
-    "navDepth": 5,
-    "navNodePaths": [
-      {
-        "route": "docs/get-started/applications/confidential-and-public-applications/view-application-ownership",
-        "nodeIds": [
-          "root/tab:documentation",
-          "root/tab:documentation/dropdown:get-started",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications",
-          "root/tab:documentation/dropdown:get-started/group:configure-auth0/group:applications-in-auth0/group:confidential-and-public-applications/page:docs/get-started/applications/confidential-and-public-applic"
-        ],
-        "labels": [
-          "Documentation",
-          "Get Started",
-          "Configure Auth0",
-          "Applications in Auth0",
-          "Confidential and Public Applications",
-          "View Application Ownership"
-        ],
-        "kinds": [
-          "tab",
-          "dropdown",
-          "group",
-          "group",
-          "group",
-          "page"
-        ],
-        "leafLabel": "View Application Ownership",
-        "leafLabelSource": "frontmatter",
-        "containerString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications",
-        "pathString": "Documentation > Get Started > Configure Auth0 > Applications in Auth0 > Confidential and Public Applications > View Application Ownership"
-      }
-    ],
-    "navLabel": "View Application Ownership",
-    "navLabelSource": "frontmatter"
+    "navNodePaths": []
   },
   "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx": {
     "filePath": "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx",
@@ -48487,6 +48621,45 @@
     "navLabel": "Add Facebook Login to Native Apps",
     "navLabelSource": "frontmatter"
   },
+  "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx": {
+    "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/github.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate/identity-providers/social-identity-providers/github",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers/group:social-identity-providers",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers/group:social-identity-providers/page:docs/authenticate/identity-providers/social-identity-provide"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "Provision Users",
+          "Identity Providers",
+          "Social Identity Providers",
+          "Add GitHub Login to Your App"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Add GitHub Login to Your App",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers",
+        "pathString": "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers > Add GitHub Login to Your App"
+      }
+    ],
+    "navLabel": "Add GitHub Login to Your App",
+    "navLabelSource": "frontmatter"
+  },
   "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx": {
     "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx",
     "navDepth": 5,
@@ -48524,6 +48697,45 @@
       }
     ],
     "navLabel": "Add Sign In with Google to Native Android Apps",
+    "navLabelSource": "frontmatter"
+  },
+  "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx": {
+    "filePath": "main/docs/authenticate/identity-providers/social-identity-providers/google.mdx",
+    "navDepth": 5,
+    "navNodePaths": [
+      {
+        "route": "docs/authenticate/identity-providers/social-identity-providers/google",
+        "nodeIds": [
+          "root/tab:documentation",
+          "root/tab:documentation/dropdown:authenticate",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers/group:social-identity-providers",
+          "root/tab:documentation/dropdown:authenticate/group:provision-users/group:identity-providers/group:social-identity-providers/page:docs/authenticate/identity-providers/social-identity-provide"
+        ],
+        "labels": [
+          "Documentation",
+          "Authenticate",
+          "Provision Users",
+          "Identity Providers",
+          "Social Identity Providers",
+          "Add Google Login to Your App"
+        ],
+        "kinds": [
+          "tab",
+          "dropdown",
+          "group",
+          "group",
+          "group",
+          "page"
+        ],
+        "leafLabel": "Add Google Login to Your App",
+        "leafLabelSource": "frontmatter",
+        "containerString": "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers",
+        "pathString": "Documentation > Authenticate > Provision Users > Identity Providers > Social Identity Providers > Add Google Login to Your App"
+      }
+    ],
+    "navLabel": "Add Google Login to Your App",
     "navLabelSource": "frontmatter"
   },
   "main/docs/authenticate/identity-providers/social-identity-providers/oauth2.mdx": {
