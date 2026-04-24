@@ -15836,7 +15836,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "# Required firewall rules (outbound HTTPS/443)",
-          "line": 686
+          "line": 501
         }
       ]
     },
@@ -16793,21 +16793,21 @@
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
           "evidence": "<env-entry-value>openid profile email</env-entry-value>",
-          "line": 181
+          "line": 193
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "Create the servlets for login, callback, and logout. The `LoginServlet` builds the Auth0 authorization URL and redirects the user. The `CallbackServlet` handles the redirect after ",
-          "line": 405
+          "line": 417
         },
         {
           "code": "token_storage_cookie",
           "severity": "info",
           "message": "This page mentions cookies alongside tokens. Consider explicitly noting secure cookie attributes (HttpOnly/Secure/SameSite) where appropriate.",
           "evidence": "If you receive an `a0.invalid_state` error after login, the state cookie was not found or does not match the state returned from Auth0.",
-          "line": 846
+          "line": 858
         }
       ]
     },
@@ -21183,21 +21183,21 @@
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
         "evidence": "<env-entry-value>openid profile email</env-entry-value>",
-        "line": 181
+        "line": 193
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "Create the servlets for login, callback, and logout. The `LoginServlet` builds the Auth0 authorization URL and redirects the user. The `CallbackServlet` handles the redirect after ",
-        "line": 405
+        "line": 417
       },
       {
         "code": "token_storage_cookie",
         "severity": "info",
         "message": "This page mentions cookies alongside tokens. Consider explicitly noting secure cookie attributes (HttpOnly/Secure/SameSite) where appropriate.",
         "evidence": "If you receive an `a0.invalid_state` error after login, the state cookie was not found or does not match the state returned from Auth0.",
-        "line": 846
+        "line": 858
       }
     ],
     "main/docs/quickstart/webapp/java/index.mdx": [],
@@ -21837,7 +21837,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "# Required firewall rules (outbound HTTPS/443)",
-        "line": 686
+        "line": 501
       }
     ],
     "main/docs/quickstart/backend/golang/02-using.mdx": [],
