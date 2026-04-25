@@ -121,6 +121,7 @@
       "main/docs/get-started/auth0-teams/configure-security-policies.mdx",
       "main/docs/customize/events.mdx",
       "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
       "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
       "main/docs/customize/events/create-an-event-stream.mdx",
       "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
@@ -134,6 +135,8 @@
       "main/docs/authenticate/passwordless/implement-login/embedded-login/relevant-api-endpoints.mdx",
       "main/docs/authenticate/passwordless/implement-login/embedded-login/spa.mdx",
       "main/docs/authenticate/passwordless/implement-login/embedded-login/webapps.mdx",
+      "main/docs/authenticate/login/auth0-universal-login.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
       "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
       "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
@@ -1329,6 +1332,8 @@
       "main/docs/customize/log-streams/custom-log-streams.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
+      "main/docs/authenticate/login/auth0-universal-login.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
@@ -3174,6 +3179,7 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/tenant-check.mdx",
       "main/docs/deploy-monitor/pre-deployment-checks/production-check-recommended-fixes.mdx",
       "main/docs/customize/login-pages.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/authenticate/login/auth0-universal-login/error-pages.mdx"
     ],
     "import": [],
@@ -6382,7 +6388,8 @@
       "main/docs/customize/actions/migrate/actions-migration-limitations.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
-      "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx"
+      "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -7106,6 +7113,7 @@
       "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
       "main/docs/customize/integrations/marketplace-partners/writing-tips-for-installation-guides.mdx",
       "main/docs/authenticate/protocols/oauth.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/azuread-adfs-email-verification.mdx"
@@ -8928,7 +8936,8 @@
       "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/explore-triggers/password-reset-triggers.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx"
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8938,7 +8947,8 @@
       "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx"
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -12762,7 +12772,6 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx"
     ],
     "import": [],
@@ -12772,7 +12781,6 @@
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaPollingOptions.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPushEnrollmentQrMembers.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx"
     ],
@@ -14478,6 +14486,7 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx"
     ],
     "import": [],
@@ -14509,7 +14518,8 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx": {
     "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx"
     ],
     "import": [],
     "redirect": []
@@ -14517,7 +14527,26 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -14567,7 +14596,7 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx"
     ],
     "import": [],
     "redirect": []
@@ -14588,8 +14617,7 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaPollingOptions.mdx": {
     "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx"
     ],
     "import": [],
     "redirect": []
@@ -14630,16 +14658,44 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx": {
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
     ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/DBConnection.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -14650,6 +14706,20 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/SocialConnection.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -15183,21 +15253,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": {
-    "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx": {
-    "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
     ],
@@ -15212,13 +15268,6 @@
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useSignupIdentifiers.mdx": {
-    "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx"
     ],
@@ -19878,8 +19927,6 @@
       "main/docs/events/organization/organization.connection.updated.mdx",
       "main/docs/events/organization/organization.created.mdx",
       "main/docs/events/organization/organization.deleted.mdx",
-      "main/docs/events/organization/organization.group.role.assigned.mdx",
-      "main/docs/events/organization/organization.group.role.deleted.mdx",
       "main/docs/events/organization/organization.member.added.mdx",
       "main/docs/events/organization/organization.member.deleted.mdx",
       "main/docs/events/organization/organization.member.role.assigned.mdx",
@@ -19889,8 +19936,6 @@
       "main/docs/events/group/group.deleted.mdx",
       "main/docs/events/group/group.member.added.mdx",
       "main/docs/events/group/group.member.deleted.mdx",
-      "main/docs/events/group/group.role.assigned.mdx",
-      "main/docs/events/group/group.role.deleted.mdx",
       "main/docs/events/group/group.updated.mdx",
       "main/docs/api/myorganization/org-domain-management/create-a-domain.mdx",
       "main/docs/api/myorganization/org-domain-management/delete-a-domain.mdx",
@@ -20379,8 +20424,6 @@
       "main/docs/events/organization/organization.connection.updated.mdx",
       "main/docs/events/organization/organization.created.mdx",
       "main/docs/events/organization/organization.deleted.mdx",
-      "main/docs/events/organization/organization.group.role.assigned.mdx",
-      "main/docs/events/organization/organization.group.role.deleted.mdx",
       "main/docs/events/organization/organization.member.added.mdx",
       "main/docs/events/organization/organization.member.deleted.mdx",
       "main/docs/events/organization/organization.member.role.assigned.mdx",
@@ -20390,8 +20433,6 @@
       "main/docs/events/group/group.deleted.mdx",
       "main/docs/events/group/group.member.added.mdx",
       "main/docs/events/group/group.member.deleted.mdx",
-      "main/docs/events/group/group.role.assigned.mdx",
-      "main/docs/events/group/group.role.deleted.mdx",
       "main/docs/events/group/group.updated.mdx"
     ],
     "redirect": []
@@ -20427,16 +20468,6 @@
     "redirect": []
   },
   "main/docs/events/organization/organization.deleted.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/events/organization/organization.group.role.assigned.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/events/organization/organization.group.role.deleted.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -20482,16 +20513,6 @@
     "redirect": []
   },
   "main/docs/events/group/group.member.deleted.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/events/group/group.role.assigned.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/events/group/group.role.deleted.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -20759,7 +20780,8 @@
       "main/docs/customize/forms/custom-field-components.mdx",
       "main/docs/customize/forms/render.mdx",
       "main/docs/customize/forms/flows/flow-execution-and-debugger.mdx",
-      "main/docs/customize/forms/flows/integrations/logic.mdx"
+      "main/docs/customize/forms/flows/integrations/logic.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20996,6 +21018,7 @@
   "main/docs/customize/login-pages/classic-login.mdx": {
     "link": [
       "main/docs/customize/login-pages.mdx",
+      "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx"
     ],
     "import": [],
@@ -21016,7 +21039,8 @@
   },
   "main/docs/customize/phone-messages/phone-templates.mdx": {
     "link": [
-      "main/docs/customize/phone-messages.mdx"
+      "main/docs/customize/phone-messages.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21067,7 +21091,8 @@
       "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
       "main/docs/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication.mdx",
       "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider.mdx",
-      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx"
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -21118,7 +21143,8 @@
     "link": [
       "main/docs/customize/phone-messages/unified-phone/use-auth0s-unified-phone-experience-for-multi-factor-authentication.mdx",
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger.mdx"
+      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22012,7 +22038,8 @@
   "main/docs/customize/email/email-templates/customize-email-templates.mdx": {
     "link": [
       "main/docs/customize/email/email-templates.mdx",
-      "main/docs/customize/email/send-email-invitations-for-application-signup.mdx"
+      "main/docs/customize/email/send-email-invitations-for-application-signup.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22100,7 +22127,8 @@
   },
   "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx": {
     "link": [
-      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx"
+      "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22127,7 +22155,8 @@
     "link": [
       "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger.mdx"
+      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22145,7 +22174,8 @@
     "link": [
       "main/docs/customize/custom-domains/multiple-custom-domains/actions-integration.mdx",
       "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx"
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22293,7 +22323,9 @@
     "redirect": []
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/authenticate/login/configure-correlation-id.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -22936,6 +22968,13 @@
     "link": [
       "main/docs/authenticate/passwordless/implement-login/embedded-login.mdx",
       "main/docs/authenticate/login/embedded-login.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/login/configure-correlation-id.mdx": {
+    "link": [
+      "main/docs/authenticate/login/auth0-universal-login.mdx"
     ],
     "import": [],
     "redirect": []

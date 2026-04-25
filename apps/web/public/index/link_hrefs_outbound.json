@@ -2369,6 +2369,10 @@
       "toId": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx"
     },
     {
+      "href": "/docs/customize/login-pages/classic-login",
+      "toId": "main/docs/customize/login-pages/classic-login.mdx"
+    },
+    {
       "href": "/docs/get-started/auth0-overview/create-applications",
       "toId": "main/docs/get-started/auth0-overview/create-applications.mdx"
     },
@@ -2391,6 +2395,18 @@
     {
       "href": "/docs/secure/attack-protection/state-parameters",
       "toId": "main/docs/secure/attack-protection/state-parameters.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
+      "href": "/docs/deploy-monitor/logs",
+      "toId": "main/docs/deploy-monitor/logs.mdx"
+    },
+    {
+      "href": "/docs/authenticate/login/configure-correlation-id",
+      "toId": "main/docs/authenticate/login/configure-correlation-id.mdx"
     },
     {
       "href": "/docs/quickstarts",
@@ -11475,6 +11491,10 @@
       "toId": "main/docs/manage-users/organizations/organizations-overview.mdx"
     },
     {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
       "href": "/docs/customize/internationalization-and-localization/universal-login-internationalization",
       "toId": "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx"
     },
@@ -20401,6 +20421,10 @@
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx"
     },
     {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx"
+    },
+    {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen",
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx"
     },
@@ -21535,6 +21559,14 @@
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx"
     },
     {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx"
+    },
+    {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult",
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult.mdx"
     },
@@ -21591,8 +21623,8 @@
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaEnrollFactorType.mdx"
     },
     {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx"
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx"
     }
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/classes/ContextHooks.mdx": [
@@ -21604,7 +21636,12 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CustomOptions.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/WebAuthnErrorDetails.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CurrentScreenOptions.mdx": [],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BaseMembers.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingSettings.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingThemes.mdx": [],
@@ -21625,7 +21662,16 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsernamePolicy.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordPolicy.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/EnterpriseConnection.mdx": [],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Error.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/TransactionMembers.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UntrustedDataMembers.mdx": [],
@@ -21891,6 +21937,10 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Identifier.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx": [
     {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx"
+    },
+    {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule",
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx"
     }
@@ -21904,12 +21954,37 @@
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx": [
     {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx"
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx"
     }
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx": [],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult.mdx": [
     {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling",
@@ -21917,10 +21992,6 @@
     }
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx": [
-    {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaPollingOptions",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaPollingOptions.mdx"
-    },
     {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult",
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult.mdx"
@@ -21950,16 +22021,12 @@
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx": [
     {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Error",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Error.mdx"
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx"
     },
     {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx"
-    },
-    {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx"
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx"
     }
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/AuthenticatorTransport.mdx": [],
@@ -21975,10 +22042,57 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/IdentifierType.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaLoginFactorType.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaEnrollFactorType.mdx": [],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/DBConnection.mdx": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordlessConnection.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/SocialConnection.mdx": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx": [
+    {
+      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult",
+      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/index.mdx": [
     {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Screens/accept-invitation",
@@ -22360,26 +22474,10 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup-id/index.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup-password/index.mdx": [],
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup/index.mdx": [],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": [
-    {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx"
-    }
-  ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx": [
     {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CurrentScreenOptions",
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CurrentScreenOptions.mdx"
-    }
-  ],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": [
-    {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx"
-    },
-    {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx"
     }
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useLoginIdentifiers.mdx": [
@@ -22392,12 +22490,6 @@
     {
       "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Identifier",
       "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Identifier.mdx"
-    }
-  ],
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": [
-    {
-      "href": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult",
-      "toId": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx"
     }
   ],
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useUsernameValidation.mdx": [
@@ -31528,8 +31620,6 @@
   "main/docs/events/organization/organization.connection.updated.mdx": [],
   "main/docs/events/organization/organization.created.mdx": [],
   "main/docs/events/organization/organization.deleted.mdx": [],
-  "main/docs/events/organization/organization.group.role.assigned.mdx": [],
-  "main/docs/events/organization/organization.group.role.deleted.mdx": [],
   "main/docs/events/organization/organization.member.added.mdx": [],
   "main/docs/events/organization/organization.member.deleted.mdx": [],
   "main/docs/events/organization/organization.member.role.assigned.mdx": [],
@@ -31539,8 +31629,6 @@
   "main/docs/events/group/group.deleted.mdx": [],
   "main/docs/events/group/group.member.added.mdx": [],
   "main/docs/events/group/group.member.deleted.mdx": [],
-  "main/docs/events/group/group.role.assigned.mdx": [],
-  "main/docs/events/group/group.role.deleted.mdx": [],
   "main/docs/events/group/group.updated.mdx": [],
   "main/docs/deploy-monitor/auth0-cli.mdx": [
     {
@@ -35937,6 +36025,72 @@
     {
       "href": "/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object",
       "toId": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-api-object.mdx"
+    }
+  ],
+  "main/docs/authenticate/login/configure-correlation-id.mdx": [
+    {
+      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
+      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+    },
+    {
+      "href": "/docs/deploy-monitor/logs",
+      "toId": "main/docs/deploy-monitor/logs.mdx"
+    },
+    {
+      "href": "/docs/customize/login-pages/universal-login/customize-templates",
+      "toId": "main/docs/customize/login-pages/universal-login/customize-templates.mdx"
+    },
+    {
+      "href": "/docs/customize/email/email-templates/customize-email-templates",
+      "toId": "main/docs/customize/email/email-templates/customize-email-templates.mdx"
+    },
+    {
+      "href": "/docs/customize/phone-messages/phone-templates",
+      "toId": "main/docs/customize/phone-messages/phone-templates.mdx"
+    },
+    {
+      "href": "/docs/customize/login-pages/custom-error-pages",
+      "toId": "main/docs/customize/login-pages/custom-error-pages.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/signup-and-login-triggers",
+      "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object",
+      "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object",
+      "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object",
+      "toId": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object",
+      "toId": "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object",
+      "toId": "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object",
+      "toId": "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object",
+      "toId": "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object",
+      "toId": "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx"
+    },
+    {
+      "href": "/docs/customize/forms/variables",
+      "toId": "main/docs/customize/forms/variables.mdx"
     }
   ],
   "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-apis.mdx": [

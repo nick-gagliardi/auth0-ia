@@ -540,7 +540,6 @@
     "type": "page",
     "filePath": "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints.mdx",
     "title": "Migrate Enabled Client Management to Dedicated Connection Endpoints",
-    "permalink": "migrate-dedicated-connection-endpoints",
     "navPaths": [
       "Documentation > Troubleshoot > Auth0 Product Lifecycle > Product Lifecycle > Deprecations and Migrations > Migrate Enabled Client Management to Dedicated Connection Endpoints"
     ]
@@ -5353,17 +5352,17 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx",
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx",
     "type": "page",
-    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx",
-    "title": "Type Alias: ErrorKind",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx",
+    "title": "ErrorType",
     "navPaths": []
   },
   {
     "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/IdentifierType.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/IdentifierType.mdx",
-    "title": "Type Alias: IdentifierType",
+    "title": "IdentifierType",
     "navPaths": []
   },
   {
@@ -5749,6 +5748,13 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/InterstitialCaptchaMembers.mdx",
     "title": "InterstitialCaptchaMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx",
+    "title": "LanguageChangeOptions",
     "navPaths": []
   },
   {
@@ -7299,6 +7305,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx",
+    "title": "UsePasskeyAutofillResult",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendOptions.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendOptions.mdx",
@@ -7936,6 +7949,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx",
+    "title": "useChangeLanguage",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx",
@@ -7961,6 +7981,13 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx",
     "title": "useMfaPolling",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx",
+    "title": "usePasskeyAutofill",
     "navPaths": []
   },
   {
@@ -12875,24 +12902,6 @@
     ]
   },
   {
-    "id": "main/docs/events/organization/organization.group.role.assigned.mdx",
-    "type": "page",
-    "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
-    "title": "organization.group.role.assigned",
-    "navPaths": [
-      "Events Catalog >   > Organization > organization.group.role.assigned"
-    ]
-  },
-  {
-    "id": "main/docs/events/organization/organization.group.role.deleted.mdx",
-    "type": "page",
-    "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
-    "title": "organization.group.role.deleted",
-    "navPaths": [
-      "Events Catalog >   > Organization > organization.group.role.deleted"
-    ]
-  },
-  {
     "id": "main/docs/events/organization/organization.member.added.mdx",
     "type": "page",
     "filePath": "main/docs/events/organization/organization.member.added.mdx",
@@ -12971,24 +12980,6 @@
     "title": "group.member.deleted",
     "navPaths": [
       "Events Catalog >   > Group > group.member.deleted"
-    ]
-  },
-  {
-    "id": "main/docs/events/group/group.role.assigned.mdx",
-    "type": "page",
-    "filePath": "main/docs/events/group/group.role.assigned.mdx",
-    "title": "group.role.assigned",
-    "navPaths": [
-      "Events Catalog >   > Group > group.role.assigned"
-    ]
-  },
-  {
-    "id": "main/docs/events/group/group.role.deleted.mdx",
-    "type": "page",
-    "filePath": "main/docs/events/group/group.role.deleted.mdx",
-    "title": "group.role.deleted",
-    "navPaths": [
-      "Events Catalog >   > Group > group.role.deleted"
     ]
   },
   {
@@ -16848,6 +16839,15 @@
     "title": "Auth0 Universal Login",
     "navPaths": [
       "Documentation > Authenticate > Add Login > Login > Auth0 Universal Login > Auth0 Universal Login"
+    ]
+  },
+  {
+    "id": "main/docs/authenticate/login/configure-correlation-id.mdx",
+    "type": "page",
+    "filePath": "main/docs/authenticate/login/configure-correlation-id.mdx",
+    "title": "Configure Correlation ID",
+    "navPaths": [
+      "Documentation > Authenticate > Add Login > Login > Configure Correlation ID"
     ]
   },
   {

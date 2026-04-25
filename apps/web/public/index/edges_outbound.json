@@ -1239,12 +1239,16 @@
     "link": [
       "main/docs/authenticate/login/universal-vs-embedded-login.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login.mdx",
+      "main/docs/customize/login-pages/classic-login.mdx",
       "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/libraries.mdx",
       "main/docs/get-started/applications/set-up-database-connections.mdx",
       "main/docs/authenticate/enterprise-connections.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers.mdx",
       "main/docs/secure/attack-protection/state-parameters.mdx",
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/deploy-monitor/logs.mdx",
+      "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/quickstarts.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx",
@@ -5412,6 +5416,7 @@
     "link": [
       "main/docs/customize/custom-domains.mdx",
       "main/docs/manage-users/organizations/organizations-overview.mdx",
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
       "main/docs/customize/forms.mdx"
@@ -11326,6 +11331,7 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useLoginIdentifiers.mdx",
@@ -11615,6 +11621,8 @@
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendReturn.mdx",
@@ -11629,7 +11637,7 @@
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/IdentifierType.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaLoginFactorType.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaEnrollFactorType.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx"
     ],
     "import": [],
     "redirect": []
@@ -11657,7 +11665,9 @@
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -11762,7 +11772,10 @@
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -12991,6 +13004,7 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx": {
     "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx"
     ],
     "import": [],
@@ -13010,7 +13024,9 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx": {
     "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx"
     ],
     "import": [],
     "redirect": []
@@ -13021,7 +13037,23 @@
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -13034,7 +13066,6 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx": {
     "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaPollingOptions.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/MfaPollingResult.mdx",
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Error.mdx"
     ],
@@ -13064,9 +13095,8 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx": {
     "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Error.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx"
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx"
     ],
     "import": [],
     "redirect": []
@@ -13113,13 +13143,39 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx": {
-    "link": [],
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorItem.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx"
+    ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/DBConnection.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -13130,6 +13186,20 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/SocialConnection.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx": {
+    "link": [
+      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -13590,24 +13660,9 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": {
-    "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CurrentScreenOptions.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": {
-    "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx"
     ],
     "import": [],
     "redirect": []
@@ -13622,13 +13677,6 @@
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useSignupIdentifiers.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Identifier.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": {
-    "link": [
-      "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx"
     ],
     "import": [],
     "redirect": []
@@ -18923,22 +18971,6 @@
     ],
     "redirect": []
   },
-  "main/docs/events/organization/organization.group.role.assigned.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiSectionTitle.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/events/organization/organization.group.role.deleted.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiSectionTitle.jsx"
-    ],
-    "redirect": []
-  },
   "main/docs/events/organization/organization.member.added.mdx": {
     "link": [],
     "import": [
@@ -19004,22 +19036,6 @@
     "redirect": []
   },
   "main/docs/events/group/group.member.deleted.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiSectionTitle.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/events/group/group.role.assigned.mdx": {
-    "link": [],
-    "import": [
-      "main/snippets/ApiReleaseLifecycle.jsx",
-      "main/snippets/ApiSectionTitle.jsx"
-    ],
-    "redirect": []
-  },
-  "main/docs/events/group/group.role.deleted.mdx": {
     "link": [],
     "import": [
       "main/snippets/ApiReleaseLifecycle.jsx",
@@ -21856,6 +21872,28 @@
       "main/snippets/AuthCodeBlock.jsx",
       "main/snippets/AuthCodeGroup.jsx"
     ],
+    "redirect": []
+  },
+  "main/docs/authenticate/login/configure-correlation-id.mdx": {
+    "link": [
+      "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+      "main/docs/deploy-monitor/logs.mdx",
+      "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
+      "main/docs/customize/email/email-templates/customize-email-templates.mdx",
+      "main/docs/customize/phone-messages/phone-templates.mdx",
+      "main/docs/customize/login-pages/custom-error-pages.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/pre-user-registration-trigger/pre-user-registration-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-challenge-trigger/post-challenge-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/password-reset-triggers/post-change-password-trigger/post-change-password-event-object.mdx",
+      "main/docs/customize/email/smtp-email-providers/custom/action-triggers-custom-email-provider-event-object.mdx",
+      "main/docs/customize/phone-messages/configure-phone-messaging-providers/configure-a-custom-phone-provider/actions-triggers-custom-phone-provider-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/mfa-notifications-trigger/send-phone-message-event-object.mdx",
+      "main/docs/customize/actions/explore-triggers/machine-to-machine-trigger/credentials-exchange-event-object.mdx",
+      "main/docs/customize/forms/variables.mdx"
+    ],
+    "import": [],
     "redirect": []
   },
   "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-apis.mdx": {

@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-24T05:12:19.598Z",
+  "generatedAtUtc": "2026-04-25T04:39:16.314Z",
   "language": "en",
   "root": {
     "id": "root",
@@ -2488,6 +2488,14 @@
                         "label": "docs/authenticate/login/max-age-reauthentication",
                         "route": "docs/authenticate/login/max-age-reauthentication",
                         "filePath": "main/docs/authenticate/login/max-age-reauthentication.mdx",
+                        "children": []
+                      },
+                      {
+                        "id": "root/tab:documentation/dropdown:authenticate/group:add-login/group:login/page:docs/authenticate/login/configure-correlation-id:docs/authen",
+                        "kind": "page",
+                        "label": "docs/authenticate/login/configure-correlation-id",
+                        "route": "docs/authenticate/login/configure-correlation-id",
+                        "filePath": "main/docs/authenticate/login/configure-correlation-id.mdx",
                         "children": []
                       },
                       {
@@ -15908,22 +15916,6 @@
                     "children": []
                   },
                   {
-                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.role.assigned:docs/events/group/grou",
-                    "kind": "page",
-                    "label": "docs/events/group/group.role.assigned",
-                    "route": "docs/events/group/group.role.assigned",
-                    "filePath": "main/docs/events/group/group.role.assigned.mdx",
-                    "children": []
-                  },
-                  {
-                    "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.role.deleted:docs/events/group/group",
-                    "kind": "page",
-                    "label": "docs/events/group/group.role.deleted",
-                    "route": "docs/events/group/group.role.deleted",
-                    "filePath": "main/docs/events/group/group.role.deleted.mdx",
-                    "children": []
-                  },
-                  {
                     "id": "root/tab:events-catalog/group:unnamed/group:group/page:docs/events/group/group.updated:docs/events/group/group.upda",
                     "kind": "page",
                     "label": "docs/events/group/group.updated",
@@ -15976,22 +15968,6 @@
                     "label": "docs/events/organization/organization.deleted",
                     "route": "docs/events/organization/organization.deleted",
                     "filePath": "main/docs/events/organization/organization.deleted.mdx",
-                    "children": []
-                  },
-                  {
-                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.group.role.assigned:do",
-                    "kind": "page",
-                    "label": "docs/events/organization/organization.group.role.assigned",
-                    "route": "docs/events/organization/organization.group.role.assigned",
-                    "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
-                    "children": []
-                  },
-                  {
-                    "id": "root/tab:events-catalog/group:unnamed/group:organization/page:docs/events/organization/organization.group.role.deleted:doc",
-                    "kind": "page",
-                    "label": "docs/events/organization/organization.group.role.deleted",
-                    "route": "docs/events/organization/organization.group.role.deleted",
-                    "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
                     "children": []
                   },
                   {

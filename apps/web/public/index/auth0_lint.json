@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2691,
-  "pagesWithWarnings": 570,
-  "warningCount": 801,
+  "pagesScanned": 2692,
+  "pagesWithWarnings": 576,
+  "warningCount": 808,
   "byCode": {
-    "missing_pkce_mention": 125,
-    "missing_state_mention": 133,
+    "missing_pkce_mention": 126,
+    "missing_state_mention": 134,
     "missing_nonce_mention": 275,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
-    "rules_vs_actions_language": 254
+    "rules_vs_actions_language": 259
   },
   "items": [
     {
@@ -3628,6 +3628,26 @@
       ]
     },
     {
+      "id": "main/docs/authenticate/login/configure-correlation-id.mdx",
+      "filePath": "main/docs/authenticate/login/configure-correlation-id.mdx",
+      "warnings": [
+        {
+          "code": "missing_pkce_mention",
+          "severity": "warn",
+          "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
+          "evidence": "All Universal Login flows support `correlation_id`. Once you pass the correlation ID value to the `/authorize` endpoint, authentication events generate tenant logs with the correla",
+          "line": 55
+        },
+        {
+          "code": "missing_state_mention",
+          "severity": "warn",
+          "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+          "evidence": "All Universal Login flows support `correlation_id`. Once you pass the correlation ID value to the `/authorize` endpoint, authentication events generate tenant logs with the correla",
+          "line": 55
+        }
+      ]
+    },
+    {
       "id": "main/docs/authenticate/login/configure-silent-authentication.mdx",
       "filePath": "main/docs/authenticate/login/configure-silent-authentication.mdx",
       "warnings": [
@@ -6941,16 +6961,6 @@
       "warnings": []
     },
     {
-      "id": "main/docs/events/group/group.role.assigned.mdx",
-      "filePath": "main/docs/events/group/group.role.assigned.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/events/group/group.role.deleted.mdx",
-      "filePath": "main/docs/events/group/group.role.deleted.mdx",
-      "warnings": []
-    },
-    {
       "id": "main/docs/events/group/group.updated.mdx",
       "filePath": "main/docs/events/group/group.updated.mdx",
       "warnings": []
@@ -6983,16 +6993,6 @@
     {
       "id": "main/docs/events/organization/organization.deleted.mdx",
       "filePath": "main/docs/events/organization/organization.deleted.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/events/organization/organization.group.role.assigned.mdx",
-      "filePath": "main/docs/events/organization/organization.group.role.assigned.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/events/organization/organization.group.role.deleted.mdx",
-      "filePath": "main/docs/events/organization/organization.group.role.deleted.mdx",
       "warnings": []
     },
     {
@@ -11543,6 +11543,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx",
       "warnings": []
@@ -11563,6 +11568,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx",
       "warnings": [
@@ -11570,8 +11580,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "- `isValid` — `true` if the password satisfies all configured rules.",
-          "line": 29
+          "evidence": "- **Policy-aware validation** — checks the password against the tenant's configured Auth0 password policy rules.",
+          "line": 21
         }
       ]
     },
@@ -11594,7 +11604,7 @@
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
           "evidence": "This hook checks the provided username against all configured validation rules",
-          "line": 11
+          "line": 16
         }
       ]
     },
@@ -11767,8 +11777,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11780,36 +11790,20 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 13
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-email-code/index.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-email-code/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-sms-otp/index.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-sms-otp/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login/index.mdx",
@@ -11819,36 +11813,20 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-aborted/index.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-aborted/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout/index.mdx",
@@ -11858,8 +11836,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12560,8 +12538,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12573,8 +12551,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12586,8 +12564,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12815,15 +12793,23 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "<ParamField body='rules?' type={<span><a href=\"/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule\">PasswordComplexityRule</a>[]</span>}>",
-          "line": 34
+          "evidence": "Represents a single error entry in the ACUL error store. Returned by [`useErrors`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors) as part of the [`UseErrorsResult`](",
+          "line": 5
         }
       ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "An array-like object returned as part of [`UseErrorsResult`](/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult) by the [`useErrors`](/docs/libraries/acu",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedLoginOptions.mdx",
@@ -12858,7 +12844,15 @@
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Structured theme object returned by [`useAuth0Themes`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes). Provides flattened, token-level access to all visual styl",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Identifier.mdx",
@@ -12869,6 +12863,19 @@
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/InterstitialCaptchaMembers.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/InterstitialCaptchaMembers.mdx",
       "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Options accepted by the function returned from [`useChangeLanguage`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage).",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LoginEmailVerificationMembers.mdx",
@@ -13279,7 +13286,15 @@
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Represents a single evaluated password complexity rule. Returned as part of [`PasswordValidationResult`](/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValid",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordPolicy.mdx",
@@ -13294,8 +13309,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "* Array of evaluated password rules.",
-          "line": 15
+          "evidence": "The return type of [`usePasswordValidation`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation). Contains the overall validity result and a detailed list of ",
+          "line": 5
         }
       ]
     },
@@ -14000,12 +14015,41 @@
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Options object for the [`useError`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useError) hook. Controls error display behavior within Auth0 Universal Login screens.",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "Result object returned by [`useErrors`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors). Provides access to the current error state and methods to dismiss individual ",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "The return type of [`usePasskeyAutofill`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill).",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendOptions.mdx",
@@ -14092,9 +14136,17 @@
       "warnings": []
     },
     {
-      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx",
-      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx",
-      "warnings": []
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "A string union type that classifies errors managed by [`useErrors`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors). Used to filter errors with `errors.byType()` and ",
+          "line": 5
+        }
+      ]
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/IdentifierType.mdx",
@@ -15116,14 +15168,14 @@
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "2. In cases where the application should only access specific organizations i.e. not all of them, [Authorize M2M Access](/docs/manage-users/organizations/organizations-for-m2m-appl",
-          "line": 45
+          "line": 47
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "2. In cases where the application should only access specific organizations i.e. not all of them, [Authorize M2M Access](/docs/manage-users/organizations/organizations-for-m2m-appl",
-          "line": 45
+          "line": 47
         }
       ]
     },
@@ -15739,7 +15791,15 @@
     {
       "id": "main/docs/quickstart/agent-skills.mdx",
       "filePath": "main/docs/quickstart/agent-skills.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "You can also install via **Cursor Settings > Rules > Add Rule > Remote Rule (GitHub)** and enter the [Auth0 Agent Skills repository URL](https://github.com/auth0/agent-skills).",
+          "line": 41
+        }
+      ]
     },
     {
       "id": "main/docs/quickstart/backend/aspnet-core-webapi/index.mdx",
@@ -21081,7 +21141,15 @@
     "main/docs/secure/attack-protection/bot-detection/bot-detection-passwordless-flows.mdx": [],
     "main/docs/secure/attack-protection/bot-detection/configure-captcha.mdx": [],
     "main/docs/secure/application-credentials/generate-rsa-key-pair.mdx": [],
-    "main/docs/quickstart/agent-skills.mdx": [],
+    "main/docs/quickstart/agent-skills.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "You can also install via **Cursor Settings > Rules > Add Rule > Remote Rule (GitHub)** and enter the [Auth0 Agent Skills repository URL](https://github.com/auth0/agent-skills).",
+        "line": 41
+      }
+    ],
     "main/docs/quickstart/webapp/rails/02-troubleshooting.mdx": [
       {
         "code": "token_storage_cookie",
@@ -22278,14 +22346,14 @@
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "2. In cases where the application should only access specific organizations i.e. not all of them, [Authorize M2M Access](/docs/manage-users/organizations/organizations-for-m2m-appl",
-        "line": 45
+        "line": 47
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "2. In cases where the application should only access specific organizations i.e. not all of them, [Authorize M2M Access](/docs/manage-users/organizations/organizations-for-m2m-appl",
-        "line": 45
+        "line": 47
       }
     ],
     "main/docs/manage-users/organizations/organizations-for-m2m-applications/revoke-m2m-access.mdx": [],
@@ -22713,7 +22781,15 @@
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/index.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/AuthenticatorTransport.mdx": [],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorKind.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/ErrorType.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "A string union type that classifies errors managed by [`useErrors`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors). Used to filter errors with `errors.byType()` and ",
+        "line": 5
+      }
+    ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/IdentifierType.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaEnrollFactorType.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/type-aliases/MfaLoginFactorType.mdx": [],
@@ -22772,20 +22848,45 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "<ParamField body='rules?' type={<span><a href=\"/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule\">PasswordComplexityRule</a>[]</span>}>",
-        "line": 34
+        "evidence": "Represents a single error entry in the ACUL error store. Returned by [`useErrors`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors) as part of the [`UseErrorsResult`](",
+        "line": 5
       }
     ],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ErrorsResult.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "An array-like object returned as part of [`UseErrorsResult`](/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult) by the [`useErrors`](/docs/libraries/acu",
+        "line": 5
+      }
+    ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedLoginOptions.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedLoginPasswordOptions.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedLoginPayloadOptions.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedSignupOptions.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedSignupPasswordPayloadOptions.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FederatedSignupPayloadOptions.mdx": [],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/FlattenedTheme.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Structured theme object returned by [`useAuth0Themes`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes). Provides flattened, token-level access to all visual styl",
+        "line": 5
+      }
+    ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Identifier.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/InterstitialCaptchaMembers.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LanguageChangeOptions.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Options accepted by the function returned from [`useChangeLanguage`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage).",
+        "line": 5
+      }
+    ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LoginEmailVerificationMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LoginEnrollOptions.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/LoginIdMembers.mdx": [],
@@ -22880,15 +22981,23 @@
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyCreateResponse.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyEnrollmentLocalMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyEnrollmentMembers.mdx": [],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Represents a single evaluated password complexity rule. Returned as part of [`PasswordValidationResult`](/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValid",
+        "line": 5
+      }
+    ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordPolicy.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordValidationResult.mdx": [
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "* Array of evaluated password rules.",
-        "line": 15
+        "evidence": "The return type of [`usePasswordValidation`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation). Contains the overall validity result and a detailed list of ",
+        "line": 5
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordlessConnection.mdx": [],
@@ -23037,8 +23146,33 @@
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UntrustedDataMembersOnMfaPushChallengePush.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UntrustedDataMembersOnMfaSmsChallenge.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UntrustedDataMembersOnMfaVoiceChallenge.mdx": [],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx": [],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorOptions.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Options object for the [`useError`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useError) hook. Controls error display behavior within Auth0 Universal Login screens.",
+        "line": 5
+      }
+    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseErrorsResult.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "Result object returned by [`useErrors`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors). Provides access to the current error state and methods to dismiss individual ",
+        "line": 5
+      }
+    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UsePasskeyAutofillResult.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "The return type of [`usePasskeyAutofill`](/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill).",
+        "line": 5
+      }
+    ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/UseResendOptions.mdx": [
       {
         "code": "rules_vs_actions_language",
@@ -23089,8 +23223,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup-id/index.mdx": [
@@ -23098,8 +23232,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup/index.mdx": [
@@ -23107,8 +23241,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-success/index.mdx": [
@@ -23588,58 +23722,26 @@
         "line": 21
       }
     ],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
-      }
-    ],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-aborted/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
-      }
-    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-aborted/index.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout/index.mdx": [
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-sms-otp/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
-      }
-    ],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-email-code/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
-      }
-    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-sms-otp/index.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-email-code/index.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-password/index.mdx": [
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 13
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-id/index.mdx": [
@@ -23647,8 +23749,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx": [
@@ -23665,8 +23767,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/interstitial-captcha/index.mdx": [
@@ -23770,17 +23872,19 @@
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useAuth0Themes.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useChangeLanguage.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useCurrentScreen.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useErrors.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useLoginIdentifiers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useMfaPolling.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasskeyAutofill.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": [
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "- `isValid` — `true` if the password satisfies all configured rules.",
-        "line": 29
+        "evidence": "- **Policy-aware validation** — checks the password against the tenant's configured Auth0 password policy rules.",
+        "line": 21
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/useResend.mdx": [],
@@ -23791,7 +23895,7 @@
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "This hook checks the provided username against all configured validation rules",
-        "line": 11
+        "line": 16
       }
     ],
     "main/docs/libraries/acul/js-sdk/globals.mdx": [],
@@ -25757,8 +25861,6 @@
     "main/docs/events/organization/organization.connection.updated.mdx": [],
     "main/docs/events/organization/organization.created.mdx": [],
     "main/docs/events/organization/organization.deleted.mdx": [],
-    "main/docs/events/organization/organization.group.role.assigned.mdx": [],
-    "main/docs/events/organization/organization.group.role.deleted.mdx": [],
     "main/docs/events/organization/organization.member.added.mdx": [],
     "main/docs/events/organization/organization.member.deleted.mdx": [],
     "main/docs/events/organization/organization.member.role.assigned.mdx": [],
@@ -25768,8 +25870,6 @@
     "main/docs/events/group/group.deleted.mdx": [],
     "main/docs/events/group/group.member.added.mdx": [],
     "main/docs/events/group/group.member.deleted.mdx": [],
-    "main/docs/events/group/group.role.assigned.mdx": [],
-    "main/docs/events/group/group.role.deleted.mdx": [],
     "main/docs/events/group/group.updated.mdx": [],
     "main/docs/deploy-monitor/auth0-cli.mdx": [],
     "main/docs/deploy-monitor/auth0-terraform-provider.mdx": [],
@@ -27046,6 +27146,22 @@
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
         "evidence": "* Email addresses are validated client side and follow the same formatting rules as the server side validation.",
         "line": 44
+      }
+    ],
+    "main/docs/authenticate/login/configure-correlation-id.mdx": [
+      {
+        "code": "missing_pkce_mention",
+        "severity": "warn",
+        "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
+        "evidence": "All Universal Login flows support `correlation_id`. Once you pass the correlation ID value to the `/authorize` endpoint, authentication events generate tenant logs with the correla",
+        "line": 55
+      },
+      {
+        "code": "missing_state_mention",
+        "severity": "warn",
+        "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
+        "evidence": "All Universal Login flows support `correlation_id`. Once you pass the correlation ID value to the `/authorize` endpoint, authentication events generate tenant logs with the correla",
+        "line": 55
       }
     ],
     "main/docs/authenticate/login/configure-silent-authentication.mdx": [
