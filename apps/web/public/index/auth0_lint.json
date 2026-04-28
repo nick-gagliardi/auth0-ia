@@ -1,7 +1,7 @@
 {
   "pagesScanned": 2692,
-  "pagesWithWarnings": 576,
-  "warningCount": 808,
+  "pagesWithWarnings": 575,
+  "warningCount": 807,
   "byCode": {
     "missing_pkce_mention": 126,
     "missing_state_mention": 134,
@@ -9,7 +9,7 @@
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
-    "rules_vs_actions_language": 259
+    "rules_vs_actions_language": 258
   },
   "items": [
     {
@@ -11759,15 +11759,7 @@
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx",
-      "warnings": [
-        {
-          "code": "rules_vs_actions_language",
-          "severity": "warn",
-          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
-        }
-      ]
+      "warnings": []
     },
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-id/index.mdx",
@@ -11849,8 +11841,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11862,8 +11854,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11875,8 +11867,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11888,8 +11880,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11901,8 +11893,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11914,8 +11906,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11927,8 +11919,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 21
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11940,8 +11932,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11953,8 +11945,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11966,8 +11958,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11979,8 +11971,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -11992,8 +11984,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12005,8 +11997,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12018,8 +12010,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12031,8 +12023,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12044,8 +12036,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12057,8 +12049,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12070,8 +12062,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12083,8 +12075,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12096,8 +12088,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12109,8 +12101,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12122,8 +12114,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12135,8 +12127,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12148,8 +12140,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12161,8 +12153,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12174,8 +12166,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12187,8 +12179,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12200,8 +12192,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12213,8 +12205,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12226,8 +12218,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12239,8 +12231,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -12252,8 +12244,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "## Context Hooks",
-          "line": 19
+          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+          "line": 11
         }
       ]
     },
@@ -23439,8 +23431,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-roaming-challenge/index.mdx": [
@@ -23448,8 +23440,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-platform-enrollment/index.mdx": [
@@ -23457,8 +23449,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-platform-challenge/index.mdx": [
@@ -23466,8 +23458,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-not-available-error/index.mdx": [
@@ -23475,8 +23467,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-error/index.mdx": [
@@ -23484,8 +23476,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-enrollment-success/index.mdx": [
@@ -23493,8 +23485,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-change-key-nickname/index.mdx": [
@@ -23502,8 +23494,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-voice-enrollment/index.mdx": [
@@ -23511,8 +23503,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-voice-challenge/index.mdx": [
@@ -23520,8 +23512,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-list/index.mdx": [
@@ -23529,8 +23521,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-enrollment/index.mdx": [
@@ -23538,8 +23530,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-challenge/index.mdx": [
@@ -23547,8 +23539,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-enrollment/index.mdx": [
@@ -23556,8 +23548,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-challenge-new-code/index.mdx": [
@@ -23565,8 +23557,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-challenge/index.mdx": [
@@ -23574,8 +23566,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-welcome/index.mdx": [
@@ -23583,8 +23575,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-list/index.mdx": [
@@ -23592,8 +23584,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-enrollment-qr/index.mdx": [
@@ -23601,8 +23593,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-challenge-push/index.mdx": [
@@ -23610,8 +23602,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-phone-enrollment/index.mdx": [
@@ -23619,8 +23611,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-phone-challenge/index.mdx": [
@@ -23628,8 +23620,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-enrollment-qr/index.mdx": [
@@ -23637,8 +23629,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-enrollment-code/index.mdx": [
@@ -23646,8 +23638,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-challenge/index.mdx": [
@@ -23655,8 +23647,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-login-options/index.mdx": [
@@ -23664,8 +23656,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-enroll-result/index.mdx": [
@@ -23673,8 +23665,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-email-list/index.mdx": [
@@ -23682,8 +23674,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-email-challenge/index.mdx": [
@@ -23691,8 +23683,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-detect-browser-capabilities/index.mdx": [
@@ -23700,8 +23692,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-country-codes/index.mdx": [
@@ -23709,8 +23701,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 19
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-begin-enroll-options/index.mdx": [
@@ -23718,8 +23710,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
+        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
+        "line": 11
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx": [],
@@ -23753,15 +23745,7 @@
         "line": 11
       }
     ],
-    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx": [
-      {
-        "code": "rules_vs_actions_language",
-        "severity": "warn",
-        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "## Context Hooks",
-        "line": 21
-      }
-    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login/index.mdx": [
       {
         "code": "rules_vs_actions_language",
