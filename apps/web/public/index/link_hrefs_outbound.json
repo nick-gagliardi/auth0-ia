@@ -2766,8 +2766,8 @@
       "toId": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
     },
     {
       "href": "/docs/secure/tokens/refresh-tokens",
@@ -3068,8 +3068,8 @@
       "toId": "main/docs/get-started/apis/scopes.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/secure/tokens/json-web-tokens/create-custom-claims",
@@ -3084,8 +3084,8 @@
       "toId": "main/docs/authenticate/single-sign-on.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
     },
     {
       "href": "/docs/manage-users/user-accounts/metadata",
@@ -4437,8 +4437,8 @@
       "toId": "main/docs/manage-users/access-control/rbac.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/authentication-and-authorization-flow",
@@ -4573,8 +4573,8 @@
       "toId": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/authenticate/login/oidc-conformant-authentication",
@@ -5874,8 +5874,8 @@
       "toId": "main/docs/get-started/auth0-overview/create-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/applications/application-settings",
@@ -6897,8 +6897,8 @@
       "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/auth0-overview/create-tenants/multi-tenant-apps-best-practices",
@@ -9854,8 +9854,8 @@
       "toId": "main/docs/troubleshoot/authentication-issues/renew-tokens-when-using-safari.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/secure/tokens/access-tokens/validate-access-tokens",
@@ -10029,12 +10029,12 @@
       "toId": "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token/configure-and-implement-multi-resource-refresh-token.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     }
   ],
   "main/docs/get-started/apis.mdx": [
@@ -10159,56 +10159,26 @@
       "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx"
     }
   ],
-  "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx": [
+  "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": [
     {
-      "href": "/docs/get-started/applications/dynamic-client-registration",
-      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
     },
     {
-      "href": "/docs/secure/tokens/id-tokens",
-      "toId": "main/docs/secure/tokens/id-tokens.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/update-application-ownership",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/view-application-type",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
-    }
-  ],
-  "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx": [
-    {
-      "href": "/docs/authenticate/protocols/openid-connect-protocol",
-      "toId": "main/docs/authenticate/protocols/openid-connect-protocol.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/secure/security-guidance/measures-against-app-impersonation",
+      "toId": "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx"
     },
     {
       "href": "/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow",
       "toId": "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/view-application-ownership",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/applications/application-grant-types",
@@ -10588,38 +10558,38 @@
       "toId": "main/docs/get-started/applications/change-application-signing-algorithms.mdx"
     }
   ],
-  "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx": [
+  "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": [
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/update-application-ownership",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx"
-    },
-    {
-      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
-      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
+      "href": "/docs/get-started/apis",
+      "toId": "main/docs/get-started/apis.mdx"
     },
     {
       "href": "/docs/authenticate/identity-providers",
       "toId": "main/docs/authenticate/identity-providers.mdx"
     },
     {
-      "href": "/docs/libraries/lock",
-      "toId": "main/docs/libraries/lock.mdx"
+      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
+      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
     },
     {
-      "href": "/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience",
-      "toId": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/classic-experience.mdx"
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
     },
     {
-      "href": "/docs/libraries/lock/lock-configuration",
-      "toId": "main/docs/libraries/lock/lock-configuration.mdx"
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
+      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     }
   ],
   "main/docs/quickstart/backend/aspnet-core-webapi/index.mdx": [],
@@ -10637,8 +10607,8 @@
       "toId": "main/docs/customize/custom-domains.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
     },
     {
       "href": "/docs/libraries/lock/lock-api-reference",
@@ -11465,8 +11435,8 @@
       "toId": "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-sso.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/manage-users/user-accounts/user-profiles/user-profile-structure",
@@ -14038,8 +14008,8 @@
       "toId": "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     }
   ],
   "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx": [
@@ -14072,8 +14042,8 @@
       "toId": "main/docs/secure/call-apis-on-users-behalf/xaa/test-xaa-flow.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     },
     {
       "href": "/docs/manage-users/organizations/configure-organizations/create-organizations",
@@ -14088,26 +14058,14 @@
       "toId": "main/docs/manage-users/organizations/configure-organizations/define-organization-behavior.mdx"
     }
   ],
-  "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx": [
-    {
-      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
-      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-    },
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx": [
     {
       "href": "/docs/authenticate/enterprise-connections",
       "toId": "main/docs/authenticate/enterprise-connections.mdx"
     },
     {
-      "href": "/docs/troubleshoot/customer-support/manage-subscriptions",
-      "toId": "main/docs/troubleshoot/customer-support/manage-subscriptions.mdx"
-    },
-    {
       "href": "/docs/manage-users/organizations/login-flows-for-organizations",
       "toId": "main/docs/manage-users/organizations/login-flows-for-organizations.mdx"
-    },
-    {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
     }
   ],
   "main/docs/secure/call-apis-on-users-behalf/xaa/manage-xaa-in-okta.mdx": [
@@ -16979,8 +16937,8 @@
       "toId": "main/docs/authenticate/login/oidc-conformant-authentication.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     },
     {
       "href": "/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc",
@@ -18302,10 +18260,6 @@
   ],
   "main/docs/authenticate/database-connections/passkeys.mdx": [
     {
-      "href": "/docs/authenticate/database-connections",
-      "toId": "main/docs/authenticate/database-connections.mdx"
-    },
-    {
       "href": "/docs/authenticate/passwordless/implement-login/embedded-login/native",
       "toId": "main/docs/authenticate/passwordless/implement-login/embedded-login/native.mdx"
     },
@@ -18314,16 +18268,16 @@
       "toId": "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx"
     },
     {
-      "href": "/docs/authenticate/database-connections/password-change",
-      "toId": "main/docs/authenticate/database-connections/password-change.mdx"
-    },
-    {
       "href": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger",
       "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
     },
     {
       "href": "/docs/secure/multi-factor-authentication",
       "toId": "main/docs/secure/multi-factor-authentication.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/passkeys/configure-passkey-policy",
+      "toId": "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     }
   ],
   "main/docs/manage-users/user-accounts/user-profiles/root-attributes/update-root-attributes-for-users.mdx": [
@@ -19146,12 +19100,12 @@
       "toId": "main/docs/get-started/applications/confidential-and-public-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
     }
   ],
   "main/docs/get-started/authentication-and-authorization-flow/implicit-flow-with-form-post/add-login-using-the-implicit-flow-with-form-post.mdx": [
@@ -20228,8 +20182,8 @@
   ],
   "main/docs/libraries/lock/lock-authentication-parameters.mdx": [
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/apis/scopes",
@@ -25390,12 +25344,7 @@
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UntrustedDataMembersOnMfaPushChallengePush.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UntrustedDataMembersOnMfaSmsChallenge.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UntrustedDataMembersOnMfaVoiceChallenge.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx": [
-    {
-      "href": "/docs/customize/login-pages/advanced-customizations/configure",
-      "toId": "main/docs/customize/login-pages/advanced-customizations/configure.mdx"
-    }
-  ],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UsernamePolicy.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UsernameValidationError.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/UsernameValidationResult.mdx": [
@@ -25564,16 +25513,6 @@
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/DBConnection.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordlessConnection.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/SocialConnection.mdx": [],
-  "main/docs/customize/login-pages/advanced-customizations/configure.mdx": [
-    {
-      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers",
-      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    }
-  ],
   "main/docs/get-started/identity-fundamentals/authentication-and-authorization.mdx": [
     {
       "href": "/docs/authenticate",
@@ -26751,8 +26690,8 @@
       "toId": "main/docs/api/myorganization/index.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     },
     {
       "href": "/docs/api",
@@ -26789,8 +26728,8 @@
   "main/snippets/ComponentLoader.jsx": [],
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     },
     {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
@@ -26799,8 +26738,8 @@
   ],
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     },
     {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
@@ -26809,8 +26748,8 @@
   ],
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
     },
     {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
@@ -26819,46 +26758,8 @@
   ],
   "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
-    },
-    {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
       "toId": "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
-    }
-  ],
-  "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": [
-    {
-      "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
-      "toId": "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-    },
-    {
-      "href": "/docs/authenticate/enterprise-connections",
-      "toId": "main/docs/authenticate/enterprise-connections.mdx"
-    },
-    {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
-    },
-    {
-      "href": "/docs/authenticate/enterprise-connections/user-attribute-profile",
-      "toId": "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx"
-    },
-    {
-      "href": "/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on",
-      "toId": "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/dynamic-client-registration",
-      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
-    },
-    {
-      "href": "/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
-    },
-    {
-      "href": "/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations",
-      "toId": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx"
     }
   ],
   "main/docs/get-started/applications/enable-sso-for-applications.mdx": [
@@ -27761,6 +27662,12 @@
     }
   ],
   "main/docs/get-started/applications/enable-android-app-links-support.mdx": [],
+  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    }
+  ],
   "main/docs/get-started/auth0-mcp-server/auth0-mcp-server-guides.mdx": [
     {
       "href": "/docs/get-started/auth0-mcp-server/auth0-mcp-server-guides/streamline-api-authorization-flows-with-auth0-model-context-protocol-mcp",
@@ -28354,16 +28261,16 @@
       "toId": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/apis/set-logical-api",
       "toId": "main/docs/get-started/apis/set-logical-api.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/apis/scopes/api-scopes",
@@ -29028,16 +28935,16 @@
       "toId": "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/apis/set-logical-api",
       "toId": "main/docs/get-started/apis/set-logical-api.mdx"
     },
     {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
+      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
     },
     {
       "href": "/docs/get-started/apis/scopes/api-scopes",
@@ -31061,40 +30968,6 @@
     }
   ],
   "main/docs/deploy-monitor/auth0-terraform-provider.mdx": [],
-  "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": [
-    {
-      "href": "/docs/get-started/apis",
-      "toId": "main/docs/get-started/apis.mdx"
-    },
-    {
-      "href": "/docs/authenticate/identity-providers",
-      "toId": "main/docs/authenticate/identity-providers.mdx"
-    },
-    {
-      "href": "/docs/authenticate/identity-providers/promote-connections-to-domain-level",
-      "toId": "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/third-party-applications",
-      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/dynamic-client-registration",
-      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/application-access-to-apis-client-grants",
-      "toId": "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/third-party-applications/security-controls",
-      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
-    }
-  ],
   "main/docs/get-started/applications/configure-fapi-compliance.mdx": [
     {
       "href": "/docs/get-started/applications/configure-mtls",
@@ -31129,32 +31002,6 @@
     {
       "href": "/docs/secure/tokens/json-web-tokens",
       "toId": "main/docs/secure/tokens/json-web-tokens.mdx"
-    }
-  ],
-  "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": [
-    {
-      "href": "/docs/get-started/applications/third-party-applications",
-      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/first-party-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/third-party-applications/security-controls",
-      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
-    },
-    {
-      "href": "/docs/secure/security-guidance/measures-against-app-impersonation",
-      "toId": "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx"
-    },
-    {
-      "href": "/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow",
-      "toId": "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/application-grant-types",
-      "toId": "main/docs/get-started/applications/application-grant-types.mdx"
     }
   ],
   "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-client.mdx": [
@@ -31469,42 +31316,6 @@
     {
       "href": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions",
       "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx"
-    }
-  ],
-  "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx": [
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/view-application-ownership",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
-    }
-  ],
-  "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx": [
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/update-application-ownership",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications",
-      "toId": "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx"
     }
   ],
   "main/docs/customize/login-pages/customize-consent-prompts.mdx": [
@@ -32014,24 +31825,52 @@
       "toId": "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
     },
     {
-      "href": "/docs/customize/custom-domains",
-      "toId": "main/docs/customize/custom-domains.mdx"
-    },
-    {
       "href": "/docs/authenticate/login/auth0-universal-login/identifier-first",
       "toId": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/require-username",
+      "toId": "main/docs/authenticate/database-connections/require-username.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/flexible-identifiers-and-attributes",
+      "toId": "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx"
     },
     {
       "href": "/docs/authenticate/database-connections/custom-db/create-db-connection",
       "toId": "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
     },
     {
-      "href": "/docs/manage-users/user-migration/user-migration-scenarios",
-      "toId": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx"
+      "href": "/docs/authenticate/database-connections/custom-db/templates",
+      "toId": "main/docs/authenticate/database-connections/custom-db/templates.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/custom-db/templates/get-user",
+      "toId": "main/docs/authenticate/database-connections/custom-db/templates/get-user.mdx"
+    },
+    {
+      "href": "/docs/authenticate/database-connections/custom-db/templates/create",
+      "toId": "main/docs/authenticate/database-connections/custom-db/templates/create.mdx"
     },
     {
       "href": "/docs/manage-users/organizations/configure-organizations/invite-members",
       "toId": "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx"
+    },
+    {
+      "href": "/docs/customize/custom-domains",
+      "toId": "main/docs/customize/custom-domains.mdx"
+    },
+    {
+      "href": "/docs/customize/custom-domains/multiple-custom-domains",
+      "toId": "main/docs/customize/custom-domains/multiple-custom-domains.mdx"
+    },
+    {
+      "href": "/docs/secure/multi-factor-authentication",
+      "toId": "main/docs/secure/multi-factor-authentication.mdx"
+    },
+    {
+      "href": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger",
+      "toId": "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
     }
   ],
   "main/docs/customize/custom-domains/self-managed-certificates/configure-gcp-as-reverse-proxy.mdx": [
@@ -32905,8 +32744,8 @@
       "toId": "main/docs/get-started/auth0-overview/create-applications.mdx"
     },
     {
-      "href": "/docs/customize/login-pages/advanced-customizations/configure",
-      "toId": "main/docs/customize/login-pages/advanced-customizations/configure.mdx"
+      "href": "/docs/customize/login-pages/advanced-customizations/configure/overview",
+      "toId": "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx"
     },
     {
       "href": "/docs/customize/login-pages/advanced-customizations/quickstart",
@@ -32963,6 +32802,20 @@
     {
       "href": "/docs/customize/login-pages/advanced-customizations/acul-use-cases/migrate-classic-universal-login",
       "toId": "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/migrate-classic-universal-login.mdx"
+    }
+  ],
+  "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx": [
+    {
+      "href": "/docs/customize/login-pages/advanced-customizations/configure/reference",
+      "toId": "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx"
+    },
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     }
   ],
   "main/docs/customize/login-pages/advanced-customizations/development-workflow.mdx": [],
@@ -33216,6 +33069,32 @@
     {
       "href": "/docs/customize/login-pages/advanced-customizations/deployment-workflow",
       "toId": "main/docs/customize/login-pages/advanced-customizations/deployment-workflow.mdx"
+    }
+  ],
+  "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx": [
+    {
+      "href": "/docs/customize/login-pages/advanced-customizations/configure/overview",
+      "toId": "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx"
+    },
+    {
+      "href": "/docs/customize/login-pages/universal-login",
+      "toId": "main/docs/customize/login-pages/universal-login.mdx"
+    },
+    {
+      "href": "/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts",
+      "toId": "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx"
+    },
+    {
+      "href": "/docs/customize/login-pages/universal-login/customize-templates",
+      "toId": "main/docs/customize/login-pages/universal-login/customize-templates.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/react-sdk",
+      "toId": "main/docs/libraries/acul/react-sdk.mdx"
+    },
+    {
+      "href": "/docs/libraries/acul/js-sdk",
+      "toId": "main/docs/libraries/acul/js-sdk.mdx"
     }
   ],
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider/configure-auth0-as-identity-provider-for-datadog.mdx": [],
@@ -36811,6 +36690,40 @@
       "toId": "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx"
     }
   ],
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx": [
+    {
+      "href": "/docs/authenticate/enterprise-connections",
+      "toId": "main/docs/authenticate/enterprise-connections.mdx"
+    },
+    {
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+    },
+    {
+      "href": "/docs/authenticate/enterprise-connections/user-attribute-profile",
+      "toId": "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx"
+    },
+    {
+      "href": "/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on",
+      "toId": "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/dynamic-client-registration",
+      "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
+    },
+    {
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
+    },
+    {
+      "href": "/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync",
+      "toId": "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx"
+    },
+    {
+      "href": "/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations",
+      "toId": "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx"
+    }
+  ],
   "main/docs/authenticate/database-connections/db2-script.mdx": [],
   "main/docs/authenticate/database-connections/custom-db/templates/change-password.mdx": [
     {
@@ -36862,12 +36775,6 @@
       "toId": "main/docs/authenticate/database-connections/flexible-identifiers-and-attributes.mdx"
     }
   ],
-  "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": [
-    {
-      "href": "/docs/deploy-monitor/logs",
-      "toId": "main/docs/deploy-monitor/logs.mdx"
-    }
-  ],
   "main/docs/authenticate/database-connections/custom-db/templates/create.mdx": [
     {
       "href": "/docs/authenticate/database-connections/custom-db/templates/get-user",
@@ -36908,6 +36815,12 @@
     {
       "href": "/docs/authenticate/database-connections/custom-db/templates/change-email",
       "toId": "main/docs/authenticate/database-connections/custom-db/templates/change-email.mdx"
+    }
+  ],
+  "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": [
+    {
+      "href": "/docs/deploy-monitor/logs",
+      "toId": "main/docs/deploy-monitor/logs.mdx"
     }
   ],
   "main/docs/authenticate/database-connections/custom-db/templates/delete.mdx": [
@@ -37144,7 +37057,7 @@
   "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx": [],
   "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx": [],
   "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx": [],
-  "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx": [],
+  "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credential-templates-for-a-tenant.mdx": [],
   "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx": [],
   "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx": [],
   "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx": [],
@@ -37212,12 +37125,12 @@
   "main/docs/api/management/v2/sessions/revokes-a-session.mdx": [],
   "main/docs/api/management/v2/sessions/update-session.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx": [],
-  "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx": [],
+  "main/docs/api/management/v2/self-service-profiles/create-an-access-ticket-to-initiate-the-self-service-enterprise-configuration-flow.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx": [],
-  "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx": [],
+  "main/docs/api/management/v2/self-service-profiles/revoke-a-self-service-enterprise-configuration-access-ticket.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx": [],
   "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx": [],
   "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx": [],
@@ -37250,6 +37163,7 @@
   "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx": [],
   "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx": [],
   "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx": [],
+  "main/docs/api/management/v2/refresh-tokens/revoke-refresh-tokens.mdx": [],
   "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx": [],
   "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx": [],
   "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx": [],
@@ -37398,6 +37312,7 @@
   "main/docs/api/management/v2/flows/get-flows.mdx": [],
   "main/docs/api/management/v2/flows/update-a-flow.mdx": [],
   "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx": [],
+  "main/docs/api/management/v2/events/subscribe-to-events-via-server-sent-events-sse.mdx": [],
   "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx": [],
   "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx": [],
   "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx": [],
@@ -37684,9 +37599,5 @@
   "main/snippets/quickstart/backend/aspnet-core-webapi/HasScopeHandler.cs.mdx": [],
   "main/snippets/quickstart/backend/aspnet-core-webapi/HasScopeRequirement.cs.mdx": [],
   "main/snippets/quickstart/backend/aspnet-core-webapi/Program.cs.mdx": [],
-  "main/snippets/quickstart/backend/aspnet-core-webapi/appsettings.json.mdx": [],
-  "main/docs/fr-ca/quickstart/native/xamarin/interactive.mdx": [],
-  "main/docs/fr-ca/quickstart/native/net-android-ios/interactive.mdx": [],
-  "main/docs/ja-jp/quickstart/native/xamarin/interactive.mdx": [],
-  "main/docs/ja-jp/quickstart/native/net-android-ios/interactive.mdx": []
+  "main/snippets/quickstart/backend/aspnet-core-webapi/appsettings.json.mdx": []
 }

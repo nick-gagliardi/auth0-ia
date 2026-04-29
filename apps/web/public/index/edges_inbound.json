@@ -139,9 +139,7 @@
       "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
       "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
       "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx",
       "main/docs/authenticate/database-connections/non-unique-emails.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-api.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx",
@@ -258,11 +256,7 @@
       "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/database-connections-rate-limits.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/authentication-api-endpoint-rate-limits.mdx"
-    ]
+    "redirect": []
   },
   "main/snippets/AuthCodeBlock.jsx": {
     "link": [],
@@ -432,9 +426,6 @@
       "main/docs/get-started/applications/update-grant-types.mdx",
       "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
       "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
       "main/docs/get-started/apis/add-api-permissions.mdx",
       "main/docs/get-started/apis/configure-access-token-profile.mdx",
       "main/docs/get-started/apis/delete-api-permissions.mdx",
@@ -1134,8 +1125,7 @@
       "main/docs/troubleshoot/customer-support/manage-subscriptions/monitor-subscription-usage.mdx",
       "main/docs/get-started/tenant-settings.mdx",
       "main/docs/get-started/manage-dashboard-access/configure-single-sign-on-for-auth0-dashboard.mdx",
-      "main/docs/get-started/auth0-teams/troubleshoot-teams.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx"
+      "main/docs/get-started/auth0-teams/troubleshoot-teams.mdx"
     ],
     "import": [],
     "redirect": []
@@ -1815,7 +1805,8 @@
       "main/docs/authenticate/single-sign-on/native-to-web/native-to-web-sso-best-practices.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "main/docs/authenticate/database-connections/passkeys.mdx"
+      "main/docs/authenticate/database-connections/passkeys.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     ],
     "import": [],
     "redirect": []
@@ -2749,9 +2740,6 @@
       "main/docs/get-started/applications/update-grant-types.mdx",
       "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
       "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
       "main/docs/get-started/apis/add-api-permissions.mdx",
       "main/docs/get-started/apis/delete-api-permissions.mdx",
       "main/docs/get-started/apis/enable-role-based-access-control-for-apis.mdx",
@@ -2985,9 +2973,7 @@
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/get-started/manage-dashboard-access/support-center-users.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/get-started/manage-dashboard-access/add-dashboard-users.mdx": {
     "link": [
@@ -3309,7 +3295,6 @@
       "main/docs/get-started/applications/confidential-and-public-applications.mdx",
       "main/docs/get-started/applications/work-with-auth0-locally.mdx",
       "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
       "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
       "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-aws.mdx",
       "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-azure.mdx",
@@ -3449,6 +3434,7 @@
   "main/docs/get-started/applications/third-party-applications.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
       "main/docs/get-started/applications/application-grant-types.mdx",
       "main/docs/get-started/applications/application-settings.mdx",
@@ -3482,10 +3468,9 @@
       "main/docs/get-started/applications/third-party-applications.mdx",
       "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
       "main/docs/get-started/applications/third-party-applications/permissive-mode.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
       "main/docs/authenticate/identity-providers/promote-connections-to-domain-level.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -3555,12 +3540,18 @@
   "main/docs/get-started/applications/first-party-and-third-party-applications.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx",
+      "main/docs/get-started/applications.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx",
+      "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx",
       "main/docs/get-started/applications/application-grant-types.mdx",
       "main/docs/get-started/applications/application-settings.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx",
       "main/docs/get-started/applications/third-party-applications.mdx",
-      "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx"
+      "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
+      "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
+      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4126,7 +4117,7 @@
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/management-api-endpoint-rate-limits.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/authorization-code-flow-with-par.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4351,7 +4342,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/branding.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/tenant-check.mdx",
       "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
       "main/docs/customize/login-pages.mdx",
       "main/docs/customize/login-pages/classic-login/customization-classic.mdx",
       "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx",
@@ -4404,8 +4394,7 @@
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
-      "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx",
-      "main/docs/authenticate/database-connections/passkeys.mdx"
+      "main/docs/customize/login-pages/classic-login/customize-password-reset-page.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4475,8 +4464,8 @@
       "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4663,8 +4652,8 @@
       "main/docs/get-started/applications/configure-mtls/configure-mtls-for-a-tenant.mdx",
       "main/docs/deploy-monitor/pre-deployment-checks/pre-launch-tips.mdx",
       "main/docs/customize/custom-domains.mdx",
-      "main/docs/customize/login-pages/advanced-customizations/configure.mdx",
       "main/docs/customize/login-pages/advanced-customizations/reference.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx",
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
       "main/docs/customize/events/create-an-event-stream.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
@@ -5096,7 +5085,6 @@
       "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
       "main/docs/get-started/applications/rotate-client-secret.mdx",
       "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication/oidc-adoption-refresh-tokens.mdx",
@@ -5200,10 +5188,7 @@
       "main/docs/get-started/applications/configure-sender-constraining.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/get-started/applications/configure-sender-constraining/configure-resource-server-for-sender-constraining.mdx",
-      "main/docs/get-started/applications/configure-sender-constraining/configure-client-for-sender-constraining.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/get-started/applications/configure-jar.mdx": {
     "link": [
@@ -5544,7 +5529,8 @@
       "main/docs/authenticate/login/configure-silent-authentication.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/devkeys.mdx",
-      "main/docs/authenticate/database-connections/passkeys.mdx"
+      "main/docs/authenticate/database-connections/passkeys.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     ],
     "import": [],
     "redirect": []
@@ -5689,9 +5675,7 @@
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/get-started/applications/configure-sender-constraining.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/secure/sender-constraining/mtls-sender-constraining.mdx": {
     "link": [
@@ -5806,7 +5790,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
       "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
       "main/docs/customize/rules/context-object.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
@@ -6185,9 +6168,7 @@
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/secure/tokens/manage-refresh-tokens-with-auth0-management-api.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/manage-users/sessions/manage-user-sessions-with-auth0-management-api.mdx": {
     "link": [
@@ -6533,23 +6514,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx": {
-    "link": [
-      "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx",
-      "main/docs/get-started/applications.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx",
-      "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx",
-      "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
-      "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx": {
+  "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": {
     "link": [
       "main/docs/secure/tokens/refresh-tokens/multi-resource-refresh-token.mdx",
       "main/docs/secure/security-guidance/measures-against-app-impersonation.mdx",
@@ -6559,10 +6524,11 @@
       "main/docs/get-started/architecture-scenarios/business-to-consumer/authorization.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx",
       "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx",
+      "main/docs/get-started/applications/confidential-and-public-applications.mdx",
+      "main/docs/get-started/applications/dynamic-client-registration.mdx",
+      "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+      "main/docs/get-started/applications/third-party-applications.mdx",
+      "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication.mdx"
     ],
     "import": [],
@@ -6710,16 +6676,19 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx": {
+  "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": {
     "link": [
       "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
       "main/docs/libraries/auth0js.mdx",
       "main/docs/libraries/lock.mdx",
+      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
+      "main/docs/get-started/applications/dynamic-client-registration.mdx",
+      "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
+      "main/docs/get-started/applications/third-party-applications.mdx",
       "main/docs/get-started/applications/wildcards-for-subdomains.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx"
+      "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+      "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
+      "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
     ],
     "import": [],
     "redirect": []
@@ -6749,7 +6718,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/quality-assurance.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/launch/testing.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
       "main/docs/customize/login-pages/classic-login/customization-classic.mdx",
       "main/docs/customize/login-pages/classic-login/customize-lock-error-messages.mdx",
       "main/docs/customize/login-pages/classic-login/customize-with-lock-sdk.mdx",
@@ -6885,7 +6853,6 @@
       "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
       "main/docs/get-started/applications/update-grant-types.mdx",
       "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
       "main/docs/deploy-monitor/pre-deployment-checks/pre-launch-tips.mdx"
     ],
     "import": [],
@@ -7110,6 +7077,7 @@
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-actions-to-validate-and-store-end-user-data-gathered-by-signup-prompt.mdx",
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-dynamic-variables-to-internationalize-custom-form-elements.mdx",
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx",
       "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
       "main/docs/customize/integrations/marketplace-partners/writing-tips-for-installation-guides.mdx",
       "main/docs/authenticate/protocols/oauth.mdx",
@@ -7374,6 +7342,7 @@
       "main/docs/deploy-monitor/deploy-private-cloud/private-cloud-on-azure.mdx",
       "main/docs/authenticate/database-connections.mdx",
       "main/docs/authenticate/database-connections/custom-db.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
       "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
       "main/docs/authenticate/database-connections/custom-db/error-handling.mdx",
       "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx"
@@ -8011,9 +7980,7 @@
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/customize/rules/use-cases.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/customize/rules/use-cases.mdx": {
     "link": [
@@ -8090,7 +8057,8 @@
       "main/docs/customize/custom-domains/multiple-custom-domains/passkeys.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains/sdk-configuration.mdx",
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx",
-      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx"
+      "main/docs/authenticate/login/auth0-universal-login/configure-default-login-routes.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8506,7 +8474,6 @@
       "main/docs/libraries/lock/lock-configuration.mdx",
       "main/docs/libraries/lock/lock-ui-customization.mdx",
       "main/docs/libraries/lock/selecting-from-multiple-connection-options.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
       "main/docs/customize/login-pages/classic-login/customization-classic.mdx",
       "main/docs/customize/integrations/cms/wordpress-plugin/configure-login-by-auth0.mdx",
       "main/docs/customize/integrations/cms/wordpress-plugin/troubleshoot-login-by-auth0.mdx",
@@ -8609,7 +8576,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx": {
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx": {
     "link": [
       "main/docs/secure/call-apis-on-users-behalf/xaa.mdx",
       "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx",
@@ -8618,7 +8585,7 @@
       "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx",
       "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx",
       "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8788,7 +8755,8 @@
       "main/docs/manage-users/user-accounts/create-users.mdx",
       "main/docs/manage-users/user-accounts/verify-emails.mdx",
       "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx",
-      "main/docs/authenticate/database-connections/non-unique-emails.mdx"
+      "main/docs/authenticate/database-connections/non-unique-emails.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
     ],
     "import": [],
     "redirect": []
@@ -8876,7 +8844,6 @@
       "main/docs/authenticate/login/max-age-reauthentication.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
       "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx",
-      "main/docs/authenticate/database-connections/passkeys.mdx",
       "main/docs/authenticate/database-connections/password-change.mdx",
       "main/docs/authenticate/database-connections/custom-db/create-db-connection.mdx",
       "main/docs/authenticate/database-connections/custom-db/overview-custom-db-connections.mdx"
@@ -9302,7 +9269,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/profile-management.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
       "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
       "main/docs/get-started/apis/set-logical-api.mdx",
       "main/docs/deploy-monitor/pre-deployment-checks/pre-launch-tips.mdx",
       "main/docs/customize/integrations/cms.mdx",
@@ -9914,10 +9880,7 @@
   "main/docs/quickstart/native/net-android-ios/interactive.mdx": {
     "link": [],
     "import": [],
-    "redirect": [
-      "main/docs/quickstart/native/xamarin/interactive.mdx",
-      "main/docs/quickstart/native/xamarin.mdx"
-    ]
+    "redirect": []
   },
   "main/snippets/quickstart/native/net-android-ios/MainActivity.cs.mdx": {
     "link": [],
@@ -10224,7 +10187,6 @@
       "main/docs/get-started/architecture-scenarios/business-to-business/authentication.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/authorization.mdx",
       "main/docs/get-started/applications/work-with-auth0-locally.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx",
       "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx",
       "main/docs/authenticate/protocols.mdx",
       "main/docs/authenticate/login/configure-silent-authentication.mdx",
@@ -10833,7 +10795,7 @@
       "main/docs/manage-users/my-organization-api.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx",
       "main/docs/api/myorganization/index.mdx"
     ],
     "import": [],
@@ -11174,8 +11136,7 @@
       "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
-      "main/docs/authenticate/database-connections.mdx",
-      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx"
+      "main/docs/authenticate/database-connections.mdx"
     ],
     "import": [],
     "redirect": []
@@ -11186,6 +11147,7 @@
       "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx",
       "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
       "main/docs/authenticate/login/auth0-universal-login/passwordless-login/webauthn-device-biometrics.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates.mdx",
       "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/change-email.mdx",
@@ -11496,7 +11458,6 @@
       "main/docs/get-started/applications/update-application-connections.mdx",
       "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
       "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
       "main/docs/authenticate/identity-providers.mdx"
     ],
     "import": [],
@@ -11607,10 +11568,7 @@
       "main/docs/manage-users/sessions/session-metadata.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/manage-users/sessions/non-persistent-sessions.mdx",
-      "main/docs/manage-users/sessions/session-lifetime-limits.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx": {
     "link": [
@@ -11620,6 +11578,7 @@
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/connection-switching.mdx",
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-actions-to-validate-and-store-end-user-data-gathered-by-signup-prompt.mdx",
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/use-dynamic-variables-to-internationalize-custom-form-elements.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx",
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/create-theme-tailwind.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx"
     ],
@@ -11638,9 +11597,7 @@
       "main/docs/manage-users/sessions/session-lifecycle.mdx"
     ],
     "import": [],
-    "redirect": [
-      "main/docs/manage-users/sessions/configure-session-lifetime-settings.mdx"
-    ]
+    "redirect": []
   },
   "main/docs/manage-users/sessions/manage-multi-site-sessions.mdx": {
     "link": [],
@@ -11896,7 +11853,7 @@
       "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/multiple-idp-orgs.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/okta/express-configuration.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-api.mdx"
     ],
     "import": [],
@@ -12267,8 +12224,7 @@
   "main/docs/get-started/applications/confidential-and-public-applications/view-application-type.mdx": {
     "link": [
       "main/docs/libraries/auth0-swift.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx"
+      "main/docs/get-started/applications/confidential-and-public-applications.mdx"
     ],
     "import": [],
     "redirect": []
@@ -12531,7 +12487,8 @@
   },
   "main/docs/libraries/acul/js-sdk.mdx": {
     "link": [
-      "main/docs/customize/login-pages/advanced-customizations/reference.mdx"
+      "main/docs/customize/login-pages/advanced-customizations/reference.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx"
     ],
     "import": [],
     "redirect": []
@@ -12557,7 +12514,8 @@
   },
   "main/docs/libraries/acul/react-sdk.mdx": {
     "link": [
-      "main/docs/customize/login-pages/advanced-customizations/reference.mdx"
+      "main/docs/customize/login-pages/advanced-customizations/reference.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx"
     ],
     "import": [],
     "redirect": []
@@ -17481,7 +17439,7 @@
     "link": [
       "main/docs/libraries/acul/js-sdk/Types/index.mdx",
       "main/docs/libraries/acul/js-sdk/Screens/index.mdx",
-      "main/docs/customize/login-pages/advanced-customizations/configure.mdx"
+      "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx"
     ],
     "import": [],
     "redirect": []
@@ -18157,14 +18115,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/login-pages/advanced-customizations/configure.mdx": {
-    "link": [
-      "main/docs/libraries/acul/js-sdk/Screens/interfaces/UserMembers.mdx",
-      "main/docs/customize/login-pages/advanced-customizations.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/get-started/identity-fundamentals/authentication-and-authorization.mdx": {
     "link": [
       "main/docs/get-started/apis.mdx",
@@ -18558,15 +18508,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx": {
-    "link": [
-      "main/docs/get-started/universal-components/my-organization/domain-management/configure-org-domains.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/get-started/applications/enable-sso-for-applications.mdx": {
     "link": [
       "main/docs/get-started/tenant-settings/enable-sso-for-legacy-tenants.mdx"
@@ -18894,6 +18835,11 @@
       "main/docs/get-started/applications/application-settings.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx"
     ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
@@ -19588,6 +19534,7 @@
     "link": [
       "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
       "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/create.mdx"
     ],
     "import": [],
@@ -19695,19 +19642,6 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx": {
-    "link": [
-      "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
-      "main/docs/get-started/applications/dynamic-client-registration.mdx",
-      "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/third-party-applications.mdx",
-      "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
-      "main/docs/get-started/applications/third-party-applications/troubleshooting.mdx",
-      "main/docs/get-started/apis/api-access-policies-for-applications.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/get-started/applications/configure-fapi-compliance.mdx": {
     "link": [
       "main/docs/get-started/applications/application-settings.mdx"
@@ -19722,17 +19656,6 @@
       "main/docs/authenticate/single-sign-on/outbound-single-sign-on.mdx",
       "main/docs/authenticate/protocols/openid-connect-protocol.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/oidc.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/applications/third-party-applications/user-consent-and-third-party-applications.mdx": {
-    "link": [
-      "main/docs/get-started/applications/confidential-and-public-applications.mdx",
-      "main/docs/get-started/applications/dynamic-client-registration.mdx",
-      "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/third-party-applications.mdx",
-      "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
     ],
     "import": [],
     "redirect": []
@@ -19831,23 +19754,6 @@
   },
   "main/docs/get-started/applications/configure-fapi-compliance/configure-auth0-to-pass-openid-fapi-certification-tests.mdx": {
     "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx": {
-    "link": [
-      "main/docs/get-started/applications/confidential-and-public-applications/enable-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/first-party-and-third-party-applications.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/applications/confidential-and-public-applications/view-application-ownership.mdx": {
-    "link": [
-      "main/docs/get-started/applications/confidential-and-public-applications/update-application-ownership.mdx",
-      "main/docs/get-started/applications/confidential-and-public-applications/user-consent-and-third-party-applications.mdx"
-    ],
     "import": [],
     "redirect": []
   },
@@ -19978,7 +19884,7 @@
       "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx",
       "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx",
       "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx",
-      "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx",
+      "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credential-templates-for-a-tenant.mdx",
       "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
       "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx",
       "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx",
@@ -20047,12 +19953,12 @@
       "main/docs/api/management/v2/sessions/revokes-a-session.mdx",
       "main/docs/api/management/v2/sessions/update-session.mdx",
       "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx",
-      "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx",
+      "main/docs/api/management/v2/self-service-profiles/create-an-access-ticket-to-initiate-the-self-service-enterprise-configuration-flow.mdx",
       "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx",
       "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx",
       "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx",
       "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx",
-      "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx",
+      "main/docs/api/management/v2/self-service-profiles/revoke-a-self-service-enterprise-configuration-access-ticket.mdx",
       "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx",
       "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx",
       "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx",
@@ -20085,6 +19991,7 @@
       "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx",
       "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
       "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+      "main/docs/api/management/v2/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
       "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx",
       "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx",
@@ -20233,6 +20140,7 @@
       "main/docs/api/management/v2/flows/get-flows.mdx",
       "main/docs/api/management/v2/flows/update-a-flow.mdx",
       "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx",
+      "main/docs/api/management/v2/events/subscribe-to-events-via-server-sent-events-sse.mdx",
       "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx",
       "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx",
       "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx",
@@ -20689,6 +20597,7 @@
     "link": [
       "main/docs/customize/custom-domains.mdx",
       "main/docs/authenticate/database-connections.mdx",
+      "main/docs/authenticate/database-connections/passkeys.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-api.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-for-mobile-applications.mdx"
     ],
@@ -21010,6 +20919,7 @@
     "link": [
       "main/docs/customize/login-pages.mdx",
       "main/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx",
       "main/docs/customize/email/send-email-invitations-for-application-signup.mdx"
     ],
     "import": [],
@@ -21204,6 +21114,14 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx": {
+    "link": [
+      "main/docs/customize/login-pages/advanced-customizations.mdx",
+      "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/customize/login-pages/advanced-customizations/development-workflow.mdx": {
     "link": [
       "main/docs/customize/login-pages/advanced-customizations.mdx",
@@ -21282,6 +21200,13 @@
   "main/docs/customize/login-pages/advanced-customizations/acul-use-cases/migrate-classic-universal-login.mdx": {
     "link": [
       "main/docs/customize/login-pages/advanced-customizations/acul-use-cases.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/login-pages/advanced-customizations/configure/reference.mdx": {
+    "link": [
+      "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22589,7 +22514,7 @@
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-onelogin-as-saml-identity-provider.mdx",
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider/configure-pingfederate-as-saml-identity-provider.mdx",
       "main/docs/authenticate/protocols/saml/saml-configuration/customize-saml-assertions.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-SSO/manage-self-service-sso.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22852,7 +22777,8 @@
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-directory-sync.mdx": {
     "link": [
       "main/docs/authenticate/protocols/scim/configure-inbound-scim.mdx",
-      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx"
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/google-apps.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -23195,6 +23121,13 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx": {
+    "link": [
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/database-connections/db2-script.mdx": {
     "link": [],
     "import": [],
@@ -23225,13 +23158,9 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/authenticate/database-connections/custom-db/templates/create.mdx": {
     "link": [
+      "main/docs/authenticate/database-connections/passkeys/configure-passkey-policy.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates.mdx",
       "main/docs/authenticate/database-connections/custom-db/test-custom-database-connections.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/change-email.mdx",
@@ -23241,6 +23170,11 @@
       "main/docs/authenticate/database-connections/custom-db/templates/login.mdx",
       "main/docs/authenticate/database-connections/custom-db/templates/verify.mdx"
     ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/authenticate/database-connections/passkeys/monitor-passkey-events-in-tenant-logs.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
@@ -23349,7 +23283,7 @@
       "main/docs/api/management/v2/verifiable-credentials/create-a-verifiable-credential-template.mdx",
       "main/docs/api/management/v2/verifiable-credentials/delete-a-verifiable-credential-template-by-id.mdx",
       "main/docs/api/management/v2/verifiable-credentials/get-a-verifiable-credential-template-by-id.mdx",
-      "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx",
+      "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credential-templates-for-a-tenant.mdx",
       "main/docs/api/management/v2/verifiable-credentials/update-a-verifiable-credential-template-by-id.mdx",
       "main/docs/api/management/v2/users-by-email/search-users-by-email.mdx",
       "main/docs/api/management/v2/users/assign-permissions-to-a-user.mdx",
@@ -23418,12 +23352,12 @@
       "main/docs/api/management/v2/sessions/revokes-a-session.mdx",
       "main/docs/api/management/v2/sessions/update-session.mdx",
       "main/docs/api/management/v2/self-service-profiles/create-a-self-service-profile.mdx",
-      "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx",
+      "main/docs/api/management/v2/self-service-profiles/create-an-access-ticket-to-initiate-the-self-service-enterprise-configuration-flow.mdx",
       "main/docs/api/management/v2/self-service-profiles/delete-a-self-service-profile-by-id.mdx",
       "main/docs/api/management/v2/self-service-profiles/get-a-self-service-profile-by-id.mdx",
       "main/docs/api/management/v2/self-service-profiles/get-custom-text-for-a-self-service-profile.mdx",
       "main/docs/api/management/v2/self-service-profiles/get-self-service-profiles.mdx",
-      "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx",
+      "main/docs/api/management/v2/self-service-profiles/revoke-a-self-service-enterprise-configuration-access-ticket.mdx",
       "main/docs/api/management/v2/self-service-profiles/set-custom-text-for-a-self-service-profile.mdx",
       "main/docs/api/management/v2/self-service-profiles/update-a-self-service-profile.mdx",
       "main/docs/api/management/v2/rules-configs/delete-rules-config-for-a-given-key.mdx",
@@ -23456,6 +23390,7 @@
       "main/docs/api/management/v2/refresh-tokens/delete-a-refresh-token.mdx",
       "main/docs/api/management/v2/refresh-tokens/get-a-refresh-token.mdx",
       "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx",
+      "main/docs/api/management/v2/refresh-tokens/revoke-refresh-tokens.mdx",
       "main/docs/api/management/v2/refresh-tokens/update-a-refresh-token.mdx",
       "main/docs/api/management/v2/prompts/get-custom-text-for-a-prompt.mdx",
       "main/docs/api/management/v2/prompts/get-partials-for-a-prompt.mdx",
@@ -23604,6 +23539,7 @@
       "main/docs/api/management/v2/flows/get-flows.mdx",
       "main/docs/api/management/v2/flows/update-a-flow.mdx",
       "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx",
+      "main/docs/api/management/v2/events/subscribe-to-events-via-server-sent-events-sse.mdx",
       "main/docs/api/management/v2/event-streams/create-an-event-stream.mdx",
       "main/docs/api/management/v2/event-streams/delete-an-event-stream.mdx",
       "main/docs/api/management/v2/event-streams/get-a-specific-events-delivery-history.mdx",
@@ -23994,7 +23930,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credentials-template-for-tenant.mdx": {
+  "main/docs/api/management/v2/verifiable-credentials/list-verifiable-credential-templates-for-a-tenant.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -24334,7 +24270,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/management/v2/self-service-profiles/create-an-sso-access-ticket-to-initiate-the-self-service-sso-flow.mdx": {
+  "main/docs/api/management/v2/self-service-profiles/create-an-access-ticket-to-initiate-the-self-service-enterprise-configuration-flow.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -24359,7 +24295,7 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/api/management/v2/self-service-profiles/revoke-an-sso-access-ticket.mdx": {
+  "main/docs/api/management/v2/self-service-profiles/revoke-a-self-service-enterprise-configuration-access-ticket.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -24520,6 +24456,11 @@
     "redirect": []
   },
   "main/docs/api/management/v2/refresh-tokens/get-refresh-tokens.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/refresh-tokens/revoke-refresh-tokens.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -25260,6 +25201,11 @@
     "redirect": []
   },
   "main/docs/api/management/v2/flows/update-a-flows-vault-connection.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/api/management/v2/events/subscribe-to-events-via-server-sent-events-sse.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -26698,29 +26644,5 @@
     "link": [],
     "import": [],
     "redirect": []
-  },
-  "main/docs/fr-ca/quickstart/native/xamarin/interactive.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/fr-ca/quickstart/native/net-android-ios/interactive.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": [
-      "main/docs/fr-ca/quickstart/native/xamarin/interactive.mdx"
-    ]
-  },
-  "main/docs/ja-jp/quickstart/native/xamarin/interactive.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/ja-jp/quickstart/native/net-android-ios/interactive.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": [
-      "main/docs/ja-jp/quickstart/native/xamarin/interactive.mdx"
-    ]
   }
 }
