@@ -20,7 +20,14 @@ import {
 import AppLayout from '@/components/AppLayout';
 import { Button } from '@/components/ui/button';
 import { useFeedback, useNodes } from '@/hooks/use-index-data';
-import { DIAGNOSIS_SYSTEM_PROMPT, buildDiagnosisUserPrompt } from '@/lib/feedback-diagnosis';
+import {
+  DIAGNOSIS_SYSTEM_PROMPT,
+  buildDiagnosisUserPrompt,
+  FIX_SUGGESTIONS_SYSTEM_PROMPT,
+  buildFixSuggestionsUserPrompt,
+} from '@/lib/feedback-diagnosis';
+import { Checkbox } from '@/components/ui/checkbox';
+import { GitPullRequest } from 'lucide-react';
 import type { FeedbackBucket, FeedbackItem } from '@/types';
 
 type DiagnosisState =
@@ -560,14 +567,404 @@ function FeedbackQueueView({ entries, fetchedAt }: { entries: Array<[string, Fee
   );
 }
 
+interface FixSuggestion {
+  before: string;
+  after: string;
+  explanation: string;
+}
+
+type SuggestionsState =
+  | { status: 'idle' }
+  | { status: 'loading'; step: 'file' | 'ai' | 'pr' }
+  | { status: 'ready'; suggestions: FixSuggestion[] }
+  | { status: 'pr-opened'; prUrl: string }
+  | { status: 'error'; message: string };
+
+function useSuggestFixes(args: {
+  path: string;
+  filePath: string | null;
+  bucket: FeedbackBucket;
+  diagnosis: string | null;
+}) {
+  const [state, setState] = useState<SuggestionsState>({ status: 'idle' });
+  const [accepted, setAccepted] = useState<Set<number>>(new Set());
+
+  const generate = async () => {
+    if (!args.filePath) {
+      setState({ status: 'error', message: 'No matching file in the IA graph for this path' });
+      return;
+    }
+    if (!args.diagnosis) {
+      setState({ status: 'error', message: 'Generate a diagnosis first' });
+      return;
+    }
+
+    try {
+      setState({ status: 'loading', step: 'file' });
+      const fileRes = await fetch('/api/rules-deprecation/fetch-file', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filePath: args.filePath }),
+      });
+      const fileData = await fileRes.json();
+      if (!fileRes.ok || !fileData.ok) {
+        setState({ status: 'error', message: fileData.error || `Failed to fetch file (HTTP ${fileRes.status})` });
+        return;
+      }
+      const fileContent: string = fileData.content;
+
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) {
+        setState({ status: 'error', message: 'No Anthropic key configured. Add one in Settings.' });
+        return;
+      }
+      const { apiKey } = await keyRes.json();
+
+      setState({ status: 'loading', step: 'ai' });
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const userPrompt = buildFixSuggestionsUserPrompt({
+        path: args.path,
+        filePath: args.filePath,
+        diagnosis: args.diagnosis,
+        bucket: args.bucket,
+        fileContent,
+      });
+      const prompt = `${FIX_SUGGESTIONS_SYSTEM_PROMPT}\n\n---\n\n${userPrompt}`;
+
+      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model,
+          max_tokens: 4096,
+          messages: [{ role: 'user', content: prompt }],
+        }),
+      });
+      if (!aiRes.ok) {
+        const errText = await aiRes.text().catch(() => '');
+        setState({ status: 'error', message: `AI API error: ${aiRes.status}${errText ? ` — ${errText.slice(0, 200)}` : ''}` });
+        return;
+      }
+      const aiData = await aiRes.json();
+      const text = (aiData.content?.[0]?.text || '').trim();
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) {
+        setState({ status: 'error', message: 'AI response did not contain parseable JSON' });
+        return;
+      }
+      let parsed: { suggestions?: FixSuggestion[] };
+      try {
+        parsed = JSON.parse(jsonMatch[0]);
+      } catch {
+        setState({ status: 'error', message: 'Failed to parse AI suggestions JSON' });
+        return;
+      }
+      const suggestions = (parsed.suggestions || []).filter(
+        (s) => s && typeof s.before === 'string' && typeof s.after === 'string' && s.before.length > 0,
+      );
+
+      setState({ status: 'ready', suggestions });
+      setAccepted(new Set(suggestions.map((_, i) => i))); // accept all by default
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to generate suggestions';
+      setState({ status: 'error', message });
+    }
+  };
+
+  const createPr = async () => {
+    if (state.status !== 'ready') return;
+    if (!args.filePath) return;
+    if (accepted.size === 0) return;
+
+    setState({ status: 'loading', step: 'pr' });
+    try {
+      const acceptedSuggestions = state.suggestions
+        .map((s, idx) => ({ s, idx }))
+        .filter(({ idx }) => accepted.has(idx))
+        .map(({ s, idx }) => ({
+          id: `feedback-fix-${idx}`,
+          type: 'feedback-fix',
+          description: s.explanation,
+          line: null,
+          original: s.before,
+          suggestion: s.after,
+          context: null,
+        }));
+
+      const today = new Date().toISOString().slice(0, 10);
+      const shortPath = args.filePath.replace(/^main\/docs\//, '');
+      const prTitle = `docs: address feedback on ${shortPath}`;
+      const prBodyLines = [
+        '## Summary',
+        '',
+        `Addresses negative user feedback on \`${args.path}\`.`,
+        '',
+        '## Diagnosis',
+        '',
+        args.diagnosis,
+        '',
+        `## Suggestions applied (${acceptedSuggestions.length})`,
+        '',
+        ...acceptedSuggestions.map((s, i) => `${i + 1}. ${s.description}`),
+        '',
+        '---',
+        '',
+        'Generated by auth0-ia Feedback Triage.',
+      ];
+
+      const res = await fetch('/api/audit/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          filePath: args.filePath,
+          validatedOn: today,
+          prTitle,
+          prBody: prBodyLines.join('\n'),
+          suggestions: acceptedSuggestions,
+        }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) {
+        setState({ status: 'error', message: json.error || `Failed to create PR (HTTP ${res.status})` });
+        return;
+      }
+      const prUrl: string = json.compareUrl || json.prUrl || '';
+      setState({ status: 'pr-opened', prUrl });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Failed to create PR';
+      setState({ status: 'error', message });
+    }
+  };
+
+  const reset = () => {
+    setState({ status: 'idle' });
+    setAccepted(new Set());
+  };
+
+  return { state, accepted, setAccepted, generate, createPr, reset };
+}
+
+function SuggestFixesPanel({
+  path,
+  filePath,
+  bucket,
+  diagnosis,
+}: {
+  path: string;
+  filePath: string | null;
+  bucket: FeedbackBucket;
+  diagnosis: string | null;
+}) {
+  const { state, accepted, setAccepted, generate, createPr, reset } = useSuggestFixes({
+    path,
+    filePath,
+    bucket,
+    diagnosis,
+  });
+
+  const disabled = !filePath || !diagnosis;
+  const disabledReason = !diagnosis
+    ? 'Generate a diagnosis above first.'
+    : !filePath
+      ? 'No matching file in the IA graph — can\'t open a PR for this path.'
+      : null;
+
+  if (state.status === 'idle') {
+    return (
+      <div className="rounded-xl border bg-card p-5 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground mb-2">
+          <GitPullRequest className="w-4 h-4" /> Suggest fixes & open PR
+        </div>
+        <div className="text-sm text-muted-foreground mb-3">
+          Generate concrete file edits from the diagnosis, review them, and open a PR against{' '}
+          <code className="font-mono">auth0/docs-v2</code>.
+        </div>
+        {disabledReason ? (
+          <div className="text-xs text-muted-foreground">{disabledReason}</div>
+        ) : (
+          <Button variant="outline" size="sm" onClick={generate}>
+            <Sparkles className="w-4 h-4 mr-1" />
+            Suggest fixes
+          </Button>
+        )}
+      </div>
+    );
+  }
+
+  if (state.status === 'loading') {
+    const label =
+      state.step === 'file' ? 'Fetching file from docs-v2…'
+      : state.step === 'ai' ? 'Asking Claude for fix suggestions…'
+      : 'Creating PR…';
+    return (
+      <div className="rounded-xl border bg-card p-5 mb-6 text-sm text-muted-foreground">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide mb-2">
+          <GitPullRequest className="w-4 h-4" /> Suggest fixes & open PR
+        </div>
+        <div className="flex items-center gap-2">
+          <Loader2 className="w-4 h-4 animate-spin" /> {label}
+        </div>
+      </div>
+    );
+  }
+
+  if (state.status === 'error') {
+    return (
+      <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-5 mb-6 text-sm">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-destructive mb-2">
+          <GitPullRequest className="w-4 h-4" /> Suggest fixes & open PR
+        </div>
+        <div className="text-destructive mb-3">{state.message}</div>
+        <Button variant="outline" size="sm" onClick={reset} disabled={disabled}>
+          <RefreshCw className="w-4 h-4 mr-1" /> Reset
+        </Button>
+      </div>
+    );
+  }
+
+  if (state.status === 'pr-opened') {
+    return (
+      <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-5 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-emerald-500 mb-2">
+          <GitPullRequest className="w-4 h-4" /> PR ready
+        </div>
+        <div className="text-sm mb-3">
+          Branch created and changes committed.{' '}
+          {state.prUrl ? (
+            <a href={state.prUrl} target="_blank" rel="noreferrer" className="underline font-medium">
+              Review on GitHub
+            </a>
+          ) : (
+            'Open the compare URL in GitHub to create the PR.'
+          )}
+        </div>
+        <Button variant="ghost" size="sm" onClick={reset}>
+          Suggest more fixes
+        </Button>
+      </div>
+    );
+  }
+
+  // status === 'ready'
+  const { suggestions } = state;
+  if (suggestions.length === 0) {
+    return (
+      <div className="rounded-xl border bg-card p-5 mb-6">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground mb-2">
+          <GitPullRequest className="w-4 h-4" /> Suggest fixes & open PR
+        </div>
+        <div className="text-sm text-muted-foreground mb-3">
+          Claude returned no suggestions. This is expected for misrouted support tickets, garbage
+          input, or clusters where the diagnosis says no docs change is needed.
+        </div>
+        <Button variant="ghost" size="sm" onClick={reset}>
+          Reset
+        </Button>
+      </div>
+    );
+  }
+
+  const toggle = (i: number) => {
+    setAccepted((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  };
+
+  return (
+    <div className="rounded-xl border bg-card p-5 mb-6">
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
+          <GitPullRequest className="w-4 h-4" />
+          Review {suggestions.length} suggestion{suggestions.length === 1 ? '' : 's'}
+        </div>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setAccepted(new Set(suggestions.map((_, i) => i)))}
+          >
+            Accept all
+          </Button>
+          <Button variant="ghost" size="sm" onClick={() => setAccepted(new Set())}>
+            Decline all
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3 mb-4">
+        {suggestions.map((s, i) => (
+          <label
+            key={i}
+            className="flex items-start gap-3 rounded-lg border p-3 cursor-pointer hover:bg-secondary/40 transition-colors"
+          >
+            <Checkbox
+              checked={accepted.has(i)}
+              onCheckedChange={() => toggle(i)}
+              className="mt-0.5"
+            />
+            <div className="flex-1 min-w-0">
+              <div className="text-sm leading-relaxed mb-2">{s.explanation}</div>
+              <div className="space-y-1">
+                <div className="text-xs">
+                  <span className="text-muted-foreground">before:</span>
+                  <pre className="mt-1 rounded border bg-muted/40 p-2 font-mono text-xs whitespace-pre-wrap break-all">
+                    {s.before}
+                  </pre>
+                </div>
+                <div className="text-xs">
+                  <span className="text-muted-foreground">after:</span>
+                  <pre className="mt-1 rounded border bg-emerald-500/5 border-emerald-500/30 p-2 font-mono text-xs whitespace-pre-wrap break-all">
+                    {s.after || <span className="italic text-muted-foreground">(deletion)</span>}
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </label>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-between">
+        <div className="text-xs text-muted-foreground">
+          {accepted.size} of {suggestions.length} accepted
+        </div>
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" onClick={reset}>
+            Cancel
+          </Button>
+          <Button size="sm" onClick={createPr} disabled={accepted.size === 0}>
+            <GitPullRequest className="w-4 h-4 mr-1" />
+            Create PR
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function FeedbackBody({
   path,
   bucket,
   cluster,
+  filePath,
 }: {
   path: string;
   bucket: FeedbackBucket;
   cluster: FeedbackBucket['cluster'];
+  filePath: string | null;
 }) {
   const { state, generating, generate } = useDiagnosis(path, bucket);
   const diagnosisText = state.status === 'ready' ? state.diagnosis : null;
@@ -579,6 +976,12 @@ function FeedbackBody({
         state={state}
         generating={generating}
         generate={generate}
+      />
+      <SuggestFixesPanel
+        path={path}
+        filePath={filePath}
+        bucket={bucket}
+        diagnosis={diagnosisText}
       />
       <TriageActions path={path} bucket={bucket} diagnosis={diagnosisText} />
     </>
@@ -698,7 +1101,12 @@ export default function FeedbackClient() {
           </div>
         </div>
 
-        <FeedbackBody path={path} bucket={bucket} cluster={cluster} />
+        <FeedbackBody
+          path={path}
+          bucket={bucket}
+          cluster={cluster}
+          filePath={matchingNode?.filePath ?? null}
+        />
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
           <div className="rounded-xl border bg-card p-4">

@@ -113,3 +113,55 @@ export function buildDiagnosisUserPrompt(path: string, bucket: FeedbackBucket): 
   ];
   return lines.join('\n');
 }
+
+export const FIX_SUGGESTIONS_SYSTEM_PROMPT = `You are a documentation maintenance assistant for the Auth0 docs team. Given a docs page, a diagnosis of a feedback cluster on it, the original feedback items, and the current MDX file content, you propose concrete text replacements that fix the underlying problem.
+
+Return ONLY JSON with this shape (no preamble, no trailing prose):
+
+{
+  "suggestions": [
+    {
+      "before": "exact text from the file, copied verbatim",
+      "after": "exact replacement text",
+      "explanation": "one short sentence explaining what this change does and why"
+    }
+  ]
+}
+
+Rules:
+- "before" MUST appear in the MDX file VERBATIM. It will be used for a literal find-and-replace, so any character difference (whitespace, quotes, backticks) will fail.
+- "after" must be the EXACT replacement text — not instructions like "remove this" or "update to X". The actual final text.
+- For pure deletions, set "after" to "".
+- Limit to 8 suggestions max. Quality over quantity — only include changes you are confident will fix what the diagnosis identifies.
+- Don't suggest cosmetic changes that aren't motivated by the feedback (no random punctuation/style cleanups).
+- Skip suggestions where you're not confident the "before" text is unique in the file (find-and-replace will hit the wrong spot).
+- For "support ticket misrouted" or "garbage input" diagnoses, return an empty suggestions array — there's no docs change to make.
+- Prefer surgical, minimal-scope edits over large rewrites. If a code block needs updating, update only the lines that are wrong.`;
+
+export function buildFixSuggestionsUserPrompt(args: {
+  path: string;
+  filePath: string;
+  diagnosis: string;
+  bucket: FeedbackBucket;
+  fileContent: string;
+}): string {
+  const { path, filePath, diagnosis, bucket, fileContent } = args;
+  const lines = [
+    `Page URL: ${path}`,
+    `File: ${filePath}`,
+    '',
+    '## Diagnosis (already generated)',
+    diagnosis,
+    '',
+    '## Feedback items on this page',
+    JSON.stringify(bucket.items.map(summarizeItem), null, 2),
+    '',
+    '## Current MDX file content',
+    '```mdx',
+    fileContent,
+    '```',
+    '',
+    'Now propose JSON suggestions that, when applied as find-and-replace, fix the issues identified in the diagnosis.',
+  ];
+  return lines.join('\n');
+}
