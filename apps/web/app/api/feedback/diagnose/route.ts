@@ -90,6 +90,9 @@ export async function POST(request: Request) {
     }
 
     const userPrompt = buildDiagnosisUserPrompt(targetPath, bucket);
+    // Inline the system prompt into the user message to match audit/rules-deprecation
+    // routing through the Okta LiteLLM proxy (top-level `system` is not preserved).
+    const prompt = `${DIAGNOSIS_SYSTEM_PROMPT}\n\n---\n\n${userPrompt}`;
     const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
     const response = await fetch(`${baseUrl}/v1/messages`, {
@@ -98,8 +101,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         model,
         max_tokens: 256,
-        system: DIAGNOSIS_SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: userPrompt }],
+        messages: [{ role: 'user', content: prompt }],
       }),
     });
 
