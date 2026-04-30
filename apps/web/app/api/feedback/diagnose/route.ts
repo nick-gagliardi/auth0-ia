@@ -67,14 +67,19 @@ export async function POST(request: Request) {
       return NextResponse.json({ ok: false, error: `No feedback bucket for path: ${targetPath}` }, { status: 404 });
     }
 
-    // Resolve Anthropic auth — same pattern as /api/rules-deprecation/suggest
+    // Resolve Anthropic auth.
+    // When a LiteLLM proxy URL is configured, route through it via Bearer auth
+    // using any available key — env proxyToken first, otherwise the user's
+    // settings-page key. The user's stored key is typically a proxy-issued
+    // virtual key (sk-…), not a raw Anthropic key, so it must be sent to the
+    // proxy URL not directly to api.anthropic.com.
     const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
     const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
     const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
     const userKey = user.anthropic_api_key_decrypted;
 
-    const useProxy = isLiteLLMProxy && !!proxyToken;
-    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
+    const useProxy = isLiteLLMProxy && (!!proxyToken || !!userKey);
+    const apiKey = useProxy ? (proxyToken || userKey) : userKey;
     const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
     if (!apiKey) {
@@ -94,23 +99,6 @@ export async function POST(request: Request) {
     // routing through the Okta LiteLLM proxy (top-level `system` is not preserved).
     const prompt = `${DIAGNOSIS_SYSTEM_PROMPT}\n\n---\n\n${userPrompt}`;
     const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-
-    // TEMPORARY: log auth resolution so we can see which path is being taken.
-    // Remove once the 401 is sorted.
-    console.log('[Feedback Diagnose] Auth resolved:', {
-      configuredBaseUrl,
-      isLiteLLMProxy,
-      useProxy,
-      baseUrl,
-      hasProxyToken: !!proxyToken,
-      proxyTokenPrefix: proxyToken ? proxyToken.slice(0, 6) + '…' : null,
-      hasUserKey: !!userKey,
-      userKeyPrefix: userKey ? userKey.slice(0, 6) + '…' : null,
-      apiKeySource: apiKey === userKey ? 'userKey' : (apiKey === proxyToken ? 'proxyToken' : 'unknown'),
-      authHeader: useProxy ? 'Authorization: Bearer …' : 'x-api-key: …',
-      model,
-      promptLen: prompt.length,
-    });
 
     const response = await fetch(`${baseUrl}/v1/messages`, {
       method: 'POST',
