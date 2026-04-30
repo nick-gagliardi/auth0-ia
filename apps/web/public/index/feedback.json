@@ -1,0 +1,2068 @@
+{
+  "fetchedAt": "2026-04-30T14:28:49.939Z",
+  "dateFrom": "2026-03-31",
+  "dateTo": null,
+  "total": 73,
+  "pageCount": 1,
+  "pathCount": 57,
+  "byPath": {
+    "/docs/quickstart/spa/angular": {
+      "count": 6,
+      "pendingCount": 6,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 6,
+      "lastAt": "2026-04-08T03:48:55.490Z",
+      "items": [
+        {
+          "id": "69d5d027f55953f5bbffb1c5",
+          "path": "/docs/quickstart/spa/angular",
+          "comment": "Should be replaced with\n`ng generate component login-button`\nfor each of the components created",
+          "createdAt": "2026-04-08T03:48:55.490Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "mkdir -p src/app/components && touch src/app/components/login-button.component.ts && touch src/app/components/logout-button.component.ts && touch src/app/components/profile.component.ts\n",
+          "filename": "Mac/Linux",
+          "lang": "shellscript"
+        },
+        {
+          "id": "69d58172b60a27eb00322fb5",
+          "path": "/docs/quickstart/spa/angular",
+          "comment": "Angular 19 does not use bootstrapApplication, it uses\n```\nplatformBrowser().bootstrapModule(AppModule, {\n  ngZoneEventCoalescing: true,\n})\n  .catch(err => console.error(err));\n```",
+          "createdAt": "2026-04-07T22:13:06.545Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "import { bootstrapApplication } from '@angular/platform-browser';\nimport { appConfig } from './app/app.config';\nimport { provideAuth0 } from '@auth0/auth0-angular';\nimport { mergeApplicationConfig } from '@angular/core';\nimport { environment } from './environments/environment';\nimport { AppComponent } from './app/app.component';\n\nconst auth0Config = mergeApplicationConfig(appConfig, {\n  providers: [\n    provideAuth0({\n      domain: environment.auth0.domain,\n      clientId: environment.auth0.clientId,\n      authorizationParams: {\n        redirect_uri: window.location.origin\n      }\n    })\n  ]\n});\n\nbootstrapApplication(AppComponent, auth0Config).catch((err) =>\n  console.error(err)\n);\n",
+          "filename": "src/main.ts",
+          "lang": "typescript"
+        },
+        {
+          "id": "69d5803fda23acc590117e9b",
+          "path": "/docs/quickstart/spa/angular",
+          "comment": "There is no appConfig file generated in Angular 19.\nDoes not match default code generated with Angular 20.\nDoes not match default code generated with Angular 21.",
+          "createdAt": "2026-04-07T22:07:59.785Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "import { bootstrapApplication } from '@angular/platform-browser';\nimport { appConfig } from './app/app.config';\nimport { provideAuth0 } from '@auth0/auth0-angular';\nimport { mergeApplicationConfig } from '@angular/core';\nimport { environment } from './environments/environment';\nimport { AppComponent } from './app/app.component';\n\nconst auth0Config = mergeApplicationConfig(appConfig, {\n  providers: [\n    provideAuth0({\n      domain: environment.auth0.domain,\n      clientId: environment.auth0.clientId,\n      authorizationParams: {\n        redirect_uri: window.location.origin\n      }\n    })\n  ]\n});\n\nbootstrapApplication(AppComponent, auth0Config).catch((err) =>\n  console.error(err)\n);\n",
+          "filename": "src/main.ts",
+          "lang": "typescript"
+        },
+        {
+          "id": "69d57d3c54508b575dd11705",
+          "path": "/docs/quickstart/spa/angular",
+          "comment": "[] The tutorial is designed for Angular 19, needs to be updated.",
+          "createdAt": "2026-04-07T21:55:08.501Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        },
+        {
+          "id": "69d4aa2234f2a8bff472215f",
+          "path": "/docs/quickstart/spa/angular",
+          "comment": "[] Tried a few things, the documentation is not valid for Anuglar 21, the sample application at https://github.com/auth0-samples/auth0-angular-samples/tree/main/Sample-01/src/app was last updated for Angular 16. The documentation for the project at https://github.com/auth0/auth0-angular is not valid for Angular 21. Some of the material looks like it was last updated for Angular 16.  The entire process needs to be revisited and updated, just following the instructions as is and modifying the change from app.component.ts to app.ts lead to a blank page, no actual content rendered.",
+          "createdAt": "2026-04-07T06:54:26.265Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        },
+        {
+          "id": "69d498ef09941385f1d8c7ec",
+          "path": "/docs/quickstart/spa/angular",
+          "comment": "[] Documentation out of date, needs more detailed information about which version this is applicable to.  app.component.ts does not get created",
+          "createdAt": "2026-04-07T05:41:03.270Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": {
+          "count": 3,
+          "startedAt": "2026-04-07T21:55:08.501Z",
+          "endedAt": "2026-04-07T22:13:06.545Z",
+          "windowMinutes": 18
+        },
+        "topTerms": [
+          {
+            "term": "angular",
+            "count": 10
+          },
+          {
+            "term": "auth0",
+            "count": 4
+          },
+          {
+            "term": "generated",
+            "count": 3
+          },
+          {
+            "term": "generated angular",
+            "count": 3
+          },
+          {
+            "term": "documentation",
+            "count": 3
+          },
+          {
+            "term": "updated",
+            "count": 3
+          }
+        ],
+        "recurringCode": 1,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/quickstart/webapp/nextjs": {
+      "count": 3,
+      "pendingCount": 3,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 3,
+      "lastAt": "2026-04-20T15:18:35.310Z",
+      "items": [
+        {
+          "id": "69e643cb23056f90d8caed13",
+          "path": "/docs/quickstart/webapp/nextjs",
+          "comment": "You your link \"Full agent skills documentation →\" right below this page leads to a 404 page. /-:",
+          "createdAt": "2026-04-20T15:18:35.310Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "Add Auth0 authentication to my Next.js app\n",
+          "filename": "",
+          "lang": "text"
+        },
+        {
+          "id": "69dd679626330bef3f9010dc",
+          "path": "/docs/quickstart/webapp/nextjs",
+          "comment": "[] I'm at an incredibly frustrating roadblock trying to get Convex setup with Auth0 within my turborepo using Next.js for my apps/web package. I can't seem to get my nextjs auth0 token properly passed through to the convex client so that ctx.auth.getUserIdentity works as expected within convex. There is no appropriate documentation for this and i've been trying to figure this out for a few days now. Please Please Please offer some assistance on this as i'm going absolutely mad. github (@im-ironclad) email (alwells408@gmail.com)",
+          "createdAt": "2026-04-13T22:00:54.238Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        },
+        {
+          "id": "69d20070f167d7b54728fdbe",
+          "path": "/docs/quickstart/webapp/nextjs",
+          "comment": "Is it ok",
+          "createdAt": "2026-04-05T06:25:52.878Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "AUTH0_DOMAIN=YOUR_AUTH0_APP_DOMAIN\nAUTH0_CLIENT_ID=YOUR_AUTH0_APP_CLIENT_ID\nAUTH0_CLIENT_SECRET=YOUR_AUTH0_APP_CLIENT_SECRET\nAUTH0_SECRET=YOUR_LONG_RANDOM_SECRET_HERE\nAPP_BASE_URL=http://localhost:3000\n",
+          "filename": ".env.local",
+          "lang": "shellscript"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "documentation",
+            "count": 2
+          },
+          {
+            "term": "trying",
+            "count": 2
+          },
+          {
+            "term": "get",
+            "count": 2
+          },
+          {
+            "term": "convex",
+            "count": 2
+          },
+          {
+            "term": "auth0",
+            "count": 2
+          },
+          {
+            "term": "within",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/quickstart/native/android": {
+      "count": 3,
+      "pendingCount": 3,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 3,
+      "lastAt": "2026-04-16T19:31:27.537Z",
+      "items": [
+        {
+          "id": "69e1390f03b9938e42a38ea8",
+          "path": "/docs/quickstart/native/android",
+          "comment": "Illegally installed",
+          "createdAt": "2026-04-16T19:31:27.537Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "Add Auth0 authentication to my Android app\n",
+          "filename": "",
+          "lang": "text"
+        },
+        {
+          "id": "69cb2f21eb6a2a6e6b678e45",
+          "path": "/docs/quickstart/native/android",
+          "comment": "https://auth0.com/docs/quickstart/native/android\nIncorrect code app/build.gradle.kts",
+          "createdAt": "2026-03-31T02:19:13.830Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "android {\n    defaultConfig {\n        // Add these manifest placeholders\n        manifestPlaceholders += mapOf(\n            \"auth0Domain\" to \"@string/com_auth0_domain\", // this will be set in the next step\n            \"auth0Scheme\" to \"https\"\n        )\n    }\n}\n\n",
+          "filename": "app/build.gradle.kts",
+          "lang": "kotlin"
+        },
+        {
+          "id": "69cb2ed433f3481e6d309070",
+          "path": "/docs/quickstart/native/android",
+          "comment": "All codes ar incorrect \ndependencies {   \n    // Auth0 SDK\n    implementation(\"com.auth0.android:auth0:3.11.0\")\n}",
+          "createdAt": "2026-03-31T02:17:56.675Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "dependencies {   \n    // Auth0 SDK\n    implementation(\"com.auth0.android:auth0:3.11.0\")\n}\n",
+          "filename": "app/build.gradle.kts",
+          "lang": "kotlin"
+        }
+      ],
+      "cluster": {
+        "burst": {
+          "count": 2,
+          "startedAt": "2026-03-31T02:17:56.675Z",
+          "endedAt": "2026-03-31T02:19:13.830Z",
+          "windowMinutes": 1
+        },
+        "topTerms": [
+          {
+            "term": "incorrect",
+            "count": 2
+          },
+          {
+            "term": "auth0",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/customize/login-pages/advanced-customizations/quickstart": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-29T15:44:00.192Z",
+      "items": [
+        {
+          "id": "69f2274044dbe977af5dc0d3",
+          "path": "/docs/customize/login-pages/advanced-customizations/quickstart",
+          "comment": "1234",
+          "createdAt": "2026-04-29T15:44:00.192Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "auth0 acul screen add SCREEN_NAME \n",
+          "filename": "",
+          "lang": "shellscript"
+        },
+        {
+          "id": "69f2272e93eca2b517686638",
+          "path": "/docs/customize/login-pages/advanced-customizations/quickstart",
+          "comment": "1234",
+          "createdAt": "2026-04-29T15:43:42.084Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "auth0 acul init \"Your_App_Name\"\n",
+          "filename": "",
+          "lang": "shellscript"
+        }
+      ],
+      "cluster": {
+        "burst": {
+          "count": 2,
+          "startedAt": "2026-04-29T15:43:42.084Z",
+          "endedAt": "2026-04-29T15:44:00.192Z",
+          "windowMinutes": 0
+        },
+        "topTerms": [
+          {
+            "term": "1234",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/authenticate/passwordless/authentication-methods/email-magic-link": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-28T19:03:48.128Z",
+      "items": [
+        {
+          "id": "69f10494a9df01745338e9e6",
+          "path": "/docs/authenticate/passwordless/authentication-methods/email-magic-link",
+          "comment": "Link",
+          "createdAt": "2026-04-28T19:03:48.128Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "passwordlessMethod: 'link',\n",
+          "filename": "",
+          "lang": "shellscript"
+        },
+        {
+          "id": "69f1048155e14e0fdf9c3c80",
+          "path": "/docs/authenticate/passwordless/authentication-methods/email-magic-link",
+          "comment": "All",
+          "createdAt": "2026-04-28T19:03:29.185Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "{% if request_language contains 'dutch' %}\n   Hier is uw verificatie code: {{ code }}\n{% endif %}\n{% if request_language contains 'fr-FR' %}\n   Ceci est votre code: {{ code }}\n{% endif %}\n",
+          "filename": "",
+          "lang": "liquid"
+        }
+      ],
+      "cluster": {
+        "burst": {
+          "count": 2,
+          "startedAt": "2026-04-28T19:03:29.185Z",
+          "endedAt": "2026-04-28T19:03:48.128Z",
+          "windowMinutes": 0
+        },
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/get-started/applications/third-party-applications/permissive-mode": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-27T16:29:47.319Z",
+      "items": [
+        {
+          "id": "69ef8efb37fbc244ccadcd5f",
+          "path": "/docs/get-started/applications/third-party-applications/permissive-mode",
+          "comment": "[] the dynamic client registration security mode is not available in the settings",
+          "createdAt": "2026-04-27T16:29:47.319Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        },
+        {
+          "id": "69ef8ebe62b6726ee2d8cd2a",
+          "path": "/docs/get-started/applications/third-party-applications/permissive-mode",
+          "comment": "[] the dynamic client registration security mode option is not available in settings",
+          "createdAt": "2026-04-27T16:28:46.821Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": {
+          "count": 2,
+          "startedAt": "2026-04-27T16:28:46.821Z",
+          "endedAt": "2026-04-27T16:29:47.319Z",
+          "windowMinutes": 1
+        },
+        "topTerms": [
+          {
+            "term": "dynamic",
+            "count": 2
+          },
+          {
+            "term": "client",
+            "count": 2
+          },
+          {
+            "term": "registration",
+            "count": 2
+          },
+          {
+            "term": "security",
+            "count": 2
+          },
+          {
+            "term": "mode",
+            "count": 2
+          },
+          {
+            "term": "available",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/quickstart/backend/golang/interactive": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-24T00:59:15.122Z",
+      "items": [
+        {
+          "id": "69eac0634ce67e15318831f4",
+          "path": "/docs/quickstart/backend/golang/interactive",
+          "comment": "Confusing terminology, the quickstart documentation talks about Claims to validate the claims, but uses Scopes as the terminology for restricting access. These are two distinctly separate things.",
+          "createdAt": "2026-04-24T00:59:15.122Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "package main\n\nimport (\n\t\"context\"\n\t\"log\"\n\t\"net/http\"\n\t\"os\"\n\t\"os/signal\"\n\t\"time\"\n\n\t\"github.com/yourorg/myapi/internal/auth\"\n\t\"github.com/yourorg/myapi/internal/config\"\n\t\"github.com/yourorg/myapi/internal/handlers\"\n\t\"github.com/joho/godotenv\"\n)\n\nfunc main() {\n\t// Load environment variables from .env file\n\tif err := godotenv.Load(); err != nil {\n\t\tlog.Println(\"No .env file found, using environment variables\")\n\t}\n\n\t// Load Auth0 configuration\n\tcfg, err := config.LoadAuthConfig()\n\tif err != nil {\n\t\tlog.Fatalf(\"Failed to load config: %v\", err)\n\t}\n\n\t// Create JWT validator\n\tjwtValidator, err := auth.NewValidator(cfg.Domain, cfg.Audience)\n\tif err != nil {\n\t\tlog.Fatalf(\"Failed to create validator: %v\", err)\n\t}\n\n\t// Create HTTP middleware\n\tmiddleware, err := auth.NewMiddleware(jwtValidator)\n\tif err != nil {\n\t\tlog.Fatalf(\"Failed to create middleware: %v\", err)\n\t}\n\n\t// Setup routes\n\tmux := http.NewServeMux()\n\tmux.HandleFunc(\"/api/public\", handlers.PublicHandler)\n\tmux.Handle(\"/api/private\", middleware.CheckJWT(http.HandlerFunc(handlers.PrivateHandler)))\n\tmux.Handle(\"/api/private-scoped\", middleware.CheckJWT(http.HandlerFunc(handlers.ScopedHandler)))\n\n\t// Configure server with production timeouts\n\tsrv := &http.Server{\n\t\tAddr:         \":8080\",\n\t\tHandler:      mux,\n\t\tReadTimeout:  15 * time.Second,\n\t\tWriteTimeout: 15 * time.Second,\n\t\tIdleTimeout:  60 * time.Second,\n\t}\n\n\t// Start server in goroutine\n\tgo func() {\n\t\tlog.Println(\"Server starting on :8080\")\n\t\tif err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {\n\t\t\tlog.Fatalf(\"Server failed: %v\", err)\n\t\t}\n\t}()\n\n\t// Graceful shutdown\n\tquit := make(chan os.Signal, 1)\n\tsignal.Notify(quit, os.Interrupt)\n\t<-quit\n\n\tlog.Println(\"Shutting down server...\")\n\tctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)\n\tdefer cancel()\n\n\tif err := srv.Shutdown(ctx); err != nil {\n\t\tlog.Fatalf(\"Server forced to shutdown: %v\", err)\n\t}\n\n\tlog.Println(\"Server exited\")\n}\n",
+          "filename": "cmd/server/main.go",
+          "lang": "go"
+        },
+        {
+          "id": "69eabfd023060552c61b315b",
+          "path": "/docs/quickstart/backend/golang/interactive",
+          "comment": "Documentation for WithCustomClaims talks about using generics for claims yet the code doesn't use generics for the claims.",
+          "createdAt": "2026-04-24T00:56:48.488Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "package auth\n\nimport (\n\t\"fmt\"\n\t\"net/url\"\n\t\"time\"\n\n\t\"github.com/auth0/go-jwt-middleware/v3/jwks\"\n\t\"github.com/auth0/go-jwt-middleware/v3/validator\"\n)\n\nfunc NewValidator(domain, audience string) (*validator.Validator, error) {\n\t// Construct issuer URL (must include trailing slash)\n\tissuerURL, err := url.Parse(\"https://\" + domain + \"/\")\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"failed to parse issuer URL: %w\", err)\n\t}\n\n\t// Initialize JWKS provider using v3 options pattern\n\tprovider, err := jwks.NewCachingProvider(\n\t\tjwks.WithIssuerURL(issuerURL),\n\t\tjwks.WithCacheTTL(5*time.Minute),\n\t)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"failed to create JWKS provider: %w\", err)\n\t}\n\n\t// Create validator using v3 options pattern\n\tjwtValidator, err := validator.New(\n\t\tvalidator.WithKeyFunc(provider.KeyFunc),         // Provides public keys for RS256\n\t\tvalidator.WithAlgorithm(validator.RS256),        // Algorithm (prevents confusion attacks)\n\t\tvalidator.WithIssuer(issuerURL.String()),        // Validates 'iss' claim\n\t\tvalidator.WithAudience(audience),                // Validates 'aud' claim\n\t\tvalidator.WithCustomClaims(func() validator.CustomClaims {\n\t\t\treturn &CustomClaims{}                       // Returns our custom claims from claims.go\n\t\t}),\n\t\tvalidator.WithAllowedClockSkew(30*time.Second),  // Allows 30s clock drift\n\t)\n\tif err != nil {\n\t\treturn nil, fmt.Errorf(\"failed to create validator: %w\", err)\n\t}\n\n\treturn jwtValidator, nil\n}\n",
+          "filename": "internal/auth/validator.go",
+          "lang": "go"
+        }
+      ],
+      "cluster": {
+        "burst": {
+          "count": 2,
+          "startedAt": "2026-04-24T00:56:48.488Z",
+          "endedAt": "2026-04-24T00:59:15.122Z",
+          "windowMinutes": 2
+        },
+        "topTerms": [
+          {
+            "term": "claims",
+            "count": 3
+          },
+          {
+            "term": "terminology",
+            "count": 2
+          },
+          {
+            "term": "documentation",
+            "count": 2
+          },
+          {
+            "term": "talks",
+            "count": 2
+          },
+          {
+            "term": "generics",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/quickstart/native/ios-swift": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-14T01:38:07.092Z",
+      "items": [
+        {
+          "id": "69dd9a7faba528a9ccadf78c",
+          "path": "/docs/quickstart/native/ios-swift",
+          "comment": "Wyatt 444",
+          "createdAt": "2026-04-14T01:38:07.092Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "import Foundation\nimport Auth0\nimport Combine\n\n@MainActor\nclass AuthenticationService: ObservableObject {\n    @Published var isAuthenticated = false\n    @Published var user: User?\n    @Published var isLoading = false\n    @Published var errorMessage: String?\n    \n    private let credentialsManager = CredentialsManager(authentication: Auth0.authentication())\n    \n    init() {\n        Task {\n            await checkAuthenticationStatus()\n        }\n    }\n    \n    private func checkAuthenticationStatus() async {\n        isLoading = true\n        defer { isLoading = false }\n        \n        guard let credentials = try? await credentialsManager.credentials() else {\n            isAuthenticated = false\n            return\n        }\n        \n        isAuthenticated = true\n        // Get user info from the ID token\n        user = credentials.user\n    }\n    \n    func login() async {\n        isLoading = true\n        errorMessage = nil\n        defer { isLoading = false }\n        \n        do {\n            let credentials = try await Auth0\n                .webAuth()\n                .scope(\"openid profile email offline_access\")\n                .start()\n            \n            _ = credentialsManager.store(credentials: credentials)\n            isAuthenticated = true\n            // Get user info from the ID token\n            user = credentials.user\n        } catch {\n            errorMessage = \"Login failed: \\(error.localizedDescription)\"\n        }\n    }\n    \n    func logout() async {\n        isLoading = true\n        defer { isLoading = false }\n        \n        do {\n            try await Auth0\n              .webAuth()\n              .clearSession()\n            _ = credentialsManager.clear()\n            isAuthenticated = false\n            user = nil\n        } catch {\n            errorMessage = \"Logout failed: \\(error.localizedDescription)\"\n        }\n    }\n}\n",
+          "filename": "AuthenticationService.swift",
+          "lang": "swift"
+        },
+        {
+          "id": "69d31cf250605e5c588875b1",
+          "path": "/docs/quickstart/native/ios-swift",
+          "comment": "Im working on a turmux",
+          "createdAt": "2026-04-06T02:39:46.816Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "https://github.com/auth0/Auth0.swift\n",
+          "filename": null,
+          "lang": "text"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/manage-users/user-accounts/manage-user-access-to-applications": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-10T11:14:23.324Z",
+      "items": [
+        {
+          "id": "69d8db8f781eaf0517679e3e",
+          "path": "/docs/manage-users/user-accounts/manage-user-access-to-applications",
+          "comment": "[] This is outdated and still points to Rules instead of Actions",
+          "createdAt": "2026-04-10T11:14:23.324Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        },
+        {
+          "id": "69ce3ce20875494d2c43d56d",
+          "path": "/docs/manage-users/user-accounts/manage-user-access-to-applications",
+          "comment": "[] Just improve your UI please, the UX is horrible",
+          "createdAt": "2026-04-02T09:54:42.958Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/quickstart/spa/vuejs": {
+      "count": 2,
+      "pendingCount": 2,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 2,
+      "lastAt": "2026-04-06T23:34:47.972Z",
+      "items": [
+        {
+          "id": "69d44317f1e7fc3e86f1c325",
+          "path": "/docs/quickstart/spa/vuejs",
+          "comment": "npm error code ERESOLVE\nnpm error ERESOLVE could not resolve\nnpm error\nnpm error While resolving: @auth0/auth0-vue@2.5.0\nnpm error Found: vue-router@5.0.4\nnpm error node_modules/vue-router\nnpm error   vue-router@\"^5.0.4\" from the root project\nnpm error\nnpm error Could not resolve dependency:\nnpm error peerOptional vue-router@\"^4.0.12\" from @auth0/auth0-vue@2.5.0\nnpm error node_modules/@auth0/auth0-vue\nnpm error   @auth0/auth0-vue@\"*\" from the root project\nnpm error\nnpm error Conflicting peer dependency: vue-router@4.6.4\nnpm error node_modules/vue-router\nnpm error   peerOptional vue-router@\"^4.0.12\" from @auth0/auth0-vue@2.5.0\nnpm error   node_modules/@auth0/auth0-vue\nnpm error     @auth0/auth0-vue@\"*\" from the root project\nnpm error\nnpm error Fix the upstream dependency conflict, or retry\nnpm error this command with --force or --legacy-peer-deps\nnpm error to accept an incorrect (and potentially broken) dependency resolution.\nnpm error\nnpm error",
+          "createdAt": "2026-04-06T23:34:47.972Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "npm add @auth0/auth0-vue && npm install\n",
+          "filename": "",
+          "lang": "shellscript"
+        },
+        {
+          "id": "69d0d76cf167d7b547272d26",
+          "path": "/docs/quickstart/spa/vuejs",
+          "comment": "[] trying to find the reference to the whole sdk. but all i can find is short guides",
+          "createdAt": "2026-04-04T09:18:36.497Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "npm",
+            "count": 24
+          },
+          {
+            "term": "error",
+            "count": 24
+          },
+          {
+            "term": "npm error",
+            "count": 24
+          },
+          {
+            "term": "auth0",
+            "count": 14
+          },
+          {
+            "term": "vue",
+            "count": 14
+          },
+          {
+            "term": "router",
+            "count": 7
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": true
+      }
+    },
+    "/docs/quickstart/spa/react": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-30T07:51:57.261Z",
+      "items": [
+        {
+          "id": "69f30a1dddb9c4198f468822",
+          "path": "/docs/quickstart/spa/react",
+          "comment": "not as expected",
+          "createdAt": "2026-04-30T07:51:57.261Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "VITE_AUTH0_DOMAIN={yourDomain}\nVITE_AUTH0_CLIENT_ID=undefined",
+          "filename": ".env",
+          "lang": "shellscript"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/manage-users/user-migration/bulk-user-imports": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-29T18:15:30.920Z",
+      "items": [
+        {
+          "id": "69f24ac239c8b278a45e1b7a",
+          "path": "/docs/manage-users/user-migration/bulk-user-imports",
+          "comment": "[] Request bulk user import python code is incorrect. The syntax is wrong and I get error this error after using the correct syntax",
+          "createdAt": "2026-04-29T18:15:30.920Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "syntax",
+            "count": 2
+          },
+          {
+            "term": "error",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/quickstart/backend/django/interactive": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-29T16:46:13.542Z",
+      "items": [
+        {
+          "id": "69f235d55418b11c89f9e82c",
+          "path": "/docs/quickstart/backend/django/interactive",
+          "comment": "Wrong code block location",
+          "createdAt": "2026-04-29T16:46:13.542Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "from django.contrib import admin\nfrom django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/public', views.public),\n    path('api/private', views.private),\n    path('api/private-scoped', views.private_scoped)\n]\n",
+          "filename": "apiexample/urls.py",
+          "lang": "python"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/quickstart/spa/vuejs/index": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-29T16:11:25.211Z",
+      "items": [
+        {
+          "id": "69f22dad9e43cc69b6bd0f31",
+          "path": "/docs/quickstart/spa/vuejs/index",
+          "comment": "Wrong highlight",
+          "createdAt": "2026-04-29T16:11:25.211Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "import './assets/main.css'\n\nimport { createApp } from 'vue'\nimport { createPinia } from 'pinia'\nimport router from './router'\nimport { createAuth0 } from '@auth0/auth0-vue'\n\nimport App from './App.vue'\n\nconst app = createApp(App)\n\napp.use(createAuth0({\n  domain: import.meta.env.VITE_AUTH0_DOMAIN,\n  clientId: import.meta.env.VITE_AUTH0_CLIENT_ID,\n  authorizationParams: {\n    redirect_uri: window.location.origin\n  }\n}))\n\napp.use(createPinia())\napp.use(router)\n\napp.mount('#app')\n",
+          "filename": "src/main.ts",
+          "lang": "typescript"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/deploy-monitor/monitor/check-external-services-status": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-29T15:57:09.428Z",
+      "items": [
+        {
+          "id": "69f22a55683950a7dcad49a9",
+          "path": "/docs/deploy-monitor/monitor/check-external-services-status",
+          "comment": "[] put some cntnt in the pag. Telling people to check other compaies for errors is a cop out.",
+          "createdAt": "2026-04-29T15:57:09.428Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-29T15:41:48.567Z",
+      "items": [
+        {
+          "id": "69f226bc93eca2b517686257",
+          "path": "/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings",
+          "comment": "1234",
+          "createdAt": "2026-04-29T15:41:48.567Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "urn:auth0:{yourTenant}:{yourConnectionName}\n",
+          "filename": "",
+          "lang": "http"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/troubleshoot/customer-support/reset-account-passwords": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-29T15:02:06.573Z",
+      "items": [
+        {
+          "id": "69f21d6e1e74ab7967ba478c",
+          "path": "/docs/troubleshoot/customer-support/reset-account-passwords",
+          "comment": "[] I cannot reset my password since I am not getting the email. I can not open a ticket because I can not log in. I can not log in because I need to reset my password. I cant reset my password because I am not getting the email.",
+          "createdAt": "2026-04-29T15:02:06.573Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "reset",
+            "count": 3
+          },
+          {
+            "term": "because",
+            "count": 3
+          },
+          {
+            "term": "password",
+            "count": 2
+          },
+          {
+            "term": "getting",
+            "count": 2
+          },
+          {
+            "term": "email.",
+            "count": 2
+          },
+          {
+            "term": "log",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnEmailVerificationResult": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-28T15:14:36.526Z",
+      "items": [
+        {
+          "id": "69f0cedcac737c6cbe052318",
+          "path": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnEmailVerificationResult",
+          "comment": "[] What should the value of \"screen.data?.status\" be that can be check for to render \"invalidAccountOrCodeDescription\" text key?",
+          "createdAt": "2026-04-28T15:14:36.526Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/libraries/acul/react-sdk/API-Reference/Screens/redeem-ticket": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-28T12:39:42.359Z",
+      "items": [
+        {
+          "id": "69f0aa8e49d23baf9c2537a2",
+          "path": "/docs/libraries/acul/react-sdk/API-Reference/Screens/redeem-ticket",
+          "comment": "[] How do I differentiate between the different use cases (i.e., MFA, Email Verification, etc.). Nothing appears to be sent in the data field.",
+          "createdAt": "2026-04-28T12:39:42.359Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/protocols/oauth": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-27T23:05:38.844Z",
+      "items": [
+        {
+          "id": "69efebc2b29d97bc22315840",
+          "path": "/docs/authenticate/protocols/oauth",
+          "comment": "[] I am locked out after I tried to sign in for the first time/",
+          "createdAt": "2026-04-27T23:05:38.844Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/manage-users/user-search/retrieve-users-with-get-users-by-email-endpoint": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-27T11:28:28.983Z",
+      "items": [
+        {
+          "id": "69ef485c3a64d99ddc94a594",
+          "path": "/docs/manage-users/user-search/retrieve-users-with-get-users-by-email-endpoint",
+          "comment": "[] I want to know what scopes are required for this request",
+          "createdAt": "2026-04-27T11:28:28.983Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-27T06:21:11.996Z",
+      "items": [
+        {
+          "id": "69ef0057c48819a30e3d2a92",
+          "path": "/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login",
+          "comment": "[] This part of the doc indicates sample code on this page but that sample isn't anywhere to be found, nor is there a link to it",
+          "createdAt": "2026-04-27T06:21:11.996Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "sample",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/database-connections/flexible-identifiers-and-attributes": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-25T11:52:33.899Z",
+      "items": [
+        {
+          "id": "69ecab0110758427554ff844",
+          "path": "/docs/authenticate/database-connections/flexible-identifiers-and-attributes",
+          "comment": "[] This page could have way more information provided on it. Practically what does each point mean, etc.",
+          "createdAt": "2026-04-25T11:52:33.899Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/auth0-overview/create-applications/configure-an-identity-provider-in-access-gateway": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 0,
+      "lastAt": "2026-04-25T08:16:56.480Z",
+      "items": [
+        {
+          "id": "69ec787898090b0f9595899f",
+          "path": "/docs/get-started/auth0-overview/create-applications/configure-an-identity-provider-in-access-gateway",
+          "comment": "[] Yes thanks its beautiful",
+          "createdAt": "2026-04-25T08:16:56.480Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": true,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/manage-users/sessions/configure-session-lifetime": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-24T22:30:07.487Z",
+      "items": [
+        {
+          "id": "69ebeeefa709c5bb923bb5ae",
+          "path": "/docs/manage-users/sessions/configure-session-lifetime",
+          "comment": "[] It appears you have replaced the search feature with an AI assistant? Is there a way to use a basic text search? This is annoying.",
+          "createdAt": "2026-04-24T22:30:07.487Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "search",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnMfaEnrollResult": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-24T17:28:59.058Z",
+      "items": [
+        {
+          "id": "69eba85be4aee00e689b6e83",
+          "path": "/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnMfaEnrollResult",
+          "comment": "[] It would be helpful to provide possible values for \"status\"",
+          "createdAt": "2026-04-24T17:28:59.058Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-24T13:52:07.464Z",
+      "items": [
+        {
+          "id": "69eb7587f39e7ba3dafabb0f",
+          "path": "/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-dedicated-connection-endpoints",
+          "comment": "[] It mentions \"The Ruby and PHP Management API SDKs are pending updates.\" without any timeline or channel for receiving updates on this matter. It's not convenient to offer a \"migration guide\" that cannot actually be followed if you're depending on pending SDK updates.",
+          "createdAt": "2026-04-24T13:52:07.464Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "pending",
+            "count": 2
+          },
+          {
+            "term": "updates.",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/login-pages/universal-login/customize-templates": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-24T11:53:07.372Z",
+      "items": [
+        {
+          "id": "69eb59a3a295172639b36802",
+          "path": "/docs/customize/login-pages/universal-login/customize-templates",
+          "comment": "[] Looking at the documented text keys for the reset-password-mfa-email-challenge screen, I don't see a key for a \"Code has been resent\" confirmation message. The documented keys cover the resend action (resendActionText, resendText) but no success/confirmation message.  Based on the documentation, the key resendLimitReachedText is used for the message \"Code has been resent.\" on other screens (like phone-identifier-challenge). However, this key is not documented for the reset-password-mfa-email-challenge screen in the customize-templates page.",
+          "createdAt": "2026-04-24T11:53:07.372Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "documented",
+            "count": 3
+          },
+          {
+            "term": "challenge",
+            "count": 3
+          },
+          {
+            "term": "key",
+            "count": 3
+          },
+          {
+            "term": "keys",
+            "count": 2
+          },
+          {
+            "term": "reset",
+            "count": 2
+          },
+          {
+            "term": "password",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/quickstart/native/flutter": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-23T09:17:11.558Z",
+      "items": [
+        {
+          "id": "69e9e397aa5cf3af7f34723f",
+          "path": "/docs/quickstart/native/flutter",
+          "comment": "Gradle does not compile. It says add \";\"",
+          "createdAt": "2026-04-23T09:17:11.558Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "android {\n    // ...\n    defaultConfig {\n        // Add the following line\n        manifestPlaceholders += [auth0Domain: \"{yourDomain}\", auth0Scheme: \"https\"]\n    }\n    // ...\n}\n",
+          "filename": "android/app/build.gradle",
+          "lang": "groovy"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/passwordless/implement-login/universal-login": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-22T22:16:30.931Z",
+      "items": [
+        {
+          "id": "69e948beb642126fcd8c59e4",
+          "path": "/docs/authenticate/passwordless/implement-login/universal-login",
+          "comment": "[] This doesn't seem accurate: \"To implement Passwordless Authentication in Universal Login you need to customize the login page’s HTML.\" Isn't this other page exactly how you do it? https://auth0.com/docs/authenticate/passwordless/passwordless-with-universal-login. So why customize the page?",
+          "createdAt": "2026-04-22T22:16:30.931Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "passwordless",
+            "count": 3
+          },
+          {
+            "term": "universal",
+            "count": 2
+          },
+          {
+            "term": "login",
+            "count": 2
+          },
+          {
+            "term": "customize",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/manage-dashboard-access/feature-access-by-role": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 0,
+      "lastAt": "2026-04-22T03:21:12.094Z",
+      "items": [
+        {
+          "id": "69e83ea8498b1f990e6cdafe",
+          "path": "/docs/get-started/manage-dashboard-access/feature-access-by-role",
+          "comment": "[] Lemusquad9",
+          "createdAt": "2026-04-22T03:21:12.094Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": true,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/identity-providers/social-identity-providers/devkeys": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-22T00:15:53.234Z",
+      "items": [
+        {
+          "id": "69e8133944bf060fc6b912ab",
+          "path": "/docs/authenticate/identity-providers/social-identity-providers/devkeys",
+          "comment": "[] Nowhere on this page does it tell me HOW to enable/configure developer keys.",
+          "createdAt": "2026-04-22T00:15:53.234Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/troubleshoot/authentication-issues/troubleshoot-rbac-authorization": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-21T20:29:00.737Z",
+      "items": [
+        {
+          "id": "69e7de0c2664d38294fd9f80",
+          "path": "/docs/troubleshoot/authentication-issues/troubleshoot-rbac-authorization",
+          "comment": "[] There's only one solution and it doesn't give me any steps to troubleshoot - just general areas of where things could be wrong.",
+          "createdAt": "2026-04-21T20:29:00.737Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/forms/flows/integrations/http-request": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-21T14:31:39.834Z",
+      "items": [
+        {
+          "id": "69e78a4bf628841a331cb32d",
+          "path": "/docs/customize/forms/flows/integrations/http-request",
+          "comment": "[] how to process the reponse ?",
+          "createdAt": "2026-04-21T14:31:39.834Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-20T19:43:59.149Z",
+      "items": [
+        {
+          "id": "69e681ff2c272ae06846df18",
+          "path": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object",
+          "comment": "[] You have no type definition for event.secrets...",
+          "createdAt": "2026-04-20T19:43:59.149Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/identity-providers/retrieve-connection-options": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-20T18:33:56.840Z",
+      "items": [
+        {
+          "id": "69e67194c8ddff34c2d541e5",
+          "path": "/docs/authenticate/identity-providers/retrieve-connection-options",
+          "comment": "Recet",
+          "createdAt": "2026-04-20T18:33:56.840Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "#import <Foundation/Foundation.h>\n\nNSDictionary *headers = @{ @\"authorization\": @\"Bearer MGMT_API_ACCESS_TOKEN\" };\n\nNSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@\"https://{yourDomain}/api/v2/connections/CONNECTION-ID?fields=options\"]\n                                                       cachePolicy:NSURLRequestUseProtocolCachePolicy\n                                                   timeoutInterval:10.0];\n[request setHTTPMethod:@\"GET\"];\n[request setAllHTTPHeaderFields:headers];\n\nNSURLSession *session = [NSURLSession sharedSession];\nNSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request\n                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {\n                                                if (error) {\n                                                    NSLog(@\"%@\", error);\n                                                } else {\n                                                    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;\n                                                    NSLog(@\"%@\", httpResponse);\n                                                }\n                                            }];\n[dataTask resume];\n",
+          "filename": "Obj-C",
+          "lang": "objective-c"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/manage-dashboard-access/add-change-remove-mfa/remove-or-change-dashboard-multi-factor-authentication": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-20T16:09:24.332Z",
+      "items": [
+        {
+          "id": "69e64fb45a43a0db182ad998",
+          "path": "/docs/get-started/manage-dashboard-access/add-change-remove-mfa/remove-or-change-dashboard-multi-factor-authentication",
+          "comment": "[] you don't specify where we can file an auth0 support ticket",
+          "createdAt": "2026-04-20T16:09:24.332Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/applications/enable-universal-links-support-in-apple-xcode": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-20T04:40:19.900Z",
+      "items": [
+        {
+          "id": "69e5ae3323056f90d8c738f1",
+          "path": "/docs/get-started/applications/enable-universal-links-support-in-apple-xcode",
+          "comment": "I think URL listed as part of the `Test Link` section is incorrect.\n\nNeeds to be `{yourDomain}/.well-known/apple-app-site-association`.",
+          "createdAt": "2026-04-20T04:40:19.900Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "{\n  \"applinks\": {\n    \"apps\": [],\n    \"details\": [{\n      \"appID\": \"86WQXF56BC.com.auth0.Passwordless-Email\",\n      \"paths\": [\"/ios/com.auth0.Passwordless-Email/*\"]\n    }]\n  }\n}\n",
+          "filename": "",
+          "lang": "json"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/auth0-mcp-server/getting-started-with-auth0-mcp-server": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-19T17:14:27.459Z",
+      "items": [
+        {
+          "id": "69e50d739b4bcfd85df2e609",
+          "path": "/docs/get-started/auth0-mcp-server/getting-started-with-auth0-mcp-server",
+          "comment": "[] this sets up Auth0 MCP for Claude desktop but not for Claude code, I had to spend 20min figuring out how to do with editing a .claude.json file",
+          "createdAt": "2026-04-19T17:14:27.459Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "claude",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/libraries/auth0js": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-17T22:47:23.682Z",
+      "items": [
+        {
+          "id": "69e2b87bb2f30e54c242677b",
+          "path": "/docs/libraries/auth0js",
+          "comment": "No funciona",
+          "createdAt": "2026-04-17T22:47:23.682Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "webAuth.parseHash({ hash: window.location.hash }, function(err, authResult) {\n  if (err) {\n    return console.log(err);\n  }\n\n  webAuth.client.userInfo(authResult.accessToken, function(err, user) {\n    // Now you have the user's information\n  });\n});\n",
+          "filename": "",
+          "lang": "javascript"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/manage-users/sessions/manage-sessions-actions": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-16T14:35:28.669Z",
+      "items": [
+        {
+          "id": "69e0f3b0b70dfeba51963982",
+          "path": "/docs/manage-users/sessions/manage-sessions-actions",
+          "comment": "[] Need to actually provide API documentation like what arguments do these functions take and what do they return, etc?",
+          "createdAt": "2026-04-16T14:35:28.669Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/manage-dashboard-access/add-dashboard-users": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-16T04:15:50.411Z",
+      "items": [
+        {
+          "id": "69e0627635c9dece7e41a17a",
+          "path": "/docs/get-started/manage-dashboard-access/add-dashboard-users",
+          "comment": "[] There is no \"Add Member\" in \"Tenant Members\". There is a message: Heads up!Tenant Members can only be added through Teams. That link takes me somewhere where I don't see a way to add a member.",
+          "createdAt": "2026-04-16T04:15:50.411Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "add",
+            "count": 2
+          },
+          {
+            "term": "tenant",
+            "count": 2
+          },
+          {
+            "term": "members",
+            "count": 2
+          },
+          {
+            "term": "tenant members",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/libraries/auth0-angular-spa": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-15T03:10:03.134Z",
+      "items": [
+        {
+          "id": "69df018bcce5b84cdc3a9fa7",
+          "path": "/docs/libraries/auth0-angular-spa",
+          "comment": "Legacy code, ngIf is not to be used for Angular 21, need to use the @if form instead.",
+          "createdAt": "2026-04-15T03:10:03.134Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "<div *ngIf=\"auth.isAuthenticated$ | async\">\n  <app-login></app-login>\n</div>\n",
+          "filename": "",
+          "lang": "html"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/custom-domains/multiple-custom-domains/saml-migration": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-14T15:36:02.912Z",
+      "items": [
+        {
+          "id": "69de5ee28e7479380a5e39cc",
+          "path": "/docs/customize/custom-domains/multiple-custom-domains/saml-migration",
+          "comment": "[] Your official doc for saml migration is.... some guy's github repo? plus a hard dependency on terraform and cloudflare??",
+          "createdAt": "2026-04-14T15:36:02.912Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/quickstart/native/wpf-winforms": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 0,
+      "lastAt": "2026-04-13T10:41:38.103Z",
+      "items": [
+        {
+          "id": "69dcc8620b1097716ddba660",
+          "path": "/docs/quickstart/native/wpf-winforms",
+          "comment": "[] our main app is in wpf. at first i didn't find any docs that auth0 is supported, but with this quick setup it seems easy",
+          "createdAt": "2026-04-13T10:41:38.103Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": true,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/quickstarts": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 0,
+      "lastAt": "2026-04-09T21:19:18.209Z",
+      "items": [
+        {
+          "id": "69d817d69c4c9993914418e4",
+          "path": "/docs/quickstarts",
+          "comment": "[] > ## Documentation Index > Fetch the complete documentation index at: https://auth0.com/llms.txt > Use this file to discover all available pages before exploring further.  # Auth0 Quickstarts  > Get started using Auth0. Implement authentication for any kind of application in minutes.  export const SectionCard = ({item}) => {   if (!item) return null;   const getLink = (item, label) => item.links?.find(l => l.label?.toLowerCase() === label.toLowerCase());   const github = getLink(item, \"github\");   const sample = getLink(item, \"sample app\");   const quickstart = getLink(item, \"quickstart\");   const docs = getLink(item, \"Get started\");   const title = item?.name ?? \"\";   const subtext = item?.subtext ?? \"\";   const badge = item?.badge ?? \"\";   const date = item?.date ?? \"\";   const isHttpsLogo = typeof item?.logo === \"string\" && (/^https:\\/\\//i).test(item.logo);   const src = isHttpsLogo ? item.logo : `/docs/images/icons/light/${item?.logo}`;   const srcDark = isHttpsLogo ? item.logo : `/docs/images/icons/dark/${item?.logo}`;   const imgClass = \"!my-0 w-8 h-8 object-contain shrink-0 \" + (isHttpsLogo ? \"mint-filter mint-grayscale\" : \"\");   const tertiary = quickstart || docs;   const tertiaryLabel = quickstart ? \"Quickstart\" : docs ? \"Get started\" : \"\";   return <article className=\"       libraries_card mb-[16px]       rounded-xl border bg-white shadow-sm hover:shadow-md transition-shadow       border-gray-200 dark:border-gray-800 dark:bg-black     \">       <div className=\"px-4 md:px-5 pt-4 md:pt-5 pb-3\">         <div className=\"flex items-start justify-between gap-3\">           <div className=\"flex gap-3 min-w-0\">             {item?.logo && <>                 <img noZoom src={src} alt={title} className={`${imgClass} mint-block dark:mint-hidden`} />                 <img noZoom src={srcDark} alt={title} className={`${imgClass} mint-hidden dark:mint-block`} />               </>}              <div className=\"min-w-0\">               <h4 className=\"text-base md:text-lg font-semibold text-gray-900 dark:text-white truncate !m-0 leading-snug\">                 {title}               </h4>               {!!subtext && <p className=\"text-xs text-gray-500 dark:text-gray-400 truncate !m-0 leading-tight\">{subtext}</p>}             </div>           </div>            <div className=\"flex flex-col items-end gap-0.5 shrink-0\">             {!!badge && <span className=\"                   inline-flex items-center rounded-full px-1.5 py-[0.5px] text-[10px] font-medium                   border border-emerald-700 text-emerald-700 bg-emerald-200                   dark:border-emerald-400 dark:text-emerald-300 dark:bg-emerald-900/30                 \">                 {badge}               </span>}             {!!date && <span className=\"mr-[5px] text-[10px] text-gray-500 dark:text-gray-400\">                 on {date.replace(/^on\\s+/i, \"\")}               </span>}           </div>         </div>       </div>        <div className=\"h-px mx-3 bg-gray-200 dark:bg-gray-800\" />        <div className=\"px-4 md:px-5 py-3\">         <div className=\"libraries_cards flex items-center justify-between w-full gap-3\">           {github && <a href={github.url} target=\"_blank\" rel=\"noopener noreferrer\" className=\"                 no_external_icon inline-flex items-center gap-1.5 text-xs font-medium                 !text-black dark:!text-white                 !no-underline !border-0                 transition-colors duration-200                 hover:!text-neutral-700 dark:hover:!text-neutral-200               \" style={{     borderBottom: \"none !important\"   }}>               <Icon icon=\"github\" className=\"w-3 h-3 shrink-0\" />               <span className=\"leading-none\">Github</span>             </a>}            {sample && <a href={sample.url} target=\"_blank\" rel=\"noopener noreferrer\" className=\"                 no_external_icon inline-flex items-center gap-1.5 text-xs font-medium                 !text-black dark:!text-white                 !no-underline !border-0                 transition-colors duration-200                 hover:!text-neutral-700 dark:hover:!text-neutral-200               \" style={{     borderBottom: \"none !important\"   }}>               <Icon icon=\"download\" className=\"w-3 h-3 shrink-0\" />               <span className=\"leading-none\">Sample App</span>             </a>}            {tertiary && <a href={tertiary.url} className=\"                 no_external_icon inline-flex items-center gap-1.5 text-xs font-medium                 !text-black dark:!text-white                 !no-underline !border-0                 transition-colors duration-200                 hover:!text-neutral-700 dark:hover:!text-neutral-200               \" style={{     borderBottom: \"none !important\"   }}>               {tertiaryLabel === \"Quickstart\" ? <Icon icon=\"play\" className=\"w-3 h-3 shrink-0\" /> : <Icon icon=\"file-lines\" className=\"w-3 h-3 shrink-0\" />}               <span className=\"leading-none\">{tertiaryLabel}</span>             </a>}         </div>       </div>     </article>; };  export const QuickstartBanner = () => {   return <div className=\"w-full flex justify-center px-4 mt-10\">       <div className=\"quickstart_banner_container w-full max-w-[1400px] flex flex-col md:flex-row items-center justify-between rounded-2xl p-10 text-white shadow-lg relative overflow-hidden\">         <div className=\"relative z-10 max-w-xl\">           <h1 className=\"text-4xl font-semibold mb-4\">Quickstarts</h1>           <p className=\"text-lg leading-relaxed\">             Step-by-step guides to quickly integrate Auth0 into your application.           </p>         </div>          <div className=\"relative z-10 mt-8 md:mt-0 md:ml-10 flex justify-center\">           <img noZoom src=\"/docs/images/library/header_img.svg\" alt=\"library header\" className=\"max-w-full min-w-[50%] mr-10\" />         </div>       </div>     </div>; };  export const QuickstartPage = ({sections}) => {   const [query, setQuery] = useState(\"\");   const SECTIONS = [{     id: 'webapp',     icon: '/docs/img/quickstarts/webapp-quantum.svg',     title: 'Regular Web App',     description: 'Traditional web app that runs on the server',     cards: [{       title: 'Apache',       href: '/docs/quickstart/webapp/apache/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/apache.svg'     }, {       title: 'ASP.NET (OWIN)',       href: '/docs/quickstart/webapp/aspnet-owin/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet.svg'     }, {       title: 'ASP.NET Core Blazor Server',       href: '/docs/quickstart/webapp/aspnet-core-blazor-server/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet-platform.svg'     }, {       title: 'ASP.NET Core MVC',       href: '/docs/quickstart/webapp/aspnet-core/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet-platform.svg'     }, {       title: 'Django',       href: '/docs/quickstart/webapp/django/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/python.svg'     }, {       title: 'Express',       href: '/docs/quickstart/webapp/express/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/javascript.svg'     }, {       title: 'Go',       href: '/docs/quickstart/webapp/golang/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/golang.svg'     }, {       title: 'Java',       href: '/docs/quickstart/webapp/java/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/java.svg'     }, {       title: 'Java EE',       href: '/docs/quickstart/webapp/java-ee/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/java.svg'     }, {       title: 'Java Spring Boot',       href: '/docs/quickstart/webapp/java-spring-boot/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/spring.svg'     }, {       title: 'Laravel',       href: '/docs/quickstart/webapp/laravel/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/laravel.svg'     }, {       title: 'Next.js',       href: '/docs/quickstart/webapp/nextjs/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/nextjs.svg'     }, {       title: 'NGINX Plus',       href: '/docs/quickstart/webapp/nginx-plus/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/nginx.svg'     }, {       title: 'PHP',       href: '/docs/quickstart/webapp/php/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/php.svg'     }, {       title: 'Python',       href: '/docs/quickstart/webapp/python/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/python.svg'     }, {       title: 'Ruby On Rails',       href: '/docs/quickstart/webapp/rails/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/rails.svg'     }]   }, {     id: 'spa',     icon: '/docs/img/quickstarts/spa-quantum.svg',     title: 'Single Page App',     description: 'JavaScript web app that runs in the browser',     cards: [{       title: 'Angular',       href: '/docs/quickstart/spa/angular/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/angular.svg'     }, {       title: 'Flutter (Web)',       href: '/docs/quickstart/spa/flutter/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/flutter.svg'     }, {       title: 'JavaScript',       href: '/docs/quickstart/spa/vanillajs/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/javascript.svg'     }, {       title: 'React',       href: '/docs/quickstart/spa/react/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/react.svg'     }, {       title: 'Vue',       href: '/docs/quickstart/spa/vuejs/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/vuejs.svg'     }]   }, {     id: 'native',     icon: '/docs/img/quickstarts/native-quantum.svg',     title: 'Native/Mobile App',     description: 'Mobile or Desktop app that runs natively on a device',     cards: [{       title: '.NET Android and iOS',       href: '/docs/quickstart/native/net-android-ios/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet.svg'     }, {       title: 'Android',       href: '/docs/quickstart/native/android/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/android.svg'     }, {       title: 'Android - Facebook Login',       href: '/docs/quickstart/native/android-facebook-login/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/android.svg'     }, {       title: 'iOS - Facebook Login',       href: '/docs/quickstart/native/ios-swift-facebook-login/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/apple.svg'     }, {       title: 'Device Authorization Flow',       href: '/docs/quickstart/native/device/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/auth0.svg'     }, {       title: 'Expo',       href: '/docs/quickstart/native/react-native-expo/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/expo.svg'     }, {       title: 'Flutter',       href: '/docs/quickstart/native/flutter/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/flutter.svg'     }, {       title: 'Ionic & Capacitor (Angular)',       href: '/docs/quickstart/native/ionic-angular/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/ionic.svg'     }, {       title: 'Ionic & Capacitor (React)',       href: '/docs/quickstart/native/ionic-react/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/ionic.svg'     }, {       title: 'Ionic & Capacitor (Vue)',       href: '/docs/quickstart/native/ionic-vue/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/ionic.svg'     }, {       title: 'iOS / macOS',       href: '/docs/quickstart/native/ios-swift/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/apple.svg'     }, {       title: 'MAUI',       href: '/docs/quickstart/native/maui/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet-platform.svg'     }, {       title: 'React Native',       href: '/docs/quickstart/native/react-native/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/react.svg'     }, {       title: 'UWP',       href: '/docs/quickstart/native/windows-uwp-csharp/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/windows.svg'     }, {       title: 'WPF / Winforms',       href: '/docs/quickstart/native/wpf-winforms/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet-platform.svg'     }, {       title: 'Xamarin',       href: '/docs/quickstart/native/xamarin/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/xamarin.svg'     }]   }, {     id: 'backend',     icon: '/docs/img/quickstarts/backend-quantum.svg',     title: 'Backend/API',     description: 'An API or service protected by Auth0',     cards: [{       title: 'ASP.NET Core Web API',       href: '/docs/quickstart/backend/aspnet-core-webapi',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet-platform.svg'     }, {       title: 'ASP.NET Web API (OWIN)',       href: '/docs/quickstart/backend/webapi-owin/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/dotnet.svg'     }, {       title: 'Django API',       href: '/docs/quickstart/backend/django/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/django.svg'     }, {       title: 'Go API',       href: '/docs/quickstart/backend/golang/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/golang.svg'     }, {       title: 'Laravel API',       href: '/docs/quickstart/backend/laravel/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/laravel.svg'     }, {       title: 'Node (Express) API',       href: '/docs/quickstart/backend/nodejs/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/nodejs.svg'     }, {       title: 'PHP API',       href: '/docs/quickstart/backend/php/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/php.svg'     }, {       title: 'Python API',       href: '/docs/quickstart/backend/python/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/python.svg'     }, {       title: 'Ruby On Rails API',       href: '/docs/quickstart/backend/rails/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/rails.svg'     }, {       title: 'Spring Boot API',       href: '/docs/quickstart/backend/java-spring-security5/interactive',       img: 'https://cdn2.auth0.com/docs/1.14494.0/img/platforms/spring.svg'     }]   }];   const filtered = sections.map(section => ({     ...section,     cards: section.cards.filter(card => card.title.toLowerCase().includes(query.toLowerCase()))   })).filter(section => section.cards.length > 0);   return <div id=\"maincontent\" role=\"main\" className=\"mx-auto max-w-[1400px] py-12 text-slate-800 dark:text-slate-200\">       <form role=\"search\" autoComplete=\"on\" className=\"mb-10\">           <div className=\"w-full\">             <div className={`                 relative flex items-center                 border bg-white text-gray-900                 hover:border-gray-400                 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500                 dark:bg-black dark:text-gray-100                 dark:border-gray-700 dark:hover:border-gray-600                 transition-colors               `} aria-label=\"Search for your technology\">               <div className=\"pointer-events-none absolute left-3 top-1/2 -translate-y-1/2\">                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" className=\"text-gray-500 dark:text-gray-400\" aria-hidden=\"true\">                   <circle cx=\"11\" cy=\"11\" r=\"8\"></circle>                   <line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"></line>                 </svg>               </div>                <input id=\"search-input-control\" type=\"text\" placeholder=\"Search for your technology...\" value={query} onChange={e => setQuery(e.target.value)} className={`                   w-full border-0                   bg-transparent                   pl-10 pr-10 py-2.5                   placeholder:text-gray-400                   focus:outline-none                   text-sm                   dark:placeholder:text-gray-500                 `} />                {query && <button type=\"button\" onClick={() => setQuery(\"\")} className={`                     absolute right-2 top-1/2 -translate-y-1/2                     inline-flex items-center rounded-md px-2 py-1 text-xs                     text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200                     dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700                     transition-colors                   `} aria-label=\"Clear search\">                   Clear                 </button>}             </div>           </div>         </form>        {filtered.map(section => <section key={section.id} className=\"mb-12\">           <div id={section.id} className=\"mb-4 flex items-center gap-4\">             <img src={section.icon} alt=\"\" className=\"h-8 w-8 shrink-0 rounded-xl bg-indigo-50 p-2 dark:bg-slate-800\" />             <div>               <h2 className=\"m-0 text-xl leading-tight\">{section.title}</h2>               <p className=\"mt-1 text-base leading-snug text-slate-600 dark:text-slate-400\">                 {section.description}               </p>             </div>           </div>            <div className=\"grid gap-4 [grid-template-columns:repeat(auto-fill,minmax(320px,1fr))] max-[480px]:grid-cols-2\">             {section.cards.map(card => <a key={card.title} href={card.href} role=\"button\" className=\"flex items-center gap-3 border border-slate-200 bg-white p-4 text-inherit no-underline transition                            hover:shadow-md active:translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-500 focus-visible:outline-offset-2                            dark:border-slate-700 dark:bg-black\">                 <img src={card.img} alt={`${card.title} logo`} className=\"h-6 w-6 shrink-0\" />                 <span className=\"truncate text-[0.98rem] leading-tight\">                   {card.title}                 </span>               </a>)}           </div>         </section>)}     </div>; };  Step-by-step guides to quickly integrate Auth0 into your application  ## Popular  Quickstarts for popular frameworks  <Columns cols={2}>   <SectionCard     item={{   name: \"React\",   subtext: \"\",   logo: \"react.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/react\" },   ], }}   />    <SectionCard     item={{   name: \"Next.js\",   subtext: \"\",   logo: \"nextjs.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/nextjs\" },   ], }}   />    <SectionCard     item={{   name: \"Angular\",   subtext: \"\",   logo: \"angular.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/angular\" },   ], }}   />    <SectionCard     item={{   name: \"iOS\",   subtext: \"\",   logo: \"apple.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/ios-swift\" },   ], }}   />    <SectionCard     item={{   name: \"Android\",   subtext: \"\",   logo: \"android.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/android\" },   ], }}   /> </Columns>  ## Single Page App  JavaScript web app that runs in the browser  <Columns cols={2}>   <SectionCard     item={{   name: \"React\",   subtext: \"\",   logo: \"react.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/react\" },   ], }}   />    <SectionCard     item={{   name: \"Angular\",   subtext: \"\",   logo: \"angular.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/angular\" },   ], }}   />    <SectionCard     item={{   name: \"JavaScript\",   subtext: \"\",   logo: \"javascript.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/vanillajs\" },   ], }}   />    <SectionCard     item={{   name: \"Cap'n Web\",   subtext: \"\",   logo: \"javascript.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/capn-web\" },   ], }}   />    <SectionCard     item={{   name: \"Vue\",   subtext: \"\",   logo: \"vuejs.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/vuejs\" },   ], }}   />    <SectionCard     item={{   name: \"Flutter (Web)\",   subtext: \"\",   logo: \"flutter.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/flutter\" },   ], }}   />    <SectionCard     item={{   name: \"Svelte\",   subtext: \"\",   logo: \"svelte.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/spa/svelte\" },   ], }}   /> </Columns>  ## Regular Web App  Traditional web app that runs on the server  <Columns cols={2}>   <SectionCard     item={{   name: \"Next.js\",   subtext: \"\",   logo: \"nextjs.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/nextjs\" }   ], }}   />    <SectionCard     item={{   name: \"Nuxt.js\",   subtext: \"\",   logo: \"nuxt.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/nuxt\" },   ], }}   />    <SectionCard     item={{   name: \"Express\",   subtext: \"\",   logo: \"express.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/express\" }   ], }}   />    <SectionCard     item={{   name: \"Fastify\",   subtext: \"\",   logo: \"fastify.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/fastify\" }   ], }}   />    <SectionCard     item={{   name: \"Flask\",   subtext: \"\",   logo: \"flask.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/python\" }   ], }}   />    <SectionCard     item={{   name: \"Django\",   subtext: \"\",   logo: \"django.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/django/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"FastAPI\",   subtext: \"\",   logo: \"fastapi.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/fastapi\" }   ], }}   />    <SectionCard     item={{   name: \"Go\",   subtext: \"\",   logo: \"golang.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/golang/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"Java\",   subtext: \"\",   logo: \"java.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/java\" }   ], }}   />    <SectionCard     item={{   name: \"Java EE\",   subtext: \"\",   logo: \"java.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/java-ee\" }   ], }}   />    <SectionCard     item={{   name: \"Java Spring Boot\",   subtext: \"\",   logo: \"spring.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/java-spring-boot/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"ASP.NET (OWIN)\",   subtext: \"\",   logo: \"dotnet.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/aspnet-owin/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"Blazor Server\",   subtext: \"\",   logo: \"dotnet-platform.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/aspnet-core-blazor-server\" }   ], }}   />    <SectionCard     item={{   name: \"ASP.NET Core MVC\",   subtext: \"\",   logo: \"dotnet-platform.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/aspnet-core\" }   ], }}   />    <SectionCard     item={{   name: \"Laravel\",   subtext: \"\",   logo: \"laravel.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/laravel/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"PHP\",   subtext: \"\",   logo: \"php.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/php/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"NGINX Plus\",   subtext: \"\",   logo: \"nginx.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/nginx-plus/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"Apache\",   subtext: \"\",   logo: \"apache.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/apache/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"Ruby On Rails\",   subtext: \"\",   logo: \"rails.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/rails/interactive\" }   ], }}   />    <SectionCard     item={{   name: \"Hono\",   subtext: \"\",   logo: \"hono.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/webapp/hono\" }   ], }}   /> </Columns>  ## Native/Mobile App  Mobile or Desktop app that runs natively on a device  <Columns cols={2}>   <SectionCard     item={{   name: \"iOS / macOS\",   subtext: \"\",   logo: \"apple.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/ios-swift\" },   ], }}   />    <SectionCard     item={{   name: \"Android\",   subtext: \"\",   logo: \"android.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/android\" },   ], }}   />    <SectionCard     item={{   name: \"Android - Facebook Login\",   subtext: \"\",   logo: \"android.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/android-facebook-login\" },   ], }}   />    <SectionCard     item={{   name: \"iOS - Facebook Login\",   subtext: \"\",   logo: \"apple.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/ios-swift-facebook-login\" },   ], }}   />    <SectionCard     item={{   name: \"React Native\",   subtext: \"\",   logo: \"react.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/react-native\" },   ], }}   />    <SectionCard     item={{   name: \"Expo\",   subtext: \"\",   logo: \"expo.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/react-native-expo\" },   ], }}   />    <SectionCard     item={{   name: \"Flutter\",   subtext: \"\",   logo: \"flutter.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/flutter\" },   ], }}   />    <SectionCard     item={{   name: \".NET Android & iOS\",   subtext: \"\",   logo: \"dotnet.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/net-android-ios\" },   ], }}   />    <SectionCard     item={{   name: \"MAUI\",   subtext: \"\",   logo: \"dotnet-platform.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/maui/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Ionic & Capacitor (Angular)\",   subtext: \"\",   logo: \"ionic.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/ionic-angular/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Ionic & Capacitor (React)\",   subtext: \"\",   logo: \"ionic.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/ionic-react/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Ionic & Capacitor (Vue)\",   subtext: \"\",   logo: \"ionic.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/ionic-vue/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"UWP\",   subtext: \"\",   logo: \"windows.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/windows-uwp-csharp/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"WPF / Winforms\",   subtext: \"\",   logo: \"dotnet-platform.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/wpf-winforms/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Device Authorization Flow\",   subtext: \"\",   logo: \"auth0.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/device/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Xamarin\",   subtext: \"\",   logo: \"xamarin.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/native/xamarin\" },   ], }}   /> </Columns>  ## Backend/API  An API or service protected by Auth0  <Columns cols={2}>   <SectionCard     item={{   name: \"Express API\",   subtext: \"\",   logo: \"express.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/nodejs/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Fastify API\",   subtext: \"\",   logo: \"fastify.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/fastify\" }   ], }}   />    <SectionCard     item={{   name: \"Django API\",   subtext: \"\",   logo: \"django.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/django/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Flask API\",   subtext: \"\",   logo: \"flask.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/python\" },   ], }}   />    <SectionCard     item={{   name: \"FastAPI API\",   subtext: \"\",   logo: \"fastapi.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/fastapi\" }   ], }}   />    <SectionCard     item={{   name: \"Java Springboot API\",   subtext: \"\",   logo: \"spring.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/java-spring-security5\" },   ], }}   />    <SectionCard     item={{   name: \"Go API\",   subtext: \"\",   logo: \"golang.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/golang/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"ASP.NET Core Web API\",   subtext: \"\",   logo: \"dotnet-platform.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/aspnet-core-webapi\" },   ], }}   />    <SectionCard     item={{   name: \"ASP.NET Web API (OWIN)\",   subtext: \"\",   logo: \"dotnet.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/webapi-owin/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Laravel API\",   subtext: \"\",   logo: \"laravel.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/laravel/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"PHP API\",   subtext: \"\",   logo: \"php.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/php/interactive\" },   ], }}   />    <SectionCard     item={{   name: \"Ruby On Rails API\",   subtext: \"\",   logo: \"rails.svg\",   date: \"\",   badge: \"\",   links: [     { label: \"Quickstart\", url: \"/docs/quickstart/backend/rails/interactive\" },   ], }}   /> </Columns>",
+          "createdAt": "2026-04-09T21:19:18.209Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": true,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "img",
+            "count": 103
+          },
+          {
+            "term": "item",
+            "count": 75
+          },
+          {
+            "term": "interactive",
+            "count": 69
+          },
+          {
+            "term": "label",
+            "count": 63
+          },
+          {
+            "term": "subtext",
+            "count": 63
+          },
+          {
+            "term": "badge",
+            "count": 63
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/language-selection": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-09T10:06:13.533Z",
+      "items": [
+        {
+          "id": "69d77a1560574e0b0c161838",
+          "path": "/docs/customize/login-pages/universal-login/customize-signup-and-login-prompts/language-selection",
+          "comment": "At least the cURL content of all these examples (signup and login prompts) is not escaped",
+          "createdAt": "2026-04-09T10:06:13.533Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "curl --request PUT \\\n  --url 'https://{yourDomain}/api/v2/prompts/signup/partials' \\\n  --header 'authorization: Bearer {mgmtApiToken}' \\\n  --header 'content-type: application/json' \\\n  --data '{\n    \"signup\": {\n        \"form-content-start\": \"<div class=\"ulp-field\"><label for=\"language\">Preferred Language</label><select name=\"language\"id=\"language\"  onchange=updateSelectedLanguage()><option></option><option value=\"en\" {% if locale == \"en\" %}selected{% endif %}>English</option><option value=\"fr\" {% if locale == \"fr\" %}selected{% endif %}>French</option><option value=\"es\" {% if locale == \"es\" %}selected{% endif %}>Spanish</option></select></div><input type=\"hidden\" name=\"persist\" value=\"session\"/><input name=\"action\" id=\"changeLanguage\" type=\"submit\" value=\"change-language\" style=\"display:none\" formnovalidate/>\"\n    }\n}'\n",
+          "filename": "cURL",
+          "lang": "shellscript"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/authenticate/passwordless/passwordless-with-universal-login": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-09T00:30:08.807Z",
+      "items": [
+        {
+          "id": "69d6f3104350c30b4f227223",
+          "path": "/docs/authenticate/passwordless/passwordless-with-universal-login",
+          "comment": "[] I'm having trouble setting up, and there is no trouble shooting",
+          "createdAt": "2026-04-09T00:30:08.807Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "trouble",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-08T15:56:34.503Z",
+      "items": [
+        {
+          "id": "69d67ab273d18c23c2c4a7d4",
+          "path": "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+          "comment": "[] Glossary popup for access tokens is broken",
+          "createdAt": "2026-04-08T15:56:34.503Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/manage-users/sessions": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 0,
+      "lastAt": "2026-04-06T14:19:33.854Z",
+      "items": [
+        {
+          "id": "69d3c0f5ca9fc6a2883bbd5e",
+          "path": "/docs/manage-users/sessions",
+          "comment": "[] Learned new info about SPA session management",
+          "createdAt": "2026-04-06T14:19:33.854Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": true,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/deploy-monitor/deploy-cli-tool/exclude-resources-from-management": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-06T13:01:46.511Z",
+      "items": [
+        {
+          "id": "69d3aeba50605e5c5889d2bb",
+          "path": "/docs/deploy-monitor/deploy-cli-tool/exclude-resources-from-management",
+          "comment": "https://auth0.com/docs/deploy-monitor/deploy-cli-tool/configure-the-deploy-cli#auth0_allow_delete",
+          "createdAt": "2026-04-06T13:01:46.511Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "{\n  \"AUTH0_DOMAIN\": \"example-site.us.auth0.com\",\n  \"AUTH0_CLIENT_ID\": \"<YOUR_AUTH0_CLIENT_ID>\",\n  \"AUTH0_EXCLUDED\": [\"clients\", \"connections\", \"databases\", \"organizations\"]\n}\n",
+          "filename": "",
+          "lang": "json"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "deploy",
+            "count": 3
+          },
+          {
+            "term": "cli",
+            "count": 2
+          },
+          {
+            "term": "deploy cli",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/secure/tokens/id-tokens": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-04T17:29:43.459Z",
+      "items": [
+        {
+          "id": "69d14a87043298fea8ba457a",
+          "path": "/docs/secure/tokens/id-tokens",
+          "comment": "[] Give an example for an ID Token.",
+          "createdAt": "2026-04-04T17:29:43.459Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/fr-ca/secure/multi-factor-authentication/enable-mfa": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 0,
+      "lastAt": "2026-04-03T14:42:09.102Z",
+      "items": [
+        {
+          "id": "69cfd1c12b441e5b84fa9d5e",
+          "path": "/docs/fr-ca/secure/multi-factor-authentication/enable-mfa",
+          "comment": "[] je cherchais des exeplication sur votre MFA",
+          "createdAt": "2026-04-03T14:42:09.102Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": true,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/secure/tokens/access-tokens/management-api-access-tokens": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-02T18:47:01.607Z",
+      "items": [
+        {
+          "id": "69ceb9a5f7b1edac3dd6c29d",
+          "path": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
+          "comment": "[] Everything links to this but it doesnt actually give instructions for how to get the access token all the links point in circles",
+          "createdAt": "2026-04-02T18:47:01.607Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [
+          {
+            "term": "links",
+            "count": 2
+          }
+        ],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-02T13:15:44.958Z",
+      "items": [
+        {
+          "id": "69ce6c006ef877bbda97d172",
+          "path": "/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object",
+          "comment": "[] You can't copy and past the method names! Bad design",
+          "createdAt": "2026-04-02T13:15:44.958Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/customize/forms/nodes-and-components": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-01T19:50:41.091Z",
+      "items": [
+        {
+          "id": "69cd7711743e490471c7925d",
+          "path": "/docs/customize/forms/nodes-and-components",
+          "comment": "[] The general components make sense, but it's not clear how I hook up the form. The start and end node descriptions are too vague",
+          "createdAt": "2026-04-01T19:50:41.091Z",
+          "source": "contextual",
+          "status": "pending",
+          "helpful": false,
+          "contact": null
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    },
+    "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow": {
+      "count": 1,
+      "pendingCount": 1,
+      "inProgressCount": 0,
+      "resolvedCount": 0,
+      "dismissedCount": 0,
+      "negativeCount": 1,
+      "lastAt": "2026-04-01T08:42:55.372Z",
+      "items": [
+        {
+          "id": "69ccda8fdbe15cd22a4c1c21",
+          "path": "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow",
+          "comment": "There is a missing open bracket \"{\" on \"  --data \n'code=yourAuthorizationCode}' \\\"",
+          "createdAt": "2026-04-01T08:42:55.372Z",
+          "source": "code_snippet",
+          "status": "pending",
+          "code": "curl --request POST \\\n  --url 'https://{yourDomain}/oauth/token' \\\n  --header 'content-type: application/x-www-form-urlencoded' \\\n  --data grant_type=authorization_code \\\n  --data 'client_id={yourClientId}' \\\n  --data 'client_secret={yourClientSecret}' \\\n  --data 'code=yourAuthorizationCode}' \\\n  --data 'redirect_uri={https://yourApp/callback}'\n",
+          "filename": "cURL",
+          "lang": "shellscript"
+        }
+      ],
+      "cluster": {
+        "burst": null,
+        "topTerms": [],
+        "recurringCode": 0,
+        "diagnosisCandidate": false
+      }
+    }
+  }
+}

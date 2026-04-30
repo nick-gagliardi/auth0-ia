@@ -510,3 +510,56 @@ export interface GraphHeatmapNode {
   orphan: boolean;
   navDepth: number;
 }
+
+export type FeedbackSource = 'contextual' | 'code_snippet' | 'agent' | 'thumbs_only';
+export type FeedbackStatus = 'pending' | 'in_progress' | 'resolved' | 'dismissed';
+
+export type FeedbackItem = {
+  id: string;
+  path: string;
+  comment: string | null;
+  createdAt: string;
+  source: FeedbackSource;
+  status: FeedbackStatus;
+  helpful?: boolean;
+  contact?: string | null;
+  code?: string;
+  filename?: string;
+  lang?: string;
+};
+
+export type FeedbackBurst = {
+  count: number;
+  startedAt: string;
+  endedAt: string;
+  windowMinutes: number;
+};
+
+export type FeedbackCluster = {
+  burst: FeedbackBurst | null;
+  topTerms: Array<{ term: string; count: number }>;
+  recurringCode: number;
+  diagnosisCandidate: boolean;
+};
+
+export type FeedbackBucket = {
+  count: number;
+  pendingCount: number;
+  inProgressCount: number;
+  resolvedCount: number;
+  dismissedCount: number;
+  negativeCount: number;
+  lastAt: string;
+  items: FeedbackItem[];
+  cluster: FeedbackCluster;
+};
+
+export type FeedbackIndex = {
+  fetchedAt: string;
+  dateFrom: string;
+  dateTo: string | null;
+  total: number;
+  pageCount: number;
+  pathCount: number;
+  byPath: Record<string, FeedbackBucket>;
+};

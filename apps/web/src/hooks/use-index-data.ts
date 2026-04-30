@@ -18,6 +18,7 @@ import type {
   SnippetMigrationIndex,
   RulesDeprecationIndex,
   CurlValidationIndex,
+  FeedbackIndex,
 } from '@/types';
 import { useIndexBundle } from '@/hooks/use-index-bundle';
 
@@ -228,5 +229,14 @@ export function useCurlValidator() {
     queryFn: async () => (b.data?.curlValidator ?? fetchWithDemoFallback<CurlValidationIndex>('curl_validator.json')),
     enabled: b.isSuccess || !b.isLoading,
     staleTime: Infinity,
+  });
+}
+
+export function useFeedback() {
+  return useQuery({
+    queryKey: ['feedback'],
+    queryFn: () => fetchWithDemoFallback<FeedbackIndex>('feedback.json'),
+    staleTime: Infinity,
+    retry: false,
   });
 }

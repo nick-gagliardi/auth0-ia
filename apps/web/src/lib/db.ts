@@ -208,6 +208,44 @@ export async function getUserWithDecryptedCreds(
   return decryptedUser;
 }
 
+// Feedback diagnoses (LLM-generated cluster diagnoses, keyed by docs path)
+
+export interface FeedbackDiagnosis {
+  path: string;
+  diagnosis: string;
+  model: string;
+  generated_at: Date;
+  generated_by_user_id: string | null;
+}
+
+export async function getFeedbackDiagnosis(path: string): Promise<FeedbackDiagnosis | null> {
+  const result = await sql<FeedbackDiagnosis>`
+    SELECT path, diagnosis, model, generated_at, generated_by_user_id
+    FROM feedback_diagnoses
+    WHERE path = ${path}
+  `;
+  return result.rows[0] ?? null;
+}
+
+export async function upsertFeedbackDiagnosis(data: {
+  path: string;
+  diagnosis: string;
+  model: string;
+  userId: string | null;
+}): Promise<FeedbackDiagnosis> {
+  const result = await sql<FeedbackDiagnosis>`
+    INSERT INTO feedback_diagnoses (path, diagnosis, model, generated_at, generated_by_user_id)
+    VALUES (${data.path}, ${data.diagnosis}, ${data.model}, NOW(), ${data.userId})
+    ON CONFLICT (path) DO UPDATE
+    SET diagnosis = EXCLUDED.diagnosis,
+        model = EXCLUDED.model,
+        generated_at = EXCLUDED.generated_at,
+        generated_by_user_id = EXCLUDED.generated_by_user_id
+    RETURNING path, diagnosis, model, generated_at, generated_by_user_id
+  `;
+  return result.rows[0];
+}
+
 // Session management
 export async function createSession(data: {
   session_token: string;
