@@ -998,7 +998,27 @@ export default function FeedbackClient() {
 
   const matchingNode = useMemo(() => {
     if (!path || !nodes) return null;
-    return nodes.find((n) => n.permalink === path) ?? null;
+
+    // 1. Exact permalink match (works when frontmatter sets `permalink`)
+    const byPermalink = nodes.find((n) => n.permalink === path);
+    if (byPermalink) return byPermalink;
+
+    // 2. Fall back to deriving filePath from URL path — mirrors the resolution
+    // ladder in /api/audit/route.ts (resolveUrlToFilePath). Most docs pages
+    // don't set a frontmatter permalink, so this is the common path.
+    if (path.startsWith('/docs/')) {
+      const docPath = path.replace(/^\/docs\//, '').replace(/\/$/, '');
+      const candidates = [
+        `main/docs/${docPath}.mdx`,
+        `main/docs/${docPath}/index.mdx`,
+        `main/docs/${docPath}.md`,
+      ];
+      for (const candidate of candidates) {
+        const match = nodes.find((n) => n.filePath === candidate);
+        if (match) return match;
+      }
+    }
+    return null;
   }, [path, nodes]);
 
   const queueEntries = useMemo(() => {
