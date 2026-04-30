@@ -6773,7 +6773,7 @@
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
       "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     ],
     "import": [],
     "redirect": []
@@ -6787,7 +6787,7 @@
       "main/docs/get-started/apis/api-access-policies-for-applications.mdx",
       "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/secure/call-apis-on-users-behalf/xaa/test-xaa-flow.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/manage-users/organizations/configure-organizations/create-organizations.mdx",
       "main/docs/manage-users/organizations/configure-organizations/enable-connections.mdx",
       "main/docs/manage-users/organizations/configure-organizations/define-organization-behavior.mdx"
@@ -6795,10 +6795,11 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx": {
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx": {
     "link": [
       "main/docs/authenticate/enterprise-connections.mdx",
-      "main/docs/manage-users/organizations/login-flows-for-organizations.mdx"
+      "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     ],
     "import": [],
     "redirect": []
@@ -9296,7 +9297,7 @@
       "main/docs/authenticate/protocols/scim.mdx",
       "main/docs/authenticate/protocols/saml.mdx",
       "main/docs/authenticate/login/oidc-conformant-authentication.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc.mdx",
       "main/docs/authenticate/protocols/saml/saml-configuration/saml-attribute-mapping-examples.mdx"
     ],
@@ -11267,7 +11268,9 @@
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/Login.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -15802,27 +15805,39 @@
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginEmailVerification.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginId.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPassword.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessEmailCode.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx",
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessSmsOtp.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx",
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -16127,18 +16142,23 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/Signup.mdx": {
     "link": [
+      "main/docs/secure/attack-protection/bot-detection.mdx",
       "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordValidationResult.mdx"
     ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/SignupId.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/SignupPassword.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/secure/attack-protection/bot-detection.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -16173,7 +16193,44 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/libraries/acul/js-sdk/Screens/type-aliases/ULError.mdx": {
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/Error.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockMembers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/DBConnection.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushEnrollmentQrWithRememberOptions.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordComplexityPolicy.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -16183,7 +16240,49 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/SocialConnection.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsEmailCode.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsLoginPassword.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSignupPassword.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSmsOtp.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/functions/changeLanguage.mdx": {
+    "link": [
+      "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/functions/registerPasskeyAutofill.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -16695,7 +16794,7 @@
     "link": [
       "main/docs/manage-users/organizations.mdx",
       "main/docs/api/myorganization/index.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/api.mdx",
       "main/docs/authenticate/enterprise-connections/connection-profile.mdx",
       "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
@@ -16728,7 +16827,7 @@
   },
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx": {
     "link": [
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
     ],
     "import": [
@@ -16739,7 +16838,7 @@
   },
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx": {
     "link": [
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
     ],
     "import": [
@@ -16750,7 +16849,7 @@
   },
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx": {
     "link": [
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx"
     ],
     "import": [
@@ -22125,7 +22224,7 @@
   "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx": {
     "link": [
       "main/docs/authenticate/enterprise-connections.mdx",
-      "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+      "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
       "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/identity-provider-initiated-single-sign-on.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx",

@@ -4030,7 +4030,7 @@
     "deadEndScore": 0
   },
   "main/docs/secure/attack-protection/bot-detection.mdx": {
-    "inboundLinks": 14,
+    "inboundLinks": 22,
     "outboundLinks": 12,
     "importedBy": 0,
     "orphanNav": true,
@@ -4038,9 +4038,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 14,
+    "hubScore": 22,
     "deadEnd": false,
-    "deadEndScore": 1.1667
+    "deadEndScore": 1.8333
   },
   "main/docs/secure/attack-protection/breached-password-detection.mdx": {
     "inboundLinks": 10,
@@ -13389,6 +13389,19 @@
     "deadEnd": false,
     "deadEndScore": 2
   },
+  "main/docs/libraries/acul/js-sdk/Screens/type-aliases/ULError.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 1,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/libraries/acul/js-sdk/Screens/type-aliases/WebAuthnType.mdx": {
     "inboundLinks": 3,
     "outboundLinks": 0,
@@ -13518,6 +13531,45 @@
     "hubScore": 2,
     "deadEnd": false,
     "deadEndScore": 2
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockMembers.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/CaptchaContext.mdx": {
     "inboundLinks": 2,
@@ -13884,7 +13936,7 @@
     "deadEndScore": 2
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/Error.mdx": {
-    "inboundLinks": 5,
+    "inboundLinks": 6,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
@@ -13892,9 +13944,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 5,
+    "hubScore": 6,
     "deadEnd": false,
-    "deadEndScore": 5
+    "deadEndScore": 6
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/FederatedLoginOptions.mdx": {
     "inboundLinks": 2,
@@ -14012,6 +14064,19 @@
     "hubScore": 2,
     "deadEnd": false,
     "deadEndScore": 2
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx": {
+    "inboundLinks": 1,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 1,
+    "deadEnd": false,
+    "deadEndScore": 1
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/LoginEmailVerificationMembers.mdx": {
     "inboundLinks": 2,
@@ -14467,6 +14532,19 @@
     "hubScore": 2,
     "deadEnd": false,
     "deadEndScore": 2
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushEnrollmentQrWithRememberOptions.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushListMembers.mdx": {
     "inboundLinks": 2,
@@ -15014,6 +15092,19 @@
     "deadEnd": false,
     "deadEndScore": 2
   },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordComplexityPolicy.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordComplexityRule.mdx": {
     "inboundLinks": 3,
     "outboundLinks": 0,
@@ -15210,7 +15301,7 @@
     "deadEndScore": 2
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx": {
-    "inboundLinks": 7,
+    "inboundLinks": 10,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
@@ -15218,9 +15309,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 7,
+    "hubScore": 10,
     "deadEnd": false,
-    "deadEndScore": 7
+    "deadEndScore": 10
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResetPasswordEmailMembers.mdx": {
     "inboundLinks": 2,
@@ -15637,6 +15728,32 @@
     "hubScore": 2,
     "deadEnd": false,
     "deadEndScore": 2
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnConsent.mdx": {
     "inboundLinks": 2,
@@ -16574,6 +16691,58 @@
     "deadEnd": false,
     "deadEndScore": 2
   },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsEmailCode.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsLoginPassword.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSignupPassword.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSmsOtp.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/TenantMembers.mdx": {
     "inboundLinks": 2,
     "outboundLinks": 0,
@@ -16964,6 +17133,19 @@
     "deadEnd": false,
     "deadEndScore": 2
   },
+  "main/docs/libraries/acul/js-sdk/Screens/functions/changeLanguage.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 1,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/libraries/acul/js-sdk/Screens/functions/getCurrentScreen.mdx": {
     "inboundLinks": 1,
     "outboundLinks": 0,
@@ -17015,6 +17197,19 @@
     "hubScore": 1,
     "deadEnd": false,
     "deadEndScore": 1
+  },
+  "main/docs/libraries/acul/js-sdk/Screens/functions/registerPasskeyAutofill.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/AcceptInvitation.mdx": {
     "inboundLinks": 1,
@@ -17187,7 +17382,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/Login.mdx": {
     "inboundLinks": 2,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -17200,7 +17395,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginEmailVerification.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -17213,7 +17408,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginId.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -17226,7 +17421,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPassword.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -17239,7 +17434,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessEmailCode.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 2,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -17248,11 +17443,11 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 1
+    "deadEndScore": 0.5
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessSmsOtp.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 2,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -17261,7 +17456,7 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 1
+    "deadEndScore": 0.5
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/Logout.mdx": {
     "inboundLinks": 1,
@@ -18006,7 +18201,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/Signup.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 1,
+    "outboundLinks": 2,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -18015,11 +18210,11 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 1
+    "deadEndScore": 0.5
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/SignupId.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -18032,7 +18227,7 @@
   },
   "main/docs/libraries/acul/js-sdk/Screens/classes/SignupPassword.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 0,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -28261,9 +28456,9 @@
     "deadEnd": false,
     "deadEndScore": 0
   },
-  "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx": {
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx": {
     "inboundLinks": 8,
-    "outboundLinks": 2,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -28272,7 +28467,7 @@
     "deepNav": false,
     "hubScore": 8,
     "deadEnd": false,
-    "deadEndScore": 4
+    "deadEndScore": 2.6667
   },
   "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx": {
     "inboundLinks": 5,
@@ -28288,7 +28483,7 @@
     "deadEndScore": 0.7143
   },
   "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx": {
-    "inboundLinks": 1,
+    "inboundLinks": 2,
     "outboundLinks": 8,
     "importedBy": 0,
     "orphanNav": true,
@@ -28296,9 +28491,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 1,
+    "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 0.125
+    "deadEndScore": 0.25
   },
   "main/docs/authenticate/database-connections/activate-and-configure-attributes-for-flexible-identifiers.mdx": {
     "inboundLinks": 5,

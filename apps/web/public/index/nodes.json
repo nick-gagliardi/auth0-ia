@@ -7208,6 +7208,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/type-aliases/ULError.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/type-aliases/ULError.mdx",
+    "title": "Type Alias: ULError",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/js-sdk/Screens/type-aliases/WebAuthnType.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/type-aliases/WebAuthnType.mdx",
@@ -7275,6 +7282,27 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BrandingThemes.mdx",
     "title": "BrandingThemes",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+    "title": "BruteForceProtectionUnblockFailureMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockMembers.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockMembers.mdx",
+    "title": "BruteForceProtectionUnblockMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
+    "title": "BruteForceProtectionUnblockSuccessMembers",
     "navPaths": []
   },
   {
@@ -7544,6 +7572,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx",
+    "title": "LanguageChangeOptions",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/LoginEmailVerificationMembers.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/LoginEmailVerificationMembers.mdx",
@@ -7786,6 +7821,13 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushEnrollmentQrMembers.mdx",
     "title": "MfaPushEnrollmentQrMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushEnrollmentQrWithRememberOptions.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushEnrollmentQrWithRememberOptions.mdx",
+    "title": "MfaPushEnrollmentQrWithRememberOptions",
     "navPaths": []
   },
   {
@@ -8080,6 +8122,13 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasskeyEnrollmentMembers.mdx",
     "title": "PasskeyEnrollmentMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordComplexityPolicy.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordComplexityPolicy.mdx",
+    "title": "PasswordComplexityPolicy",
     "navPaths": []
   },
   {
@@ -8416,6 +8465,20 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnAcceptInvitation.mdx",
     "title": "ScreenMembersOnAcceptInvitation",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+    "title": "ScreenMembersOnBruteForceProtectionUnblockFailure",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
+    "title": "ScreenMembersOnBruteForceProtectionUnblockSuccess",
     "navPaths": []
   },
   {
@@ -8923,6 +8986,34 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsEmailCode.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsEmailCode.mdx",
+    "title": "SwitchConnectionOptionsEmailCode",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsLoginPassword.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsLoginPassword.mdx",
+    "title": "SwitchConnectionOptionsLoginPassword",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSignupPassword.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSignupPassword.mdx",
+    "title": "SwitchConnectionOptionsSignupPassword",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSmsOtp.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSmsOtp.mdx",
+    "title": "SwitchConnectionOptionsSmsOtp",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/js-sdk/Screens/interfaces/TenantMembers.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/interfaces/TenantMembers.mdx",
@@ -9133,6 +9224,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/functions/changeLanguage.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/functions/changeLanguage.mdx",
+    "title": "changeLanguage",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/js-sdk/Screens/functions/getCurrentScreen.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/functions/getCurrentScreen.mdx",
@@ -9158,6 +9256,13 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/js-sdk/Screens/functions/getErrors.mdx",
     "title": "getErrors",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/js-sdk/Screens/functions/registerPasskeyAutofill.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/js-sdk/Screens/functions/registerPasskeyAutofill.mdx",
+    "title": "registerPasskeyAutofill",
     "navPaths": []
   },
   {
@@ -15217,9 +15322,9 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+    "id": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
     "type": "page",
-    "filePath": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx",
+    "filePath": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx",
     "title": "Self-Service Enterprise Configuration",
     "navPaths": []
   },

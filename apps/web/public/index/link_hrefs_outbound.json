@@ -14008,8 +14008,8 @@
       "toId": "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     }
   ],
   "main/docs/secure/call-apis-on-users-behalf/xaa/set-up-xaa-test-environment.mdx": [
@@ -14042,8 +14042,8 @@
       "toId": "main/docs/secure/call-apis-on-users-behalf/xaa/test-xaa-flow.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/manage-users/organizations/configure-organizations/create-organizations",
@@ -14058,7 +14058,7 @@
       "toId": "main/docs/manage-users/organizations/configure-organizations/define-organization-behavior.mdx"
     }
   ],
-  "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx": [
+  "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx": [
     {
       "href": "/docs/authenticate/enterprise-connections",
       "toId": "main/docs/authenticate/enterprise-connections.mdx"
@@ -14066,6 +14066,10 @@
     {
       "href": "/docs/manage-users/organizations/login-flows-for-organizations",
       "toId": "main/docs/manage-users/organizations/login-flows-for-organizations.mdx"
+    },
+    {
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration/manage-self-service-enterprise-config.mdx"
     }
   ],
   "main/docs/secure/call-apis-on-users-behalf/xaa/manage-xaa-in-okta.mdx": [
@@ -16937,8 +16941,8 @@
       "toId": "main/docs/authenticate/login/oidc-conformant-authentication.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/authenticate/identity-providers/enterprise-identity-providers/configure-pkce-claim-mapping-for-oidc",
@@ -20347,7 +20351,12 @@
       "toId": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx"
     }
   ],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/Login.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/Login.mdx": [
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
   "main/docs/libraries/acul/react-sdk.mdx": [
     {
       "href": "/docs/customize/login-pages/advanced-customizations/quickstart",
@@ -25382,11 +25391,44 @@
   ],
   "main/docs/libraries/acul/js-sdk/Screens/classes/EmailVerificationResult.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/InterstitialCaptcha.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginEmailVerification.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginId.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPassword.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessEmailCode.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessSmsOtp.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginEmailVerification.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginId.mdx": [
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPassword.mdx": [
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessEmailCode.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    },
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/LoginPasswordlessSmsOtp.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/ResendControl.mdx"
+    },
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
   "main/docs/libraries/acul/js-sdk/Screens/classes/Logout.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/LogoutAborted.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/LogoutComplete.mdx": [],
@@ -25484,12 +25526,26 @@
   "main/docs/libraries/acul/js-sdk/Screens/classes/SDKUsageError.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/classes/Signup.mdx": [
     {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    },
+    {
       "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordValidationResult",
       "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordValidationResult.mdx"
     }
   ],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/SignupId.mdx": [],
-  "main/docs/libraries/acul/js-sdk/Screens/classes/SignupPassword.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/SignupId.mdx": [
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/classes/SignupPassword.mdx": [
+    {
+      "href": "/docs/secure/attack-protection/bot-detection",
+      "toId": "main/docs/secure/attack-protection/bot-detection.mdx"
+    }
+  ],
   "main/docs/libraries/acul/js-sdk/Screens/classes/UserInputError.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/functions/getCurrentScreen.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/functions/getCurrentScreenOptions.mdx": [
@@ -25510,9 +25566,34 @@
       "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/Error.mdx"
     }
   ],
+  "main/docs/libraries/acul/js-sdk/Screens/type-aliases/ULError.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/Error",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/Error.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockMembers.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/DBConnection.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/MfaPushEnrollmentQrWithRememberOptions.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordComplexityPolicy.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/PasswordlessConnection.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": [],
   "main/docs/libraries/acul/js-sdk/Screens/interfaces/SocialConnection.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsEmailCode.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsLoginPassword.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSignupPassword.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/interfaces/SwitchConnectionOptionsSmsOtp.mdx": [],
+  "main/docs/libraries/acul/js-sdk/Screens/functions/changeLanguage.mdx": [
+    {
+      "href": "/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions",
+      "toId": "main/docs/libraries/acul/js-sdk/Screens/interfaces/LanguageChangeOptions.mdx"
+    }
+  ],
+  "main/docs/libraries/acul/js-sdk/Screens/functions/registerPasskeyAutofill.mdx": [],
   "main/docs/get-started/identity-fundamentals/authentication-and-authorization.mdx": [
     {
       "href": "/docs/authenticate",
@@ -26690,8 +26771,8 @@
       "toId": "main/docs/api/myorganization/index.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/api",
@@ -26728,8 +26809,8 @@
   "main/snippets/ComponentLoader.jsx": [],
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-create.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
@@ -26738,8 +26819,8 @@
   ],
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-edit.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
@@ -26748,8 +26829,8 @@
   ],
   "main/docs/get-started/universal-components/my-organization/idp-management/sso-provider-table.mdx": [
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/get-started/universal-components/my-organization/build-delegated-admin",
@@ -36696,8 +36777,8 @@
       "toId": "main/docs/authenticate/enterprise-connections.mdx"
     },
     {
-      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-config",
-      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-config.mdx"
+      "href": "/docs/authenticate/enterprise-connections/self-service-enterprise-configuration",
+      "toId": "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx"
     },
     {
       "href": "/docs/authenticate/enterprise-connections/user-attribute-profile",
