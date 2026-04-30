@@ -18,6 +18,7 @@ import {
   HeartPulse,
   BarChart3,
   AlertTriangle,
+  MessagesSquare,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -49,6 +50,7 @@ export const navigationGroups: NavGroup[] = [
       { label: 'PR Review', href: '/pr-review', icon: GitPullRequest },
       { label: 'Broken Links', href: '/broken-links', icon: LinkIcon },
       { label: 'Analytics', href: '/analytics', icon: BarChart3 },
+      { label: 'Feedback', href: '/feedback', icon: MessagesSquare },
     ],
   },
   {
