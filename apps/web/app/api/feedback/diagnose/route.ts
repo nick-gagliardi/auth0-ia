@@ -95,6 +95,23 @@ export async function POST(request: Request) {
     const prompt = `${DIAGNOSIS_SYSTEM_PROMPT}\n\n---\n\n${userPrompt}`;
     const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
 
+    // TEMPORARY: log auth resolution so we can see which path is being taken.
+    // Remove once the 401 is sorted.
+    console.log('[Feedback Diagnose] Auth resolved:', {
+      configuredBaseUrl,
+      isLiteLLMProxy,
+      useProxy,
+      baseUrl,
+      hasProxyToken: !!proxyToken,
+      proxyTokenPrefix: proxyToken ? proxyToken.slice(0, 6) + '…' : null,
+      hasUserKey: !!userKey,
+      userKeyPrefix: userKey ? userKey.slice(0, 6) + '…' : null,
+      apiKeySource: apiKey === userKey ? 'userKey' : (apiKey === proxyToken ? 'proxyToken' : 'unknown'),
+      authHeader: useProxy ? 'Authorization: Bearer …' : 'x-api-key: …',
+      model,
+      promptLen: prompt.length,
+    });
+
     const response = await fetch(`${baseUrl}/v1/messages`, {
       method: 'POST',
       headers,
