@@ -417,6 +417,87 @@ function ItemCard({ item }: { item: FeedbackItem }) {
   );
 }
 
+function FeedbackQueueRow({ path, bucket }: { path: string; bucket: FeedbackBucket }) {
+  const { cluster } = bucket;
+  const negative = bucket.negativeCount;
+  const lastAt = new Date(bucket.lastAt);
+  const ageDays = Math.max(0, Math.round((Date.now() - lastAt.getTime()) / 86400000));
+
+  const burstLine = cluster.burst
+    ? `Burst of ${cluster.burst.count} in ${cluster.burst.windowMinutes} min`
+    : null;
+  const termsLine = cluster.topTerms.length
+    ? cluster.topTerms.slice(0, 4).map((t) => `${t.term} ×${t.count}`).join(' · ')
+    : null;
+  const signals = [burstLine, termsLine].filter(Boolean).join(' — ');
+
+  return (
+    <Link
+      href={`/feedback?path=${encodeURIComponent(path)}`}
+      className="block rounded-xl border bg-card p-4 hover:bg-secondary/40 transition-colors"
+    >
+      <div className="flex items-start justify-between gap-4 mb-2">
+        <div className="font-mono text-sm font-medium break-all">{path}</div>
+        <div className="flex items-center gap-2 text-xs whitespace-nowrap">
+          <span className="rounded-md border px-2 py-0.5 bg-secondary/40">
+            {bucket.count} {bucket.count === 1 ? 'item' : 'items'}
+          </span>
+          {negative > 0 && (
+            <span className="rounded-md border border-destructive/30 px-2 py-0.5 text-destructive">
+              {negative} negative
+            </span>
+          )}
+          {bucket.pendingCount > 0 && (
+            <span className="rounded-md border px-2 py-0.5 text-muted-foreground">
+              {bucket.pendingCount} pending
+            </span>
+          )}
+        </div>
+      </div>
+
+      {signals ? (
+        <div className="text-sm text-muted-foreground leading-relaxed mb-1">{signals}</div>
+      ) : null}
+
+      <div className="text-xs text-muted-foreground">
+        last feedback {ageDays === 0 ? 'today' : `${ageDays}d ago`}
+        {cluster.recurringCode > 0 && (
+          <span className="ml-2">· {cluster.recurringCode} recurring snippet{cluster.recurringCode === 1 ? '' : 's'}</span>
+        )}
+      </div>
+    </Link>
+  );
+}
+
+function FeedbackQueueView({ entries, fetchedAt }: { entries: Array<[string, FeedbackBucket]>; fetchedAt: string | null }) {
+  return (
+    <AppLayout>
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-3xl font-bold tracking-tight mb-2">Feedback</h1>
+        <p className="text-muted-foreground mb-2">
+          Mintlify user feedback joined to the IA graph. Pages with multiple complaints, time-clustered bursts, or recurring code-snippet issues bubble to the top. Click any row to view the cluster, generate a one-sentence Claude diagnosis on demand (uses your settings-page Anthropic key), and triage.
+        </p>
+        {fetchedAt && (
+          <p className="text-xs text-muted-foreground mb-8">
+            Last fetched {formatRelative(fetchedAt)}
+          </p>
+        )}
+
+        <div className="flex flex-col gap-2">
+          {entries.map(([path, bucket]) => (
+            <FeedbackQueueRow key={path} path={path} bucket={bucket} />
+          ))}
+          {entries.length === 0 && (
+            <div className="rounded-xl border bg-card p-6 text-sm text-muted-foreground">
+              No feedback data yet. Run <code className="font-mono">pnpm fetch:feedback</code> to fetch from Mintlify.
+            </div>
+          )}
+        </div>
+      </div>
+    </AppLayout>
+  );
+}
+
 function FeedbackBody({
   path,
   bucket,
@@ -455,22 +536,10 @@ export default function FeedbackClient() {
     return nodes.find((n) => n.permalink === path) ?? null;
   }, [path, nodes]);
 
-  if (!path) {
-    return (
-      <AppLayout>
-        <div className="max-w-4xl mx-auto">
-          <Button asChild variant="ghost" size="sm" className="mb-4">
-            <Link href="/work-queue">
-              <ArrowLeft className="w-4 h-4 mr-1" /> Back to work queue
-            </Link>
-          </Button>
-          <div className="rounded-xl border bg-card p-6 text-sm text-muted-foreground">
-            Missing <code className="font-mono">?path=...</code> query param.
-          </div>
-        </div>
-      </AppLayout>
-    );
-  }
+  const queueEntries = useMemo(() => {
+    if (!feedback) return [] as Array<[string, FeedbackBucket]>;
+    return Object.entries(feedback.byPath).sort((a, b) => b[1].count - a[1].count);
+  }, [feedback]);
 
   if (isLoading) {
     return (
@@ -480,13 +549,17 @@ export default function FeedbackClient() {
     );
   }
 
+  if (!path) {
+    return <FeedbackQueueView entries={queueEntries} fetchedAt={feedback?.fetchedAt ?? null} />;
+  }
+
   if (!bucket) {
     return (
       <AppLayout>
         <div className="max-w-4xl mx-auto">
           <Button asChild variant="ghost" size="sm" className="mb-4">
-            <Link href="/work-queue">
-              <ArrowLeft className="w-4 h-4 mr-1" /> Back to work queue
+            <Link href="/feedback">
+              <ArrowLeft className="w-4 h-4 mr-1" /> Back to feedback
             </Link>
           </Button>
           <div className="rounded-xl border bg-card p-6">
@@ -504,8 +577,8 @@ export default function FeedbackClient() {
     <AppLayout>
       <div className="max-w-4xl mx-auto">
         <Button asChild variant="ghost" size="sm" className="mb-4">
-          <Link href="/work-queue">
-            <ArrowLeft className="w-4 h-4 mr-1" /> Back to work queue
+          <Link href="/feedback">
+            <ArrowLeft className="w-4 h-4 mr-1" /> Back to feedback
           </Link>
         </Button>
 
