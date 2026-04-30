@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import fs from 'node:fs/promises';
-import path from 'node:path';
+import nodePath from 'node:path';
 import { requireSession } from '@/lib/session';
 import { getFeedbackDiagnosis, upsertFeedbackDiagnosis } from '@/lib/db';
 import { DIAGNOSIS_SYSTEM_PROMPT, buildDiagnosisUserPrompt } from '@/lib/feedback-diagnosis';
@@ -12,60 +12,9 @@ const BodySchema = z.object({
 });
 
 async function readFeedbackIndex(): Promise<FeedbackIndex> {
-  const filePath = path.join(process.cwd(), 'public', 'index', 'feedback.json');
+  const filePath = nodePath.join(process.cwd(), 'public', 'index', 'feedback.json');
   const raw = await fs.readFile(filePath, 'utf8');
   return JSON.parse(raw) as FeedbackIndex;
-}
-
-async function callClaude(opts: {
-  systemPrompt: string;
-  userPrompt: string;
-  apiKey: string;
-}): Promise<{ text: string; model: string }> {
-  const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-  const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
-  const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-
-  const useProxy = isLiteLLMProxy && !!proxyToken;
-  const apiKey = useProxy ? proxyToken! : opts.apiKey;
-  const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
-  const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-  if (useProxy) {
-    headers['Authorization'] = `Bearer ${apiKey}`;
-  } else {
-    headers['x-api-key'] = apiKey;
-    headers['anthropic-version'] = '2023-06-01';
-  }
-
-  const res = await fetch(`${baseUrl}/v1/messages`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      model,
-      max_tokens: 256,
-      system: [
-        {
-          type: 'text',
-          text: opts.systemPrompt,
-          cache_control: { type: 'ephemeral' },
-        },
-      ],
-      messages: [{ role: 'user', content: opts.userPrompt }],
-    }),
-  });
-
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Anthropic API error ${res.status}: ${errText}`);
-  }
-
-  const data = await res.json();
-  const textBlock = (data.content ?? []).find((b: { type: string }) => b.type === 'text');
-  const text = (textBlock?.text ?? '').trim();
-  if (!text) throw new Error('Anthropic returned empty diagnosis');
-  return { text, model };
 }
 
 export async function GET(request: Request) {
@@ -94,67 +43,96 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  let session;
   try {
-    session = await requireSession(true);
-  } catch {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
+    const { user } = await requireSession(true);
+    const body = await request.json().catch(() => null);
+    const parsed = BodySchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json({ ok: false, error: 'Invalid body' }, { status: 400 });
+    }
+    const { path: targetPath } = parsed.data;
 
-  const body = await request.json().catch(() => null);
-  const parsed = BodySchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json({ error: 'Invalid body', details: parsed.error.flatten() }, { status: 400 });
-  }
-  const { path: targetPath } = parsed.data;
+    let index: FeedbackIndex;
+    try {
+      index = await readFeedbackIndex();
+    } catch {
+      return NextResponse.json(
+        { ok: false, error: 'feedback.json not found. Run `pnpm fetch:feedback && pnpm sync:index` first.' },
+        { status: 500 },
+      );
+    }
 
-  const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-  const userKey = session.user.anthropic_api_key_decrypted ?? null;
-  if (!userKey && !proxyToken) {
-    return NextResponse.json(
-      { error: 'No Anthropic API key configured. Add one in /settings.' },
-      { status: 400 },
-    );
-  }
+    const bucket = index.byPath[targetPath];
+    if (!bucket) {
+      return NextResponse.json({ ok: false, error: `No feedback bucket for path: ${targetPath}` }, { status: 404 });
+    }
 
-  let index: FeedbackIndex;
-  try {
-    index = await readFeedbackIndex();
-  } catch (err) {
-    return NextResponse.json(
-      { error: 'feedback.json not found. Run `pnpm fetch:feedback && pnpm sync:index` first.' },
-      { status: 500 },
-    );
-  }
+    // Resolve Anthropic auth — same pattern as /api/rules-deprecation/suggest
+    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
+    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
+    const userKey = user.anthropic_api_key_decrypted;
 
-  const bucket = index.byPath[targetPath];
-  if (!bucket) {
-    return NextResponse.json({ error: `No feedback bucket for path: ${targetPath}` }, { status: 404 });
-  }
+    const useProxy = isLiteLLMProxy && !!proxyToken;
+    const apiKey = useProxy ? proxyToken : (userKey || proxyToken);
+    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
 
-  const userPrompt = buildDiagnosisUserPrompt(targetPath, bucket);
+    if (!apiKey) {
+      return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
+    }
 
-  try {
-    const { text, model } = await callClaude({
-      systemPrompt: DIAGNOSIS_SYSTEM_PROMPT,
-      userPrompt,
-      apiKey: userKey ?? '',
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (useProxy) {
+      headers['Authorization'] = `Bearer ${apiKey}`;
+    } else {
+      headers['x-api-key'] = apiKey;
+      headers['anthropic-version'] = '2023-06-01';
+    }
+
+    const userPrompt = buildDiagnosisUserPrompt(targetPath, bucket);
+    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+
+    const response = await fetch(`${baseUrl}/v1/messages`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        model,
+        max_tokens: 256,
+        system: DIAGNOSIS_SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: userPrompt }],
+      }),
     });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('[Feedback Diagnose] AI error:', response.status, errorText);
+      return NextResponse.json({ ok: false, error: `AI API error: ${response.status}` }, { status: 502 });
+    }
+
+    const data = await response.json();
+    const text = (data.content?.[0]?.text || '').trim();
+    if (!text) {
+      return NextResponse.json({ ok: false, error: 'AI returned empty diagnosis' }, { status: 502 });
+    }
 
     const stored = await upsertFeedbackDiagnosis({
       path: targetPath,
       diagnosis: text,
       model,
-      userId: session.user.id,
+      userId: user.id,
     });
 
     return NextResponse.json({
+      ok: true,
       diagnosis: stored.diagnosis,
       model: stored.model,
       generatedAt: stored.generated_at,
     });
-  } catch (err) {
-    const message = err instanceof Error ? err.message : 'Diagnosis failed';
-    return NextResponse.json({ error: message }, { status: 502 });
+  } catch (err: any) {
+    console.error('[Feedback Diagnose] suggest error:', err);
+    return NextResponse.json(
+      { ok: false, error: err?.message || String(err) },
+      { status: 400 },
+    );
   }
 }
