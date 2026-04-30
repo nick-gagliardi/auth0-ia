@@ -22,11 +22,12 @@ import {
   useCrossNavPairs,
   useDeadEnds,
   useEdgesOutbound,
+  useFeedback,
   useLinkHrefsOut,
   useMetrics,
   useNodes,
 } from '@/hooks/use-index-data';
-import type { DocNode, NodeMetrics, Auth0LintWarning } from '@/types';
+import type { DocNode, NodeMetrics, Auth0LintWarning, FeedbackBucket } from '@/types';
 
 // Types for selection
 interface SelectedItem {
@@ -479,13 +480,67 @@ function BrokenLinksChecker({ pages, nodeById }: { pages: any[]; nodeById: Map<s
   );
 }
 
+function FeedbackQueueRow({ path, bucket }: { path: string; bucket: FeedbackBucket }) {
+  const { cluster } = bucket;
+  const negative = bucket.negativeCount;
+  const lastAt = new Date(bucket.lastAt);
+  const now = Date.now();
+  const ageDays = Math.max(0, Math.round((now - lastAt.getTime()) / 86400000));
+
+  const burstLine = cluster.burst
+    ? `Burst of ${cluster.burst.count} in ${cluster.burst.windowMinutes} min`
+    : null;
+  const termsLine = cluster.topTerms.length
+    ? cluster.topTerms.slice(0, 4).map((t) => `${t.term} ×${t.count}`).join(' · ')
+    : null;
+  const signals = [burstLine, termsLine].filter(Boolean).join(' — ');
+
+  return (
+    <Link
+      href={`/feedback?path=${encodeURIComponent(path)}`}
+      className="block rounded-xl border bg-card p-4 hover:bg-secondary/40 transition-colors"
+    >
+      <div className="flex items-start justify-between gap-4 mb-2">
+        <div className="font-mono text-sm font-medium break-all">{path}</div>
+        <div className="flex items-center gap-2 text-xs whitespace-nowrap">
+          <span className="rounded-md border px-2 py-0.5 bg-secondary/40">
+            {bucket.count} {bucket.count === 1 ? 'item' : 'items'}
+          </span>
+          {negative > 0 && (
+            <span className="rounded-md border border-destructive/30 px-2 py-0.5 text-destructive">
+              {negative} negative
+            </span>
+          )}
+          {bucket.pendingCount > 0 && (
+            <span className="rounded-md border px-2 py-0.5 text-muted-foreground">
+              {bucket.pendingCount} pending
+            </span>
+          )}
+        </div>
+      </div>
+
+      {signals ? (
+        <div className="text-sm text-muted-foreground leading-relaxed mb-1">{signals}</div>
+      ) : null}
+
+      <div className="text-xs text-muted-foreground">
+        last feedback {ageDays === 0 ? 'today' : `${ageDays}d ago`}
+        {cluster.recurringCode > 0 && (
+          <span className="ml-2">· {cluster.recurringCode} recurring snippet{cluster.recurringCode === 1 ? '' : 's'}</span>
+        )}
+      </div>
+    </Link>
+  );
+}
+
 export default function WorkQueuePage() {
   const { data: nodes, isLoading: l1 } = useNodes();
   const { data: metrics, isLoading: l2 } = useMetrics();
   const { data: crossNav, isLoading: l3 } = useCrossNavPairs();
   const { data: deadEnds, isLoading: l4 } = useDeadEnds();
   const { data: auth0Lint, isLoading: l5 } = useAuth0Lint();
-  
+  const { data: feedback } = useFeedback();
+
   const [activeTab, setActiveTab] = useState('ref-orphans');
   const [selection, setSelection] = useState<SelectionState>({});
 
@@ -549,6 +604,11 @@ export default function WorkQueuePage() {
     nodes?.forEach((n) => m.set(n.id, n));
     return m;
   }, [nodes]);
+
+  const feedbackEntries = useMemo(() => {
+    if (!feedback) return [] as Array<[string, FeedbackBucket]>;
+    return Object.entries(feedback.byPath).sort((a, b) => b[1].count - a[1].count);
+  }, [feedback]);
 
   // Selection handlers
   const handleSelect = useCallback((tabValue: string, id: string, checked: boolean) => {
@@ -654,6 +714,12 @@ export default function WorkQueuePage() {
       help: 'Pick a page and review its outbound /docs links to find missing targets.',
       data: [],
     },
+    {
+      value: 'feedback',
+      label: `Negative Feedback (${feedbackEntries.length})`,
+      help: 'Mintlify user feedback joined to the IA graph. Pages with multiple complaints, time-clustered bursts, or recurring code-snippet issues bubble to the top. Click any row to view the cluster, generate a one-sentence Claude diagnosis on demand (uses your settings-page Anthropic key), and triage.',
+      data: feedbackEntries as any,
+    },
   ];
 
   const currentTab = tabs.find(t => t.value === activeTab);
@@ -729,6 +795,17 @@ export default function WorkQueuePage() {
 
               {t.value === 'broken-links' ? (
                 <BrokenLinksChecker pages={pages} nodeById={nodeById} />
+              ) : t.value === 'feedback' ? (
+                <div className="flex flex-col gap-2">
+                  {(t.data as Array<[string, FeedbackBucket]>).map(([path, bucket]) => (
+                    <FeedbackQueueRow key={path} path={path} bucket={bucket} />
+                  ))}
+                  {t.data.length === 0 && (
+                    <div className="rounded-xl border bg-card p-6 text-sm text-muted-foreground">
+                      No feedback data yet. Run <code className="font-mono">pnpm enrich:feedback</code> to fetch from Mintlify.
+                    </div>
+                  )}
+                </div>
               ) : t.value === 'auth0-lint' ? (
                 <div className="flex flex-col gap-2">
                   {(t.data as any[]).map((x: any) => {
