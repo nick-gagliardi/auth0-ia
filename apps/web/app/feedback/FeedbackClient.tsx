@@ -20,6 +20,7 @@ import {
 import AppLayout from '@/components/AppLayout';
 import { Button } from '@/components/ui/button';
 import { useFeedback, useNodes } from '@/hooks/use-index-data';
+import { DIAGNOSIS_SYSTEM_PROMPT, buildDiagnosisUserPrompt } from '@/lib/feedback-diagnosis';
 import type { FeedbackBucket, FeedbackItem } from '@/types';
 
 type DiagnosisState =
@@ -28,7 +29,7 @@ type DiagnosisState =
   | { status: 'ready'; diagnosis: string; model: string; generatedAt: string }
   | { status: 'error'; message: string };
 
-function useDiagnosis(path: string) {
+function useDiagnosis(path: string, bucket: FeedbackBucket | null) {
   const [state, setState] = useState<DiagnosisState>({ status: 'loading' });
   const [generating, setGenerating] = useState(false);
 
@@ -63,24 +64,85 @@ function useDiagnosis(path: string) {
     };
   }, [path]);
 
+  // The Claude call happens browser-side because the LiteLLM proxy at
+  // llm.atko.ai is IP-allowlisted to authenticated browser sessions —
+  // server-side fetches from Vercel functions 403. Same pattern as the
+  // working /audit and /rules-deprecation pages.
   const generate = async () => {
+    if (!bucket) {
+      setState({ status: 'error', message: 'Cluster data not loaded yet' });
+      return;
+    }
     setGenerating(true);
     try {
-      const res = await fetch('/api/feedback/diagnose', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setState({ status: 'error', message: data.error ?? `HTTP ${res.status}` });
+      const keyRes = await fetch('/api/settings/key');
+      if (!keyRes.ok) {
+        setState({ status: 'error', message: 'No Anthropic key configured. Add one in Settings.' });
         return;
       }
+      const { apiKey } = await keyRes.json();
+
+      const baseUrl = process.env.NEXT_PUBLIC_ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
+      const isLiteLLMProxy = baseUrl.includes('llm.atko.ai');
+      const model = process.env.NEXT_PUBLIC_ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (isLiteLLMProxy) {
+        headers['Authorization'] = `Bearer ${apiKey}`;
+      } else {
+        headers['x-api-key'] = apiKey;
+        headers['anthropic-version'] = '2023-06-01';
+      }
+
+      const prompt = `${DIAGNOSIS_SYSTEM_PROMPT}\n\n---\n\n${buildDiagnosisUserPrompt(path, bucket)}`;
+
+      const aiRes = await fetch(`${baseUrl}/v1/messages`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({
+          model,
+          max_tokens: 256,
+          messages: [{ role: 'user', content: prompt }],
+        }),
+      });
+
+      if (!aiRes.ok) {
+        const errorText = await aiRes.text().catch(() => '');
+        setState({ status: 'error', message: `AI API error: ${aiRes.status}${errorText ? ` — ${errorText.slice(0, 200)}` : ''}` });
+        return;
+      }
+
+      const aiData = await aiRes.json();
+      const diagnosis = (aiData.content?.[0]?.text || '').trim();
+      if (!diagnosis) {
+        setState({ status: 'error', message: 'AI returned empty diagnosis' });
+        return;
+      }
+
+      // Persist server-side
+      const saveRes = await fetch('/api/feedback/diagnose', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path, diagnosis, model }),
+      });
+      const saveData = await saveRes.json();
+      if (!saveRes.ok) {
+        // AI call succeeded; show the result even if the save failed
+        console.error('[Feedback Diagnose] save failed:', saveData.error);
+        setState({
+          status: 'ready',
+          diagnosis,
+          model,
+          generatedAt: new Date().toISOString(),
+        });
+        return;
+      }
+
       setState({
         status: 'ready',
-        diagnosis: data.diagnosis,
-        model: data.model,
-        generatedAt: data.generatedAt,
+        diagnosis: saveData.diagnosis,
+        model: saveData.model,
+        generatedAt: saveData.generatedAt,
       });
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Failed to generate diagnosis';
@@ -507,7 +569,7 @@ function FeedbackBody({
   bucket: FeedbackBucket;
   cluster: FeedbackBucket['cluster'];
 }) {
-  const { state, generating, generate } = useDiagnosis(path);
+  const { state, generating, generate } = useDiagnosis(path, bucket);
   const diagnosisText = state.status === 'ready' ? state.diagnosis : null;
 
   return (

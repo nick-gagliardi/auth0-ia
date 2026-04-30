@@ -4,11 +4,12 @@ import fs from 'node:fs/promises';
 import nodePath from 'node:path';
 import { requireSession } from '@/lib/session';
 import { getFeedbackDiagnosis, upsertFeedbackDiagnosis } from '@/lib/db';
-import { DIAGNOSIS_SYSTEM_PROMPT, buildDiagnosisUserPrompt } from '@/lib/feedback-diagnosis';
 import type { FeedbackIndex } from '@/types';
 
 const BodySchema = z.object({
   path: z.string().min(1),
+  diagnosis: z.string().min(1).max(4000),
+  model: z.string().min(1).max(100),
 });
 
 async function readFeedbackIndex(): Promise<FeedbackIndex> {
@@ -42,15 +43,19 @@ export async function GET(request: Request) {
   });
 }
 
+// POST persists a diagnosis the client generated. The Anthropic call itself
+// happens browser-side (see FeedbackClient.tsx) — the LiteLLM proxy at
+// llm.atko.ai is IP-allowlisted to authenticated browser sessions, so calling
+// it from a Vercel function 403s. Server-side here just validates and stores.
 export async function POST(request: Request) {
   try {
-    const { user } = await requireSession(true);
+    const { user } = await requireSession();
     const body = await request.json().catch(() => null);
     const parsed = BodySchema.safeParse(body);
     if (!parsed.success) {
       return NextResponse.json({ ok: false, error: 'Invalid body' }, { status: 400 });
     }
-    const { path: targetPath } = parsed.data;
+    const { path: targetPath, diagnosis, model } = parsed.data;
 
     let index: FeedbackIndex;
     try {
@@ -62,69 +67,13 @@ export async function POST(request: Request) {
       );
     }
 
-    const bucket = index.byPath[targetPath];
-    if (!bucket) {
+    if (!index.byPath[targetPath]) {
       return NextResponse.json({ ok: false, error: `No feedback bucket for path: ${targetPath}` }, { status: 404 });
-    }
-
-    // Resolve Anthropic auth.
-    // When a LiteLLM proxy URL is configured, route through it via Bearer auth
-    // using any available key — env proxyToken first, otherwise the user's
-    // settings-page key. The user's stored key is typically a proxy-issued
-    // virtual key (sk-…), not a raw Anthropic key, so it must be sent to the
-    // proxy URL not directly to api.anthropic.com.
-    const configuredBaseUrl = process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com';
-    const isLiteLLMProxy = configuredBaseUrl.includes('llm.atko.ai');
-    const proxyToken = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
-    const userKey = user.anthropic_api_key_decrypted;
-
-    const useProxy = isLiteLLMProxy && (!!proxyToken || !!userKey);
-    const apiKey = useProxy ? (proxyToken || userKey) : userKey;
-    const baseUrl = useProxy ? configuredBaseUrl : 'https://api.anthropic.com';
-
-    if (!apiKey) {
-      return NextResponse.json({ ok: false, error: 'No Anthropic API key configured. Add one in Settings.' }, { status: 400 });
-    }
-
-    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-    if (useProxy) {
-      headers['Authorization'] = `Bearer ${apiKey}`;
-    } else {
-      headers['x-api-key'] = apiKey;
-      headers['anthropic-version'] = '2023-06-01';
-    }
-
-    const userPrompt = buildDiagnosisUserPrompt(targetPath, bucket);
-    // Inline the system prompt into the user message to match audit/rules-deprecation
-    // routing through the Okta LiteLLM proxy (top-level `system` is not preserved).
-    const prompt = `${DIAGNOSIS_SYSTEM_PROMPT}\n\n---\n\n${userPrompt}`;
-    const model = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514';
-
-    const response = await fetch(`${baseUrl}/v1/messages`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model,
-        max_tokens: 256,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('[Feedback Diagnose] AI error:', response.status, errorText);
-      return NextResponse.json({ ok: false, error: `AI API error: ${response.status}` }, { status: 502 });
-    }
-
-    const data = await response.json();
-    const text = (data.content?.[0]?.text || '').trim();
-    if (!text) {
-      return NextResponse.json({ ok: false, error: 'AI returned empty diagnosis' }, { status: 502 });
     }
 
     const stored = await upsertFeedbackDiagnosis({
       path: targetPath,
-      diagnosis: text,
+      diagnosis,
       model,
       userId: user.id,
     });
@@ -136,7 +85,7 @@ export async function POST(request: Request) {
       generatedAt: stored.generated_at,
     });
   } catch (err: any) {
-    console.error('[Feedback Diagnose] suggest error:', err);
+    console.error('[Feedback Diagnose] save error:', err);
     return NextResponse.json(
       { ok: false, error: err?.message || String(err) },
       { status: 400 },
