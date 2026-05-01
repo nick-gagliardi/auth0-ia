@@ -1,15 +1,15 @@
 {
-  "pagesScanned": 2706,
-  "pagesWithWarnings": 577,
-  "warningCount": 812,
+  "pagesScanned": 2722,
+  "pagesWithWarnings": 581,
+  "warningCount": 816,
   "byCode": {
     "missing_pkce_mention": 126,
     "missing_state_mention": 136,
-    "missing_nonce_mention": 275,
+    "missing_nonce_mention": 276,
     "token_storage_localstorage": 3,
     "token_storage_sessionstorage": 0,
     "token_storage_cookie": 11,
-    "rules_vs_actions_language": 261
+    "rules_vs_actions_language": 264
   },
   "items": [
     {
@@ -2903,22 +2903,22 @@
           "code": "missing_nonce_mention",
           "severity": "warn",
           "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-          "evidence": "Private Key JWT Client Authentication for OpenID Connect (OIDC) and Okta Workforce connections is currently available in [Early Access](/docs/troubleshoot/product-lifecycle/product",
-          "line": 7
+          "evidence": "Private Key <Tooltip tip=\"JSON Web Token (JWT): Standard ID Token format (and often Access Token format) used to represent claims securely between two parties.\" cta=\"View Glossary\"",
+          "line": 5
         },
         {
           "code": "missing_pkce_mention",
           "severity": "warn",
           "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
           "evidence": "After a user completes authentication with an upstream <Tooltip tip=\"Identity Provider (IdP): Service that stores and manages digital identities.\" cta=\"View Glossary\" href=\"/docs/g",
-          "line": 36
+          "line": 30
         },
         {
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
           "evidence": "After a user completes authentication with an upstream <Tooltip tip=\"Identity Provider (IdP): Service that stores and manages digital identities.\" cta=\"View Glossary\" href=\"/docs/g",
-          "line": 36
+          "line": 30
         }
       ]
     },
@@ -4214,6 +4214,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx",
+      "filePath": "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider.mdx",
       "filePath": "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider.mdx",
       "warnings": [
@@ -5226,6 +5231,16 @@
       "warnings": []
     },
     {
+      "id": "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "filePath": "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/events/correlate-identity-changes.mdx",
+      "filePath": "main/docs/customize/events/correlate-identity-changes.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/customize/events/create-an-event-stream.mdx",
       "filePath": "main/docs/customize/events/create-an-event-stream.mdx",
       "warnings": []
@@ -5243,6 +5258,16 @@
     {
       "id": "main/docs/customize/events/events-best-practices.mdx",
       "filePath": "main/docs/customize/events/events-best-practices.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "filePath": "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/customize/events/sync-data-across-systems.mdx",
+      "filePath": "main/docs/customize/events/sync-data-across-systems.mdx",
       "warnings": []
     },
     {
@@ -6978,6 +7003,11 @@
       ]
     },
     {
+      "id": "main/docs/events.mdx",
+      "filePath": "main/docs/events.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/events/group/group.created.mdx",
       "filePath": "main/docs/events/group/group.created.mdx",
       "warnings": []
@@ -7000,11 +7030,6 @@
     {
       "id": "main/docs/events/group/group.updated.mdx",
       "filePath": "main/docs/events/group/group.updated.mdx",
-      "warnings": []
-    },
-    {
-      "id": "main/docs/events/index.mdx",
-      "filePath": "main/docs/events/index.mdx",
       "warnings": []
     },
     {
@@ -7640,7 +7665,15 @@
     {
       "id": "main/docs/get-started/applications/signing-algorithms.mdx",
       "filePath": "main/docs/get-started/applications/signing-algorithms.mdx",
-      "warnings": []
+      "warnings": [
+        {
+          "code": "missing_nonce_mention",
+          "severity": "warn",
+          "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+          "evidence": "If you are configuring Private Key JWT Authentication with an Okta or OpenID Connect (OIDC) enterprise connection, you may have to choose [additional signing algorithms](/docs/auth",
+          "line": 19
+        }
+      ]
     },
     {
       "id": "main/docs/get-started/applications/test-database-connections.mdx",
@@ -11723,8 +11756,47 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `accept-invitation` screen.\"",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `brute-force-protection-unblock-failure` screen.\"",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `brute-force-protection-unblock-success` screen.\"",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx",
+      "warnings": [
+        {
+          "code": "rules_vs_actions_language",
+          "severity": "warn",
+          "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `brute-force-protection-unblock` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11736,8 +11808,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `consent` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11749,8 +11821,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `customized-consent` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11762,8 +11834,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-activation-allowed` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11775,8 +11847,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-activation-denied` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11788,8 +11860,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-activation` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11801,8 +11873,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-confirmation` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11814,8 +11886,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `email-identifier-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11827,8 +11899,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `email-otp-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11840,8 +11912,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `email-verification-result` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11858,8 +11930,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `interstitial-captcha` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11876,8 +11948,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `login-id` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11889,8 +11961,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `login-password` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11912,8 +11984,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `login` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11935,8 +12007,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `logout` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11948,8 +12020,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-begin-enroll-options` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11961,8 +12033,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-country-codes` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11974,8 +12046,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-detect-browser-capabilities` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -11987,8 +12059,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-email-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12000,8 +12072,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-email-list` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12013,8 +12085,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-enroll-result` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12026,8 +12098,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-login-options` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12039,8 +12111,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-otp-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12052,8 +12124,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-otp-enrollment-code` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12065,8 +12137,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-otp-enrollment-qr` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12078,8 +12150,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-phone-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12091,8 +12163,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-phone-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12104,8 +12176,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-challenge-push` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12117,8 +12189,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-enrollment-qr` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12130,8 +12202,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-list` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12143,8 +12215,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-welcome` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12156,8 +12228,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-recovery-code-challenge-new-code` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12169,8 +12241,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-recovery-code-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12182,8 +12254,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-recovery-code-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12195,8 +12267,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-sms-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12208,8 +12280,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-sms-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12221,8 +12293,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-sms-list` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12234,8 +12306,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-voice-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12247,8 +12319,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-voice-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12260,8 +12332,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-change-key-nickname` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12273,8 +12345,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-enrollment-success` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12286,8 +12358,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-error` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12299,8 +12371,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-not-available-error` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12312,8 +12384,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-platform-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12325,8 +12397,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-platform-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12338,8 +12410,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-roaming-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12351,8 +12423,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-roaming-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12364,8 +12436,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `organization-picker` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12377,8 +12449,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `organization-selection` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12390,8 +12462,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `passkey-enrollment-local` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12403,8 +12475,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `passkey-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12416,8 +12488,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `phone-identifier-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12429,8 +12501,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `phone-identifier-enrollment` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12442,8 +12514,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `redeem-ticket` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12455,8 +12527,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-email` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12468,8 +12540,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-error` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12481,8 +12553,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-email-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12494,8 +12566,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-otp-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12507,8 +12579,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-phone-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12520,8 +12592,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-push-challenge-push` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12533,8 +12605,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-recovery-code-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12546,8 +12618,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-sms-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12559,8 +12631,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-voice-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12572,8 +12644,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-webauthn-platform-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12585,8 +12657,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-webauthn-roaming-challenge` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12598,8 +12670,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-request` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12611,8 +12683,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-success` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12624,8 +12696,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12637,8 +12709,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `signup-id` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12650,8 +12722,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `signup-password` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12663,8 +12735,8 @@
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-          "line": 11
+          "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `signup` screen.\"",
+          "line": 3
         }
       ]
     },
@@ -12729,6 +12801,21 @@
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingThemes.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingThemes.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
       "warnings": []
     },
     {
@@ -13383,6 +13470,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
       "warnings": [
@@ -13636,6 +13728,21 @@
     {
       "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnAcceptInvitation.mdx",
       "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnAcceptInvitation.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+      "warnings": []
+    },
+    {
+      "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
+      "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
       "warnings": []
     },
     {
@@ -17293,6 +17400,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
+      "filePath": "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx",
       "filePath": "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx",
       "warnings": [
@@ -19810,6 +19922,7 @@
     "main/docs/authenticate.mdx": [],
     "main/docs/customize.mdx": [],
     "main/docs/deploy-monitor.mdx": [],
+    "main/docs/events.mdx": [],
     "main/docs/fine-grained-m2m-token-quotas.mdx": [
       {
         "code": "rules_vs_actions_language",
@@ -21110,6 +21223,7 @@
       }
     ],
     "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock.mdx": [],
+    "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx": [],
     "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -22905,6 +23019,9 @@
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingSettings.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingThemes.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CaptchaContext.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ClientMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ConfirmLogoutOptions.mdx": [],
@@ -23080,6 +23197,7 @@
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyCreateResponse.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyEnrollmentLocalMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyEnrollmentMembers.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": [
       {
         "code": "rules_vs_actions_language",
@@ -23144,6 +23262,9 @@
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/Scope.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembers.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnAcceptInvitation.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": [],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnConsent.mdx": [],
     "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnCustomizedConsent.mdx": [
       {
@@ -23322,8 +23443,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `signup-password` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup-id/index.mdx": [
@@ -23331,8 +23452,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `signup-id` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/signup/index.mdx": [
@@ -23340,8 +23461,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `signup` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-success/index.mdx": [
@@ -23349,8 +23470,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-success` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-request/index.mdx": [
@@ -23358,8 +23479,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-request` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-webauthn-roaming-challenge/index.mdx": [
@@ -23367,8 +23488,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-webauthn-roaming-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-webauthn-platform-challenge/index.mdx": [
@@ -23376,8 +23497,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-webauthn-platform-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-voice-challenge/index.mdx": [
@@ -23385,8 +23506,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-voice-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-sms-challenge/index.mdx": [
@@ -23394,8 +23515,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-sms-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-recovery-code-challenge/index.mdx": [
@@ -23403,8 +23524,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-recovery-code-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-push-challenge-push/index.mdx": [
@@ -23412,8 +23533,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-push-challenge-push` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-phone-challenge/index.mdx": [
@@ -23421,8 +23542,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-phone-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-otp-challenge/index.mdx": [
@@ -23430,8 +23551,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-otp-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-mfa-email-challenge/index.mdx": [
@@ -23439,8 +23560,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-mfa-email-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-error/index.mdx": [
@@ -23448,8 +23569,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-error` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password-email/index.mdx": [
@@ -23457,8 +23578,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password-email` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/reset-password/index.mdx": [
@@ -23466,8 +23587,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `reset-password` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/redeem-ticket/index.mdx": [
@@ -23475,8 +23596,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `redeem-ticket` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/phone-identifier-enrollment/index.mdx": [
@@ -23484,8 +23605,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `phone-identifier-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/phone-identifier-challenge/index.mdx": [
@@ -23493,8 +23614,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `phone-identifier-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/passkey-enrollment-local/index.mdx": [
@@ -23502,8 +23623,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `passkey-enrollment-local` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/passkey-enrollment/index.mdx": [
@@ -23511,8 +23632,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `passkey-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/organization-selection/index.mdx": [
@@ -23520,8 +23641,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `organization-selection` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/organization-picker/index.mdx": [
@@ -23529,8 +23650,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `organization-picker` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-roaming-enrollment/index.mdx": [
@@ -23538,8 +23659,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-roaming-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-roaming-challenge/index.mdx": [
@@ -23547,8 +23668,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-roaming-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-platform-enrollment/index.mdx": [
@@ -23556,8 +23677,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-platform-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-platform-challenge/index.mdx": [
@@ -23565,8 +23686,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-platform-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-not-available-error/index.mdx": [
@@ -23574,8 +23695,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-not-available-error` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-error/index.mdx": [
@@ -23583,8 +23704,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-error` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-enrollment-success/index.mdx": [
@@ -23592,8 +23713,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-enrollment-success` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-webauthn-change-key-nickname/index.mdx": [
@@ -23601,8 +23722,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-webauthn-change-key-nickname` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-voice-enrollment/index.mdx": [
@@ -23610,8 +23731,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-voice-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-voice-challenge/index.mdx": [
@@ -23619,8 +23740,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-voice-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-list/index.mdx": [
@@ -23628,8 +23749,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-sms-list` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-enrollment/index.mdx": [
@@ -23637,8 +23758,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-sms-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-sms-challenge/index.mdx": [
@@ -23646,8 +23767,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-sms-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-enrollment/index.mdx": [
@@ -23655,8 +23776,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-recovery-code-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-challenge-new-code/index.mdx": [
@@ -23664,8 +23785,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-recovery-code-challenge-new-code` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-recovery-code-challenge/index.mdx": [
@@ -23673,8 +23794,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-recovery-code-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-welcome/index.mdx": [
@@ -23682,8 +23803,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-welcome` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-list/index.mdx": [
@@ -23691,8 +23812,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-list` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-enrollment-qr/index.mdx": [
@@ -23700,8 +23821,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-enrollment-qr` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-push-challenge-push/index.mdx": [
@@ -23709,8 +23830,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-push-challenge-push` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-phone-enrollment/index.mdx": [
@@ -23718,8 +23839,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-phone-enrollment` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-phone-challenge/index.mdx": [
@@ -23727,8 +23848,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-phone-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-enrollment-qr/index.mdx": [
@@ -23736,8 +23857,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-otp-enrollment-qr` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-enrollment-code/index.mdx": [
@@ -23745,8 +23866,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-otp-enrollment-code` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-otp-challenge/index.mdx": [
@@ -23754,8 +23875,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-otp-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-login-options/index.mdx": [
@@ -23763,8 +23884,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-login-options` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-enroll-result/index.mdx": [
@@ -23772,8 +23893,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-enroll-result` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-email-list/index.mdx": [
@@ -23781,8 +23902,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-email-list` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-email-challenge/index.mdx": [
@@ -23790,8 +23911,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-email-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-detect-browser-capabilities/index.mdx": [
@@ -23799,8 +23920,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-detect-browser-capabilities` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-country-codes/index.mdx": [
@@ -23808,8 +23929,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-country-codes` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/mfa-begin-enroll-options/index.mdx": [
@@ -23817,8 +23938,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `mfa-begin-enroll-options` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/logout-complete/index.mdx": [],
@@ -23828,8 +23949,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `logout` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-passwordless-sms-otp/index.mdx": [],
@@ -23839,8 +23960,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `login-password` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-id/index.mdx": [
@@ -23848,8 +23969,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `login-id` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/login-email-verification/index.mdx": [],
@@ -23858,8 +23979,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `login` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/interstitial-captcha/index.mdx": [
@@ -23867,8 +23988,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `interstitial-captcha` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/email-verification-result/index.mdx": [
@@ -23876,8 +23997,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `email-verification-result` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/email-otp-challenge/index.mdx": [
@@ -23885,8 +24006,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `email-otp-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/email-identifier-challenge/index.mdx": [
@@ -23894,8 +24015,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `email-identifier-challenge` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-confirmation/index.mdx": [
@@ -23903,8 +24024,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-confirmation` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation-denied/index.mdx": [
@@ -23912,8 +24033,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-activation-denied` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation-allowed/index.mdx": [
@@ -23921,8 +24042,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-activation-allowed` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/device-code-activation/index.mdx": [
@@ -23930,8 +24051,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `device-code-activation` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/customized-consent/index.mdx": [
@@ -23939,8 +24060,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `customized-consent` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/consent/index.mdx": [
@@ -23948,8 +24069,35 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `consent` screen.\"",
+        "line": 3
+      }
+    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `brute-force-protection-unblock-success` screen.\"",
+        "line": 3
+      }
+    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `brute-force-protection-unblock-failure` screen.\"",
+        "line": 3
+      }
+    ],
+    "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx": [
+      {
+        "code": "rules_vs_actions_language",
+        "severity": "warn",
+        "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `brute-force-protection-unblock` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Screens/accept-invitation/index.mdx": [
@@ -23957,8 +24105,8 @@
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "Each screen has its own set of hooks and methods. The SDK supports **partial import** and **root import** for each screen.",
-        "line": 11
+        "evidence": "description: \"Describes all the hooks and methods available to customize the Universal Login `accept-invitation` screen.\"",
+        "line": 3
       }
     ],
     "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/index.mdx": [],
@@ -25737,7 +25885,15 @@
     "main/docs/get-started/applications/rotate-credentials.mdx": [],
     "main/docs/get-started/applications/set-up-cors.mdx": [],
     "main/docs/get-started/applications/set-up-database-connections.mdx": [],
-    "main/docs/get-started/applications/signing-algorithms.mdx": [],
+    "main/docs/get-started/applications/signing-algorithms.mdx": [
+      {
+        "code": "missing_nonce_mention",
+        "severity": "warn",
+        "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
+        "evidence": "If you are configuring Private Key JWT Authentication with an Okta or OpenID Connect (OIDC) enterprise connection, you may have to choose [additional signing algorithms](/docs/auth",
+        "line": 19
+      }
+    ],
     "main/docs/get-started/applications/test-database-connections.mdx": [],
     "main/docs/get-started/applications/third-party-applications.mdx": [],
     "main/docs/get-started/applications/update-application-connections.mdx": [],
@@ -25969,7 +26125,6 @@
         "line": 7
       }
     ],
-    "main/docs/events/index.mdx": [],
     "main/docs/events/user/user.created.mdx": [],
     "main/docs/events/user/user.deleted.mdx": [],
     "main/docs/events/user/user.updated.mdx": [],
@@ -26770,10 +26925,14 @@
         "line": 2
       }
     ],
+    "main/docs/customize/events/consume-events-with-events-api.mdx": [],
+    "main/docs/customize/events/correlate-identity-changes.mdx": [],
     "main/docs/customize/events/create-an-event-stream.mdx": [],
     "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [],
     "main/docs/customize/events/event-types.mdx": [],
     "main/docs/customize/events/events-best-practices.mdx": [],
+    "main/docs/customize/events/orchestrate-business-workflows.mdx": [],
+    "main/docs/customize/events/sync-data-across-systems.mdx": [],
     "main/docs/customize/email/email-templates.mdx": [],
     "main/docs/customize/email/manage-email-flow.mdx": [],
     "main/docs/customize/email/send-email-invitations-for-application-signup.mdx": [],
@@ -27140,6 +27299,7 @@
     ],
     "main/docs/authenticate/protocols/saml/saml-identity-provider-configuration-settings.mdx": [],
     "main/docs/authenticate/protocols/saml/saml-sso-integrations.mdx": [],
+    "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx": [],
     "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider.mdx": [
       {
         "code": "missing_nonce_mention",
@@ -27977,22 +28137,22 @@
         "code": "missing_nonce_mention",
         "severity": "warn",
         "message": "OIDC / id_token appears in this page, but \"nonce\" is not mentioned (nonce is recommended to mitigate replay).",
-        "evidence": "Private Key JWT Client Authentication for OpenID Connect (OIDC) and Okta Workforce connections is currently available in [Early Access](/docs/troubleshoot/product-lifecycle/product",
-        "line": 7
+        "evidence": "Private Key <Tooltip tip=\"JSON Web Token (JWT): Standard ID Token format (and often Access Token format) used to represent claims securely between two parties.\" cta=\"View Glossary\"",
+        "line": 5
       },
       {
         "code": "missing_pkce_mention",
         "severity": "warn",
         "message": "OAuth Authorization Code flow appears in this page, but PKCE is not mentioned (PKCE is recommended for public clients).",
         "evidence": "After a user completes authentication with an upstream <Tooltip tip=\"Identity Provider (IdP): Service that stores and manages digital identities.\" cta=\"View Glossary\" href=\"/docs/g",
-        "line": 36
+        "line": 30
       },
       {
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
         "evidence": "After a user completes authentication with an upstream <Tooltip tip=\"Identity Provider (IdP): Service that stores and manages digital identities.\" cta=\"View Glossary\" href=\"/docs/g",
-        "line": 36
+        "line": 30
       }
     ],
     "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx": [],

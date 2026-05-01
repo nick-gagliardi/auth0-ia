@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-04-30T05:34:31.577Z",
+  "generatedAtUtc": "2026-05-01T05:45:56.766Z",
   "maxLen": 5,
   "minLen": 3,
   "startsPerRoot": 25,
@@ -26,7 +26,7 @@
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/secure/attack-protection.mdx"
       ],
-      "score": 96.1729,
+      "score": 96.2076,
       "support": 1,
       "navRoot": null
     },
@@ -62,7 +62,7 @@
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/customize/custom-domains.mdx"
       ],
-      "score": 95.7014,
+      "score": 95.7362,
       "support": 1,
       "navRoot": null
     },
@@ -75,18 +75,6 @@
         "main/docs/customize/custom-domains.mdx"
       ],
       "score": 95.4789,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-      ],
-      "score": 95.46,
       "support": 1,
       "navRoot": null
     },
@@ -140,6 +128,18 @@
     },
     {
       "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx"
+      ],
+      "score": 95.1427,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
         "main/docs/customize/rules.mdx",
@@ -152,13 +152,13 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/customize/custom-domains.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx"
       ],
-      "score": 95.1079,
+      "score": 95.1395,
       "support": 1,
       "navRoot": null
     },
@@ -194,7 +194,7 @@
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
       ],
-      "score": 94.7949,
+      "score": 94.8297,
       "support": 1,
       "navRoot": null
     },
@@ -224,18 +224,6 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/deploy-monitor/logs.mdx"
-      ],
-      "score": 94.7719,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/libraries/auth0js.mdx",
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/security-guidance/data-security/allowlist.mdx",
@@ -248,49 +236,25 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-        "main/docs/customize/rules.mdx"
-      ],
-      "score": 94.719,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-      ],
-      "score": 94.657,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
       ],
-      "score": 94.6308,
+      "score": 94.7134,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx"
       ],
-      "score": 94.6178,
+      "score": 94.668,
       "support": 1,
       "navRoot": null
     },
@@ -314,7 +278,7 @@
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
         "main/docs/secure/tokens/json-web-tokens.mdx"
       ],
-      "score": 94.4431,
+      "score": 94.5258,
       "support": 1,
       "navRoot": null
     },
@@ -380,13 +344,13 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
+        "main/docs/libraries/auth0js.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
         "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/deploy-monitor/logs.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
       ],
-      "score": 94.1584,
+      "score": 94.1648,
       "support": 1,
       "navRoot": null
     },
@@ -398,7 +362,7 @@
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
       ],
-      "score": 94.1105,
+      "score": 94.1453,
       "support": 1,
       "navRoot": null
     },
@@ -410,7 +374,7 @@
         "main/docs/deploy-monitor/logs.mdx",
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
       ],
-      "score": 94.1069,
+      "score": 94.1416,
       "support": 1,
       "navRoot": null
     },
@@ -422,7 +386,19 @@
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
       ],
-      "score": 94.0373,
+      "score": 94.1199,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx"
+      ],
+      "score": 94.0745,
       "support": 1,
       "navRoot": null
     },
@@ -434,7 +410,7 @@
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
         "main/docs/secure/attack-protection.mdx"
       ],
-      "score": 93.9528,
+      "score": 93.9876,
       "support": 1,
       "navRoot": null
     },
@@ -500,6 +476,18 @@
     },
     {
       "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+      ],
+      "score": 93.7616,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/security-guidance/data-security/allowlist.mdx",
         "main/docs/customize/rules.mdx",
@@ -536,6 +524,18 @@
     },
     {
       "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx"
+      ],
+      "score": 93.6071,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/security-guidance/data-security/allowlist.mdx",
         "main/docs/customize/rules.mdx",
@@ -551,22 +551,10 @@
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx"
-      ],
-      "score": 93.5723,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/authenticate/identity-providers.mdx"
       ],
-      "score": 93.5192,
+      "score": 93.554,
       "support": 1,
       "navRoot": null
     },
@@ -584,13 +572,13 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx",
+        "main/docs/secure/attack-protection/bot-detection.mdx"
       ],
-      "score": 93.4083,
+      "score": 93.3718,
       "support": 1,
       "navRoot": null
     },
@@ -609,36 +597,36 @@
     {
       "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/extensions/authorization-extension.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx",
-        "main/docs/secure/attack-protection/bot-detection.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
-      "score": 93.337,
+      "score": 93.348,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+        "main/docs/manage-users/organizations/organizations-overview.mdx",
+        "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
-      "score": 93.3321,
+      "score": 93.3274,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/extensions/authorization-extension.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
       ],
-      "score": 93.3133,
+      "score": 93.3032,
       "support": 1,
       "navRoot": null
     },
@@ -658,107 +646,11 @@
       "path": [
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
-      ],
-      "score": 93.2684,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/manage-users/organizations/organizations-overview.mdx",
-        "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-      ],
-      "score": 93.2404,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
-      ],
-      "score": 93.2399,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
-      "score": 93.2388,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx"
-      ],
-      "score": 93.2063,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
-      ],
-      "score": 93.1915,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
-      ],
-      "score": 93.1915,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/deploy-monitor/logs.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
-      ],
-      "score": 93.1878,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/deploy-monitor/logs.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
-      ],
-      "score": 93.1878,
+      "score": 93.2735,
       "support": 1,
       "navRoot": null
     },
@@ -770,7 +662,55 @@
         "main/docs/customize/custom-domains.mdx",
         "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
       ],
-      "score": 93.1231,
+      "score": 93.2621,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/libraries/auth0js.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
+      ],
+      "score": 93.1915,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
+      ],
+      "score": 93.1915,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/libraries/auth0js.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/deploy-monitor/logs.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+      ],
+      "score": 93.1878,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/deploy-monitor/logs.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+      ],
+      "score": 93.1878,
       "support": 1,
       "navRoot": null
     },
@@ -800,13 +740,49 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+      ],
+      "score": 93.0887,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/authenticate/login/auth0-universal-login.mdx",
         "main/docs/get-started/auth0-overview/create-applications.mdx",
         "main/docs/secure/application-credentials.mdx",
-        "main/docs/customize/custom-domains.mdx"
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
       ],
-      "score": 93.047,
+      "score": 93.0819,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
+      ],
+      "score": 93.0771,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/deploy-monitor/logs.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+      ],
+      "score": 93.0735,
       "support": 1,
       "navRoot": null
     },
@@ -872,13 +848,25 @@
     },
     {
       "path": [
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/get-started/auth0-overview/create-applications.mdx",
-        "main/docs/secure/application-credentials.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.9992,
+      "score": 93.0136,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/authenticate/identity-providers.mdx"
+      ],
+      "score": 92.9605,
       "support": 1,
       "navRoot": null
     },
@@ -896,18 +884,6 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/authenticate/identity-providers.mdx"
-      ],
-      "score": 92.9257,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
         "main/docs/customize/rules.mdx",
@@ -920,13 +896,13 @@
     },
     {
       "path": [
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx"
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
+        "main/docs/secure/attack-protection.mdx"
       ],
-      "score": 92.9173,
+      "score": 92.9194,
       "support": 1,
       "navRoot": null
     },
@@ -938,19 +914,19 @@
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/secure/attack-protection/brute-force-protection.mdx"
       ],
-      "score": 92.8613,
+      "score": 92.8961,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx",
-        "main/docs/secure/attack-protection/bot-detection.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.8263,
+      "score": 92.8315,
       "support": 1,
       "navRoot": null
     },
@@ -968,13 +944,13 @@
     },
     {
       "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.8085,
+      "score": 92.7564,
       "support": 1,
       "navRoot": null
     },
@@ -1004,6 +980,30 @@
     },
     {
       "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+      ],
+      "score": 92.68,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/extensions/authorization-extension.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/deploy-monitor/logs.mdx"
+      ],
+      "score": 92.66,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/libraries/auth0js.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
@@ -1023,18 +1023,6 @@
         "main/docs/secure/tokens/json-web-tokens.mdx"
       ],
       "score": 92.6532,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-      ],
-      "score": 92.6452,
       "support": 1,
       "navRoot": null
     },
@@ -1052,25 +1040,25 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/extensions/authorization-extension.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/deploy-monitor/logs.mdx"
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/secure/application-credentials.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/security-guidance/data-security/allowlist.mdx",
+        "main/docs/customize/rules.mdx"
       ],
-      "score": 92.6252,
+      "score": 92.6124,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
-      "score": 92.6005,
+      "score": 92.6116,
       "support": 1,
       "navRoot": null
     },
@@ -1100,25 +1088,25 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx"
       ],
-      "score": 92.5555,
+      "score": 92.5438,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx"
       ],
-      "score": 92.5254,
+      "score": 92.5389,
       "support": 1,
       "navRoot": null
     },
@@ -1148,6 +1136,42 @@
     },
     {
       "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/extensions/authorization-extension.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx"
+      ],
+      "score": 92.5059,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+      ],
+      "score": 92.4952,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/authenticate/identity-providers.mdx"
+      ],
+      "score": 92.4858,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/secure/attack-protection.mdx",
         "main/docs/secure/attack-protection/bot-detection.mdx",
@@ -1155,18 +1179,6 @@
         "main/docs/deploy-monitor/logs.mdx"
       ],
       "score": 92.4744,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/extensions/authorization-extension.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx"
-      ],
-      "score": 92.4711,
       "support": 1,
       "navRoot": null
     },
@@ -1184,6 +1196,18 @@
     },
     {
       "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx"
+      ],
+      "score": 92.4687,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/secure/attack-protection.mdx",
@@ -1191,6 +1215,18 @@
         "main/docs/authenticate/login/auth0-universal-login.mdx"
       ],
       "score": 92.4601,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/deploy-monitor/logs.mdx",
+        "main/docs/customize/log-streams.mdx"
+      ],
+      "score": 92.4593,
       "support": 1,
       "navRoot": null
     },
@@ -1208,13 +1244,13 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/deploy-monitor/logs.mdx",
-        "main/docs/customize/log-streams.mdx"
+        "main/docs/authenticate/login/auth0-universal-login.mdx",
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/customize/rules.mdx"
       ],
-      "score": 92.4245,
+      "score": 92.4251,
       "support": 1,
       "navRoot": null
     },
@@ -1256,30 +1292,6 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-      ],
-      "score": 92.3808,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-      ],
-      "score": 92.378,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/secure/tokens/refresh-tokens.mdx",
         "main/docs/secure/tokens/refresh-tokens/refresh-token-rotation.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
@@ -1316,25 +1328,13 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx",
+        "main/docs/secure/attack-protection/bot-detection.mdx",
         "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
-        "main/docs/authenticate/database-connections.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
       ],
-      "score": 92.3491,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
-      ],
-      "score": 92.3325,
+      "score": 92.3341,
       "support": 1,
       "navRoot": null
     },
@@ -1376,13 +1376,13 @@
     },
     {
       "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx",
+        "main/docs/secure/attack-protection/bot-detection.mdx"
       ],
-      "score": 92.3029,
+      "score": 92.3036,
       "support": 1,
       "navRoot": null
     },
@@ -1412,37 +1412,49 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/manage-users/organizations/organizations-overview.mdx",
+        "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
       ],
-      "score": 92.2574,
+      "score": 92.2516,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/deploy-monitor/logs.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
-        "main/docs/secure/attack-protection.mdx"
+        "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx"
       ],
-      "score": 92.2405,
+      "score": 92.2437,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.2312,
+      "score": 92.238,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
+      ],
+      "score": 92.235,
       "support": 1,
       "navRoot": null
     },
@@ -1460,13 +1472,13 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
-      "score": 92.2089,
+      "score": 92.2054,
       "support": 1,
       "navRoot": null
     },
@@ -1496,37 +1508,37 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-      ],
-      "score": 92.1884,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/manage-users/organizations/organizations-overview.mdx",
         "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
         "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
+        "main/docs/customize/actions/actions-overview.mdx"
       ],
-      "score": 92.1646,
+      "score": 92.1765,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/libraries/auth0js.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+      ],
+      "score": 92.1349,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.1561,
+      "score": 92.1349,
       "support": 1,
       "navRoot": null
     },
@@ -1544,13 +1556,37 @@
     },
     {
       "path": [
-        "main/docs/manage-users/organizations/organizations-overview.mdx",
-        "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/libraries/auth0js.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx"
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.0895,
+      "score": 92.0598,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+      ],
+      "score": 92.0598,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/secure/tokens/id-tokens.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      ],
+      "score": 92.0555,
       "support": 1,
       "navRoot": null
     },
@@ -1562,19 +1598,19 @@
         "main/docs/secure/attack-protection.mdx",
         "main/docs/secure/attack-protection/brute-force-protection.mdx"
       ],
-      "score": 92.0191,
+      "score": 92.0539,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
         "main/docs/customize/actions/write-your-first-action.mdx",
         "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 92.007,
+      "score": 92.0205,
       "support": 1,
       "navRoot": null
     },
@@ -1616,13 +1652,13 @@
     },
     {
       "path": [
-        "main/docs/secure/tokens/id-tokens.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx"
       ],
-      "score": 91.9728,
+      "score": 91.9503,
       "support": 1,
       "navRoot": null
     },
@@ -1641,6 +1677,30 @@
     {
       "path": [
         "main/docs/libraries/auth0js.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx"
+      ],
+      "score": 91.9473,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+      ],
+      "score": 91.9455,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/libraries/auth0js.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
@@ -1659,6 +1719,18 @@
         "main/docs/secure/attack-protection/brute-force-protection.mdx"
       ],
       "score": 91.9422,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+      ],
+      "score": 91.9253,
       "support": 1,
       "navRoot": null
     },
@@ -1676,13 +1748,13 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
-        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/authenticate/identity-providers.mdx"
       ],
-      "score": 91.8905,
+      "score": 91.8923,
       "support": 1,
       "navRoot": null
     },
@@ -1695,30 +1767,6 @@
         "main/docs/authenticate/login/auth0-universal-login.mdx"
       ],
       "score": 91.8866,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx"
-      ],
-      "score": 91.8647,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
-      ],
-      "score": 91.8621,
       "support": 1,
       "navRoot": null
     },
@@ -1754,7 +1802,19 @@
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/customize/rules.mdx"
       ],
-      "score": 91.7967,
+      "score": 91.8297,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/secure/attack-protection/brute-force-protection.mdx"
+      ],
+      "score": 91.8279,
       "support": 1,
       "navRoot": null
     },
@@ -1767,30 +1827,6 @@
         "main/docs/secure/attack-protection/brute-force-protection.mdx"
       ],
       "score": 91.7967,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
-      ],
-      "score": 91.787,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-      ],
-      "score": 91.7845,
       "support": 1,
       "navRoot": null
     },
@@ -1832,18 +1868,6 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
-      ],
-      "score": 91.739,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/secure/tokens/access-tokens.mdx",
         "main/docs/secure/tokens/token-best-practices.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx",
@@ -1868,18 +1892,6 @@
     },
     {
       "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
-      ],
-      "score": 91.7327,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/libraries/auth0js.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
@@ -1899,6 +1911,30 @@
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
       "score": 91.7262,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/secure/tokens/json-web-tokens.mdx",
+        "main/docs/secure/tokens/id-tokens.mdx"
+      ],
+      "score": 91.7228,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+      ],
+      "score": 91.7085,
       "support": 1,
       "navRoot": null
     },
@@ -1928,30 +1964,6 @@
     },
     {
       "path": [
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-      ],
-      "score": 91.6814,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-      ],
-      "score": 91.6814,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
         "main/docs/customize/rules.mdx",
@@ -1976,61 +1988,13 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-      ],
-      "score": 91.6667,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
-        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx"
-      ],
-      "score": 91.6576,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-        "main/docs/secure/tokens/json-web-tokens.mdx",
-        "main/docs/secure/tokens/id-tokens.mdx"
-      ],
-      "score": 91.6401,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/auth0-universal-login.mdx",
-        "main/docs/authenticate/login/auth0-universal-login/universal-login-vs-classic-login/universal-experience.mdx",
         "main/docs/manage-users/organizations/organizations-overview.mdx",
-        "main/docs/authenticate/database-connections.mdx"
-      ],
-      "score": 91.64,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+        "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
       ],
-      "score": 91.6377,
+      "score": 91.6581,
       "support": 1,
       "navRoot": null
     },
@@ -2048,37 +2012,13 @@
     },
     {
       "path": [
-        "main/docs/libraries/auth0js.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
       ],
-      "score": 91.6063,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx",
-        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
-      ],
-      "score": 91.6063,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx",
-        "main/docs/secure/tokens/access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-      ],
-      "score": 91.5919,
+      "score": 91.6119,
       "support": 1,
       "navRoot": null
     },
@@ -2120,37 +2060,37 @@
     },
     {
       "path": [
-        "main/docs/manage-users/organizations/organizations-overview.mdx",
-        "main/docs/manage-users/organizations/configure-organizations/invite-members.mdx",
-        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/libraries/auth0js.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 91.5711,
+      "score": 91.5413,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
         "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/which-oauth-2-0-flow-should-i-use.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
       ],
-      "score": 91.5592,
+      "score": 91.5413,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
       ],
-      "score": 91.5423,
+      "score": 91.5358,
       "support": 1,
       "navRoot": null
     },
@@ -2204,18 +2144,6 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/actions-overview.mdx",
-        "main/docs/deploy-monitor/logs.mdx"
-      ],
-      "score": 91.5003,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/authenticate/login/auth0-universal-login.mdx",
         "main/docs/deploy-monitor/logs.mdx",
         "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
@@ -2240,6 +2168,54 @@
     },
     {
       "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/secure/tokens/token-best-practices.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+      ],
+      "score": 91.4632,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
+        "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/actions-overview.mdx"
+      ],
+      "score": 91.4607,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/libraries/auth0js.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+        "main/docs/authenticate/protocols/oauth.mdx"
+      ],
+      "score": 91.4277,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx"
+      ],
+      "score": 91.427,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
         "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
         "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
         "main/docs/customize/rules.mdx",
@@ -2247,6 +2223,18 @@
         "main/docs/secure/attack-protection.mdx"
       ],
       "score": 91.4212,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/secure/tokens/refresh-tokens.mdx",
+        "main/docs/get-started/apis/api-settings.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+      ],
+      "score": 91.4127,
       "support": 1,
       "navRoot": null
     },
@@ -2276,37 +2264,13 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
-        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
-        "main/docs/customize/rules.mdx"
-      ],
-      "score": 91.369,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/authenticate/login/configure-silent-authentication.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
         "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection.mdx"
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/deploy-monitor/logs.mdx",
+        "main/docs/customize/log-streams.mdx"
       ],
-      "score": 91.3462,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
-        "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/custom-domains.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-        "main/docs/authenticate/protocols/oauth.mdx"
-      ],
-      "score": 91.345,
+      "score": 91.3911,
       "support": 1,
       "navRoot": null
     },
@@ -2324,18 +2288,6 @@
     },
     {
       "path": [
-        "main/docs/secure/tokens/refresh-tokens.mdx",
-        "main/docs/get-started/apis/api-settings.mdx",
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-      ],
-      "score": 91.3258,
-      "support": 1,
-      "navRoot": null
-    },
-    {
-      "path": [
         "main/docs/customize/custom-domains.mdx",
         "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
         "main/docs/libraries/auth0js.mdx",
@@ -2348,13 +2300,25 @@
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
-        "main/docs/libraries/auth0js.mdx",
+        "main/docs/manage-users/access-control/rbac.mdx",
         "main/docs/customize/rules.mdx",
         "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/brute-force-protection.mdx"
+        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
+        "main/docs/secure/attack-protection/bot-detection.mdx"
       ],
-      "score": 91.3062,
+      "score": 91.3094,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/secure/application-credentials.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+      ],
+      "score": 91.3082,
       "support": 1,
       "navRoot": null
     },
@@ -2384,25 +2348,61 @@
     },
     {
       "path": [
-        "main/docs/manage-users/access-control/rbac.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-        "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx",
-        "main/docs/secure/attack-protection/bot-detection.mdx"
+        "main/docs/secure/tokens/json-web-tokens/create-custom-claims.mdx",
+        "main/docs/secure/tokens/access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/customize/custom-domains.mdx"
       ],
-      "score": 91.2746,
+      "score": 91.2698,
       "support": 1,
       "navRoot": null
     },
     {
       "path": [
-        "main/docs/authenticate/single-sign-on.mdx",
         "main/docs/libraries/auth0js.mdx",
-        "main/docs/customize/rules.mdx",
-        "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-        "main/docs/customize/actions/write-your-first-action.mdx"
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+        "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx",
+        "main/docs/secure/tokens/refresh-tokens.mdx"
       ],
-      "score": 91.2686,
+      "score": 91.2645,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/customize/actions/actions-overview.mdx",
+        "main/docs/customize/actions/write-your-first-action.mdx",
+        "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+        "main/docs/customize/custom-domains.mdx",
+        "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+      ],
+      "score": 91.2623,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+        "main/docs/secure/tokens/token-best-practices.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx"
+      ],
+      "score": 91.1983,
+      "support": 1,
+      "navRoot": null
+    },
+    {
+      "path": [
+        "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+        "main/docs/customize/rules.mdx",
+        "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+        "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
+        "main/docs/get-started/authentication-and-authorization-flow/resource-owner-password-flow.mdx"
+      ],
+      "score": 91.1755,
       "support": 1,
       "navRoot": null
     }
@@ -2430,7 +2430,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 96.1729,
+          "score": 96.2076,
           "support": 1,
           "navRoot": null
         },
@@ -2466,7 +2466,7 @@
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 95.7014,
+          "score": 95.7362,
           "support": 1,
           "navRoot": null
         },
@@ -2479,18 +2479,6 @@
             "main/docs/customize/custom-domains.mdx"
           ],
           "score": 95.4789,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
-          ],
-          "score": 95.46,
           "support": 1,
           "navRoot": null
         },
@@ -2544,6 +2532,18 @@
         },
         {
           "path": [
+            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 95.1427,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
             "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
             "main/docs/customize/rules.mdx",
@@ -2556,13 +2556,13 @@
         },
         {
           "path": [
-            "main/docs/manage-users/access-control/rbac.mdx",
+            "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
-            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
-            "main/docs/customize/custom-domains.mdx"
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+            "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 95.1079,
+          "score": 95.1395,
           "support": 1,
           "navRoot": null
         },
@@ -2598,7 +2598,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
-          "score": 94.7949,
+          "score": 94.8297,
           "support": 1,
           "navRoot": null
         },
@@ -2628,18 +2628,6 @@
         },
         {
           "path": [
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/rules.mdx",
-            "main/docs/customize/actions/actions-overview.mdx",
-            "main/docs/deploy-monitor/logs.mdx"
-          ],
-          "score": 94.7719,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
             "main/docs/libraries/auth0js.mdx",
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/security-guidance/data-security/allowlist.mdx",
@@ -2652,49 +2640,25 @@
         },
         {
           "path": [
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/secure/security-guidance/data-security/allowlist.mdx",
-            "main/docs/customize/rules.mdx"
-          ],
-          "score": 94.719,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
-            "main/docs/libraries/auth0js.mdx",
-            "main/docs/customize/custom-domains.mdx",
-            "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
-            "main/docs/authenticate/login/auth0-universal-login.mdx",
-            "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
-          ],
-          "score": 94.657,
-          "support": 1,
-          "navRoot": null
-        },
-        {
-          "path": [
             "main/docs/customize/rules.mdx",
             "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
             "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.6308,
+          "score": 94.7134,
           "support": 1,
           "navRoot": null
         },
         {
           "path": [
-            "main/docs/authenticate/single-sign-on.mdx",
-            "main/docs/libraries/auth0js.mdx",
+            "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
             "main/docs/customize/rules.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
-            "main/docs/secure/attack-protection.mdx"
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
           ],
-          "score": 94.6178,
+          "score": 94.668,
           "support": 1,
           "navRoot": null
         },
@@ -2718,7 +2682,7 @@
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
             "main/docs/secure/tokens/json-web-tokens.mdx"
           ],
-          "score": 94.4431,
+          "score": 94.5258,
           "support": 1,
           "navRoot": null
         },
@@ -2784,13 +2748,13 @@
         },
         {
           "path": [
-            "main/docs/authenticate/single-sign-on.mdx",
+            "main/docs/libraries/auth0js.mdx",
+            "main/docs/customize/custom-domains.mdx",
+            "main/docs/customize/custom-domains/configure-features-to-use-custom-domains.mdx",
             "main/docs/authenticate/login/auth0-universal-login.mdx",
-            "main/docs/deploy-monitor/logs.mdx",
-            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
-            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx"
+            "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx"
           ],
-          "score": 94.1584,
+          "score": 94.1648,
           "support": 1,
           "navRoot": null
         },
@@ -2802,7 +2766,7 @@
             "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
             "main/docs/secure/attack-protection/suspicious-ip-throttling.mdx"
           ],
-          "score": 94.1105,
+          "score": 94.1453,
           "support": 1,
           "navRoot": null
         },
@@ -2814,7 +2778,7 @@
             "main/docs/deploy-monitor/logs.mdx",
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
-          "score": 94.1069,
+          "score": 94.1416,
           "support": 1,
           "navRoot": null
         },
@@ -2826,7 +2790,19 @@
             "main/docs/customize/custom-domains.mdx",
             "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
           ],
-          "score": 94.0373,
+          "score": 94.1199,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-hooks-to-actions.mdx",
+            "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
+            "main/docs/customize/custom-domains.mdx"
+          ],
+          "score": 94.0745,
           "support": 1,
           "navRoot": null
         },
@@ -2838,7 +2814,7 @@
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx",
             "main/docs/secure/attack-protection.mdx"
           ],
-          "score": 93.9528,
+          "score": 93.9876,
           "support": 1,
           "navRoot": null
         },
@@ -2887,6 +2863,30 @@
             "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
           ],
           "score": 93.8759,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+          ],
+          "score": 93.8759,
+          "support": 1,
+          "navRoot": null
+        },
+        {
+          "path": [
+            "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx",
+            "main/docs/customize/rules.mdx",
+            "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
+            "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy.mdx",
+            "main/docs/deploy-monitor/logs/log-event-type-codes.mdx"
+          ],
+          "score": 93.7616,
           "support": 1,
           "navRoot": null
         }

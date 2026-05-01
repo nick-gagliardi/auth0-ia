@@ -64,6 +64,19 @@
     "deadEnd": false,
     "deadEndScore": 3
   },
+  "main/docs/events.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/fine-grained-m2m-token-quotas.mdx": {
     "inboundLinks": 0,
     "outboundLinks": 4,
@@ -429,7 +442,7 @@
     "deadEndScore": 0.1786
   },
   "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx": {
-    "inboundLinks": 63,
+    "inboundLinks": 57,
     "outboundLinks": 2,
     "importedBy": 0,
     "orphanNav": true,
@@ -437,9 +450,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 63,
+    "hubScore": 57,
     "deadEnd": false,
-    "deadEndScore": 31.5
+    "deadEndScore": 28.5
   },
   "main/docs/troubleshoot/product-lifecycle/past-migrations/clickjacking-protection-for-universal-login.mdx": {
     "inboundLinks": 1,
@@ -1288,7 +1301,7 @@
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 5,
+    "outboundLinks": 6,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1297,11 +1310,11 @@
     "deepNav": false,
     "hubScore": 5,
     "deadEnd": false,
-    "deadEndScore": 1
+    "deadEndScore": 0.8333
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/free-public.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 2,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1310,9 +1323,22 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.5
+    "deadEndScore": 0.3333
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/self-service-public.mdx": {
+    "inboundLinks": 2,
+    "outboundLinks": 6,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 2,
+    "deadEnd": false,
+    "deadEndScore": 0.3333
+  },
+  "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-100-rps-private-cloud.mdx": {
     "inboundLinks": 2,
     "outboundLinks": 5,
     "importedBy": 0,
@@ -1325,22 +1351,9 @@
     "deadEnd": false,
     "deadEndScore": 0.4
   },
-  "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-100-rps-private-cloud.mdx": {
-    "inboundLinks": 1,
-    "outboundLinks": 4,
-    "importedBy": 0,
-    "orphanNav": true,
-    "orphanLinks": false,
-    "orphanTrue": false,
-    "orphanReference": false,
-    "deepNav": false,
-    "hubScore": 1,
-    "deadEnd": false,
-    "deadEndScore": 0.25
-  },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-10000-rps-private-cloud.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 5,
+    "outboundLinks": 6,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1349,11 +1362,11 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.2
+    "deadEndScore": 0.1667
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-1500-rps-private-cloud.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 5,
+    "outboundLinks": 6,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1362,7 +1375,7 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.2
+    "deadEndScore": 0.1667
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-20-development-private-cloud.mdx": {
     "inboundLinks": 1,
@@ -1379,7 +1392,7 @@
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-3000-rps-private-cloud.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 7,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1388,11 +1401,11 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.1667
+    "deadEndScore": 0.1429
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-500-rps-private-cloud.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 7,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1401,11 +1414,11 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.1667
+    "deadEndScore": 0.1429
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-6000-rps-private-cloud.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 7,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -1414,7 +1427,7 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.1667
+    "deadEndScore": 0.1429
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx": {
     "inboundLinks": 9,
@@ -2301,7 +2314,7 @@
     "deadEndScore": 2.375
   },
   "main/docs/secure/tokens/access-tokens/access-token-profiles.mdx": {
-    "inboundLinks": 7,
+    "inboundLinks": 8,
     "outboundLinks": 10,
     "importedBy": 0,
     "orphanNav": true,
@@ -2309,9 +2322,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 7,
+    "hubScore": 8,
     "deadEnd": false,
-    "deadEndScore": 0.7
+    "deadEndScore": 0.8
   },
   "main/docs/secure/tokens/access-tokens/get-access-tokens.mdx": {
     "inboundLinks": 12,
@@ -2353,7 +2366,7 @@
     "deadEndScore": 5
   },
   "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx": {
-    "inboundLinks": 59,
+    "inboundLinks": 60,
     "outboundLinks": 10,
     "importedBy": 0,
     "orphanNav": true,
@@ -2361,9 +2374,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 59,
+    "hubScore": 60,
     "deadEnd": false,
-    "deadEndScore": 5.9
+    "deadEndScore": 6
   },
   "main/docs/secure/tokens/access-tokens/update-access-token-lifetime.mdx": {
     "inboundLinks": 7,
@@ -3899,8 +3912,21 @@
     "deadEnd": false,
     "deadEndScore": 0.4
   },
+  "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx": {
+    "inboundLinks": 9,
+    "outboundLinks": 8,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 9,
+    "deadEnd": false,
+    "deadEndScore": 1.125
+  },
   "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx": {
-    "inboundLinks": 4,
+    "inboundLinks": 5,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
@@ -3908,9 +3934,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 4,
+    "hubScore": 5,
     "deadEnd": false,
-    "deadEndScore": 4
+    "deadEndScore": 5
   },
   "main/docs/secure/call-apis-on-users-behalf/xaa.mdx": {
     "inboundLinks": 1,
@@ -7267,7 +7293,7 @@
     "deadEndScore": 0.5
   },
   "main/docs/manage-users/access-control/rbac.mdx": {
-    "inboundLinks": 56,
+    "inboundLinks": 57,
     "outboundLinks": 12,
     "importedBy": 0,
     "orphanNav": true,
@@ -7275,9 +7301,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 56,
+    "hubScore": 57,
     "deadEnd": false,
-    "deadEndScore": 4.6667
+    "deadEndScore": 4.75
   },
   "main/docs/manage-users/access-control/rules-for-authorization-policies.mdx": {
     "inboundLinks": 5,
@@ -8513,6 +8539,45 @@
     "hubScore": 1,
     "deadEnd": false,
     "deadEndScore": 1
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CaptchaContext.mdx": {
     "inboundLinks": 1,
@@ -10061,6 +10126,19 @@
     "deadEnd": false,
     "deadEndScore": 1
   },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": {
     "inboundLinks": 2,
     "outboundLinks": 2,
@@ -10684,6 +10762,45 @@
     "hubScore": 1,
     "deadEnd": false,
     "deadEndScore": 1
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnConsent.mdx": {
     "inboundLinks": 1,
@@ -13076,6 +13193,45 @@
     "hubScore": 1,
     "deadEnd": false,
     "deadEndScore": 1
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx": {
+    "inboundLinks": 0,
+    "outboundLinks": 0,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": true,
+    "orphanTrue": true,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 0,
+    "deadEnd": false,
+    "deadEndScore": 0
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/accept-invitation/index.mdx": {
     "inboundLinks": 1,
@@ -18903,7 +19059,7 @@
   },
   "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 4,
+    "outboundLinks": 5,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -18912,7 +19068,7 @@
     "deepNav": false,
     "hubScore": 11,
     "deadEnd": false,
-    "deadEndScore": 2.75
+    "deadEndScore": 2.2
   },
   "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx": {
     "inboundLinks": 50,
@@ -18954,7 +19110,7 @@
     "deadEndScore": 0
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow.mdx": {
-    "inboundLinks": 32,
+    "inboundLinks": 33,
     "outboundLinks": 8,
     "importedBy": 0,
     "orphanNav": true,
@@ -18962,9 +19118,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 32,
+    "hubScore": 33,
     "deadEnd": false,
-    "deadEndScore": 4
+    "deadEndScore": 4.125
   },
   "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow.mdx": {
     "inboundLinks": 9,
@@ -20644,7 +20800,7 @@
     "deadEndScore": 0.0667
   },
   "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx": {
-    "inboundLinks": 15,
+    "inboundLinks": 16,
     "outboundLinks": 9,
     "importedBy": 0,
     "orphanNav": true,
@@ -20652,9 +20808,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 15,
+    "hubScore": 16,
     "deadEnd": false,
-    "deadEndScore": 1.6667
+    "deadEndScore": 1.7778
   },
   "main/docs/get-started/applications/application-grant-types.mdx": {
     "inboundLinks": 12,
@@ -20723,7 +20879,7 @@
   },
   "main/docs/get-started/applications/configure-applications-with-oidc-discovery.mdx": {
     "inboundLinks": 5,
-    "outboundLinks": 4,
+    "outboundLinks": 5,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -20732,7 +20888,7 @@
     "deepNav": false,
     "hubScore": 5,
     "deadEnd": false,
-    "deadEndScore": 1.25
+    "deadEndScore": 1
   },
   "main/docs/get-started/applications/configure-client-initiated-backchannel-authentication.mdx": {
     "inboundLinks": 5,
@@ -20996,7 +21152,7 @@
   },
   "main/docs/get-started/applications/signing-algorithms.mdx": {
     "inboundLinks": 24,
-    "outboundLinks": 7,
+    "outboundLinks": 8,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -21005,7 +21161,7 @@
     "deepNav": false,
     "hubScore": 24,
     "deadEnd": false,
-    "deadEndScore": 3.4286
+    "deadEndScore": 3
   },
   "main/docs/get-started/applications/test-database-connections.mdx": {
     "inboundLinks": 1,
@@ -21422,19 +21578,6 @@
     "hubScore": 12,
     "deadEnd": false,
     "deadEndScore": 0.9231
-  },
-  "main/docs/events/index.mdx": {
-    "inboundLinks": 0,
-    "outboundLinks": 3,
-    "importedBy": 0,
-    "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
-    "orphanReference": false,
-    "deepNav": false,
-    "hubScore": 0,
-    "deadEnd": false,
-    "deadEndScore": 0
   },
   "main/docs/events/user/user.created.mdx": {
     "inboundLinks": 0,
@@ -22257,7 +22400,7 @@
   },
   "main/docs/customize/events.mdx": {
     "inboundLinks": 0,
-    "outboundLinks": 5,
+    "outboundLinks": 8,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": true,
@@ -24894,21 +25037,21 @@
     "deadEnd": false,
     "deadEndScore": 0.75
   },
-  "main/docs/customize/events/create-an-event-stream.mdx": {
-    "inboundLinks": 6,
-    "outboundLinks": 6,
+  "main/docs/customize/events/consume-events-with-events-api.mdx": {
+    "inboundLinks": 1,
+    "outboundLinks": 4,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 6,
+    "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 1
+    "deadEndScore": 0.25
   },
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
-    "inboundLinks": 6,
+  "main/docs/customize/events/correlate-identity-changes.mdx": {
+    "inboundLinks": 2,
     "outboundLinks": 5,
     "importedBy": 0,
     "orphanNav": true,
@@ -24916,25 +25059,77 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 6,
+    "hubScore": 2,
     "deadEnd": false,
-    "deadEndScore": 1.2
+    "deadEndScore": 0.4
+  },
+  "main/docs/customize/events/create-an-event-stream.mdx": {
+    "inboundLinks": 9,
+    "outboundLinks": 5,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 9,
+    "deadEnd": false,
+    "deadEndScore": 1.8
+  },
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
+    "inboundLinks": 8,
+    "outboundLinks": 4,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 8,
+    "deadEnd": false,
+    "deadEndScore": 2
   },
   "main/docs/customize/events/event-types.mdx": {
-    "inboundLinks": 5,
-    "outboundLinks": 4,
+    "inboundLinks": 9,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 5,
+    "hubScore": 9,
     "deadEnd": false,
-    "deadEndScore": 1.25
+    "deadEndScore": 3
   },
   "main/docs/customize/events/events-best-practices.mdx": {
-    "inboundLinks": 5,
+    "inboundLinks": 8,
+    "outboundLinks": 3,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 8,
+    "deadEnd": false,
+    "deadEndScore": 2.6667
+  },
+  "main/docs/customize/events/orchestrate-business-workflows.mdx": {
+    "inboundLinks": 1,
+    "outboundLinks": 6,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 1,
+    "deadEnd": false,
+    "deadEndScore": 0.1667
+  },
+  "main/docs/customize/events/sync-data-across-systems.mdx": {
+    "inboundLinks": 1,
     "outboundLinks": 4,
     "importedBy": 0,
     "orphanNav": true,
@@ -24942,9 +25137,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 5,
+    "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 1.25
+    "deadEndScore": 0.25
   },
   "main/docs/customize/email/email-templates.mdx": {
     "inboundLinks": 18,
@@ -25610,7 +25805,7 @@
     "deadEndScore": 0.3
   },
   "main/docs/customize/actions/write-your-first-action.mdx": {
-    "inboundLinks": 30,
+    "inboundLinks": 32,
     "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
@@ -25618,9 +25813,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 30,
+    "hubScore": 32,
     "deadEnd": false,
-    "deadEndScore": 10
+    "deadEndScore": 10.6667
   },
   "main/docs/customize/actions/modules/actions-modules-overview.mdx": {
     "inboundLinks": 1,
@@ -25779,7 +25974,7 @@
     "deadEndScore": 0.3333
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx": {
-    "inboundLinks": 34,
+    "inboundLinks": 35,
     "outboundLinks": 11,
     "importedBy": 0,
     "orphanNav": true,
@@ -25787,9 +25982,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 34,
+    "hubScore": 35,
     "deadEnd": false,
-    "deadEndScore": 3.0909
+    "deadEndScore": 3.1818
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/post-user-registration-trigger.mdx": {
     "inboundLinks": 3,
@@ -25883,7 +26078,7 @@
     "deadEndScore": 3
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-api-object.mdx": {
-    "inboundLinks": 15,
+    "inboundLinks": 16,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
@@ -25891,12 +26086,12 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 15,
+    "hubScore": 16,
     "deadEnd": false,
-    "deadEndScore": 15
+    "deadEndScore": 16
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/post-login-event-object.mdx": {
-    "inboundLinks": 22,
+    "inboundLinks": 23,
     "outboundLinks": 0,
     "importedBy": 0,
     "orphanNav": true,
@@ -25904,9 +26099,9 @@
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 22,
+    "hubScore": 23,
     "deadEnd": true,
-    "deadEndScore": 22
+    "deadEndScore": 23
   },
   "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger/redirect-with-actions.mdx": {
     "inboundLinks": 13,
@@ -26844,6 +27039,19 @@
     "deadEnd": false,
     "deadEndScore": 0.0968
   },
+  "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx": {
+    "inboundLinks": 3,
+    "outboundLinks": 1,
+    "importedBy": 0,
+    "orphanNav": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
+    "orphanReference": false,
+    "deepNav": false,
+    "hubScore": 3,
+    "deadEnd": false,
+    "deadEndScore": 3
+  },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider.mdx": {
     "inboundLinks": 7,
     "outboundLinks": 14,
@@ -26897,17 +27105,17 @@
     "deadEndScore": 2.25
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/sign-and-encrypt-saml-requests.mdx": {
-    "inboundLinks": 4,
-    "outboundLinks": 1,
+    "inboundLinks": 5,
+    "outboundLinks": 3,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
     "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 4,
+    "hubScore": 5,
     "deadEnd": false,
-    "deadEndScore": 4
+    "deadEndScore": 1.6667
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/work-with-certificates-and-keys-as-strings.mdx": {
     "inboundLinks": 2,
@@ -28172,7 +28380,7 @@
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate.mdx": {
     "inboundLinks": 1,
-    "outboundLinks": 6,
+    "outboundLinks": 7,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -28181,11 +28389,11 @@
     "deepNav": false,
     "hubScore": 1,
     "deadEnd": false,
-    "deadEndScore": 0.1667
+    "deadEndScore": 0.1429
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx": {
     "inboundLinks": 11,
-    "outboundLinks": 8,
+    "outboundLinks": 9,
     "importedBy": 0,
     "orphanNav": true,
     "orphanLinks": false,
@@ -28194,7 +28402,7 @@
     "deepNav": false,
     "hubScore": 11,
     "deadEnd": false,
-    "deadEndScore": 1.375
+    "deadEndScore": 1.2222
   },
   "main/docs/authenticate/identity-providers/enterprise-identity-providers/test-enterprise-connections.mdx": {
     "inboundLinks": 11,
@@ -28444,17 +28652,17 @@
     "deadEndScore": 0
   },
   "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
-    "inboundLinks": 0,
-    "outboundLinks": 2,
+    "inboundLinks": 3,
+    "outboundLinks": 1,
     "importedBy": 0,
     "orphanNav": true,
-    "orphanLinks": true,
-    "orphanTrue": true,
+    "orphanLinks": false,
+    "orphanTrue": false,
     "orphanReference": false,
     "deepNav": false,
-    "hubScore": 0,
+    "hubScore": 3,
     "deadEnd": false,
-    "deadEndScore": 0
+    "deadEndScore": 3
   },
   "main/docs/authenticate/enterprise-connections/self-service-enterprise-configuration.mdx": {
     "inboundLinks": 8,

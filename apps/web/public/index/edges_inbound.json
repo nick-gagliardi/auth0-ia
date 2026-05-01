@@ -78,6 +78,11 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/events.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/fine-grained-m2m-token-quotas.mdx": {
     "link": [],
     "import": [],
@@ -119,14 +124,9 @@
       "main/docs/get-started/universal-components/universal-components-overview.mdx",
       "main/docs/get-started/universal-components/universal-components-style.mdx",
       "main/docs/get-started/auth0-teams/configure-security-policies.mdx",
-      "main/docs/customize/events.mdx",
       "main/docs/customize/phone-messages/configure-phone-messaging-providers.mdx",
       "main/docs/customize/login-pages/universal-login/customize-templates.mdx",
       "main/docs/customize/internationalization-and-localization/universal-login-internationalization.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx",
       "main/docs/customize/actions/modules/actions-modules-overview.mdx",
       "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/custom-token-exchange-trigger.mdx",
@@ -138,7 +138,6 @@
       "main/docs/authenticate/login/auth0-universal-login.mdx",
       "main/docs/authenticate/login/configure-correlation-id.mdx",
       "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx",
-      "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx",
       "main/docs/authenticate/enterprise-connections/user-attribute-profile.mdx",
       "main/docs/authenticate/database-connections/non-unique-emails.mdx",
       "main/docs/authenticate/database-connections/passkeys/native-passkeys-api.mdx",
@@ -159,6 +158,7 @@
       "main/docs/troubleshoot/authentication-issues/check-api-calls.mdx",
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens/changes-in-auth0-management-apiv2-tokens.mdx",
       "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-custom-ui.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
       "main/docs/manage-users/organizations/organizations-for-m2m-applications.mdx",
       "main/docs/manage-users/organizations/organizations-for-m2m-applications/configure-your-application-for-m2m-access.mdx",
       "main/docs/libraries/auth0-php/using-the-authentication-api-with-auth0-php.mdx",
@@ -1779,6 +1779,7 @@
       "main/docs/secure/tokens/refresh-tokens/refresh-token-metadata/use-cases.mdx",
       "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-enrollments-universal-login.mdx",
       "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
       "main/docs/manage-users/user-accounts/metadata.mdx",
       "main/docs/manage-users/sessions/configure-keep-me-signed-in-sessions.mdx",
       "main/docs/manage-users/sessions/configure-session-lifetime.mdx",
@@ -3493,6 +3494,7 @@
   "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
       "main/docs/secure/call-apis-on-users-behalf/token-vault/connected-accounts-for-token-vault.mdx",
       "main/docs/manage-users/my-account-api.mdx",
       "main/docs/manage-users/my-organization-api.mdx",
@@ -4293,7 +4295,8 @@
   },
   "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-100-rps-private-cloud.mdx": {
     "link": [
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx"
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4414,6 +4417,21 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx": {
+    "link": [
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/free-public.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/self-service-public.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-100-rps-private-cloud.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-10000-rps-private-cloud.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-1500-rps-private-cloud.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-3000-rps-private-cloud.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-500-rps-private-cloud.mdx",
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-6000-rps-private-cloud.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/custom-token-exchange/configure-custom-token-exchange.mdx": {
     "link": [
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/enterprise-public.mdx",
@@ -4437,7 +4455,8 @@
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-20-development-private-cloud.mdx",
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-3000-rps-private-cloud.mdx",
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-500-rps-private-cloud.mdx",
-      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-6000-rps-private-cloud.mdx"
+      "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-6000-rps-private-cloud.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx"
     ],
     "import": [],
     "redirect": []
@@ -4655,6 +4674,7 @@
       "main/docs/customize/login-pages/advanced-customizations/reference.mdx",
       "main/docs/customize/login-pages/advanced-customizations/configure/overview.mdx",
       "main/docs/customize/integrations/marketplace-partners/introduction-to-integrating-with-auth0.mdx",
+      "main/docs/customize/events/consume-events-with-events-api.mdx",
       "main/docs/customize/events/create-an-event-stream.mdx",
       "main/docs/customize/custom-domains/multiple-custom-domains.mdx",
       "main/docs/authenticate/single-sign-on/native-to-web/configure-implement-native-to-web.mdx",
@@ -4897,6 +4917,7 @@
     "link": [
       "main/docs/troubleshoot/authentication-issues/troubleshoot-authorization-extension.mdx",
       "main/docs/troubleshoot/authentication-issues/troubleshoot-rbac-authorization.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
       "main/docs/quickstart/backend/java-spring-security5/03-troubleshooting.mdx",
       "main/docs/manage-users/access-control.mdx",
       "main/docs/manage-users/organizations/create-first-organization.mdx",
@@ -6366,6 +6387,7 @@
       "main/docs/secure/multi-factor-authentication/customize-mfa/customize-mfa-selection-universal-login.mdx",
       "main/docs/secure/multi-factor-authentication/adaptive-mfa/customize-adaptive-mfa.mdx",
       "main/docs/secure/highly-regulated-identity/transactional-authorization-with-authorization-code-flow.mdx",
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
       "main/docs/secure/attack-protection/use-akamai-supplemental-signals-actions.mdx",
       "main/docs/manage-users/sessions/manage-sessions-actions.mdx",
       "main/docs/manage-users/sessions/session-metadata/configure-session-metadata.mdx",
@@ -6399,6 +6421,7 @@
       "main/docs/customize/actions/migrate/migrate-a-rule-to-an-action.mdx",
       "main/docs/customize/actions/migrate/migrate-from-rules-to-actions.mdx",
       "main/docs/customize/actions/explore-triggers/signup-and-login-triggers/login-trigger.mdx",
+      "main/docs/authenticate/protocols/saml/saml-sso-integrations/sign-and-encrypt-saml-requests.mdx",
       "main/docs/authenticate/custom-token-exchange/cte-example-use-cases.mdx"
     ],
     "import": [],
@@ -6811,6 +6834,7 @@
   },
   "main/docs/secure/tokens/access-tokens/access-token-profiles.mdx": {
     "link": [
+      "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
       "main/docs/manage-users/access-control/configure-core-rbac/enable-role-based-access-control-for-apis.mdx",
       "main/docs/get-started/onboarding/self-service-m2m.mdx",
       "main/docs/get-started/auth0-overview/set-up-apis.mdx",
@@ -7724,6 +7748,8 @@
       "main/docs/customize/integrations/marketplace-partners/actions-integrations-for-partners.mdx",
       "main/docs/customize/forms/render.mdx",
       "main/docs/customize/extensions/delegated-administration-extension.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
       "main/docs/customize/actions/action-coding-guidelines.mdx",
       "main/docs/customize/actions/actions-npm.mdx",
       "main/docs/customize/actions/actions-overview.mdx",
@@ -14643,6 +14669,21 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/DBConnection.mdx": {
     "link": [],
     "import": [],
@@ -14656,6 +14697,11 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Hooks/usePasswordValidation.mdx": {
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
@@ -14666,6 +14712,21 @@
     "redirect": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordlessConnection.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": {
     "link": [],
     "import": [],
     "redirect": []
@@ -15216,6 +15277,21 @@
     "link": [
       "main/docs/libraries/acul/react-sdk/API-Reference/Screens/index.mdx"
     ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx": {
+    "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx": {
+    "link": [],
     "import": [],
     "redirect": []
   },
@@ -18780,6 +18856,15 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
+    "link": [
+      "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt.mdx",
+      "main/docs/get-started/applications/configure-applications-with-oidc-discovery.mdx",
+      "main/docs/get-started/applications/signing-algorithms.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/get-started/authentication-and-authorization-flow/client-credentials-exchange.mdx": {
     "link": [],
     "import": [],
@@ -19785,6 +19870,7 @@
     "link": [
       "main/docs/get-started/applications/configure-ws-fed-applications.mdx",
       "main/docs/authenticate/protocols/saml/saml-sso-integrations.mdx",
+      "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx",
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider.mdx",
       "main/docs/authenticate/protocols/saml/saml-configuration/configure-auth0-as-service-and-identity-provider.mdx"
     ],
@@ -19862,46 +19948,6 @@
   "main/docs/api/authentication/user-profile/get-user-info.mdx": {
     "link": [
       "main/docs/get-started/apis/scopes/openid-connect-scopes.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/events/index.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/create-an-event-stream.mdx": {
-    "link": [
-      "main/docs/events/index.mdx",
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx",
-      "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
-    "link": [
-      "main/docs/events/index.mdx",
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/events-best-practices.mdx": {
-    "link": [
-      "main/docs/events/index.mdx",
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx"
     ],
     "import": [],
     "redirect": []
@@ -20743,13 +20789,89 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/events/sync-data-across-systems.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/correlate-identity-changes.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/orchestrate-business-workflows.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/customize/events/event-types.mdx": {
     "link": [
       "main/docs/customize/events.mdx",
+      "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
       "main/docs/customize/events/create-an-event-stream.mdx",
       "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
       "main/docs/customize/events/events-best-practices.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx",
       "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/create-an-event-stream.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/events-best-practices.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx",
+      "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/consume-events-with-events-api.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/events-best-practices.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/events-best-practices.mdx": {
+    "link": [
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22879,6 +23001,15 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx": {
+    "link": [
+      "main/docs/authenticate/protocols/saml/saml-sso-integrations/sign-and-encrypt-saml-requests.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/ping-federate.mdx",
+      "main/docs/authenticate/identity-providers/enterprise-identity-providers/saml.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/authenticate/login/logout/log-users-out-of-saml-idps.mdx": {
     "link": [
       "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-idp-initiated-saml-sign-on-to-oidc-apps.mdx",
@@ -23201,11 +23332,6 @@
     "redirect": []
   },
   "main/docs/authenticate/enterprise-connections/enable-dpop-enterprise-connections.mdx": {
-    "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/authenticate/enterprise-connections/private-key-jwt-client-auth.mdx": {
     "link": [],
     "import": [],
     "redirect": []

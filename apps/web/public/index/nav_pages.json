@@ -19,6 +19,10 @@
     "filePath": "main/docs/deploy-monitor.mdx",
     "navNodePaths": []
   },
+  "main/docs/events.mdx": {
+    "filePath": "main/docs/events.mdx",
+    "navNodePaths": []
+  },
   "main/docs/fine-grained-m2m-token-quotas.mdx": {
     "filePath": "main/docs/fine-grained-m2m-token-quotas.mdx",
     "navNodePaths": []
@@ -1197,6 +1201,10 @@
   },
   "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock.mdx": {
     "filePath": "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx": {
+    "filePath": "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
     "navNodePaths": []
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx": {
@@ -2619,6 +2627,18 @@
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BrandingThemes.mdx",
     "navNodePaths": []
   },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
+    "navNodePaths": []
+  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CaptchaContext.mdx": {
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CaptchaContext.mdx",
     "navNodePaths": []
@@ -3095,6 +3115,10 @@
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasskeyEnrollmentMembers.mdx",
     "navNodePaths": []
   },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx",
+    "navNodePaths": []
+  },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx": {
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
     "navNodePaths": []
@@ -3285,6 +3309,18 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnAcceptInvitation.mdx": {
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnAcceptInvitation.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
     "navNodePaths": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnConsent.mdx": {
@@ -4021,6 +4057,18 @@
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/consent/index.mdx": {
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/consent/index.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx": {
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx",
     "navNodePaths": []
   },
   "main/docs/libraries/acul/react-sdk/API-Reference/Screens/accept-invitation/index.mdx": {
@@ -6591,10 +6639,6 @@
     "filePath": "main/docs/get-started/apis/scopes/sample-use-cases-scopes-and-claims.mdx",
     "navNodePaths": []
   },
-  "main/docs/events/index.mdx": {
-    "filePath": "main/docs/events/index.mdx",
-    "navNodePaths": []
-  },
   "main/docs/events/user/user.created.mdx": {
     "filePath": "main/docs/events/user/user.created.mdx",
     "navNodePaths": []
@@ -7659,6 +7703,14 @@
     "filePath": "main/docs/customize/extensions/authorization-extension/use-rules-with-the-authorization-extension.mdx",
     "navNodePaths": []
   },
+  "main/docs/customize/events/consume-events-with-events-api.mdx": {
+    "filePath": "main/docs/customize/events/consume-events-with-events-api.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/customize/events/correlate-identity-changes.mdx": {
+    "filePath": "main/docs/customize/events/correlate-identity-changes.mdx",
+    "navNodePaths": []
+  },
   "main/docs/customize/events/create-an-event-stream.mdx": {
     "filePath": "main/docs/customize/events/create-an-event-stream.mdx",
     "navNodePaths": []
@@ -7673,6 +7725,14 @@
   },
   "main/docs/customize/events/events-best-practices.mdx": {
     "filePath": "main/docs/customize/events/events-best-practices.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/customize/events/orchestrate-business-workflows.mdx": {
+    "filePath": "main/docs/customize/events/orchestrate-business-workflows.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/customize/events/sync-data-across-systems.mdx": {
+    "filePath": "main/docs/customize/events/sync-data-across-systems.mdx",
     "navNodePaths": []
   },
   "main/docs/customize/email/email-templates.mdx": {
@@ -8257,6 +8317,10 @@
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations.mdx": {
     "filePath": "main/docs/authenticate/protocols/saml/saml-sso-integrations.mdx",
+    "navNodePaths": []
+  },
+  "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx": {
+    "filePath": "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx",
     "navNodePaths": []
   },
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/configure-auth0-saml-service-provider.mdx": {

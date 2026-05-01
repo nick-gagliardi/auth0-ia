@@ -35,6 +35,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/events.mdx",
+    "type": "page",
+    "filePath": "main/docs/events.mdx",
+    "title": "Events Catalog",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/fine-grained-m2m-token-quotas.mdx",
     "type": "page",
     "filePath": "main/docs/fine-grained-m2m-token-quotas.mdx",
@@ -2096,6 +2103,13 @@
     "type": "page",
     "filePath": "main/docs/secure/data-privacy-and-compliance/gdpr/gdpr-track-consent-with-lock.mdx",
     "title": "GDPR: Track Consent with Lock",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
+    "type": "page",
+    "filePath": "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx",
+    "title": "On-Behalf-Of Token Exchange",
     "navPaths": []
   },
   {
@@ -4583,6 +4597,27 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockFailureMembers.mdx",
+    "title": "BruteForceProtectionUnblockFailureMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockMembers.mdx",
+    "title": "BruteForceProtectionUnblockMembers",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/BruteForceProtectionUnblockSuccessMembers.mdx",
+    "title": "BruteForceProtectionUnblockSuccessMembers",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CaptchaContext.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/CaptchaContext.mdx",
@@ -5416,6 +5451,13 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityPolicy.mdx",
+    "title": "PasswordComplexityPolicy",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/PasswordComplexityRule.mdx",
@@ -5749,6 +5791,27 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnAcceptInvitation.mdx",
     "title": "ScreenMembersOnAcceptInvitation",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblock.mdx",
+    "title": "ScreenMembersOnBruteForceProtectionUnblock",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockFailure.mdx",
+    "title": "ScreenMembersOnBruteForceProtectionUnblockFailure",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Types/interfaces/ScreenMembersOnBruteForceProtectionUnblockSuccess.mdx",
+    "title": "ScreenMembersOnBruteForceProtectionUnblockSuccess",
     "navPaths": []
   },
   {
@@ -7037,6 +7100,27 @@
     "type": "page",
     "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/consent/index.mdx",
     "title": "Consent",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-success/index.mdx",
+    "title": "BruteForceProtectionUnblockSuccess",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock-failure/index.mdx",
+    "title": "BruteForceProtectionUnblockFailure",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx",
+    "type": "page",
+    "filePath": "main/docs/libraries/acul/react-sdk/API-Reference/Screens/brute-force-protection-unblock/index.mdx",
+    "title": "BruteForceProtectionUnblock",
     "navPaths": []
   },
   {
@@ -11534,13 +11618,6 @@
     "navPaths": []
   },
   {
-    "id": "main/docs/events/index.mdx",
-    "type": "page",
-    "filePath": "main/docs/events/index.mdx",
-    "title": "Events Catalog Overview",
-    "navPaths": []
-  },
-  {
     "id": "main/docs/events/user/user.created.mdx",
     "type": "page",
     "filePath": "main/docs/events/user/user.created.mdx",
@@ -13403,6 +13480,20 @@
     "navPaths": []
   },
   {
+    "id": "main/docs/customize/events/consume-events-with-events-api.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/events/consume-events-with-events-api.mdx",
+    "title": "Consume Events with the Events API",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/customize/events/correlate-identity-changes.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/events/correlate-identity-changes.mdx",
+    "title": "Correlate Identity Changes with External Systems",
+    "navPaths": []
+  },
+  {
     "id": "main/docs/customize/events/create-an-event-stream.mdx",
     "type": "page",
     "filePath": "main/docs/customize/events/create-an-event-stream.mdx",
@@ -13428,6 +13519,20 @@
     "type": "page",
     "filePath": "main/docs/customize/events/events-best-practices.mdx",
     "title": "Events Best Practices",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/customize/events/orchestrate-business-workflows.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/events/orchestrate-business-workflows.mdx",
+    "title": "Orchestrate Business Workflows",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/customize/events/sync-data-across-systems.mdx",
+    "type": "page",
+    "filePath": "main/docs/customize/events/sync-data-across-systems.mdx",
+    "title": "Synchronize Data Across Systems",
     "navPaths": []
   },
   {
@@ -14451,6 +14556,13 @@
     "type": "page",
     "filePath": "main/docs/authenticate/protocols/saml/saml-sso-integrations.mdx",
     "title": "SAML Single Sign-On Integrations",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx",
+    "type": "page",
+    "filePath": "main/docs/authenticate/protocols/saml/saml-sso-integrations/algorithm-profiles.mdx",
+    "title": "Algorithm Profiles",
     "navPaths": []
   },
   {
