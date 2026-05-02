@@ -83,6 +83,52 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/customize/events/create-an-event-stream.mdx": {
+    "link": [
+      "main/docs/events.mdx",
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/events-best-practices.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx",
+      "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
+    "link": [
+      "main/docs/events.mdx",
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/events-best-practices.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/events-best-practices.mdx": {
+    "link": [
+      "main/docs/events.mdx",
+      "main/docs/customize/events.mdx",
+      "main/docs/customize/events/consume-events-with-events-api.mdx",
+      "main/docs/customize/events/correlate-identity-changes.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/orchestrate-business-workflows.mdx",
+      "main/docs/customize/events/sync-data-across-systems.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/fine-grained-m2m-token-quotas.mdx": {
     "link": [],
     "import": [],
@@ -1688,6 +1734,7 @@
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/add-login-using-the-authorization-code-flow-with-pkce.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce/call-your-api-using-the-authorization-code-flow-with-pkce.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/architecture-scenarios/mobile-api.mdx",
       "main/docs/get-started/architecture-scenarios/spa-api/part-3.mdx",
       "main/docs/get-started/architecture-scenarios/multiple-organization-architecture/single-identity-provider-organizations/authentication.mdx",
@@ -1731,6 +1778,7 @@
       "main/docs/get-started/onboarding/self-service-m2m.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-mtls.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/applications/confidential-and-public-applications.mdx",
       "main/docs/get-started/applications/configure-private-key-jwt.mdx",
       "main/docs/get-started/applications/credentials.mdx"
@@ -2469,7 +2517,6 @@
   "main/docs/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/past-migrations/custom-claims-migration.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
@@ -3525,6 +3572,7 @@
   "main/docs/get-started/applications/third-party-applications/security-controls.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/deprecations-and-migrations/migrate-to-enhanced-security-third-party-applications.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/applications/application-grant-types.mdx",
       "main/docs/get-started/applications/application-settings.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx",
@@ -3898,6 +3946,7 @@
       "main/docs/get-started/auth0-overview/create-tenants.mdx",
       "main/docs/get-started/auth0-overview/dashboard.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/create-multiple-tenants.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/branding.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/logout.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/launch/operations-readiness.mdx",
@@ -4457,6 +4506,13 @@
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-500-rps-private-cloud.mdx",
       "main/docs/troubleshoot/customer-support/operational-policies/rate-limit-policy/rate-limit-configurations/tier-6000-rps-private-cloud.mdx",
       "main/docs/secure/call-apis-on-users-behalf/on-behalf-of-token-exchange.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx": {
+    "link": [
+      "main/docs/troubleshoot/customer-support/manage-subscriptions/export-data.mdx"
     ],
     "import": [],
     "redirect": []
@@ -5079,7 +5135,6 @@
       "main/docs/get-started/authentication-and-authorization-flow/client-credentials-flow/call-your-api-using-the-client-credentials-flow.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/add-login-auth-code-flow.mdx",
       "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
@@ -6174,6 +6229,7 @@
       "main/docs/quickstart/backend/golang/index.mdx",
       "main/docs/quickstart/backend/django/index.mdx",
       "main/docs/get-started/tenant-settings/signing-keys/customer-signing-keys.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/customize/integrations/aws/aws-api-gateway-custom-authorizers.mdx",
       "main/docs/authenticate/login/logout/back-channel-logout/configure-back-channel-logout.mdx"
     ],
@@ -6712,6 +6768,7 @@
       "main/docs/secure/tokens/json-web-tokens/json-web-token-claims.mdx",
       "main/docs/libraries/auth0js.mdx",
       "main/docs/libraries/lock.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/applications/application-access-to-apis-client-grants.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx",
       "main/docs/get-started/applications/first-party-and-third-party-applications.mdx",
@@ -8215,7 +8272,6 @@
       "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
       "main/docs/get-started/universal-components/my-organization/organization-management/edit-organization-details.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
@@ -8264,6 +8320,7 @@
       "main/docs/manage-users/user-migration.mdx",
       "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx",
       "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
+      "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
       "main/docs/manage-users/user-migration/user-migration-scenarios.mdx",
       "main/docs/manage-users/user-accounts/change-user-picture.mdx",
       "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx",
@@ -9287,7 +9344,6 @@
       "main/docs/libraries/auth0-php/auth0-php-basic-use.mdx",
       "main/docs/get-started/universal-components/my-organization/build-delegated-admin.mdx",
       "main/docs/get-started/identity-fundamentals/identity-and-access-management.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/get-started/auth0-overview/create-tenants.mdx",
       "main/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
@@ -11117,6 +11173,7 @@
       "main/docs/manage-users/user-search/retrieve-users-with-get-users-endpoint.mdx",
       "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx",
       "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
       "main/docs/manage-users/user-migration/user-import-export-extension.mdx",
       "main/docs/manage-users/user-accounts/user-profiles/user-profile-structure.mdx",
       "main/docs/customize/extensions/user-import-export-extension.mdx"
@@ -11168,6 +11225,7 @@
   "main/docs/manage-users/user-migration/user-migration-scenarios.mdx": {
     "link": [
       "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-consumer/provisioning.mdx",
       "main/docs/get-started/architecture-scenarios/business-to-business/provisioning.mdx",
       "main/docs/authenticate/database-connections.mdx"
@@ -11897,7 +11955,6 @@
     "link": [
       "main/docs/manage-users/organizations/login-flows-for-organizations.mdx",
       "main/docs/get-started/applications.mdx",
-      "main/docs/get-started/auth0-overview/create-applications.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
@@ -18582,6 +18639,14 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": {
+    "link": [
+      "main/docs/get-started/tenant-settings.mdx",
+      "main/docs/get-started/auth0-overview/create-applications.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/get-started/universal-components/auth0-component-provider.mdx": {
     "link": [
       "main/docs/get-started/universal-components/universal-components-overview.mdx",
@@ -19009,11 +19074,6 @@
       "main/docs/get-started/applications/application-settings.mdx",
       "main/docs/authenticate/identity-providers/social-identity-providers/google-native.mdx"
     ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": {
-    "link": [],
     "import": [],
     "redirect": []
   },
@@ -20826,52 +20886,9 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/events/create-an-event-stream.mdx": {
-    "link": [
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/consume-events-with-events-api.mdx",
-      "main/docs/customize/events/correlate-identity-changes.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx",
-      "main/docs/customize/events/orchestrate-business-workflows.mdx",
-      "main/docs/customize/events/sync-data-across-systems.mdx",
-      "main/docs/customize/actions/explore-triggers/event-stream-triggers.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/customize/events/consume-events-with-events-api.mdx": {
     "link": [
       "main/docs/customize/events.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
-    "link": [
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/correlate-identity-changes.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/events-best-practices.mdx",
-      "main/docs/customize/events/orchestrate-business-workflows.mdx",
-      "main/docs/customize/events/sync-data-across-systems.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/events-best-practices.mdx": {
-    "link": [
-      "main/docs/customize/events.mdx",
-      "main/docs/customize/events/consume-events-with-events-api.mdx",
-      "main/docs/customize/events/correlate-identity-changes.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/orchestrate-business-workflows.mdx",
-      "main/docs/customize/events/sync-data-across-systems.mdx"
     ],
     "import": [],
     "redirect": []
@@ -23367,6 +23384,13 @@
   "main/docs/authenticate/database-connections/flexible-password-policy.mdx": {
     "link": [],
     "import": [],
+    "redirect": []
+  },
+  "main/snippets/ReleaseStageNotice.jsx": {
+    "link": [],
+    "import": [
+      "main/docs/authenticate/database-connections/flexible-password-policy.mdx"
+    ],
     "redirect": []
   },
   "main/docs/authenticate/database-connections/non-unique-emails.mdx": {

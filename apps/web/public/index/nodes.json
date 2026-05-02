@@ -38,7 +38,7 @@
     "id": "main/docs/events.mdx",
     "type": "page",
     "filePath": "main/docs/events.mdx",
-    "title": "Events Catalog",
+    "title": "Events Catalog Overview",
     "navPaths": []
   },
   {
@@ -3257,6 +3257,13 @@
     "type": "page",
     "filePath": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
     "title": "Configure Automatic Migration from Your Database",
+    "navPaths": []
+  },
+  {
+    "id": "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
+    "type": "page",
+    "filePath": "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
+    "title": "Export Password Hashes and MFA Secrets",
     "navPaths": []
   },
   {
@@ -18671,6 +18678,12 @@
     "id": "main/snippets/RelatedPages.mdx",
     "type": "snippet",
     "filePath": "main/snippets/RelatedPages.mdx",
+    "navPaths": []
+  },
+  {
+    "id": "main/snippets/ReleaseStageNotice.jsx",
+    "type": "snippet",
+    "filePath": "main/snippets/ReleaseStageNotice.jsx",
     "navPaths": []
   },
   {

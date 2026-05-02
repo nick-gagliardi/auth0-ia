@@ -53,7 +53,41 @@
     "redirect": []
   },
   "main/docs/events.mdx": {
-    "link": [],
+    "link": [
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/create-an-event-stream.mdx": {
+    "link": [
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
+      "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
+    "link": [
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx",
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/events-best-practices.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/customize/events/events-best-practices.mdx": {
+    "link": [
+      "main/docs/customize/events/create-an-event-stream.mdx",
+      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
+      "main/docs/customize/events/event-types.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -2531,6 +2565,7 @@
       "main/docs/get-started/authentication-and-authorization-flow/device-authorization-flow.mdx",
       "main/docs/get-started/tenant-settings/configure-device-user-code-settings.mdx",
       "main/docs/get-started/applications/dynamic-client-registration.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx",
       "main/docs/libraries/lock.mdx",
       "main/docs/manage-users/organizations/configure-organizations/use-org-name-authentication-api.mdx",
@@ -2572,6 +2607,7 @@
   },
   "main/docs/troubleshoot/customer-support/manage-subscriptions/export-data.mdx": {
     "link": [
+      "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
       "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider.mdx",
       "main/docs/troubleshoot/customer-support/operational-policies/data-export-and-transfer-policy.mdx",
       "main/docs/troubleshoot/customer-support/manage-subscriptions/delete-or-reset-tenant.mdx"
@@ -2981,6 +3017,15 @@
   },
   "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx": {
     "link": [],
+    "import": [],
+    "redirect": []
+  },
+  "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx": {
+    "link": [
+      "main/docs/manage-users/user-migration/bulk-user-exports.mdx",
+      "main/docs/manage-users/user-migration/bulk-user-imports.mdx",
+      "main/docs/manage-users/user-migration/user-migration-scenarios.mdx"
+    ],
     "import": [],
     "redirect": []
   },
@@ -6843,16 +6888,12 @@
   },
   "main/docs/get-started/auth0-overview/create-applications.mdx": {
     "link": [
-      "main/docs/get-started/applications/application-settings.mdx",
-      "main/docs/secure/application-credentials.mdx",
-      "main/docs/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon.mdx",
-      "main/docs/get-started/applications/update-application-connections.mdx",
-      "main/docs/authenticate/identity-providers.mdx",
-      "main/docs/manage-users/organizations.mdx",
+      "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx",
       "main/docs/get-started/auth0-overview/create-applications/native-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/single-page-web-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx",
       "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx",
+      "main/docs/get-started/applications/application-settings.mdx",
       "main/docs/get-started/applications/remove-applications.mdx"
     ],
     "import": [],
@@ -16828,6 +16869,19 @@
     "import": [],
     "redirect": []
   },
+  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": {
+    "link": [
+      "main/docs/get-started/applications/third-party-applications.mdx",
+      "main/docs/get-started/applications/third-party-applications/security-controls.mdx",
+      "main/docs/get-started/tenant-settings.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx",
+      "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt.mdx",
+      "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx",
+      "main/docs/secure/tokens/json-web-tokens/json-web-key-sets.mdx"
+    ],
+    "import": [],
+    "redirect": []
+  },
   "main/docs/get-started/universal-components/auth0-component-provider.mdx": {
     "link": [
       "main/docs/troubleshoot/product-lifecycle/product-release-stages.mdx",
@@ -17402,13 +17456,6 @@
   },
   "main/docs/get-started/applications/enable-android-app-links-support.mdx": {
     "link": [],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": {
-    "link": [
-      "main/docs/get-started/applications/third-party-applications.mdx"
-    ],
     "import": [],
     "redirect": []
   },
@@ -19424,42 +19471,12 @@
     "import": [],
     "redirect": []
   },
-  "main/docs/customize/events/create-an-event-stream.mdx": {
-    "link": [
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
-      "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
   "main/docs/customize/events/consume-events-with-events-api.mdx": {
     "link": [
       "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx",
       "main/docs/customize/events/event-types.mdx",
       "main/docs/customize/events/create-an-event-stream.mdx",
       "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": {
-    "link": [
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx",
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/events-best-practices.mdx"
-    ],
-    "import": [],
-    "redirect": []
-  },
-  "main/docs/customize/events/events-best-practices.mdx": {
-    "link": [
-      "main/docs/customize/events/create-an-event-stream.mdx",
-      "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx",
-      "main/docs/customize/events/event-types.mdx"
     ],
     "import": [],
     "redirect": []
@@ -22382,6 +22399,13 @@
     "link": [
       "main/docs/authenticate/database-connections/password-options.mdx"
     ],
+    "import": [
+      "main/snippets/ReleaseStageNotice.jsx"
+    ],
+    "redirect": []
+  },
+  "main/snippets/ReleaseStageNotice.jsx": {
+    "link": [],
     "import": [],
     "redirect": []
   },

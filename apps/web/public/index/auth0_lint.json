@@ -1,5 +1,5 @@
 {
-  "pagesScanned": 2722,
+  "pagesScanned": 2723,
   "pagesWithWarnings": 581,
   "warningCount": 816,
   "byCode": {
@@ -8648,15 +8648,15 @@
           "code": "missing_state_mention",
           "severity": "warn",
           "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-          "evidence": "Client->>Auth0: /authorize?client_id = https://.../client.json,<br/>(Auth0 resolves client by external_client_id == client_id)",
-          "line": 81
+          "evidence": "Client->>Auth0: /authorize?client_id = https://.../client.json<br/>(Auth0 resolves client by external_client_id == client_id)",
+          "line": 85
         },
         {
           "code": "rules_vs_actions_language",
           "severity": "warn",
           "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-          "evidence": "4. **Security validation**: Auth0 validates the CIMD URL against the [CIMD URL validation rules](#cimd-url-validation-rules) and the JSON against the [CIMD validation rules](#cimd-",
-          "line": 99
+          "evidence": "Auth0 automatically [maps and validates CIMD fields](#cimd-json-validation-rules). To learn more about supported client types, read [Prerequisites](#prerequisites).",
+          "line": 56
         }
       ]
     },
@@ -15911,6 +15911,11 @@
       "warnings": []
     },
     {
+      "id": "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
+      "filePath": "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
+      "warnings": []
+    },
+    {
       "id": "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx",
       "filePath": "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx",
       "warnings": [
@@ -22224,6 +22229,7 @@
     "main/docs/manage-users/user-migration/bulk-user-import-schema.mdx": [],
     "main/docs/manage-users/user-migration/bulk-user-imports.mdx": [],
     "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx": [],
+    "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx": [],
     "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx": [
       {
         "code": "rules_vs_actions_language",
@@ -25235,15 +25241,15 @@
         "code": "missing_state_mention",
         "severity": "warn",
         "message": "OAuth flow appears in this page, but CSRF \"state\" is not mentioned.",
-        "evidence": "Client->>Auth0: /authorize?client_id = https://.../client.json,<br/>(Auth0 resolves client by external_client_id == client_id)",
-        "line": 81
+        "evidence": "Client->>Auth0: /authorize?client_id = https://.../client.json<br/>(Auth0 resolves client by external_client_id == client_id)",
+        "line": 85
       },
       {
         "code": "rules_vs_actions_language",
         "severity": "warn",
         "message": "This page references Auth0 Rules/Hooks without mentioning Actions. Rules/Hooks are legacy; consider updating wording to Actions or explicitly marking legacy guidance.",
-        "evidence": "4. **Security validation**: Auth0 validates the CIMD URL against the [CIMD URL validation rules](#cimd-url-validation-rules) and the JSON against the [CIMD validation rules](#cimd-",
-        "line": 99
+        "evidence": "Auth0 automatically [maps and validates CIMD fields](#cimd-json-validation-rules). To learn more about supported client types, read [Prerequisites](#prerequisites).",
+        "line": 56
       }
     ],
     "main/docs/get-started/auth0-overview/create-applications/regular-web-apps.mdx": [],

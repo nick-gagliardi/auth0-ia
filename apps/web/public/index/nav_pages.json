@@ -1863,6 +1863,10 @@
     "filePath": "main/docs/manage-users/user-migration/configure-automatic-migration-from-your-database.mdx",
     "navNodePaths": []
   },
+  "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx": {
+    "filePath": "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx",
+    "navNodePaths": []
+  },
   "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx": {
     "filePath": "main/docs/manage-users/user-migration/migrate-users-from-amazon-web-services.mdx",
     "navNodePaths": []

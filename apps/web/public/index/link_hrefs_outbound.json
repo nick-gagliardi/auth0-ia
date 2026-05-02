@@ -21,7 +21,74 @@
   "main/snippets/AuthDocsPipeline.mdx": [],
   "main/docs/customize.mdx": [],
   "main/docs/deploy-monitor.mdx": [],
-  "main/docs/events.mdx": [],
+  "main/docs/events.mdx": [
+    {
+      "href": "/docs/customize/events/create-an-event-stream",
+      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/events-best-practices",
+      "toId": "main/docs/customize/events/events-best-practices.mdx"
+    }
+  ],
+  "main/docs/customize/events/create-an-event-stream.mdx": [
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
+    },
+    {
+      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production",
+      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-types",
+      "toId": "main/docs/customize/events/event-types.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/events-best-practices",
+      "toId": "main/docs/customize/events/events-best-practices.mdx"
+    }
+  ],
+  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-types",
+      "toId": "main/docs/customize/events/event-types.mdx"
+    },
+    {
+      "href": "/docs/customize/events/create-an-event-stream",
+      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
+    },
+    {
+      "href": "/docs/customize/events/events-best-practices",
+      "toId": "main/docs/customize/events/events-best-practices.mdx"
+    }
+  ],
+  "main/docs/customize/events/events-best-practices.mdx": [
+    {
+      "href": "/docs/customize/events/create-an-event-stream",
+      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
+      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
+    },
+    {
+      "href": "/docs/customize/events/event-types",
+      "toId": "main/docs/customize/events/event-types.mdx"
+    }
+  ],
   "main/docs/fine-grained-m2m-token-quotas.mdx": [
     {
       "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
@@ -5043,6 +5110,10 @@
       "toId": "main/docs/get-started/applications/dynamic-client-registration.mdx"
     },
     {
+      "href": "/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd",
+      "toId": "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx"
+    },
+    {
       "href": "/docs/authenticate/login/auth0-universal-login/identifier-first",
       "toId": "main/docs/authenticate/login/auth0-universal-login/identifier-first.mdx"
     },
@@ -5118,6 +5189,10 @@
     }
   ],
   "main/docs/troubleshoot/customer-support/manage-subscriptions/export-data.mdx": [
+    {
+      "href": "/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets",
+      "toId": "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx"
+    },
     {
       "href": "/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider",
       "toId": "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider.mdx"
@@ -5962,6 +6037,20 @@
     }
   ],
   "main/docs/secure/call-apis-on-users-behalf/token-vault.mdx": [],
+  "main/docs/manage-users/user-migration/export-password-hashes-and-mfa-secrets.mdx": [
+    {
+      "href": "/docs/manage-users/user-migration/bulk-user-exports",
+      "toId": "main/docs/manage-users/user-migration/bulk-user-exports.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration/bulk-user-imports",
+      "toId": "main/docs/manage-users/user-migration/bulk-user-imports.mdx"
+    },
+    {
+      "href": "/docs/manage-users/user-migration/user-migration-scenarios",
+      "toId": "main/docs/manage-users/user-migration/user-migration-scenarios.mdx"
+    }
+  ],
   "main/docs/authenticate/single-sign-on/outbound-single-sign-on/configure-auth0-saml-identity-provider.mdx": [
     {
       "href": "/docs/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon",
@@ -14159,28 +14248,8 @@
   ],
   "main/docs/get-started/auth0-overview/create-applications.mdx": [
     {
-      "href": "/docs/get-started/applications/application-settings",
-      "toId": "main/docs/get-started/applications/application-settings.mdx"
-    },
-    {
-      "href": "/docs/secure/application-credentials",
-      "toId": "main/docs/secure/application-credentials.mdx"
-    },
-    {
-      "href": "/docs/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon",
-      "toId": "main/docs/authenticate/protocols/saml/saml-sso-integrations/enable-saml2-web-app-addon.mdx"
-    },
-    {
-      "href": "/docs/get-started/applications/update-application-connections",
-      "toId": "main/docs/get-started/applications/update-application-connections.mdx"
-    },
-    {
-      "href": "/docs/authenticate/identity-providers",
-      "toId": "main/docs/authenticate/identity-providers.mdx"
-    },
-    {
-      "href": "/docs/manage-users/organizations",
-      "toId": "main/docs/manage-users/organizations.mdx"
+      "href": "/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd",
+      "toId": "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx"
     },
     {
       "href": "/docs/get-started/auth0-overview/create-applications/native-apps",
@@ -14197,6 +14266,10 @@
     {
       "href": "/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps",
       "toId": "main/docs/get-started/auth0-overview/create-applications/machine-to-machine-apps.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/application-settings",
+      "toId": "main/docs/get-started/applications/application-settings.mdx"
     },
     {
       "href": "/docs/get-started/applications/remove-applications",
@@ -26770,6 +26843,36 @@
       "toId": "main/docs/get-started/authentication-and-authorization-flow/client-initiated-backchannel-authentication-flow.mdx"
     }
   ],
+  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": [
+    {
+      "href": "/docs/get-started/applications/third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/security-controls",
+      "toId": "main/docs/get-started/applications/third-party-applications/security-controls.mdx"
+    },
+    {
+      "href": "/docs/get-started/tenant-settings",
+      "toId": "main/docs/get-started/tenant-settings.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce.mdx"
+    },
+    {
+      "href": "/docs/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt",
+      "toId": "main/docs/get-started/authentication-and-authorization-flow/authenticate-with-private-key-jwt.mdx"
+    },
+    {
+      "href": "/docs/get-started/applications/third-party-applications/configure-third-party-applications",
+      "toId": "main/docs/get-started/applications/third-party-applications/configure-third-party-applications.mdx"
+    },
+    {
+      "href": "/docs/secure/tokens/json-web-tokens/json-web-key-sets",
+      "toId": "main/docs/secure/tokens/json-web-tokens/json-web-key-sets.mdx"
+    }
+  ],
   "main/docs/get-started/universal-components/auth0-component-provider.mdx": [
     {
       "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
@@ -27838,12 +27941,6 @@
     }
   ],
   "main/docs/get-started/applications/enable-android-app-links-support.mdx": [],
-  "main/docs/get-started/auth0-overview/create-applications/register-applications-with-cimd.mdx": [
-    {
-      "href": "/docs/get-started/applications/third-party-applications",
-      "toId": "main/docs/get-started/applications/third-party-applications.mdx"
-    }
-  ],
   "main/docs/get-started/auth0-mcp-server/auth0-mcp-server-guides.mdx": [
     {
       "href": "/docs/get-started/auth0-mcp-server/auth0-mcp-server-guides/streamline-api-authorization-flows-with-auth0-model-context-protocol-mcp",
@@ -32209,28 +32306,6 @@
       "toId": "main/docs/customize/events/events-best-practices.mdx"
     }
   ],
-  "main/docs/customize/events/create-an-event-stream.mdx": [
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens.mdx"
-    },
-    {
-      "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production",
-      "toId": "main/docs/secure/tokens/access-tokens/management-api-access-tokens/get-management-api-access-tokens-for-production.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-types",
-      "toId": "main/docs/customize/events/event-types.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
-      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
-    },
-    {
-      "href": "/docs/customize/events/events-best-practices",
-      "toId": "main/docs/customize/events/events-best-practices.mdx"
-    }
-  ],
   "main/docs/customize/events/consume-events-with-events-api.mdx": [
     {
       "href": "/docs/secure/tokens/access-tokens/management-api-access-tokens",
@@ -32247,38 +32322,6 @@
     {
       "href": "/docs/customize/events/events-best-practices",
       "toId": "main/docs/customize/events/events-best-practices.mdx"
-    }
-  ],
-  "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx": [
-    {
-      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
-      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-types",
-      "toId": "main/docs/customize/events/event-types.mdx"
-    },
-    {
-      "href": "/docs/customize/events/create-an-event-stream",
-      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
-    },
-    {
-      "href": "/docs/customize/events/events-best-practices",
-      "toId": "main/docs/customize/events/events-best-practices.mdx"
-    }
-  ],
-  "main/docs/customize/events/events-best-practices.mdx": [
-    {
-      "href": "/docs/customize/events/create-an-event-stream",
-      "toId": "main/docs/customize/events/create-an-event-stream.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-testing-observability-and-failure-recovery",
-      "toId": "main/docs/customize/events/event-testing-observability-and-failure-recovery.mdx"
-    },
-    {
-      "href": "/docs/customize/events/event-types",
-      "toId": "main/docs/customize/events/event-types.mdx"
     }
   ],
   "main/docs/customize/extensions/single-sign-on-dashboard-extension.mdx": [
@@ -37023,6 +37066,7 @@
       "toId": "main/docs/authenticate/database-connections/password-options.mdx"
     }
   ],
+  "main/snippets/ReleaseStageNotice.jsx": [],
   "main/docs/authenticate/database-connections/non-unique-emails.mdx": [
     {
       "href": "/docs/troubleshoot/product-lifecycle/product-release-stages",
